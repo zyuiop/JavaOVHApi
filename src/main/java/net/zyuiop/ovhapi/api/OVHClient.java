@@ -4,6 +4,10 @@ public interface OVHClient {
 
 	void authenticate(String customerKey);
 
+	String callRaw(java.net.URL url, OVHApiMethod method, String data) throws java.io.IOException;
+
+	String callRaw(java.net.URL url, OVHApiMethod method, String data, boolean hasAuth) throws java.io.IOException, IllegalStateException;
+
 	net.zyuiop.ovhapi.api.methods.dedicated.InstallationTemplate dedicatedInstallationTemplate();
 
 	net.zyuiop.ovhapi.api.methods.Hpcspot hpcspot();
