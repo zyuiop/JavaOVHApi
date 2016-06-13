@@ -12,7 +12,7 @@ public class TaskImpl implements Task {
 	private java.util.Date todoDate;
 	private java.util.Date finishDate;
 	private long id;
-	private java.lang.String return;
+	private java.lang.String _return;
 
 	public TaskImpl() {
 	}
@@ -83,15 +83,15 @@ public class TaskImpl implements Task {
 	} 
 
 	public java.lang.String getReturn() { 
-		return this.return;
+		return this._return;
 	} 
 
-	public void setReturn(java.lang.String return) { 
-		this.return = return;
+	public void setReturn(java.lang.String _return) { 
+		this._return = _return;
 	} 
 
-	public TaskImpl return(java.lang.String return) { 
-		this.return = return;
+	public TaskImpl _return(java.lang.String _return) { 
+		this._return = _return;
 		return this;
 	} 
 

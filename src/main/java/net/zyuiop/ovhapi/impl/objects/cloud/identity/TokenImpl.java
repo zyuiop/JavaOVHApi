@@ -7,22 +7,22 @@ import net.zyuiop.ovhapi.api.objects.cloud.identity.Token;
 
 public class TokenImpl implements Token { 
 
-	private java.lang.String X-Auth-Token;
+	private java.lang.String XAuthToken;
 	private net.zyuiop.ovhapi.api.objects.cloud.identity.OpenstackToken token;
 
 	public TokenImpl() {
 	}
 
-	public java.lang.String getX-Auth-Token() { 
-		return this.X-Auth-Token;
+	public java.lang.String getXAuthToken() { 
+		return this.XAuthToken;
 	} 
 
-	public void setX-Auth-Token(java.lang.String X-Auth-Token) { 
-		this.X-Auth-Token = X-Auth-Token;
+	public void setXAuthToken(java.lang.String XAuthToken) { 
+		this.XAuthToken = XAuthToken;
 	} 
 
-	public TokenImpl X-Auth-Token(java.lang.String X-Auth-Token) { 
-		this.X-Auth-Token = X-Auth-Token;
+	public TokenImpl XAuthToken(java.lang.String XAuthToken) { 
+		this.XAuthToken = XAuthToken;
 		return this;
 	} 
 

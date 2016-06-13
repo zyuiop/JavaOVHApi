@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.identity.Endpoint;
 public class EndpointImpl implements Endpoint { 
 
 	private java.lang.String region_id;
-	private java.lang.String interface;
+	private java.lang.String _interface;
 	private java.lang.String url;
 	private java.lang.String id;
 	private java.lang.String legacy_endpoint_id;
@@ -30,15 +30,15 @@ public class EndpointImpl implements Endpoint {
 	} 
 
 	public java.lang.String getInterface() { 
-		return this.interface;
+		return this._interface;
 	} 
 
-	public void setInterface(java.lang.String interface) { 
-		this.interface = interface;
+	public void setInterface(java.lang.String _interface) { 
+		this._interface = _interface;
 	} 
 
-	public EndpointImpl interface(java.lang.String interface) { 
-		this.interface = interface;
+	public EndpointImpl _interface(java.lang.String _interface) { 
+		this._interface = _interface;
 		return this;
 	} 
 

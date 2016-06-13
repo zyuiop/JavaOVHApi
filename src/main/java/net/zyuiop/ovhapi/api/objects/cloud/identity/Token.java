@@ -9,7 +9,7 @@ public interface Token {
 	/**
 	 * @return 
 	 */
-	java.lang.String getX-Auth-Token(); 
+	java.lang.String getXAuthToken(); 
 
 	/**
 	 * @return 
