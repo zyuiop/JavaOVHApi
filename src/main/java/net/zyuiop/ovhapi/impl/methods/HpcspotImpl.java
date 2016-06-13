@@ -16,53 +16,53 @@ public class HpcspotImpl implements Hpcspot {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.hpcspot.Account getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.hpcspot.Account.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.hpcspot.Account.class);
 	}
 
 	public long[] getServiceNameConsumption(java.lang.String serviceName, long hpcspotItemId, java.util.Date hpcspotItemEndDateTo, long orderId, java.lang.String type, java.util.Date hpcspotItemEndDateFrom) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/consumption";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/consumption";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getServiceNameConsumption(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/consumption";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/consumption";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("null", null);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.PUT;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("null", null);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public java.lang.String getHpcspot() throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0//hpcspot";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0//hpcspot";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 

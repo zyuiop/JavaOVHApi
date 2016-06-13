@@ -16,11 +16,11 @@ public class NashaImpl implements Nasha {
 	}
 
 	public long[] getServiceNamePartitionPartitionNameQuota(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/quota";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/quota";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 
@@ -32,19 +32,19 @@ public class NashaImpl implements Nasha {
 
 
 	public java.lang.String getServiceNamePartitionPartitionNameAccess(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/access";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/access";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
 	}
 
 
@@ -64,59 +64,59 @@ public class NashaImpl implements Nasha {
 
 
 	public java.lang.String getServiceNamePartitionPartitionNameAuthorizableIps(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/authorizableIps";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/authorizableIps";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String status, java.lang.String operation) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.nasha.Storage getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Storage.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Storage.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.nasha.Access getServiceNamePartitionPartitionNameAccessIp(java.lang.String serviceName, java.lang.String partitionName, java.lang.String ip) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/access/" + ip + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Access.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/access/" + ip + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Access.class);
 	}
 
 	public java.lang.String getServiceNamePartition(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public java.lang.String getDedicatedNasha() throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0//dedicated/nasha";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0//dedicated/nasha";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 
@@ -144,37 +144,37 @@ public class NashaImpl implements Nasha {
 
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.nasha.Snapshot getServiceNamePartitionPartitionNameSnapshotSnapshotType(java.lang.String serviceName, java.lang.String partitionName, java.lang.String snapshotType) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/snapshot/" + snapshotType + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Snapshot.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/snapshot/" + snapshotType + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Snapshot.class);
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("null", null);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.PUT;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("null", null);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public java.lang.String getServiceNamePartitionPartitionNameAuthorizableBlocks(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/authorizableBlocks";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/authorizableBlocks";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.nasha.Partition getServiceNamePartitionPartitionName(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Partition.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Partition.class);
 	}
 
 
@@ -186,11 +186,11 @@ public class NashaImpl implements Nasha {
 
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.nasha.Quota getServiceNamePartitionPartitionNameQuotaUid(java.lang.String serviceName, java.lang.String partitionName, long uid) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/quota/" + uid + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Quota.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/quota/" + uid + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.nasha.Quota.class);
 	}
 
 
@@ -210,31 +210,31 @@ public class NashaImpl implements Nasha {
 
 
 	public void putServiceName(net.zyuiop.ovhapi.api.objects.dedicated.nasha.Storage param0, java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("null", null);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.PUT;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("null", null);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public java.lang.String getServiceNamePartitionPartitionNameSnapshot(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/snapshot";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "/snapshot";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public void putServiceNamePartitionPartitionName(net.zyuiop.ovhapi.api.objects.dedicated.nasha.Partition param0, java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("null", null);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.PUT;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/partition/" + partitionName + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("null", null);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 

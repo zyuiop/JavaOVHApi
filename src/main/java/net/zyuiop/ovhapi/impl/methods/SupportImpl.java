@@ -16,91 +16,91 @@ public class SupportImpl implements Support {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.support.NewMessageInfo postTicketsCreate(java.lang.String body, java.lang.String subject, java.lang.String type, java.lang.String serviceName, java.lang.String category, java.lang.String product) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets/create";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("body", body);
-		dataMap.put("subject", subject);
-		dataMap.put("type", type);
-		dataMap.put("serviceName", serviceName);
-		dataMap.put("category", category);
-		dataMap.put("product", product);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.support.NewMessageInfo.class);
+		String __callUrl = "https://api.ovh.com/1.0/tickets/create";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("body", body);
+		__dataMap.put("subject", subject);
+		__dataMap.put("type", type);
+		__dataMap.put("serviceName", serviceName);
+		__dataMap.put("category", category);
+		__dataMap.put("product", product);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.support.NewMessageInfo.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.support.NewMessageInfo postTicketsCreate(java.lang.String body, java.lang.String subject, java.lang.String type) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets/create";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("body", body);
-		dataMap.put("subject", subject);
-		dataMap.put("type", type);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.support.NewMessageInfo.class);
+		String __callUrl = "https://api.ovh.com/1.0/tickets/create";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("body", body);
+		__dataMap.put("subject", subject);
+		__dataMap.put("type", type);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.support.NewMessageInfo.class);
 	}
 
 	public void postTicketsTicketIdClose(long ticketId) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/close";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/close";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public void postTicketsTicketIdReopen(long ticketId, java.lang.String body) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/reopen";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("body", body);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/reopen";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("body", body);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public void postTicketsTicketIdReply(long ticketId, java.lang.String body) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/reply";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("body", body);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/reply";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("body", body);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.support.Ticket getTicketsTicketId(long ticketId) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.support.Ticket.class);
+		String __callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.support.Ticket.class);
 	}
 
 	public long[] getTickets(java.util.Date minCreationDate, java.lang.String subject, java.lang.String status, java.lang.String serviceName, java.util.Date maxCreationDate, java.lang.String category, java.lang.String product) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/tickets";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getTickets() throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/tickets";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.support.Message getTicketsTicketIdMessages(long ticketId) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/messages";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.support.Message.class);
+		String __callUrl = "https://api.ovh.com/1.0/tickets/" + ticketId + "/messages";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.support.Message.class);
 	}
 
 }

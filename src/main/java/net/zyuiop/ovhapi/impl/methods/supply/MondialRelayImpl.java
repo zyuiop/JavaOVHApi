@@ -16,26 +16,26 @@ public class MondialRelayImpl implements MondialRelay {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn postSupplyMondialRelay(java.lang.String country, java.lang.String city, java.lang.String address, java.lang.String zipcode) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0//supply/mondialRelay";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("country", country);
-		dataMap.put("city", city);
-		dataMap.put("address", address);
-		dataMap.put("zipcode", zipcode);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn.class);
+		String __callUrl = "https://api.ovh.com/1.0//supply/mondialRelay";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("country", country);
+		__dataMap.put("city", city);
+		__dataMap.put("address", address);
+		__dataMap.put("zipcode", zipcode);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn postSupplyMondialRelay(java.lang.String country) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0//supply/mondialRelay";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("country", country);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn.class);
+		String __callUrl = "https://api.ovh.com/1.0//supply/mondialRelay";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("country", country);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn.class);
 	}
 
 }

@@ -16,19 +16,19 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 	}
 
 	public java.lang.String getServiceNameConfigurations(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/configurations";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/configurations";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public java.lang.String getServiceNameAvailableVersions(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/availableVersions";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/availableVersions";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 
@@ -72,19 +72,19 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public long[] getServiceNameDatabaseDatabaseNameDump(java.lang.String serviceName, java.lang.String databaseName, java.util.Date creationDate, java.util.Date deletionDate) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dump";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dump";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getServiceNameDatabaseDatabaseNameDump(java.lang.String serviceName, java.lang.String databaseName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dump";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dump";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 
@@ -128,38 +128,38 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public java.lang.String getServiceNameUser(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("null", null);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.PUT;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("null", null);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public java.lang.String getServiceNameDatabase(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public java.lang.String deleteServiceNameCronId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron/" + id + "";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.DELETE;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 
@@ -211,19 +211,19 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public long[] getServiceNameDatabaseDatabaseNameDumps(java.lang.String serviceName, java.lang.String databaseName, java.util.Date creationDate, java.util.Date deletionDate) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dumps";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dumps";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getServiceNameDatabaseDatabaseNameDumps(java.lang.String serviceName, java.lang.String databaseName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dumps";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/database/" + databaseName + "/dumps";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 
@@ -291,40 +291,40 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public java.lang.String getServiceNameUserUserNameGrant(java.lang.String serviceName, java.lang.String userName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + userName + "/grant";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + userName + "/grant";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("contactAdmin", contactAdmin);
-		dataMap.put("contactTech", contactTech);
-		dataMap.put("contactBilling", contactBilling);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("contactAdmin", contactAdmin);
+		__dataMap.put("contactTech", contactTech);
+		__dataMap.put("contactBilling", contactBilling);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public java.lang.String getHostingPrivateDatabase() throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0//hosting/privateDatabase";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0//hosting/privateDatabase";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 
@@ -408,27 +408,27 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
 	}
 
 
@@ -440,11 +440,11 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public long[] getServiceNameCron(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 
@@ -464,11 +464,11 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public java.lang.String getServiceNameConfigurationWhitelist(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/configuration/whitelist";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/configuration/whitelist";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 
@@ -496,38 +496,38 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 
 	public java.lang.String postServiceNameCron(java.lang.String frequency, java.lang.String command, java.lang.String serviceName, java.lang.String email, java.lang.String databaseName, java.lang.String status, java.lang.String description) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("frequency", frequency);
-		dataMap.put("command", command);
-		dataMap.put("email", email);
-		dataMap.put("databaseName", databaseName);
-		dataMap.put("status", status);
-		dataMap.put("description", description);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("frequency", frequency);
+		__dataMap.put("command", command);
+		__dataMap.put("email", email);
+		__dataMap.put("databaseName", databaseName);
+		__dataMap.put("status", status);
+		__dataMap.put("description", description);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public java.lang.String postServiceNameCron(java.lang.String frequency, java.lang.String command, java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("frequency", frequency);
-		dataMap.put("command", command);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cron";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("frequency", frequency);
+		__dataMap.put("command", command);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/terminate";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/terminate";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 

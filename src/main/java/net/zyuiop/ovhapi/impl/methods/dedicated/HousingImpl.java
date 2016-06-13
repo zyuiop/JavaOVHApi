@@ -16,72 +16,72 @@ public class HousingImpl implements Housing {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task deleteServiceNameFeaturesBackupFTPAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.DELETE;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.housing.Housing getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.housing.Housing.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.housing.Housing.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task deleteServiceNameFeaturesBackupFTP(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.DELETE;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTPPassword(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/password";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/password";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
 	}
 
 	public java.lang.String getDedicatedHousing() throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0//dedicated/housing";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0//dedicated/housing";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public java.lang.String getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/authorizableBlocks";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/authorizableBlocks";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public void postServiceNameTaskTaskIdCancel(java.lang.String serviceName, long taskId) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + taskId + "/cancel";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + taskId + "/cancel";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTP(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP";
-		Map<Object, Object> dataMap = new HashMap<>();
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
 	}
 
 
@@ -93,104 +93,104 @@ public class HousingImpl implements Housing {
 
 
 	public java.lang.String getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), java.lang.String.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl getServiceNameFeaturesBackupFTPAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTPAccess(java.lang.String ipBlock, boolean nfs, boolean cifs, java.lang.String serviceName, boolean ftp) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("ipBlock", ipBlock);
-		dataMap.put("nfs", nfs);
-		dataMap.put("cifs", cifs);
-		dataMap.put("ftp", ftp);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("ipBlock", ipBlock);
+		__dataMap.put("nfs", nfs);
+		__dataMap.put("cifs", cifs);
+		__dataMap.put("ftp", ftp);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTPAccess(java.lang.String ipBlock, boolean nfs, boolean cifs, java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("ipBlock", ipBlock);
-		dataMap.put("nfs", nfs);
-		dataMap.put("cifs", cifs);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.POST;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("ipBlock", ipBlock);
+		__dataMap.put("nfs", nfs);
+		__dataMap.put("cifs", cifs);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.server.Task.class);
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), long[].class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public void putServiceNameFeaturesBackupFTPAccessIpBlock(net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl param0, java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("null", null);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.PUT;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("null", null);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		Map<Object, Object> dataMap = new HashMap<>();
-		dataMap.put("null", null);
-		String data = new Gson().toJson(dataMap);
-		OVHApiMethod method = OVHApiMethod.PUT;
-		URL url = new URL(callUrl);
-		this.client.callRaw(url, method, data, true);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("null", null);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.housing.Task getServiceNameTaskTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + taskId + "";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.housing.Task.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + taskId + "";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.housing.Task.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.housing.ApcOrderable getServiceNameOrderableAPC(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/orderable/APC";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.dedicated.housing.ApcOrderable.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/orderable/APC";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.dedicated.housing.ApcOrderable.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
-		String data = "?";
-		OVHApiMethod method = OVHApiMethod.GET;
-		URL url = new URL(callUrl);
-		return new Gson().fromJson(this.client.callRaw(url, method, data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
 	}
 
 }
