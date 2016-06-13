@@ -1,0 +1,112 @@
+package net.zyuiop.ovhapi.impl.objects.pack.xdsl;
+
+import net.zyuiop.ovhapi.api.objects.pack.xdsl.ShippingAddress;
+/**
+ * Shipping address
+ */
+
+public class ShippingAddressImpl implements ShippingAddress { 
+
+	private java.lang.String firstName;
+	private java.lang.String zipCode;
+	private long shippingId;
+	private java.lang.String cityName;
+	private java.lang.String lastName;
+	private java.lang.String address;
+	private java.lang.String countryCode;
+
+	public ShippingAddressImpl() {
+	}
+
+	public java.lang.String getFirstName() { 
+		return this.firstName;
+	} 
+
+	public void setFirstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+	} 
+
+	public ShippingAddressImpl firstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+		return this;
+	} 
+
+	public java.lang.String getZipCode() { 
+		return this.zipCode;
+	} 
+
+	public void setZipCode(java.lang.String zipCode) { 
+		this.zipCode = zipCode;
+	} 
+
+	public ShippingAddressImpl zipCode(java.lang.String zipCode) { 
+		this.zipCode = zipCode;
+		return this;
+	} 
+
+	public long getShippingId() { 
+		return this.shippingId;
+	} 
+
+	public void setShippingId(long shippingId) { 
+		this.shippingId = shippingId;
+	} 
+
+	public ShippingAddressImpl shippingId(long shippingId) { 
+		this.shippingId = shippingId;
+		return this;
+	} 
+
+	public java.lang.String getCityName() { 
+		return this.cityName;
+	} 
+
+	public void setCityName(java.lang.String cityName) { 
+		this.cityName = cityName;
+	} 
+
+	public ShippingAddressImpl cityName(java.lang.String cityName) { 
+		this.cityName = cityName;
+		return this;
+	} 
+
+	public java.lang.String getLastName() { 
+		return this.lastName;
+	} 
+
+	public void setLastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+	} 
+
+	public ShippingAddressImpl lastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+		return this;
+	} 
+
+	public java.lang.String getAddress() { 
+		return this.address;
+	} 
+
+	public void setAddress(java.lang.String address) { 
+		this.address = address;
+	} 
+
+	public ShippingAddressImpl address(java.lang.String address) { 
+		this.address = address;
+		return this;
+	} 
+
+	public java.lang.String getCountryCode() { 
+		return this.countryCode;
+	} 
+
+	public void setCountryCode(java.lang.String countryCode) { 
+		this.countryCode = countryCode;
+	} 
+
+	public ShippingAddressImpl countryCode(java.lang.String countryCode) { 
+		this.countryCode = countryCode;
+		return this;
+	} 
+
+}

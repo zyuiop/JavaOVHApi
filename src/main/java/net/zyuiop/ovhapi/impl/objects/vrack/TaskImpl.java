@@ -1,0 +1,126 @@
+package net.zyuiop.ovhapi.impl.objects.vrack;
+
+import net.zyuiop.ovhapi.api.objects.vrack.Task;
+/**
+ * vrack tasks
+ */
+
+public class TaskImpl implements Task { 
+
+	private java.lang.String function;
+	private java.lang.String targetDomain;
+	private java.lang.String status;
+	private java.lang.String serviceName;
+	private long orderId;
+	private java.util.Date lastUpdate;
+	private java.util.Date todoDate;
+	private long id;
+
+	public TaskImpl() {
+	}
+
+	public java.lang.String getFunction() { 
+		return this.function;
+	} 
+
+	public void setFunction(java.lang.String function) { 
+		this.function = function;
+	} 
+
+	public TaskImpl function(java.lang.String function) { 
+		this.function = function;
+		return this;
+	} 
+
+	public java.lang.String getTargetDomain() { 
+		return this.targetDomain;
+	} 
+
+	public void setTargetDomain(java.lang.String targetDomain) { 
+		this.targetDomain = targetDomain;
+	} 
+
+	public TaskImpl targetDomain(java.lang.String targetDomain) { 
+		this.targetDomain = targetDomain;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public TaskImpl status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.lang.String getServiceName() { 
+		return this.serviceName;
+	} 
+
+	public void setServiceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+	} 
+
+	public TaskImpl serviceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+		return this;
+	} 
+
+	public long getOrderId() { 
+		return this.orderId;
+	} 
+
+	public void setOrderId(long orderId) { 
+		this.orderId = orderId;
+	} 
+
+	public TaskImpl orderId(long orderId) { 
+		this.orderId = orderId;
+		return this;
+	} 
+
+	public java.util.Date getLastUpdate() { 
+		return this.lastUpdate;
+	} 
+
+	public void setLastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+	} 
+
+	public TaskImpl lastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+		return this;
+	} 
+
+	public java.util.Date getTodoDate() { 
+		return this.todoDate;
+	} 
+
+	public void setTodoDate(java.util.Date todoDate) { 
+		this.todoDate = todoDate;
+	} 
+
+	public TaskImpl todoDate(java.util.Date todoDate) { 
+		this.todoDate = todoDate;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public TaskImpl id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+}
