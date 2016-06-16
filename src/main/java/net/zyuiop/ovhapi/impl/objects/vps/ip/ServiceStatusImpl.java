@@ -7,26 +7,26 @@ import net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatus;
 
 public class ServiceStatusImpl implements ServiceStatus { 
 
-	private net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService dns;
+	private net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl dns;
 	private java.lang.String ping;
-	private net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService http;
-	private net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService https;
-	private net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService smtp;
+	private net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl http;
+	private net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl https;
+	private net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl smtp;
 	private java.lang.String tools;
-	private net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService ssh;
+	private net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl ssh;
 
 	public ServiceStatusImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService getDns() { 
+	public net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl getDns() { 
 		return this.dns;
 	} 
 
-	public void setDns(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService dns) { 
+	public void setDns(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl dns) { 
 		this.dns = dns;
 	} 
 
-	public ServiceStatusImpl dns(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService dns) { 
+	public ServiceStatusImpl dns(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl dns) { 
 		this.dns = dns;
 		return this;
 	} 
@@ -44,41 +44,41 @@ public class ServiceStatusImpl implements ServiceStatus {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService getHttp() { 
+	public net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl getHttp() { 
 		return this.http;
 	} 
 
-	public void setHttp(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService http) { 
+	public void setHttp(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl http) { 
 		this.http = http;
 	} 
 
-	public ServiceStatusImpl http(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService http) { 
+	public ServiceStatusImpl http(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl http) { 
 		this.http = http;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService getHttps() { 
+	public net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl getHttps() { 
 		return this.https;
 	} 
 
-	public void setHttps(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService https) { 
+	public void setHttps(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl https) { 
 		this.https = https;
 	} 
 
-	public ServiceStatusImpl https(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService https) { 
+	public ServiceStatusImpl https(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl https) { 
 		this.https = https;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService getSmtp() { 
+	public net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl getSmtp() { 
 		return this.smtp;
 	} 
 
-	public void setSmtp(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService smtp) { 
+	public void setSmtp(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl smtp) { 
 		this.smtp = smtp;
 	} 
 
-	public ServiceStatusImpl smtp(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService smtp) { 
+	public ServiceStatusImpl smtp(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl smtp) { 
 		this.smtp = smtp;
 		return this;
 	} 
@@ -96,15 +96,15 @@ public class ServiceStatusImpl implements ServiceStatus {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService getSsh() { 
+	public net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl getSsh() { 
 		return this.ssh;
 	} 
 
-	public void setSsh(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService ssh) { 
+	public void setSsh(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl ssh) { 
 		this.ssh = ssh;
 	} 
 
-	public ServiceStatusImpl ssh(net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatusService ssh) { 
+	public ServiceStatusImpl ssh(net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusServiceImpl ssh) { 
 		this.ssh = ssh;
 		return this;
 	} 

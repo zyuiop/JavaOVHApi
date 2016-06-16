@@ -7,26 +7,26 @@ import net.zyuiop.ovhapi.api.objects.sms.User;
 
 public class UserImpl implements User { 
 
-	private net.zyuiop.ovhapi.api.objects.sms.Quota quotaInformations;
+	private net.zyuiop.ovhapi.impl.objects.sms.QuotaImpl quotaInformations;
 	private java.lang.String password;
 	private java.lang.String stopCallBack;
 	private java.lang.String ipRestrictions;
-	private net.zyuiop.ovhapi.api.objects.sms.AlertThreshold alertThresholdInformations;
+	private net.zyuiop.ovhapi.impl.objects.sms.AlertThresholdImpl alertThresholdInformations;
 	private java.lang.String login;
 	private java.lang.String callBack;
 
 	public UserImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.sms.Quota getQuotaInformations() { 
+	public net.zyuiop.ovhapi.impl.objects.sms.QuotaImpl getQuotaInformations() { 
 		return this.quotaInformations;
 	} 
 
-	public void setQuotaInformations(net.zyuiop.ovhapi.api.objects.sms.Quota quotaInformations) { 
+	public void setQuotaInformations(net.zyuiop.ovhapi.impl.objects.sms.QuotaImpl quotaInformations) { 
 		this.quotaInformations = quotaInformations;
 	} 
 
-	public UserImpl quotaInformations(net.zyuiop.ovhapi.api.objects.sms.Quota quotaInformations) { 
+	public UserImpl quotaInformations(net.zyuiop.ovhapi.impl.objects.sms.QuotaImpl quotaInformations) { 
 		this.quotaInformations = quotaInformations;
 		return this;
 	} 
@@ -70,15 +70,15 @@ public class UserImpl implements User {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.sms.AlertThreshold getAlertThresholdInformations() { 
+	public net.zyuiop.ovhapi.impl.objects.sms.AlertThresholdImpl getAlertThresholdInformations() { 
 		return this.alertThresholdInformations;
 	} 
 
-	public void setAlertThresholdInformations(net.zyuiop.ovhapi.api.objects.sms.AlertThreshold alertThresholdInformations) { 
+	public void setAlertThresholdInformations(net.zyuiop.ovhapi.impl.objects.sms.AlertThresholdImpl alertThresholdInformations) { 
 		this.alertThresholdInformations = alertThresholdInformations;
 	} 
 
-	public UserImpl alertThresholdInformations(net.zyuiop.ovhapi.api.objects.sms.AlertThreshold alertThresholdInformations) { 
+	public UserImpl alertThresholdInformations(net.zyuiop.ovhapi.impl.objects.sms.AlertThresholdImpl alertThresholdInformations) { 
 		this.alertThresholdInformations = alertThresholdInformations;
 		return this;
 	} 

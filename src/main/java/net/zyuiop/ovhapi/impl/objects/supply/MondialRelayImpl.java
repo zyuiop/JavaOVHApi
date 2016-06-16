@@ -11,7 +11,7 @@ public class MondialRelayImpl implements MondialRelay {
 	private double distance;
 	private double lat;
 	private java.lang.String name;
-	private net.zyuiop.ovhapi.api.objects.supply.MondialRelayOpening opening;
+	private net.zyuiop.ovhapi.impl.objects.supply.MondialRelayOpeningImpl opening;
 	private java.lang.String zipcode;
 	private java.lang.String mapUrl;
 	private java.lang.String city;
@@ -19,7 +19,7 @@ public class MondialRelayImpl implements MondialRelay {
 	private java.lang.String id;
 	private java.lang.String address;
 	private double lng;
-	private net.zyuiop.ovhapi.api.objects.supply.MondialRelayClosingPeriod closing;
+	private net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl closing;
 
 	public MondialRelayImpl() {
 	}
@@ -76,15 +76,15 @@ public class MondialRelayImpl implements MondialRelay {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.supply.MondialRelayOpening getOpening() { 
+	public net.zyuiop.ovhapi.impl.objects.supply.MondialRelayOpeningImpl getOpening() { 
 		return this.opening;
 	} 
 
-	public void setOpening(net.zyuiop.ovhapi.api.objects.supply.MondialRelayOpening opening) { 
+	public void setOpening(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayOpeningImpl opening) { 
 		this.opening = opening;
 	} 
 
-	public MondialRelayImpl opening(net.zyuiop.ovhapi.api.objects.supply.MondialRelayOpening opening) { 
+	public MondialRelayImpl opening(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayOpeningImpl opening) { 
 		this.opening = opening;
 		return this;
 	} 
@@ -180,15 +180,15 @@ public class MondialRelayImpl implements MondialRelay {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.supply.MondialRelayClosingPeriod getClosing() { 
+	public net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl getClosing() { 
 		return this.closing;
 	} 
 
-	public void setClosing(net.zyuiop.ovhapi.api.objects.supply.MondialRelayClosingPeriod closing) { 
+	public void setClosing(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl closing) { 
 		this.closing = closing;
 	} 
 
-	public MondialRelayImpl closing(net.zyuiop.ovhapi.api.objects.supply.MondialRelayClosingPeriod closing) { 
+	public MondialRelayImpl closing(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl closing) { 
 		this.closing = closing;
 		return this;
 	} 

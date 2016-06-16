@@ -16,23 +16,23 @@ public class HpcspotImpl implements Hpcspot {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.hpcspot.Account getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.hpcspot.Account.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.hpcspot.AccountImpl.class);
 	}
 
 	public long[] getServiceNameConsumption(java.lang.String serviceName, long hpcspotItemId, java.util.Date hpcspotItemEndDateTo, long orderId, java.lang.String type, java.util.Date hpcspotItemEndDateFrom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/consumption";
+		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "/consumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -40,7 +40,7 @@ public class HpcspotImpl implements Hpcspot {
 	}
 
 	public long[] getServiceNameConsumption(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/consumption";
+		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "/consumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -48,7 +48,7 @@ public class HpcspotImpl implements Hpcspot {
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -58,7 +58,7 @@ public class HpcspotImpl implements Hpcspot {
 	}
 
 	public java.lang.String getHpcspot() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//hpcspot";
+		String __callUrl = "https://api.ovh.com/1.0/hpcspot/hpcspot";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);

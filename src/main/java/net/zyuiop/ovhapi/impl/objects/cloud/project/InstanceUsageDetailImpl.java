@@ -10,8 +10,8 @@ public class InstanceUsageDetailImpl implements InstanceUsageDetail {
 	private java.lang.String instanceId;
 	private java.lang.String reference;
 	private boolean monthlyBilling;
-	private net.zyuiop.ovhapi.api.objects.order.Price hourly;
-	private net.zyuiop.ovhapi.api.objects.cloud.project.InstanceMonthlyBilling monthly;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl hourly;
+	private net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceMonthlyBillingImpl monthly;
 
 	public InstanceUsageDetailImpl() {
 	}
@@ -55,28 +55,28 @@ public class InstanceUsageDetailImpl implements InstanceUsageDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getHourly() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getHourly() { 
 		return this.hourly;
 	} 
 
-	public void setHourly(net.zyuiop.ovhapi.api.objects.order.Price hourly) { 
+	public void setHourly(net.zyuiop.ovhapi.impl.objects.order.PriceImpl hourly) { 
 		this.hourly = hourly;
 	} 
 
-	public InstanceUsageDetailImpl hourly(net.zyuiop.ovhapi.api.objects.order.Price hourly) { 
+	public InstanceUsageDetailImpl hourly(net.zyuiop.ovhapi.impl.objects.order.PriceImpl hourly) { 
 		this.hourly = hourly;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.project.InstanceMonthlyBilling getMonthly() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceMonthlyBillingImpl getMonthly() { 
 		return this.monthly;
 	} 
 
-	public void setMonthly(net.zyuiop.ovhapi.api.objects.cloud.project.InstanceMonthlyBilling monthly) { 
+	public void setMonthly(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceMonthlyBillingImpl monthly) { 
 		this.monthly = monthly;
 	} 
 
-	public InstanceUsageDetailImpl monthly(net.zyuiop.ovhapi.api.objects.cloud.project.InstanceMonthlyBilling monthly) { 
+	public InstanceUsageDetailImpl monthly(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceMonthlyBillingImpl monthly) { 
 		this.monthly = monthly;
 		return this;
 	} 

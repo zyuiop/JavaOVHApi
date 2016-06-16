@@ -10,7 +10,7 @@ public class HistoryRepaymentConsumptionImpl implements HistoryRepaymentConsumpt
 	private java.lang.String billingNumber;
 	private java.util.Date date;
 	private java.lang.String status;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 
 	public HistoryRepaymentConsumptionImpl() {
 	}
@@ -54,15 +54,15 @@ public class HistoryRepaymentConsumptionImpl implements HistoryRepaymentConsumpt
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public HistoryRepaymentConsumptionImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public HistoryRepaymentConsumptionImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

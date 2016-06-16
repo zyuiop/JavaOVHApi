@@ -10,11 +10,11 @@ public class MovementImpl implements Movement {
 	private long movementId;
 	private java.util.Date date;
 	private java.lang.String description;
-	private net.zyuiop.ovhapi.api.objects.order.Price amount;
-	private net.zyuiop.ovhapi.api.objects.order.Price balance;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance;
 	private long order;
 	private java.lang.String operation;
-	private net.zyuiop.ovhapi.api.objects.order.Price previousBalance;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl previousBalance;
 
 	public MovementImpl() {
 	}
@@ -58,28 +58,28 @@ public class MovementImpl implements Movement {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getAmount() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getAmount() { 
 		return this.amount;
 	} 
 
-	public void setAmount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public void setAmount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 	} 
 
-	public MovementImpl amount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public MovementImpl amount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getBalance() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getBalance() { 
 		return this.balance;
 	} 
 
-	public void setBalance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+	public void setBalance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance) { 
 		this.balance = balance;
 	} 
 
-	public MovementImpl balance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+	public MovementImpl balance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance) { 
 		this.balance = balance;
 		return this;
 	} 
@@ -110,15 +110,15 @@ public class MovementImpl implements Movement {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPreviousBalance() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPreviousBalance() { 
 		return this.previousBalance;
 	} 
 
-	public void setPreviousBalance(net.zyuiop.ovhapi.api.objects.order.Price previousBalance) { 
+	public void setPreviousBalance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl previousBalance) { 
 		this.previousBalance = previousBalance;
 	} 
 
-	public MovementImpl previousBalance(net.zyuiop.ovhapi.api.objects.order.Price previousBalance) { 
+	public MovementImpl previousBalance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl previousBalance) { 
 		this.previousBalance = previousBalance;
 		return this;
 	} 

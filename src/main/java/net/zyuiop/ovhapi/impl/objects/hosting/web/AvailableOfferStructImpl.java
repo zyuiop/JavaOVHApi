@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.hosting.web.AvailableOfferStruct;
 public class AvailableOfferStructImpl implements AvailableOfferStruct { 
 
 	private java.lang.String offer;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 
 	public AvailableOfferStructImpl() {
 	}
@@ -26,15 +26,15 @@ public class AvailableOfferStructImpl implements AvailableOfferStruct {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public AvailableOfferStructImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public AvailableOfferStructImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

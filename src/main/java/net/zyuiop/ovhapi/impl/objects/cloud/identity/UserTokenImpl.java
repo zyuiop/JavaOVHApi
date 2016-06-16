@@ -7,22 +7,22 @@ import net.zyuiop.ovhapi.api.objects.cloud.identity.UserToken;
 
 public class UserTokenImpl implements UserToken { 
 
-	private net.zyuiop.ovhapi.api.objects.cloud.identity.Domain domain;
+	private net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl domain;
 	private java.lang.String name;
 	private java.lang.String id;
 
 	public UserTokenImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.identity.Domain getDomain() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl getDomain() { 
 		return this.domain;
 	} 
 
-	public void setDomain(net.zyuiop.ovhapi.api.objects.cloud.identity.Domain domain) { 
+	public void setDomain(net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl domain) { 
 		this.domain = domain;
 	} 
 
-	public UserTokenImpl domain(net.zyuiop.ovhapi.api.objects.cloud.identity.Domain domain) { 
+	public UserTokenImpl domain(net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl domain) { 
 		this.domain = domain;
 		return this;
 	} 

@@ -10,12 +10,12 @@ public class RefundImpl implements Refund {
 	private java.lang.String refundId;
 	private java.lang.String pdfUrl;
 	private java.util.Date date;
-	private net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax;
-	private net.zyuiop.ovhapi.api.objects.order.Price tax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl tax;
 	private java.lang.String password;
 	private long orderId;
 	private java.lang.String url;
-	private net.zyuiop.ovhapi.api.objects.order.Price priceWithTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithTax;
 	private java.lang.String originalBillId;
 
 	public RefundImpl() {
@@ -60,28 +60,28 @@ public class RefundImpl implements Refund {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPriceWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPriceWithoutTax() { 
 		return this.priceWithoutTax;
 	} 
 
-	public void setPriceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public void setPriceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 	} 
 
-	public RefundImpl priceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public RefundImpl priceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTax() { 
 		return this.tax;
 	} 
 
-	public void setTax(net.zyuiop.ovhapi.api.objects.order.Price tax) { 
+	public void setTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl tax) { 
 		this.tax = tax;
 	} 
 
-	public RefundImpl tax(net.zyuiop.ovhapi.api.objects.order.Price tax) { 
+	public RefundImpl tax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl tax) { 
 		this.tax = tax;
 		return this;
 	} 
@@ -125,15 +125,15 @@ public class RefundImpl implements Refund {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPriceWithTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPriceWithTax() { 
 		return this.priceWithTax;
 	} 
 
-	public void setPriceWithTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithTax) { 
+	public void setPriceWithTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithTax) { 
 		this.priceWithTax = priceWithTax;
 	} 
 
-	public RefundImpl priceWithTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithTax) { 
+	public RefundImpl priceWithTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithTax) { 
 		this.priceWithTax = priceWithTax;
 		return this;
 	} 

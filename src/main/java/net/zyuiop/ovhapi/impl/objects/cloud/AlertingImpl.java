@@ -12,7 +12,7 @@ public class AlertingImpl implements Alerting {
 	private java.util.Date creationDate;
 	private long delay;
 	private java.lang.String id;
-	private net.zyuiop.ovhapi.api.objects.order.Price formattedMonthlyThreshold;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl formattedMonthlyThreshold;
 
 	public AlertingImpl() {
 	}
@@ -82,15 +82,15 @@ public class AlertingImpl implements Alerting {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getFormattedMonthlyThreshold() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getFormattedMonthlyThreshold() { 
 		return this.formattedMonthlyThreshold;
 	} 
 
-	public void setFormattedMonthlyThreshold(net.zyuiop.ovhapi.api.objects.order.Price formattedMonthlyThreshold) { 
+	public void setFormattedMonthlyThreshold(net.zyuiop.ovhapi.impl.objects.order.PriceImpl formattedMonthlyThreshold) { 
 		this.formattedMonthlyThreshold = formattedMonthlyThreshold;
 	} 
 
-	public AlertingImpl formattedMonthlyThreshold(net.zyuiop.ovhapi.api.objects.order.Price formattedMonthlyThreshold) { 
+	public AlertingImpl formattedMonthlyThreshold(net.zyuiop.ovhapi.impl.objects.order.PriceImpl formattedMonthlyThreshold) { 
 		this.formattedMonthlyThreshold = formattedMonthlyThreshold;
 		return this;
 	} 

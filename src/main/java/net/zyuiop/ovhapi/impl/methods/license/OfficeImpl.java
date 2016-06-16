@@ -16,31 +16,31 @@ public class OfficeImpl implements Office {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.Statistics getServiceNameUsageStatistics(java.util.Date to, java.util.Date from, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/usageStatistics";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/usageStatistics";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.Statistics.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.StatisticsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeTenant getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeTenant.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeTenantImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeDomain getServiceNameDomainDomainName(java.lang.String serviceName, java.lang.String domainName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/domain/" + domainName + "";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/domain/" + domainName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeDomain.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeDomainImpl.class);
 	}
 
 	public void putServiceName(net.zyuiop.ovhapi.api.objects.license.office.OfficeTenant param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -50,7 +50,7 @@ public class OfficeImpl implements Office {
 	}
 
 	public java.lang.String getLicenseOffice() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//license/office";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/license/office";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -58,7 +58,7 @@ public class OfficeImpl implements Office {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeTask postServiceNameUser(java.lang.String domain, java.lang.String licence, java.lang.String login, java.lang.String serviceName, java.lang.String firstName, java.lang.String lastName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/user";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("domain", domain);
 		__dataMap.put("licence", licence);
@@ -68,11 +68,11 @@ public class OfficeImpl implements Office {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeTask.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeTaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeTask postServiceNameUser(java.lang.String domain, java.lang.String licence, java.lang.String login, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/user";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("domain", domain);
 		__dataMap.put("licence", licence);
@@ -80,11 +80,11 @@ public class OfficeImpl implements Office {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeTask.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeTaskImpl.class);
 	}
 
 	public java.lang.String getServiceNameDomain(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/domain";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/domain";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -92,16 +92,16 @@ public class OfficeImpl implements Office {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeTask deleteServiceNameUserActivationEmail(java.lang.String serviceName, java.lang.String activationEmail) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + activationEmail + "";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/user/" + activationEmail + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeTask.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeTaskImpl.class);
 	}
 
 	public java.lang.String getServiceNameUser(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/user";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -109,7 +109,7 @@ public class OfficeImpl implements Office {
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -119,7 +119,7 @@ public class OfficeImpl implements Office {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeTask postServiceNameUserActivationEmailChangePassword(boolean shouldSendMail, java.lang.String serviceName, java.lang.String activationEmail, java.lang.String password, java.lang.String notifyEmail) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + activationEmail + "/changePassword";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/user/" + activationEmail + "/changePassword";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("shouldSendMail", shouldSendMail);
 		__dataMap.put("password", password);
@@ -127,33 +127,33 @@ public class OfficeImpl implements Office {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeTask.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeTaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeTask postServiceNameUserActivationEmailChangePassword(boolean shouldSendMail, java.lang.String serviceName, java.lang.String activationEmail) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + activationEmail + "/changePassword";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/user/" + activationEmail + "/changePassword";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("shouldSendMail", shouldSendMail);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeTask.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeTaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.license.office.OfficeUser getServiceNameUserActivationEmail(java.lang.String serviceName, java.lang.String activationEmail) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + activationEmail + "";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/user/" + activationEmail + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.office.OfficeUser.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.license.office.OfficeUserImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/license/office/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 }

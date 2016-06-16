@@ -7,22 +7,22 @@ import net.zyuiop.ovhapi.api.objects.xdsl.DeconsolidationTerms;
 
 public class DeconsolidationTermsImpl implements DeconsolidationTerms { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl monthlyPrice;
 	private double engagement;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 
 	public DeconsolidationTermsImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getMonthlyPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getMonthlyPrice() { 
 		return this.monthlyPrice;
 	} 
 
-	public void setMonthlyPrice(net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice) { 
+	public void setMonthlyPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl monthlyPrice) { 
 		this.monthlyPrice = monthlyPrice;
 	} 
 
-	public DeconsolidationTermsImpl monthlyPrice(net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice) { 
+	public DeconsolidationTermsImpl monthlyPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl monthlyPrice) { 
 		this.monthlyPrice = monthlyPrice;
 		return this;
 	} 
@@ -40,15 +40,15 @@ public class DeconsolidationTermsImpl implements DeconsolidationTerms {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public DeconsolidationTermsImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public DeconsolidationTermsImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

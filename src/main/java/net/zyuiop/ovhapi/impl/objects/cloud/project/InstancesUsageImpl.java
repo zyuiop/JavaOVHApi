@@ -7,34 +7,34 @@ import net.zyuiop.ovhapi.api.objects.cloud.project.InstancesUsage;
 
 public class InstancesUsageImpl implements InstancesUsage { 
 
-	private net.zyuiop.ovhapi.api.objects.cloud.project.InstanceUsageDetail detail;
-	private net.zyuiop.ovhapi.api.objects.order.Price total;
+	private net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl detail;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl total;
 
 	public InstancesUsageImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.project.InstanceUsageDetail getDetail() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl getDetail() { 
 		return this.detail;
 	} 
 
-	public void setDetail(net.zyuiop.ovhapi.api.objects.cloud.project.InstanceUsageDetail detail) { 
+	public void setDetail(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl detail) { 
 		this.detail = detail;
 	} 
 
-	public InstancesUsageImpl detail(net.zyuiop.ovhapi.api.objects.cloud.project.InstanceUsageDetail detail) { 
+	public InstancesUsageImpl detail(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl detail) { 
 		this.detail = detail;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTotal() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTotal() { 
 		return this.total;
 	} 
 
-	public void setTotal(net.zyuiop.ovhapi.api.objects.order.Price total) { 
+	public void setTotal(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total) { 
 		this.total = total;
 	} 
 
-	public InstancesUsageImpl total(net.zyuiop.ovhapi.api.objects.order.Price total) { 
+	public InstancesUsageImpl total(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total) { 
 		this.total = total;
 		return this;
 	} 

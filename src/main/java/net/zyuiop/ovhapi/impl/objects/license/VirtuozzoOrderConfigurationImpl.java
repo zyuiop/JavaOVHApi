@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.VirtuozzoOrderConfiguration;
 public class VirtuozzoOrderConfigurationImpl implements VirtuozzoOrderConfiguration { 
 
 	private java.lang.String serviceType;
-	private net.zyuiop.ovhapi.api.objects.license.OrderableVirtuozzoCompatibilityInfos orderableVersions;
+	private net.zyuiop.ovhapi.impl.objects.license.OrderableVirtuozzoCompatibilityInfosImpl orderableVersions;
 
 	public VirtuozzoOrderConfigurationImpl() {
 	}
@@ -26,15 +26,15 @@ public class VirtuozzoOrderConfigurationImpl implements VirtuozzoOrderConfigurat
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.license.OrderableVirtuozzoCompatibilityInfos getOrderableVersions() { 
+	public net.zyuiop.ovhapi.impl.objects.license.OrderableVirtuozzoCompatibilityInfosImpl getOrderableVersions() { 
 		return this.orderableVersions;
 	} 
 
-	public void setOrderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableVirtuozzoCompatibilityInfos orderableVersions) { 
+	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableVirtuozzoCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 	} 
 
-	public VirtuozzoOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableVirtuozzoCompatibilityInfos orderableVersions) { 
+	public VirtuozzoOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableVirtuozzoCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 		return this;
 	} 

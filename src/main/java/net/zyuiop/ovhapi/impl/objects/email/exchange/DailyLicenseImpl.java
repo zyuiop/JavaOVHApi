@@ -9,7 +9,7 @@ public class DailyLicenseImpl implements DailyLicense {
 
 	private java.util.Date date;
 	private long outlookQuantity;
-	private net.zyuiop.ovhapi.api.objects.email.exchange.AccountLicense accountLicense;
+	private net.zyuiop.ovhapi.impl.objects.email.exchange.AccountLicenseImpl accountLicense;
 
 	public DailyLicenseImpl() {
 	}
@@ -40,15 +40,15 @@ public class DailyLicenseImpl implements DailyLicense {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.email.exchange.AccountLicense getAccountLicense() { 
+	public net.zyuiop.ovhapi.impl.objects.email.exchange.AccountLicenseImpl getAccountLicense() { 
 		return this.accountLicense;
 	} 
 
-	public void setAccountLicense(net.zyuiop.ovhapi.api.objects.email.exchange.AccountLicense accountLicense) { 
+	public void setAccountLicense(net.zyuiop.ovhapi.impl.objects.email.exchange.AccountLicenseImpl accountLicense) { 
 		this.accountLicense = accountLicense;
 	} 
 
-	public DailyLicenseImpl accountLicense(net.zyuiop.ovhapi.api.objects.email.exchange.AccountLicense accountLicense) { 
+	public DailyLicenseImpl accountLicense(net.zyuiop.ovhapi.impl.objects.email.exchange.AccountLicenseImpl accountLicense) { 
 		this.accountLicense = accountLicense;
 		return this;
 	} 

@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.billing.OvhAccount;
 
 public class OvhAccountImpl implements OvhAccount { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price balance;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance;
 	private java.util.Date lastUpdate;
 	private boolean canBeCredited;
 	private java.lang.String ovhAccountId;
@@ -16,15 +16,15 @@ public class OvhAccountImpl implements OvhAccount {
 	public OvhAccountImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getBalance() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getBalance() { 
 		return this.balance;
 	} 
 
-	public void setBalance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+	public void setBalance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance) { 
 		this.balance = balance;
 	} 
 
-	public OvhAccountImpl balance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+	public OvhAccountImpl balance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance) { 
 		this.balance = balance;
 		return this;
 	} 

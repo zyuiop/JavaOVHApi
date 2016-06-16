@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.xdsl.DslamPort;
 
 public class DslamPortImpl implements DslamPort { 
 
-	private net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile profile;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.DslamLineProfileImpl profile;
 	private java.util.Date lastSyncDate;
 	private java.lang.String status;
 	private java.util.Date lastDesyncDate;
@@ -15,15 +15,15 @@ public class DslamPortImpl implements DslamPort {
 	public DslamPortImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile getProfile() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.DslamLineProfileImpl getProfile() { 
 		return this.profile;
 	} 
 
-	public void setProfile(net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile profile) { 
+	public void setProfile(net.zyuiop.ovhapi.impl.objects.xdsl.DslamLineProfileImpl profile) { 
 		this.profile = profile;
 	} 
 
-	public DslamPortImpl profile(net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile profile) { 
+	public DslamPortImpl profile(net.zyuiop.ovhapi.impl.objects.xdsl.DslamLineProfileImpl profile) { 
 		this.profile = profile;
 		return this;
 	} 

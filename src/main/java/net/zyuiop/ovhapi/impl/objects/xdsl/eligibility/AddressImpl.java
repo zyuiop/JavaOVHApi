@@ -7,11 +7,11 @@ import net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address;
 
 public class AddressImpl implements Address { 
 
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street street;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.StreetImpl street;
 	private java.lang.String floor;
 	private java.lang.String stair;
 	private java.lang.String residence;
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City city;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.CityImpl city;
 	private java.lang.String streetNumber;
 	private java.lang.String door;
 	private java.lang.String building;
@@ -19,15 +19,15 @@ public class AddressImpl implements Address {
 	public AddressImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street getStreet() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.StreetImpl getStreet() { 
 		return this.street;
 	} 
 
-	public void setStreet(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street street) { 
+	public void setStreet(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.StreetImpl street) { 
 		this.street = street;
 	} 
 
-	public AddressImpl street(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street street) { 
+	public AddressImpl street(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.StreetImpl street) { 
 		this.street = street;
 		return this;
 	} 
@@ -71,15 +71,15 @@ public class AddressImpl implements Address {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City getCity() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.CityImpl getCity() { 
 		return this.city;
 	} 
 
-	public void setCity(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City city) { 
+	public void setCity(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.CityImpl city) { 
 		this.city = city;
 	} 
 
-	public AddressImpl city(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City city) { 
+	public AddressImpl city(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.CityImpl city) { 
 		this.city = city;
 		return this;
 	} 

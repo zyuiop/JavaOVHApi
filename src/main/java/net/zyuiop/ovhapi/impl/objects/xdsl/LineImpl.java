@@ -8,14 +8,14 @@ import net.zyuiop.ovhapi.api.objects.xdsl.Line;
 public class LineImpl implements Line { 
 
 	private java.lang.String deconsolidation;
-	private net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint concentrationPoint;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.LandlineConcentrationPointImpl concentrationPoint;
 	private java.lang.String number;
 	private long distance;
 	private java.lang.String faultRepairTime;
 	private boolean directDistribution;
 	private boolean portability;
 	private double mitigation;
-	private net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength lineSectionsLength;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength;
 	private double syncUp;
 	private double syncDown;
 	private java.lang.String originalNumber;
@@ -36,15 +36,15 @@ public class LineImpl implements Line {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint getConcentrationPoint() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.LandlineConcentrationPointImpl getConcentrationPoint() { 
 		return this.concentrationPoint;
 	} 
 
-	public void setConcentrationPoint(net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint concentrationPoint) { 
+	public void setConcentrationPoint(net.zyuiop.ovhapi.impl.objects.xdsl.LandlineConcentrationPointImpl concentrationPoint) { 
 		this.concentrationPoint = concentrationPoint;
 	} 
 
-	public LineImpl concentrationPoint(net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint concentrationPoint) { 
+	public LineImpl concentrationPoint(net.zyuiop.ovhapi.impl.objects.xdsl.LandlineConcentrationPointImpl concentrationPoint) { 
 		this.concentrationPoint = concentrationPoint;
 		return this;
 	} 
@@ -127,15 +127,15 @@ public class LineImpl implements Line {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength getLineSectionsLength() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl getLineSectionsLength() { 
 		return this.lineSectionsLength;
 	} 
 
-	public void setLineSectionsLength(net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength lineSectionsLength) { 
+	public void setLineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 	} 
 
-	public LineImpl lineSectionsLength(net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength lineSectionsLength) { 
+	public LineImpl lineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 		return this;
 	} 

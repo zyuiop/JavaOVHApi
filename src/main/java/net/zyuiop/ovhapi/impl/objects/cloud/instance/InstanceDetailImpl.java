@@ -10,13 +10,13 @@ public class InstanceDetailImpl implements InstanceDetail {
 	private java.lang.String status;
 	private java.lang.String name;
 	private java.lang.String region;
-	private net.zyuiop.ovhapi.api.objects.cloud.image.Image image;
+	private net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl image;
 	private java.util.Date created;
-	private net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKeyDetail sshKey;
-	private net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling monthlyBilling;
-	private net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress ipAddresses;
+	private net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyDetailImpl sshKey;
+	private net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling;
+	private net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses;
 	private java.lang.String id;
-	private net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor flavor;
+	private net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl flavor;
 
 	public InstanceDetailImpl() {
 	}
@@ -60,15 +60,15 @@ public class InstanceDetailImpl implements InstanceDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.image.Image getImage() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl getImage() { 
 		return this.image;
 	} 
 
-	public void setImage(net.zyuiop.ovhapi.api.objects.cloud.image.Image image) { 
+	public void setImage(net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl image) { 
 		this.image = image;
 	} 
 
-	public InstanceDetailImpl image(net.zyuiop.ovhapi.api.objects.cloud.image.Image image) { 
+	public InstanceDetailImpl image(net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl image) { 
 		this.image = image;
 		return this;
 	} 
@@ -86,41 +86,41 @@ public class InstanceDetailImpl implements InstanceDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKeyDetail getSshKey() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyDetailImpl getSshKey() { 
 		return this.sshKey;
 	} 
 
-	public void setSshKey(net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKeyDetail sshKey) { 
+	public void setSshKey(net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyDetailImpl sshKey) { 
 		this.sshKey = sshKey;
 	} 
 
-	public InstanceDetailImpl sshKey(net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKeyDetail sshKey) { 
+	public InstanceDetailImpl sshKey(net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyDetailImpl sshKey) { 
 		this.sshKey = sshKey;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling getMonthlyBilling() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl getMonthlyBilling() { 
 		return this.monthlyBilling;
 	} 
 
-	public void setMonthlyBilling(net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling monthlyBilling) { 
+	public void setMonthlyBilling(net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling) { 
 		this.monthlyBilling = monthlyBilling;
 	} 
 
-	public InstanceDetailImpl monthlyBilling(net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling monthlyBilling) { 
+	public InstanceDetailImpl monthlyBilling(net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling) { 
 		this.monthlyBilling = monthlyBilling;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress getIpAddresses() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl getIpAddresses() { 
 		return this.ipAddresses;
 	} 
 
-	public void setIpAddresses(net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress ipAddresses) { 
+	public void setIpAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 	} 
 
-	public InstanceDetailImpl ipAddresses(net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress ipAddresses) { 
+	public InstanceDetailImpl ipAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 		return this;
 	} 
@@ -138,15 +138,15 @@ public class InstanceDetailImpl implements InstanceDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor getFlavor() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl getFlavor() { 
 		return this.flavor;
 	} 
 
-	public void setFlavor(net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor flavor) { 
+	public void setFlavor(net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl flavor) { 
 		this.flavor = flavor;
 	} 
 
-	public InstanceDetailImpl flavor(net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor flavor) { 
+	public InstanceDetailImpl flavor(net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl flavor) { 
 		this.flavor = flavor;
 		return this;
 	} 

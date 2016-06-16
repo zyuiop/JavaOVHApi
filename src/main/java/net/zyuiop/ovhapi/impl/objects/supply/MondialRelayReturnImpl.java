@@ -9,7 +9,7 @@ public class MondialRelayReturnImpl implements MondialRelayReturn {
 
 	private java.lang.String status;
 	private java.lang.String error;
-	private net.zyuiop.ovhapi.api.objects.supply.MondialRelayResult result;
+	private net.zyuiop.ovhapi.impl.objects.supply.MondialRelayResultImpl result;
 
 	public MondialRelayReturnImpl() {
 	}
@@ -40,15 +40,15 @@ public class MondialRelayReturnImpl implements MondialRelayReturn {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.supply.MondialRelayResult getResult() { 
+	public net.zyuiop.ovhapi.impl.objects.supply.MondialRelayResultImpl getResult() { 
 		return this.result;
 	} 
 
-	public void setResult(net.zyuiop.ovhapi.api.objects.supply.MondialRelayResult result) { 
+	public void setResult(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayResultImpl result) { 
 		this.result = result;
 	} 
 
-	public MondialRelayReturnImpl result(net.zyuiop.ovhapi.api.objects.supply.MondialRelayResult result) { 
+	public MondialRelayReturnImpl result(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayResultImpl result) { 
 		this.result = result;
 		return this;
 	} 

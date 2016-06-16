@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.order.cart.Price;
 public class PriceImpl implements Price { 
 
 	private java.lang.String label;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 
 	public PriceImpl() {
 	}
@@ -26,15 +26,15 @@ public class PriceImpl implements Price {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public PriceImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public PriceImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

@@ -16,7 +16,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public java.lang.String getServiceNameCommercialRangeOrderable(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/commercialRange/orderable";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/commercialRange/orderable";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -32,7 +32,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public long[] getServiceNameDatacenterDatacenterIdTask(java.lang.String serviceName, long datacenterId, java.lang.String state) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/datacenter/" + datacenterId + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/datacenter/" + datacenterId + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -40,7 +40,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] getServiceNameDatacenterDatacenterIdTask(java.lang.String serviceName, long datacenterId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/datacenter/" + datacenterId + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/datacenter/" + datacenterId + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -88,7 +88,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -114,7 +114,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public long[] getServiceNameUserUserIdRight(java.lang.String serviceName, long userId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + userId + "/right";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/user/" + userId + "/right";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -130,7 +130,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public long[] getServiceNameDatacenterDatacenterIdFiler(java.lang.String serviceName, long datacenterId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/datacenter/" + datacenterId + "/filer";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/datacenter/" + datacenterId + "/filer";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -162,7 +162,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public long[] getServiceNameVlan(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/vlan";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/vlan";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -170,7 +170,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/terminate";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/terminate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -195,7 +195,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public java.lang.String getServiceNameOrderableIpCountries(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/orderableIpCountries";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/orderableIpCountries";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -259,7 +259,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public java.lang.String getDedicatedCloud() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//dedicatedCloud";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/dedicatedCloud";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -267,7 +267,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] getServiceNameUserUserIdTask(java.lang.String serviceName, long userId, java.lang.String state) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + userId + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/user/" + userId + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -275,7 +275,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] getServiceNameUserUserIdTask(java.lang.String serviceName, long userId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user/" + userId + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/user/" + userId + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -291,15 +291,15 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 	public long[] getServiceNameFiler(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/filer";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/filer";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -331,7 +331,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public long[] getServiceNameDatacenter(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/datacenter";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/datacenter";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -347,7 +347,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public java.lang.String getServiceNameCommercialRangeCompliance(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/commercialRange/compliance";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/commercialRange/compliance";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -355,7 +355,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public java.lang.String getCommercialRange() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/commercialRange";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/commercialRange";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -403,15 +403,15 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public net.zyuiop.ovhapi.api.objects.vrack.DedicatedCloud getServiceNameVrackVrack(java.lang.String serviceName, java.lang.String vrack) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/vrack/" + vrack + "";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/vrack/" + vrack + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.vrack.DedicatedCloud.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.DedicatedCloudImpl.class);
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String state) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -419,7 +419,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -459,7 +459,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("contactAdmin", contactAdmin);
 		__dataMap.put("contactTech", contactTech);
@@ -471,7 +471,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -480,7 +480,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] getServiceNameUser(java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/user";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -488,7 +488,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/user";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/user";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -544,7 +544,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public java.lang.String getServiceNameVrack(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/vrack";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/vrack";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -552,7 +552,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 	}
 
 	public long[] getServiceNameAllowedNetwork(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/allowedNetwork";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/allowedNetwork";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -592,12 +592,12 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public net.zyuiop.ovhapi.api.objects.vrack.Task deleteServiceNameVrackVrack(java.lang.String serviceName, java.lang.String vrack) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/vrack/" + vrack + "";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/vrack/" + vrack + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.vrack.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.TaskImpl.class);
 	}
 
 
@@ -625,7 +625,7 @@ public class DedicatedCloudImpl implements DedicatedCloud {
 
 
 	public long[] getServiceNameDatacenterDatacenterIdHost(java.lang.String serviceName, long datacenterId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/datacenter/" + datacenterId + "/host";
+		String __callUrl = "https://api.ovh.com/1.0/dedicatedCloud/" + serviceName + "/datacenter/" + datacenterId + "/host";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);

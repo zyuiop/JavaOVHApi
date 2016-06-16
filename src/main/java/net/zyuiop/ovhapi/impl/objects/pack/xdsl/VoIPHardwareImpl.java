@@ -13,7 +13,7 @@ public class VoIPHardwareImpl implements VoIPHardware {
 	private long max;
 	private java.lang.String label;
 	private java.lang.String image;
-	private net.zyuiop.ovhapi.api.objects.order.Price deposit;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl deposit;
 
 	public VoIPHardwareImpl() {
 	}
@@ -96,15 +96,15 @@ public class VoIPHardwareImpl implements VoIPHardware {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getDeposit() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getDeposit() { 
 		return this.deposit;
 	} 
 
-	public void setDeposit(net.zyuiop.ovhapi.api.objects.order.Price deposit) { 
+	public void setDeposit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl deposit) { 
 		this.deposit = deposit;
 	} 
 
-	public VoIPHardwareImpl deposit(net.zyuiop.ovhapi.api.objects.order.Price deposit) { 
+	public VoIPHardwareImpl deposit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl deposit) { 
 		this.deposit = deposit;
 		return this;
 	} 

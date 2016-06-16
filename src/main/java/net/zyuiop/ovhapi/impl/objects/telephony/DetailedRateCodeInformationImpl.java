@@ -7,40 +7,40 @@ import net.zyuiop.ovhapi.api.objects.telephony.DetailedRateCodeInformation;
 
 public class DetailedRateCodeInformationImpl implements DetailedRateCodeInformation { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price pricePerCallWithoutTax;
-	private net.zyuiop.ovhapi.api.objects.order.Price repaymentPricePerCallWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerCallWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl repaymentPricePerCallWithoutTax;
 	private java.lang.String rateCode;
-	private net.zyuiop.ovhapi.api.objects.order.Price pricePerMinuteWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerMinuteWithoutTax;
 	private java.util.Date cancelLimitDatetime;
-	private net.zyuiop.ovhapi.api.objects.order.Price repaymentPricePerMinuteWithoutTax;
-	private net.zyuiop.ovhapi.api.objects.order.Price updateRateCodePriceWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl repaymentPricePerMinuteWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl updateRateCodePriceWithoutTax;
 	private java.util.Date effectiveDatetime;
 
 	public DetailedRateCodeInformationImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPricePerCallWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPricePerCallWithoutTax() { 
 		return this.pricePerCallWithoutTax;
 	} 
 
-	public void setPricePerCallWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerCallWithoutTax) { 
+	public void setPricePerCallWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerCallWithoutTax) { 
 		this.pricePerCallWithoutTax = pricePerCallWithoutTax;
 	} 
 
-	public DetailedRateCodeInformationImpl pricePerCallWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerCallWithoutTax) { 
+	public DetailedRateCodeInformationImpl pricePerCallWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerCallWithoutTax) { 
 		this.pricePerCallWithoutTax = pricePerCallWithoutTax;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getRepaymentPricePerCallWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getRepaymentPricePerCallWithoutTax() { 
 		return this.repaymentPricePerCallWithoutTax;
 	} 
 
-	public void setRepaymentPricePerCallWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price repaymentPricePerCallWithoutTax) { 
+	public void setRepaymentPricePerCallWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl repaymentPricePerCallWithoutTax) { 
 		this.repaymentPricePerCallWithoutTax = repaymentPricePerCallWithoutTax;
 	} 
 
-	public DetailedRateCodeInformationImpl repaymentPricePerCallWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price repaymentPricePerCallWithoutTax) { 
+	public DetailedRateCodeInformationImpl repaymentPricePerCallWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl repaymentPricePerCallWithoutTax) { 
 		this.repaymentPricePerCallWithoutTax = repaymentPricePerCallWithoutTax;
 		return this;
 	} 
@@ -58,15 +58,15 @@ public class DetailedRateCodeInformationImpl implements DetailedRateCodeInformat
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPricePerMinuteWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPricePerMinuteWithoutTax() { 
 		return this.pricePerMinuteWithoutTax;
 	} 
 
-	public void setPricePerMinuteWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerMinuteWithoutTax) { 
+	public void setPricePerMinuteWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerMinuteWithoutTax) { 
 		this.pricePerMinuteWithoutTax = pricePerMinuteWithoutTax;
 	} 
 
-	public DetailedRateCodeInformationImpl pricePerMinuteWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerMinuteWithoutTax) { 
+	public DetailedRateCodeInformationImpl pricePerMinuteWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerMinuteWithoutTax) { 
 		this.pricePerMinuteWithoutTax = pricePerMinuteWithoutTax;
 		return this;
 	} 
@@ -84,28 +84,28 @@ public class DetailedRateCodeInformationImpl implements DetailedRateCodeInformat
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getRepaymentPricePerMinuteWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getRepaymentPricePerMinuteWithoutTax() { 
 		return this.repaymentPricePerMinuteWithoutTax;
 	} 
 
-	public void setRepaymentPricePerMinuteWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price repaymentPricePerMinuteWithoutTax) { 
+	public void setRepaymentPricePerMinuteWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl repaymentPricePerMinuteWithoutTax) { 
 		this.repaymentPricePerMinuteWithoutTax = repaymentPricePerMinuteWithoutTax;
 	} 
 
-	public DetailedRateCodeInformationImpl repaymentPricePerMinuteWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price repaymentPricePerMinuteWithoutTax) { 
+	public DetailedRateCodeInformationImpl repaymentPricePerMinuteWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl repaymentPricePerMinuteWithoutTax) { 
 		this.repaymentPricePerMinuteWithoutTax = repaymentPricePerMinuteWithoutTax;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getUpdateRateCodePriceWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getUpdateRateCodePriceWithoutTax() { 
 		return this.updateRateCodePriceWithoutTax;
 	} 
 
-	public void setUpdateRateCodePriceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price updateRateCodePriceWithoutTax) { 
+	public void setUpdateRateCodePriceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl updateRateCodePriceWithoutTax) { 
 		this.updateRateCodePriceWithoutTax = updateRateCodePriceWithoutTax;
 	} 
 
-	public DetailedRateCodeInformationImpl updateRateCodePriceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price updateRateCodePriceWithoutTax) { 
+	public DetailedRateCodeInformationImpl updateRateCodePriceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl updateRateCodePriceWithoutTax) { 
 		this.updateRateCodePriceWithoutTax = updateRateCodePriceWithoutTax;
 		return this;
 	} 

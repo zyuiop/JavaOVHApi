@@ -9,7 +9,7 @@ public class ResponseImpl implements Response {
 
 	private java.lang.String text;
 	private java.lang.String cgiUrl;
-	private net.zyuiop.ovhapi.api.objects.sms.ResponseTrackingOptions trackingOptions;
+	private net.zyuiop.ovhapi.impl.objects.sms.ResponseTrackingOptionsImpl trackingOptions;
 	private java.lang.String trackingDefaultSmsSender;
 	private java.lang.String responseType;
 
@@ -42,15 +42,15 @@ public class ResponseImpl implements Response {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.sms.ResponseTrackingOptions getTrackingOptions() { 
+	public net.zyuiop.ovhapi.impl.objects.sms.ResponseTrackingOptionsImpl getTrackingOptions() { 
 		return this.trackingOptions;
 	} 
 
-	public void setTrackingOptions(net.zyuiop.ovhapi.api.objects.sms.ResponseTrackingOptions trackingOptions) { 
+	public void setTrackingOptions(net.zyuiop.ovhapi.impl.objects.sms.ResponseTrackingOptionsImpl trackingOptions) { 
 		this.trackingOptions = trackingOptions;
 	} 
 
-	public ResponseImpl trackingOptions(net.zyuiop.ovhapi.api.objects.sms.ResponseTrackingOptions trackingOptions) { 
+	public ResponseImpl trackingOptions(net.zyuiop.ovhapi.impl.objects.sms.ResponseTrackingOptionsImpl trackingOptions) { 
 		this.trackingOptions = trackingOptions;
 		return this;
 	} 

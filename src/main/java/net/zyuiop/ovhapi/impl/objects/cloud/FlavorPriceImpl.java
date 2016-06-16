@@ -7,24 +7,24 @@ import net.zyuiop.ovhapi.api.objects.cloud.FlavorPrice;
 
 public class FlavorPriceImpl implements FlavorPrice { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl monthlyPrice;
 	private java.lang.String flavorId;
 	private java.lang.String region;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 	private java.lang.String flavorName;
 
 	public FlavorPriceImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getMonthlyPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getMonthlyPrice() { 
 		return this.monthlyPrice;
 	} 
 
-	public void setMonthlyPrice(net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice) { 
+	public void setMonthlyPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl monthlyPrice) { 
 		this.monthlyPrice = monthlyPrice;
 	} 
 
-	public FlavorPriceImpl monthlyPrice(net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice) { 
+	public FlavorPriceImpl monthlyPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl monthlyPrice) { 
 		this.monthlyPrice = monthlyPrice;
 		return this;
 	} 
@@ -55,15 +55,15 @@ public class FlavorPriceImpl implements FlavorPrice {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public FlavorPriceImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public FlavorPriceImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

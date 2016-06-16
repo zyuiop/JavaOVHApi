@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.pack.xdsl.promotioncode.Capabilities;
 
 public class CapabilitiesImpl implements Capabilities { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price amount;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount;
 	private java.lang.String reasonCodes;
 	private boolean canGenerate;
 	private long engagement;
@@ -15,15 +15,15 @@ public class CapabilitiesImpl implements Capabilities {
 	public CapabilitiesImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getAmount() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getAmount() { 
 		return this.amount;
 	} 
 
-	public void setAmount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public void setAmount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 	} 
 
-	public CapabilitiesImpl amount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public CapabilitiesImpl amount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 		return this;
 	} 

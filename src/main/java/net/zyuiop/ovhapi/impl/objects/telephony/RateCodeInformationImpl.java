@@ -7,22 +7,22 @@ import net.zyuiop.ovhapi.api.objects.telephony.RateCodeInformation;
 
 public class RateCodeInformationImpl implements RateCodeInformation { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price pricePerCallWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerCallWithoutTax;
 	private java.lang.String code;
-	private net.zyuiop.ovhapi.api.objects.order.Price pricePerMinuteWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerMinuteWithoutTax;
 
 	public RateCodeInformationImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPricePerCallWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPricePerCallWithoutTax() { 
 		return this.pricePerCallWithoutTax;
 	} 
 
-	public void setPricePerCallWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerCallWithoutTax) { 
+	public void setPricePerCallWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerCallWithoutTax) { 
 		this.pricePerCallWithoutTax = pricePerCallWithoutTax;
 	} 
 
-	public RateCodeInformationImpl pricePerCallWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerCallWithoutTax) { 
+	public RateCodeInformationImpl pricePerCallWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerCallWithoutTax) { 
 		this.pricePerCallWithoutTax = pricePerCallWithoutTax;
 		return this;
 	} 
@@ -40,15 +40,15 @@ public class RateCodeInformationImpl implements RateCodeInformation {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPricePerMinuteWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPricePerMinuteWithoutTax() { 
 		return this.pricePerMinuteWithoutTax;
 	} 
 
-	public void setPricePerMinuteWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerMinuteWithoutTax) { 
+	public void setPricePerMinuteWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerMinuteWithoutTax) { 
 		this.pricePerMinuteWithoutTax = pricePerMinuteWithoutTax;
 	} 
 
-	public RateCodeInformationImpl pricePerMinuteWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price pricePerMinuteWithoutTax) { 
+	public RateCodeInformationImpl pricePerMinuteWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl pricePerMinuteWithoutTax) { 
 		this.pricePerMinuteWithoutTax = pricePerMinuteWithoutTax;
 		return this;
 	} 

@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetrics;
 public class InstanceMetricsImpl implements InstanceMetrics { 
 
 	private java.lang.String unit;
-	private net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetricsValue values;
+	private net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceMetricsValueImpl values;
 
 	public InstanceMetricsImpl() {
 	}
@@ -26,15 +26,15 @@ public class InstanceMetricsImpl implements InstanceMetrics {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetricsValue getValues() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceMetricsValueImpl getValues() { 
 		return this.values;
 	} 
 
-	public void setValues(net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetricsValue values) { 
+	public void setValues(net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceMetricsValueImpl values) { 
 		this.values = values;
 	} 
 
-	public InstanceMetricsImpl values(net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetricsValue values) { 
+	public InstanceMetricsImpl values(net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceMetricsValueImpl values) { 
 		this.values = values;
 		return this;
 	} 

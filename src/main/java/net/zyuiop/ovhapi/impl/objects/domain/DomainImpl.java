@@ -13,7 +13,7 @@ public class DomainImpl implements Domain {
 	private java.lang.String offer;
 	private java.lang.String whoisOwner;
 	private boolean dnssecSupported;
-	private net.zyuiop.ovhapi.api.objects.domain.ParentService parentService;
+	private net.zyuiop.ovhapi.impl.objects.domain.ParentServiceImpl parentService;
 	private java.lang.String domain;
 	private java.util.Date lastUpdate;
 	private boolean glueRecordMultiIpSupported;
@@ -100,15 +100,15 @@ public class DomainImpl implements Domain {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.domain.ParentService getParentService() { 
+	public net.zyuiop.ovhapi.impl.objects.domain.ParentServiceImpl getParentService() { 
 		return this.parentService;
 	} 
 
-	public void setParentService(net.zyuiop.ovhapi.api.objects.domain.ParentService parentService) { 
+	public void setParentService(net.zyuiop.ovhapi.impl.objects.domain.ParentServiceImpl parentService) { 
 		this.parentService = parentService;
 	} 
 
-	public DomainImpl parentService(net.zyuiop.ovhapi.api.objects.domain.ParentService parentService) { 
+	public DomainImpl parentService(net.zyuiop.ovhapi.impl.objects.domain.ParentServiceImpl parentService) { 
 		this.parentService = parentService;
 		return this;
 	} 

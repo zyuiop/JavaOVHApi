@@ -98,7 +98,8 @@ public abstract class OVHRawCalls {
 
 		connection.connect();
 		if (connection.getResponseCode() != 200) {
-			System.out.println(IOUtils.toString(connection.getErrorStream()));
+			System.out.println("Error : " + connection.getResponseCode() + " " + IOUtils.toString(connection.getErrorStream()));
+			System.out.println("Accessed address : " + url.toString());
 			return null;
 		}
 		return IOUtils.toString(connection.getInputStream());

@@ -16,7 +16,7 @@ public class NewAccountImpl implements NewAccount {
 	}
 
 	public java.lang.String getLegalform(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/legalform";
+		String __callUrl = "https://api.ovh.com/1.0/newAccount/legalform";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -24,15 +24,15 @@ public class NewAccountImpl implements NewAccount {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.CreationRules getCreationRules(java.lang.String country, java.lang.String ovhSubsidiary, java.lang.String ovhCompany, java.lang.String legalform) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/creationRules";
+		String __callUrl = "https://api.ovh.com/1.0/newAccount/creationRules";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.api.objects.nichandle.CreationRules.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.impl.objects.nichandle.CreationRulesImpl.class);
 	}
 
 	public java.lang.String getCountries(java.lang.String ovhSubsidiary, java.lang.String ovhCompany) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/countries";
+		String __callUrl = "https://api.ovh.com/1.0/newAccount/countries";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -40,7 +40,7 @@ public class NewAccountImpl implements NewAccount {
 	}
 
 	public java.lang.String getArea(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/area";
+		String __callUrl = "https://api.ovh.com/1.0/newAccount/area";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -48,7 +48,7 @@ public class NewAccountImpl implements NewAccount {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.NewAccountAndToken postNewAccount(java.lang.String ovhSubsidiary, java.lang.String ovhCompany, java.lang.String email, java.lang.String country, java.lang.String legalform, java.lang.String firstname, java.lang.String vat, java.lang.String spareEmail, java.lang.String nationalIdentificationNumber, java.lang.String birthDay, java.lang.String area, java.lang.String city, java.lang.String fax, java.lang.String address, java.lang.String companyNationalIdentificationNumber, java.lang.String birthCity, java.lang.String organisation, java.lang.String language, java.lang.String name, java.lang.String sex, java.lang.String phone, java.lang.String zip, java.lang.String corporationType) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//newAccount";
+		String __callUrl = "https://api.ovh.com/1.0/newAccount/newAccount";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("ovhSubsidiary", ovhSubsidiary);
 		__dataMap.put("ovhCompany", ovhCompany);
@@ -76,11 +76,11 @@ public class NewAccountImpl implements NewAccount {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.api.objects.nichandle.NewAccountAndToken.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.impl.objects.nichandle.NewAccountAndTokenImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.NewAccountAndToken postNewAccount(java.lang.String ovhSubsidiary, java.lang.String ovhCompany, java.lang.String email, java.lang.String country, java.lang.String legalform) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//newAccount";
+		String __callUrl = "https://api.ovh.com/1.0/newAccount/newAccount";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("ovhSubsidiary", ovhSubsidiary);
 		__dataMap.put("ovhCompany", ovhCompany);
@@ -90,11 +90,11 @@ public class NewAccountImpl implements NewAccount {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.api.objects.nichandle.NewAccountAndToken.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.impl.objects.nichandle.NewAccountAndTokenImpl.class);
 	}
 
 	public java.lang.String getCorporationType(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/corporationType";
+		String __callUrl = "https://api.ovh.com/1.0/newAccount/corporationType";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);

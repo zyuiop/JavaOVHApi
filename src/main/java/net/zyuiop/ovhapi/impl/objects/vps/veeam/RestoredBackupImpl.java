@@ -7,22 +7,22 @@ import net.zyuiop.ovhapi.api.objects.vps.veeam.RestoredBackup;
 
 public class RestoredBackupImpl implements RestoredBackup { 
 
-	private net.zyuiop.ovhapi.api.objects.vps.veeam.Infos accessInfos;
+	private net.zyuiop.ovhapi.impl.objects.vps.veeam.InfosImpl accessInfos;
 	private long restorePointId;
 	private java.lang.String state;
 
 	public RestoredBackupImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.veeam.Infos getAccessInfos() { 
+	public net.zyuiop.ovhapi.impl.objects.vps.veeam.InfosImpl getAccessInfos() { 
 		return this.accessInfos;
 	} 
 
-	public void setAccessInfos(net.zyuiop.ovhapi.api.objects.vps.veeam.Infos accessInfos) { 
+	public void setAccessInfos(net.zyuiop.ovhapi.impl.objects.vps.veeam.InfosImpl accessInfos) { 
 		this.accessInfos = accessInfos;
 	} 
 
-	public RestoredBackupImpl accessInfos(net.zyuiop.ovhapi.api.objects.vps.veeam.Infos accessInfos) { 
+	public RestoredBackupImpl accessInfos(net.zyuiop.ovhapi.impl.objects.vps.veeam.InfosImpl accessInfos) { 
 		this.accessInfos = accessInfos;
 		return this;
 	} 

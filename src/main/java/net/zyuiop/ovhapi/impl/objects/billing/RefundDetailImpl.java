@@ -9,9 +9,9 @@ public class RefundDetailImpl implements RefundDetail {
 
 	private java.lang.String refundDetailId;
 	private java.lang.String refundId;
-	private net.zyuiop.ovhapi.api.objects.order.Price totalPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl totalPrice;
 	private java.lang.String quantity;
-	private net.zyuiop.ovhapi.api.objects.order.Price unitPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl unitPrice;
 	private java.lang.String description;
 	private java.lang.String domain;
 	private java.lang.String reference;
@@ -45,15 +45,15 @@ public class RefundDetailImpl implements RefundDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTotalPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTotalPrice() { 
 		return this.totalPrice;
 	} 
 
-	public void setTotalPrice(net.zyuiop.ovhapi.api.objects.order.Price totalPrice) { 
+	public void setTotalPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl totalPrice) { 
 		this.totalPrice = totalPrice;
 	} 
 
-	public RefundDetailImpl totalPrice(net.zyuiop.ovhapi.api.objects.order.Price totalPrice) { 
+	public RefundDetailImpl totalPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl totalPrice) { 
 		this.totalPrice = totalPrice;
 		return this;
 	} 
@@ -71,15 +71,15 @@ public class RefundDetailImpl implements RefundDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getUnitPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getUnitPrice() { 
 		return this.unitPrice;
 	} 
 
-	public void setUnitPrice(net.zyuiop.ovhapi.api.objects.order.Price unitPrice) { 
+	public void setUnitPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl unitPrice) { 
 		this.unitPrice = unitPrice;
 	} 
 
-	public RefundDetailImpl unitPrice(net.zyuiop.ovhapi.api.objects.order.Price unitPrice) { 
+	public RefundDetailImpl unitPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl unitPrice) { 
 		this.unitPrice = unitPrice;
 		return this;
 	} 

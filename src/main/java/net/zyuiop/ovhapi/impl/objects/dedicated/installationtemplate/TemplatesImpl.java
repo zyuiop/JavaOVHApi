@@ -15,7 +15,7 @@ public class TemplatesImpl implements Templates {
 	private java.lang.String availableLanguages;
 	private java.util.Date lastModification;
 	private boolean beta;
-	private net.zyuiop.ovhapi.api.objects.dedicated.TemplateOsProperties customization;
+	private net.zyuiop.ovhapi.impl.objects.dedicated.TemplateOsPropertiesImpl customization;
 	private java.lang.String description;
 	private java.lang.String distribution;
 	private boolean supportsGptLabel;
@@ -132,15 +132,15 @@ public class TemplatesImpl implements Templates {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.dedicated.TemplateOsProperties getCustomization() { 
+	public net.zyuiop.ovhapi.impl.objects.dedicated.TemplateOsPropertiesImpl getCustomization() { 
 		return this.customization;
 	} 
 
-	public void setCustomization(net.zyuiop.ovhapi.api.objects.dedicated.TemplateOsProperties customization) { 
+	public void setCustomization(net.zyuiop.ovhapi.impl.objects.dedicated.TemplateOsPropertiesImpl customization) { 
 		this.customization = customization;
 	} 
 
-	public TemplatesImpl customization(net.zyuiop.ovhapi.api.objects.dedicated.TemplateOsProperties customization) { 
+	public TemplatesImpl customization(net.zyuiop.ovhapi.impl.objects.dedicated.TemplateOsPropertiesImpl customization) { 
 		this.customization = customization;
 		return this;
 	} 

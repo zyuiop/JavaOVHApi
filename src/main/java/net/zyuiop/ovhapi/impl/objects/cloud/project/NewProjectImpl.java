@@ -10,7 +10,7 @@ public class NewProjectImpl implements NewProject {
 	private long orderId;
 	private java.lang.String status;
 	private java.lang.String project;
-	private net.zyuiop.ovhapi.api.objects.cloud.project.NewProjectCredit credit;
+	private net.zyuiop.ovhapi.impl.objects.cloud.project.NewProjectCreditImpl credit;
 	private long[] agreements;
 	private java.lang.String description;
 
@@ -56,15 +56,15 @@ public class NewProjectImpl implements NewProject {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.project.NewProjectCredit getCredit() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.project.NewProjectCreditImpl getCredit() { 
 		return this.credit;
 	} 
 
-	public void setCredit(net.zyuiop.ovhapi.api.objects.cloud.project.NewProjectCredit credit) { 
+	public void setCredit(net.zyuiop.ovhapi.impl.objects.cloud.project.NewProjectCreditImpl credit) { 
 		this.credit = credit;
 	} 
 
-	public NewProjectImpl credit(net.zyuiop.ovhapi.api.objects.cloud.project.NewProjectCredit credit) { 
+	public NewProjectImpl credit(net.zyuiop.ovhapi.impl.objects.cloud.project.NewProjectCreditImpl credit) { 
 		this.credit = credit;
 		return this;
 	} 

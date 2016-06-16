@@ -9,10 +9,10 @@ public class CreditImpl implements Credit {
 
 	private java.lang.String voucher;
 	private java.lang.String description;
-	private net.zyuiop.ovhapi.api.objects.order.Price used_credit;
-	private net.zyuiop.ovhapi.api.objects.order.Price available_credit;
-	private net.zyuiop.ovhapi.api.objects.order.Price total_credit;
-	private net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity validity;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl used_credit;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl available_credit;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl total_credit;
+	private net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl validity;
 	private long id;
 	private java.lang.String bill;
 	private java.lang.String products;
@@ -46,54 +46,54 @@ public class CreditImpl implements Credit {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getUsed_credit() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getUsed_credit() { 
 		return this.used_credit;
 	} 
 
-	public void setUsed_credit(net.zyuiop.ovhapi.api.objects.order.Price used_credit) { 
+	public void setUsed_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl used_credit) { 
 		this.used_credit = used_credit;
 	} 
 
-	public CreditImpl used_credit(net.zyuiop.ovhapi.api.objects.order.Price used_credit) { 
+	public CreditImpl used_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl used_credit) { 
 		this.used_credit = used_credit;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getAvailable_credit() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getAvailable_credit() { 
 		return this.available_credit;
 	} 
 
-	public void setAvailable_credit(net.zyuiop.ovhapi.api.objects.order.Price available_credit) { 
+	public void setAvailable_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl available_credit) { 
 		this.available_credit = available_credit;
 	} 
 
-	public CreditImpl available_credit(net.zyuiop.ovhapi.api.objects.order.Price available_credit) { 
+	public CreditImpl available_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl available_credit) { 
 		this.available_credit = available_credit;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTotal_credit() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTotal_credit() { 
 		return this.total_credit;
 	} 
 
-	public void setTotal_credit(net.zyuiop.ovhapi.api.objects.order.Price total_credit) { 
+	public void setTotal_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total_credit) { 
 		this.total_credit = total_credit;
 	} 
 
-	public CreditImpl total_credit(net.zyuiop.ovhapi.api.objects.order.Price total_credit) { 
+	public CreditImpl total_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total_credit) { 
 		this.total_credit = total_credit;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity getValidity() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl getValidity() { 
 		return this.validity;
 	} 
 
-	public void setValidity(net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity validity) { 
+	public void setValidity(net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl validity) { 
 		this.validity = validity;
 	} 
 
-	public CreditImpl validity(net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity validity) { 
+	public CreditImpl validity(net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl validity) { 
 		this.validity = validity;
 		return this;
 	} 

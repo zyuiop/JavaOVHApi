@@ -11,14 +11,14 @@ public class OfferImpl implements Offer {
 	private long syncDownload;
 	private java.lang.String offerCode;
 	private java.lang.String lineStatus;
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Portability portability;
-	private net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength lineSectionsLength;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.PortabilityImpl portability;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength;
 	private long estimatedUpload;
 	private java.lang.String type;
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl address;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 	private long estimatedDownload;
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlots meetingSlots;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotsImpl meetingSlots;
 	private java.lang.String nra;
 	private java.lang.String unbundling;
 	private long syncUpload;
@@ -78,28 +78,28 @@ public class OfferImpl implements Offer {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Portability getPortability() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.PortabilityImpl getPortability() { 
 		return this.portability;
 	} 
 
-	public void setPortability(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Portability portability) { 
+	public void setPortability(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.PortabilityImpl portability) { 
 		this.portability = portability;
 	} 
 
-	public OfferImpl portability(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Portability portability) { 
+	public OfferImpl portability(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.PortabilityImpl portability) { 
 		this.portability = portability;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength getLineSectionsLength() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl getLineSectionsLength() { 
 		return this.lineSectionsLength;
 	} 
 
-	public void setLineSectionsLength(net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength lineSectionsLength) { 
+	public void setLineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 	} 
 
-	public OfferImpl lineSectionsLength(net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength lineSectionsLength) { 
+	public OfferImpl lineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 		return this;
 	} 
@@ -130,28 +130,28 @@ public class OfferImpl implements Offer {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address getAddress() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl getAddress() { 
 		return this.address;
 	} 
 
-	public void setAddress(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address) { 
+	public void setAddress(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl address) { 
 		this.address = address;
 	} 
 
-	public OfferImpl address(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address) { 
+	public OfferImpl address(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl address) { 
 		this.address = address;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public OfferImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public OfferImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 
@@ -169,15 +169,15 @@ public class OfferImpl implements Offer {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlots getMeetingSlots() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotsImpl getMeetingSlots() { 
 		return this.meetingSlots;
 	} 
 
-	public void setMeetingSlots(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlots meetingSlots) { 
+	public void setMeetingSlots(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotsImpl meetingSlots) { 
 		this.meetingSlots = meetingSlots;
 	} 
 
-	public OfferImpl meetingSlots(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlots meetingSlots) { 
+	public OfferImpl meetingSlots(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotsImpl meetingSlots) { 
 		this.meetingSlots = meetingSlots;
 		return this;
 	} 

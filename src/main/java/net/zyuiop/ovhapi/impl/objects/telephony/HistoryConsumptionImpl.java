@@ -9,8 +9,8 @@ public class HistoryConsumptionImpl implements HistoryConsumption {
 
 	private java.util.Date date;
 	private java.lang.String status;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
-	private net.zyuiop.ovhapi.api.objects.order.Price priceOutplan;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceOutplan;
 
 	public HistoryConsumptionImpl() {
 	}
@@ -41,28 +41,28 @@ public class HistoryConsumptionImpl implements HistoryConsumption {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public HistoryConsumptionImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public HistoryConsumptionImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPriceOutplan() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPriceOutplan() { 
 		return this.priceOutplan;
 	} 
 
-	public void setPriceOutplan(net.zyuiop.ovhapi.api.objects.order.Price priceOutplan) { 
+	public void setPriceOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceOutplan) { 
 		this.priceOutplan = priceOutplan;
 	} 
 
-	public HistoryConsumptionImpl priceOutplan(net.zyuiop.ovhapi.api.objects.order.Price priceOutplan) { 
+	public HistoryConsumptionImpl priceOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceOutplan) { 
 		this.priceOutplan = priceOutplan;
 		return this;
 	} 

@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressStatus
 
 public class InstallationProgressStatusImpl implements InstallationProgressStatus { 
 
-	private net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps progress;
+	private net.zyuiop.ovhapi.impl.objects.dedicated.server.InstallationProgressStepsImpl progress;
 	private long elapsedTime;
 
 	public InstallationProgressStatusImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps getProgress() { 
+	public net.zyuiop.ovhapi.impl.objects.dedicated.server.InstallationProgressStepsImpl getProgress() { 
 		return this.progress;
 	} 
 
-	public void setProgress(net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps progress) { 
+	public void setProgress(net.zyuiop.ovhapi.impl.objects.dedicated.server.InstallationProgressStepsImpl progress) { 
 		this.progress = progress;
 	} 
 
-	public InstallationProgressStatusImpl progress(net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps progress) { 
+	public InstallationProgressStatusImpl progress(net.zyuiop.ovhapi.impl.objects.dedicated.server.InstallationProgressStepsImpl progress) { 
 		this.progress = progress;
 		return this;
 	} 

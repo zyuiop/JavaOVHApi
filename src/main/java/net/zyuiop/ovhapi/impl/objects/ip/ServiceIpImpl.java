@@ -9,7 +9,7 @@ public class ServiceIpImpl implements ServiceIp {
 
 	private java.lang.String organisationId;
 	private java.lang.String country;
-	private net.zyuiop.ovhapi.api.objects.ip.RoutedTo routedTo;
+	private net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl routedTo;
 	private java.lang.String ip;
 	private boolean canBeTerminated;
 	private java.lang.String type;
@@ -44,15 +44,15 @@ public class ServiceIpImpl implements ServiceIp {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.ip.RoutedTo getRoutedTo() { 
+	public net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl getRoutedTo() { 
 		return this.routedTo;
 	} 
 
-	public void setRoutedTo(net.zyuiop.ovhapi.api.objects.ip.RoutedTo routedTo) { 
+	public void setRoutedTo(net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl routedTo) { 
 		this.routedTo = routedTo;
 	} 
 
-	public ServiceIpImpl routedTo(net.zyuiop.ovhapi.api.objects.ip.RoutedTo routedTo) { 
+	public ServiceIpImpl routedTo(net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl routedTo) { 
 		this.routedTo = routedTo;
 		return this;
 	} 

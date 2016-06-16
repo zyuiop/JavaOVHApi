@@ -11,7 +11,7 @@ public class OfferAvailableOptionImpl implements OfferAvailableOption {
 	private long included;
 	private long duration;
 	private long optional;
-	private net.zyuiop.ovhapi.api.objects.order.Price optionalPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl optionalPrice;
 
 	public OfferAvailableOptionImpl() {
 	}
@@ -68,15 +68,15 @@ public class OfferAvailableOptionImpl implements OfferAvailableOption {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getOptionalPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getOptionalPrice() { 
 		return this.optionalPrice;
 	} 
 
-	public void setOptionalPrice(net.zyuiop.ovhapi.api.objects.order.Price optionalPrice) { 
+	public void setOptionalPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl optionalPrice) { 
 		this.optionalPrice = optionalPrice;
 	} 
 
-	public OfferAvailableOptionImpl optionalPrice(net.zyuiop.ovhapi.api.objects.order.Price optionalPrice) { 
+	public OfferAvailableOptionImpl optionalPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl optionalPrice) { 
 		this.optionalPrice = optionalPrice;
 		return this;
 	} 

@@ -10,7 +10,7 @@ public class IpTaskImpl implements IpTask {
 	private long taskId;
 	private java.lang.String function;
 	private java.lang.String status;
-	private net.zyuiop.ovhapi.api.objects.ip.RoutedTo destination;
+	private net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl destination;
 	private java.util.Date lastUpdate;
 	private java.lang.String comment;
 	private java.util.Date startDate;
@@ -58,15 +58,15 @@ public class IpTaskImpl implements IpTask {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.ip.RoutedTo getDestination() { 
+	public net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl getDestination() { 
 		return this.destination;
 	} 
 
-	public void setDestination(net.zyuiop.ovhapi.api.objects.ip.RoutedTo destination) { 
+	public void setDestination(net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl destination) { 
 		this.destination = destination;
 	} 
 
-	public IpTaskImpl destination(net.zyuiop.ovhapi.api.objects.ip.RoutedTo destination) { 
+	public IpTaskImpl destination(net.zyuiop.ovhapi.impl.objects.ip.RoutedToImpl destination) { 
 		this.destination = destination;
 		return this;
 	} 

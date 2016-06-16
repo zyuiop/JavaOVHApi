@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.sms.Account;
 
 public class AccountImpl implements Account { 
 
-	private net.zyuiop.ovhapi.api.objects.sms.Response smsResponse;
+	private net.zyuiop.ovhapi.impl.objects.sms.ResponseImpl smsResponse;
 	private java.lang.String status;
 	private double creditsLeft;
 	private java.lang.String name;
@@ -18,20 +18,20 @@ public class AccountImpl implements Account {
 	private java.lang.String stopCallBack;
 	private double creditsHoldByQuota;
 	private long automaticRecreditAmount;
-	private net.zyuiop.ovhapi.api.objects.sms.Templates templates;
+	private net.zyuiop.ovhapi.impl.objects.sms.TemplatesImpl templates;
 
 	public AccountImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.sms.Response getSmsResponse() { 
+	public net.zyuiop.ovhapi.impl.objects.sms.ResponseImpl getSmsResponse() { 
 		return this.smsResponse;
 	} 
 
-	public void setSmsResponse(net.zyuiop.ovhapi.api.objects.sms.Response smsResponse) { 
+	public void setSmsResponse(net.zyuiop.ovhapi.impl.objects.sms.ResponseImpl smsResponse) { 
 		this.smsResponse = smsResponse;
 	} 
 
-	public AccountImpl smsResponse(net.zyuiop.ovhapi.api.objects.sms.Response smsResponse) { 
+	public AccountImpl smsResponse(net.zyuiop.ovhapi.impl.objects.sms.ResponseImpl smsResponse) { 
 		this.smsResponse = smsResponse;
 		return this;
 	} 
@@ -166,15 +166,15 @@ public class AccountImpl implements Account {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.sms.Templates getTemplates() { 
+	public net.zyuiop.ovhapi.impl.objects.sms.TemplatesImpl getTemplates() { 
 		return this.templates;
 	} 
 
-	public void setTemplates(net.zyuiop.ovhapi.api.objects.sms.Templates templates) { 
+	public void setTemplates(net.zyuiop.ovhapi.impl.objects.sms.TemplatesImpl templates) { 
 		this.templates = templates;
 	} 
 
-	public AccountImpl templates(net.zyuiop.ovhapi.api.objects.sms.Templates templates) { 
+	public AccountImpl templates(net.zyuiop.ovhapi.impl.objects.sms.TemplatesImpl templates) { 
 		this.templates = templates;
 		return this;
 	} 

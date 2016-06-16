@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.WindowsOrderConfiguration;
 public class WindowsOrderConfigurationImpl implements WindowsOrderConfiguration { 
 
 	private java.lang.String serviceType;
-	private net.zyuiop.ovhapi.api.objects.license.OrderableWindowsCompatibilityInfos orderableVersions;
+	private net.zyuiop.ovhapi.impl.objects.license.OrderableWindowsCompatibilityInfosImpl orderableVersions;
 
 	public WindowsOrderConfigurationImpl() {
 	}
@@ -26,15 +26,15 @@ public class WindowsOrderConfigurationImpl implements WindowsOrderConfiguration 
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.license.OrderableWindowsCompatibilityInfos getOrderableVersions() { 
+	public net.zyuiop.ovhapi.impl.objects.license.OrderableWindowsCompatibilityInfosImpl getOrderableVersions() { 
 		return this.orderableVersions;
 	} 
 
-	public void setOrderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableWindowsCompatibilityInfos orderableVersions) { 
+	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableWindowsCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 	} 
 
-	public WindowsOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableWindowsCompatibilityInfos orderableVersions) { 
+	public WindowsOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableWindowsCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 		return this;
 	} 

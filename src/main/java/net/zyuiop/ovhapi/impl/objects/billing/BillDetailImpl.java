@@ -7,10 +7,10 @@ import net.zyuiop.ovhapi.api.objects.billing.BillDetail;
 
 public class BillDetailImpl implements BillDetail { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price totalPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl totalPrice;
 	private java.util.Date periodStart;
 	private java.lang.String quantity;
-	private net.zyuiop.ovhapi.api.objects.order.Price unitPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl unitPrice;
 	private java.lang.String description;
 	private java.lang.String billDetailId;
 	private java.lang.String domain;
@@ -19,15 +19,15 @@ public class BillDetailImpl implements BillDetail {
 	public BillDetailImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTotalPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTotalPrice() { 
 		return this.totalPrice;
 	} 
 
-	public void setTotalPrice(net.zyuiop.ovhapi.api.objects.order.Price totalPrice) { 
+	public void setTotalPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl totalPrice) { 
 		this.totalPrice = totalPrice;
 	} 
 
-	public BillDetailImpl totalPrice(net.zyuiop.ovhapi.api.objects.order.Price totalPrice) { 
+	public BillDetailImpl totalPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl totalPrice) { 
 		this.totalPrice = totalPrice;
 		return this;
 	} 
@@ -58,15 +58,15 @@ public class BillDetailImpl implements BillDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getUnitPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getUnitPrice() { 
 		return this.unitPrice;
 	} 
 
-	public void setUnitPrice(net.zyuiop.ovhapi.api.objects.order.Price unitPrice) { 
+	public void setUnitPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl unitPrice) { 
 		this.unitPrice = unitPrice;
 	} 
 
-	public BillDetailImpl unitPrice(net.zyuiop.ovhapi.api.objects.order.Price unitPrice) { 
+	public BillDetailImpl unitPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl unitPrice) { 
 		this.unitPrice = unitPrice;
 		return this;
 	} 

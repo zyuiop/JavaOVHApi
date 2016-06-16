@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.cloud.project.InstanceMonthlyBilling;
 
 public class InstanceMonthlyBillingImpl implements InstanceMonthlyBilling { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price cost;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl cost;
 	private java.util.Date activatedOn;
 
 	public InstanceMonthlyBillingImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getCost() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getCost() { 
 		return this.cost;
 	} 
 
-	public void setCost(net.zyuiop.ovhapi.api.objects.order.Price cost) { 
+	public void setCost(net.zyuiop.ovhapi.impl.objects.order.PriceImpl cost) { 
 		this.cost = cost;
 	} 
 
-	public InstanceMonthlyBillingImpl cost(net.zyuiop.ovhapi.api.objects.order.Price cost) { 
+	public InstanceMonthlyBillingImpl cost(net.zyuiop.ovhapi.impl.objects.order.PriceImpl cost) { 
 		this.cost = cost;
 		return this;
 	} 

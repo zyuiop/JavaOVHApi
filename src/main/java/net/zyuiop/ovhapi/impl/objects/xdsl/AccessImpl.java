@@ -15,8 +15,8 @@ public class AccessImpl implements Access {
 	private java.lang.String description;
 	private java.lang.String accessType;
 	private boolean monitoring;
-	private net.zyuiop.ovhapi.api.objects.xdsl.AccessCapabilities capabilities;
-	private net.zyuiop.ovhapi.api.objects.xdsl.AddressDetail address;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.AccessCapabilitiesImpl capabilities;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.AddressDetailImpl address;
 	private java.lang.String nra;
 	private java.lang.String role;
 
@@ -127,28 +127,28 @@ public class AccessImpl implements Access {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.AccessCapabilities getCapabilities() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.AccessCapabilitiesImpl getCapabilities() { 
 		return this.capabilities;
 	} 
 
-	public void setCapabilities(net.zyuiop.ovhapi.api.objects.xdsl.AccessCapabilities capabilities) { 
+	public void setCapabilities(net.zyuiop.ovhapi.impl.objects.xdsl.AccessCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 	} 
 
-	public AccessImpl capabilities(net.zyuiop.ovhapi.api.objects.xdsl.AccessCapabilities capabilities) { 
+	public AccessImpl capabilities(net.zyuiop.ovhapi.impl.objects.xdsl.AccessCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.AddressDetail getAddress() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.AddressDetailImpl getAddress() { 
 		return this.address;
 	} 
 
-	public void setAddress(net.zyuiop.ovhapi.api.objects.xdsl.AddressDetail address) { 
+	public void setAddress(net.zyuiop.ovhapi.impl.objects.xdsl.AddressDetailImpl address) { 
 		this.address = address;
 	} 
 
-	public AccessImpl address(net.zyuiop.ovhapi.api.objects.xdsl.AddressDetail address) { 
+	public AccessImpl address(net.zyuiop.ovhapi.impl.objects.xdsl.AddressDetailImpl address) { 
 		this.address = address;
 		return this;
 	} 

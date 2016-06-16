@@ -10,7 +10,7 @@ public class RmaImpl implements Rma {
 	private java.util.Date terminationDatetime;
 	private java.lang.String status;
 	private java.lang.String newMerchandise;
-	private net.zyuiop.ovhapi.api.objects.telephony.Contact shippingContact;
+	private net.zyuiop.ovhapi.impl.objects.telephony.ContactImpl shippingContact;
 	private java.lang.String offerTypeNew;
 	private java.lang.String equipmentReference;
 	private java.util.Date creationDatetime;
@@ -61,15 +61,15 @@ public class RmaImpl implements Rma {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.telephony.Contact getShippingContact() { 
+	public net.zyuiop.ovhapi.impl.objects.telephony.ContactImpl getShippingContact() { 
 		return this.shippingContact;
 	} 
 
-	public void setShippingContact(net.zyuiop.ovhapi.api.objects.telephony.Contact shippingContact) { 
+	public void setShippingContact(net.zyuiop.ovhapi.impl.objects.telephony.ContactImpl shippingContact) { 
 		this.shippingContact = shippingContact;
 	} 
 
-	public RmaImpl shippingContact(net.zyuiop.ovhapi.api.objects.telephony.Contact shippingContact) { 
+	public RmaImpl shippingContact(net.zyuiop.ovhapi.impl.objects.telephony.ContactImpl shippingContact) { 
 		this.shippingContact = shippingContact;
 		return this;
 	} 

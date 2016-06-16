@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.BandwidthStoragePrice;
 public class BandwidthStoragePriceImpl implements BandwidthStoragePrice { 
 
 	private java.lang.String region;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 
 	public BandwidthStoragePriceImpl() {
 	}
@@ -26,15 +26,15 @@ public class BandwidthStoragePriceImpl implements BandwidthStoragePrice {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public BandwidthStoragePriceImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public BandwidthStoragePriceImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

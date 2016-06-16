@@ -10,7 +10,7 @@ public class VoiceConsumptionImpl implements VoiceConsumption {
 	private java.lang.String calling;
 	private java.lang.String planType;
 	private long consumptionId;
-	private net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax;
 	private long duration;
 	private java.lang.String destinationType;
 	private java.util.Date creationDatetime;
@@ -59,15 +59,15 @@ public class VoiceConsumptionImpl implements VoiceConsumption {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPriceWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPriceWithoutTax() { 
 		return this.priceWithoutTax;
 	} 
 
-	public void setPriceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public void setPriceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 	} 
 
-	public VoiceConsumptionImpl priceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public VoiceConsumptionImpl priceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 		return this;
 	} 

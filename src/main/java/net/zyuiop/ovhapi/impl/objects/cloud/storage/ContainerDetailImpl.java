@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerDetail;
 
 public class ContainerDetailImpl implements ContainerDetail { 
 
-	private net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerObject objects;
+	private net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerObjectImpl objects;
 	private long storedBytes;
 	private java.lang.String name;
 	private boolean _public;
@@ -18,15 +18,15 @@ public class ContainerDetailImpl implements ContainerDetail {
 	public ContainerDetailImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerObject getObjects() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerObjectImpl getObjects() { 
 		return this.objects;
 	} 
 
-	public void setObjects(net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerObject objects) { 
+	public void setObjects(net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerObjectImpl objects) { 
 		this.objects = objects;
 	} 
 
-	public ContainerDetailImpl objects(net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerObject objects) { 
+	public ContainerDetailImpl objects(net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerObjectImpl objects) { 
 		this.objects = objects;
 		return this;
 	} 

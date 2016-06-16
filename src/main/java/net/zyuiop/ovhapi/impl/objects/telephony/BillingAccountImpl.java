@@ -7,38 +7,38 @@ import net.zyuiop.ovhapi.api.objects.telephony.BillingAccount;
 
 public class BillingAccountImpl implements BillingAccount { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price allowedOutplan;
-	private net.zyuiop.ovhapi.api.objects.order.Price securityDeposit;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl allowedOutplan;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl securityDeposit;
 	private java.lang.String status;
-	private net.zyuiop.ovhapi.api.objects.order.Price creditThreshold;
-	private net.zyuiop.ovhapi.api.objects.order.Price currentOutplan;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl creditThreshold;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOutplan;
 	private java.lang.String description;
 
 	public BillingAccountImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getAllowedOutplan() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getAllowedOutplan() { 
 		return this.allowedOutplan;
 	} 
 
-	public void setAllowedOutplan(net.zyuiop.ovhapi.api.objects.order.Price allowedOutplan) { 
+	public void setAllowedOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl allowedOutplan) { 
 		this.allowedOutplan = allowedOutplan;
 	} 
 
-	public BillingAccountImpl allowedOutplan(net.zyuiop.ovhapi.api.objects.order.Price allowedOutplan) { 
+	public BillingAccountImpl allowedOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl allowedOutplan) { 
 		this.allowedOutplan = allowedOutplan;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getSecurityDeposit() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getSecurityDeposit() { 
 		return this.securityDeposit;
 	} 
 
-	public void setSecurityDeposit(net.zyuiop.ovhapi.api.objects.order.Price securityDeposit) { 
+	public void setSecurityDeposit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl securityDeposit) { 
 		this.securityDeposit = securityDeposit;
 	} 
 
-	public BillingAccountImpl securityDeposit(net.zyuiop.ovhapi.api.objects.order.Price securityDeposit) { 
+	public BillingAccountImpl securityDeposit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl securityDeposit) { 
 		this.securityDeposit = securityDeposit;
 		return this;
 	} 
@@ -56,28 +56,28 @@ public class BillingAccountImpl implements BillingAccount {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getCreditThreshold() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getCreditThreshold() { 
 		return this.creditThreshold;
 	} 
 
-	public void setCreditThreshold(net.zyuiop.ovhapi.api.objects.order.Price creditThreshold) { 
+	public void setCreditThreshold(net.zyuiop.ovhapi.impl.objects.order.PriceImpl creditThreshold) { 
 		this.creditThreshold = creditThreshold;
 	} 
 
-	public BillingAccountImpl creditThreshold(net.zyuiop.ovhapi.api.objects.order.Price creditThreshold) { 
+	public BillingAccountImpl creditThreshold(net.zyuiop.ovhapi.impl.objects.order.PriceImpl creditThreshold) { 
 		this.creditThreshold = creditThreshold;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getCurrentOutplan() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getCurrentOutplan() { 
 		return this.currentOutplan;
 	} 
 
-	public void setCurrentOutplan(net.zyuiop.ovhapi.api.objects.order.Price currentOutplan) { 
+	public void setCurrentOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOutplan) { 
 		this.currentOutplan = currentOutplan;
 	} 
 
-	public BillingAccountImpl currentOutplan(net.zyuiop.ovhapi.api.objects.order.Price currentOutplan) { 
+	public BillingAccountImpl currentOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOutplan) { 
 		this.currentOutplan = currentOutplan;
 		return this;
 	} 

@@ -13,7 +13,7 @@ public class VoicemailPropertiesImpl implements VoicemailProperties {
 	private long unreadMessages;
 	private boolean keepMessage;
 	private java.lang.String audioFormat;
-	private net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications redirectionEmails;
+	private net.zyuiop.ovhapi.impl.objects.telephony.ServiceVoicemailNotificationsImpl redirectionEmails;
 	private boolean forcePassword;
 	private java.lang.String annouceMessage;
 	private boolean isNewVersion;
@@ -99,15 +99,15 @@ public class VoicemailPropertiesImpl implements VoicemailProperties {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications getRedirectionEmails() { 
+	public net.zyuiop.ovhapi.impl.objects.telephony.ServiceVoicemailNotificationsImpl getRedirectionEmails() { 
 		return this.redirectionEmails;
 	} 
 
-	public void setRedirectionEmails(net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications redirectionEmails) { 
+	public void setRedirectionEmails(net.zyuiop.ovhapi.impl.objects.telephony.ServiceVoicemailNotificationsImpl redirectionEmails) { 
 		this.redirectionEmails = redirectionEmails;
 	} 
 
-	public VoicemailPropertiesImpl redirectionEmails(net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications redirectionEmails) { 
+	public VoicemailPropertiesImpl redirectionEmails(net.zyuiop.ovhapi.impl.objects.telephony.ServiceVoicemailNotificationsImpl redirectionEmails) { 
 		this.redirectionEmails = redirectionEmails;
 		return this;
 	} 

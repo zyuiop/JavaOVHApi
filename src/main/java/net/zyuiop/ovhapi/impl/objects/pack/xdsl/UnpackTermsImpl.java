@@ -9,8 +9,8 @@ public class UnpackTermsImpl implements UnpackTerms {
 
 	private boolean isAllowed;
 	private double renewPeriod;
-	private net.zyuiop.ovhapi.api.objects.order.Price renewPrice;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl renewPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 
 	public UnpackTermsImpl() {
 	}
@@ -41,28 +41,28 @@ public class UnpackTermsImpl implements UnpackTerms {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getRenewPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getRenewPrice() { 
 		return this.renewPrice;
 	} 
 
-	public void setRenewPrice(net.zyuiop.ovhapi.api.objects.order.Price renewPrice) { 
+	public void setRenewPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl renewPrice) { 
 		this.renewPrice = renewPrice;
 	} 
 
-	public UnpackTermsImpl renewPrice(net.zyuiop.ovhapi.api.objects.order.Price renewPrice) { 
+	public UnpackTermsImpl renewPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl renewPrice) { 
 		this.renewPrice = renewPrice;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public UnpackTermsImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public UnpackTermsImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

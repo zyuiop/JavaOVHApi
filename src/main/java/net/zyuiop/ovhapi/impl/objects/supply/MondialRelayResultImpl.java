@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.supply.MondialRelayResult;
 public class MondialRelayResultImpl implements MondialRelayResult { 
 
 	private java.lang.String referenceAddress;
-	private net.zyuiop.ovhapi.api.objects.supply.MondialRelay relayPoints;
+	private net.zyuiop.ovhapi.impl.objects.supply.MondialRelayImpl relayPoints;
 
 	public MondialRelayResultImpl() {
 	}
@@ -26,15 +26,15 @@ public class MondialRelayResultImpl implements MondialRelayResult {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.supply.MondialRelay getRelayPoints() { 
+	public net.zyuiop.ovhapi.impl.objects.supply.MondialRelayImpl getRelayPoints() { 
 		return this.relayPoints;
 	} 
 
-	public void setRelayPoints(net.zyuiop.ovhapi.api.objects.supply.MondialRelay relayPoints) { 
+	public void setRelayPoints(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayImpl relayPoints) { 
 		this.relayPoints = relayPoints;
 	} 
 
-	public MondialRelayResultImpl relayPoints(net.zyuiop.ovhapi.api.objects.supply.MondialRelay relayPoints) { 
+	public MondialRelayResultImpl relayPoints(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayImpl relayPoints) { 
 		this.relayPoints = relayPoints;
 		return this;
 	} 

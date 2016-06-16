@@ -10,7 +10,7 @@ public class TelephonyServiceImpl implements TelephonyService {
 	private java.lang.String featureType;
 	private java.lang.String rio;
 	private java.lang.String serviceName;
-	private net.zyuiop.ovhapi.api.objects.order.Price currentOutplan;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOutplan;
 	private java.lang.String description;
 	private java.lang.String properties;
 	private java.lang.String serviceType;
@@ -59,15 +59,15 @@ public class TelephonyServiceImpl implements TelephonyService {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getCurrentOutplan() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getCurrentOutplan() { 
 		return this.currentOutplan;
 	} 
 
-	public void setCurrentOutplan(net.zyuiop.ovhapi.api.objects.order.Price currentOutplan) { 
+	public void setCurrentOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOutplan) { 
 		this.currentOutplan = currentOutplan;
 	} 
 
-	public TelephonyServiceImpl currentOutplan(net.zyuiop.ovhapi.api.objects.order.Price currentOutplan) { 
+	public TelephonyServiceImpl currentOutplan(net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOutplan) { 
 		this.currentOutplan = currentOutplan;
 		return this;
 	} 

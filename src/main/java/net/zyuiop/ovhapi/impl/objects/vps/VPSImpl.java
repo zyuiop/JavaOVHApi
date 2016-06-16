@@ -12,7 +12,7 @@ public class VPSImpl implements VPS {
 	private java.lang.String netbootMode;
 	private java.lang.String zone;
 	private java.lang.String name;
-	private net.zyuiop.ovhapi.api.objects.vps.Model model;
+	private net.zyuiop.ovhapi.impl.objects.vps.ModelImpl model;
 	private java.lang.String monitoringIpBlocks;
 	private java.lang.String keymap;
 	private java.lang.String state;
@@ -89,15 +89,15 @@ public class VPSImpl implements VPS {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.vps.Model getModel() { 
+	public net.zyuiop.ovhapi.impl.objects.vps.ModelImpl getModel() { 
 		return this.model;
 	} 
 
-	public void setModel(net.zyuiop.ovhapi.api.objects.vps.Model model) { 
+	public void setModel(net.zyuiop.ovhapi.impl.objects.vps.ModelImpl model) { 
 		this.model = model;
 	} 
 
-	public VPSImpl model(net.zyuiop.ovhapi.api.objects.vps.Model model) { 
+	public VPSImpl model(net.zyuiop.ovhapi.impl.objects.vps.ModelImpl model) { 
 		this.model = model;
 		return this;
 	} 

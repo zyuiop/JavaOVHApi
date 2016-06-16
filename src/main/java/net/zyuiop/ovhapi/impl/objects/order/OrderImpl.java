@@ -9,9 +9,9 @@ public class OrderImpl implements Order {
 
 	private long orderId;
 	private java.lang.String url;
-	private net.zyuiop.ovhapi.api.objects.order.OrderDetail details;
-	private net.zyuiop.ovhapi.api.objects.order.Contract contracts;
-	private net.zyuiop.ovhapi.api.objects.order.OrderPrices prices;
+	private net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl details;
+	private net.zyuiop.ovhapi.impl.objects.order.ContractImpl contracts;
+	private net.zyuiop.ovhapi.impl.objects.order.OrderPricesImpl prices;
 
 	public OrderImpl() {
 	}
@@ -42,41 +42,41 @@ public class OrderImpl implements Order {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.OrderDetail getDetails() { 
+	public net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl getDetails() { 
 		return this.details;
 	} 
 
-	public void setDetails(net.zyuiop.ovhapi.api.objects.order.OrderDetail details) { 
+	public void setDetails(net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl details) { 
 		this.details = details;
 	} 
 
-	public OrderImpl details(net.zyuiop.ovhapi.api.objects.order.OrderDetail details) { 
+	public OrderImpl details(net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl details) { 
 		this.details = details;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Contract getContracts() { 
+	public net.zyuiop.ovhapi.impl.objects.order.ContractImpl getContracts() { 
 		return this.contracts;
 	} 
 
-	public void setContracts(net.zyuiop.ovhapi.api.objects.order.Contract contracts) { 
+	public void setContracts(net.zyuiop.ovhapi.impl.objects.order.ContractImpl contracts) { 
 		this.contracts = contracts;
 	} 
 
-	public OrderImpl contracts(net.zyuiop.ovhapi.api.objects.order.Contract contracts) { 
+	public OrderImpl contracts(net.zyuiop.ovhapi.impl.objects.order.ContractImpl contracts) { 
 		this.contracts = contracts;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.OrderPrices getPrices() { 
+	public net.zyuiop.ovhapi.impl.objects.order.OrderPricesImpl getPrices() { 
 		return this.prices;
 	} 
 
-	public void setPrices(net.zyuiop.ovhapi.api.objects.order.OrderPrices prices) { 
+	public void setPrices(net.zyuiop.ovhapi.impl.objects.order.OrderPricesImpl prices) { 
 		this.prices = prices;
 	} 
 
-	public OrderImpl prices(net.zyuiop.ovhapi.api.objects.order.OrderPrices prices) { 
+	public OrderImpl prices(net.zyuiop.ovhapi.impl.objects.order.OrderPricesImpl prices) { 
 		this.prices = prices;
 		return this;
 	} 

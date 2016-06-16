@@ -16,7 +16,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getServiceNameNameServer(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/nameServer";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -24,7 +24,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postZoneZoneNameTaskIdRelaunch(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/task/" + id + "/relaunch";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/relaunch";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -33,7 +33,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postZoneZoneNameDynHostLoginLoginChangePassword(java.lang.String password, java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/login/" + login + "/changePassword";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "/changePassword";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("password", password);
 		String __data = new Gson().toJson(__dataMap);
@@ -43,7 +43,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Record postZoneZoneNameRecord(java.lang.String target, java.lang.String fieldType, java.lang.String zoneName, long ttl, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("target", target);
 		__dataMap.put("fieldType", fieldType);
@@ -52,30 +52,30 @@ public class DomainImpl implements Domain {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Record.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RecordImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Record postZoneZoneNameRecord(java.lang.String target, java.lang.String fieldType, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("target", target);
 		__dataMap.put("fieldType", fieldType);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Record.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RecordImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Redirection getZoneZoneNameRedirectionId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/redirection/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Redirection.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RedirectionImpl.class);
 	}
 
 	public long[] getDataAfnicAssociationInformation() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/afnicAssociationInformation";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicAssociationInformation";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -83,7 +83,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String getServiceNameAuthInfo(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/authInfo";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/authInfo";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -91,7 +91,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String getZone() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -99,7 +99,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getDataAfnicCorporationTrademarkInformation() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/afnicCorporationTrademarkInformation";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicCorporationTrademarkInformation";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -107,7 +107,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void putZoneZoneNameDynHostLoginLogin(net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin param0, java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/login/" + login + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -117,7 +117,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.AssociationContact postDataAfnicAssociationInformation(java.util.Date declarationDate, java.util.Date publicationDate, java.lang.String publicationNumber, java.lang.String publicationPageNumber, long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/afnicAssociationInformation";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicAssociationInformation";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("declarationDate", declarationDate);
 		__dataMap.put("publicationDate", publicationDate);
@@ -127,11 +127,11 @@ public class DomainImpl implements Domain {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.AssociationContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AssociationContactImpl.class);
 	}
 
 	public java.lang.String getDataExtension(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/extension";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/extension";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -139,7 +139,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postServiceNameTaskIdCancel(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + id + "/cancel";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/cancel";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -148,7 +148,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postZoneZoneNameReset(java.lang.String zoneName, boolean minimized) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/reset";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/reset";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("minimized", minimized);
 		String __data = new Gson().toJson(__dataMap);
@@ -158,7 +158,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postZoneZoneNameReset(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/reset";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/reset";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -167,15 +167,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Zone getZoneZoneName(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Zone.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.ZoneImpl.class);
 	}
 
 	public java.lang.String getZoneZoneNameDynHostLogin(java.lang.String zoneName, java.lang.String subDomain, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/login";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -183,7 +183,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String getZoneZoneNameDynHostLogin(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/login";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -191,27 +191,27 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameDsRecord(net.zyuiop.ovhapi.api.objects.dnssec.Key keys, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/dsRecord";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("keys", keys);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.Smd putDataSmdSmdId(long smdId, java.lang.String data) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/smd/" + smdId + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd/" + smdId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("data", data);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.Smd.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.SmdImpl.class);
 	}
 
 	public void deleteZoneZoneNameRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/record/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -220,15 +220,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 	public void postServiceNameActivateZone(java.lang.String serviceName, boolean minimized) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/activateZone";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/activateZone";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("minimized", minimized);
 		String __data = new Gson().toJson(__dataMap);
@@ -238,7 +238,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postServiceNameActivateZone(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/activateZone";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/activateZone";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -247,15 +247,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Dnssec getZoneZoneNameDnssec(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dnssec";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dnssec";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Dnssec.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DnssecImpl.class);
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -263,7 +263,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -271,7 +271,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Redirection postZoneZoneNameRedirection(java.lang.String target, java.lang.String type, java.lang.String zoneName, java.lang.String keywords, java.lang.String title, java.lang.String subDomain, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/redirection";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("target", target);
 		__dataMap.put("type", type);
@@ -282,22 +282,22 @@ public class DomainImpl implements Domain {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Redirection.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RedirectionImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Redirection postZoneZoneNameRedirection(java.lang.String target, java.lang.String type, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/redirection";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("target", target);
 		__dataMap.put("type", type);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Redirection.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RedirectionImpl.class);
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("contactAdmin", contactAdmin);
 		__dataMap.put("contactTech", contactTech);
@@ -309,7 +309,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -318,7 +318,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postServiceNameTaskIdRelaunch(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + id + "/relaunch";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/relaunch";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -327,7 +327,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void deleteZoneZoneNameRedirectionId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/redirection/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -336,15 +336,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord getZoneZoneNameDynHostRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/record/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostRecordImpl.class);
 	}
 
 	public long[] getDataSmd(java.lang.String protectedLabelsLabel) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/smd";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -352,7 +352,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getDataSmd() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/smd";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -360,7 +360,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin postZoneZoneNameDynHostLogin(java.lang.String password, java.lang.String loginSuffix, java.lang.String subDomain, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/login";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("password", password);
 		__dataMap.put("loginSuffix", loginSuffix);
@@ -368,11 +368,11 @@ public class DomainImpl implements Domain {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostLoginImpl.class);
 	}
 
 	public void deleteZoneZoneNameDnssec(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dnssec";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dnssec";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -381,7 +381,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String postServiceNameOwo(java.lang.String fields, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/owo";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("fields", fields);
 		String __data = new Gson().toJson(__dataMap);
@@ -391,17 +391,17 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameGlueRecordHostUpdate(java.lang.String ips, java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/glueRecord/" + host + "/update";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord/" + host + "/update";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("ips", ips);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.ProContact postDataProContact(java.lang.String jobDescription, java.lang.String authority, java.lang.String authorityWebsite, java.lang.String licenseNumber, long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/proContact";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("jobDescription", jobDescription);
 		__dataMap.put("authority", authority);
@@ -411,11 +411,11 @@ public class DomainImpl implements Domain {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.ProContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.ProContactImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.ProContact postDataProContact(java.lang.String jobDescription, java.lang.String authority, java.lang.String authorityWebsite, java.lang.String licenseNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/proContact";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("jobDescription", jobDescription);
 		__dataMap.put("authority", authority);
@@ -424,11 +424,11 @@ public class DomainImpl implements Domain {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.ProContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.ProContactImpl.class);
 	}
 
 	public long[] getServiceNameDsRecord(java.lang.String serviceName, long flags, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/dsRecord";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -436,7 +436,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getServiceNameDsRecord(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/dsRecord";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -444,15 +444,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Soa getZoneZoneNameSoa(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/soa";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/soa";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Soa.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.SoaImpl.class);
 	}
 
 	public void deleteZoneZoneNameDynHostLoginLogin(java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/login/" + login + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -461,7 +461,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void putZoneZoneNameRedirectionId(net.zyuiop.ovhapi.api.objects.domain.zone.Redirection param0, java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/redirection/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -471,7 +471,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String getServiceNameOwo(java.lang.String serviceName, java.lang.String field) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/owo";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -479,7 +479,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String getServiceNameOwo(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/owo";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -487,15 +487,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getZoneZoneNameServiceInfos(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 	public long[] getZoneZoneNameRedirection(java.lang.String zoneName, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/redirection";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -503,7 +503,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getZoneZoneNameRedirection(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/redirection";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -511,23 +511,23 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.AssociationContact getDataAfnicAssociationInformationAssociationInformationId(long associationInformationId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/afnicAssociationInformation/" + associationInformationId + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicAssociationInformation/" + associationInformationId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.AssociationContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AssociationContactImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Record getZoneZoneNameRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/record/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Record.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RecordImpl.class);
 	}
 
 	public void putZoneZoneNameSoa(net.zyuiop.ovhapi.api.objects.domain.zone.Soa param0, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/soa";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/soa";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -537,7 +537,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void deleteDataSmdSmdId(long smdId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/smd/" + smdId + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd/" + smdId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -546,33 +546,33 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Owo getServiceNameOwoField(java.lang.String serviceName, java.lang.String field) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/owo/" + field + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo/" + field + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Owo.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.OwoImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameNameServersUpdate(net.zyuiop.ovhapi.api.objects.domain.DomainNs nameServers, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/nameServers/update";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServers/update";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("nameServers", nameServers);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.CurrentNameServer getServiceNameNameServerId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/nameServer/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.CurrentNameServer.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.CurrentNameServerImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.AfnicCorporationTrademarkContact postDataAfnicCorporationTrademarkInformation(java.lang.String inpiNumber, java.lang.String inpiTrademarkOwner, long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/afnicCorporationTrademarkInformation";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicCorporationTrademarkInformation";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("inpiNumber", inpiNumber);
 		__dataMap.put("inpiTrademarkOwner", inpiTrademarkOwner);
@@ -580,45 +580,45 @@ public class DomainImpl implements Domain {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.AfnicCorporationTrademarkContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AfnicCorporationTrademarkContactImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin getZoneZoneNameDynHostLoginLogin(java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/login/" + login + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostLoginImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameNameServer(net.zyuiop.ovhapi.api.objects.domain.DomainNs nameServer, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/nameServer";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("nameServer", nameServer);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Task getZoneZoneNameTaskId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/task/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.GlueRecord getServiceNameGlueRecordHost(java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/glueRecord/" + host + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord/" + host + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.GlueRecord.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.GlueRecordImpl.class);
 	}
 
 	public void putServiceName(net.zyuiop.ovhapi.api.objects.domain.Domain param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -628,17 +628,17 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.Smd postDataSmd(java.lang.String data) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/smd";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("data", data);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.Smd.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.SmdImpl.class);
 	}
 
 	public long[] getZoneZoneNameRecord(java.lang.String zoneName, java.lang.String fieldType, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -646,7 +646,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getZoneZoneNameRecord(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -654,35 +654,35 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task deleteServiceNameGlueRecordHost(java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/glueRecord/" + host + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord/" + host + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameGlueRecord(java.lang.String ips, java.lang.String host, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/glueRecord";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("ips", ips);
 		__dataMap.put("host", host);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.ProContact getDataProContactProContactId(long proContactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/proContact/" + proContactId + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact/" + proContactId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.ProContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.ProContactImpl.class);
 	}
 
 	public java.lang.String getServiceNameGlueRecord(java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/glueRecord";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -690,7 +690,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String getServiceNameGlueRecord(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/glueRecord";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -698,7 +698,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void putZoneZoneNameRecordId(net.zyuiop.ovhapi.api.objects.domain.zone.Record param0, java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/record/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -708,15 +708,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.DnssecKey getServiceNameDsRecordId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/dsRecord/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.DnssecKey.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.DnssecKeyImpl.class);
 	}
 
 	public java.lang.String getZoneZoneNameExport(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/export";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/export";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -724,15 +724,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.zone.Status getZoneZoneNameStatus(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/status";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/status";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.zone.Status.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.zone.StatusImpl.class);
 	}
 
 	public java.lang.String getDomain(java.lang.String whoisOwner) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//domain";
+		String __callUrl = "https://api.ovh.com/1.0/domain/domain";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -740,7 +740,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String getDomain() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//domain";
+		String __callUrl = "https://api.ovh.com/1.0/domain/domain";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -748,7 +748,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public java.lang.String postZoneZoneNameTerminate(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/terminate";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/terminate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -757,15 +757,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task getServiceNameTaskId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public void putZoneZoneNameDynHostRecordId(net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord param0, java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/record/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -775,17 +775,17 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.Task postZoneZoneNameImport(java.lang.String zoneFile, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/import";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/import";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("zoneFile", zoneFile);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.TaskImpl.class);
 	}
 
 	public void postZoneZoneNameRefresh(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/refresh";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/refresh";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -794,7 +794,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postZoneZoneNameDnssec(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dnssec";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dnssec";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -803,38 +803,38 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord postZoneZoneNameDynHostRecord(java.lang.String ip, java.lang.String zoneName, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("ip", ip);
 		__dataMap.put("subDomain", subDomain);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostRecordImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord postZoneZoneNameDynHostRecord(java.lang.String ip, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("ip", ip);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostRecordImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameUkOutgoingTransfer(java.lang.String tag, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ukOutgoingTransfer";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/ukOutgoingTransfer";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("tag", tag);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public void deleteServiceNameOwoField(java.lang.String serviceName, java.lang.String field) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/owo/" + field + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo/" + field + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -843,16 +843,16 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Task deleteServiceNameNameServerId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/nameServer/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
 	}
 
 	public void postZoneZoneNameTaskIdAccelerate(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/task/" + id + "/accelerate";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/accelerate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -861,15 +861,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.Domain getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.Domain.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.DomainImpl.class);
 	}
 
 	public void postServiceNameTaskIdAccelerate(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task/" + id + "/accelerate";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/accelerate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -878,7 +878,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void putZoneZoneNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -888,7 +888,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -898,7 +898,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getZoneZoneNameDynHostRecord(java.lang.String zoneName, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -906,7 +906,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getZoneZoneNameDynHostRecord(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/record";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -914,7 +914,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getDataProContact() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/proContact";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -922,7 +922,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void postZoneZoneNameTaskIdCancel(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/task/" + id + "/cancel";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/cancel";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -931,7 +931,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public void deleteZoneZoneNameDynHostRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/dynHost/record/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -940,15 +940,15 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.AfnicCorporationTrademarkContact getDataAfnicCorporationTrademarkInformationAfnicCorporationTrademarkId(long afnicCorporationTrademarkId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/afnicCorporationTrademarkInformation/" + afnicCorporationTrademarkId + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicCorporationTrademarkInformation/" + afnicCorporationTrademarkId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.AfnicCorporationTrademarkContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AfnicCorporationTrademarkContactImpl.class);
 	}
 
 	public long[] getZoneZoneNameTask(java.lang.String zoneName, java.lang.String function, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -956,7 +956,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] getZoneZoneNameTask(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -964,7 +964,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] postZoneZoneNameChangeContact(java.lang.String zoneName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("contactAdmin", contactAdmin);
 		__dataMap.put("contactTech", contactTech);
@@ -976,7 +976,7 @@ public class DomainImpl implements Domain {
 	}
 
 	public long[] postZoneZoneNameChangeContact(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/zone/" + zoneName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -985,11 +985,11 @@ public class DomainImpl implements Domain {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.domain.data.Smd getDataSmdSmdId(long smdId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/data/smd/" + smdId + "";
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd/" + smdId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.domain.data.Smd.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.SmdImpl.class);
 	}
 
 }

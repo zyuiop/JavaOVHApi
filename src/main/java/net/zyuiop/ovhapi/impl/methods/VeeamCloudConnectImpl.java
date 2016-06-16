@@ -32,7 +32,7 @@ public class VeeamCloudConnectImpl implements VeeamCloudConnect {
 
 
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String name, java.lang.String state) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/veeamCloudConnect/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -40,7 +40,7 @@ public class VeeamCloudConnectImpl implements VeeamCloudConnect {
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/veeamCloudConnect/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -56,7 +56,7 @@ public class VeeamCloudConnectImpl implements VeeamCloudConnect {
 
 
 	public java.lang.String getServiceNameBackupRepository(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/backupRepository";
+		String __callUrl = "https://api.ovh.com/1.0/veeamCloudConnect/" + serviceName + "/backupRepository";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -64,7 +64,7 @@ public class VeeamCloudConnectImpl implements VeeamCloudConnect {
 	}
 
 	public java.lang.String getServiceNameOrderableUpgrade(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/orderableUpgrade";
+		String __callUrl = "https://api.ovh.com/1.0/veeamCloudConnect/" + serviceName + "/orderableUpgrade";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -80,11 +80,11 @@ public class VeeamCloudConnectImpl implements VeeamCloudConnect {
 
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/veeamCloudConnect/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 
@@ -96,7 +96,7 @@ public class VeeamCloudConnectImpl implements VeeamCloudConnect {
 
 
 	public java.lang.String getVeeamCloudConnect() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//veeamCloudConnect";
+		String __callUrl = "https://api.ovh.com/1.0/veeamCloudConnect/veeamCloudConnect";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -104,7 +104,7 @@ public class VeeamCloudConnectImpl implements VeeamCloudConnect {
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/veeamCloudConnect/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);

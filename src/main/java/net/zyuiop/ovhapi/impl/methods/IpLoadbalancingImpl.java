@@ -40,7 +40,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -50,7 +50,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public void deleteServiceNameBackendIdServerLinkId(java.lang.String serviceName, long id, long linkId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/backend/" + id + "/server/" + linkId + "";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/backend/" + id + "/server/" + linkId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -59,7 +59,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public java.lang.String getIpLoadbalancing() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//ipLoadbalancing";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/ipLoadbalancing";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -67,7 +67,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameBackendIdServer(java.lang.String serviceName, long id, java.lang.String cookie) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/backend/" + id + "/server";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/backend/" + id + "/server";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -75,7 +75,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameBackendIdServer(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/backend/" + id + "/server";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/backend/" + id + "/server";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -83,7 +83,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public void deleteServiceNameServerId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/server/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/server/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -92,7 +92,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameBackend(java.lang.String serviceName, java.lang.String zone) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/backend";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/backend";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -100,7 +100,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameBackend(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/backend";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/backend";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -140,7 +140,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public void deleteServiceNameFrontendId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/frontend/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/frontend/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -205,7 +205,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public long[] getServiceNameServer(java.lang.String serviceName, java.lang.String status, java.lang.String zone, java.lang.String address) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/server";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/server";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -213,7 +213,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameServer(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/server";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/server";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -221,15 +221,15 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.ip.Ip getServiceNameAllowedServers(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/allowedServers";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/allowedServers";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.ip.Ip.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.ip.IpImpl.class);
 	}
 
 	public long[] getServiceNameSsl(java.lang.String serviceName, java.lang.String serial, java.lang.String type) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ssl";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/ssl";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -237,7 +237,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameSsl(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ssl";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/ssl";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -245,7 +245,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String action) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -253,7 +253,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -269,7 +269,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public void deleteServiceNameBackendId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/backend/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/backend/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -278,7 +278,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public java.lang.String getServiceNameNatIp(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/natIp";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/natIp";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -302,11 +302,11 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 
@@ -334,7 +334,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public void deleteServiceNameSslId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ssl/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/ssl/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -343,7 +343,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public java.lang.String getServiceNameFailover(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/failover";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/failover";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -351,7 +351,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("contactAdmin", contactAdmin);
 		__dataMap.put("contactTech", contactTech);
@@ -363,7 +363,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -380,7 +380,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public java.lang.String getServiceNameProbeIp(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/probeIp";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/probeIp";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -396,7 +396,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 
 
 	public long[] getServiceNameFrontend(java.lang.String serviceName, java.lang.String zone, long defaultBackendId, java.lang.String port) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/frontend";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/frontend";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -404,7 +404,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public long[] getServiceNameFrontend(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/frontend";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/frontend";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -412,7 +412,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public java.lang.String getAvailableZones() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/availableZones";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/availableZones";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -420,7 +420,7 @@ public class IpLoadbalancingImpl implements IpLoadbalancing {
 	}
 
 	public java.lang.String getServiceNameAvailableServerZones(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/availableServerZones";
+		String __callUrl = "https://api.ovh.com/1.0/ipLoadbalancing/" + serviceName + "/availableServerZones";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);

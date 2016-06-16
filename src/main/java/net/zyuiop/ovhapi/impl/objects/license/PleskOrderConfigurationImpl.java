@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.PleskOrderConfiguration;
 public class PleskOrderConfigurationImpl implements PleskOrderConfiguration { 
 
 	private java.lang.String serviceType;
-	private net.zyuiop.ovhapi.api.objects.license.OrderablePleskCompatibilityInfos orderableVersions;
+	private net.zyuiop.ovhapi.impl.objects.license.OrderablePleskCompatibilityInfosImpl orderableVersions;
 
 	public PleskOrderConfigurationImpl() {
 	}
@@ -26,15 +26,15 @@ public class PleskOrderConfigurationImpl implements PleskOrderConfiguration {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.license.OrderablePleskCompatibilityInfos getOrderableVersions() { 
+	public net.zyuiop.ovhapi.impl.objects.license.OrderablePleskCompatibilityInfosImpl getOrderableVersions() { 
 		return this.orderableVersions;
 	} 
 
-	public void setOrderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderablePleskCompatibilityInfos orderableVersions) { 
+	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderablePleskCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 	} 
 
-	public PleskOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderablePleskCompatibilityInfos orderableVersions) { 
+	public PleskOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderablePleskCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 		return this;
 	} 

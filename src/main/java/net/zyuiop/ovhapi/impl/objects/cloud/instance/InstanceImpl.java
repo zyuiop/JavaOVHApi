@@ -14,8 +14,8 @@ public class InstanceImpl implements Instance {
 	private java.util.Date created;
 	private java.lang.String flavorId;
 	private java.lang.String sshKeyId;
-	private net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling monthlyBilling;
-	private net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress ipAddresses;
+	private net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling;
+	private net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses;
 	private java.lang.String id;
 
 	public InstanceImpl() {
@@ -112,28 +112,28 @@ public class InstanceImpl implements Instance {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling getMonthlyBilling() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl getMonthlyBilling() { 
 		return this.monthlyBilling;
 	} 
 
-	public void setMonthlyBilling(net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling monthlyBilling) { 
+	public void setMonthlyBilling(net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling) { 
 		this.monthlyBilling = monthlyBilling;
 	} 
 
-	public InstanceImpl monthlyBilling(net.zyuiop.ovhapi.api.objects.cloud.instance.MonthlyBilling monthlyBilling) { 
+	public InstanceImpl monthlyBilling(net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling) { 
 		this.monthlyBilling = monthlyBilling;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress getIpAddresses() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl getIpAddresses() { 
 		return this.ipAddresses;
 	} 
 
-	public void setIpAddresses(net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress ipAddresses) { 
+	public void setIpAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 	} 
 
-	public InstanceImpl ipAddresses(net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress ipAddresses) { 
+	public InstanceImpl ipAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 		return this;
 	} 

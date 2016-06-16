@@ -11,7 +11,7 @@ public class ServiceImpl implements Service {
 	private java.util.Date engagedUpTo;
 	private long[] possibleRenewPeriod;
 	private java.lang.String contactBilling;
-	private net.zyuiop.ovhapi.api.objects.service.RenewType renew;
+	private net.zyuiop.ovhapi.impl.objects.service.RenewTypeImpl renew;
 	private java.lang.String domain;
 	private java.util.Date expiration;
 	private java.lang.String contactTech;
@@ -73,15 +73,15 @@ public class ServiceImpl implements Service {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.service.RenewType getRenew() { 
+	public net.zyuiop.ovhapi.impl.objects.service.RenewTypeImpl getRenew() { 
 		return this.renew;
 	} 
 
-	public void setRenew(net.zyuiop.ovhapi.api.objects.service.RenewType renew) { 
+	public void setRenew(net.zyuiop.ovhapi.impl.objects.service.RenewTypeImpl renew) { 
 		this.renew = renew;
 	} 
 
-	public ServiceImpl renew(net.zyuiop.ovhapi.api.objects.service.RenewType renew) { 
+	public ServiceImpl renew(net.zyuiop.ovhapi.impl.objects.service.RenewTypeImpl renew) { 
 		this.renew = renew;
 		return this;
 	} 

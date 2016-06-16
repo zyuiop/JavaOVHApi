@@ -17,7 +17,7 @@ public class ModemImpl implements Modem {
 	private java.lang.String easyFirewallLevel;
 	private boolean isBridged;
 	private java.lang.String brandName;
-	private net.zyuiop.ovhapi.api.objects.xdsl.ModemCapabilities capabilities;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.ModemCapabilitiesImpl capabilities;
 
 	public ModemImpl() {
 	}
@@ -152,15 +152,15 @@ public class ModemImpl implements Modem {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.ModemCapabilities getCapabilities() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.ModemCapabilitiesImpl getCapabilities() { 
 		return this.capabilities;
 	} 
 
-	public void setCapabilities(net.zyuiop.ovhapi.api.objects.xdsl.ModemCapabilities capabilities) { 
+	public void setCapabilities(net.zyuiop.ovhapi.impl.objects.xdsl.ModemCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 	} 
 
-	public ModemImpl capabilities(net.zyuiop.ovhapi.api.objects.xdsl.ModemCapabilities capabilities) { 
+	public ModemImpl capabilities(net.zyuiop.ovhapi.impl.objects.xdsl.ModemCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 		return this;
 	} 

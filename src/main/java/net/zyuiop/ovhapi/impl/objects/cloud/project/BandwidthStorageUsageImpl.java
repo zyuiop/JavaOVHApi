@@ -9,7 +9,7 @@ public class BandwidthStorageUsageImpl implements BandwidthStorageUsage {
 
 	private java.lang.String region;
 	private long downloadedBytes;
-	private net.zyuiop.ovhapi.api.objects.order.Price total;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl total;
 
 	public BandwidthStorageUsageImpl() {
 	}
@@ -40,15 +40,15 @@ public class BandwidthStorageUsageImpl implements BandwidthStorageUsage {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTotal() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTotal() { 
 		return this.total;
 	} 
 
-	public void setTotal(net.zyuiop.ovhapi.api.objects.order.Price total) { 
+	public void setTotal(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total) { 
 		this.total = total;
 	} 
 
-	public BandwidthStorageUsageImpl total(net.zyuiop.ovhapi.api.objects.order.Price total) { 
+	public BandwidthStorageUsageImpl total(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total) { 
 		this.total = total;
 		return this;
 	} 

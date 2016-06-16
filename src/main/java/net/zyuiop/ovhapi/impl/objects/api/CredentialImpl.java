@@ -11,7 +11,7 @@ public class CredentialImpl implements Credential {
 	private java.lang.String status;
 	private long applicationId;
 	private long credentialId;
-	private net.zyuiop.ovhapi.api.objects.auth.AccessRule rules;
+	private net.zyuiop.ovhapi.impl.objects.auth.AccessRuleImpl rules;
 	private java.util.Date expiration;
 	private java.util.Date lastUse;
 	private java.util.Date creation;
@@ -71,15 +71,15 @@ public class CredentialImpl implements Credential {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.auth.AccessRule getRules() { 
+	public net.zyuiop.ovhapi.impl.objects.auth.AccessRuleImpl getRules() { 
 		return this.rules;
 	} 
 
-	public void setRules(net.zyuiop.ovhapi.api.objects.auth.AccessRule rules) { 
+	public void setRules(net.zyuiop.ovhapi.impl.objects.auth.AccessRuleImpl rules) { 
 		this.rules = rules;
 	} 
 
-	public CredentialImpl rules(net.zyuiop.ovhapi.api.objects.auth.AccessRule rules) { 
+	public CredentialImpl rules(net.zyuiop.ovhapi.impl.objects.auth.AccessRuleImpl rules) { 
 		this.rules = rules;
 		return this;
 	} 

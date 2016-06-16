@@ -7,22 +7,22 @@ import net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot;
 
 public class BookMeetingSlotImpl implements BookMeetingSlot { 
 
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlot meetingSlot;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl meetingSlot;
 	private java.lang.String name;
 	private boolean fakeMeeting;
 
 	public BookMeetingSlotImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlot getMeetingSlot() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl getMeetingSlot() { 
 		return this.meetingSlot;
 	} 
 
-	public void setMeetingSlot(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlot meetingSlot) { 
+	public void setMeetingSlot(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl meetingSlot) { 
 		this.meetingSlot = meetingSlot;
 	} 
 
-	public BookMeetingSlotImpl meetingSlot(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlot meetingSlot) { 
+	public BookMeetingSlotImpl meetingSlot(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl meetingSlot) { 
 		this.meetingSlot = meetingSlot;
 		return this;
 	} 

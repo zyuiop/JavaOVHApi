@@ -7,8 +7,8 @@ import net.zyuiop.ovhapi.api.objects.cloud.project.NewProjectCredit;
 
 public class NewProjectCreditImpl implements NewProjectCredit { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price total_credit;
-	private net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity validity;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl total_credit;
+	private net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl validity;
 	private long id;
 	private java.lang.String description;
 	private java.lang.String products;
@@ -16,28 +16,28 @@ public class NewProjectCreditImpl implements NewProjectCredit {
 	public NewProjectCreditImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTotal_credit() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTotal_credit() { 
 		return this.total_credit;
 	} 
 
-	public void setTotal_credit(net.zyuiop.ovhapi.api.objects.order.Price total_credit) { 
+	public void setTotal_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total_credit) { 
 		this.total_credit = total_credit;
 	} 
 
-	public NewProjectCreditImpl total_credit(net.zyuiop.ovhapi.api.objects.order.Price total_credit) { 
+	public NewProjectCreditImpl total_credit(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total_credit) { 
 		this.total_credit = total_credit;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity getValidity() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl getValidity() { 
 		return this.validity;
 	} 
 
-	public void setValidity(net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity validity) { 
+	public void setValidity(net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl validity) { 
 		this.validity = validity;
 	} 
 
-	public NewProjectCreditImpl validity(net.zyuiop.ovhapi.api.objects.cloud.common.VoucherValidity validity) { 
+	public NewProjectCreditImpl validity(net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl validity) { 
 		this.validity = validity;
 		return this;
 	} 

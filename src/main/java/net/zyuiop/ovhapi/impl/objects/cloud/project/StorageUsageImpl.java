@@ -7,48 +7,48 @@ import net.zyuiop.ovhapi.api.objects.cloud.project.StorageUsage;
 
 public class StorageUsageImpl implements StorageUsage { 
 
-	private net.zyuiop.ovhapi.api.objects.cloud.project.BandwidthStorageUsage bandwidth;
-	private net.zyuiop.ovhapi.api.objects.cloud.project.StorageVolumeUsage volume;
-	private net.zyuiop.ovhapi.api.objects.order.Price total;
+	private net.zyuiop.ovhapi.impl.objects.cloud.project.BandwidthStorageUsageImpl bandwidth;
+	private net.zyuiop.ovhapi.impl.objects.cloud.project.StorageVolumeUsageImpl volume;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl total;
 
 	public StorageUsageImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.project.BandwidthStorageUsage getBandwidth() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.project.BandwidthStorageUsageImpl getBandwidth() { 
 		return this.bandwidth;
 	} 
 
-	public void setBandwidth(net.zyuiop.ovhapi.api.objects.cloud.project.BandwidthStorageUsage bandwidth) { 
+	public void setBandwidth(net.zyuiop.ovhapi.impl.objects.cloud.project.BandwidthStorageUsageImpl bandwidth) { 
 		this.bandwidth = bandwidth;
 	} 
 
-	public StorageUsageImpl bandwidth(net.zyuiop.ovhapi.api.objects.cloud.project.BandwidthStorageUsage bandwidth) { 
+	public StorageUsageImpl bandwidth(net.zyuiop.ovhapi.impl.objects.cloud.project.BandwidthStorageUsageImpl bandwidth) { 
 		this.bandwidth = bandwidth;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.project.StorageVolumeUsage getVolume() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.project.StorageVolumeUsageImpl getVolume() { 
 		return this.volume;
 	} 
 
-	public void setVolume(net.zyuiop.ovhapi.api.objects.cloud.project.StorageVolumeUsage volume) { 
+	public void setVolume(net.zyuiop.ovhapi.impl.objects.cloud.project.StorageVolumeUsageImpl volume) { 
 		this.volume = volume;
 	} 
 
-	public StorageUsageImpl volume(net.zyuiop.ovhapi.api.objects.cloud.project.StorageVolumeUsage volume) { 
+	public StorageUsageImpl volume(net.zyuiop.ovhapi.impl.objects.cloud.project.StorageVolumeUsageImpl volume) { 
 		this.volume = volume;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTotal() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTotal() { 
 		return this.total;
 	} 
 
-	public void setTotal(net.zyuiop.ovhapi.api.objects.order.Price total) { 
+	public void setTotal(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total) { 
 		this.total = total;
 	} 
 
-	public StorageUsageImpl total(net.zyuiop.ovhapi.api.objects.order.Price total) { 
+	public StorageUsageImpl total(net.zyuiop.ovhapi.impl.objects.order.PriceImpl total) { 
 		this.total = total;
 		return this;
 	} 

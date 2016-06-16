@@ -16,7 +16,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountOvhPabxServiceNameDialplanDialplanId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplan param0, java.lang.String billingAccount, java.lang.String serviceName, long dialplanId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -26,15 +26,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumber getBillingAccountLineServiceNameAbbreviatedNumberAbbreviatedNumber(java.lang.String billingAccount, java.lang.String serviceName, long abbreviatedNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber/" + abbreviatedNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber/" + abbreviatedNumber + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumber.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.AbbreviatedNumberImpl.class);
 	}
 
 	public void putBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdAgentAgentId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue param0, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -44,7 +44,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNamePreviousVoiceConsumption(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String planType, java.lang.String destinationType, java.util.Date creationDatetimeTo, java.util.Date creationDatetimeFrom, java.lang.String wayType) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/previousVoiceConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/previousVoiceConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -52,7 +52,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNamePreviousVoiceConsumption(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/previousVoiceConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/previousVoiceConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -60,7 +60,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getNumberRanges(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/number/ranges";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/number/ranges";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -68,15 +68,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PcsFile getBillingAccountVoicemailServiceNameGreetingsIdDownload(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "/download";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "/download";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PcsFile.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PcsFileImpl.class);
 	}
 
 	public java.lang.String getBillingAccountEasyPabx(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -84,23 +84,23 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Phone getBillingAccountLineServiceNamePhone(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Phone.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PhoneImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent getBillingAccountEasyPabxServiceNameHuntingAgentAgentNumber(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String agentNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyMiniPabxHuntingAgentImpl.class);
 	}
 
 	public void deleteBillingAccountEasyHuntingServiceNameTimeConditionsConditionsConditionId(java.lang.String billingAccount, java.lang.String serviceName, long conditionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions/conditions/" + conditionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions/conditions/" + conditionId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -109,7 +109,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountMiniPabxServiceNameHuntingAgentAgentNumber(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String agentNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -118,7 +118,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameSoundSoundId(java.lang.String billingAccount, java.lang.String serviceName, long soundId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/sound/" + soundId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/sound/" + soundId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -127,7 +127,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountLineServiceNamePhoneRma(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/rma";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/rma";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -135,7 +135,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getSpare() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -143,15 +143,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.VoiceConsumption getBillingAccountServiceServiceNameVoiceConsumptionConsumptionId(java.lang.String billingAccount, java.lang.String serviceName, long consumptionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/voiceConsumption/" + consumptionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/voiceConsumption/" + consumptionId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.VoiceConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.VoiceConsumptionImpl.class);
 	}
 
 	public void postBillingAccountServiceServiceNameCancelTermination(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/cancelTermination";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/cancelTermination";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -160,15 +160,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Voicemail getBillingAccountVoicemailServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Voicemail.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.VoicemailImpl.class);
 	}
 
 	public void deleteBillingAccountEasyHuntingServiceNameScreenListConditionsConditionsConditionId(java.lang.String billingAccount, java.lang.String serviceName, long conditionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions/" + conditionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions/" + conditionId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -177,7 +177,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountCancelTermination(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/cancelTermination";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/cancelTermination";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -186,7 +186,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountMiniPabxServiceName(net.zyuiop.ovhapi.api.objects.telephony.MiniPabx param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -196,7 +196,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveCalls(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -204,34 +204,34 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue getBillingAccountOvhPabxServiceNameHuntingQueueQueueIdAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue postBillingAccountOvhPabxServiceNameHuntingAgentAgentIdQueue(long queueId, long position, java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("queueId", queueId);
 		__dataMap.put("position", position);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EventToken getBillingAccountServiceServiceNameEventToken(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/eventToken";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/eventToken";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EventToken.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EventTokenImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenu postBillingAccountOvhPabxServiceNameMenu(java.lang.String name, long invalidSound, long greetSound, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("name", name);
 		__dataMap.put("invalidSound", invalidSound);
@@ -239,11 +239,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenu.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxMenuImpl.class);
 	}
 
 	public long[] getBillingAccountLineServiceNamePhonePhonebookBookKeyPhonebookContact(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -251,7 +251,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountOvhPabxServiceNameHuntingAgentAgentId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent param0, java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -261,28 +261,28 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyHuntingServiceNameSoundUpload(java.lang.String url, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/soundUpload";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/soundUpload";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		__dataMap.put("name", name);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyHuntingServiceNameSoundUpload(java.lang.String url, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/soundUpload";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/soundUpload";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public void putBillingAccountEasyHuntingServiceNameHuntingQueueQueueId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueue param0, java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -292,15 +292,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Fax getBillingAccountFaxServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Fax.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FaxImpl.class);
 	}
 
 	public void putBillingAccountEasyPabxServiceNameHunting(net.zyuiop.ovhapi.api.objects.telephony.EasyPabxHunting param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -310,7 +310,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountLineServiceNameTones(net.zyuiop.ovhapi.api.objects.telephony.Tones param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/tones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/tones";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -320,7 +320,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountConferenceServiceNameParticipants(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -328,7 +328,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountLineServiceNameClick2CallUserIdChangePassword(java.lang.String password, java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "/changePassword";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "/changePassword";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("password", password);
 		String __data = new Gson().toJson(__dataMap);
@@ -338,15 +338,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue getBillingAccountEasyHuntingServiceNameHuntingAgentAgentIdQueueQueueId(java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public void postBillingAccountTimeConditionServiceNameCondition(java.lang.String hourEnd, java.lang.String policy, java.lang.String day, java.lang.String hourBegin, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition/" + serviceName + "/condition";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition/" + serviceName + "/condition";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("hourEnd", hourEnd);
 		__dataMap.put("policy", policy);
@@ -359,11 +359,11 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.LineOptions getBillingAccountLineServiceNameOptions(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/options";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/options";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.LineOptions.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.LineOptionsImpl.class);
 	}
 
 
@@ -375,16 +375,16 @@ public class TelephonyImpl implements Telephony {
 
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameUnlock(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/unlock";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/unlock";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public java.lang.String getAccessories(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/accessories";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/accessories";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -392,15 +392,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.MiniPabx getBillingAccountMiniPabxServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.MiniPabx.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.MiniPabxImpl.class);
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameMenu(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -408,92 +408,92 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EventToken getBillingAccountEventToken(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/eventToken";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/eventToken";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EventToken.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EventTokenImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountDdiServiceNameChangeDestination(java.lang.String destination, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ddi/" + serviceName + "/changeDestination";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ddi/" + serviceName + "/changeDestination";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("destination", destination);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenuEntry getBillingAccountOvhPabxServiceNameMenuMenuIdEntryEntryId(java.lang.String billingAccount, java.lang.String serviceName, long menuId, long entryId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry/" + entryId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry/" + entryId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenuEntry.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxMenuEntryImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent getBillingAccountOvhPabxServiceNameHuntingAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DirectoryHeadingPJ getBillingAccountServiceServiceNameDirectoryGetDirectoryServiceCode(java.lang.String apeCode, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/directory/getDirectoryServiceCode";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/directory/getDirectoryServiceCode";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DirectoryHeadingPJ.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DirectoryHeadingPJImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.MiniPabxHunting getBillingAccountMiniPabxServiceNameHunting(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/hunting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/hunting";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.MiniPabxHunting.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.MiniPabxHuntingImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.ConferenceParticipants getBillingAccountConferenceServiceNameParticipantsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.ConferenceParticipants.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.ConferenceParticipantsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHunting getBillingAccountEasyHuntingServiceNameHunting(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHunting.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.HistoryRepaymentConsumption postBillingAccountHistoryRepaymentConsumption(java.lang.String billingAccount, java.lang.String billingNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyRepaymentConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyRepaymentConsumption";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("billingNumber", billingNumber);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.HistoryRepaymentConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.HistoryRepaymentConsumptionImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.HistoryRepaymentConsumption postBillingAccountHistoryRepaymentConsumption(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyRepaymentConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyRepaymentConsumption";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.HistoryRepaymentConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.HistoryRepaymentConsumptionImpl.class);
 	}
 
 	public void putBillingAccountEasyHuntingServiceNameHuntingAgentAgentIdQueueQueueId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue param0, java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -503,7 +503,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountServiceServiceName(net.zyuiop.ovhapi.api.objects.telephony.TelephonyService param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -513,7 +513,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountMiniPabxServiceNameHunting(net.zyuiop.ovhapi.api.objects.telephony.MiniPabxHunting param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/hunting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/hunting";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -523,7 +523,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountLineServiceNamePhoneFunctionKey(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/functionKey";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/functionKey";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -531,7 +531,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountVoicemailServiceNameGreetingsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -540,7 +540,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameRecords(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/records";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/records";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -548,7 +548,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountOvhPabxServiceNameMenuMenuId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenu param0, java.lang.String billingAccount, java.lang.String serviceName, long menuId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -558,34 +558,34 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getSpareSpareServiceInfos(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare/" + spare + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionConditionScreenList postBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdConditionScreenList(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, java.lang.String callerIdNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("callerIdNumber", callerIdNumber);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionConditionScreenList.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionConditionScreenListImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionConditionScreenList postBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdConditionScreenList(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionConditionScreenList.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionConditionScreenListImpl.class);
 	}
 
 	public void putBillingAccountLineServiceName(net.zyuiop.ovhapi.api.objects.telephony.Line param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -595,15 +595,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PreviousVoiceConsumption getBillingAccountServiceServiceNamePreviousVoiceConsumptionConsumptionId(java.lang.String billingAccount, java.lang.String serviceName, long consumptionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/previousVoiceConsumption/" + consumptionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/previousVoiceConsumption/" + consumptionId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PreviousVoiceConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PreviousVoiceConsumptionImpl.class);
 	}
 
 	public java.lang.String getBillingAccountMiniPabx(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -611,7 +611,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountLineServiceNamePhoneFunctionKeyKeyNum(net.zyuiop.ovhapi.api.objects.telephony.FunctionKey param0, java.lang.String billingAccount, java.lang.String serviceName, long keyNum) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/functionKey/" + keyNum + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/functionKey/" + keyNum + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -621,15 +621,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PcsFile getBillingAccountHistoryRepaymentConsumptionDateDocument(java.lang.String billingAccount, java.util.Date date) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyRepaymentConsumption/" + date + "/document";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyRepaymentConsumption/" + date + "/document";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PcsFile.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PcsFileImpl.class);
 	}
 
 	public long[] getBillingAccountServiceServiceNameRepaymentConsumption(java.lang.String billingAccount, java.lang.String serviceName, java.util.Date creationDatetimeTo, java.util.Date creationDatetimeFrom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/repaymentConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/repaymentConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -637,7 +637,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNameRepaymentConsumption(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/repaymentConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/repaymentConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -645,7 +645,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountSchedulerServiceNameEvents(java.util.Date dateStart, java.lang.String category, java.util.Date dateEnd, java.lang.String title, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String uid, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/events";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/events";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("dateStart", dateStart);
 		__dataMap.put("category", category);
@@ -660,7 +660,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountSchedulerServiceNameEvents(java.util.Date dateStart, java.lang.String category, java.util.Date dateEnd, java.lang.String title, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/events";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/events";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("dateStart", dateStart);
 		__dataMap.put("category", category);
@@ -673,24 +673,24 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditions getBillingAccountEasyHuntingServiceNameScreenListConditionsConditionsConditionId(java.lang.String billingAccount, java.lang.String serviceName, long conditionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions/" + conditionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions/" + conditionId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditions.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyHuntingScreenListsConditionsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameParticipantsIdDeaf(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/deaf";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/deaf";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public void deleteBillingAccountEasyHuntingServiceNameHuntingAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -699,7 +699,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountVoicemailServiceNameDirectoriesId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -708,18 +708,18 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountLineServiceNameTonesToneUpload(java.lang.String url, java.lang.String type, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/tones/toneUpload";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/tones/toneUpload";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		__dataMap.put("type", type);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -727,7 +727,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.util.Date getBillingAccountHistoryTollfreeConsumption(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyTollfreeConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyTollfreeConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -735,36 +735,36 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountOvhPabxServiceNameSoundUpload(java.lang.String url, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/soundUpload";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/soundUpload";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		__dataMap.put("name", name);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountOvhPabxServiceNameSoundUpload(java.lang.String url, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/soundUpload";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/soundUpload";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.ConferenceProperties getBillingAccountConferenceServiceNameSettings(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/settings";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.ConferenceProperties.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.ConferencePropertiesImpl.class);
 	}
 
 	public void putBillingAccountLineServiceNamePhonePhonebookBookKey(net.zyuiop.ovhapi.api.objects.telephony.Phonebook param0, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -774,15 +774,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditionsSettings getBillingAccountEasyHuntingServiceNameScreenListConditions(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditionsSettings.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyHuntingScreenListsConditionsSettingsImpl.class);
 	}
 
 	public java.lang.String getBillingAccountRsva(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/rsva";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/rsva";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -790,7 +790,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameHuntingQueue(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -798,7 +798,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNameTask(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -806,7 +806,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNameTask(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/task";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/task";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -814,7 +814,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountFaxServiceNameCampaigns(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -822,26 +822,26 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.SchedulerEvent getBillingAccountSchedulerServiceNameEventsUid(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String uid) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/events/" + uid + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/events/" + uid + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.SchedulerEvent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.SchedulerEventImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue postBillingAccountEasyHuntingServiceNameHuntingAgentAgentIdQueue(long queueId, long position, java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("queueId", queueId);
 		__dataMap.put("position", position);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public long[] getBillingAccountLineServiceNameAbbreviatedNumber(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -849,7 +849,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long postBillingAccountLineServiceNamePhonePhonebookBookKeyPhonebookContact(java.lang.String group, java.lang.String name, java.lang.String surname, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey, java.lang.String homeMobile, java.lang.String workMobile, java.lang.String homePhone, java.lang.String workPhone) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("group", group);
 		__dataMap.put("name", name);
@@ -865,7 +865,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long postBillingAccountLineServiceNamePhonePhonebookBookKeyPhonebookContact(java.lang.String group, java.lang.String name, java.lang.String surname, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("group", group);
 		__dataMap.put("name", name);
@@ -877,7 +877,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountServiceServiceName(java.lang.String reason, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String details) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -886,7 +886,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountServiceServiceName(java.lang.String reason, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -895,7 +895,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountSchedulerServiceName(net.zyuiop.ovhapi.api.objects.telephony.Scheduler param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -905,7 +905,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenuEntry postBillingAccountOvhPabxServiceNameMenuMenuIdEntry(java.lang.String action, long position, java.lang.String dtmf, java.lang.String billingAccount, java.lang.String serviceName, long menuId, java.lang.String actionParam) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("action", action);
 		__dataMap.put("position", position);
@@ -914,11 +914,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenuEntry.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxMenuEntryImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenuEntry postBillingAccountOvhPabxServiceNameMenuMenuIdEntry(java.lang.String action, long position, java.lang.String dtmf, java.lang.String billingAccount, java.lang.String serviceName, long menuId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("action", action);
 		__dataMap.put("position", position);
@@ -926,19 +926,19 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenuEntry.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxMenuEntryImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveStatistics getBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveStatistics(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveStatistics";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveStatistics";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveStatistics.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingQueueLiveStatisticsImpl.class);
 	}
 
 	public void deleteBillingAccountEasyHuntingServiceNameRecordsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/records/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/records/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -947,7 +947,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountSchedulerServiceNameEventsUid(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String uid) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/events/" + uid + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/events/" + uid + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -956,23 +956,23 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DirectoryWayType getBillingAccountServiceServiceNameDirectoryGetWayTypes(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/directory/getWayTypes";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/directory/getWayTypes";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DirectoryWayType.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DirectoryWayTypeImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.RateCodeInformation getBillingAccountRsvaServiceNameAllowedRateCodes(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/rsva/" + serviceName + "/allowedRateCodes";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/rsva/" + serviceName + "/allowedRateCodes";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.RateCodeInformation.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RateCodeInformationImpl.class);
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameHuntingAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -981,7 +981,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountOvhPabxServiceName(net.zyuiop.ovhapi.api.objects.telephony.OvhPabx param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -991,26 +991,26 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveCallsIdWhisper(java.lang.String whisperingMode, java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/whisper";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/whisper";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("whisperingMode", whisperingMode);
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.VxmlProperties getBillingAccountVxmlServiceNameSettings(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/vxml/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/vxml/" + serviceName + "/settings";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.VxmlProperties.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.VxmlPropertiesImpl.class);
 	}
 
 	public void deleteBillingAccountAbbreviatedNumberAbbreviatedNumber(java.lang.String billingAccount, long abbreviatedNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/abbreviatedNumber/" + abbreviatedNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/abbreviatedNumber/" + abbreviatedNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1019,7 +1019,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String postBillingAccountFaxServiceNameSettingsChangePassword(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/settings/changePassword";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/settings/changePassword";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -1028,25 +1028,25 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveCallsIdTransfer(java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/transfer";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/transfer";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabx getBillingAccountOvhPabxServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabx.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxImpl.class);
 	}
 
 	public void putBillingAccountEasyHuntingServiceNameTimeConditions(net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingTimeConditionsSettings param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1056,7 +1056,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountVoicemailServiceNameSettingsChangeRouting(java.lang.String routing, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/settings/changeRouting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/settings/changeRouting";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("routing", routing);
 		String __data = new Gson().toJson(__dataMap);
@@ -1066,15 +1066,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus getBillingAccountOvhPabxServiceNameHuntingAgentAgentIdQueueQueueIdLiveStatus(java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "/liveStatus";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "/liveStatus";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentLiveStatusImpl.class);
 	}
 
 	public void putBillingAccountFaxServiceName(net.zyuiop.ovhapi.api.objects.telephony.Fax param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1084,7 +1084,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameRecords(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/records";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/records";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1092,7 +1092,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdConditionScreenListConditionId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, long conditionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList/" + conditionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList/" + conditionId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1101,15 +1101,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Scheduler getBillingAccountSchedulerServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Scheduler.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.SchedulerImpl.class);
 	}
 
 	public void postBillingAccountVoicemailServiceNameMigrateOnNewVersion(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/migrateOnNewVersion";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/migrateOnNewVersion";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -1118,26 +1118,26 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameLock(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/lock";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/lock";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveCallsIdIntercept(java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/intercept";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/intercept";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameHuntingQueueQueueIdAgent(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1145,7 +1145,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountFaxServiceNameCampaignsIdStart(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "/start";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "/start";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -1154,7 +1154,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountPhonebookBookKey(java.lang.String billingAccount, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1163,7 +1163,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountVoicemail(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1171,7 +1171,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccount(java.lang.String reason, java.lang.String billingAccount, java.lang.String details) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1180,7 +1180,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccount(java.lang.String reason, java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1189,7 +1189,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountLineServiceNamePhonePhonebookBookKey(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1198,23 +1198,23 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.LinePhone getLineOfferPhones(java.lang.String country, java.lang.String offer) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/line/offer/phones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/line/offer/phones";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.LinePhone.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.LinePhoneImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent getBillingAccountEasyHuntingServiceNameHuntingAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentImpl.class);
 	}
 
 	public java.lang.String postBillingAccountFaxServiceNameSettingsNewPassword(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/settings/newPassword";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/settings/newPassword";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -1223,7 +1223,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String postBillingAccountEventToken(java.lang.String expiration, java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/eventToken";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/eventToken";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("expiration", expiration);
 		String __data = new Gson().toJson(__dataMap);
@@ -1233,15 +1233,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveCalls getBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveCallsId(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveCalls.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingQueueLiveCallsImpl.class);
 	}
 
 	public long[] getBillingAccountScreenServiceNameScreenLists(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/screen/" + serviceName + "/screenLists";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/screen/" + serviceName + "/screenLists";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1249,7 +1249,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountTimeConditionServiceNameOptions(net.zyuiop.ovhapi.api.objects.telephony.TimeConditionOptions param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition/" + serviceName + "/options";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition/" + serviceName + "/options";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1259,15 +1259,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.FaxProperties getBillingAccountFaxServiceNameSettings(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/settings";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.FaxProperties.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FaxPropertiesImpl.class);
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveCalls(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1275,7 +1275,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountEasyHuntingServiceNameSoundSoundId(java.lang.String billingAccount, java.lang.String serviceName, long soundId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/sound/" + soundId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/sound/" + soundId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1284,7 +1284,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountSchedulerServiceNameEventsUid(net.zyuiop.ovhapi.api.objects.telephony.SchedulerEvent param0, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String uid) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/events/" + uid + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/events/" + uid + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1294,7 +1294,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountLineServiceNameOptions(net.zyuiop.ovhapi.api.objects.telephony.LineOptions param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/options";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/options";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1304,7 +1304,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountPhonebook(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1312,23 +1312,23 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Tones getBillingAccountEasyPabxServiceNameHuntingTones(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/tones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/tones";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Tones.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TonesImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionRule getBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdRuleRuleId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, long ruleId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule/" + ruleId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule/" + ruleId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionRule.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionRuleImpl.class);
 	}
 
 	public java.lang.String getTelephony() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//telephony";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/telephony";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1336,15 +1336,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.BillingAccount getBillingAccount(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.BillingAccount.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.BillingAccountImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumberGroup postBillingAccountAbbreviatedNumber(java.lang.String destinationNumber, long abbreviatedNumber, java.lang.String name, java.lang.String surname, java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/abbreviatedNumber";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/abbreviatedNumber";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("destinationNumber", destinationNumber);
 		__dataMap.put("abbreviatedNumber", abbreviatedNumber);
@@ -1353,19 +1353,19 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumberGroup.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.AbbreviatedNumberGroupImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Tones getBillingAccountMiniPabxServiceNameTones(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/tones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/tones";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Tones.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TonesImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumber postBillingAccountLineServiceNameAbbreviatedNumber(java.lang.String destinationNumber, long abbreviatedNumber, java.lang.String name, java.lang.String surname, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("destinationNumber", destinationNumber);
 		__dataMap.put("abbreviatedNumber", abbreviatedNumber);
@@ -1374,43 +1374,43 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumber.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.AbbreviatedNumberImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveCalls getBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveCallsId(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveCalls.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingQueueLiveCallsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.TimeCondition getBillingAccountTimeConditionServiceNameConditionId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition/" + serviceName + "/condition/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition/" + serviceName + "/condition/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.TimeCondition.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TimeConditionImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DirectoryInfo getBillingAccountServiceServiceNameDirectory(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/directory";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/directory";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DirectoryInfo.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DirectoryInfoImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.VoicemailMessages getBillingAccountVoicemailServiceNameDirectoriesId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.VoicemailMessages.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.VoicemailMessagesImpl.class);
 	}
 
 	public java.lang.String getBillingAccountLineServiceNameAvailableSipDomains(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/availableSipDomains";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/availableSipDomains";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1418,17 +1418,17 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveCallsIdEavesdrop(java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/eavesdrop";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/eavesdrop";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdRule(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1436,15 +1436,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Phonebook getBillingAccountLineServiceNamePhonePhonebookBookKey(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Phonebook.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PhonebookImpl.class);
 	}
 
 	public java.lang.String getBillingAccountMiniPabxServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1452,29 +1452,29 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveCallsIdWhisper(java.lang.String whisperingMode, java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/whisper";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/whisper";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("whisperingMode", whisperingMode);
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue postBillingAccountOvhPabxServiceNameHuntingQueueQueueIdAgent(long queueId, long position, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("queueId", queueId);
 		__dataMap.put("position", position);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public java.lang.String getBillingAccountDdi(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ddi";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ddi";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1482,7 +1482,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountVxmlServiceNameSettings(net.zyuiop.ovhapi.api.objects.telephony.VxmlProperties param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/vxml/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/vxml/" + serviceName + "/settings";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1500,7 +1500,7 @@ public class TelephonyImpl implements Telephony {
 
 
 	public void postBillingAccountServiceServiceNameChangeOfBillingAccount(java.lang.String billingAccountDestination, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/changeOfBillingAccount";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/changeOfBillingAccount";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("billingAccountDestination", billingAccountDestination);
 		String __data = new Gson().toJson(__dataMap);
@@ -1510,15 +1510,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyHunting getBillingAccountEasyHuntingServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyHunting.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyHuntingImpl.class);
 	}
 
 	public java.lang.String getBillingAccountService(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1526,15 +1526,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumberGroup getBillingAccountAbbreviatedNumberAbbreviatedNumber(java.lang.String billingAccount, long abbreviatedNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/abbreviatedNumber/" + abbreviatedNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/abbreviatedNumber/" + abbreviatedNumber + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumberGroup.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.AbbreviatedNumberGroupImpl.class);
 	}
 
 	public void putBillingAccountPhonebookBookKeyPhonebookContactId(net.zyuiop.ovhapi.api.objects.telephony.PhonebookContact param0, java.lang.String billingAccount, java.lang.String bookKey, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1552,7 +1552,7 @@ public class TelephonyImpl implements Telephony {
 
 
 	public void putBillingAccountLineServiceNamePhoneRmaId(net.zyuiop.ovhapi.api.objects.telephony.Rma param0, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/rma/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/rma/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1562,7 +1562,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdConditionTimeConditionId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, long conditionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionTime/" + conditionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionTime/" + conditionId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1571,7 +1571,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountEasyPabxServiceNameHuntingTones(net.zyuiop.ovhapi.api.objects.telephony.Tones param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/tones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/tones";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1589,7 +1589,7 @@ public class TelephonyImpl implements Telephony {
 
 
 	public void putBillingAccountEasyHuntingServiceNameHuntingAgentAgentId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent param0, java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1599,15 +1599,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionConditionScreenList getBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdConditionScreenListConditionId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, long conditionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList/" + conditionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList/" + conditionId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionConditionScreenList.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionConditionScreenListImpl.class);
 	}
 
 	public void deleteBillingAccountTimeConditionServiceNameConditionId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition/" + serviceName + "/condition/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition/" + serviceName + "/condition/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1616,7 +1616,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String postBillingAccountPhonebook(java.lang.String name, java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("name", name);
 		String __data = new Gson().toJson(__dataMap);
@@ -1626,15 +1626,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.HistoryRepaymentConsumption getBillingAccountHistoryRepaymentConsumptionDate(java.lang.String billingAccount, java.util.Date date) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyRepaymentConsumption/" + date + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyRepaymentConsumption/" + date + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.HistoryRepaymentConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.HistoryRepaymentConsumptionImpl.class);
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameTimeConditionsConditions(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String policy) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions/conditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions/conditions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1642,7 +1642,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameTimeConditionsConditions(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions/conditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions/conditions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1650,7 +1650,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountServiceServiceNameDirectory(net.zyuiop.ovhapi.api.objects.telephony.DirectoryInfo param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/directory";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/directory";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1660,15 +1660,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Number getBillingAccountNumberServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/number/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/number/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Number.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.NumberImpl.class);
 	}
 
 	public java.lang.String getBillingAccountTimeCondition(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1676,17 +1676,17 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DetailedRateCodeInformation postBillingAccountRsvaServiceNameScheduleRateCode(java.lang.String rateCode, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/rsva/" + serviceName + "/scheduleRateCode";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/rsva/" + serviceName + "/scheduleRateCode";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("rateCode", rateCode);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DetailedRateCodeInformation.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DetailedRateCodeInformationImpl.class);
 	}
 
 	public void postBillingAccountVoicemailServiceNameGreetingsIdMove(java.lang.String dir, java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "/move";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "/move";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("dir", dir);
 		String __data = new Gson().toJson(__dataMap);
@@ -1696,7 +1696,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountLine(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1704,7 +1704,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String postBillingAccountLineServiceNamePhonePhonebook(java.lang.String name, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("name", name);
 		String __data = new Gson().toJson(__dataMap);
@@ -1714,66 +1714,66 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountMiniPabxServiceNameTonesToneUpload(java.lang.String url, java.lang.String type, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/tones/toneUpload";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/tones/toneUpload";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		__dataMap.put("type", type);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Tones getBillingAccountLineServiceNameTones(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/tones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/tones";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Tones.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TonesImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Vxml getBillingAccountVxmlServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/vxml/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/vxml/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Vxml.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.VxmlImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus getBillingAccountEasyHuntingServiceNameHuntingAgentAgentIdQueueQueueIdLiveStatus(java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "/liveStatus";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "/liveStatus";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentLiveStatusImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber getNumberSpecificNumbers(java.lang.String country, java.lang.String type, java.lang.String zone, java.lang.String range) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/number/specificNumbers";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/number/specificNumbers";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.SpecificNumberImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber getNumberSpecificNumbers(java.lang.String country, java.lang.String type) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/number/specificNumbers";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/number/specificNumbers";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.SpecificNumberImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.spare.telephony.TelephonySpare getSpareSpare(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare/" + spare + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.spare.telephony.TelephonySpare.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.spare.telephony.TelephonySpareImpl.class);
 	}
 
 	public void postBillingAccountVoicemailServiceNameSettingsChangePassword(java.lang.String password, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/settings/changePassword";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/settings/changePassword";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("password", password);
 		String __data = new Gson().toJson(__dataMap);
@@ -1783,7 +1783,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountLineServiceNamePhonePhonebookBookKeyPhonebookContactId(net.zyuiop.ovhapi.api.objects.telephony.PhonebookContact param0, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1793,7 +1793,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameMenuMenuIdEntryEntryId(java.lang.String billingAccount, java.lang.String serviceName, long menuId, long entryId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry/" + entryId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry/" + entryId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1802,7 +1802,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteSpareSpare(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare/" + spare + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -1811,7 +1811,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1819,7 +1819,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtension param0, java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1829,7 +1829,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountLineServiceNamePhonePhonebook(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1837,15 +1837,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxRecord getBillingAccountEasyHuntingServiceNameRecordsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/records/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/records/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxRecord.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxRecordImpl.class);
 	}
 
 	public void putBillingAccountOvhPabxServiceNameMenuMenuIdEntryEntryId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenuEntry param0, java.lang.String billingAccount, java.lang.String serviceName, long menuId, long entryId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry/" + entryId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry/" + entryId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -1855,15 +1855,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Ddi getBillingAccountDdiServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ddi/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ddi/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Ddi.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DdiImpl.class);
 	}
 
 	public void postBillingAccountFaxServiceNameCampaignsIdStop(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "/stop";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "/stop";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -1872,7 +1872,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountLineServiceNameClick2CallUser(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2CallUser";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2CallUser";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1880,7 +1880,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountLineServiceNameAutomaticCall(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/automaticCall";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/automaticCall";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1888,50 +1888,50 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameParticipantsIdEnergy(long value, java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/energy";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/energy";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("value", value);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Conference getBillingAccountConferenceServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Conference.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.ConferenceImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.FaxCampaignDetail getBillingAccountFaxServiceNameCampaignsIdDetail(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "/detail";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "/detail";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.FaxCampaignDetail.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FaxCampaignDetailImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountLineServiceNamePhoneRefreshScreen(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/refreshScreen";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/refreshScreen";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxSound getBillingAccountEasyHuntingServiceNameSoundSoundId(java.lang.String billingAccount, java.lang.String serviceName, long soundId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/sound/" + soundId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/sound/" + soundId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxSound.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxSoundImpl.class);
 	}
 
 	public void postBillingAccountRsvaServiceNameCancelScheduledRateCode(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/rsva/" + serviceName + "/cancelScheduledRateCode";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/rsva/" + serviceName + "/cancelScheduledRateCode";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -1940,7 +1940,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountVoicemailServiceNameDirectories(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String dir) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/directories";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/directories";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1948,7 +1948,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountVoicemailServiceNameDirectories(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/directories";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/directories";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -1956,55 +1956,55 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DatetimeAndIpvalue getBillingAccountLineServiceNameIps(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/ips";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/ips";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DatetimeAndIpvalue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DatetimeAndIpvalueImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.LineOffer getFaxOffers(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/fax/offers";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/fax/offers";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.LineOffer.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.LineOfferImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DiagnosticReport getBillingAccountServiceServiceNameDiagnosticReports(java.lang.String dayInterval, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/diagnosticReports";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/diagnosticReports";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DiagnosticReport.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DiagnosticReportImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Rma getBillingAccountLineServiceNamePhoneRmaId(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/rma/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/rma/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Rma.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RmaImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PhonebookMaster getBillingAccountPhonebookBookKey(java.lang.String billingAccount, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PhonebookMaster.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PhonebookMasterImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.CallDiagnostics getBillingAccountServiceServiceNameVoiceConsumptionConsumptionIdCallDiagnostics(java.lang.String billingAccount, java.lang.String serviceName, long consumptionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/voiceConsumption/" + consumptionId + "/callDiagnostics";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/voiceConsumption/" + consumptionId + "/callDiagnostics";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.CallDiagnostics.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.CallDiagnosticsImpl.class);
 	}
 
 	public long[] getBillingAccountPhonebookBookKeyPhonebookContact(java.lang.String billingAccount, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2012,7 +2012,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2021,7 +2021,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountLineServiceNamePhoneMerchandiseAvailable(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/merchandiseAvailable";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/merchandiseAvailable";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2029,7 +2029,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountEasyHuntingServiceName(net.zyuiop.ovhapi.api.objects.telephony.EasyHunting param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2039,23 +2039,23 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtension getBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtension.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task getBillingAccountServiceServiceNameTaskTaskId(java.lang.String billingAccount, java.lang.String serviceName, long taskId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/task/" + taskId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/task/" + taskId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public void putBillingAccountScreenServiceName(net.zyuiop.ovhapi.api.objects.telephony.Screen param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/screen/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/screen/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2065,15 +2065,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue getBillingAccountOvhPabxServiceNameHuntingAgentAgentIdQueueQueueId(java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public void putBillingAccountEasyPabxServiceNameHuntingAgentAgentNumber(net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent param0, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String agentNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2083,15 +2083,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.HistoryConsumption getBillingAccountHistoryConsumptionDate(java.lang.String billingAccount, java.util.Date date) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyConsumption/" + date + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyConsumption/" + date + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.HistoryConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.HistoryConsumptionImpl.class);
 	}
 
 	public void postBillingAccountScreenServiceNameScreenLists(java.lang.String callNumber, java.lang.String type, java.lang.String nature, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/screen/" + serviceName + "/screenLists";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/screen/" + serviceName + "/screenLists";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("callNumber", callNumber);
 		__dataMap.put("type", type);
@@ -2103,15 +2103,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxSound getBillingAccountOvhPabxServiceNameSoundSoundId(java.lang.String billingAccount, java.lang.String serviceName, long soundId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/sound/" + soundId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/sound/" + soundId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxSound.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxSoundImpl.class);
 	}
 
 	public void deleteBillingAccountEventToken(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/eventToken";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/eventToken";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2120,7 +2120,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountOvhPabxServiceNameHuntingAgentAgentIdQueueQueueId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue param0, java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2130,7 +2130,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountFaxServiceNameSettings(net.zyuiop.ovhapi.api.objects.telephony.FaxProperties param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/settings";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2140,7 +2140,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtension postBillingAccountOvhPabxServiceNameDialplanDialplanIdExtension(boolean enable, long position, java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, java.lang.String screenListType, java.lang.String schedulerCategory) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("enable", enable);
 		__dataMap.put("position", position);
@@ -2149,22 +2149,22 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtension.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtension postBillingAccountOvhPabxServiceNameDialplanDialplanIdExtension(boolean enable, long position, java.lang.String billingAccount, java.lang.String serviceName, long dialplanId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("enable", enable);
 		__dataMap.put("position", position);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtension.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent postBillingAccountMiniPabxServiceNameHuntingAgent(java.lang.String agentNumber, long position, boolean logged, long noReplyTimer, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("agentNumber", agentNumber);
 		__dataMap.put("position", position);
@@ -2173,11 +2173,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyMiniPabxHuntingAgentImpl.class);
 	}
 
 	public java.lang.String getBillingAccountRedirect(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/redirect";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/redirect";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2185,7 +2185,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public double[] getBillingAccountPortabilities(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/portabilities";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/portabilities";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2193,7 +2193,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountServiceServiceNameEventToken(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/eventToken";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/eventToken";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2202,7 +2202,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountTimeConditionServiceNameCondition(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition/" + serviceName + "/condition";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition/" + serviceName + "/condition";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2210,7 +2210,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameHuntingQueueQueueIdAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2219,7 +2219,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent postBillingAccountOvhPabxServiceNameHuntingAgent(long wrapUpTime, java.lang.String number, long simultaneousLines, java.lang.String status, long timeout, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("wrapUpTime", wrapUpTime);
 		__dataMap.put("number", number);
@@ -2229,19 +2229,19 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PcsFile getBillingAccountVoicemailServiceNameDirectoriesIdDownload(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "/download";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "/download";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PcsFile.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PcsFileImpl.class);
 	}
 
 	public void deleteBillingAccountEasyHuntingServiceNameHuntingAgentAgentIdQueueQueueId(java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2250,7 +2250,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountVoicemailServiceName(net.zyuiop.ovhapi.api.objects.telephony.Voicemail param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2260,7 +2260,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountLineServiceNameClick2CallUserId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2269,7 +2269,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountLineServiceNamePhoneFunctionKeyKeyNumAvailableFunction(java.lang.String billingAccount, java.lang.String serviceName, long keyNum) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/functionKey/" + keyNum + "/availableFunction";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/functionKey/" + keyNum + "/availableFunction";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2277,15 +2277,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.HistoryTollfreeConsumption getBillingAccountHistoryTollfreeConsumptionDate(java.lang.String billingAccount, java.util.Date date) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyTollfreeConsumption/" + date + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyTollfreeConsumption/" + date + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.HistoryTollfreeConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.HistoryTollfreeConsumptionImpl.class);
 	}
 
 	public void putBillingAccountOvhPabxServiceNameHuntingQueueQueueId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueue param0, java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2295,41 +2295,41 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountSchedulerServiceNameImportIcsCalendar(java.lang.String url, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/importIcsCalendar";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/importIcsCalendar";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Redirect getBillingAccountRedirectServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/redirect/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/redirect/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Redirect.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RedirectImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PhonebookContact getBillingAccountLineServiceNamePhonePhonebookBookKeyPhonebookContactId(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PhonebookContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PhonebookContactImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenu getBillingAccountOvhPabxServiceNameMenuMenuId(java.lang.String billingAccount, java.lang.String serviceName, long menuId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxMenu.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxMenuImpl.class);
 	}
 
 	public java.lang.String getSpareSpareCompatibleReplacement(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/compatibleReplacement";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare/" + spare + "/compatibleReplacement";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2337,18 +2337,18 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue postBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdAgent(long queueId, long position, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("queueId", queueId);
 		__dataMap.put("position", position);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public void putBillingAccountNumberServiceName(net.zyuiop.ovhapi.api.objects.telephony.Number param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/number/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/number/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2358,7 +2358,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountScreenServiceNameScreenListsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/screen/" + serviceName + "/screenLists/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/screen/" + serviceName + "/screenLists/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2367,7 +2367,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountAbbreviatedNumber(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/abbreviatedNumber";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/abbreviatedNumber";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2375,25 +2375,25 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveCallsIdTransfer(java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/transfer";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/transfer";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplan getBillingAccountOvhPabxServiceNameDialplanDialplanId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplan.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanImpl.class);
 	}
 
 	public java.lang.String getBillingAccountLineServiceNameOptionsAvailableCodecs(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/options/availableCodecs";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/options/availableCodecs";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2401,17 +2401,17 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountRedirectServiceNameChangeDestination(java.lang.String destination, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/redirect/" + serviceName + "/changeDestination";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/redirect/" + serviceName + "/changeDestination";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("destination", destination);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public void deleteBillingAccountFaxServiceNameCampaignsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2420,7 +2420,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameSound(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/sound";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/sound";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2428,15 +2428,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxRecord getBillingAccountOvhPabxServiceNameRecordsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/records/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/records/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxRecord.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxRecordImpl.class);
 	}
 
 	public long postBillingAccountPhonebookBookKeyPhonebookContact(java.lang.String group, java.lang.String name, java.lang.String surname, java.lang.String billingAccount, java.lang.String bookKey, java.lang.String homeMobile, java.lang.String workMobile, java.lang.String homePhone, java.lang.String workPhone) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("group", group);
 		__dataMap.put("name", name);
@@ -2452,7 +2452,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long postBillingAccountPhonebookBookKeyPhonebookContact(java.lang.String group, java.lang.String name, java.lang.String surname, java.lang.String billingAccount, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("group", group);
 		__dataMap.put("name", name);
@@ -2464,31 +2464,31 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.TelephonyService getBillingAccountServiceServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.TelephonyService.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TelephonyServiceImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Click2CallUser getBillingAccountLineServiceNameClick2CallUserId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Click2CallUser.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.Click2CallUserImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DetailedRateCodeInformation getBillingAccountRsvaServiceNameCurrentRateCode(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/rsva/" + serviceName + "/currentRateCode";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/rsva/" + serviceName + "/currentRateCode";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DetailedRateCodeInformation.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DetailedRateCodeInformationImpl.class);
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameHuntingAgentAgentIdQueueQueueId(java.lang.String billingAccount, java.lang.String serviceName, long agentId, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue/" + queueId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2497,7 +2497,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountLineServiceNameClick2CallUserIdClick2Call(java.lang.String calledNumber, java.lang.String billingAccount, java.lang.String serviceName, long id, java.lang.String callingNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "/click2Call";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "/click2Call";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("calledNumber", calledNumber);
 		__dataMap.put("callingNumber", callingNumber);
@@ -2508,7 +2508,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountLineServiceNameClick2CallUserIdClick2Call(java.lang.String calledNumber, java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "/click2Call";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2CallUser/" + id + "/click2Call";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("calledNumber", calledNumber);
 		String __data = new Gson().toJson(__dataMap);
@@ -2518,15 +2518,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue getBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentQueueImpl.class);
 	}
 
 	public java.lang.String postBillingAccountServiceServiceNameEventToken(java.lang.String expiration, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/eventToken";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/eventToken";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("expiration", expiration);
 		String __data = new Gson().toJson(__dataMap);
@@ -2536,7 +2536,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountConferenceServiceNameSettings(net.zyuiop.ovhapi.api.objects.telephony.ConferenceProperties param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/settings";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2546,7 +2546,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putSpareSpareServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare/" + spare + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2556,7 +2556,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountLineServiceNamePhonePhonebookBookKeyPhonebookContactId(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String bookKey, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/phonebook/" + bookKey + "/phonebookContact/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2565,18 +2565,18 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyPabxServiceNameHuntingTonesToneUpload(java.lang.String url, java.lang.String type, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/tones/toneUpload";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/tones/toneUpload";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("url", url);
 		__dataMap.put("type", type);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public java.lang.String getBillingAccountNumber(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/number";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/number";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2584,7 +2584,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.FaxCampaign postBillingAccountFaxServiceNameCampaigns(java.lang.String recipientsType, java.lang.String documentId, java.lang.String name, java.lang.String sendType, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String recipientsDocId, java.lang.String recipientsList, java.util.Date sendDate) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("recipientsType", recipientsType);
 		__dataMap.put("documentId", documentId);
@@ -2596,11 +2596,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.FaxCampaign.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FaxCampaignImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.FaxCampaign postBillingAccountFaxServiceNameCampaigns(java.lang.String recipientsType, java.lang.String documentId, java.lang.String name, java.lang.String sendType, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("recipientsType", recipientsType);
 		__dataMap.put("documentId", documentId);
@@ -2609,11 +2609,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.FaxCampaign.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FaxCampaignImpl.class);
 	}
 
 	public void postSpareSpareReplace(java.lang.String domain, java.lang.String ip, java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/replace";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare/" + spare + "/replace";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("domain", domain);
 		__dataMap.put("ip", ip);
@@ -2624,15 +2624,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.FaxCampaign getBillingAccountFaxServiceNameCampaignsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/campaigns/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.FaxCampaign.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FaxCampaignImpl.class);
 	}
 
 	public long[] getBillingAccountServiceServiceNameFaxConsumption(java.lang.String billingAccount, java.lang.String serviceName, java.util.Date creationDatetimeTo, java.util.Date creationDatetimeFrom, java.lang.String wayType) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/faxConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/faxConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2640,7 +2640,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNameFaxConsumption(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/faxConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/faxConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2648,7 +2648,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdConditionScreenList(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionScreenList";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2656,7 +2656,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String postBillingAccountLineServiceNameAutomaticCall(java.lang.String calledNumber, boolean isAnonymous, java.lang.String dialplan, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String playbackAudioFileDialplan, java.lang.String callingNumber, java.lang.String bridgeNumberDialplan, java.lang.String ttsTextDialplan, long timeout) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/automaticCall";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/automaticCall";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("calledNumber", calledNumber);
 		__dataMap.put("isAnonymous", isAnonymous);
@@ -2673,7 +2673,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String postBillingAccountLineServiceNameAutomaticCall(java.lang.String calledNumber, boolean isAnonymous, java.lang.String dialplan, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/automaticCall";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/automaticCall";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("calledNumber", calledNumber);
 		__dataMap.put("isAnonymous", isAnonymous);
@@ -2685,44 +2685,44 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountNumberServiceNameChangeFeatureType(java.lang.String featureType, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/number/" + serviceName + "/changeFeatureType";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/number/" + serviceName + "/changeFeatureType";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("featureType", featureType);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameParticipantsIdUndeaf(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/undeaf";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/undeaf";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.CallsGenerated getBillingAccountLineServiceNameAutomaticCallIdentifier(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String identifier) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/automaticCall/" + identifier + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/automaticCall/" + identifier + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.CallsGenerated.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.CallsGeneratedImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveCallsIdIntercept(java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/intercept";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/intercept";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public java.lang.String getBillingAccountVoicemailServiceNameSettingsRouting(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/settings/routing";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/settings/routing";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2730,7 +2730,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountVoicemailServiceNameGreetings(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String dir) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/greetings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/greetings";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2738,7 +2738,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountVoicemailServiceNameGreetings(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/greetings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/greetings";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2746,7 +2746,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccount(net.zyuiop.ovhapi.api.objects.telephony.BillingAccount param0, java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2756,15 +2756,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Rsva getBillingAccountRsvaServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/rsva/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/rsva/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Rsva.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RsvaImpl.class);
 	}
 
 	public void putBillingAccountLineServiceNameAbbreviatedNumberAbbreviatedNumber(net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumber param0, java.lang.String billingAccount, java.lang.String serviceName, long abbreviatedNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber/" + abbreviatedNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber/" + abbreviatedNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2774,20 +2774,20 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.FunctionKey getBillingAccountLineServiceNamePhoneFunctionKeyKeyNum(java.lang.String billingAccount, java.lang.String serviceName, long keyNum) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/functionKey/" + keyNum + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/functionKey/" + keyNum + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.FunctionKey.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FunctionKeyImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameParticipantsIdMute(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/mute";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/mute";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 
@@ -2799,15 +2799,15 @@ public class TelephonyImpl implements Telephony {
 
 
 	public net.zyuiop.ovhapi.api.objects.telephony.ScreenList getBillingAccountScreenServiceNameScreenListsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/screen/" + serviceName + "/screenLists/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/screen/" + serviceName + "/screenLists/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.ScreenList.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.ScreenListImpl.class);
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameMenuMenuIdEntry(java.lang.String billingAccount, java.lang.String serviceName, long menuId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "/entry";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2815,7 +2815,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.util.Date getBillingAccountHistoryConsumption(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2823,7 +2823,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountDdiServiceName(net.zyuiop.ovhapi.api.objects.telephony.Ddi param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ddi/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ddi/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2833,16 +2833,16 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountLineServiceNamePhoneReboot(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/reboot";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/reboot";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public void putBillingAccountServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2852,7 +2852,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountMiniPabxServiceNameHuntingAgentAgentNumber(net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent param0, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String agentNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2862,7 +2862,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionRule postBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdRule(boolean negativeAction, java.lang.String action, long position, java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, java.lang.String actionParam) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("negativeAction", negativeAction);
 		__dataMap.put("action", action);
@@ -2871,11 +2871,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionRule.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionRuleImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionRule postBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdRule(boolean negativeAction, java.lang.String action, long position, java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("negativeAction", negativeAction);
 		__dataMap.put("action", action);
@@ -2883,11 +2883,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionRule.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanExtensionRuleImpl.class);
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdRuleRuleId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, long ruleId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule/" + ruleId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule/" + ruleId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2896,15 +2896,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.GenericScreen getBillingAccountTimeConditionServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.GenericScreen.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.GenericScreenImpl.class);
 	}
 
 	public void putBillingAccountPhonebookBookKey(net.zyuiop.ovhapi.api.objects.telephony.PhonebookMaster param0, java.lang.String billingAccount, java.lang.String bookKey) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -2914,7 +2914,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent postBillingAccountEasyHuntingServiceNameHuntingAgent(long wrapUpTime, java.lang.String number, long simultaneousLines, java.lang.String status, long timeout, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("wrapUpTime", wrapUpTime);
 		__dataMap.put("number", number);
@@ -2924,11 +2924,11 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentImpl.class);
 	}
 
 	public void deleteBillingAccountLineServiceNameAbbreviatedNumberAbbreviatedNumber(java.lang.String billingAccount, java.lang.String serviceName, long abbreviatedNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber/" + abbreviatedNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/abbreviatedNumber/" + abbreviatedNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -2937,31 +2937,31 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent getBillingAccountMiniPabxServiceNameHuntingAgentAgentNumber(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String agentNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyMiniPabxHuntingAgentImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.DetailedRateCodeInformation getBillingAccountRsvaServiceNameScheduledRateCode(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/rsva/" + serviceName + "/scheduledRateCode";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/rsva/" + serviceName + "/scheduledRateCode";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.DetailedRateCodeInformation.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.DetailedRateCodeInformationImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.VoicemailGreetings getBillingAccountVoicemailServiceNameGreetingsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/greetings/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.VoicemailGreetings.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.VoicemailGreetingsImpl.class);
 	}
 
 	public java.lang.String getNumberZones(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/number/zones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/number/zones";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2969,16 +2969,16 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameParticipantsIdUnmute(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/unmute";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/unmute";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public java.lang.String getBillingAccountSchedulerServiceNameEvents(java.lang.String billingAccount, java.lang.String serviceName, java.util.Date dateEndFrom, java.util.Date dateStartTo, java.util.Date dateEndTo, java.util.Date dateStartFrom, java.lang.String categories) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/events";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/events";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2986,7 +2986,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountSchedulerServiceNameEvents(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler/" + serviceName + "/events";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler/" + serviceName + "/events";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -2994,7 +2994,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountConference(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3002,7 +3002,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountVoicemailServiceNameSettings(net.zyuiop.ovhapi.api.objects.telephony.VoicemailProperties param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/settings";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3020,7 +3020,7 @@ public class TelephonyImpl implements Telephony {
 
 
 	public void putBillingAccountEasyPabxServiceName(net.zyuiop.ovhapi.api.objects.telephony.EasyPabx param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3030,7 +3030,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountScheduler(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/scheduler";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/scheduler";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3038,7 +3038,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountEasyHunting(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3046,7 +3046,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long postBillingAccountVoicemailServiceNameGreetings(java.lang.String documentId, java.lang.String dir, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/greetings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/greetings";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("documentId", documentId);
 		__dataMap.put("dir", dir);
@@ -3057,7 +3057,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountEasyHuntingServiceNameScreenListConditions(net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditionsSettings param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3067,32 +3067,32 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.LineOffer getLineOffers(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/line/offers";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/line/offers";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.LineOffer.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.LineOfferImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveCallsIdHangup(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/hangup";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/hangup";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.ConferenceInformations getBillingAccountConferenceServiceNameInformations(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/informations";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/informations";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.ConferenceInformations.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.ConferenceInformationsImpl.class);
 	}
 
 	public java.lang.String getBillingAccountVxml(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/vxml";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/vxml";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3100,11 +3100,11 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PhonebookContact getBillingAccountPhonebookBookKeyPhonebookContactId(java.lang.String billingAccount, java.lang.String bookKey, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PhonebookContact.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PhonebookContactImpl.class);
 	}
 
 
@@ -3116,7 +3116,7 @@ public class TelephonyImpl implements Telephony {
 
 
 	public void deleteBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdAgentAgentId(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -3125,23 +3125,23 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueue getBillingAccountEasyHuntingServiceNameHuntingQueueQueueId(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingQueueImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PcsFile getBillingAccountHistoryConsumptionDateFile(java.lang.String extension, java.lang.String billingAccount, java.util.Date date) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyConsumption/" + date + "/file";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyConsumption/" + date + "/file";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PcsFile.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PcsFileImpl.class);
 	}
 
 	public java.lang.String getBillingAccountFax(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3149,7 +3149,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountOvhPabx(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3157,7 +3157,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameDialplanDialplanId(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -3166,7 +3166,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameHuntingAgentAgentIdQueue(java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/agent/" + agentId + "/queue";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3174,7 +3174,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameHuntingAgentAgentIdQueue(java.lang.String billingAccount, java.lang.String serviceName, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/agent/" + agentId + "/queue";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3182,7 +3182,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.util.Date getBillingAccountHistoryRepaymentConsumption(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyRepaymentConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyRepaymentConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3190,7 +3190,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameDialplan(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3198,7 +3198,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameMenuMenuId(java.lang.String billingAccount, java.lang.String serviceName, long menuId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/menu/" + menuId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -3207,15 +3207,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHunting getBillingAccountOvhPabxServiceNameHunting(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHunting.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingImpl.class);
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameScreenListConditionsConditions(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String screenListType) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3223,7 +3223,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameScreenListConditionsConditions(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3231,15 +3231,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PcsFile getBillingAccountHistoryTollfreeConsumptionDateDocument(java.lang.String billingAccount, java.util.Date date) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyTollfreeConsumption/" + date + "/document";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyTollfreeConsumption/" + date + "/document";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PcsFile.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PcsFileImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.RmaReturn postBillingAccountLineServiceNamePhoneRma(java.lang.String type, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String newMerchandise, net.zyuiop.ovhapi.api.objects.telephony.Contact shippingContact) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/rma";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/rma";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("type", type);
 		__dataMap.put("newMerchandise", newMerchandise);
@@ -3247,21 +3247,21 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.RmaReturn.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RmaReturnImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.RmaReturn postBillingAccountLineServiceNamePhoneRma(java.lang.String type, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/phone/rma";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/phone/rma";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("type", type);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.RmaReturn.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RmaReturnImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent postBillingAccountEasyPabxServiceNameHuntingAgent(java.lang.String agentNumber, long position, boolean logged, long noReplyTimer, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("agentNumber", agentNumber);
 		__dataMap.put("position", position);
@@ -3270,27 +3270,27 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyMiniPabxHuntingAgent.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyMiniPabxHuntingAgentImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Portability getBillingAccountPortabilitiesId(java.lang.String billingAccount, double id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/portabilities/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/portabilities/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Portability.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PortabilityImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getBillingAccountServiceInfos(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 	public void deleteBillingAccountEasyPabxServiceNameHuntingAgentAgentNumber(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String agentNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent/" + agentNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -3299,36 +3299,36 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditions postBillingAccountEasyHuntingServiceNameScreenListConditionsConditions(java.lang.String screenListType, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String callerIdNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("screenListType", screenListType);
 		__dataMap.put("callerIdNumber", callerIdNumber);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditions.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyHuntingScreenListsConditionsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditions postBillingAccountEasyHuntingServiceNameScreenListConditionsConditions(java.lang.String screenListType, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("screenListType", screenListType);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditions.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyHuntingScreenListsConditionsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus getBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdAgentAgentIdLiveStatus(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "/liveStatus";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "/liveStatus";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentLiveStatusImpl.class);
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameDialplanDialplanIdExtension(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3336,7 +3336,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameSound(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/sound";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/sound";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3344,7 +3344,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountFaxServiceNameSettingsSendFax(java.lang.String pdfUrl, java.lang.String recipients, java.lang.String billingAccount, java.lang.String serviceName, java.util.Date dateSchedule) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/settings/sendFax";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/settings/sendFax";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("pdfUrl", pdfUrl);
 		__dataMap.put("recipients", recipients);
@@ -3352,38 +3352,38 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountFaxServiceNameSettingsSendFax(java.lang.String pdfUrl, java.lang.String recipients, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/fax/" + serviceName + "/settings/sendFax";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/fax/" + serviceName + "/settings/sendFax";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("pdfUrl", pdfUrl);
 		__dataMap.put("recipients", recipients);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyPabxHunting getBillingAccountEasyPabxServiceNameHunting(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyPabxHunting.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyPabxHuntingImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.PcsFile getBillingAccountHistoryConsumptionDateDocument(java.lang.String extension, java.lang.String billingAccount, java.util.Date date) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/historyConsumption/" + date + "/document";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/historyConsumption/" + date + "/document";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.PcsFile.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.PcsFileImpl.class);
 	}
 
 	public void putBillingAccountAbbreviatedNumberAbbreviatedNumber(net.zyuiop.ovhapi.api.objects.telephony.AbbreviatedNumberGroup param0, java.lang.String billingAccount, long abbreviatedNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/abbreviatedNumber/" + abbreviatedNumber + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/abbreviatedNumber/" + abbreviatedNumber + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3393,15 +3393,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueue getBillingAccountOvhPabxServiceNameHuntingQueueQueueId(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueue.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingQueueImpl.class);
 	}
 
 	public void putBillingAccountOvhPabxServiceNameHuntingQueueQueueIdAgentAgentId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentQueue param0, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3411,7 +3411,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountLineServiceNameClick2Call(java.lang.String calledNumber, java.lang.String billingAccount, java.lang.String serviceName, java.lang.String callingNumber, boolean intercom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2Call";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2Call";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("calledNumber", calledNumber);
 		__dataMap.put("callingNumber", callingNumber);
@@ -3423,7 +3423,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void postBillingAccountLineServiceNameClick2Call(java.lang.String calledNumber, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2Call";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2Call";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("calledNumber", calledNumber);
 		String __data = new Gson().toJson(__dataMap);
@@ -3433,15 +3433,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.ConferenceHistory getBillingAccountConferenceServiceNameHistoriesId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/histories/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/histories/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.ConferenceHistory.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryImpl.class);
 	}
 
 	public void putBillingAccountRedirectServiceName(net.zyuiop.ovhapi.api.objects.telephony.Redirect param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/redirect/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/redirect/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3451,16 +3451,16 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveCallsIdHangup(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/hangup";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/hangup";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public double[] getBillingAccountAllowedCreditThreshold(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/allowedCreditThreshold";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/allowedCreditThreshold";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3468,24 +3468,24 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.FaxConsumption getBillingAccountServiceServiceNameFaxConsumptionConsumptionId(java.lang.String billingAccount, java.lang.String serviceName, long consumptionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/faxConsumption/" + consumptionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/faxConsumption/" + consumptionId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.FaxConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.FaxConsumptionImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountConferenceServiceNameParticipantsIdKick(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/kick";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/participants/" + id + "/kick";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdAgent(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/agent";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3493,7 +3493,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountConferenceServiceNameHistories(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/conference/" + serviceName + "/histories";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/conference/" + serviceName + "/histories";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3501,15 +3501,15 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus getBillingAccountOvhPabxServiceNameHuntingQueueQueueIdAgentAgentIdLiveStatus(java.lang.String billingAccount, java.lang.String serviceName, long queueId, long agentId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "/liveStatus";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/agent/" + agentId + "/liveStatus";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingAgentLiveStatus.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingAgentLiveStatusImpl.class);
 	}
 
 	public long postBillingAccountLineServiceNameClick2CallUser(java.lang.String password, java.lang.String login, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "/click2CallUser";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "/click2CallUser";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("password", password);
 		__dataMap.put("login", login);
@@ -3520,7 +3520,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdConditionTime(java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionTime";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/conditionTime";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3528,7 +3528,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getSpareBrands() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/brands";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/spare/brands";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3536,31 +3536,31 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyPabx getBillingAccountEasyPabxServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyPabx.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyPabxImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Line getBillingAccountLineServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/line/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/line/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Line.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.LineImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingTimeConditionsSettings getBillingAccountEasyHuntingServiceNameTimeConditions(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/timeConditions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingTimeConditionsSettings.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.EasyHuntingTimeConditionsSettingsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplan postBillingAccountOvhPabxServiceNameDialplan(java.lang.String showCallerNumber, java.lang.String name, long transferTimeout, boolean anonymousRejection, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("showCallerNumber", showCallerNumber);
 		__dataMap.put("name", name);
@@ -3569,19 +3569,19 @@ public class TelephonyImpl implements Telephony {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplan.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxDialplanImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.RepaymentConsumption getBillingAccountServiceServiceNameRepaymentConsumptionConsumptionId(java.lang.String billingAccount, java.lang.String serviceName, long consumptionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/repaymentConsumption/" + consumptionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/repaymentConsumption/" + consumptionId + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.RepaymentConsumption.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RepaymentConsumptionImpl.class);
 	}
 
 	public void postBillingAccountVoicemailServiceNameDirectoriesIdMove(java.lang.String dir, java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "/move";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/directories/" + id + "/move";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("dir", dir);
 		String __data = new Gson().toJson(__dataMap);
@@ -3591,7 +3591,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public java.lang.String getBillingAccountEasyPabxServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyPabx/" + serviceName + "/hunting/agent";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3599,7 +3599,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void deleteBillingAccountOvhPabxServiceNameRecordsId(java.lang.String billingAccount, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/records/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/records/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -3608,7 +3608,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNameVoiceConsumption(java.lang.String billingAccount, java.lang.String serviceName, java.lang.String planType, java.lang.String destinationType, java.util.Date creationDatetimeTo, java.util.Date creationDatetimeFrom, java.lang.String wayType) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/voiceConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/voiceConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3616,7 +3616,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountServiceServiceNameVoiceConsumption(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/service/" + serviceName + "/voiceConsumption";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/service/" + serviceName + "/voiceConsumption";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3624,7 +3624,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountEasyHuntingServiceNameScreenListConditionsConditionsConditionId(net.zyuiop.ovhapi.api.objects.telephony.EasyHuntingScreenListsConditions param0, java.lang.String billingAccount, java.lang.String serviceName, long conditionId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions/" + conditionId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/screenListConditions/conditions/" + conditionId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3634,7 +3634,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public long[] getBillingAccountEasyHuntingServiceNameHuntingQueue(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3642,7 +3642,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountOvhPabxServiceNameDialplanDialplanIdExtensionExtensionIdRuleRuleId(net.zyuiop.ovhapi.api.objects.telephony.OvhPabxDialplanExtensionRule param0, java.lang.String billingAccount, java.lang.String serviceName, long dialplanId, long extensionId, long ruleId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule/" + ruleId + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/dialplan/" + dialplanId + "/extension/" + extensionId + "/rule/" + ruleId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -3652,33 +3652,33 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Task postBillingAccountOvhPabxServiceNameHuntingQueueQueueIdLiveCallsIdEavesdrop(java.lang.String number, java.lang.String billingAccount, java.lang.String serviceName, long queueId, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/eavesdrop";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/ovhPabx/" + serviceName + "/hunting/queue/" + queueId + "/liveCalls/" + id + "/eavesdrop";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("number", number);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.VoicemailProperties getBillingAccountVoicemailServiceNameSettings(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/voicemail/" + serviceName + "/settings";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/voicemail/" + serviceName + "/settings";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.VoicemailProperties.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.VoicemailPropertiesImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveStatistics getBillingAccountEasyHuntingServiceNameHuntingQueueQueueIdLiveStatistics(java.lang.String billingAccount, java.lang.String serviceName, long queueId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveStatistics";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/easyHunting/" + serviceName + "/hunting/queue/" + queueId + "/liveStatistics";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.OvhPabxHuntingQueueLiveStatistics.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.OvhPabxHuntingQueueLiveStatisticsImpl.class);
 	}
 
 	public java.lang.String getBillingAccountScreen(java.lang.String billingAccount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/screen";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/screen";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -3686,23 +3686,23 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.TimeConditionOptions getBillingAccountTimeConditionServiceNameOptions(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/timeCondition/" + serviceName + "/options";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/timeCondition/" + serviceName + "/options";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.TimeConditionOptions.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.TimeConditionOptionsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Screen getBillingAccountScreenServiceName(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/screen/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/screen/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Screen.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.ScreenImpl.class);
 	}
 
 	public void deleteBillingAccountPhonebookBookKeyPhonebookContactId(java.lang.String billingAccount, java.lang.String bookKey, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/phonebook/" + bookKey + "/phonebookContact/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -3711,7 +3711,7 @@ public class TelephonyImpl implements Telephony {
 	}
 
 	public void putBillingAccountMiniPabxServiceNameTones(net.zyuiop.ovhapi.api.objects.telephony.Tones param0, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + billingAccount + "/miniPabx/" + serviceName + "/tones";
+		String __callUrl = "https://api.ovh.com/1.0/telephony/" + billingAccount + "/miniPabx/" + serviceName + "/tones";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);

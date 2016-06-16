@@ -7,34 +7,34 @@ import net.zyuiop.ovhapi.api.objects.pack.xdsl.addressmove.Creation;
 
 public class CreationImpl implements Creation { 
 
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot meeting;
-	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.BookMeetingSlotImpl meeting;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl address;
 
 	public CreationImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot getMeeting() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.BookMeetingSlotImpl getMeeting() { 
 		return this.meeting;
 	} 
 
-	public void setMeeting(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot meeting) { 
+	public void setMeeting(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.BookMeetingSlotImpl meeting) { 
 		this.meeting = meeting;
 	} 
 
-	public CreationImpl meeting(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot meeting) { 
+	public CreationImpl meeting(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.BookMeetingSlotImpl meeting) { 
 		this.meeting = meeting;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address getAddress() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl getAddress() { 
 		return this.address;
 	} 
 
-	public void setAddress(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address) { 
+	public void setAddress(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl address) { 
 		this.address = address;
 	} 
 
-	public CreationImpl address(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address) { 
+	public CreationImpl address(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl address) { 
 		this.address = address;
 		return this;
 	} 

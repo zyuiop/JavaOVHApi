@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.billing.StatementIncome;
 
 public class StatementIncomeImpl implements StatementIncome { 
 
-	private net.zyuiop.ovhapi.api.objects.order.Price amount;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount;
 	private java.lang.String password;
 	private java.lang.String pdfUrl;
 	private java.lang.String statementIncomeId;
@@ -18,15 +18,15 @@ public class StatementIncomeImpl implements StatementIncome {
 	public StatementIncomeImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getAmount() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getAmount() { 
 		return this.amount;
 	} 
 
-	public void setAmount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public void setAmount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 	} 
 
-	public StatementIncomeImpl amount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public StatementIncomeImpl amount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 		return this;
 	} 

@@ -16,7 +16,7 @@ public class ContactImpl implements Contact {
 	private java.lang.String fax;
 	private java.lang.String cellPhone;
 	private java.lang.String birthCountry;
-	private net.zyuiop.ovhapi.api.objects.contact.Address address;
+	private net.zyuiop.ovhapi.impl.objects.contact.AddressImpl address;
 	private long id;
 	private java.lang.String lastName;
 	private java.lang.String companyNationalIdentificationNumber;
@@ -150,15 +150,15 @@ public class ContactImpl implements Contact {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.contact.Address getAddress() { 
+	public net.zyuiop.ovhapi.impl.objects.contact.AddressImpl getAddress() { 
 		return this.address;
 	} 
 
-	public void setAddress(net.zyuiop.ovhapi.api.objects.contact.Address address) { 
+	public void setAddress(net.zyuiop.ovhapi.impl.objects.contact.AddressImpl address) { 
 		this.address = address;
 	} 
 
-	public ContactImpl address(net.zyuiop.ovhapi.api.objects.contact.Address address) { 
+	public ContactImpl address(net.zyuiop.ovhapi.impl.objects.contact.AddressImpl address) { 
 		this.address = address;
 		return this;
 	} 

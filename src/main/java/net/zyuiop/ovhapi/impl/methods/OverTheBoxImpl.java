@@ -32,7 +32,7 @@ public class OverTheBoxImpl implements OverTheBox {
 
 
 	public java.lang.String getServiceNameRemoteAccesses(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/remoteAccesses";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/remoteAccesses";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -40,11 +40,11 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 
@@ -56,7 +56,7 @@ public class OverTheBoxImpl implements OverTheBox {
 
 
 	public java.lang.String getAvailableOffers() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/availableOffers";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/availableOffers";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -72,7 +72,7 @@ public class OverTheBoxImpl implements OverTheBox {
 
 
 	public java.lang.String getServiceNameAvailableReleaseChannels(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/availableReleaseChannels";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/availableReleaseChannels";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -80,7 +80,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public void postServiceNameRemoteAccessesRemoteAccessIdAuthorize(java.lang.String serviceName, java.lang.String remoteAccessId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/remoteAccesses/" + remoteAccessId + "/authorize";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/remoteAccesses/" + remoteAccessId + "/authorize";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -89,7 +89,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -107,7 +107,7 @@ public class OverTheBoxImpl implements OverTheBox {
 
 
 	public void deleteServiceNameRemoteAccessesRemoteAccessId(java.lang.String serviceName, java.lang.String remoteAccessId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/remoteAccesses/" + remoteAccessId + "";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/remoteAccesses/" + remoteAccessId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -116,7 +116,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public void deleteServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -125,7 +125,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public void postServiceNameLinkDevice(java.lang.String deviceId, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/linkDevice";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/linkDevice";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("deviceId", deviceId);
 		String __data = new Gson().toJson(__dataMap);
@@ -159,7 +159,7 @@ public class OverTheBoxImpl implements OverTheBox {
 
 
 	public java.lang.String getOverTheBox() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//overTheBox";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/overTheBox";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -167,7 +167,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public java.lang.String getServiceNameDeviceActions(java.lang.String serviceName, java.lang.String status, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/device/actions";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/device/actions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -175,7 +175,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public java.lang.String getServiceNameDeviceActions(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/device/actions";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/device/actions";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -183,7 +183,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public void postServiceNameCancelResiliation(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cancelResiliation";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/cancelResiliation";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -200,7 +200,7 @@ public class OverTheBoxImpl implements OverTheBox {
 
 
 	public java.lang.String getServiceNameTasks(java.lang.String serviceName, java.lang.String status, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/tasks";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -208,7 +208,7 @@ public class OverTheBoxImpl implements OverTheBox {
 	}
 
 	public java.lang.String getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/tasks";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);

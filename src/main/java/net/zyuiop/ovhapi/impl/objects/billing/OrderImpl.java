@@ -9,13 +9,13 @@ public class OrderImpl implements Order {
 
 	private java.lang.String pdfUrl;
 	private java.util.Date date;
-	private net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax;
-	private net.zyuiop.ovhapi.api.objects.order.Price tax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl tax;
 	private java.util.Date expirationDate;
 	private java.lang.String password;
 	private long orderId;
 	private java.lang.String url;
-	private net.zyuiop.ovhapi.api.objects.order.Price priceWithTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithTax;
 
 	public OrderImpl() {
 	}
@@ -46,28 +46,28 @@ public class OrderImpl implements Order {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPriceWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPriceWithoutTax() { 
 		return this.priceWithoutTax;
 	} 
 
-	public void setPriceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public void setPriceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 	} 
 
-	public OrderImpl priceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public OrderImpl priceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getTax() { 
 		return this.tax;
 	} 
 
-	public void setTax(net.zyuiop.ovhapi.api.objects.order.Price tax) { 
+	public void setTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl tax) { 
 		this.tax = tax;
 	} 
 
-	public OrderImpl tax(net.zyuiop.ovhapi.api.objects.order.Price tax) { 
+	public OrderImpl tax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl tax) { 
 		this.tax = tax;
 		return this;
 	} 
@@ -124,15 +124,15 @@ public class OrderImpl implements Order {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPriceWithTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPriceWithTax() { 
 		return this.priceWithTax;
 	} 
 
-	public void setPriceWithTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithTax) { 
+	public void setPriceWithTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithTax) { 
 		this.priceWithTax = priceWithTax;
 	} 
 
-	public OrderImpl priceWithTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithTax) { 
+	public OrderImpl priceWithTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithTax) { 
 		this.priceWithTax = priceWithTax;
 		return this;
 	} 

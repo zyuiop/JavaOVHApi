@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.forecast.ProjectForecast;
 public class ProjectForecastImpl implements ProjectForecast { 
 
 	private java.util.Date lastMetric;
-	private net.zyuiop.ovhapi.api.objects.order.Price projectForecast;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl projectForecast;
 
 	public ProjectForecastImpl() {
 	}
@@ -26,15 +26,15 @@ public class ProjectForecastImpl implements ProjectForecast {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getProjectForecast() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getProjectForecast() { 
 		return this.projectForecast;
 	} 
 
-	public void setProjectForecast(net.zyuiop.ovhapi.api.objects.order.Price projectForecast) { 
+	public void setProjectForecast(net.zyuiop.ovhapi.impl.objects.order.PriceImpl projectForecast) { 
 		this.projectForecast = projectForecast;
 	} 
 
-	public ProjectForecastImpl projectForecast(net.zyuiop.ovhapi.api.objects.order.Price projectForecast) { 
+	public ProjectForecastImpl projectForecast(net.zyuiop.ovhapi.impl.objects.order.PriceImpl projectForecast) { 
 		this.projectForecast = projectForecast;
 		return this;
 	} 

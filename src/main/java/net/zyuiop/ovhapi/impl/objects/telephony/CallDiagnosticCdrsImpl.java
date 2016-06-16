@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.telephony.CallDiagnosticCdrs;
 
 public class CallDiagnosticCdrsImpl implements CallDiagnosticCdrs { 
 
-	private net.zyuiop.ovhapi.api.objects.telephony.CallDiagnosticCdrsBasic basic;
+	private net.zyuiop.ovhapi.impl.objects.telephony.CallDiagnosticCdrsBasicImpl basic;
 	private java.util.Date timestamp;
 
 	public CallDiagnosticCdrsImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.telephony.CallDiagnosticCdrsBasic getBasic() { 
+	public net.zyuiop.ovhapi.impl.objects.telephony.CallDiagnosticCdrsBasicImpl getBasic() { 
 		return this.basic;
 	} 
 
-	public void setBasic(net.zyuiop.ovhapi.api.objects.telephony.CallDiagnosticCdrsBasic basic) { 
+	public void setBasic(net.zyuiop.ovhapi.impl.objects.telephony.CallDiagnosticCdrsBasicImpl basic) { 
 		this.basic = basic;
 	} 
 
-	public CallDiagnosticCdrsImpl basic(net.zyuiop.ovhapi.api.objects.telephony.CallDiagnosticCdrsBasic basic) { 
+	public CallDiagnosticCdrsImpl basic(net.zyuiop.ovhapi.impl.objects.telephony.CallDiagnosticCdrsBasicImpl basic) { 
 		this.basic = basic;
 		return this;
 	} 

@@ -10,9 +10,9 @@ public class ResourceNewPricesEntryImpl implements ResourceNewPricesEntry {
 	private java.lang.String resourceType;
 	private java.lang.String billingType;
 	private boolean changed;
-	private net.zyuiop.ovhapi.api.objects.order.Price oldPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl oldPrice;
 	private java.lang.String name;
-	private net.zyuiop.ovhapi.api.objects.order.Price newPrice;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl newPrice;
 
 	public ResourceNewPricesEntryImpl() {
 	}
@@ -56,15 +56,15 @@ public class ResourceNewPricesEntryImpl implements ResourceNewPricesEntry {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getOldPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getOldPrice() { 
 		return this.oldPrice;
 	} 
 
-	public void setOldPrice(net.zyuiop.ovhapi.api.objects.order.Price oldPrice) { 
+	public void setOldPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl oldPrice) { 
 		this.oldPrice = oldPrice;
 	} 
 
-	public ResourceNewPricesEntryImpl oldPrice(net.zyuiop.ovhapi.api.objects.order.Price oldPrice) { 
+	public ResourceNewPricesEntryImpl oldPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl oldPrice) { 
 		this.oldPrice = oldPrice;
 		return this;
 	} 
@@ -82,15 +82,15 @@ public class ResourceNewPricesEntryImpl implements ResourceNewPricesEntry {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getNewPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getNewPrice() { 
 		return this.newPrice;
 	} 
 
-	public void setNewPrice(net.zyuiop.ovhapi.api.objects.order.Price newPrice) { 
+	public void setNewPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl newPrice) { 
 		this.newPrice = newPrice;
 	} 
 
-	public ResourceNewPricesEntryImpl newPrice(net.zyuiop.ovhapi.api.objects.order.Price newPrice) { 
+	public ResourceNewPricesEntryImpl newPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl newPrice) { 
 		this.newPrice = newPrice;
 		return this;
 	} 

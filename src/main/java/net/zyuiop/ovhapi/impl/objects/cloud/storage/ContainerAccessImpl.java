@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerAccess;
 public class ContainerAccessImpl implements ContainerAccess { 
 
 	private java.lang.String token;
-	private net.zyuiop.ovhapi.api.objects.cloud.storage.Endpoint endpoints;
+	private net.zyuiop.ovhapi.impl.objects.cloud.storage.EndpointImpl endpoints;
 
 	public ContainerAccessImpl() {
 	}
@@ -26,15 +26,15 @@ public class ContainerAccessImpl implements ContainerAccess {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.storage.Endpoint getEndpoints() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.storage.EndpointImpl getEndpoints() { 
 		return this.endpoints;
 	} 
 
-	public void setEndpoints(net.zyuiop.ovhapi.api.objects.cloud.storage.Endpoint endpoints) { 
+	public void setEndpoints(net.zyuiop.ovhapi.impl.objects.cloud.storage.EndpointImpl endpoints) { 
 		this.endpoints = endpoints;
 	} 
 
-	public ContainerAccessImpl endpoints(net.zyuiop.ovhapi.api.objects.cloud.storage.Endpoint endpoints) { 
+	public ContainerAccessImpl endpoints(net.zyuiop.ovhapi.impl.objects.cloud.storage.EndpointImpl endpoints) { 
 		this.endpoints = endpoints;
 		return this;
 	} 

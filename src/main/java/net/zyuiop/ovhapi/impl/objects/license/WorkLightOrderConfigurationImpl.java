@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.WorkLightOrderConfiguration;
 public class WorkLightOrderConfigurationImpl implements WorkLightOrderConfiguration { 
 
 	private java.lang.String serviceType;
-	private net.zyuiop.ovhapi.api.objects.license.OrderableWorkLightCompatibilityInfos orderableVersions;
+	private net.zyuiop.ovhapi.impl.objects.license.OrderableWorkLightCompatibilityInfosImpl orderableVersions;
 
 	public WorkLightOrderConfigurationImpl() {
 	}
@@ -26,15 +26,15 @@ public class WorkLightOrderConfigurationImpl implements WorkLightOrderConfigurat
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.license.OrderableWorkLightCompatibilityInfos getOrderableVersions() { 
+	public net.zyuiop.ovhapi.impl.objects.license.OrderableWorkLightCompatibilityInfosImpl getOrderableVersions() { 
 		return this.orderableVersions;
 	} 
 
-	public void setOrderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableWorkLightCompatibilityInfos orderableVersions) { 
+	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableWorkLightCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 	} 
 
-	public WorkLightOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableWorkLightCompatibilityInfos orderableVersions) { 
+	public WorkLightOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableWorkLightCompatibilityInfosImpl orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 		return this;
 	} 

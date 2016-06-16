@@ -16,7 +16,7 @@ public class MondialRelayImpl implements MondialRelay {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn postSupplyMondialRelay(java.lang.String country, java.lang.String city, java.lang.String address, java.lang.String zipcode) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//supply/mondialRelay";
+		String __callUrl = "https://api.ovh.com/1.0/supply/mondialRelay/supply/mondialRelay";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("country", country);
 		__dataMap.put("city", city);
@@ -25,17 +25,17 @@ public class MondialRelayImpl implements MondialRelay {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.supply.MondialRelayReturnImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn postSupplyMondialRelay(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//supply/mondialRelay";
+		String __callUrl = "https://api.ovh.com/1.0/supply/mondialRelay/supply/mondialRelay";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("country", country);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.supply.MondialRelayReturn.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.supply.MondialRelayReturnImpl.class);
 	}
 
 }

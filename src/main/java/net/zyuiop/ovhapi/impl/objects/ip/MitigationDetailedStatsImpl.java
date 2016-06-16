@@ -7,28 +7,28 @@ import net.zyuiop.ovhapi.api.objects.ip.MitigationDetailedStats;
 
 public class MitigationDetailedStatsImpl implements MitigationDetailedStats { 
 
-	private net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic out;
+	private net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl out;
 	private long protocol;
 	private long srcPort;
 	private long destPort;
 	private long icmpType;
 	private long icmpCode;
-	private net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic in;
+	private net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl in;
 	private boolean syn;
 	private boolean fragments;
 
 	public MitigationDetailedStatsImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic getOut() { 
+	public net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl getOut() { 
 		return this.out;
 	} 
 
-	public void setOut(net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic out) { 
+	public void setOut(net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl out) { 
 		this.out = out;
 	} 
 
-	public MitigationDetailedStatsImpl out(net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic out) { 
+	public MitigationDetailedStatsImpl out(net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl out) { 
 		this.out = out;
 		return this;
 	} 
@@ -98,15 +98,15 @@ public class MitigationDetailedStatsImpl implements MitigationDetailedStats {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic getIn() { 
+	public net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl getIn() { 
 		return this.in;
 	} 
 
-	public void setIn(net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic in) { 
+	public void setIn(net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl in) { 
 		this.in = in;
 	} 
 
-	public MitigationDetailedStatsImpl in(net.zyuiop.ovhapi.api.objects.ip.MitigationTraffic in) { 
+	public MitigationDetailedStatsImpl in(net.zyuiop.ovhapi.impl.objects.ip.MitigationTrafficImpl in) { 
 		this.in = in;
 		return this;
 	} 

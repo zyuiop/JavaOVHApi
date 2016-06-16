@@ -16,28 +16,28 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.ResiliationFollowUpDetail postServiceNameResiliate(net.zyuiop.ovhapi.api.objects.xdsl.ResiliationSurvey resiliationSurvey, java.lang.String serviceName, java.util.Date resiliationDate) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/resiliate";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/resiliate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("resiliationSurvey", resiliationSurvey);
 		__dataMap.put("resiliationDate", resiliationDate);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.ResiliationFollowUpDetail.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.ResiliationFollowUpDetailImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.ResiliationFollowUpDetail postServiceNameResiliate(net.zyuiop.ovhapi.api.objects.xdsl.ResiliationSurvey resiliationSurvey, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/resiliate";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/resiliate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("resiliationSurvey", resiliationSurvey);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.ResiliationFollowUpDetail.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.ResiliationFollowUpDetailImpl.class);
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("contactAdmin", contactAdmin);
 		__dataMap.put("contactTech", contactTech);
@@ -49,7 +49,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeContact";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -58,7 +58,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public java.lang.String getServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddresses(java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -66,23 +66,23 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.ResiliationTerms getServiceNameResiliationTerms(java.lang.String serviceName, java.util.Date resiliationDate) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/resiliationTerms";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/resiliationTerms";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.ResiliationTerms.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.ResiliationTermsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.ResiliationTerms getServiceNameResiliationTerms(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/resiliationTerms";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/resiliationTerms";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.ResiliationTerms.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.ResiliationTermsImpl.class);
 	}
 
 	public java.lang.String getServiceNameModemLan(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -90,24 +90,24 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameModemRefreshConnectedDevices(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/refreshConnectedDevices";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/refreshConnectedDevices";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.ResiliationFollowUpDetail getServiceNameResiliationFollowup(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/resiliationFollowup";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/resiliationFollowup";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.ResiliationFollowUpDetail.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.ResiliationFollowUpDetailImpl.class);
 	}
 
 	public void putServiceNameMonitoringNotificationsId(net.zyuiop.ovhapi.api.objects.xdsl.MonitoringNotification param0, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/monitoringNotifications/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/monitoringNotifications/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -117,15 +117,15 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.PendingAction getServiceNamePendingAction(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/pendingAction";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/pendingAction";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.PendingAction.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.PendingActionImpl.class);
 	}
 
 	public java.lang.String getSpare() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -133,7 +133,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public void putSpareSpareServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/" + spare + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -143,23 +143,23 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Modem getServiceNameModem(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Modem.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.ModemImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnostic getServiceNameDiagnostic(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/diagnostic";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/diagnostic";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnostic.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.AccessDiagnosticImpl.class);
 	}
 
 	public void putServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddressesMACAddress(net.zyuiop.ovhapi.api.objects.xdsl.DHCPStaticAddress param0, java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName, java.lang.String MACAddress) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses/" + MACAddress + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses/" + MACAddress + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -169,15 +169,15 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.WLAN getServiceNameModemWifiWifiName(java.lang.String serviceName, java.lang.String wifiName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/wifi/" + wifiName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/wifi/" + wifiName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.WLAN.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.WLANImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DHCPStaticAddress postServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddresses(java.lang.String MACAddress, java.lang.String IPAddress, java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("MACAddress", MACAddress);
 		__dataMap.put("IPAddress", IPAddress);
@@ -185,30 +185,30 @@ public class XdslImpl implements Xdsl {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DHCPStaticAddress.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DHCPStaticAddressImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DHCPStaticAddress postServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddresses(java.lang.String MACAddress, java.lang.String IPAddress, java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("MACAddress", MACAddress);
 		__dataMap.put("IPAddress", IPAddress);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DHCPStaticAddress.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DHCPStaticAddressImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DslamPort getServiceNameLinesNumberDslamPort(java.lang.String serviceName, java.lang.String number) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/lines/" + number + "/dslamPort";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/lines/" + number + "/dslamPort";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DslamPort.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DslamPortImpl.class);
 	}
 
 	public void postSpareSpareReplace(java.lang.String domain, java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/replace";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/" + spare + "/replace";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("domain", domain);
 		String __data = new Gson().toJson(__dataMap);
@@ -218,15 +218,15 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.telephony.Rma getServiceNameRmaId(java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/rma/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/rma/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.telephony.Rma.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.telephony.RmaImpl.class);
 	}
 
 	public java.lang.String getXdsl() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//xdsl";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/xdsl";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -234,7 +234,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public long[] getServiceNameMonitoringNotifications(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/monitoringNotifications";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/monitoringNotifications";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -242,7 +242,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public java.lang.String getSpareBrands() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/brands";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/brands";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -258,7 +258,7 @@ public class XdslImpl implements Xdsl {
 
 
 	public void deleteSpareSpare(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/" + spare + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -267,15 +267,15 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile getServiceNameLinesNumberDslamPortAvailableProfiles(java.lang.String serviceName, java.lang.String number) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/lines/" + number + "/dslamPort/availableProfiles";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/lines/" + number + "/dslamPort/availableProfiles";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DslamLineProfileImpl.class);
 	}
 
 	public void putServiceNameModemPortMappingsName(net.zyuiop.ovhapi.api.objects.xdsl.PortMapping param0, java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/portMappings/" + name + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/portMappings/" + name + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -285,32 +285,32 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.IP getServiceNameIpsIp(java.lang.String serviceName, java.lang.String ip) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ips/" + ip + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/ips/" + ip + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.IP.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.IPImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Lns getServiceNameAvailableLns(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/availableLns";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/availableLns";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Lns.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.LnsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameAddressMoveExtraIpRangeMove(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/addressMove/extraIpRangeMove";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/addressMove/extraIpRangeMove";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public boolean getServiceNameCanCancelResiliation(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/canCancelResiliation";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/canCancelResiliation";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -318,7 +318,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public java.lang.String getServiceNameModemPortMappings(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/portMappings";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/portMappings";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -326,15 +326,15 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Incident getIncidentsId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/incidents/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/incidents/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.api.objects.xdsl.Incident.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.impl.objects.xdsl.IncidentImpl.class);
 	}
 
 	public java.lang.String getServiceNameLines(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/lines";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/lines";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -350,54 +350,54 @@ public class XdslImpl implements Xdsl {
 
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameLinesNumberDslamPortChangeProfile(long dslamProfileId, java.lang.String serviceName, java.lang.String number) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/lines/" + number + "/dslamPort/changeProfile";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/lines/" + number + "/dslamPort/changeProfile";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("dslamProfileId", dslamProfileId);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameModemReset(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/reset";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/reset";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameChangeLns(java.lang.String lnsName, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/changeLns";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/changeLns";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("lnsName", lnsName);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Access getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Access.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.AccessImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameIpv6(boolean enabled, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ipv6";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/ipv6";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("enabled", enabled);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public java.lang.String getServiceNameModemWifi(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/wifi";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/wifi";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -405,7 +405,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/tasks";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -413,7 +413,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public long[] getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/tasks";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -421,7 +421,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public long[] getIncidents(java.util.Date creationDate, java.util.Date endDate) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/incidents";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/incidents";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -429,7 +429,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public long[] getIncidents() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/incidents";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/incidents";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -437,7 +437,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public void putServiceName(net.zyuiop.ovhapi.api.objects.xdsl.Access param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -447,7 +447,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public void putServiceNameModemLanLanName(net.zyuiop.ovhapi.api.objects.xdsl.LAN param0, java.lang.String serviceName, java.lang.String lanName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -457,35 +457,35 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameLinesNumberDslamPortReset(java.lang.String serviceName, java.lang.String number) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/lines/" + number + "/dslamPort/reset";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/lines/" + number + "/dslamPort/reset";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameRequestTotalDeconsolidation(java.lang.String serviceName, java.lang.String rio) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/requestTotalDeconsolidation";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/requestTotalDeconsolidation";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("rio", rio);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameRequestTotalDeconsolidation(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/requestTotalDeconsolidation";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/requestTotalDeconsolidation";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public void putServiceNameModemLanLanNameDhcpDhcpName(net.zyuiop.ovhapi.api.objects.xdsl.DHCP param0, java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -495,24 +495,24 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DslamPortLog getServiceNameLinesNumberDslamPortLogs(long limit, java.lang.String serviceName, java.lang.String number) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/lines/" + number + "/dslamPort/logs";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/lines/" + number + "/dslamPort/logs";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DslamPortLog.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DslamPortLogImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameDiagnostic(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/diagnostic";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/diagnostic";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public java.lang.String getServiceNameRma(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/rma";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/rma";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -520,7 +520,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public java.lang.String getServiceNameModemLanLanNameDhcp(java.lang.String serviceName, java.lang.String lanName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -528,15 +528,15 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.MonitoringNotification getServiceNameMonitoringNotificationsId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/monitoringNotifications/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/monitoringNotifications/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.MonitoringNotification.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.MonitoringNotificationImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.MonitoringNotification postServiceNameMonitoringNotifications(java.lang.String frequency, java.lang.String type, java.lang.String serviceName, java.lang.String smsAccount, java.lang.String email, long downThreshold, boolean allowIncident, java.lang.String phone) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/monitoringNotifications";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/monitoringNotifications";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("frequency", frequency);
 		__dataMap.put("type", type);
@@ -548,46 +548,46 @@ public class XdslImpl implements Xdsl {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.MonitoringNotification.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.MonitoringNotificationImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.MonitoringNotification postServiceNameMonitoringNotifications(java.lang.String frequency, java.lang.String type, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/monitoringNotifications";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/monitoringNotifications";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("frequency", frequency);
 		__dataMap.put("type", type);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.MonitoringNotification.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.MonitoringNotificationImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DeconsolidationTerms getServiceNameTotalDeconsolidationTerms(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/totalDeconsolidationTerms";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/totalDeconsolidationTerms";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DeconsolidationTerms.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DeconsolidationTermsImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City getEligibilityCities(java.lang.String zipCode) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/eligibility/cities";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/eligibility/cities";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.CityImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DHCPStaticAddress getServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddressesMACAddress(java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName, java.lang.String MACAddress) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses/" + MACAddress + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses/" + MACAddress + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DHCPStaticAddress.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DHCPStaticAddressImpl.class);
 	}
 
 	public void postServiceNameTasksIdArchive(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks/" + id + "/archive";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/tasks/" + id + "/archive";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -596,7 +596,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public void putServiceNameRmaId(net.zyuiop.ovhapi.api.objects.telephony.Rma param0, java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/rma/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/rma/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -606,7 +606,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public java.lang.String getSpareSpareCompatibleReplacement(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/compatibleReplacement";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/" + spare + "/compatibleReplacement";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -614,23 +614,23 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.DHCP getServiceNameModemLanLanNameDhcpDhcpName(java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.DHCP.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.DHCPImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.spare.xdsl.XdslSpare getSpareSpare(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/" + spare + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.spare.xdsl.XdslSpare.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.spare.xdsl.XdslSpareImpl.class);
 	}
 
 	public void postServiceNameRequestPPPLoginMail(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/requestPPPLoginMail";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/requestPPPLoginMail";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -639,7 +639,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/serviceInfos";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -649,20 +649,20 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameModemReboot(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/reboot";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/reboot";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.PortMapping getServiceNameModemPortMappingsName(java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/portMappings/" + name + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/portMappings/" + name + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.PortMapping.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.PortMappingImpl.class);
 	}
 
 
@@ -674,7 +674,7 @@ public class XdslImpl implements Xdsl {
 
 
 	public java.lang.String getServiceNameIps(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ips";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/ips";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -682,27 +682,27 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task getServiceNameTasksId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/tasks/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/tasks/" + id + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Incident getServiceNameIncident(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/incident";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/incident";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Incident.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.IncidentImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getSpareSpareServiceInfos(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/" + spare + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 
@@ -714,15 +714,15 @@ public class XdslImpl implements Xdsl {
 
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.ConnectedDevice getServiceNameModemConnectedDevicesMacAddress(java.lang.String serviceName, java.lang.String macAddress) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/connectedDevices/" + macAddress + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/connectedDevices/" + macAddress + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.ConnectedDevice.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.ConnectedDeviceImpl.class);
 	}
 
 	public void deleteServiceNameIpsIp(java.lang.String serviceName, java.lang.String ip) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ips/" + ip + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/ips/" + ip + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -731,24 +731,24 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Line getServiceNameLinesNumber(java.lang.String serviceName, java.lang.String number) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/lines/" + number + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/lines/" + number + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Line.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.LineImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task deleteServiceNameModemPortMappingsName(java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/portMappings/" + name + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/portMappings/" + name + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public void postSpareSpareReturnMerchandise(java.lang.String spare) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/spare/" + spare + "/returnMerchandise";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/spare/" + spare + "/returnMerchandise";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -757,23 +757,23 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/serviceInfos";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/serviceInfos";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.RadiusConnectionLog getServiceNameRadiusConnectionLogs(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/radiusConnectionLogs";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/radiusConnectionLogs";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.RadiusConnectionLog.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.RadiusConnectionLogImpl.class);
 	}
 
 	public void putServiceNameModemWifiWifiName(net.zyuiop.ovhapi.api.objects.xdsl.WLAN param0, java.lang.String serviceName, java.lang.String wifiName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/wifi/" + wifiName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/wifi/" + wifiName + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -783,16 +783,16 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task postServiceNameIps(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/ips";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/ips";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public java.lang.String getServiceNameModemConnectedDevices(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/connectedDevices";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/connectedDevices";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -800,7 +800,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public void postServiceNameCancelResiliation(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/cancelResiliation";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/cancelResiliation";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -809,24 +809,24 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street getEligibilityStreets(java.lang.String partialName, java.lang.String inseeCode) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/eligibility/streets";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/eligibility/streets";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.StreetImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.Task deleteServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddressesMACAddress(java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName, java.lang.String MACAddress) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses/" + MACAddress + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "/dhcp/" + dhcpName + "/DHCPStaticAddresses/" + MACAddress + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.Task.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.TaskImpl.class);
 	}
 
 	public void deleteServiceNameMonitoringNotificationsId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/monitoringNotifications/" + id + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/monitoringNotifications/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
@@ -835,7 +835,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public void putServiceNameModem(net.zyuiop.ovhapi.api.objects.xdsl.Modem param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("null", null);
 		String __data = new Gson().toJson(__dataMap);
@@ -845,7 +845,7 @@ public class XdslImpl implements Xdsl {
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.PortMapping postServiceNameModemPortMappings(java.lang.String protocol, java.lang.String name, long externalPortStart, java.lang.String internalClient, long internalPort, java.lang.String serviceName, java.lang.String description, long externalPortEnd, java.lang.String allowedRemoteIp) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/portMappings";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/portMappings";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("protocol", protocol);
 		__dataMap.put("name", name);
@@ -858,11 +858,11 @@ public class XdslImpl implements Xdsl {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.PortMapping.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.PortMappingImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.PortMapping postServiceNameModemPortMappings(java.lang.String protocol, java.lang.String name, long externalPortStart, java.lang.String internalClient, long internalPort, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/portMappings";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/portMappings";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("protocol", protocol);
 		__dataMap.put("name", name);
@@ -872,15 +872,15 @@ public class XdslImpl implements Xdsl {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.PortMapping.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.PortMappingImpl.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.xdsl.LAN getServiceNameModemLanLanName(java.lang.String serviceName, java.lang.String lanName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + serviceName + "/modem/lan/" + lanName + "";
+		String __callUrl = "https://api.ovh.com/1.0/xdsl/" + serviceName + "/modem/lan/" + lanName + "";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.xdsl.LAN.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.xdsl.LANImpl.class);
 	}
 
 }

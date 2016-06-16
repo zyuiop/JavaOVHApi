@@ -32,7 +32,7 @@ public class InstallationTemplateImpl implements InstallationTemplate {
 
 
 	public java.lang.String getTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + templateName + "/partitionScheme/" + schemeName + "/partition";
+		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/partition";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -40,7 +40,7 @@ public class InstallationTemplateImpl implements InstallationTemplate {
 	}
 
 	public java.lang.String getTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
+		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -64,7 +64,7 @@ public class InstallationTemplateImpl implements InstallationTemplate {
 
 
 	public java.lang.String getTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/" + templateName + "/partitionScheme";
+		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/" + templateName + "/partitionScheme";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
@@ -72,7 +72,7 @@ public class InstallationTemplateImpl implements InstallationTemplate {
 	}
 
 	public java.lang.String getDedicatedInstallationTemplate() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0//dedicated/installationTemplate";
+		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/dedicated/installationTemplate";
 		String __data = "?";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);

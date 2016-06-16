@@ -7,36 +7,36 @@ import net.zyuiop.ovhapi.api.objects.cloud.quota.Quotas;
 
 public class QuotasImpl implements Quotas { 
 
-	private net.zyuiop.ovhapi.api.objects.cloud.quota.KeypairQuotas keypair;
-	private net.zyuiop.ovhapi.api.objects.cloud.quota.VolumeQuotas volume;
+	private net.zyuiop.ovhapi.impl.objects.cloud.quota.KeypairQuotasImpl keypair;
+	private net.zyuiop.ovhapi.impl.objects.cloud.quota.VolumeQuotasImpl volume;
 	private java.lang.String region;
-	private net.zyuiop.ovhapi.api.objects.cloud.quota.InstanceQuotas instance;
+	private net.zyuiop.ovhapi.impl.objects.cloud.quota.InstanceQuotasImpl instance;
 
 	public QuotasImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.quota.KeypairQuotas getKeypair() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.quota.KeypairQuotasImpl getKeypair() { 
 		return this.keypair;
 	} 
 
-	public void setKeypair(net.zyuiop.ovhapi.api.objects.cloud.quota.KeypairQuotas keypair) { 
+	public void setKeypair(net.zyuiop.ovhapi.impl.objects.cloud.quota.KeypairQuotasImpl keypair) { 
 		this.keypair = keypair;
 	} 
 
-	public QuotasImpl keypair(net.zyuiop.ovhapi.api.objects.cloud.quota.KeypairQuotas keypair) { 
+	public QuotasImpl keypair(net.zyuiop.ovhapi.impl.objects.cloud.quota.KeypairQuotasImpl keypair) { 
 		this.keypair = keypair;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.quota.VolumeQuotas getVolume() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.quota.VolumeQuotasImpl getVolume() { 
 		return this.volume;
 	} 
 
-	public void setVolume(net.zyuiop.ovhapi.api.objects.cloud.quota.VolumeQuotas volume) { 
+	public void setVolume(net.zyuiop.ovhapi.impl.objects.cloud.quota.VolumeQuotasImpl volume) { 
 		this.volume = volume;
 	} 
 
-	public QuotasImpl volume(net.zyuiop.ovhapi.api.objects.cloud.quota.VolumeQuotas volume) { 
+	public QuotasImpl volume(net.zyuiop.ovhapi.impl.objects.cloud.quota.VolumeQuotasImpl volume) { 
 		this.volume = volume;
 		return this;
 	} 
@@ -54,15 +54,15 @@ public class QuotasImpl implements Quotas {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.cloud.quota.InstanceQuotas getInstance() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.quota.InstanceQuotasImpl getInstance() { 
 		return this.instance;
 	} 
 
-	public void setInstance(net.zyuiop.ovhapi.api.objects.cloud.quota.InstanceQuotas instance) { 
+	public void setInstance(net.zyuiop.ovhapi.impl.objects.cloud.quota.InstanceQuotasImpl instance) { 
 		this.instance = instance;
 	} 
 
-	public QuotasImpl instance(net.zyuiop.ovhapi.api.objects.cloud.quota.InstanceQuotas instance) { 
+	public QuotasImpl instance(net.zyuiop.ovhapi.impl.objects.cloud.quota.InstanceQuotasImpl instance) { 
 		this.instance = instance;
 		return this;
 	} 

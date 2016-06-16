@@ -10,7 +10,7 @@ public class FaxConsumptionImpl implements FaxConsumption {
 	private java.lang.String calling;
 	private long consumptionId;
 	private java.util.Date creationDatetime;
-	private net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax;
 	private java.lang.String wayType;
 	private java.lang.String called;
 	private long pages;
@@ -57,15 +57,15 @@ public class FaxConsumptionImpl implements FaxConsumption {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPriceWithoutTax() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPriceWithoutTax() { 
 		return this.priceWithoutTax;
 	} 
 
-	public void setPriceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public void setPriceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 	} 
 
-	public FaxConsumptionImpl priceWithoutTax(net.zyuiop.ovhapi.api.objects.order.Price priceWithoutTax) { 
+	public FaxConsumptionImpl priceWithoutTax(net.zyuiop.ovhapi.impl.objects.order.PriceImpl priceWithoutTax) { 
 		this.priceWithoutTax = priceWithoutTax;
 		return this;
 	} 

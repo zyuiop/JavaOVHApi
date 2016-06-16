@@ -16,7 +16,7 @@ public class TimeseriesPricingImpl implements TimeseriesPricing {
 	private long maximumQuantity;
 	private long maximumRepeat;
 	private long minimumQuantity;
-	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
 
 	public TimeseriesPricingImpl() {
 	}
@@ -138,15 +138,15 @@ public class TimeseriesPricingImpl implements TimeseriesPricing {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getPrice() { 
 		return this.price;
 	} 
 
-	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public void setPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 	} 
 
-	public TimeseriesPricingImpl price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+	public TimeseriesPricingImpl price(net.zyuiop.ovhapi.impl.objects.order.PriceImpl price) { 
 		this.price = price;
 		return this;
 	} 

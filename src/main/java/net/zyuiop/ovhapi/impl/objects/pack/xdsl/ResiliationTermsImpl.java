@@ -9,7 +9,7 @@ public class ResiliationTermsImpl implements ResiliationTerms {
 
 	private java.lang.String resiliationReasons;
 	private java.util.Date minResiliationDate;
-	private net.zyuiop.ovhapi.api.objects.order.Price due;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl due;
 	private java.util.Date resiliationDate;
 	private java.util.Date engageDate;
 
@@ -42,15 +42,15 @@ public class ResiliationTermsImpl implements ResiliationTerms {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getDue() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getDue() { 
 		return this.due;
 	} 
 
-	public void setDue(net.zyuiop.ovhapi.api.objects.order.Price due) { 
+	public void setDue(net.zyuiop.ovhapi.impl.objects.order.PriceImpl due) { 
 		this.due = due;
 	} 
 
-	public ResiliationTermsImpl due(net.zyuiop.ovhapi.api.objects.order.Price due) { 
+	public ResiliationTermsImpl due(net.zyuiop.ovhapi.impl.objects.order.PriceImpl due) { 
 		this.due = due;
 		return this;
 	} 

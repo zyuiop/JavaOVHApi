@@ -17,7 +17,7 @@ public class NichandleImpl implements Nichandle {
 	private java.lang.String ovhCompany;
 	private java.lang.String state;
 	private java.lang.String email;
-	private net.zyuiop.ovhapi.api.objects.nichandle.Currency currency;
+	private net.zyuiop.ovhapi.impl.objects.nichandle.CurrencyImpl currency;
 	private java.lang.String city;
 	private java.lang.String fax;
 	private java.lang.String nichandle;
@@ -167,15 +167,15 @@ public class NichandleImpl implements Nichandle {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.nichandle.Currency getCurrency() { 
+	public net.zyuiop.ovhapi.impl.objects.nichandle.CurrencyImpl getCurrency() { 
 		return this.currency;
 	} 
 
-	public void setCurrency(net.zyuiop.ovhapi.api.objects.nichandle.Currency currency) { 
+	public void setCurrency(net.zyuiop.ovhapi.impl.objects.nichandle.CurrencyImpl currency) { 
 		this.currency = currency;
 	} 
 
-	public NichandleImpl currency(net.zyuiop.ovhapi.api.objects.nichandle.Currency currency) { 
+	public NichandleImpl currency(net.zyuiop.ovhapi.impl.objects.nichandle.CurrencyImpl currency) { 
 		this.currency = currency;
 		return this;
 	} 

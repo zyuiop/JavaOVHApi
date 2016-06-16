@@ -7,22 +7,22 @@ import net.zyuiop.ovhapi.api.objects.cloud.identity.TokenProject;
 
 public class TokenProjectImpl implements TokenProject { 
 
-	private net.zyuiop.ovhapi.api.objects.cloud.identity.Domain domain;
+	private net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl domain;
 	private java.lang.String name;
 	private java.lang.String id;
 
 	public TokenProjectImpl() {
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.identity.Domain getDomain() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl getDomain() { 
 		return this.domain;
 	} 
 
-	public void setDomain(net.zyuiop.ovhapi.api.objects.cloud.identity.Domain domain) { 
+	public void setDomain(net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl domain) { 
 		this.domain = domain;
 	} 
 
-	public TokenProjectImpl domain(net.zyuiop.ovhapi.api.objects.cloud.identity.Domain domain) { 
+	public TokenProjectImpl domain(net.zyuiop.ovhapi.impl.objects.cloud.identity.DomainImpl domain) { 
 		this.domain = domain;
 		return this;
 	} 

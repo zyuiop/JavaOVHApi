@@ -8,8 +8,8 @@ import net.zyuiop.ovhapi.api.objects.pack.xdsl.PackAdsl;
 public class PackAdslImpl implements PackAdsl { 
 
 	private java.lang.String packName;
-	private net.zyuiop.ovhapi.api.objects.pack.xdsl.PackCapabilities capabilities;
-	private net.zyuiop.ovhapi.api.objects.order.Price offerPrice;
+	private net.zyuiop.ovhapi.impl.objects.pack.xdsl.PackCapabilitiesImpl capabilities;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl offerPrice;
 	private java.lang.String description;
 	private java.lang.String offerDescription;
 
@@ -29,28 +29,28 @@ public class PackAdslImpl implements PackAdsl {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.pack.xdsl.PackCapabilities getCapabilities() { 
+	public net.zyuiop.ovhapi.impl.objects.pack.xdsl.PackCapabilitiesImpl getCapabilities() { 
 		return this.capabilities;
 	} 
 
-	public void setCapabilities(net.zyuiop.ovhapi.api.objects.pack.xdsl.PackCapabilities capabilities) { 
+	public void setCapabilities(net.zyuiop.ovhapi.impl.objects.pack.xdsl.PackCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 	} 
 
-	public PackAdslImpl capabilities(net.zyuiop.ovhapi.api.objects.pack.xdsl.PackCapabilities capabilities) { 
+	public PackAdslImpl capabilities(net.zyuiop.ovhapi.impl.objects.pack.xdsl.PackCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getOfferPrice() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getOfferPrice() { 
 		return this.offerPrice;
 	} 
 
-	public void setOfferPrice(net.zyuiop.ovhapi.api.objects.order.Price offerPrice) { 
+	public void setOfferPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl offerPrice) { 
 		this.offerPrice = offerPrice;
 	} 
 
-	public PackAdslImpl offerPrice(net.zyuiop.ovhapi.api.objects.order.Price offerPrice) { 
+	public PackAdslImpl offerPrice(net.zyuiop.ovhapi.impl.objects.order.PriceImpl offerPrice) { 
 		this.offerPrice = offerPrice;
 		return this;
 	} 

@@ -10,7 +10,7 @@ public class StatementOutcomeImpl implements StatementOutcome {
 	private java.lang.String country;
 	private java.lang.String pdfUrl;
 	private java.util.Date date;
-	private net.zyuiop.ovhapi.api.objects.order.Price amount;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount;
 	private java.lang.String password;
 	private long orderId;
 	private java.lang.String url;
@@ -58,15 +58,15 @@ public class StatementOutcomeImpl implements StatementOutcome {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getAmount() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getAmount() { 
 		return this.amount;
 	} 
 
-	public void setAmount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public void setAmount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 	} 
 
-	public StatementOutcomeImpl amount(net.zyuiop.ovhapi.api.objects.order.Price amount) { 
+	public StatementOutcomeImpl amount(net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount) { 
 		this.amount = amount;
 		return this;
 	} 

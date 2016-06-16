@@ -11,10 +11,10 @@ public class AccessDiagnosticImpl implements AccessDiagnostic {
 	private boolean incident;
 	private long remaining;
 	private boolean ping;
-	private net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities capabilities;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.AccessDiagnosticCapabilitiesImpl capabilities;
 	private boolean isModemConnected;
 	private java.util.Date diagnosticTime;
-	private net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic lineDetails;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl lineDetails;
 
 	public AccessDiagnosticImpl() {
 	}
@@ -71,15 +71,15 @@ public class AccessDiagnosticImpl implements AccessDiagnostic {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities getCapabilities() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.AccessDiagnosticCapabilitiesImpl getCapabilities() { 
 		return this.capabilities;
 	} 
 
-	public void setCapabilities(net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities capabilities) { 
+	public void setCapabilities(net.zyuiop.ovhapi.impl.objects.xdsl.AccessDiagnosticCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 	} 
 
-	public AccessDiagnosticImpl capabilities(net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities capabilities) { 
+	public AccessDiagnosticImpl capabilities(net.zyuiop.ovhapi.impl.objects.xdsl.AccessDiagnosticCapabilitiesImpl capabilities) { 
 		this.capabilities = capabilities;
 		return this;
 	} 
@@ -110,15 +110,15 @@ public class AccessDiagnosticImpl implements AccessDiagnostic {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic getLineDetails() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl getLineDetails() { 
 		return this.lineDetails;
 	} 
 
-	public void setLineDetails(net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic lineDetails) { 
+	public void setLineDetails(net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl lineDetails) { 
 		this.lineDetails = lineDetails;
 	} 
 
-	public AccessDiagnosticImpl lineDetails(net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic lineDetails) { 
+	public AccessDiagnosticImpl lineDetails(net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl lineDetails) { 
 		this.lineDetails = lineDetails;
 		return this;
 	} 

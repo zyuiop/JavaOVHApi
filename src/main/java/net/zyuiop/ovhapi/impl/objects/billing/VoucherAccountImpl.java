@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.billing.VoucherAccount;
 public class VoucherAccountImpl implements VoucherAccount { 
 
 	private java.lang.String voucherAccountId;
-	private net.zyuiop.ovhapi.api.objects.order.Price balance;
+	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance;
 	private java.util.Date lastUpdate;
 	private java.util.Date openDate;
 
@@ -28,15 +28,15 @@ public class VoucherAccountImpl implements VoucherAccount {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.order.Price getBalance() { 
+	public net.zyuiop.ovhapi.impl.objects.order.PriceImpl getBalance() { 
 		return this.balance;
 	} 
 
-	public void setBalance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+	public void setBalance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance) { 
 		this.balance = balance;
 	} 
 
-	public VoucherAccountImpl balance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+	public VoucherAccountImpl balance(net.zyuiop.ovhapi.impl.objects.order.PriceImpl balance) { 
 		this.balance = balance;
 		return this;
 	} 

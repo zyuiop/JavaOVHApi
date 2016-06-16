@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.office.Statistics;
 public class StatisticsImpl implements Statistics { 
 
 	private java.util.Date date;
-	private net.zyuiop.ovhapi.api.objects.license.office.StatisticsLine lines;
+	private net.zyuiop.ovhapi.impl.objects.license.office.StatisticsLineImpl lines;
 
 	public StatisticsImpl() {
 	}
@@ -26,15 +26,15 @@ public class StatisticsImpl implements Statistics {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.license.office.StatisticsLine getLines() { 
+	public net.zyuiop.ovhapi.impl.objects.license.office.StatisticsLineImpl getLines() { 
 		return this.lines;
 	} 
 
-	public void setLines(net.zyuiop.ovhapi.api.objects.license.office.StatisticsLine lines) { 
+	public void setLines(net.zyuiop.ovhapi.impl.objects.license.office.StatisticsLineImpl lines) { 
 		this.lines = lines;
 	} 
 
-	public StatisticsImpl lines(net.zyuiop.ovhapi.api.objects.license.office.StatisticsLine lines) { 
+	public StatisticsImpl lines(net.zyuiop.ovhapi.impl.objects.license.office.StatisticsLineImpl lines) { 
 		this.lines = lines;
 		return this;
 	} 

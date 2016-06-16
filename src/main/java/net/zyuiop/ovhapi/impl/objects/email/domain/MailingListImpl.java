@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.email.domain.MailingList;
 public class MailingListImpl implements MailingList { 
 
 	private java.lang.String language;
-	private net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct options;
+	private net.zyuiop.ovhapi.impl.objects.domain.DomainMlOptionsStructImpl options;
 	private java.lang.String name;
 	private java.lang.String ownerEmail;
 	private java.lang.String replyTo;
@@ -32,15 +32,15 @@ public class MailingListImpl implements MailingList {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct getOptions() { 
+	public net.zyuiop.ovhapi.impl.objects.domain.DomainMlOptionsStructImpl getOptions() { 
 		return this.options;
 	} 
 
-	public void setOptions(net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct options) { 
+	public void setOptions(net.zyuiop.ovhapi.impl.objects.domain.DomainMlOptionsStructImpl options) { 
 		this.options = options;
 	} 
 
-	public MailingListImpl options(net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct options) { 
+	public MailingListImpl options(net.zyuiop.ovhapi.impl.objects.domain.DomainMlOptionsStructImpl options) { 
 		this.options = options;
 		return this;
 	} 
