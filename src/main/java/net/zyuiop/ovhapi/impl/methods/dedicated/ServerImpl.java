@@ -34,17 +34,21 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/backupFTP/access";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public long[] getServiceNameSpla(java.lang.String serviceName, java.lang.String status, java.lang.String type) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/spla";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "status=" + status;
+		__data += "type=" + type;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -53,6 +57,7 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameSpla(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/spla";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -68,17 +73,19 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameVrack(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameVrack(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/vrack";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Kvm getServiceNameFeaturesKvm(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/kvm";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.KvmImpl.class);
@@ -87,6 +94,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Intervention getServiceNameInterventionInterventionId(java.lang.String serviceName, long interventionId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/intervention/" + interventionId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "interventionId=" + interventionId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.InterventionImpl.class);
@@ -120,6 +129,8 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameServiceMonitoringMonitoringIdAlertEmail(java.lang.String serviceName, long monitoringId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "/alert/email";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "monitoringId=" + monitoringId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -128,6 +139,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmDiskSmart getServiceNameStatisticsDiskDiskSmart(java.lang.String serviceName, java.lang.String disk) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/disk/" + disk + "/smart";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "disk=" + disk;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmDiskSmartImpl.class);
@@ -136,6 +149,7 @@ public class ServerImpl implements Server {
 	public boolean getServiceNameOrderableProfessionalUse(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/professionalUse";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), boolean.class);
@@ -153,6 +167,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceInfos";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
@@ -161,6 +176,9 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.VirtualMacManagement getServiceNameVirtualMacMacAddressVirtualAddressIpAddress(java.lang.String serviceName, java.lang.String macAddress, java.lang.String ipAddress) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/virtualMac/" + macAddress + "/virtualAddress/" + ipAddress + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "macAddress=" + macAddress;
+		__data += "ipAddress=" + ipAddress;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.VirtualMacManagementImpl.class);
@@ -178,6 +196,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Ipmi getServiceNameFeaturesIpmi(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/ipmi";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.IpmiImpl.class);
@@ -186,6 +205,7 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameIntervention(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/intervention";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -194,6 +214,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.VirtualMac getServiceNameVirtualMacMacAddress(java.lang.String serviceName, java.lang.String macAddress) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/virtualMac/" + macAddress + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "macAddress=" + macAddress;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.VirtualMacImpl.class);
@@ -211,22 +233,27 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl getServiceNameFeaturesBackupFTPAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "ipBlock=" + ipBlock;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.BackupFtpAclImpl.class);
 	}
 
-	public java.lang.String getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/backupFTP/authorizableBlocks";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task getServiceNameTaskTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/task/" + taskId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "taskId=" + taskId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
@@ -243,6 +270,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Netboot getServiceNameBootBootId(java.lang.String serviceName, long bootId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/boot/" + bootId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "bootId=" + bootId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.NetbootImpl.class);
@@ -251,6 +280,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.InstallTemplate getServiceNameInstallCompatibleTemplates(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/install/compatibleTemplates";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.InstallTemplateImpl.class);
@@ -277,6 +307,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.ServiceMonitoring getServiceNameServiceMonitoringMonitoringId(java.lang.String serviceName, long monitoringId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "monitoringId=" + monitoringId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.ServiceMonitoringImpl.class);
@@ -311,6 +343,7 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameServiceMonitoring(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -319,6 +352,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmOs getServiceNameStatisticsOs(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/os";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmOsImpl.class);
@@ -327,6 +361,9 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/task";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "function=" + function;
+		__data += "status=" + status;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -335,17 +372,19 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/task";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String getServiceNameLicenseCompliantWindows(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameLicenseCompliantWindows(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/license/compliantWindows";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -356,25 +395,29 @@ public class ServerImpl implements Server {
 	*/
 
 
-	public java.lang.String getServiceNameStatisticsDisk(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameStatisticsDisk(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/disk";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNameIps(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameIps(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/ips";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.IpmiAccessValue getServiceNameFeaturesIpmiAccess(java.lang.String type, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/ipmi/access";
 		String __data = "?";
+		__data += "type=" + type;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.IpmiAccessValueImpl.class);
@@ -383,17 +426,21 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameServiceMonitoringMonitoringIdAlertSms(java.lang.String serviceName, long monitoringId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "/alert/sms";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "monitoringId=" + monitoringId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String getServiceNameVirtualMacMacAddressVirtualAddress(java.lang.String serviceName, java.lang.String macAddress) throws java.io.IOException {
+	public java.lang.String[] getServiceNameVirtualMacMacAddressVirtualAddress(java.lang.String serviceName, java.lang.String macAddress) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/virtualMac/" + macAddress + "/virtualAddress";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "macAddress=" + macAddress;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -404,27 +451,28 @@ public class ServerImpl implements Server {
 	*/
 
 
-	public java.lang.String getServiceNameStatisticsRaidUnitVolume(java.lang.String serviceName, java.lang.String unit) throws java.io.IOException {
+	public java.lang.String[] getServiceNameStatisticsRaidUnitVolume(java.lang.String serviceName, java.lang.String unit) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/raid/" + unit + "/volume";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "unit=" + unit;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNameLicenseCompliantWindowsSqlServer(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameLicenseCompliantWindowsSqlServer(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/license/compliantWindowsSqlServer";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void putServiceNameServiceMonitoringMonitoringIdAlertEmailAlertId(net.zyuiop.ovhapi.api.objects.dedicated.server.EmailAlert param0, java.lang.String serviceName, long monitoringId, long alertId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "/alert/email/" + alertId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -471,12 +519,14 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameBootBootIdOption(java.lang.String serviceName, long bootId) throws java.io.IOException {
+	public java.lang.String[] getServiceNameBootBootIdOption(java.lang.String serviceName, long bootId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/boot/" + bootId + "/option";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "bootId=" + bootId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
@@ -491,6 +541,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.IpOrderable getServiceNameOrderableIp(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/ip";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.IpOrderableImpl.class);
@@ -499,6 +550,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Option getServiceNameOptionOption(java.lang.String serviceName, java.lang.String option) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/option/" + option + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "option=" + option;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.OptionImpl.class);
@@ -506,9 +559,7 @@ public class ServerImpl implements Server {
 
 	public void putServiceNameServiceMonitoringMonitoringId(net.zyuiop.ovhapi.api.objects.dedicated.server.ServiceMonitoring param0, java.lang.String serviceName, long monitoringId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -517,6 +568,8 @@ public class ServerImpl implements Server {
 	public void getServiceNameIpCanBeMovedTo(java.lang.String ip, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/ipCanBeMovedTo";
 		String __data = "?";
+		__data += "ip=" + ip;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -525,6 +578,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.UsbKeyOrderableDetails getServiceNameOrderableUsbKey(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/usbKey";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.UsbKeyOrderableDetailsImpl.class);
@@ -547,12 +601,13 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameOption(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameOption(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/option";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -566,6 +621,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressStatus getServiceNameInstallStatus(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/install/status";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.InstallationProgressStatusImpl.class);
@@ -581,20 +637,19 @@ public class ServerImpl implements Server {
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceInfos";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/secondaryDnsDomains";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -633,6 +688,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.BackupStorageOrderable getServiceNameOrderableBackupStorage(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/backupStorage";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.BackupStorageOrderableImpl.class);
@@ -641,6 +697,9 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.SmsAlert getServiceNameServiceMonitoringMonitoringIdAlertSmsAlertId(java.lang.String serviceName, long monitoringId, long alertId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "/alert/sms/" + alertId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "monitoringId=" + monitoringId;
+		__data += "alertId=" + alertId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.SmsAlertImpl.class);
@@ -648,9 +707,7 @@ public class ServerImpl implements Server {
 
 	public void putServiceName(net.zyuiop.ovhapi.api.objects.dedicated.server.Dedicated param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -665,12 +722,13 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameStatisticsPartition(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameStatisticsPartition(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/partition";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -693,6 +751,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.IpmiTestResult getServiceNameFeaturesIpmiTest(java.lang.String type, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/ipmi/test";
 		String __data = "?";
+		__data += "type=" + type;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.IpmiTestResultImpl.class);
@@ -700,9 +760,7 @@ public class ServerImpl implements Server {
 
 	public void putServiceNameServiceMonitoringMonitoringIdAlertSmsAlertId(net.zyuiop.ovhapi.api.objects.dedicated.server.SmsAlert param0, java.lang.String serviceName, long monitoringId, long alertId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "/alert/sms/" + alertId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -711,6 +769,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.BandwidthOrderable getServiceNameOrderableBandwidth(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/bandwidth";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.BandwidthOrderableImpl.class);
@@ -719,6 +778,9 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.EmailAlert getServiceNameServiceMonitoringMonitoringIdAlertEmailAlertId(java.lang.String serviceName, long monitoringId, long alertId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/serviceMonitoring/" + monitoringId + "/alert/email/" + alertId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "monitoringId=" + monitoringId;
+		__data += "alertId=" + alertId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.EmailAlertImpl.class);
@@ -773,12 +835,14 @@ public class ServerImpl implements Server {
 	*/
 
 
-	public java.lang.String getServiceNameInstallCompatibleTemplatePartitionSchemes(java.lang.String templateName, java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameInstallCompatibleTemplatePartitionSchemes(java.lang.String templateName, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/install/compatibleTemplatePartitionSchemes";
 		String __data = "?";
+		__data += "templateName=" + templateName;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void deleteServiceNameServiceMonitoringMonitoringIdAlertSmsAlertId(java.lang.String serviceName, long monitoringId, long alertId) throws java.io.IOException {
@@ -799,19 +863,17 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public java.lang.String getDedicatedServer() throws java.io.IOException {
+	public java.lang.String[] getDedicatedServer() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/dedicated/server";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void putServiceNameFeaturesBackupFTPAccessIpBlock(net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl param0, java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/backupFTP/access/" + ipBlock + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -820,6 +882,8 @@ public class ServerImpl implements Server {
 	public boolean getServiceNameOrderableFeature(java.lang.String feature, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/feature";
 		String __data = "?";
+		__data += "feature=" + feature;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), boolean.class);
@@ -828,6 +892,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Dedicated getServiceName(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.DedicatedImpl.class);
@@ -851,25 +916,30 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmConnection getServiceNameStatisticsConnection(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmConnection[] getServiceNameStatisticsConnection(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/connection";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmConnectionImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmConnectionImpl[].class);
 	}
 
-	public java.lang.String getServiceNameStatisticsRaidUnitVolumeVolumePort(java.lang.String serviceName, java.lang.String unit, java.lang.String volume) throws java.io.IOException {
+	public java.lang.String[] getServiceNameStatisticsRaidUnitVolumeVolumePort(java.lang.String serviceName, java.lang.String unit, java.lang.String volume) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/raid/" + unit + "/volume/" + volume + "/port";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "unit=" + unit;
+		__data += "volume=" + volume;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.IpOrderable getServiceNameSpecificationsIp(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/specifications/ip";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.IpOrderableImpl.class);
@@ -886,22 +956,26 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Rtm getServiceNameStatistics(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmPci getServiceNameStatisticsPci(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmPci[] getServiceNameStatisticsPci(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/pci";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmPciImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmPciImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmRaid getServiceNameStatisticsRaidUnit(java.lang.String serviceName, java.lang.String unit) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/raid/" + unit + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "unit=" + unit;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmRaidImpl.class);
@@ -910,6 +984,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Firewall getServiceNameFeaturesFirewall(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/firewall";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.FirewallImpl.class);
@@ -947,6 +1022,9 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.NetbootOption getServiceNameBootBootIdOptionOption(java.lang.String serviceName, long bootId, java.lang.String option) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/boot/" + bootId + "/option/" + option + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "bootId=" + bootId;
+		__data += "option=" + option;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.NetbootOptionImpl.class);
@@ -991,20 +1069,19 @@ public class ServerImpl implements Server {
 
 	public void putServiceNameFeaturesFirewall(net.zyuiop.ovhapi.api.objects.dedicated.server.Firewall param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/features/firewall";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getServiceNameStatisticsRaid(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameStatisticsRaid(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/raid";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -1027,6 +1104,7 @@ public class ServerImpl implements Server {
 	public boolean getServiceNameOrderableKvm(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/kvm";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), boolean.class);
@@ -1048,12 +1126,13 @@ public class ServerImpl implements Server {
 	*/
 
 
-	public java.lang.String getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/ipCountryAvailable";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.ServiceMonitoring postServiceNameServiceMonitoring(java.lang.String protocol, java.lang.String ip, java.lang.String interval, long port, boolean enabled, java.lang.String serviceName, java.lang.String challengeText, java.lang.String url) throws java.io.IOException {
@@ -1098,6 +1177,8 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.Spla getServiceNameSplaId(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/spla/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.SplaImpl.class);
@@ -1106,6 +1187,7 @@ public class ServerImpl implements Server {
 	public boolean getServiceNameOrderableKvmExpress(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/orderable/kvmExpress";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), boolean.class);
@@ -1133,9 +1215,7 @@ public class ServerImpl implements Server {
 
 	public void putServiceNameSplaId(net.zyuiop.ovhapi.api.objects.dedicated.server.Spla param0, java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/spla/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -1153,17 +1233,20 @@ public class ServerImpl implements Server {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameVirtualMac(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameVirtualMac(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/virtualMac";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.vrack.DedicatedServer getServiceNameVrackVrack(java.lang.String serviceName, java.lang.String vrack) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/vrack/" + vrack + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "vrack=" + vrack;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.DedicatedServerImpl.class);
@@ -1172,6 +1255,7 @@ public class ServerImpl implements Server {
 	public net.zyuiop.ovhapi.api.objects.dedicated.server.RtmMotherboardHw getServiceNameStatisticsMotherboard(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/statistics/motherboard";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.RtmMotherboardHwImpl.class);
@@ -1210,6 +1294,8 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameBoot(java.lang.String serviceName, java.lang.String bootType) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/boot";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "bootType=" + bootType;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1218,6 +1304,7 @@ public class ServerImpl implements Server {
 	public long[] getServiceNameBoot(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/server/" + serviceName + "/boot";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);

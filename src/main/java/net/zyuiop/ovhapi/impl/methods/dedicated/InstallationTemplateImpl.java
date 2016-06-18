@@ -31,20 +31,24 @@ public class InstallationTemplateImpl implements InstallationTemplate {
 	*/
 
 
-	public java.lang.String getTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
+	public java.lang.String[] getTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/partition";
 		String __data = "?";
+		__data += "templateName=" + templateName;
+		__data += "schemeName=" + schemeName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
+	public java.lang.String[] getTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
 		String __data = "?";
+		__data += "templateName=" + templateName;
+		__data += "schemeName=" + schemeName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -63,20 +67,21 @@ public class InstallationTemplateImpl implements InstallationTemplate {
 	*/
 
 
-	public java.lang.String getTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException {
+	public java.lang.String[] getTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/" + templateName + "/partitionScheme";
 		String __data = "?";
+		__data += "templateName=" + templateName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getDedicatedInstallationTemplate() throws java.io.IOException {
+	public java.lang.String[] getDedicatedInstallationTemplate() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/dedicated/installationTemplate/dedicated/installationTemplate";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), java.lang.String[].class);
 	}
 
 }

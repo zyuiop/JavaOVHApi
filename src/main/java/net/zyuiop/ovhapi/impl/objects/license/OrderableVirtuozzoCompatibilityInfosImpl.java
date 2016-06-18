@@ -8,8 +8,8 @@ import net.zyuiop.ovhapi.api.objects.license.OrderableVirtuozzoCompatibilityInfo
 public class OrderableVirtuozzoCompatibilityInfosImpl implements OrderableVirtuozzoCompatibilityInfos { 
 
 	private java.lang.String version;
-	private java.lang.String compliantContainers;
-	private java.lang.String potentialProblems;
+	private java.lang.String[] compliantContainers;
+	private java.lang.String[] potentialProblems;
 
 	public OrderableVirtuozzoCompatibilityInfosImpl() {
 	}
@@ -27,28 +27,28 @@ public class OrderableVirtuozzoCompatibilityInfosImpl implements OrderableVirtuo
 		return this;
 	} 
 
-	public java.lang.String getCompliantContainers() { 
+	public java.lang.String[] getCompliantContainers() { 
 		return this.compliantContainers;
 	} 
 
-	public void setCompliantContainers(java.lang.String compliantContainers) { 
+	public void setCompliantContainers(java.lang.String[] compliantContainers) { 
 		this.compliantContainers = compliantContainers;
 	} 
 
-	public OrderableVirtuozzoCompatibilityInfosImpl compliantContainers(java.lang.String compliantContainers) { 
+	public OrderableVirtuozzoCompatibilityInfosImpl compliantContainers(java.lang.String[] compliantContainers) { 
 		this.compliantContainers = compliantContainers;
 		return this;
 	} 
 
-	public java.lang.String getPotentialProblems() { 
+	public java.lang.String[] getPotentialProblems() { 
 		return this.potentialProblems;
 	} 
 
-	public void setPotentialProblems(java.lang.String potentialProblems) { 
+	public void setPotentialProblems(java.lang.String[] potentialProblems) { 
 		this.potentialProblems = potentialProblems;
 	} 
 
-	public OrderableVirtuozzoCompatibilityInfosImpl potentialProblems(java.lang.String potentialProblems) { 
+	public OrderableVirtuozzoCompatibilityInfosImpl potentialProblems(java.lang.String[] potentialProblems) { 
 		this.potentialProblems = potentialProblems;
 		return this;
 	} 

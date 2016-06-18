@@ -44,7 +44,7 @@ public interface LineOptions {
 	/**
 	 * @return The ip restrictions of your line
 	 */
-	java.lang.String getIpRestrictions(); 
+	java.lang.String[] getIpRestrictions(); 
 
 	/**
 	 * @return The SIP domain of the line

@@ -9,12 +9,12 @@ public interface Price {
 	/**
 	 * @return Price for bandwidth storage
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.BandwidthStoragePrice getBandwidthStorage(); 
+	net.zyuiop.ovhapi.api.objects.cloud.BandwidthStoragePrice[] getBandwidthStorage(); 
 
 	/**
 	 * @return Prices for volumes
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.VolumePrice getVolumes(); 
+	net.zyuiop.ovhapi.api.objects.cloud.VolumePrice[] getVolumes(); 
 
 	/**
 	 * @return Price for project creation
@@ -24,16 +24,16 @@ public interface Price {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.FlavorPrice getInstances(); 
+	net.zyuiop.ovhapi.api.objects.cloud.FlavorPrice[] getInstances(); 
 
 	/**
 	 * @return Prices for snapshots
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.SnapshotPrice getSnapshots(); 
+	net.zyuiop.ovhapi.api.objects.cloud.SnapshotPrice[] getSnapshots(); 
 
 	/**
 	 * @return Price for storage
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.StoragePrice getStorage(); 
+	net.zyuiop.ovhapi.api.objects.cloud.StoragePrice[] getStorage(); 
 
 }

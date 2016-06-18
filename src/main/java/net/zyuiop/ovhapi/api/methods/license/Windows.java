@@ -10,7 +10,7 @@ public interface Windows {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLicenseWindows() throws java.io.IOException;
+	java.lang.String[] getLicenseWindows() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -79,7 +79,7 @@ public interface Windows {
 	 * Facultative parameters ? false
 	 * @param ip Your license Ip
 	*/
-	net.zyuiop.ovhapi.api.objects.license.WindowsOrderConfiguration getOrderableVersions(java.lang.String ip) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.license.WindowsOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -110,6 +110,6 @@ public interface Windows {
 	 * Facultative parameters ? false
 	 * @param serviceName The name of your Windows license
 	*/
-	java.lang.String getServiceNameOption(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOption(java.lang.String serviceName) throws java.io.IOException;
 
 }

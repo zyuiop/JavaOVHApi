@@ -9,7 +9,7 @@ public interface SupportLevelOrderable {
 	/**
 	 * @return Support level  orderable
 	 */
-	java.lang.String getLevels(); 
+	java.lang.String[] getLevels(); 
 
 	/**
 	 * @return Is a support level is orderable for this server

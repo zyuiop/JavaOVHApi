@@ -9,7 +9,7 @@ public interface Housing {
 	/**
 	 * @return Housing bay network
 	 */
-	net.zyuiop.ovhapi.api.objects.dedicated.housing.NetworkInfo getNetwork(); 
+	net.zyuiop.ovhapi.api.objects.dedicated.housing.NetworkInfo[] getNetwork(); 
 
 	/**
 	 * @return Housing bay datacenter

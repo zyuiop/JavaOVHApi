@@ -19,6 +19,6 @@ public interface DailyLicense {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.email.exchange.AccountLicense getAccountLicense(); 
+	net.zyuiop.ovhapi.api.objects.email.exchange.AccountLicense[] getAccountLicense(); 
 
 }

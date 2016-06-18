@@ -9,12 +9,12 @@ public interface Status {
 	/**
 	 * @return Warning list
 	 */
-	java.lang.String getWarnings(); 
+	java.lang.String[] getWarnings(); 
 
 	/**
 	 * @return Error list
 	 */
-	java.lang.String getErrors(); 
+	java.lang.String[] getErrors(); 
 
 	/**
 	 * @return True if the zone has successfully been deployed

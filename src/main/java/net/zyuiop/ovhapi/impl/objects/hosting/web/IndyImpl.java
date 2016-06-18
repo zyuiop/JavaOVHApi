@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.hosting.web.Indy;
 
 public class IndyImpl implements Indy { 
 
-	private java.lang.String attachedDomains;
+	private java.lang.String[] attachedDomains;
 	private java.lang.String home;
 	private java.lang.String login;
 	private java.lang.String state;
@@ -15,15 +15,15 @@ public class IndyImpl implements Indy {
 	public IndyImpl() {
 	}
 
-	public java.lang.String getAttachedDomains() { 
+	public java.lang.String[] getAttachedDomains() { 
 		return this.attachedDomains;
 	} 
 
-	public void setAttachedDomains(java.lang.String attachedDomains) { 
+	public void setAttachedDomains(java.lang.String[] attachedDomains) { 
 		this.attachedDomains = attachedDomains;
 	} 
 
-	public IndyImpl attachedDomains(java.lang.String attachedDomains) { 
+	public IndyImpl attachedDomains(java.lang.String[] attachedDomains) { 
 		this.attachedDomains = attachedDomains;
 		return this;
 	} 

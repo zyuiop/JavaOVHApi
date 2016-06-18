@@ -8,12 +8,12 @@ import net.zyuiop.ovhapi.api.objects.vps.Model;
 public class ModelImpl implements Model { 
 
 	private long maximumAdditionnalIp;
-	private java.lang.String datacenter;
+	private java.lang.String[] datacenter;
 	private long disk;
 	private java.lang.String offer;
 	private java.lang.String version;
 	private java.lang.String name;
-	private java.lang.String availableOptions;
+	private java.lang.String[] availableOptions;
 	private long memory;
 	private long vcore;
 
@@ -33,15 +33,15 @@ public class ModelImpl implements Model {
 		return this;
 	} 
 
-	public java.lang.String getDatacenter() { 
+	public java.lang.String[] getDatacenter() { 
 		return this.datacenter;
 	} 
 
-	public void setDatacenter(java.lang.String datacenter) { 
+	public void setDatacenter(java.lang.String[] datacenter) { 
 		this.datacenter = datacenter;
 	} 
 
-	public ModelImpl datacenter(java.lang.String datacenter) { 
+	public ModelImpl datacenter(java.lang.String[] datacenter) { 
 		this.datacenter = datacenter;
 		return this;
 	} 
@@ -98,15 +98,15 @@ public class ModelImpl implements Model {
 		return this;
 	} 
 
-	public java.lang.String getAvailableOptions() { 
+	public java.lang.String[] getAvailableOptions() { 
 		return this.availableOptions;
 	} 
 
-	public void setAvailableOptions(java.lang.String availableOptions) { 
+	public void setAvailableOptions(java.lang.String[] availableOptions) { 
 		this.availableOptions = availableOptions;
 	} 
 
-	public ModelImpl availableOptions(java.lang.String availableOptions) { 
+	public ModelImpl availableOptions(java.lang.String[] availableOptions) { 
 		this.availableOptions = availableOptions;
 		return this;
 	} 

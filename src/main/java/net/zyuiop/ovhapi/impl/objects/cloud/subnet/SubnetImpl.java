@@ -10,7 +10,7 @@ public class SubnetImpl implements Subnet {
 	private java.lang.String name;
 	private java.lang.String id;
 	private java.lang.String cidr;
-	private net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl ipPools;
+	private net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl[] ipPools;
 
 	public SubnetImpl() {
 	}
@@ -54,15 +54,15 @@ public class SubnetImpl implements Subnet {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl getIpPools() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl[] getIpPools() { 
 		return this.ipPools;
 	} 
 
-	public void setIpPools(net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl ipPools) { 
+	public void setIpPools(net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl[] ipPools) { 
 		this.ipPools = ipPools;
 	} 
 
-	public SubnetImpl ipPools(net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl ipPools) { 
+	public SubnetImpl ipPools(net.zyuiop.ovhapi.impl.objects.cloud.network.IPPoolImpl[] ipPools) { 
 		this.ipPools = ipPools;
 		return this;
 	} 

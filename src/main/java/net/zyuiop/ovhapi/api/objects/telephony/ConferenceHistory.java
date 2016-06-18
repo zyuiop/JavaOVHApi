@@ -34,7 +34,7 @@ public interface ConferenceHistory {
 	/**
 	 * @return The events of the conference (participants joining/left)
 	 */
-	net.zyuiop.ovhapi.api.objects.telephony.ConferenceHistoryEvent getEvents(); 
+	net.zyuiop.ovhapi.api.objects.telephony.ConferenceHistoryEvent[] getEvents(); 
 
 	/**
 	 * @return The id of the conference history

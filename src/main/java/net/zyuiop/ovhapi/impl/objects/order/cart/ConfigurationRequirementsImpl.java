@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.order.cart.ConfigurationRequirements;
 public class ConfigurationRequirementsImpl implements ConfigurationRequirements { 
 
 	private boolean required;
-	private java.lang.String fields;
+	private java.lang.String[] fields;
 	private java.lang.String label;
 	private java.lang.String type;
 
@@ -28,15 +28,15 @@ public class ConfigurationRequirementsImpl implements ConfigurationRequirements 
 		return this;
 	} 
 
-	public java.lang.String getFields() { 
+	public java.lang.String[] getFields() { 
 		return this.fields;
 	} 
 
-	public void setFields(java.lang.String fields) { 
+	public void setFields(java.lang.String[] fields) { 
 		this.fields = fields;
 	} 
 
-	public ConfigurationRequirementsImpl fields(java.lang.String fields) { 
+	public ConfigurationRequirementsImpl fields(java.lang.String[] fields) { 
 		this.fields = fields;
 		return this;
 	} 

@@ -29,6 +29,6 @@ public interface NewProjectCredit {
 	/**
 	 * @return Use credits on following products
 	 */
-	java.lang.String getProducts(); 
+	java.lang.String[] getProducts(); 
 
 }

@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.domain.GlueRecord;
 
 public class GlueRecordImpl implements GlueRecord { 
 
-	private java.lang.String ips;
+	private java.lang.String[] ips;
 	private java.lang.String host;
 
 	public GlueRecordImpl() {
 	}
 
-	public java.lang.String getIps() { 
+	public java.lang.String[] getIps() { 
 		return this.ips;
 	} 
 
-	public void setIps(java.lang.String ips) { 
+	public void setIps(java.lang.String[] ips) { 
 		this.ips = ips;
 	} 
 
-	public GlueRecordImpl ips(java.lang.String ips) { 
+	public GlueRecordImpl ips(java.lang.String[] ips) { 
 		this.ips = ips;
 		return this;
 	} 

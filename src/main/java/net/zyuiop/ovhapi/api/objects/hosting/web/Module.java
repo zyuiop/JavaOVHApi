@@ -14,7 +14,7 @@ public interface Module {
 	/**
 	 * @return The dependencies to which the module has access. A dependency can be a standard database (like MySQL or PostgreSQL) or a key-value store (like Redis or Memcached) for example
 	 */
-	net.zyuiop.ovhapi.api.objects.hosting.web.module.DependencyType getDependencies(); 
+	net.zyuiop.ovhapi.api.objects.hosting.web.module.DependencyType[] getDependencies(); 
 
 	/**
 	 * @return Where the module is installed, relative to your home directory

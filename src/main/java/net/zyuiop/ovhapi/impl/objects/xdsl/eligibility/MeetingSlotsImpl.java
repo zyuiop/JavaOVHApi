@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlots;
 
 public class MeetingSlotsImpl implements MeetingSlots { 
 
-	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl meetingSlots;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl[] meetingSlots;
 	private boolean canBookFakeMeeting;
 
 	public MeetingSlotsImpl() {
 	}
 
-	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl getMeetingSlots() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl[] getMeetingSlots() { 
 		return this.meetingSlots;
 	} 
 
-	public void setMeetingSlots(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl meetingSlots) { 
+	public void setMeetingSlots(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl[] meetingSlots) { 
 		this.meetingSlots = meetingSlots;
 	} 
 
-	public MeetingSlotsImpl meetingSlots(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl meetingSlots) { 
+	public MeetingSlotsImpl meetingSlots(net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.MeetingSlotImpl[] meetingSlots) { 
 		this.meetingSlots = meetingSlots;
 		return this;
 	} 

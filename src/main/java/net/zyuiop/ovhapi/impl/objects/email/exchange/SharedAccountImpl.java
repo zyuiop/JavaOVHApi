@@ -13,7 +13,7 @@ public class SharedAccountImpl implements SharedAccount {
 	private java.lang.String state;
 	private long currentUsage;
 	private java.util.Date lastLogonDate;
-	private java.lang.String mailingFilter;
+	private java.lang.String[] mailingFilter;
 	private java.lang.String lastName;
 	private long id;
 	private java.lang.String sharedEmailAddress;
@@ -106,15 +106,15 @@ public class SharedAccountImpl implements SharedAccount {
 		return this;
 	} 
 
-	public java.lang.String getMailingFilter() { 
+	public java.lang.String[] getMailingFilter() { 
 		return this.mailingFilter;
 	} 
 
-	public void setMailingFilter(java.lang.String mailingFilter) { 
+	public void setMailingFilter(java.lang.String[] mailingFilter) { 
 		this.mailingFilter = mailingFilter;
 	} 
 
-	public SharedAccountImpl mailingFilter(java.lang.String mailingFilter) { 
+	public SharedAccountImpl mailingFilter(java.lang.String[] mailingFilter) { 
 		this.mailingFilter = mailingFilter;
 		return this;
 	} 

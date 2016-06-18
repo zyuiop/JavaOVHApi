@@ -8,9 +8,9 @@ import net.zyuiop.ovhapi.api.objects.dedicatedcloud.CommercialRange;
 public class CommercialRangeImpl implements CommercialRange { 
 
 	private java.lang.String commercialRangeName;
-	private java.lang.String allowedHypervisorVersions;
+	private java.lang.String[] allowedHypervisorVersions;
 	private java.lang.String range;
-	private java.lang.String allowedNetworkRoles;
+	private java.lang.String[] allowedNetworkRoles;
 	private java.lang.String dedicatedCloudVersion;
 
 	public CommercialRangeImpl() {
@@ -29,15 +29,15 @@ public class CommercialRangeImpl implements CommercialRange {
 		return this;
 	} 
 
-	public java.lang.String getAllowedHypervisorVersions() { 
+	public java.lang.String[] getAllowedHypervisorVersions() { 
 		return this.allowedHypervisorVersions;
 	} 
 
-	public void setAllowedHypervisorVersions(java.lang.String allowedHypervisorVersions) { 
+	public void setAllowedHypervisorVersions(java.lang.String[] allowedHypervisorVersions) { 
 		this.allowedHypervisorVersions = allowedHypervisorVersions;
 	} 
 
-	public CommercialRangeImpl allowedHypervisorVersions(java.lang.String allowedHypervisorVersions) { 
+	public CommercialRangeImpl allowedHypervisorVersions(java.lang.String[] allowedHypervisorVersions) { 
 		this.allowedHypervisorVersions = allowedHypervisorVersions;
 		return this;
 	} 
@@ -55,15 +55,15 @@ public class CommercialRangeImpl implements CommercialRange {
 		return this;
 	} 
 
-	public java.lang.String getAllowedNetworkRoles() { 
+	public java.lang.String[] getAllowedNetworkRoles() { 
 		return this.allowedNetworkRoles;
 	} 
 
-	public void setAllowedNetworkRoles(java.lang.String allowedNetworkRoles) { 
+	public void setAllowedNetworkRoles(java.lang.String[] allowedNetworkRoles) { 
 		this.allowedNetworkRoles = allowedNetworkRoles;
 	} 
 
-	public CommercialRangeImpl allowedNetworkRoles(java.lang.String allowedNetworkRoles) { 
+	public CommercialRangeImpl allowedNetworkRoles(java.lang.String[] allowedNetworkRoles) { 
 		this.allowedNetworkRoles = allowedNetworkRoles;
 		return this;
 	} 

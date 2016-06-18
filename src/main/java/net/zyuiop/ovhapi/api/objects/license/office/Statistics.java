@@ -14,6 +14,6 @@ public interface Statistics {
 	/**
 	 * @return List of lines associated to this statistics entity.
 	 */
-	net.zyuiop.ovhapi.api.objects.license.office.StatisticsLine getLines(); 
+	net.zyuiop.ovhapi.api.objects.license.office.StatisticsLine[] getLines(); 
 
 }

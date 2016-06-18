@@ -9,7 +9,7 @@ public interface MeetingSlots {
 	/**
 	 * @return A time slot
 	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlot getMeetingSlots(); 
+	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.MeetingSlot[] getMeetingSlots(); 
 
 	/**
 	 * @return Whether or not it is possible to book a fake meeting

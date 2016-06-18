@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.license.OrderableWindowsCompatibilityInfos;
 
 public class OrderableWindowsCompatibilityInfosImpl implements OrderableWindowsCompatibilityInfos { 
 
-	private java.lang.String compliantSql;
+	private java.lang.String[] compliantSql;
 	private java.lang.String version;
 
 	public OrderableWindowsCompatibilityInfosImpl() {
 	}
 
-	public java.lang.String getCompliantSql() { 
+	public java.lang.String[] getCompliantSql() { 
 		return this.compliantSql;
 	} 
 
-	public void setCompliantSql(java.lang.String compliantSql) { 
+	public void setCompliantSql(java.lang.String[] compliantSql) { 
 		this.compliantSql = compliantSql;
 	} 
 
-	public OrderableWindowsCompatibilityInfosImpl compliantSql(java.lang.String compliantSql) { 
+	public OrderableWindowsCompatibilityInfosImpl compliantSql(java.lang.String[] compliantSql) { 
 		this.compliantSql = compliantSql;
 		return this;
 	} 

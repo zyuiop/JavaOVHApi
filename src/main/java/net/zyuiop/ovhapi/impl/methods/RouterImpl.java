@@ -18,6 +18,8 @@ public class RouterImpl implements Router {
 	public net.zyuiop.ovhapi.api.objects.router.PrivateLink getServiceNamePrivateLinkPeerServiceName(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "peerServiceName=" + peerServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.PrivateLinkImpl.class);
@@ -35,6 +37,8 @@ public class RouterImpl implements Router {
 	public net.zyuiop.ovhapi.api.objects.router.Vpn getServiceNameVpnId(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.VpnImpl.class);
@@ -43,6 +47,8 @@ public class RouterImpl implements Router {
 	public net.zyuiop.ovhapi.api.objects.router.Network getServiceNameNetworkIpNet(java.lang.String serviceName, java.lang.String ipNet) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network/" + ipNet + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "ipNet=" + ipNet;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.NetworkImpl.class);
@@ -59,9 +65,7 @@ public class RouterImpl implements Router {
 
 	public void putServiceNameVpnId(net.zyuiop.ovhapi.api.objects.router.Vpn param0, java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -70,6 +74,9 @@ public class RouterImpl implements Router {
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/task";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "function=" + function;
+		__data += "status=" + status;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -78,33 +85,38 @@ public class RouterImpl implements Router {
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/task";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String getServiceNamePrivateLinkPeerServiceNameRoute(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePrivateLinkPeerServiceNameRoute(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/route";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "peerServiceName=" + peerServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public long[] getServiceNameVpn(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String getServiceNamePrivateLink(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePrivateLink(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public java.lang.String postServiceNamePrivateLink(java.lang.String peerServiceName, java.lang.String name, java.lang.String serviceName) throws java.io.IOException {
@@ -121,6 +133,8 @@ public class RouterImpl implements Router {
 	public net.zyuiop.ovhapi.api.objects.router.PrivateLinkRequest getServiceNamePrivateLinkPeerServiceNameRequest(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/request";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "peerServiceName=" + peerServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.PrivateLinkRequestImpl.class);
@@ -138,9 +152,7 @@ public class RouterImpl implements Router {
 
 	public void putServiceNameNetworkIpNet(net.zyuiop.ovhapi.api.objects.router.Network param0, java.lang.String serviceName, java.lang.String ipNet) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network/" + ipNet + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -148,9 +160,7 @@ public class RouterImpl implements Router {
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/serviceInfos";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -217,33 +227,38 @@ public class RouterImpl implements Router {
 	public net.zyuiop.ovhapi.api.objects.router.PrivateLinkRoute getServiceNamePrivateLinkPeerServiceNameRouteNetwork(java.lang.String serviceName, java.lang.String peerServiceName, java.lang.String network) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/route/" + network + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "peerServiceName=" + peerServiceName;
+		__data += "network=" + network;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.PrivateLinkRouteImpl.class);
 	}
 
-	public java.lang.String getRouter() throws java.io.IOException {
+	public java.lang.String[] getRouter() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/router";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.router.Router getServiceName(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.RouterImpl.class);
 	}
 
-	public java.lang.String getServiceNameNetwork(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameNetwork(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.router.Task deleteServiceNameNetworkIpNet(java.lang.String serviceName, java.lang.String ipNet) throws java.io.IOException {
@@ -267,6 +282,8 @@ public class RouterImpl implements Router {
 	public net.zyuiop.ovhapi.api.objects.router.Task getServiceNameTaskId(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/task/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
@@ -275,6 +292,7 @@ public class RouterImpl implements Router {
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/serviceInfos";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
@@ -282,9 +300,7 @@ public class RouterImpl implements Router {
 
 	public void putServiceNamePrivateLinkPeerServiceName(net.zyuiop.ovhapi.api.objects.router.PrivateLink param0, java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);

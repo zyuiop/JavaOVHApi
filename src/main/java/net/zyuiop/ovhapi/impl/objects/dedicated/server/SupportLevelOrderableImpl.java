@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.dedicated.server.SupportLevelOrderable;
 
 public class SupportLevelOrderableImpl implements SupportLevelOrderable { 
 
-	private java.lang.String levels;
+	private java.lang.String[] levels;
 	private boolean orderable;
 
 	public SupportLevelOrderableImpl() {
 	}
 
-	public java.lang.String getLevels() { 
+	public java.lang.String[] getLevels() { 
 		return this.levels;
 	} 
 
-	public void setLevels(java.lang.String levels) { 
+	public void setLevels(java.lang.String[] levels) { 
 		this.levels = levels;
 	} 
 
-	public SupportLevelOrderableImpl levels(java.lang.String levels) { 
+	public SupportLevelOrderableImpl levels(java.lang.String[] levels) { 
 		this.levels = levels;
 		return this;
 	} 

@@ -39,14 +39,14 @@ public interface Housing {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDedicatedHousing() throws java.io.IOException;
+	java.lang.String[] getDedicatedHousing() throws java.io.IOException;
 
 	/**
 	 * Get all IP blocks that can be used in the ACL
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Housing bay
 	*/
-	java.lang.String getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * this action stop the task progression if it's possible
@@ -69,7 +69,7 @@ public interface Housing {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Housing bay
 	*/
-	java.lang.String getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties

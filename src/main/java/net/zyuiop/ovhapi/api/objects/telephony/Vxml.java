@@ -14,7 +14,7 @@ public interface Vxml {
 	/**
 	 * @return null
 	 */
-	java.lang.String getOffers(); 
+	java.lang.String[] getOffers(); 
 
 	/**
 	 * @return null

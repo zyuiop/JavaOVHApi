@@ -34,7 +34,7 @@ public interface Templates {
 	/**
 	 * @return list of all language available for this template
 	 */
-	java.lang.String getAvailableLanguages(); 
+	java.lang.String[] getAvailableLanguages(); 
 
 	/**
 	 * @return Date of last modification of the base image
@@ -79,7 +79,7 @@ public interface Templates {
 	/**
 	 * @return list of all filesystems  available for this template
 	 */
-	java.lang.String getFilesystems(); 
+	java.lang.String[] getFilesystems(); 
 
 	/**
 	 * @return This distribution supports Logical Volumes (Linux LVM)

@@ -81,20 +81,20 @@ public interface Worklight {
 	 * Facultative parameters ? false
 	 * @param serviceName The name of your WorkLight license
 	*/
-	java.lang.String getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLicenseWorklight() throws java.io.IOException;
+	java.lang.String[] getLicenseWorklight() throws java.io.IOException;
 
 	/**
 	 * Get the orderable WorkLight versions
 	 * Facultative parameters ? false
 	 * @param ip Your license Ip
 	*/
-	net.zyuiop.ovhapi.api.objects.license.WorkLightOrderConfiguration getOrderableVersions(java.lang.String ip) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.license.WorkLightOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Get this object properties

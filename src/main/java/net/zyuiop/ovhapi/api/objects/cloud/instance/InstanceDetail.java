@@ -44,7 +44,7 @@ public interface InstanceDetail {
 	/**
 	 * @return Instance IP addresses
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress getIpAddresses(); 
+	net.zyuiop.ovhapi.api.objects.cloud.instance.IpAddress[] getIpAddresses(); 
 
 	/**
 	 * @return Instance id

@@ -15,7 +15,7 @@ public class InstanceImpl implements Instance {
 	private java.lang.String flavorId;
 	private java.lang.String sshKeyId;
 	private net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling;
-	private net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses;
+	private net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] ipAddresses;
 	private java.lang.String id;
 
 	public InstanceImpl() {
@@ -125,15 +125,15 @@ public class InstanceImpl implements Instance {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl getIpAddresses() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] getIpAddresses() { 
 		return this.ipAddresses;
 	} 
 
-	public void setIpAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
+	public void setIpAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 	} 
 
-	public InstanceImpl ipAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
+	public InstanceImpl ipAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 		return this;
 	} 

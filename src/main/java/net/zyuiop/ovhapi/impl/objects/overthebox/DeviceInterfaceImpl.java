@@ -12,7 +12,7 @@ public class DeviceInterfaceImpl implements DeviceInterface {
 	private java.lang.String ip;
 	private java.lang.String gateway;
 	private java.lang.String name;
-	private java.lang.String dnsServers;
+	private java.lang.String[] dnsServers;
 	private java.lang.String netmask;
 
 	public DeviceInterfaceImpl() {
@@ -83,15 +83,15 @@ public class DeviceInterfaceImpl implements DeviceInterface {
 		return this;
 	} 
 
-	public java.lang.String getDnsServers() { 
+	public java.lang.String[] getDnsServers() { 
 		return this.dnsServers;
 	} 
 
-	public void setDnsServers(java.lang.String dnsServers) { 
+	public void setDnsServers(java.lang.String[] dnsServers) { 
 		this.dnsServers = dnsServers;
 	} 
 
-	public DeviceInterfaceImpl dnsServers(java.lang.String dnsServers) { 
+	public DeviceInterfaceImpl dnsServers(java.lang.String[] dnsServers) { 
 		this.dnsServers = dnsServers;
 		return this;
 	} 

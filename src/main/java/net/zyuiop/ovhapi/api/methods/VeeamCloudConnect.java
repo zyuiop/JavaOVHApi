@@ -30,14 +30,14 @@ public interface VeeamCloudConnect {
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String getServiceNameBackupRepository(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameBackupRepository(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List the possible upgrades on your Veeam Cloud Connect account
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String getServiceNameOrderableUpgrade(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOrderableUpgrade(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -52,7 +52,7 @@ public interface VeeamCloudConnect {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getVeeamCloudConnect() throws java.io.IOException;
+	java.lang.String[] getVeeamCloudConnect() throws java.io.IOException;
 
 	/**
 	 * Alter this object properties

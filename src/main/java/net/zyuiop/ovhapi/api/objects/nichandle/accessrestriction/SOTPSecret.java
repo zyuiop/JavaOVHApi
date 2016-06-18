@@ -9,6 +9,6 @@ public interface SOTPSecret {
 	/**
 	 * @return null
 	 */
-	java.lang.String getCodes(); 
+	java.lang.String[] getCodes(); 
 
 }

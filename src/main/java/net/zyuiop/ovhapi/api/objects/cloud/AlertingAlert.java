@@ -14,7 +14,7 @@ public interface AlertingAlert {
 	/**
 	 * @return Alert sent to
 	 */
-	java.lang.String getEmails(); 
+	java.lang.String[] getEmails(); 
 
 	/**
 	 * @return Alert id

@@ -9,7 +9,7 @@ public class SpamStatsImpl implements SpamStats {
 
 	private long timestamp;
 	private long averageSpamscore;
-	private net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl detectedSpams;
+	private net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl[] detectedSpams;
 	private long total;
 	private long numberOfSpams;
 
@@ -42,15 +42,15 @@ public class SpamStatsImpl implements SpamStats {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl getDetectedSpams() { 
+	public net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl[] getDetectedSpams() { 
 		return this.detectedSpams;
 	} 
 
-	public void setDetectedSpams(net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl detectedSpams) { 
+	public void setDetectedSpams(net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl[] detectedSpams) { 
 		this.detectedSpams = detectedSpams;
 	} 
 
-	public SpamStatsImpl detectedSpams(net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl detectedSpams) { 
+	public SpamStatsImpl detectedSpams(net.zyuiop.ovhapi.impl.objects.ip.SpamTargetImpl[] detectedSpams) { 
 		this.detectedSpams = detectedSpams;
 		return this;
 	} 

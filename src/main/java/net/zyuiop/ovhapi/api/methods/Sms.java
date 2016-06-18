@@ -29,7 +29,7 @@ public interface Sms {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your SMS offer
 	*/
-	java.lang.String getServiceNameSenders(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameSenders(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -170,20 +170,20 @@ public interface Sms {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your SMS offer
 	*/
-	java.lang.String getServiceNameUsers(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameUsers(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Template pattern filled up for moderation (Needed to send in US country)
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your SMS offer
 	*/
-	java.lang.String getServiceNameTemplatesControl(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameTemplatesControl(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getSms() throws java.io.IOException;
+	java.lang.String[] getSms() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -346,7 +346,7 @@ public interface Sms {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your SMS offer
 	*/
-	java.lang.String getServiceNameBlacklists(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameBlacklists(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Create the sms template control given
@@ -493,7 +493,7 @@ public interface Sms {
 	 * @param receiver The receiver number to check
 	 * @param serviceName The internal name of your SMS offer
 	*/
-	net.zyuiop.ovhapi.api.objects.sms.Exception getServiceNameExceptions(java.lang.String receiver, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.sms.Exception[] getServiceNameExceptions(java.lang.String receiver, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Sms sent associated to the sms user
@@ -660,7 +660,7 @@ public interface Sms {
 	 * @param quantity Sms pack offer quantity
 	 * @param serviceName The internal name of your SMS offer
 	*/
-	net.zyuiop.ovhapi.api.objects.sms.PackOffer getServiceNameSeeOffers(java.lang.String countryDestination, java.lang.String countryCurrencyPrice, long quantity, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.sms.PackOffer[] getServiceNameSeeOffers(java.lang.String countryDestination, java.lang.String countryCurrencyPrice, long quantity, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get informations about the given ptt code

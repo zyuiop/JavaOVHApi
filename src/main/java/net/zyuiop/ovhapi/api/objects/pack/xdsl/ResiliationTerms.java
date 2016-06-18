@@ -9,7 +9,7 @@ public interface ResiliationTerms {
 	/**
 	 * @return List of available resiliation reasons
 	 */
-	java.lang.String getResiliationReasons(); 
+	java.lang.String[] getResiliationReasons(); 
 
 	/**
 	 * @return Minimum date at which the pack can be resiliated

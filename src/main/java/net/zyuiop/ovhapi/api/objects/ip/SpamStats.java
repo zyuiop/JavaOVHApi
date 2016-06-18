@@ -19,7 +19,7 @@ public interface SpamStats {
 	/**
 	 * @return Detailed list of the spams
 	 */
-	net.zyuiop.ovhapi.api.objects.ip.SpamTarget getDetectedSpams(); 
+	net.zyuiop.ovhapi.api.objects.ip.SpamTarget[] getDetectedSpams(); 
 
 	/**
 	 * @return Number of emails sent

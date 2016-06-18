@@ -14,6 +14,6 @@ public interface PleskOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderablePleskCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderablePleskCompatibilityInfos[] getOrderableVersions(); 
 
 }

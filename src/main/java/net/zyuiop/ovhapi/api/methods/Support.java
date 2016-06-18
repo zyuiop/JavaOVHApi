@@ -81,6 +81,6 @@ public interface Support {
 	 * Facultative parameters ? false
 	 * @param ticketId internal ticket identifier
 	*/
-	net.zyuiop.ovhapi.api.objects.support.Message getTicketsTicketIdMessages(long ticketId) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.support.Message[] getTicketsTicketIdMessages(long ticketId) throws java.io.IOException;
 
 }

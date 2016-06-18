@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.sms.Exception;
 public class ExceptionImpl implements Exception { 
 
 	private java.lang.String countrySuffixe;
-	private java.lang.String messages;
+	private java.lang.String[] messages;
 	private java.lang.String restrictionCode;
 	private java.lang.String operators;
 	private java.lang.String substitution;
@@ -29,15 +29,15 @@ public class ExceptionImpl implements Exception {
 		return this;
 	} 
 
-	public java.lang.String getMessages() { 
+	public java.lang.String[] getMessages() { 
 		return this.messages;
 	} 
 
-	public void setMessages(java.lang.String messages) { 
+	public void setMessages(java.lang.String[] messages) { 
 		this.messages = messages;
 	} 
 
-	public ExceptionImpl messages(java.lang.String messages) { 
+	public ExceptionImpl messages(java.lang.String[] messages) { 
 		this.messages = messages;
 		return this;
 	} 

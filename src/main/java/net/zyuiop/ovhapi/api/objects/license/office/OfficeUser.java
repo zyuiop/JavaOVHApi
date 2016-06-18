@@ -19,7 +19,7 @@ public interface OfficeUser {
 	/**
 	 * @return Licenses attributed to the user
 	 */
-	java.lang.String getLicences(); 
+	java.lang.String[] getLicences(); 
 
 	/**
 	 * @return User's last name

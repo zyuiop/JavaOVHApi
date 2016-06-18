@@ -12,7 +12,7 @@ public class OfferImpl implements Offer {
 	private java.lang.String offerCode;
 	private java.lang.String lineStatus;
 	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.PortabilityImpl portability;
-	private net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] lineSectionsLength;
 	private long estimatedUpload;
 	private java.lang.String type;
 	private net.zyuiop.ovhapi.impl.objects.xdsl.eligibility.AddressImpl address;
@@ -91,15 +91,15 @@ public class OfferImpl implements Offer {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl getLineSectionsLength() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] getLineSectionsLength() { 
 		return this.lineSectionsLength;
 	} 
 
-	public void setLineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
+	public void setLineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 	} 
 
-	public OfferImpl lineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
+	public OfferImpl lineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 		return this;
 	} 

@@ -13,7 +13,7 @@ public class VPSImpl implements VPS {
 	private java.lang.String zone;
 	private java.lang.String name;
 	private net.zyuiop.ovhapi.impl.objects.vps.ModelImpl model;
-	private java.lang.String monitoringIpBlocks;
+	private java.lang.String[] monitoringIpBlocks;
 	private java.lang.String keymap;
 	private java.lang.String state;
 	private long vcore;
@@ -102,15 +102,15 @@ public class VPSImpl implements VPS {
 		return this;
 	} 
 
-	public java.lang.String getMonitoringIpBlocks() { 
+	public java.lang.String[] getMonitoringIpBlocks() { 
 		return this.monitoringIpBlocks;
 	} 
 
-	public void setMonitoringIpBlocks(java.lang.String monitoringIpBlocks) { 
+	public void setMonitoringIpBlocks(java.lang.String[] monitoringIpBlocks) { 
 		this.monitoringIpBlocks = monitoringIpBlocks;
 	} 
 
-	public VPSImpl monitoringIpBlocks(java.lang.String monitoringIpBlocks) { 
+	public VPSImpl monitoringIpBlocks(java.lang.String[] monitoringIpBlocks) { 
 		this.monitoringIpBlocks = monitoringIpBlocks;
 		return this;
 	} 

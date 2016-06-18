@@ -69,6 +69,6 @@ public interface MondialRelay {
 	/**
 	 * @return Relay point closing dates
 	 */
-	net.zyuiop.ovhapi.api.objects.supply.MondialRelayClosingPeriod getClosing(); 
+	net.zyuiop.ovhapi.api.objects.supply.MondialRelayClosingPeriod[] getClosing(); 
 
 }

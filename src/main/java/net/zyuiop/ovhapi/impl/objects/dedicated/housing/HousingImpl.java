@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.dedicated.housing.Housing;
 
 public class HousingImpl implements Housing { 
 
-	private net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl network;
+	private net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl[] network;
 	private java.lang.String datacenter;
 	private net.zyuiop.ovhapi.impl.objects.dedicated.housing.OptionsImpl options;
 	private java.lang.String securityCode;
@@ -17,15 +17,15 @@ public class HousingImpl implements Housing {
 	public HousingImpl() {
 	}
 
-	public net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl getNetwork() { 
+	public net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl[] getNetwork() { 
 		return this.network;
 	} 
 
-	public void setNetwork(net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl network) { 
+	public void setNetwork(net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl[] network) { 
 		this.network = network;
 	} 
 
-	public HousingImpl network(net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl network) { 
+	public HousingImpl network(net.zyuiop.ovhapi.impl.objects.dedicated.housing.NetworkInfoImpl[] network) { 
 		this.network = network;
 		return this;
 	} 

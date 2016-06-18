@@ -11,7 +11,7 @@ public class NewProjectCreditImpl implements NewProjectCredit {
 	private net.zyuiop.ovhapi.impl.objects.cloud.common.VoucherValidityImpl validity;
 	private long id;
 	private java.lang.String description;
-	private java.lang.String products;
+	private java.lang.String[] products;
 
 	public NewProjectCreditImpl() {
 	}
@@ -68,15 +68,15 @@ public class NewProjectCreditImpl implements NewProjectCredit {
 		return this;
 	} 
 
-	public java.lang.String getProducts() { 
+	public java.lang.String[] getProducts() { 
 		return this.products;
 	} 
 
-	public void setProducts(java.lang.String products) { 
+	public void setProducts(java.lang.String[] products) { 
 		this.products = products;
 	} 
 
-	public NewProjectCreditImpl products(java.lang.String products) { 
+	public NewProjectCreditImpl products(java.lang.String[] products) { 
 		this.products = products;
 		return this;
 	} 

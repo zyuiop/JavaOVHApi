@@ -11,7 +11,7 @@ public class IPImpl implements IP {
 	private java.lang.String version;
 	private java.lang.String status;
 	private long range;
-	private java.lang.String dnsList;
+	private java.lang.String[] dnsList;
 
 	public IPImpl() {
 	}
@@ -68,15 +68,15 @@ public class IPImpl implements IP {
 		return this;
 	} 
 
-	public java.lang.String getDnsList() { 
+	public java.lang.String[] getDnsList() { 
 		return this.dnsList;
 	} 
 
-	public void setDnsList(java.lang.String dnsList) { 
+	public void setDnsList(java.lang.String[] dnsList) { 
 		this.dnsList = dnsList;
 	} 
 
-	public IPImpl dnsList(java.lang.String dnsList) { 
+	public IPImpl dnsList(java.lang.String[] dnsList) { 
 		this.dnsList = dnsList;
 		return this;
 	} 

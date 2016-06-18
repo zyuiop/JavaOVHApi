@@ -34,7 +34,7 @@ public interface Offer {
 	/**
 	 * @return Detailed information about the sections between the DSLAM and the telephone jack
 	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength getLineSectionsLength(); 
+	net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength[] getLineSectionsLength(); 
 
 	/**
 	 * @return The estimated upload synchronisation in kbps

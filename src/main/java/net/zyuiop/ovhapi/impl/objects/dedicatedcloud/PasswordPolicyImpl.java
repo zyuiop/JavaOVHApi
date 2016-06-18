@@ -9,7 +9,7 @@ public class PasswordPolicyImpl implements PasswordPolicy {
 
 	private long minLength;
 	private boolean lowercaseLetterMandatory;
-	private java.lang.String deniedChars;
+	private java.lang.String[] deniedChars;
 	private boolean uppercaseLetterMandatory;
 	private boolean digitMandatory;
 	private long maxLength;
@@ -45,15 +45,15 @@ public class PasswordPolicyImpl implements PasswordPolicy {
 		return this;
 	} 
 
-	public java.lang.String getDeniedChars() { 
+	public java.lang.String[] getDeniedChars() { 
 		return this.deniedChars;
 	} 
 
-	public void setDeniedChars(java.lang.String deniedChars) { 
+	public void setDeniedChars(java.lang.String[] deniedChars) { 
 		this.deniedChars = deniedChars;
 	} 
 
-	public PasswordPolicyImpl deniedChars(java.lang.String deniedChars) { 
+	public PasswordPolicyImpl deniedChars(java.lang.String[] deniedChars) { 
 		this.deniedChars = deniedChars;
 		return this;
 	} 

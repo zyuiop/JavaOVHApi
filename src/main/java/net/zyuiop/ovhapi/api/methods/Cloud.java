@@ -45,7 +45,7 @@ public interface Cloud {
 	 * Facultative parameters ? false
 	 * @param serviceName Project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.quota.Quotas getProjectServiceNameQuota(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.quota.Quotas[] getProjectServiceNameQuota(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get vrack where this project is associated
@@ -121,14 +121,14 @@ public interface Cloud {
 	 * @param region Image region
 	 * @param osType Image OS
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameImage(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region, java.lang.String osType) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameImage(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region, java.lang.String osType) throws java.io.IOException;
 
 	/**
 	 * Get images
 	 * Facultative parameters ? false
 	 * @param serviceName Project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameImage(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameImage(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Add credit to your project
@@ -210,14 +210,14 @@ public interface Cloud {
 	 * @param serviceName Service name
 	 * @param region Flavor region
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor getProjectServiceNameFlavor(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor[] getProjectServiceNameFlavor(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
 
 	/**
 	 * Get flavors
 	 * Facultative parameters ? false
 	 * @param serviceName Service name
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor getProjectServiceNameFlavor(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor[] getProjectServiceNameFlavor(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Delete SSH key
@@ -240,7 +240,7 @@ public interface Cloud {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getCloud() throws java.io.IOException;
+	java.lang.String[] getCloud() throws java.io.IOException;
 
 	/**
 	 * Delete alerting
@@ -256,14 +256,14 @@ public interface Cloud {
 	 * @param serviceName Project name
 	 * @param region Region
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey getProjectServiceNameSshkey(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey[] getProjectServiceNameSshkey(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
 
 	/**
 	 * Get SSH keys
 	 * Facultative parameters ? false
 	 * @param serviceName Project name
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey getProjectServiceNameSshkey(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey[] getProjectServiceNameSshkey(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -314,14 +314,14 @@ public interface Cloud {
 	 * @param from Get bills from
 	 * @param serviceName The project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.project.Bill getProjectServiceNameBill(java.util.Date to, java.util.Date from, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.project.Bill[] getProjectServiceNameBill(java.util.Date to, java.util.Date from, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your public cloud passport
 	*/
-	java.lang.String getServiceNamePca(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePca(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -439,20 +439,20 @@ public interface Cloud {
 	 * @param serviceName Service name
 	 * @param networkId Network id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.subnet.Subnet getProjectServiceNameNetworkPrivateNetworkIdSubnet(java.lang.String serviceName, java.lang.String networkId) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.subnet.Subnet[] getProjectServiceNameNetworkPrivateNetworkIdSubnet(java.lang.String serviceName, java.lang.String networkId) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your public cloud passport
 	*/
-	java.lang.String getServiceNamePcs(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePcs(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getProject() throws java.io.IOException;
+	java.lang.String[] getProject() throws java.io.IOException;
 
 	/**
 	 * Create user
@@ -568,14 +568,14 @@ public interface Cloud {
 	 * @param flavorType Get compatible snapshots with flavor type
 	 * @param region Region
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameSnapshot(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameSnapshot(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region) throws java.io.IOException;
 
 	/**
 	 * Get snapshots
 	 * Facultative parameters ? false
 	 * @param serviceName Service name
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameSnapshot(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameSnapshot(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get region
@@ -599,7 +599,7 @@ public interface Cloud {
 	 * Facultative parameters ? false
 	 * @param serviceName Service name
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.storage.Container getProjectServiceNameStorage(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.storage.Container[] getProjectServiceNameStorage(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get flavor
@@ -669,14 +669,14 @@ public interface Cloud {
 	 * @param serviceName Project id
 	 * @param region Volume region
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.volume.Volume getProjectServiceNameVolume(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.volume.Volume[] getProjectServiceNameVolume(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
 
 	/**
 	 * Get volumes
 	 * Facultative parameters ? false
 	 * @param serviceName Project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.volume.Volume getProjectServiceNameVolume(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.volume.Volume[] getProjectServiceNameVolume(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Delete a volume
@@ -700,35 +700,35 @@ public interface Cloud {
 	 * @param serviceName Service name
 	 * @param region Network region
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.network.Network getProjectServiceNameNetworkPrivate(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.network.Network[] getProjectServiceNameNetworkPrivate(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
 
 	/**
 	 * Get networks
 	 * Facultative parameters ? false
 	 * @param serviceName Service name
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.network.Network getProjectServiceNameNetworkPrivate(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.network.Network[] getProjectServiceNameNetworkPrivate(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get failover ips
 	 * Facultative parameters ? false
 	 * @param serviceName Project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.ip.FailoverIp getProjectServiceNameIpFailover(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.ip.FailoverIp[] getProjectServiceNameIpFailover(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get regions
 	 * Facultative parameters ? false
 	 * @param serviceName Service name
 	*/
-	java.lang.String getProjectServiceNameRegion(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getProjectServiceNameRegion(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get all users
 	 * Facultative parameters ? false
 	 * @param serviceName Service name
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.user.User getProjectServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.user.User[] getProjectServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * cloud archives sessions for account
@@ -737,7 +737,7 @@ public interface Cloud {
 	 * @param pcaServiceName The internal name of your PCA offer
 	 * @param name Filter the value of name property (like)
 	*/
-	java.lang.String getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String name) throws java.io.IOException;
+	java.lang.String[] getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * cloud archives sessions for account
@@ -745,7 +745,7 @@ public interface Cloud {
 	 * @param serviceName The internal name of your public cloud passport
 	 * @param pcaServiceName The internal name of your PCA offer
 	*/
-	java.lang.String getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -771,7 +771,7 @@ public interface Cloud {
 	 * @param userData Configuration information or scripts to use upon launch
 	 * @param privateNetworkId Start instance in private network
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number, java.lang.String sshKeyId, boolean monthlyBilling, java.lang.String userData, java.lang.String privateNetworkId) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number, java.lang.String sshKeyId, boolean monthlyBilling, java.lang.String userData, java.lang.String privateNetworkId) throws java.io.IOException;
 
 	/**
 	 * Create multiple instances
@@ -783,7 +783,7 @@ public interface Cloud {
 	 * @param region Instance region
 	 * @param number Number of instances you want to create
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -844,7 +844,7 @@ public interface Cloud {
 	 * Facultative parameters ? false
 	 * @param serviceName The project id
 	*/
-	java.lang.String getProjectServiceNameAlerting(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getProjectServiceNameAlerting(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Return many statistics about the virtual machine for a given period
@@ -866,7 +866,7 @@ public interface Cloud {
 	 * @param status Filter the value of status property (=)
 	 * @param todoDate.from Filter the value of todoDate property (>=)
 	*/
-	java.lang.String getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName, java.util.Date todoDateTo, java.lang.String function, java.lang.String status, java.util.Date todoDateFrom) throws java.io.IOException;
+	java.lang.String[] getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName, java.util.Date todoDateTo, java.lang.String function, java.lang.String status, java.util.Date todoDateFrom) throws java.io.IOException;
 
 	/**
 	 * cloud archives tasks for account
@@ -874,7 +874,7 @@ public interface Cloud {
 	 * @param serviceName The internal name of your public cloud passport
 	 * @param pcaServiceName The internal name of your PCA offer
 	*/
-	java.lang.String getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException;
 
 	/**
 	 * Update a volume
@@ -938,7 +938,7 @@ public interface Cloud {
 	 * @param sessionId Session ID
 	 * @param name Filter the value of name property (like)
 	*/
-	java.lang.String getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId, java.lang.String name) throws java.io.IOException;
+	java.lang.String[] getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * cloud archives files in session
@@ -947,7 +947,7 @@ public interface Cloud {
 	 * @param pcaServiceName The internal name of your PCA offer
 	 * @param sessionId Session ID
 	*/
-	java.lang.String getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId) throws java.io.IOException;
+	java.lang.String[] getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId) throws java.io.IOException;
 
 	/**
 	 * Snapshot a volume
@@ -1024,14 +1024,14 @@ public interface Cloud {
 	 * @param serviceName Project id
 	 * @param region Snapshots region
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot getProjectServiceNameVolumeSnapshot(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot[] getProjectServiceNameVolumeSnapshot(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
 
 	/**
 	 * Get volume snapshots
 	 * Facultative parameters ? false
 	 * @param serviceName Project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot getProjectServiceNameVolumeSnapshot(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot[] getProjectServiceNameVolumeSnapshot(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get token for user
@@ -1069,7 +1069,7 @@ public interface Cloud {
 	 * Facultative parameters ? false
 	 * @param serviceName Project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.ip.CloudIp getProjectServiceNameIp(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.ip.CloudIp[] getProjectServiceNameIp(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Create new ACL
@@ -1094,14 +1094,14 @@ public interface Cloud {
 	 * @param serviceName Project id
 	 * @param region Instance region
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance getProjectServiceNameInstance(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] getProjectServiceNameInstance(java.lang.String serviceName, java.lang.String region) throws java.io.IOException;
 
 	/**
 	 * Get instances
 	 * Facultative parameters ? false
 	 * @param serviceName Project id
 	*/
-	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance getProjectServiceNameInstance(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] getProjectServiceNameInstance(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Extend a volume

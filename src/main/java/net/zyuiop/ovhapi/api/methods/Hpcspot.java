@@ -51,7 +51,7 @@ public interface Hpcspot {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getHpcspot() throws java.io.IOException;
+	java.lang.String[] getHpcspot() throws java.io.IOException;
 
 
 }

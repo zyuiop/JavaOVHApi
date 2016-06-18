@@ -20,14 +20,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param state Filter the value of state property (=)
 	*/
-	java.lang.String getIpSpam(java.lang.String ip, java.lang.String state) throws java.io.IOException;
+	java.lang.String[] getIpSpam(java.lang.String ip, java.lang.String state) throws java.io.IOException;
 
 	/**
 	 * Ip spamming
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpSpam(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpSpam(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -42,7 +42,7 @@ public interface Ip {
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpMitigationProfiles(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpMitigationProfiles(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Delete mitigation profile
@@ -132,14 +132,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param state Filter the value of state property (=)
 	*/
-	java.lang.String getIpAntihack(java.lang.String ip, java.lang.String state) throws java.io.IOException;
+	java.lang.String[] getIpAntihack(java.lang.String ip, java.lang.String state) throws java.io.IOException;
 
 	/**
 	 * Anti-Hack blocked IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpAntihack(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpAntihack(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Ip subnet used by OVH to nat requests on your ip lb to your backends. You must ensure that your backends are not part of a network that overlap with this one.
@@ -155,14 +155,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicenseWindows(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicenseWindows(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * Windows licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicenseWindows(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicenseWindows(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -259,14 +259,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicensePlesk(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicensePlesk(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * Plesk licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicensePlesk(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicensePlesk(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -304,7 +304,7 @@ public interface Ip {
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpReverse(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpReverse(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -345,21 +345,21 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicenseWorklight(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicenseWorklight(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * WorkLight licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicenseWorklight(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicenseWorklight(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Ip under game anti-ddos
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpGame(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpGame(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -400,7 +400,7 @@ public interface Ip {
 	 * @param zone one of your ip loadbalancing's zone
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	java.lang.String getLoadBalancingServiceNameProbeIp(java.lang.String zone, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getLoadBalancingServiceNameProbeIp(java.lang.String zone, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -450,14 +450,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicenseSqlserver(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicenseSqlserver(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * SQL Server licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicenseSqlserver(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicenseSqlserver(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Add target for reverse delegation on IPv6 subnet
@@ -473,14 +473,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicenseDirectadmin(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicenseDirectadmin(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * DirectAdmin licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicenseDirectadmin(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicenseDirectadmin(java.lang.String ip) throws java.io.IOException;
 
 
 	/**
@@ -510,13 +510,13 @@ public interface Ip {
 	 * @param type Filter the value of type property (=)
 	 * @param description Filter the value of description property (like)
 	*/
-	java.lang.String getIp(java.lang.String ip, java.lang.String routedToServiceName, java.lang.String type, java.lang.String description) throws java.io.IOException;
+	java.lang.String[] getIp(java.lang.String ip, java.lang.String routedToServiceName, java.lang.String type, java.lang.String description) throws java.io.IOException;
 
 	/**
 	 * Your OVH IPs
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getIp() throws java.io.IOException;
+	java.lang.String[] getIp() throws java.io.IOException;
 
 	/**
 	 * Import your own ssl certificate on your IP load balancing. Ssl option is needed to use this url.
@@ -562,7 +562,7 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipOnMitigation null
 	*/
-	net.zyuiop.ovhapi.api.objects.ip.MitigationStats getIpMitigationIpOnMitigationStats(java.util.Date to, java.util.Date from, java.lang.String scale, java.lang.String ip, java.lang.String ipOnMitigation) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.ip.MitigationStats[] getIpMitigationIpOnMitigationStats(java.util.Date to, java.util.Date from, java.lang.String scale, java.lang.String ip, java.lang.String ipOnMitigation) throws java.io.IOException;
 
 	/**
 	 * AntiDDOS option. Get top stream on your ip on a specific timestamp
@@ -572,7 +572,7 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipOnMitigation null
 	*/
-	net.zyuiop.ovhapi.api.objects.ip.MitigationDetailedStats getIpMitigationIpOnMitigationTopStream(java.util.Date date, java.lang.String scale, java.lang.String ip, java.lang.String ipOnMitigation) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.ip.MitigationDetailedStats[] getIpMitigationIpOnMitigationTopStream(java.util.Date date, java.lang.String scale, java.lang.String ip, java.lang.String ipOnMitigation) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -621,20 +621,20 @@ public interface Ip {
 	 * @param auto Filter the value of auto property (=)
 	 * @param state Filter the value of state property (=)
 	*/
-	java.lang.String getIpMitigation(java.lang.String ip, boolean auto, java.lang.String state) throws java.io.IOException;
+	java.lang.String[] getIpMitigation(java.lang.String ip, boolean auto, java.lang.String state) throws java.io.IOException;
 
 	/**
 	 * Ip under mitigation
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpMitigation(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpMitigation(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLoadBalancing() throws java.io.IOException;
+	java.lang.String[] getLoadBalancing() throws java.io.IOException;
 
 	/**
 	 * Cpanel licenses associated to this IP
@@ -642,14 +642,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicenseCpanel(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicenseCpanel(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * Cpanel licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicenseCpanel(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicenseCpanel(java.lang.String ip) throws java.io.IOException;
 
 
 	/**
@@ -700,7 +700,7 @@ public interface Ip {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	java.lang.String getLoadBalancingServiceNameBackend(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getLoadBalancingServiceNameBackend(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -715,7 +715,7 @@ public interface Ip {
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpDelegation(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpDelegation(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * IP tasks
@@ -755,7 +755,7 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipSpamming IP address which is sending spam
 	*/
-	net.zyuiop.ovhapi.api.objects.ip.SpamStats getIpSpamIpSpammingStats(java.util.Date to, java.util.Date from, java.lang.String ip, java.lang.String ipSpamming) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.ip.SpamStats[] getIpSpamIpSpammingStats(java.util.Date to, java.util.Date from, java.lang.String ip, java.lang.String ipSpamming) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -780,14 +780,14 @@ public interface Ip {
 	 * @param state Filter the value of state property (=)
 	 * @param enabled Filter the value of enabled property (=)
 	*/
-	java.lang.String getIpFirewall(java.lang.String ip, java.lang.String state, boolean enabled) throws java.io.IOException;
+	java.lang.String[] getIpFirewall(java.lang.String ip, java.lang.String state, boolean enabled) throws java.io.IOException;
 
 	/**
 	 * Ip under firewall
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpFirewall(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpFirewall(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * ARP blocked IP
@@ -795,14 +795,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param state Filter the value of state property (=)
 	*/
-	java.lang.String getIpArp(java.lang.String ip, java.lang.String state) throws java.io.IOException;
+	java.lang.String[] getIpArp(java.lang.String ip, java.lang.String state) throws java.io.IOException;
 
 	/**
 	 * ARP blocked IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpArp(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpArp(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Virtuozzo licenses associated to this IP
@@ -810,14 +810,14 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicenseVirtuozzo(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicenseVirtuozzo(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * Virtuozzo licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicenseVirtuozzo(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicenseVirtuozzo(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -833,7 +833,7 @@ public interface Ip {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	java.lang.String getLoadBalancingServiceNameAllowedBackends(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getLoadBalancingServiceNameAllowedBackends(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Set or unset the backend as a backup of another backend. Requests will be directed to the backup only if the main backend is in probe fail
@@ -860,13 +860,13 @@ public interface Ip {
 	 * @param ip null
 	 * @param ipAddress Filter the value of ipAddress property (=)
 	*/
-	java.lang.String getIpLicenseCloudLinux(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
+	java.lang.String[] getIpLicenseCloudLinux(java.lang.String ip, java.lang.String ipAddress) throws java.io.IOException;
 
 	/**
 	 * Cloud Linux licenses associated to this IP
 	 * Facultative parameters ? false
 	 * @param ip null
 	*/
-	java.lang.String getIpLicenseCloudLinux(java.lang.String ip) throws java.io.IOException;
+	java.lang.String[] getIpLicenseCloudLinux(java.lang.String ip) throws java.io.IOException;
 
 }

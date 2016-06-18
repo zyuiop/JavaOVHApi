@@ -168,7 +168,7 @@ public interface Exchange {
 	 * @param exchangeService The internal name of your exchange service
 	 * @param primaryEmailAddress Default email for this mailbox
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceAccountPrimaryEmailAddressAlias(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String primaryEmailAddress) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceAccountPrimaryEmailAddressAlias(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String primaryEmailAddress) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -308,7 +308,7 @@ public interface Exchange {
 	 * @param exchangeService The internal name of your exchange service
 	 * @param mailingListAddress The mailing list address
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceMailingListMailingListAddressAlias(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String mailingListAddress) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceMailingListMailingListAddressAlias(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String mailingListAddress) throws java.io.IOException;
 
 	/**
 	 * Allow another user to send mails from this shared mailbox
@@ -373,7 +373,7 @@ public interface Exchange {
 	 * @param exchangeService The internal name of your exchange service
 	 * @param sharedEmailAddress Filter the value of sharedEmailAddress property (like)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceSharedAccount(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String sharedEmailAddress) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceSharedAccount(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String sharedEmailAddress) throws java.io.IOException;
 
 	/**
 	 * Shared accounts associated to this exchange service
@@ -381,7 +381,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceSharedAccount(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceSharedAccount(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -399,7 +399,7 @@ public interface Exchange {
 	 * @param exchangeService The internal name of your exchange service
 	 * @param path Filter the value of path property (like)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServicePublicFolder(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String path) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServicePublicFolder(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String path) throws java.io.IOException;
 
 	/**
 	 * Public folders associated to this service
@@ -407,7 +407,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServicePublicFolder(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServicePublicFolder(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Public folder permission
@@ -532,7 +532,7 @@ public interface Exchange {
 	 * @param outlookLanguage Language version of outlook
 	 * @param outlookVersion OS version of outlook
 	*/
-	net.zyuiop.ovhapi.api.objects.email.exchange.OutlookVersions getOrganizationNameServiceExchangeServiceOutlookAvailability(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String outlookLanguage, java.lang.String outlookVersion) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.exchange.OutlookVersions[] getOrganizationNameServiceExchangeServiceOutlookAvailability(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String outlookLanguage, java.lang.String outlookVersion) throws java.io.IOException;
 
 	/**
 	 * Show available outlooks
@@ -540,7 +540,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	net.zyuiop.ovhapi.api.objects.email.exchange.OutlookVersions getOrganizationNameServiceExchangeServiceOutlookAvailability(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.exchange.OutlookVersions[] getOrganizationNameServiceExchangeServiceOutlookAvailability(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Renew SSL if it will expire in next 30 days
@@ -569,7 +569,7 @@ public interface Exchange {
 	 * @param IMEI Filter the value of IMEI property (like)
 	 * @param deviceState Filter the value of deviceState property (=)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceDevice(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String identity, java.lang.String IMEI, java.lang.String deviceState) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceDevice(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String identity, java.lang.String IMEI, java.lang.String deviceState) throws java.io.IOException;
 
 	/**
 	 * List of your ActiveSync devices registered on this Exchange service
@@ -577,7 +577,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceDevice(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceDevice(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Delete allowed user for sendAs
@@ -605,7 +605,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceDcvEmails(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceDcvEmails(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -703,7 +703,7 @@ public interface Exchange {
 	 * @param toDate Get active licenses until date
 	 * @param fromDate Get active licenses since date 
 	*/
-	net.zyuiop.ovhapi.api.objects.email.exchange.DailyLicense getOrganizationNameServiceExchangeServiceLicense(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String license, java.util.Date toDate, java.util.Date fromDate) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.exchange.DailyLicense[] getOrganizationNameServiceExchangeServiceLicense(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String license, java.util.Date toDate, java.util.Date fromDate) throws java.io.IOException;
 
 	/**
 	 * Get active licenses for specific period of time
@@ -711,7 +711,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	net.zyuiop.ovhapi.api.objects.email.exchange.DailyLicense getOrganizationNameServiceExchangeServiceLicense(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.exchange.DailyLicense[] getOrganizationNameServiceExchangeServiceLicense(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -844,7 +844,7 @@ public interface Exchange {
 	 * @param accountLicense Filter the value of accountLicense property (=)
 	 * @param id Filter the value of id property (like)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceAccount(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String primaryEmailAddress, java.lang.String accountLicense, long id) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceAccount(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String primaryEmailAddress, java.lang.String accountLicense, long id) throws java.io.IOException;
 
 	/**
 	 * Accounts associated to this exchange service
@@ -852,7 +852,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceAccount(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceAccount(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Resource account associated to this service
@@ -861,7 +861,7 @@ public interface Exchange {
 	 * @param exchangeService The internal name of your exchange service
 	 * @param resourceEmailAddress Filter the value of resourceEmailAddress property (like)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceResourceAccount(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String resourceEmailAddress) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceResourceAccount(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String resourceEmailAddress) throws java.io.IOException;
 
 	/**
 	 * Resource account associated to this service
@@ -869,7 +869,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceResourceAccount(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceResourceAccount(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * External contacts for this service
@@ -882,7 +882,7 @@ public interface Exchange {
 	 * @param displayName Filter the value of displayName property (like)
 	 * @param externalEmailAddress Filter the value of externalEmailAddress property (like)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceExternalContact(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String firstName, long id, java.lang.String lastName, java.lang.String displayName, java.lang.String externalEmailAddress) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceExternalContact(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String firstName, long id, java.lang.String lastName, java.lang.String displayName, java.lang.String externalEmailAddress) throws java.io.IOException;
 
 	/**
 	 * External contacts for this service
@@ -890,7 +890,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceExternalContact(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceExternalContact(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -979,7 +979,7 @@ public interface Exchange {
 	 * Facultative parameters ? false
 	 * @param organizationName The internal name of your exchange organization
 	*/
-	java.lang.String getOrganizationNameService(java.lang.String organizationName) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameService(java.lang.String organizationName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -1131,7 +1131,7 @@ public interface Exchange {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getEmailExchange() throws java.io.IOException;
+	java.lang.String[] getEmailExchange() throws java.io.IOException;
 
 	/**
 	 * Pending task for this mailbox
@@ -1326,7 +1326,7 @@ public interface Exchange {
 	 * @param main Filter the value of main property (like)
 	 * @param state Filter the value of state property (=)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceDomain(java.lang.String organizationName, java.lang.String exchangeService, boolean main, java.lang.String state) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceDomain(java.lang.String organizationName, java.lang.String exchangeService, boolean main, java.lang.String state) throws java.io.IOException;
 
 	/**
 	 * Domains associated to this service
@@ -1334,7 +1334,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceDomain(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceDomain(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1353,7 +1353,7 @@ public interface Exchange {
 	 * @param exchangeService The internal name of your exchange service
 	 * @param mailingListAddress Filter the value of mailingListAddress property (like)
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceMailingList(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String mailingListAddress) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceMailingList(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String mailingListAddress) throws java.io.IOException;
 
 	/**
 	 * Mailing list for this service
@@ -1361,7 +1361,7 @@ public interface Exchange {
 	 * @param organizationName The internal name of your exchange organization
 	 * @param exchangeService The internal name of your exchange service
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceMailingList(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceMailingList(java.lang.String organizationName, java.lang.String exchangeService) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1445,7 +1445,7 @@ public interface Exchange {
 	 * @param exchangeService The internal name of your exchange service
 	 * @param domainName Domain name
 	*/
-	java.lang.String getOrganizationNameServiceExchangeServiceDomainDomainNameDisclaimerAttribute(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String domainName) throws java.io.IOException;
+	java.lang.String[] getOrganizationNameServiceExchangeServiceDomainDomainNameDisclaimerAttribute(java.lang.String organizationName, java.lang.String exchangeService, java.lang.String domainName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties

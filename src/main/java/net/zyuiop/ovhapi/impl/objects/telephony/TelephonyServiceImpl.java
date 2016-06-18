@@ -12,10 +12,10 @@ public class TelephonyServiceImpl implements TelephonyService {
 	private java.lang.String serviceName;
 	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOutplan;
 	private java.lang.String description;
-	private java.lang.String properties;
+	private java.lang.String[] properties;
 	private java.lang.String serviceType;
 	private long simultaneousLines;
-	private java.lang.String offers;
+	private java.lang.String[] offers;
 
 	public TelephonyServiceImpl() {
 	}
@@ -85,15 +85,15 @@ public class TelephonyServiceImpl implements TelephonyService {
 		return this;
 	} 
 
-	public java.lang.String getProperties() { 
+	public java.lang.String[] getProperties() { 
 		return this.properties;
 	} 
 
-	public void setProperties(java.lang.String properties) { 
+	public void setProperties(java.lang.String[] properties) { 
 		this.properties = properties;
 	} 
 
-	public TelephonyServiceImpl properties(java.lang.String properties) { 
+	public TelephonyServiceImpl properties(java.lang.String[] properties) { 
 		this.properties = properties;
 		return this;
 	} 
@@ -124,15 +124,15 @@ public class TelephonyServiceImpl implements TelephonyService {
 		return this;
 	} 
 
-	public java.lang.String getOffers() { 
+	public java.lang.String[] getOffers() { 
 		return this.offers;
 	} 
 
-	public void setOffers(java.lang.String offers) { 
+	public void setOffers(java.lang.String[] offers) { 
 		this.offers = offers;
 	} 
 
-	public TelephonyServiceImpl offers(java.lang.String offers) { 
+	public TelephonyServiceImpl offers(java.lang.String[] offers) { 
 		this.offers = offers;
 		return this;
 	} 

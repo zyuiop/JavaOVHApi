@@ -44,6 +44,6 @@ public interface AccessDiagnostic {
 	/**
 	 * @return Test details by line
 	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic getLineDetails(); 
+	net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic[] getLineDetails(); 
 
 }

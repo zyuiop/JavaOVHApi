@@ -9,7 +9,7 @@ public class IpInfoImpl implements IpInfo {
 
 	private java.lang.String network;
 	private java.lang.String gateway;
-	private java.lang.String reservedAddresses;
+	private java.lang.String[] reservedAddresses;
 
 	public IpInfoImpl() {
 	}
@@ -40,15 +40,15 @@ public class IpInfoImpl implements IpInfo {
 		return this;
 	} 
 
-	public java.lang.String getReservedAddresses() { 
+	public java.lang.String[] getReservedAddresses() { 
 		return this.reservedAddresses;
 	} 
 
-	public void setReservedAddresses(java.lang.String reservedAddresses) { 
+	public void setReservedAddresses(java.lang.String[] reservedAddresses) { 
 		this.reservedAddresses = reservedAddresses;
 	} 
 
-	public IpInfoImpl reservedAddresses(java.lang.String reservedAddresses) { 
+	public IpInfoImpl reservedAddresses(java.lang.String[] reservedAddresses) { 
 		this.reservedAddresses = reservedAddresses;
 		return this;
 	} 

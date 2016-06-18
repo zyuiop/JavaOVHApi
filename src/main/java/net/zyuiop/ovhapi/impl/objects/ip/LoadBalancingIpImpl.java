@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.ip.LoadBalancingIp;
 public class LoadBalancingIpImpl implements LoadBalancingIp { 
 
 	private java.lang.String ssl;
-	private java.lang.String zone;
+	private java.lang.String[] zone;
 	private java.lang.String ipLoadBalancing;
 	private java.lang.String serviceName;
 	private java.lang.String state;
@@ -30,15 +30,15 @@ public class LoadBalancingIpImpl implements LoadBalancingIp {
 		return this;
 	} 
 
-	public java.lang.String getZone() { 
+	public java.lang.String[] getZone() { 
 		return this.zone;
 	} 
 
-	public void setZone(java.lang.String zone) { 
+	public void setZone(java.lang.String[] zone) { 
 		this.zone = zone;
 	} 
 
-	public LoadBalancingIpImpl zone(java.lang.String zone) { 
+	public LoadBalancingIpImpl zone(java.lang.String[] zone) { 
 		this.zone = zone;
 		return this;
 	} 

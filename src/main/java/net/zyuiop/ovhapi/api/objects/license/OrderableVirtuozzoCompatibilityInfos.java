@@ -14,11 +14,11 @@ public interface OrderableVirtuozzoCompatibilityInfos {
 	/**
 	 * @return null
 	 */
-	java.lang.String getCompliantContainers(); 
+	java.lang.String[] getCompliantContainers(); 
 
 	/**
 	 * @return null
 	 */
-	java.lang.String getPotentialProblems(); 
+	java.lang.String[] getPotentialProblems(); 
 
 }

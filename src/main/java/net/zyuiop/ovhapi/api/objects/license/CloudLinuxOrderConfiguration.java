@@ -14,6 +14,6 @@ public interface CloudLinuxOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableCloudLinuxCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderableCloudLinuxCompatibilityInfos[] getOrderableVersions(); 
 
 }

@@ -9,7 +9,7 @@ public class CatalogImpl implements Catalog {
 
 	private java.lang.String id;
 	private java.lang.String type;
-	private net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl endpoints;
+	private net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl[] endpoints;
 
 	public CatalogImpl() {
 	}
@@ -40,15 +40,15 @@ public class CatalogImpl implements Catalog {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl getEndpoints() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl[] getEndpoints() { 
 		return this.endpoints;
 	} 
 
-	public void setEndpoints(net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl endpoints) { 
+	public void setEndpoints(net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl[] endpoints) { 
 		this.endpoints = endpoints;
 	} 
 
-	public CatalogImpl endpoints(net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl endpoints) { 
+	public CatalogImpl endpoints(net.zyuiop.ovhapi.impl.objects.cloud.identity.EndpointImpl[] endpoints) { 
 		this.endpoints = endpoints;
 		return this;
 	} 

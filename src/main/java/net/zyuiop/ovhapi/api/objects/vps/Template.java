@@ -29,7 +29,7 @@ public interface Template {
 	/**
 	 * @return null
 	 */
-	java.lang.String getAvailableLanguage(); 
+	java.lang.String[] getAvailableLanguage(); 
 
 	/**
 	 * @return null

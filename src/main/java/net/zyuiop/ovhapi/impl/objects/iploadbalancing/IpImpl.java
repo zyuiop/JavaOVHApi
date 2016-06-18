@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.iploadbalancing.Ip;
 
 public class IpImpl implements Ip { 
 
-	private java.lang.String zone;
+	private java.lang.String[] zone;
 	private java.lang.String serviceName;
 	private java.lang.String ipLoadbalancing;
 	private java.lang.String state;
@@ -15,15 +15,15 @@ public class IpImpl implements Ip {
 	public IpImpl() {
 	}
 
-	public java.lang.String getZone() { 
+	public java.lang.String[] getZone() { 
 		return this.zone;
 	} 
 
-	public void setZone(java.lang.String zone) { 
+	public void setZone(java.lang.String[] zone) { 
 		this.zone = zone;
 	} 
 
-	public IpImpl zone(java.lang.String zone) { 
+	public IpImpl zone(java.lang.String[] zone) { 
 		this.zone = zone;
 		return this;
 	} 

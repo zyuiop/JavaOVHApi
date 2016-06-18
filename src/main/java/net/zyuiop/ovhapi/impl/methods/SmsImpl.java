@@ -18,6 +18,9 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Outgoing getServiceNameUsersLoginOutgoingId(java.lang.String serviceName, java.lang.String login, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/outgoing/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.OutgoingImpl.class);
@@ -33,19 +36,18 @@ public class SmsImpl implements Sms {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getServiceNameSenders(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameSenders(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/senders";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void putServiceNameSendersSender(net.zyuiop.ovhapi.api.objects.sms.Sender param0, java.lang.String serviceName, java.lang.String sender) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/senders/" + sender + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -63,6 +65,8 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String status) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/task";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "status=" + status;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -71,6 +75,7 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/task";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -99,6 +104,8 @@ public class SmsImpl implements Sms {
 	public java.lang.String getServiceNameReceiversSlotIdCsv(java.lang.String serviceName, long slotId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/receivers/" + slotId + "/csv";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "slotId=" + slotId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -107,6 +114,11 @@ public class SmsImpl implements Sms {
 	public java.lang.String getServiceNameDocument(java.lang.String wayType, java.lang.String serviceName, java.lang.String tag, java.util.Date creationDatetimeTo, java.util.Date creationDatetimeFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/document";
 		String __data = "?";
+		__data += "wayType=" + wayType;
+		__data += "serviceName=" + serviceName;
+		__data += "tag=" + tag;
+		__data += "creationDatetime.to=" + creationDatetimeTo;
+		__data += "creationDatetime.from=" + creationDatetimeFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -115,6 +127,8 @@ public class SmsImpl implements Sms {
 	public java.lang.String getServiceNameDocument(java.lang.String wayType, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/document";
 		String __data = "?";
+		__data += "wayType=" + wayType;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -135,6 +149,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Hlr getServiceNameOutgoingIdHlr(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/outgoing/" + id + "/hlr";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.HlrImpl.class);
@@ -182,33 +198,38 @@ public class SmsImpl implements Sms {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.SmsSendingReportImpl.class);
 	}
 
-	public java.lang.String getServiceNameUsers(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameUsers(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNameTemplatesControl(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameTemplatesControl(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/templatesControl";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getSms() throws java.io.IOException {
+	public java.lang.String[] getSms() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/sms";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.sms.Incoming getServiceNameUsersLoginIncomingId(java.lang.String serviceName, java.lang.String login, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/incoming/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.IncomingImpl.class);
@@ -228,6 +249,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Blacklist getServiceNameBlacklistsNumber(java.lang.String serviceName, java.lang.String number) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/blacklists/" + number + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "number=" + number;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.BlacklistImpl.class);
@@ -245,6 +268,7 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameReceivers(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/receivers";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -253,6 +277,7 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Account getServiceName(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.AccountImpl.class);
@@ -261,6 +286,11 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameIncoming(java.lang.String serviceName, java.lang.String sender, java.lang.String tag, java.util.Date creationDatetimeTo, java.util.Date creationDatetimeFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/incoming";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "sender=" + sender;
+		__data += "tag=" + tag;
+		__data += "creationDatetime.to=" + creationDatetimeTo;
+		__data += "creationDatetime.from=" + creationDatetimeFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -269,6 +299,7 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameIncoming(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/incoming";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -303,9 +334,7 @@ public class SmsImpl implements Sms {
 
 	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/serviceInfos";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -314,6 +343,10 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameUsersLoginIncoming(java.lang.String serviceName, java.lang.String login, java.lang.String sender, java.lang.String tag) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/incoming";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "sender=" + sender;
+		__data += "tag=" + tag;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -322,6 +355,8 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameUsersLoginIncoming(java.lang.String serviceName, java.lang.String login) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/incoming";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -330,6 +365,9 @@ public class SmsImpl implements Sms {
 	public java.lang.String getServiceNameUsersLoginReceiversSlotIdCsv(java.lang.String serviceName, java.lang.String login, long slotId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/receivers/" + slotId + "/csv";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "slotId=" + slotId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -338,6 +376,12 @@ public class SmsImpl implements Sms {
 	public java.lang.String getServiceNameUsersLoginDocument(java.lang.String wayType, java.lang.String serviceName, java.lang.String login, java.lang.String tag, java.util.Date creationDatetimeTo, java.util.Date creationDatetimeFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/document";
 		String __data = "?";
+		__data += "wayType=" + wayType;
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "tag=" + tag;
+		__data += "creationDatetime.to=" + creationDatetimeTo;
+		__data += "creationDatetime.from=" + creationDatetimeFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -346,6 +390,9 @@ public class SmsImpl implements Sms {
 	public java.lang.String getServiceNameUsersLoginDocument(java.lang.String wayType, java.lang.String serviceName, java.lang.String login) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/document";
 		String __data = "?";
+		__data += "wayType=" + wayType;
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -360,12 +407,13 @@ public class SmsImpl implements Sms {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getServiceNameBlacklists(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameBlacklists(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/blacklists";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void postServiceNameTemplatesControl(java.lang.String name, java.lang.String activity, java.lang.String message, java.lang.String serviceName, java.lang.String reason, java.lang.String description) throws java.io.IOException {
@@ -397,6 +445,8 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameUsersLoginReceivers(java.lang.String serviceName, java.lang.String login) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/receivers";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -405,6 +455,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Sender getServiceNameSendersSender(java.lang.String serviceName, java.lang.String sender) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/senders/" + sender + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "sender=" + sender;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.SenderImpl.class);
@@ -412,9 +464,7 @@ public class SmsImpl implements Sms {
 
 	public void putServiceNameUsersLogin(net.zyuiop.ovhapi.api.objects.sms.User param0, java.lang.String serviceName, java.lang.String login) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -423,6 +473,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Job getServiceNameJobsId(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/jobs/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.JobImpl.class);
@@ -440,6 +492,9 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Hlr getServiceNameUsersLoginOutgoingIdHlr(java.lang.String serviceName, java.lang.String login, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/outgoing/" + id + "/hlr";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.HlrImpl.class);
@@ -448,6 +503,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Receiver getServiceNameReceiversSlotId(java.lang.String serviceName, long slotId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/receivers/" + slotId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "slotId=" + slotId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.ReceiverImpl.class);
@@ -456,6 +513,7 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/serviceInfos";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
@@ -495,6 +553,9 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Job getServiceNameUsersLoginJobsId(java.lang.String serviceName, java.lang.String login, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/jobs/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.JobImpl.class);
@@ -503,6 +564,8 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameUsersLoginJobs(java.lang.String serviceName, java.lang.String login) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/jobs";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -511,22 +574,34 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.User getServiceNameUsersLogin(java.lang.String serviceName, java.lang.String login) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.UserImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.sms.Exception getServiceNameExceptions(java.lang.String receiver, java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.sms.Exception[] getServiceNameExceptions(java.lang.String receiver, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/exceptions";
 		String __data = "?";
+		__data += "receiver=" + receiver;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.ExceptionImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.ExceptionImpl[].class);
 	}
 
 	public long[] getServiceNameUsersLoginOutgoing(java.lang.String serviceName, java.lang.String login, java.lang.String receiver, long differedDelivery, long deliveryReceipt, long ptt, java.lang.String sender, java.lang.String tag) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/outgoing";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "receiver=" + receiver;
+		__data += "differedDelivery=" + differedDelivery;
+		__data += "deliveryReceipt=" + deliveryReceipt;
+		__data += "ptt=" + ptt;
+		__data += "sender=" + sender;
+		__data += "tag=" + tag;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -535,6 +610,8 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameUsersLoginOutgoing(java.lang.String serviceName, java.lang.String login) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/outgoing";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -543,6 +620,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.TemplateControl getServiceNameTemplatesControlName(java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/templatesControl/" + name + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "name=" + name;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.TemplateControlImpl.class);
@@ -563,6 +642,15 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameOutgoing(java.lang.String serviceName, java.lang.String receiver, long differedDelivery, long deliveryReceipt, java.util.Date creationDatetimeFrom, long ptt, java.lang.String sender, java.lang.String tag, java.util.Date creationDatetimeTo) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/outgoing";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "receiver=" + receiver;
+		__data += "differedDelivery=" + differedDelivery;
+		__data += "deliveryReceipt=" + deliveryReceipt;
+		__data += "creationDatetime.from=" + creationDatetimeFrom;
+		__data += "ptt=" + ptt;
+		__data += "sender=" + sender;
+		__data += "tag=" + tag;
+		__data += "creationDatetime.to=" + creationDatetimeTo;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -571,6 +659,7 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameOutgoing(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/outgoing";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -578,9 +667,7 @@ public class SmsImpl implements Sms {
 
 	public void putServiceName(net.zyuiop.ovhapi.api.objects.sms.Account param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -607,6 +694,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Outgoing getServiceNameOutgoingId(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/outgoing/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.OutgoingImpl.class);
@@ -615,6 +704,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Task getServiceNameTaskTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/task/" + taskId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "taskId=" + taskId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.TaskImpl.class);
@@ -623,6 +714,7 @@ public class SmsImpl implements Sms {
 	public long[] getServiceNameJobs(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/jobs";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -664,6 +756,9 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Receiver getServiceNameUsersLoginReceiversSlotId(java.lang.String serviceName, java.lang.String login, long slotId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/users/" + login + "/receivers/" + slotId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "login=" + login;
+		__data += "slotId=" + slotId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.ReceiverImpl.class);
@@ -678,17 +773,22 @@ public class SmsImpl implements Sms {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.sms.PackOffer getServiceNameSeeOffers(java.lang.String countryDestination, java.lang.String countryCurrencyPrice, long quantity, java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.sms.PackOffer[] getServiceNameSeeOffers(java.lang.String countryDestination, java.lang.String countryCurrencyPrice, long quantity, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/seeOffers";
 		String __data = "?";
+		__data += "countryDestination=" + countryDestination;
+		__data += "countryCurrencyPrice=" + countryCurrencyPrice;
+		__data += "quantity=" + quantity;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.PackOfferImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.PackOfferImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.sms.PttDetails getPtts(long ptt) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/ptts";
 		String __data = "?";
+		__data += "ptt=" + ptt;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.PttDetailsImpl.class);
@@ -697,6 +797,8 @@ public class SmsImpl implements Sms {
 	public net.zyuiop.ovhapi.api.objects.sms.Incoming getServiceNameIncomingId(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/sms/" + serviceName + "/incoming/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.sms.IncomingImpl.class);

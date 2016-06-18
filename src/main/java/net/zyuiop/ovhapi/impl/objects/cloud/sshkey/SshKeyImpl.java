@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey;
 
 public class SshKeyImpl implements SshKey { 
 
-	private java.lang.String regions;
+	private java.lang.String[] regions;
 	private java.lang.String name;
 	private java.lang.String id;
 	private java.lang.String publicKey;
@@ -15,15 +15,15 @@ public class SshKeyImpl implements SshKey {
 	public SshKeyImpl() {
 	}
 
-	public java.lang.String getRegions() { 
+	public java.lang.String[] getRegions() { 
 		return this.regions;
 	} 
 
-	public void setRegions(java.lang.String regions) { 
+	public void setRegions(java.lang.String[] regions) { 
 		this.regions = regions;
 	} 
 
-	public SshKeyImpl regions(java.lang.String regions) { 
+	public SshKeyImpl regions(java.lang.String[] regions) { 
 		this.regions = regions;
 		return this;
 	} 

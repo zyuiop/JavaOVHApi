@@ -24,7 +24,7 @@ public interface User {
 	/**
 	 * @return null
 	 */
-	java.lang.String getIpRestrictions(); 
+	java.lang.String[] getIpRestrictions(); 
 
 	/**
 	 * @return null

@@ -9,7 +9,7 @@ public interface DomainTaskArgument {
 	/**
 	 * @return List of impacted field names
 	 */
-	java.lang.String getFields(); 
+	java.lang.String[] getFields(); 
 
 	/**
 	 * @return Value of the argument

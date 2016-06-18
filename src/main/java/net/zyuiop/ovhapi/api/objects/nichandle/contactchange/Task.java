@@ -19,7 +19,7 @@ public interface Task {
 	/**
 	 * @return Contacts to be changed
 	 */
-	java.lang.String getContactTypes(); 
+	java.lang.String[] getContactTypes(); 
 
 	/**
 	 * @return Current state of the request

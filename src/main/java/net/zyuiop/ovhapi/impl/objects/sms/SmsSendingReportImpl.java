@@ -8,9 +8,9 @@ import net.zyuiop.ovhapi.api.objects.sms.SmsSendingReport;
 public class SmsSendingReportImpl implements SmsSendingReport { 
 
 	private double totalCreditsRemoved;
-	private java.lang.String invalidReceivers;
+	private java.lang.String[] invalidReceivers;
 	private long[] ids;
-	private java.lang.String validReceivers;
+	private java.lang.String[] validReceivers;
 
 	public SmsSendingReportImpl() {
 	}
@@ -28,15 +28,15 @@ public class SmsSendingReportImpl implements SmsSendingReport {
 		return this;
 	} 
 
-	public java.lang.String getInvalidReceivers() { 
+	public java.lang.String[] getInvalidReceivers() { 
 		return this.invalidReceivers;
 	} 
 
-	public void setInvalidReceivers(java.lang.String invalidReceivers) { 
+	public void setInvalidReceivers(java.lang.String[] invalidReceivers) { 
 		this.invalidReceivers = invalidReceivers;
 	} 
 
-	public SmsSendingReportImpl invalidReceivers(java.lang.String invalidReceivers) { 
+	public SmsSendingReportImpl invalidReceivers(java.lang.String[] invalidReceivers) { 
 		this.invalidReceivers = invalidReceivers;
 		return this;
 	} 
@@ -54,15 +54,15 @@ public class SmsSendingReportImpl implements SmsSendingReport {
 		return this;
 	} 
 
-	public java.lang.String getValidReceivers() { 
+	public java.lang.String[] getValidReceivers() { 
 		return this.validReceivers;
 	} 
 
-	public void setValidReceivers(java.lang.String validReceivers) { 
+	public void setValidReceivers(java.lang.String[] validReceivers) { 
 		this.validReceivers = validReceivers;
 	} 
 
-	public SmsSendingReportImpl validReceivers(java.lang.String validReceivers) { 
+	public SmsSendingReportImpl validReceivers(java.lang.String[] validReceivers) { 
 		this.validReceivers = validReceivers;
 		return this;
 	} 

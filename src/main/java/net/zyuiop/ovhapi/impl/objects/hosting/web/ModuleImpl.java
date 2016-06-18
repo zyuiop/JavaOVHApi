@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.hosting.web.Module;
 public class ModuleImpl implements Module { 
 
 	private java.lang.String language;
-	private net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl dependencies;
+	private net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl[] dependencies;
 	private java.lang.String path;
 	private long moduleId;
 	private java.lang.String targetUrl;
@@ -34,15 +34,15 @@ public class ModuleImpl implements Module {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl getDependencies() { 
+	public net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl[] getDependencies() { 
 		return this.dependencies;
 	} 
 
-	public void setDependencies(net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl dependencies) { 
+	public void setDependencies(net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl[] dependencies) { 
 		this.dependencies = dependencies;
 	} 
 
-	public ModuleImpl dependencies(net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl dependencies) { 
+	public ModuleImpl dependencies(net.zyuiop.ovhapi.impl.objects.hosting.web.module.DependencyTypeImpl[] dependencies) { 
 		this.dependencies = dependencies;
 		return this;
 	} 

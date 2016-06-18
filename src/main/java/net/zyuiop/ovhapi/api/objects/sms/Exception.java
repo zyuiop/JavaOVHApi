@@ -14,7 +14,7 @@ public interface Exception {
 	/**
 	 * @return The exception message
 	 */
-	java.lang.String getMessages(); 
+	java.lang.String[] getMessages(); 
 
 	/**
 	 * @return The type of routing restriction imposed by the operator

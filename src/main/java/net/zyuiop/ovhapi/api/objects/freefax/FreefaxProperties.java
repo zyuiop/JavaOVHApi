@@ -14,7 +14,7 @@ public interface FreefaxProperties {
 	/**
 	 * @return Email address to redirect fax response.
 	 */
-	java.lang.String getRedirectionEmail(); 
+	java.lang.String[] getRedirectionEmail(); 
 
 	/**
 	 * @return Freefax number in international format

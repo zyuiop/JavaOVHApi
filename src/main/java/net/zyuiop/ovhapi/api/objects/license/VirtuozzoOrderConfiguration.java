@@ -14,6 +14,6 @@ public interface VirtuozzoOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableVirtuozzoCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderableVirtuozzoCompatibilityInfos[] getOrderableVersions(); 
 
 }

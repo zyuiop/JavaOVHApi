@@ -78,7 +78,7 @@ public interface Router {
 	 * @param serviceName The internal name of your Router offer
 	 * @param peerServiceName Service name of the other side of this link
 	*/
-	java.lang.String getServiceNamePrivateLinkPeerServiceNameRoute(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePrivateLinkPeerServiceNameRoute(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException;
 
 	/**
 	 * VPN associated with this Router
@@ -92,7 +92,7 @@ public interface Router {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Router offer
 	*/
-	java.lang.String getServiceNamePrivateLink(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePrivateLink(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Add a new Private Link to your Router service
@@ -199,7 +199,7 @@ public interface Router {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getRouter() throws java.io.IOException;
+	java.lang.String[] getRouter() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -213,7 +213,7 @@ public interface Router {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Router offer
 	*/
-	java.lang.String getServiceNameNetwork(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameNetwork(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Remove this network from your router

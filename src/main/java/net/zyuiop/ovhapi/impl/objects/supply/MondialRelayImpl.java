@@ -19,7 +19,7 @@ public class MondialRelayImpl implements MondialRelay {
 	private java.lang.String id;
 	private java.lang.String address;
 	private double lng;
-	private net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl closing;
+	private net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl[] closing;
 
 	public MondialRelayImpl() {
 	}
@@ -180,15 +180,15 @@ public class MondialRelayImpl implements MondialRelay {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl getClosing() { 
+	public net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl[] getClosing() { 
 		return this.closing;
 	} 
 
-	public void setClosing(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl closing) { 
+	public void setClosing(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl[] closing) { 
 		this.closing = closing;
 	} 
 
-	public MondialRelayImpl closing(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl closing) { 
+	public MondialRelayImpl closing(net.zyuiop.ovhapi.impl.objects.supply.MondialRelayClosingPeriodImpl[] closing) { 
 		this.closing = closing;
 		return this;
 	} 

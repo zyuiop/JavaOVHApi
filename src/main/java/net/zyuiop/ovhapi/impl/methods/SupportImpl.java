@@ -74,6 +74,7 @@ public class SupportImpl implements Support {
 	public net.zyuiop.ovhapi.api.objects.support.Ticket getTicketsTicketId(long ticketId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/support/tickets/" + ticketId + "";
 		String __data = "?";
+		__data += "ticketId=" + ticketId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.support.TicketImpl.class);
@@ -82,6 +83,13 @@ public class SupportImpl implements Support {
 	public long[] getTickets(java.util.Date minCreationDate, java.lang.String subject, java.lang.String status, java.lang.String serviceName, java.util.Date maxCreationDate, java.lang.String category, java.lang.String product) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/support/tickets";
 		String __data = "?";
+		__data += "minCreationDate=" + minCreationDate;
+		__data += "subject=" + subject;
+		__data += "status=" + status;
+		__data += "serviceName=" + serviceName;
+		__data += "maxCreationDate=" + maxCreationDate;
+		__data += "category=" + category;
+		__data += "product=" + product;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -89,18 +97,19 @@ public class SupportImpl implements Support {
 
 	public long[] getTickets() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/support/tickets";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.support.Message getTicketsTicketIdMessages(long ticketId) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.support.Message[] getTicketsTicketIdMessages(long ticketId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/support/tickets/" + ticketId + "/messages";
 		String __data = "?";
+		__data += "ticketId=" + ticketId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.support.MessageImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.support.MessageImpl[].class);
 	}
 
 }

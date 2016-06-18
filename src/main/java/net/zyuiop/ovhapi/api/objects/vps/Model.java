@@ -14,7 +14,7 @@ public interface Model {
 	/**
 	 * @return null
 	 */
-	java.lang.String getDatacenter(); 
+	java.lang.String[] getDatacenter(); 
 
 	/**
 	 * @return null
@@ -39,7 +39,7 @@ public interface Model {
 	/**
 	 * @return null
 	 */
-	java.lang.String getAvailableOptions(); 
+	java.lang.String[] getAvailableOptions(); 
 
 	/**
 	 * @return null

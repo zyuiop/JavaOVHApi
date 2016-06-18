@@ -26,7 +26,7 @@ public interface CloudLinux {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLicenseCloudLinux() throws java.io.IOException;
+	java.lang.String[] getLicenseCloudLinux() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -56,7 +56,7 @@ public interface CloudLinux {
 	 * Facultative parameters ? false
 	 * @param ip Your license Ip
 	*/
-	net.zyuiop.ovhapi.api.objects.license.CloudLinuxOrderConfiguration getOrderableVersions(java.lang.String ip) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.license.CloudLinuxOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties

@@ -19,12 +19,12 @@ public interface Order {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.order.OrderDetail getDetails(); 
+	net.zyuiop.ovhapi.api.objects.order.OrderDetail[] getDetails(); 
 
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.order.Contract getContracts(); 
+	net.zyuiop.ovhapi.api.objects.order.Contract[] getContracts(); 
 
 	/**
 	 * @return null

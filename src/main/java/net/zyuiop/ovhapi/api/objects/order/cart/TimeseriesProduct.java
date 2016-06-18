@@ -19,6 +19,6 @@ public interface TimeseriesProduct {
 	/**
 	 * @return 
 	 */
-	net.zyuiop.ovhapi.api.objects.order.cart.TimeseriesPricing getPrices(); 
+	net.zyuiop.ovhapi.api.objects.order.cart.TimeseriesPricing[] getPrices(); 
 
 }

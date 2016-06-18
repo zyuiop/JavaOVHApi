@@ -39,7 +39,7 @@ public interface VPS {
 	/**
 	 * @return Ip blocks for OVH monitoring servers
 	 */
-	java.lang.String getMonitoringIpBlocks(); 
+	java.lang.String[] getMonitoringIpBlocks(); 
 
 	/**
 	 * @return Set KVM keyboard layout on VPS Cloud. Reboot your VPS after change

@@ -11,14 +11,14 @@ public interface PrivateDatabase {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
 	*/
-	java.lang.String getServiceNameConfigurations(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameConfigurations(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get the availables versions for this private database
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
 	*/
-	java.lang.String getServiceNameAvailableVersions(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAvailableVersions(java.lang.String serviceName) throws java.io.IOException;
 
 
 
@@ -53,7 +53,7 @@ public interface PrivateDatabase {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
 	*/
-	java.lang.String getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -68,7 +68,7 @@ public interface PrivateDatabase {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
 	*/
-	java.lang.String getServiceNameDatabase(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameDatabase(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Delete cron
@@ -116,7 +116,7 @@ public interface PrivateDatabase {
 	 * @param serviceName The internal name of your private database
 	 * @param userName User name used to connect on your databases
 	*/
-	java.lang.String getServiceNameUserUserNameGrant(java.lang.String serviceName, java.lang.String userName) throws java.io.IOException;
+	java.lang.String[] getServiceNameUserUserNameGrant(java.lang.String serviceName, java.lang.String userName) throws java.io.IOException;
 
 	/**
 	 * Launch a contact change procedure
@@ -139,7 +139,7 @@ public interface PrivateDatabase {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getHostingPrivateDatabase() throws java.io.IOException;
+	java.lang.String[] getHostingPrivateDatabase() throws java.io.IOException;
 
 
 
@@ -189,7 +189,7 @@ public interface PrivateDatabase {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
 	*/
-	java.lang.String getServiceNameConfigurationWhitelist(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameConfigurationWhitelist(java.lang.String serviceName) throws java.io.IOException;
 
 
 

@@ -14,7 +14,7 @@ public interface CommercialRange {
 	/**
 	 * @return The hypervisor versions compliant with this commercial Range
 	 */
-	java.lang.String getAllowedHypervisorVersions(); 
+	java.lang.String[] getAllowedHypervisorVersions(); 
 
 	/**
 	 * @return The range of this Datacenter in this Dedicated Cloud version
@@ -24,7 +24,7 @@ public interface CommercialRange {
 	/**
 	 * @return The list of NetworkRoles allowed for one user in this commercial range
 	 */
-	java.lang.String getAllowedNetworkRoles(); 
+	java.lang.String[] getAllowedNetworkRoles(); 
 
 	/**
 	 * @return The name of the dedicated Cloud version associated to this commercial range

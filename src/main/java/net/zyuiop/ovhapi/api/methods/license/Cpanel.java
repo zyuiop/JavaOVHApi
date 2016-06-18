@@ -11,7 +11,7 @@ public interface Cpanel {
 	 * Facultative parameters ? false
 	 * @param serviceName The name of your Cpanel license
 	*/
-	java.lang.String getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Terminate your service
@@ -33,7 +33,7 @@ public interface Cpanel {
 	 * Facultative parameters ? false
 	 * @param ip Your license Ip
 	*/
-	net.zyuiop.ovhapi.api.objects.license.CpanelOrderConfiguration getOrderableVersions(java.lang.String ip) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.license.CpanelOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -55,7 +55,7 @@ public interface Cpanel {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLicenseCpanel() throws java.io.IOException;
+	java.lang.String[] getLicenseCpanel() throws java.io.IOException;
 
 	/**
 	 * Get this object properties

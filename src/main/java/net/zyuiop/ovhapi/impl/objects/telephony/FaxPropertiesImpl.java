@@ -9,7 +9,7 @@ public class FaxPropertiesImpl implements FaxProperties {
 
 	private java.lang.String callNumber;
 	private java.lang.String fromName;
-	private java.lang.String redirectionEmail;
+	private java.lang.String[] redirectionEmail;
 	private java.lang.String faxQuality;
 	private long faxMaxCall;
 	private java.lang.String fromEmail;
@@ -44,15 +44,15 @@ public class FaxPropertiesImpl implements FaxProperties {
 		return this;
 	} 
 
-	public java.lang.String getRedirectionEmail() { 
+	public java.lang.String[] getRedirectionEmail() { 
 		return this.redirectionEmail;
 	} 
 
-	public void setRedirectionEmail(java.lang.String redirectionEmail) { 
+	public void setRedirectionEmail(java.lang.String[] redirectionEmail) { 
 		this.redirectionEmail = redirectionEmail;
 	} 
 
-	public FaxPropertiesImpl redirectionEmail(java.lang.String redirectionEmail) { 
+	public FaxPropertiesImpl redirectionEmail(java.lang.String[] redirectionEmail) { 
 		this.redirectionEmail = redirectionEmail;
 		return this;
 	} 

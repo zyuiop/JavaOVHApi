@@ -9,7 +9,7 @@ public interface Indy {
 	/**
 	 * @return AttachedDomain ids linked to this multidomain
 	 */
-	java.lang.String getAttachedDomains(); 
+	java.lang.String[] getAttachedDomains(); 
 
 	/**
 	 * @return Home directory

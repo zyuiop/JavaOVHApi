@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.DirectAdminOrderConfiguration;
 public class DirectAdminOrderConfigurationImpl implements DirectAdminOrderConfiguration { 
 
 	private java.lang.String serviceType;
-	private net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl orderableVersions;
+	private net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl[] orderableVersions;
 
 	public DirectAdminOrderConfigurationImpl() {
 	}
@@ -26,15 +26,15 @@ public class DirectAdminOrderConfigurationImpl implements DirectAdminOrderConfig
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl getOrderableVersions() { 
+	public net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl[] getOrderableVersions() { 
 		return this.orderableVersions;
 	} 
 
-	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl orderableVersions) { 
+	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl[] orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 	} 
 
-	public DirectAdminOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl orderableVersions) { 
+	public DirectAdminOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableDirectAdminCompatibilityInfosImpl[] orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 		return this;
 	} 

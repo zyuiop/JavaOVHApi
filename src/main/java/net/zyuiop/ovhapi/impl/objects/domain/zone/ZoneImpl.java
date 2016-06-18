@@ -9,7 +9,7 @@ public class ZoneImpl implements Zone {
 
 	private java.util.Date lastUpdate;
 	private boolean hasDnsAnycast;
-	private java.lang.String nameServers;
+	private java.lang.String[] nameServers;
 	private boolean dnssecSupported;
 
 	public ZoneImpl() {
@@ -41,15 +41,15 @@ public class ZoneImpl implements Zone {
 		return this;
 	} 
 
-	public java.lang.String getNameServers() { 
+	public java.lang.String[] getNameServers() { 
 		return this.nameServers;
 	} 
 
-	public void setNameServers(java.lang.String nameServers) { 
+	public void setNameServers(java.lang.String[] nameServers) { 
 		this.nameServers = nameServers;
 	} 
 
-	public ZoneImpl nameServers(java.lang.String nameServers) { 
+	public ZoneImpl nameServers(java.lang.String[] nameServers) { 
 		this.nameServers = nameServers;
 		return this;
 	} 

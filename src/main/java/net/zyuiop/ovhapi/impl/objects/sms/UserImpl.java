@@ -10,7 +10,7 @@ public class UserImpl implements User {
 	private net.zyuiop.ovhapi.impl.objects.sms.QuotaImpl quotaInformations;
 	private java.lang.String password;
 	private java.lang.String stopCallBack;
-	private java.lang.String ipRestrictions;
+	private java.lang.String[] ipRestrictions;
 	private net.zyuiop.ovhapi.impl.objects.sms.AlertThresholdImpl alertThresholdInformations;
 	private java.lang.String login;
 	private java.lang.String callBack;
@@ -57,15 +57,15 @@ public class UserImpl implements User {
 		return this;
 	} 
 
-	public java.lang.String getIpRestrictions() { 
+	public java.lang.String[] getIpRestrictions() { 
 		return this.ipRestrictions;
 	} 
 
-	public void setIpRestrictions(java.lang.String ipRestrictions) { 
+	public void setIpRestrictions(java.lang.String[] ipRestrictions) { 
 		this.ipRestrictions = ipRestrictions;
 	} 
 
-	public UserImpl ipRestrictions(java.lang.String ipRestrictions) { 
+	public UserImpl ipRestrictions(java.lang.String[] ipRestrictions) { 
 		this.ipRestrictions = ipRestrictions;
 		return this;
 	} 

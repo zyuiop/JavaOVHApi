@@ -7,34 +7,34 @@ import net.zyuiop.ovhapi.api.objects.dedicated.server.InstallTemplate;
 
 public class InstallTemplateImpl implements InstallTemplate { 
 
-	private java.lang.String ovh;
-	private java.lang.String personal;
+	private java.lang.String[] ovh;
+	private java.lang.String[] personal;
 
 	public InstallTemplateImpl() {
 	}
 
-	public java.lang.String getOvh() { 
+	public java.lang.String[] getOvh() { 
 		return this.ovh;
 	} 
 
-	public void setOvh(java.lang.String ovh) { 
+	public void setOvh(java.lang.String[] ovh) { 
 		this.ovh = ovh;
 	} 
 
-	public InstallTemplateImpl ovh(java.lang.String ovh) { 
+	public InstallTemplateImpl ovh(java.lang.String[] ovh) { 
 		this.ovh = ovh;
 		return this;
 	} 
 
-	public java.lang.String getPersonal() { 
+	public java.lang.String[] getPersonal() { 
 		return this.personal;
 	} 
 
-	public void setPersonal(java.lang.String personal) { 
+	public void setPersonal(java.lang.String[] personal) { 
 		this.personal = personal;
 	} 
 
-	public InstallTemplateImpl personal(java.lang.String personal) { 
+	public InstallTemplateImpl personal(java.lang.String[] personal) { 
 		this.personal = personal;
 		return this;
 	} 

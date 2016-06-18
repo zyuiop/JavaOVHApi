@@ -62,7 +62,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param country The country
 	*/
-	java.lang.String getNumberRanges(java.lang.String country) throws java.io.IOException;
+	java.lang.String[] getNumberRanges(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Get a url to download the sound file
@@ -78,7 +78,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountEasyPabx(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountEasyPabx(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -130,13 +130,13 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountLineServiceNamePhoneRma(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLineServiceNamePhoneRma(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getSpare() throws java.io.IOException;
+	java.lang.String[] getSpare() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -373,7 +373,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param country The country
 	*/
-	java.lang.String getAccessories(java.lang.String country) throws java.io.IOException;
+	java.lang.String[] getAccessories(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -433,7 +433,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.DirectoryHeadingPJ getBillingAccountServiceServiceNameDirectoryGetDirectoryServiceCode(java.lang.String apeCode, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.DirectoryHeadingPJ[] getBillingAccountServiceServiceNameDirectoryGetDirectoryServiceCode(java.lang.String apeCode, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -590,7 +590,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountMiniPabx(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountMiniPabx(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -713,7 +713,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.util.Date getBillingAccountHistoryTollfreeConsumption(java.lang.String billingAccount) throws java.io.IOException;
+	java.util.Date[] getBillingAccountHistoryTollfreeConsumption(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Upload new sound file
@@ -765,7 +765,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountRsva(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountRsva(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Calls queues
@@ -942,7 +942,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.DirectoryWayType getBillingAccountServiceServiceNameDirectoryGetWayTypes(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.DirectoryWayType[] getBillingAccountServiceServiceNameDirectoryGetWayTypes(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Compatible rate codes related to this value added service
@@ -950,7 +950,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.RateCodeInformation getBillingAccountRsvaServiceNameAllowedRateCodes(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.RateCodeInformation[] getBillingAccountRsvaServiceNameAllowedRateCodes(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Delete the given agent
@@ -1147,7 +1147,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountVoicemail(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountVoicemail(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Ask for a billing account termination.
@@ -1181,7 +1181,7 @@ public interface Telephony {
 	 * @param country The country
 	 * @param offer The selected offer
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.LinePhone getLineOfferPhones(java.lang.String country, java.lang.String offer) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.LinePhone[] getLineOfferPhones(java.lang.String country, java.lang.String offer) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1285,7 +1285,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountPhonebook(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountPhonebook(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1310,7 +1310,7 @@ public interface Telephony {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getTelephony() throws java.io.IOException;
+	java.lang.String[] getTelephony() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1392,7 +1392,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountLineServiceNameAvailableSipDomains(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLineServiceNameAvailableSipDomains(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Eavesdrop on a call
@@ -1430,7 +1430,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountMiniPabxServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountMiniPabxServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Whisper on a call
@@ -1459,7 +1459,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountDdi(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountDdi(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -1493,7 +1493,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountService(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountService(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1630,7 +1630,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountTimeCondition(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountTimeCondition(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Schedule a new rate code for this sva
@@ -1656,7 +1656,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountLine(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLine(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Add a phonebook. Return the bookKey.
@@ -1711,7 +1711,7 @@ public interface Telephony {
 	 * @param zone The zone (geographic number)
 	 * @param range The range (special number)
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber getNumberSpecificNumbers(java.lang.String country, java.lang.String type, java.lang.String zone, java.lang.String range) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber[] getNumberSpecificNumbers(java.lang.String country, java.lang.String type, java.lang.String zone, java.lang.String range) throws java.io.IOException;
 
 	/**
 	 * Get all available specific number from a country
@@ -1719,7 +1719,7 @@ public interface Telephony {
 	 * @param country The country
 	 * @param type The type of number
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber getNumberSpecificNumbers(java.lang.String country, java.lang.String type) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.SpecificNumber[] getNumberSpecificNumbers(java.lang.String country, java.lang.String type) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1790,7 +1790,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountLineServiceNamePhonePhonebook(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLineServiceNamePhonePhonebook(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1843,7 +1843,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountLineServiceNameAutomaticCall(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLineServiceNameAutomaticCall(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Change a participant level of audio transmission
@@ -1920,14 +1920,14 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.DatetimeAndIpvalue getBillingAccountLineServiceNameIps(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.DatetimeAndIpvalue[] getBillingAccountLineServiceNameIps(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get all available fax offer compatible
 	 * Facultative parameters ? false
 	 * @param country The country
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.LineOffer getFaxOffers(java.lang.String country) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.LineOffer[] getFaxOffers(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Get Relevant informations of the service detected from the MOS or the signal leg in SIP/MGCP protocol.
@@ -1936,7 +1936,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.DiagnosticReport getBillingAccountServiceServiceNameDiagnosticReports(java.lang.String dayInterval, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.DiagnosticReport[] getBillingAccountServiceServiceNameDiagnosticReports(java.lang.String dayInterval, java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -1988,7 +1988,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountLineServiceNamePhoneMerchandiseAvailable(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLineServiceNamePhoneMerchandiseAvailable(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -2143,7 +2143,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountRedirect(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountRedirect(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Current number portabilities for this billing account
@@ -2235,7 +2235,7 @@ public interface Telephony {
 	 * @param serviceName null
 	 * @param keyNum The number of the function key
 	*/
-	java.lang.String getBillingAccountLineServiceNamePhoneFunctionKeyKeyNumAvailableFunction(java.lang.String billingAccount, java.lang.String serviceName, long keyNum) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLineServiceNamePhoneFunctionKeyKeyNumAvailableFunction(java.lang.String billingAccount, java.lang.String serviceName, long keyNum) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -2296,7 +2296,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param spare The internal name of your spare
 	*/
-	java.lang.String getSpareSpareCompatibleReplacement(java.lang.String spare) throws java.io.IOException;
+	java.lang.String[] getSpareSpareCompatibleReplacement(java.lang.String spare) throws java.io.IOException;
 
 	/**
 	 * Create a new skill for an agent (it adds the agent in a queue)
@@ -2359,7 +2359,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountLineServiceNameOptionsAvailableCodecs(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountLineServiceNameOptionsAvailableCodecs(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Change the destination of the redirect
@@ -2539,7 +2539,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountNumber(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountNumber(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Create a new fax campaign
@@ -2773,7 +2773,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.util.Date getBillingAccountHistoryConsumption(java.lang.String billingAccount) throws java.io.IOException;
+	java.util.Date[] getBillingAccountHistoryConsumption(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -2918,7 +2918,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param country The country
 	*/
-	java.lang.String getNumberZones(java.lang.String country) throws java.io.IOException;
+	java.lang.String[] getNumberZones(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Unmute a participant in your conference room
@@ -2940,7 +2940,7 @@ public interface Telephony {
 	 * @param dateStart.from Filter the value of dateStart property (>=)
 	 * @param categories Filter the value of categories property (=)
 	*/
-	java.lang.String getBillingAccountSchedulerServiceNameEvents(java.lang.String billingAccount, java.lang.String serviceName, java.util.Date dateEndFrom, java.util.Date dateStartTo, java.util.Date dateEndTo, java.util.Date dateStartFrom, java.lang.String categories) throws java.io.IOException;
+	java.lang.String[] getBillingAccountSchedulerServiceNameEvents(java.lang.String billingAccount, java.lang.String serviceName, java.util.Date dateEndFrom, java.util.Date dateStartTo, java.util.Date dateEndTo, java.util.Date dateStartFrom, java.lang.String categories) throws java.io.IOException;
 
 	/**
 	 * Custom events scheduled
@@ -2948,14 +2948,14 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountSchedulerServiceNameEvents(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountSchedulerServiceNameEvents(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Conferences associated with this billing account
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountConference(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountConference(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -2981,14 +2981,14 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountScheduler(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountScheduler(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * OVH easy calls queues associated with this billing account
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountEasyHunting(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountEasyHunting(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Upload a new sound for a specific greeting. Return a task id.
@@ -3014,7 +3014,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param country The country
 	*/
-	net.zyuiop.ovhapi.api.objects.telephony.LineOffer getLineOffers(java.lang.String country) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.telephony.LineOffer[] getLineOffers(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Hangup a call
@@ -3039,7 +3039,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountVxml(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountVxml(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -3084,14 +3084,14 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountFax(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountFax(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * OVH calls queues and OVH IVRs (Interactive Voice Response) associated with this billing account
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountOvhPabx(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountOvhPabx(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Delete the given dialplan
@@ -3125,7 +3125,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.util.Date getBillingAccountHistoryRepaymentConsumption(java.lang.String billingAccount) throws java.io.IOException;
+	java.util.Date[] getBillingAccountHistoryRepaymentConsumption(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Dialplans associated with this PABX
@@ -3470,7 +3470,7 @@ public interface Telephony {
 	 * Get all available spare brands
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getSpareBrands() throws java.io.IOException;
+	java.lang.String[] getSpareBrands() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -3533,7 +3533,7 @@ public interface Telephony {
 	 * @param billingAccount The name of your billingAccount
 	 * @param serviceName null
 	*/
-	java.lang.String getBillingAccountEasyPabxServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getBillingAccountEasyPabxServiceNameHuntingAgent(java.lang.String billingAccount, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Delete the given record
@@ -3628,7 +3628,7 @@ public interface Telephony {
 	 * Facultative parameters ? false
 	 * @param billingAccount The name of your billingAccount
 	*/
-	java.lang.String getBillingAccountScreen(java.lang.String billingAccount) throws java.io.IOException;
+	java.lang.String[] getBillingAccountScreen(java.lang.String billingAccount) throws java.io.IOException;
 
 	/**
 	 * Get this object properties

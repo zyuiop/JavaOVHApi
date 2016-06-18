@@ -19,6 +19,6 @@ public interface Catalog {
 	/**
 	 * @return 
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.identity.Endpoint getEndpoints(); 
+	net.zyuiop.ovhapi.api.objects.cloud.identity.Endpoint[] getEndpoints(); 
 
 }

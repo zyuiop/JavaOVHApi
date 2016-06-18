@@ -13,7 +13,7 @@ public interface OverTheBox {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your overTheBox offer
 	*/
-	java.lang.String getServiceNameRemoteAccesses(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameRemoteAccesses(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -27,7 +27,7 @@ public interface OverTheBox {
 	 * List the available offers for the new call
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getAvailableOffers() throws java.io.IOException;
+	java.lang.String[] getAvailableOffers() throws java.io.IOException;
 
 
 	/**
@@ -35,7 +35,7 @@ public interface OverTheBox {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your overTheBox offer
 	*/
-	java.lang.String getServiceNameAvailableReleaseChannels(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAvailableReleaseChannels(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Authorize the remote access
@@ -84,7 +84,7 @@ public interface OverTheBox {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getOverTheBox() throws java.io.IOException;
+	java.lang.String[] getOverTheBox() throws java.io.IOException;
 
 	/**
 	 * List of actions scheduled for this device
@@ -93,14 +93,14 @@ public interface OverTheBox {
 	 * @param status Filter the value of status property (=)
 	 * @param name Filter the value of name property (=)
 	*/
-	java.lang.String getServiceNameDeviceActions(java.lang.String serviceName, java.lang.String status, java.lang.String name) throws java.io.IOException;
+	java.lang.String[] getServiceNameDeviceActions(java.lang.String serviceName, java.lang.String status, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * List of actions scheduled for this device
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your overTheBox offer
 	*/
-	java.lang.String getServiceNameDeviceActions(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameDeviceActions(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Cancel the resiliation of the Service
@@ -117,14 +117,14 @@ public interface OverTheBox {
 	 * @param status Filter the value of status property (=)
 	 * @param name Filter the value of name property (=)
 	*/
-	java.lang.String getServiceNameTasks(java.lang.String serviceName, java.lang.String status, java.lang.String name) throws java.io.IOException;
+	java.lang.String[] getServiceNameTasks(java.lang.String serviceName, java.lang.String status, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * List of tasks scheduled for this service
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your overTheBox offer
 	*/
-	java.lang.String getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException;
 
 
 

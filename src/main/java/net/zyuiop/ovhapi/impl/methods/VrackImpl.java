@@ -28,17 +28,21 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.Task getServiceNameTaskTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/task/" + taskId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "taskId=" + taskId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameIpIpAvailableZone(java.lang.String serviceName, java.lang.String ip) throws java.io.IOException {
+	public java.lang.String[] getServiceNameIpIpAvailableZone(java.lang.String serviceName, java.lang.String ip) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/ip/" + ip + "/availableZone";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "ip=" + ip;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.vrack.Task deleteServiceNameDedicatedCloudDedicatedCloud(java.lang.String serviceName, java.lang.String dedicatedCloud) throws java.io.IOException {
@@ -53,6 +57,8 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.CloudProject getServiceNameCloudProjectProject(java.lang.String serviceName, java.lang.String project) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/cloudProject/" + project + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "project=" + project;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.CloudProjectImpl.class);
@@ -61,6 +67,7 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.Vrack getServiceName(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.VrackImpl.class);
@@ -69,6 +76,8 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.Ip getServiceNameIpIp(java.lang.String serviceName, java.lang.String ip) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/ip/" + ip + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "ip=" + ip;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.IpImpl.class);
@@ -77,6 +86,8 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.DedicatedServer getServiceNameDedicatedServerDedicatedServer(java.lang.String serviceName, java.lang.String dedicatedServer) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/dedicatedServer/" + dedicatedServer + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "dedicatedServer=" + dedicatedServer;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.DedicatedServerImpl.class);
@@ -85,6 +96,8 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.DedicatedConnect getServiceNameDedicatedConnectName(java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/dedicatedConnect/" + name + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "name=" + name;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.DedicatedConnectImpl.class);
@@ -101,6 +114,7 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.AllowedServices getServiceNameAllowedServices(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/allowedServices";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.AllowedServicesImpl.class);
@@ -116,20 +130,22 @@ public class VrackImpl implements Vrack {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameDedicatedCloud(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameDedicatedCloud(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/dedicatedCloud";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNameDedicatedServer(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameDedicatedServer(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/dedicatedServer";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.vrack.Task deleteServiceNameIpIp(java.lang.String serviceName, java.lang.String ip) throws java.io.IOException {
@@ -141,12 +157,13 @@ public class VrackImpl implements Vrack {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.TaskImpl.class);
 	}
 
-	public java.lang.String getServiceNameDedicatedConnect(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameDedicatedConnect(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/dedicatedConnect";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.vrack.Task postServiceNameDedicatedServer(java.lang.String dedicatedServer, java.lang.String serviceName) throws java.io.IOException {
@@ -162,6 +179,8 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.DedicatedCloud getServiceNameDedicatedCloudDedicatedCloud(java.lang.String serviceName, java.lang.String dedicatedCloud) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/dedicatedCloud/" + dedicatedCloud + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "dedicatedCloud=" + dedicatedCloud;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.DedicatedCloudImpl.class);
@@ -169,44 +188,45 @@ public class VrackImpl implements Vrack {
 
 	public void putServiceNameDedicatedConnectName(net.zyuiop.ovhapi.api.objects.vrack.DedicatedConnect param0, java.lang.String serviceName, java.lang.String name) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/dedicatedConnect/" + name + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getServiceNameCloudProject(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameCloudProject(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/cloudProject";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNameIp(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameIp(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/ip";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNameLegacyVrack(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNameLegacyVrack(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/legacyVrack";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getVrack() throws java.io.IOException {
+	public java.lang.String[] getVrack() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/vrack";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.vrack.Task postServiceNameLegacyVrack(java.lang.String legacyVrack, java.lang.String serviceName) throws java.io.IOException {
@@ -249,9 +269,7 @@ public class VrackImpl implements Vrack {
 
 	public void putServiceName(net.zyuiop.ovhapi.api.objects.vrack.Vrack param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -260,6 +278,8 @@ public class VrackImpl implements Vrack {
 	public net.zyuiop.ovhapi.api.objects.vrack.LegacyVrack getServiceNameLegacyVrackLegacyVrack(java.lang.String serviceName, java.lang.String legacyVrack) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/legacyVrack/" + legacyVrack + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "legacyVrack=" + legacyVrack;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.LegacyVrackImpl.class);
@@ -277,6 +297,7 @@ public class VrackImpl implements Vrack {
 	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vrack/" + serviceName + "/task";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);

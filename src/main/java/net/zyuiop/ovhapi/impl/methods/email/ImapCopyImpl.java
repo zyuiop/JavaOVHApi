@@ -18,6 +18,8 @@ public class ImapCopyImpl implements ImapCopy {
 	public net.zyuiop.ovhapi.api.objects.imapcopy.Task getTask(long id, java.lang.String secretKey) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/email/imapCopy/task";
 		String __data = "?";
+		__data += "id=" + id;
+		__data += "secretKey=" + secretKey;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.impl.objects.imapcopy.TaskImpl.class);

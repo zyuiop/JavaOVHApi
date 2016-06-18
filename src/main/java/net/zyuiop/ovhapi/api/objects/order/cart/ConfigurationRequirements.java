@@ -14,7 +14,7 @@ public interface ConfigurationRequirements {
 	/**
 	 * @return Indicates if some particular fields have to be inputed during the creation of `type` resource
 	 */
-	java.lang.String getFields(); 
+	java.lang.String[] getFields(); 
 
 	/**
 	 * @return Label for your configuration item

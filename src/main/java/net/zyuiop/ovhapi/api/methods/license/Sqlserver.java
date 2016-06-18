@@ -19,7 +19,7 @@ public interface Sqlserver {
 	 * Facultative parameters ? false
 	 * @param ip Your license Ip
 	*/
-	net.zyuiop.ovhapi.api.objects.license.SqlServerOrderConfiguration getOrderableVersions(java.lang.String ip) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.license.SqlServerOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -55,7 +55,7 @@ public interface Sqlserver {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLicenseSqlserver() throws java.io.IOException;
+	java.lang.String[] getLicenseSqlserver() throws java.io.IOException;
 
 	/**
 	 * Get this object properties

@@ -13,7 +13,7 @@ public interface Webstorage {
 	 * @param type null
 	 * @param serviceName The internal name of your CDN Static offer
 	*/
-	net.zyuiop.ovhapi.api.objects.cdn.webstorage.StatsDataType getServiceNameStatistics(java.lang.String period, java.lang.String type, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cdn.webstorage.StatsDataType[] getServiceNameStatistics(java.lang.String period, java.lang.String type, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -48,6 +48,6 @@ public interface Webstorage {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getCdnWebstorage() throws java.io.IOException;
+	java.lang.String[] getCdnWebstorage() throws java.io.IOException;
 
 }

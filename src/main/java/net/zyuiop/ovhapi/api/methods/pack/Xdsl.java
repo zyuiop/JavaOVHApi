@@ -11,14 +11,14 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.VoIPHardware getPackNameVoipLineOptionsHardwares(java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.VoIPHardware[] getPackNameVoipLineOptionsHardwares(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Exchange 2013 organization services
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameExchangeOrganizationServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameExchangeOrganizationServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -33,14 +33,14 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameSubServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameSubServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * VOIP billing accounts
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameVoipBillingAccountServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameVoipBillingAccountServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -55,7 +55,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderDomain getPackNameSiteBuilderFullOptionsDomains(java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderDomain[] getPackNameSiteBuilderFullOptionsDomains(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -86,7 +86,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameDomainServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameDomainServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Allowed shipping addresses given a context
@@ -94,7 +94,7 @@ public interface Xdsl {
 	 * @param context Context
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.ShippingAddress getPackNameShippingAddresses(java.lang.String context, java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.ShippingAddress[] getPackNameShippingAddresses(java.lang.String context, java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Activate a voicefax service
@@ -108,7 +108,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.ServiceInformation getPackNameServices(java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.ServiceInformation[] getPackNameServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Activate a voip line service
@@ -179,7 +179,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameExchangeLiteServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameExchangeLiteServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Check if the resiliation can be cancelled
@@ -217,14 +217,14 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameExchangeIndividualServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameExchangeIndividualServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Sitebuilder start services
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameSiteBuilderStartServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameSiteBuilderStartServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Give the condition to unpack service from pack
@@ -239,7 +239,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameHostedEmailServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameHostedEmailServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Tasks scheduled for this pack
@@ -288,7 +288,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderTemplate getPackNameSiteBuilderStartOptionsTemplates(java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderTemplate[] getPackNameSiteBuilderStartOptionsTemplates(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Activate a domain service
@@ -336,7 +336,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameVoipLineServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameVoipLineServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Cancel the ongoing resiliation
@@ -350,7 +350,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameSiteBuilderFullServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameSiteBuilderFullServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Migrate to the selected offer
@@ -387,7 +387,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameDomainOptionsTlds(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameDomainOptionsTlds(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Activate a sitebuilder full service
@@ -404,7 +404,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameVoipEcofaxServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameVoipEcofaxServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Creates a task to generate a new promotion code
@@ -428,21 +428,21 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderDomain getPackNameSiteBuilderStartOptionsDomains(java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderDomain[] getPackNameSiteBuilderStartOptionsDomains(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Get the available templates
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderTemplate getPackNameSiteBuilderFullOptionsTemplates(java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.SiteBuilderTemplate[] getPackNameSiteBuilderFullOptionsTemplates(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Get the hostedemail available domains
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameHostedEmailOptionsDomains(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameHostedEmailOptionsDomains(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Activate an hosted email service
@@ -489,7 +489,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameExchangeAccountServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameExchangeAccountServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Get information about the ongoing resiliation
@@ -503,14 +503,14 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.ShippingAddress getPackNameVoipLineOptionsShippingAddresses(java.lang.String packName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.ShippingAddress[] getPackNameVoipLineOptionsShippingAddresses(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Get the available domains
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameExchangeIndividualOptionsDomains(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameExchangeIndividualOptionsDomains(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * Activate an exchange service
@@ -533,7 +533,7 @@ public interface Xdsl {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getPackXdsl() throws java.io.IOException;
+	java.lang.String[] getPackXdsl() throws java.io.IOException;
 
 
 
@@ -542,13 +542,13 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameHubicServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameHubicServices(java.lang.String packName) throws java.io.IOException;
 
 	/**
 	 * xDSL access services
 	 * Facultative parameters ? false
 	 * @param packName The internal name of your pack
 	*/
-	java.lang.String getPackNameXdslAccessServices(java.lang.String packName) throws java.io.IOException;
+	java.lang.String[] getPackNameXdslAccessServices(java.lang.String packName) throws java.io.IOException;
 
 }

@@ -14,7 +14,7 @@ public interface SubServiceToDelete {
 	/**
 	 * @return List of domains of sub services
 	 */
-	java.lang.String getServices(); 
+	java.lang.String[] getServices(); 
 
 	/**
 	 * @return Type of service to be deleted

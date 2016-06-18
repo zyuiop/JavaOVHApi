@@ -21,7 +21,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Your own SPLA licenses attached to this dedicated server
@@ -52,7 +52,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameVrack(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameVrack(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -186,7 +186,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -295,7 +295,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameLicenseCompliantWindows(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameLicenseCompliantWindows(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -303,14 +303,14 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameStatisticsDisk(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameStatisticsDisk(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List all ip from server
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameIps(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameIps(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * IPMI access method
@@ -334,7 +334,7 @@ public interface Server {
 	 * @param serviceName The internal name of your dedicated server
 	 * @param macAddress Virtual MAC address in 00:00:00:00:00:00 format
 	*/
-	java.lang.String getServiceNameVirtualMacMacAddressVirtualAddress(java.lang.String serviceName, java.lang.String macAddress) throws java.io.IOException;
+	java.lang.String[] getServiceNameVirtualMacMacAddressVirtualAddress(java.lang.String serviceName, java.lang.String macAddress) throws java.io.IOException;
 
 
 	/**
@@ -343,14 +343,14 @@ public interface Server {
 	 * @param serviceName The internal name of your dedicated server
 	 * @param unit Raid unit
 	*/
-	java.lang.String getServiceNameStatisticsRaidUnitVolume(java.lang.String serviceName, java.lang.String unit) throws java.io.IOException;
+	java.lang.String[] getServiceNameStatisticsRaidUnitVolume(java.lang.String serviceName, java.lang.String unit) throws java.io.IOException;
 
 	/**
 	 * Get the windows SQL server license compliant with your server.
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameLicenseCompliantWindowsSqlServer(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameLicenseCompliantWindowsSqlServer(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -396,7 +396,7 @@ public interface Server {
 	 * @param serviceName The internal name of your dedicated server
 	 * @param bootId boot id
 	*/
-	java.lang.String getServiceNameBootBootIdOption(java.lang.String serviceName, long bootId) throws java.io.IOException;
+	java.lang.String[] getServiceNameBootBootIdOption(java.lang.String serviceName, long bootId) throws java.io.IOException;
 
 	/**
 	 * Terminate your service
@@ -457,7 +457,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameOption(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOption(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -481,7 +481,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -531,7 +531,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameStatisticsPartition(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameStatisticsPartition(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -613,7 +613,7 @@ public interface Server {
 	 * @param templateName null
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameInstallCompatibleTemplatePartitionSchemes(java.lang.String templateName, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameInstallCompatibleTemplatePartitionSchemes(java.lang.String templateName, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Remove this SMS alert
@@ -635,7 +635,7 @@ public interface Server {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDedicatedServer() throws java.io.IOException;
+	java.lang.String[] getDedicatedServer() throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -675,7 +675,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	net.zyuiop.ovhapi.api.objects.dedicated.server.RtmConnection getServiceNameStatisticsConnection(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.dedicated.server.RtmConnection[] getServiceNameStatisticsConnection(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Raid unit volume ports
@@ -684,7 +684,7 @@ public interface Server {
 	 * @param unit Raid unit
 	 * @param volume Raid volume name
 	*/
-	java.lang.String getServiceNameStatisticsRaidUnitVolumeVolumePort(java.lang.String serviceName, java.lang.String unit, java.lang.String volume) throws java.io.IOException;
+	java.lang.String[] getServiceNameStatisticsRaidUnitVolumeVolumePort(java.lang.String serviceName, java.lang.String unit, java.lang.String volume) throws java.io.IOException;
 
 	/**
 	 * Retrieve IP capabilities about this dedicated server
@@ -706,7 +706,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	net.zyuiop.ovhapi.api.objects.dedicated.server.RtmPci getServiceNameStatisticsPci(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.dedicated.server.RtmPci[] getServiceNameStatisticsPci(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -782,7 +782,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameStatisticsRaid(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameStatisticsRaid(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -807,7 +807,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Add a new service monitoring
@@ -900,7 +900,7 @@ public interface Server {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your dedicated server
 	*/
-	java.lang.String getServiceNameVirtualMac(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameVirtualMac(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties

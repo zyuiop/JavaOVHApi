@@ -26,7 +26,7 @@ public interface Directadmin {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLicenseDirectadmin() throws java.io.IOException;
+	java.lang.String[] getLicenseDirectadmin() throws java.io.IOException;
 
 	/**
 	 * tasks linked to this license
@@ -57,7 +57,7 @@ public interface Directadmin {
 	 * Facultative parameters ? false
 	 * @param serviceName The name of your DirectAdmin license
 	*/
-	java.lang.String getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -102,7 +102,7 @@ public interface Directadmin {
 	 * Facultative parameters ? false
 	 * @param ip Your license Ip
 	*/
-	net.zyuiop.ovhapi.api.objects.license.DirectAdminOrderConfiguration getOrderableVersions(java.lang.String ip) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.license.DirectAdminOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException;
 
 	/**
 	 * Get this object properties

@@ -9,12 +9,12 @@ public interface OpenstackToken {
 	/**
 	 * @return 
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.identity.Role getRoles(); 
+	net.zyuiop.ovhapi.api.objects.cloud.identity.Role[] getRoles(); 
 
 	/**
 	 * @return 
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.identity.Catalog getCatalog(); 
+	net.zyuiop.ovhapi.api.objects.cloud.identity.Catalog[] getCatalog(); 
 
 	/**
 	 * @return 
@@ -34,7 +34,7 @@ public interface OpenstackToken {
 	/**
 	 * @return 
 	 */
-	java.lang.String getMethods(); 
+	java.lang.String[] getMethods(); 
 
 	/**
 	 * @return 

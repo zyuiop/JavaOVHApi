@@ -19,7 +19,7 @@ public interface Zone {
 	/**
 	 * @return Name servers that host the DNS zone
 	 */
-	java.lang.String getNameServers(); 
+	java.lang.String[] getNameServers(); 
 
 	/**
 	 * @return Is DNSSEC supported by this zone

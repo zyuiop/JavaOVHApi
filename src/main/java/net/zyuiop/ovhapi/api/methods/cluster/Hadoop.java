@@ -30,7 +30,7 @@ public interface Hadoop {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your cluster
 	*/
-	java.lang.String getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -64,7 +64,7 @@ public interface Hadoop {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your cluster
 	*/
-	java.lang.String getServiceNameNetworkAcl(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameNetworkAcl(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Restart the role on the node (THIS ACTION WILL RESTART OTHER DEPENDANT ROLES)
@@ -183,7 +183,7 @@ public interface Hadoop {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your cluster
 	*/
-	java.lang.String getServiceNameOrderableNodeProfiles(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOrderableNodeProfiles(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Stop the role on the node (THIS ACTION WILL STOP OTHER DEPENDANT ROLES)
@@ -236,14 +236,14 @@ public interface Hadoop {
 	 * @param serviceName The internal name of your cluster
 	 * @param softwareProfile Filter the value of softwareProfile property (=)
 	*/
-	java.lang.String getServiceNameNode(java.lang.String serviceName, java.lang.String softwareProfile) throws java.io.IOException;
+	java.lang.String[] getServiceNameNode(java.lang.String serviceName, java.lang.String softwareProfile) throws java.io.IOException;
 
 	/**
 	 * Nodes of the Cluster
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your cluster
 	*/
-	java.lang.String getServiceNameNode(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameNode(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Remove this ACL
@@ -305,13 +305,13 @@ public interface Hadoop {
 	 * @param serviceName The internal name of your cluster
 	 * @param hostname Hostname of the node
 	*/
-	java.lang.String getServiceNameNodeHostnameRole(java.lang.String serviceName, java.lang.String hostname) throws java.io.IOException;
+	java.lang.String[] getServiceNameNodeHostnameRole(java.lang.String serviceName, java.lang.String hostname) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getClusterHadoop() throws java.io.IOException;
+	java.lang.String[] getClusterHadoop() throws java.io.IOException;
 
 
 	/**

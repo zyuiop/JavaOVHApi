@@ -18,17 +18,18 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.nichandle.SshKey getSshKeyKeyName(java.lang.String keyName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sshKey/" + keyName + "";
 		String __data = "?";
+		__data += "keyName=" + keyName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SshKeyImpl.class);
 	}
 
-	public java.lang.String getInstallationTemplate() throws java.io.IOException {
+	public java.lang.String[] getInstallationTemplate() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
@@ -42,6 +43,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.FidelityMovement getFidelityAccountMovementsMovementId(long movementId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements/" + movementId + "";
 		String __data = "?";
+		__data += "movementId=" + movementId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.FidelityMovementImpl.class);
@@ -50,6 +52,7 @@ public class MeImpl implements Me {
 	public java.lang.String getOrderOrderIdStatus(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/status";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -87,9 +90,7 @@ public class MeImpl implements Me {
 
 	public void putAccessRestrictionIpId(net.zyuiop.ovhapi.api.objects.nichandle.IpRestriction param0, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -128,9 +129,7 @@ public class MeImpl implements Me {
 
 	public void putMe(net.zyuiop.ovhapi.api.objects.nichandle.Nichandle param0) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/me";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -147,6 +146,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.api.Application getApiApplicationApplicationId(long applicationId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/application/" + applicationId + "";
 		String __data = "?";
+		__data += "applicationId=" + applicationId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.api.ApplicationImpl.class);
@@ -179,7 +179,7 @@ public class MeImpl implements Me {
 
 	public net.zyuiop.ovhapi.api.objects.billing.FidelityAccount getFidelityAccount() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.FidelityAccountImpl.class);
@@ -187,7 +187,7 @@ public class MeImpl implements Me {
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.VipStatus getVipStatus() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/vipStatus";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.VipStatusImpl.class);
@@ -196,6 +196,8 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Movement getOvhAccountOvhAccountIdMovementsMovementId(java.lang.String ovhAccountId, long movementId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements/" + movementId + "";
 		String __data = "?";
+		__data += "ovhAccountId=" + ovhAccountId;
+		__data += "movementId=" + movementId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.MovementImpl.class);
@@ -240,6 +242,8 @@ public class MeImpl implements Me {
 	public long[] getOrder(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order";
 		String __data = "?";
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -247,7 +251,7 @@ public class MeImpl implements Me {
 
 	public long[] getOrder() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -256,6 +260,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Payment getOrderOrderIdPayment(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/payment";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentImpl.class);
@@ -337,48 +342,50 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.nichandle.IpRestriction getAccessRestrictionIpId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpRestrictionImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.order.RegisteredPaymentMean getOrderOrderIdAvailableRegisteredPaymentMean(long orderId) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.billing.order.RegisteredPaymentMean[] getOrderOrderIdAvailableRegisteredPaymentMean(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/availableRegisteredPaymentMean";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.order.RegisteredPaymentMeanImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.order.RegisteredPaymentMeanImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.IpRestrictionDefaultRule getAccessRestrictionIpDefaultRule() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ipDefaultRule";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpRestrictionDefaultRuleImpl.class);
 	}
 
-	public java.lang.String getBill(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
+	public java.lang.String[] getBill(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/bill";
 		String __data = "?";
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getBill() throws java.io.IOException {
+	public java.lang.String[] getBill() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/bill";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void putIpOrganisationOrganisationId(net.zyuiop.ovhapi.api.objects.nichandle.Ipv4Org param0, java.lang.String organisationId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation/" + organisationId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -430,9 +437,7 @@ public class MeImpl implements Me {
 
 	public void putAutorenew(net.zyuiop.ovhapi.api.objects.nichandle.NicAutorenewInfos param0) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/autorenew";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -441,6 +446,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.contact.Contact getContactContactId(long contactId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/contact/" + contactId + "";
 		String __data = "?";
+		__data += "contactId=" + contactId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.ContactImpl.class);
@@ -448,7 +454,7 @@ public class MeImpl implements Me {
 
 	public long[] getAccessRestrictionTotp() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -457,6 +463,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.api.Application getApiCredentialCredentialIdApplication(long credentialId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/credential/" + credentialId + "/application";
 		String __data = "?";
+		__data += "credentialId=" + credentialId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.api.ApplicationImpl.class);
@@ -465,6 +472,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Payment getRefundRefundIdPayment(java.lang.String refundId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "/payment";
 		String __data = "?";
+		__data += "refundId=" + refundId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentImpl.class);
@@ -502,6 +510,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Payment getBillBillIdPayment(java.lang.String billId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "/payment";
 		String __data = "?";
+		__data += "billId=" + billId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentImpl.class);
@@ -518,6 +527,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.nichandle.EmailNotification getNotificationEmailHistoryId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/notification/email/history/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.EmailNotificationImpl.class);
@@ -535,6 +545,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.order.AssociatedObject getOrderOrderIdAssociatedObject(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/associatedObject";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.order.AssociatedObjectImpl.class);
@@ -561,6 +572,8 @@ public class MeImpl implements Me {
 	public long[] getAgreements(java.lang.String agreed, long contractId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/agreements";
 		String __data = "?";
+		__data += "agreed=" + agreed;
+		__data += "contractId=" + contractId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -568,18 +581,18 @@ public class MeImpl implements Me {
 
 	public long[] getAgreements() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/agreements";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String getSshKey() throws java.io.IOException {
+	public java.lang.String[] getSshKey() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sshKey";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void deleteInstallationTemplateTemplateName(java.lang.String templateName) throws java.io.IOException {
@@ -612,6 +625,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Refund getOrderOrderIdRefund(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/refund";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.RefundImpl.class);
@@ -628,9 +642,7 @@ public class MeImpl implements Me {
 
 	public void putFidelityAccount(net.zyuiop.ovhapi.api.objects.billing.FidelityAccount param0) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -638,7 +650,7 @@ public class MeImpl implements Me {
 
 	public long[] getApiApplication() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/application";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -653,20 +665,22 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
-	public java.lang.String getRefund(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
+	public java.lang.String[] getRefund(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/refund";
 		String __data = "?";
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getRefund() throws java.io.IOException {
+	public java.lang.String[] getRefund() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/refund";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void postAccessRestrictionSmsIdDisable(java.lang.String code, long id) throws java.io.IOException {
@@ -681,9 +695,7 @@ public class MeImpl implements Me {
 
 	public void putPaymentMeanCreditCardId(net.zyuiop.ovhapi.api.objects.billing.CreditCard param0, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -720,40 +732,43 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.nichandle.Ipxe getIpxeScriptName(java.lang.String name) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript/" + name + "";
 		String __data = "?";
+		__data += "name=" + name;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpxeImpl.class);
 	}
 
-	public java.lang.String getInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
+	public java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
 		String __data = "?";
+		__data += "templateName=" + templateName;
+		__data += "schemeName=" + schemeName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.SlaApply getSlaId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SlaApplyImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.contact.FieldInformation getContactContactIdFields(long contactId) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.contact.FieldInformation[] getContactContactIdFields(long contactId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/contact/" + contactId + "/fields";
 		String __data = "?";
+		__data += "contactId=" + contactId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.FieldInformationImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.FieldInformationImpl[].class);
 	}
 
 	public void putSshKeyKeyName(net.zyuiop.ovhapi.api.objects.nichandle.SshKey param0, java.lang.String keyName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sshKey/" + keyName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -762,22 +777,26 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.nichandle.Subscription getSubscriptionSubscriptionType(java.lang.String subscriptionType) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/subscription/" + subscriptionType + "";
 		String __data = "?";
+		__data += "subscriptionType=" + subscriptionType;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SubscriptionImpl.class);
 	}
 
-	public java.lang.String getInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
+	public java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/partition";
 		String __data = "?";
+		__data += "templateName=" + templateName;
+		__data += "schemeName=" + schemeName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.Ipv4Org getIpOrganisationOrganisationId(java.lang.String organisationId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation/" + organisationId + "";
 		String __data = "?";
+		__data += "organisationId=" + organisationId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.Ipv4OrgImpl.class);
@@ -793,19 +812,18 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.nichandle.SlaService getSlaIdServices(long id) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.nichandle.SlaService[] getSlaIdServices(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "/services";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SlaServiceImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SlaServiceImpl[].class);
 	}
 
 	public void putPaymentMeanPaypalId(net.zyuiop.ovhapi.api.objects.billing.Paypal param0, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -813,9 +831,7 @@ public class MeImpl implements Me {
 
 	public void putTaskDomainIdArgumentKey(net.zyuiop.ovhapi.api.objects.nichandle.DomainTaskArgument param0, long id, java.lang.String key) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/argument/" + key + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -824,6 +840,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Bill getOrderOrderIdBill(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/bill";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BillImpl.class);
@@ -855,9 +872,7 @@ public class MeImpl implements Me {
 
 	public void putPaymentMeanBankAccountId(net.zyuiop.ovhapi.api.objects.billing.BankAccount param0, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -924,6 +939,7 @@ public class MeImpl implements Me {
 	public long[] getTaskEmailChange(java.lang.String state) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/emailChange";
 		String __data = "?";
+		__data += "state=" + state;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -931,7 +947,7 @@ public class MeImpl implements Me {
 
 	public long[] getTaskEmailChange() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/emailChange";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -940,6 +956,8 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.BillDetail getBillBillIdDetailsBillDetailId(java.lang.String billId, java.lang.String billDetailId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "/details/" + billDetailId + "";
 		String __data = "?";
+		__data += "billId=" + billId;
+		__data += "billDetailId=" + billDetailId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BillDetailImpl.class);
@@ -985,9 +1003,7 @@ public class MeImpl implements Me {
 
 	public void putAccessRestrictionIpDefaultRule(net.zyuiop.ovhapi.api.objects.nichandle.IpRestrictionDefaultRule param0) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ipDefaultRule";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -1023,6 +1039,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Paypal getPaymentMeanPaypalId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaypalImpl.class);
@@ -1057,7 +1074,7 @@ public class MeImpl implements Me {
 
 	public long[] getNotificationEmailHistory() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/notification/email/history";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1074,6 +1091,9 @@ public class MeImpl implements Me {
 	public long[] getOvhAccountOvhAccountIdMovements(java.lang.String ovhAccountId, java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements";
 		String __data = "?";
+		__data += "ovhAccountId=" + ovhAccountId;
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1082,6 +1102,7 @@ public class MeImpl implements Me {
 	public long[] getOvhAccountOvhAccountIdMovements(java.lang.String ovhAccountId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements";
 		String __data = "?";
+		__data += "ovhAccountId=" + ovhAccountId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1097,26 +1118,27 @@ public class MeImpl implements Me {
 
 	public long[] getPaymentMeanPaypal() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String getIpOrganisation() throws java.io.IOException {
+	public java.lang.String[] getIpOrganisation() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getRefundRefundIdDetails(java.lang.String refundId) throws java.io.IOException {
+	public java.lang.String[] getRefundRefundIdDetails(java.lang.String refundId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "/details";
 		String __data = "?";
+		__data += "refundId=" + refundId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void postTaskEmailChangeIdRefuse(java.lang.String token, long id) throws java.io.IOException {
@@ -1132,6 +1154,9 @@ public class MeImpl implements Me {
 	public long[] getTaskDomain(java.lang.String domain, java.lang.String function, java.lang.String status) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/domain";
 		String __data = "?";
+		__data += "domain=" + domain;
+		__data += "function=" + function;
+		__data += "status=" + status;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1139,7 +1164,7 @@ public class MeImpl implements Me {
 
 	public long[] getTaskDomain() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/domain";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1148,6 +1173,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Refund getRefundRefundId(java.lang.String refundId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "";
 		String __data = "?";
+		__data += "refundId=" + refundId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.RefundImpl.class);
@@ -1173,7 +1199,7 @@ public class MeImpl implements Me {
 
 	public net.zyuiop.ovhapi.api.objects.billing.AutomaticPaymentMean getAvailableAutomaticPaymentMeans() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/availableAutomaticPaymentMeans";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.AutomaticPaymentMeanImpl.class);
@@ -1201,6 +1227,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.OvhAccount getOvhAccountOvhAccountId(java.lang.String ovhAccountId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "";
 		String __data = "?";
+		__data += "ovhAccountId=" + ovhAccountId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OvhAccountImpl.class);
@@ -1226,17 +1253,20 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpxeImpl.class);
 	}
 
-	public java.lang.String getIpxeScript() throws java.io.IOException {
+	public java.lang.String[] getIpxeScript() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public long[] getTaskContactChange(java.lang.String toAccount, java.lang.String askingAccount, java.lang.String state) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange";
 		String __data = "?";
+		__data += "toAccount=" + toAccount;
+		__data += "askingAccount=" + askingAccount;
+		__data += "state=" + state;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1244,7 +1274,7 @@ public class MeImpl implements Me {
 
 	public long[] getTaskContactChange() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1259,17 +1289,18 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getBillBillIdDetails(java.lang.String billId) throws java.io.IOException {
+	public java.lang.String[] getBillBillIdDetails(java.lang.String billId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "/details";
 		String __data = "?";
+		__data += "billId=" + billId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public long[] getPaymentMeanCreditCard() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1278,6 +1309,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.agreements.Contract getAgreementsIdContract(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/agreements/" + id + "/contract";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.agreements.ContractImpl.class);
@@ -1313,12 +1345,13 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getInstallationTemplateTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException {
+	public java.lang.String[] getInstallationTemplateTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme";
 		String __data = "?";
+		__data += "templateName=" + templateName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void deleteApiApplicationApplicationId(long applicationId) throws java.io.IOException {
@@ -1330,12 +1363,13 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getTaskDomainIdArgument(long id) throws java.io.IOException {
+	public java.lang.String[] getTaskDomainIdArgument(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/argument";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void postInstallationTemplate(java.lang.String defaultLanguage, java.lang.String name, java.lang.String baseTemplateName) throws java.io.IOException {
@@ -1353,6 +1387,7 @@ public class MeImpl implements Me {
 	public boolean getSlaIdCanBeApplied(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "/canBeApplied";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), boolean.class);
@@ -1361,6 +1396,8 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.OrderDetail getOrderOrderIdDetailsOrderDetailId(long orderId, long orderDetailId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/details/" + orderDetailId + "";
 		String __data = "?";
+		__data += "orderId=" + orderId;
+		__data += "orderDetailId=" + orderDetailId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderDetailImpl.class);
@@ -1368,9 +1405,7 @@ public class MeImpl implements Me {
 
 	public void putSubscriptionSubscriptionType(net.zyuiop.ovhapi.api.objects.nichandle.Subscription param0, java.lang.String subscriptionType) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/subscription/" + subscriptionType + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -1388,17 +1423,18 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.api.Credential getApiCredentialCredentialId(long credentialId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/credential/" + credentialId + "";
 		String __data = "?";
+		__data += "credentialId=" + credentialId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.api.CredentialImpl.class);
 	}
 
-	public java.lang.String getSubscription() throws java.io.IOException {
+	public java.lang.String[] getSubscription() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/subscription";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.contact.Contact postContact(net.zyuiop.ovhapi.api.objects.contact.Address address, java.lang.String phone, java.lang.String email, java.lang.String firstName, java.lang.String language, java.lang.String lastName, java.lang.String legalForm, java.lang.String cellPhone, java.lang.String fax, java.util.Date birthDay, java.lang.String birthCity, java.lang.String birthZip, java.lang.String birthCountry, java.lang.String vat, java.lang.String companyNationalIdentificationNumber, java.lang.String nationalIdentificationNumber, java.lang.String organisationType, java.lang.String organisationName, java.lang.String gender, java.lang.String nationality) throws java.io.IOException {
@@ -1449,6 +1485,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.BankAccount getPaymentMeanBankAccountId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BankAccountImpl.class);
@@ -1486,6 +1523,8 @@ public class MeImpl implements Me {
 	public long[] getFidelityAccountMovements(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements";
 		String __data = "?";
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1493,7 +1532,7 @@ public class MeImpl implements Me {
 
 	public long[] getFidelityAccountMovements() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1501,7 +1540,7 @@ public class MeImpl implements Me {
 
 	public long[] getAccessRestrictionSms() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1510,6 +1549,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.CreditCard getPaymentMeanCreditCardId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.CreditCardImpl.class);
@@ -1537,7 +1577,7 @@ public class MeImpl implements Me {
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.Nichandle getMe() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/me";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.NichandleImpl.class);
@@ -1546,6 +1586,7 @@ public class MeImpl implements Me {
 	public long[] getOrderOrderIdDetails(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/details";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1553,7 +1594,7 @@ public class MeImpl implements Me {
 
 	public long[] getContact() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/contact";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1577,7 +1618,7 @@ public class MeImpl implements Me {
 
 	public net.zyuiop.ovhapi.api.objects.nichandle.NicAutorenewInfos getAutorenew() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/autorenew";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.NicAutorenewInfosImpl.class);
@@ -1602,6 +1643,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.nichandle.DomainTask getTaskDomainId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.DomainTaskImpl.class);
@@ -1610,6 +1652,7 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.agreements.ContractAgreement getAgreementsId(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/agreements/" + id + "";
 		String __data = "?";
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.agreements.ContractAgreementImpl.class);
@@ -1618,6 +1661,8 @@ public class MeImpl implements Me {
 	public long[] getApiCredential(java.lang.String status, long applicationId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/credential";
 		String __data = "?";
+		__data += "status=" + status;
+		__data += "applicationId=" + applicationId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1625,7 +1670,7 @@ public class MeImpl implements Me {
 
 	public long[] getApiCredential() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/credential";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1634,17 +1679,18 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.Bill getBillBillId(java.lang.String billId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "";
 		String __data = "?";
+		__data += "billId=" + billId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BillImpl.class);
 	}
 
-	public java.lang.String getOvhAccount() throws java.io.IOException {
+	public java.lang.String[] getOvhAccount() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void postInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartition(long step, java.lang.String filesystem, java.lang.String mountpoint, java.lang.String type, long size, java.lang.String templateName, java.lang.String schemeName, java.lang.String volumeName, long raid) throws java.io.IOException {
@@ -1680,22 +1726,25 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.billing.RefundDetail getRefundRefundIdDetailsRefundDetailId(java.lang.String refundId, java.lang.String refundDetailId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "/details/" + refundDetailId + "";
 		String __data = "?";
+		__data += "refundId=" + refundId;
+		__data += "refundDetailId=" + refundDetailId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.RefundDetailImpl.class);
 	}
 
-	public java.lang.String getDocument() throws java.io.IOException {
+	public java.lang.String[] getDocument() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/document";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.billing.Order getOrderOrderId(long orderId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "";
 		String __data = "?";
+		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderImpl.class);
@@ -1733,6 +1782,8 @@ public class MeImpl implements Me {
 	public net.zyuiop.ovhapi.api.objects.nichandle.DomainTaskArgument getTaskDomainIdArgumentKey(long id, java.lang.String key) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/argument/" + key + "";
 		String __data = "?";
+		__data += "id=" + id;
+		__data += "key=" + key;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.DomainTaskArgumentImpl.class);
@@ -1740,7 +1791,7 @@ public class MeImpl implements Me {
 
 	public long[] getAccessRestrictionIp() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1748,7 +1799,7 @@ public class MeImpl implements Me {
 
 	public long[] getSla() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sla";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1757,6 +1808,7 @@ public class MeImpl implements Me {
 	public long[] getPaymentMeanBankAccount(java.lang.String state) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
 		String __data = "?";
+		__data += "state=" + state;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1764,7 +1816,7 @@ public class MeImpl implements Me {
 
 	public long[] getPaymentMeanBankAccount() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);

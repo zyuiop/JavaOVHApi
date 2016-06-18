@@ -18,6 +18,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.pcs.AccountCredentials getServiceNamePcsPcsServiceNameCredentials(java.lang.String serviceName, java.lang.String pcsServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "/credentials";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcsServiceName=" + pcsServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.pcs.AccountCredentialsImpl.class);
@@ -36,6 +38,9 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.pca.Session getServiceNamePcaPcaServiceNameSessionsSessionId(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/sessions/" + sessionId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "sessionId=" + sessionId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pca.SessionImpl.class);
@@ -44,22 +49,26 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKeyDetail getProjectServiceNameSshkeyKeyId(java.lang.String serviceName, java.lang.String keyId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/sshkey/" + keyId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "keyId=" + keyId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyDetailImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.quota.Quotas getProjectServiceNameQuota(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.quota.Quotas[] getProjectServiceNameQuota(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/quota";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.quota.QuotasImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.quota.QuotasImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.vrack.Vrack getProjectServiceNameVrack(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/vrack";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vrack.VrackImpl.class);
@@ -68,6 +77,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameImageImageId(java.lang.String serviceName, java.lang.String imageId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/image/" + imageId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "imageId=" + imageId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl.class);
@@ -89,6 +100,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot getProjectServiceNameVolumeSnapshotSnapshotId(java.lang.String serviceName, java.lang.String snapshotId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/volume/snapshot/" + snapshotId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "snapshotId=" + snapshotId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.SnapshotImpl.class);
@@ -97,6 +110,7 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.Project getProjectServiceName(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.ProjectImpl.class);
@@ -105,6 +119,8 @@ public class CloudImpl implements Cloud {
 	public long[] getServiceNamePcsPcsServiceNameBilling(java.lang.String serviceName, java.lang.String pcsServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "/billing";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcsServiceName=" + pcsServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -113,6 +129,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameSnapshotSnapshotId(java.lang.String serviceName, java.lang.String snapshotId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/snapshot/" + snapshotId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "snapshotId=" + snapshotId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl.class);
@@ -128,20 +146,25 @@ public class CloudImpl implements Cloud {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameImage(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region, java.lang.String osType) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameImage(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region, java.lang.String osType) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/image";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "flavorType=" + flavorType;
+		__data += "region=" + region;
+		__data += "osType=" + osType;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameImage(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameImage(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/image";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl[].class);
 	}
 
 	public void postProjectServiceNameCredit(java.lang.String code, java.lang.String serviceName) throws java.io.IOException {
@@ -166,6 +189,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.Credit getProjectServiceNameCreditId(java.lang.String serviceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/credit/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.CreditImpl.class);
@@ -174,6 +199,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.forecast.ProjectForecast getProjectServiceNameForecast(java.lang.String serviceName, java.util.Date toDate) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/forecast";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "toDate=" + toDate;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.forecast.ProjectForecastImpl.class);
@@ -182,6 +209,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.user.User getProjectServiceNameUserUserId(java.lang.String serviceName, long userId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/user/" + userId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "userId=" + userId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.user.UserImpl.class);
@@ -190,6 +219,9 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.pca.Billing getServiceNamePcaPcaServiceNameBillingBillingId(java.lang.String serviceName, java.lang.String pcaServiceName, long billingId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/billing/" + billingId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "billingId=" + billingId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pca.BillingImpl.class);
@@ -208,6 +240,7 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerAccess getProjectServiceNameStorageAccess(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/storage/access";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerAccessImpl.class);
@@ -216,25 +249,31 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.AlertingAlert getProjectServiceNameAlertingIdAlertAlertId(java.lang.String serviceName, java.lang.String id, long alertId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/alerting/" + id + "/alert/" + alertId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
+		__data += "alertId=" + alertId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.AlertingAlertImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor getProjectServiceNameFlavor(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor[] getProjectServiceNameFlavor(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/flavor";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor getProjectServiceNameFlavor(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor[] getProjectServiceNameFlavor(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/flavor";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl[].class);
 	}
 
 	public void deleteProjectServiceNameSshkeyKeyId(java.lang.String serviceName, java.lang.String keyId) throws java.io.IOException {
@@ -256,12 +295,12 @@ public class CloudImpl implements Cloud {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getCloud() throws java.io.IOException {
+	public java.lang.String[] getCloud() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/cloud";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void deleteProjectServiceNameAlertingId(java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
@@ -273,25 +312,30 @@ public class CloudImpl implements Cloud {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey getProjectServiceNameSshkey(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey[] getProjectServiceNameSshkey(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/sshkey";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey getProjectServiceNameSshkey(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKey[] getProjectServiceNameSshkey(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/sshkey";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.pca.Account getServiceNamePcaPcaServiceName(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pca.AccountImpl.class);
@@ -308,6 +352,8 @@ public class CloudImpl implements Cloud {
 	public java.lang.String getProjectServiceNameAcl(java.lang.String serviceName, java.lang.String type) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/acl";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "type=" + type;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -316,6 +362,7 @@ public class CloudImpl implements Cloud {
 	public java.lang.String getProjectServiceNameAcl(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/acl";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
@@ -342,25 +389,31 @@ public class CloudImpl implements Cloud {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.AlertingImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.project.Bill getProjectServiceNameBill(java.util.Date to, java.util.Date from, java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.project.Bill[] getProjectServiceNameBill(java.util.Date to, java.util.Date from, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/bill";
 		String __data = "?";
+		__data += "to=" + to;
+		__data += "from=" + from;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.project.BillImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.project.BillImpl[].class);
 	}
 
-	public java.lang.String getServiceNamePca(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePca(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.pcs.Account getServiceNamePcsPcsServiceName(java.lang.String serviceName, java.lang.String pcsServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcsServiceName=" + pcsServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pcs.AccountImpl.class);
@@ -369,6 +422,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.network.Network getProjectServiceNameNetworkPrivateNetworkId(java.lang.String serviceName, java.lang.String networkId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/network/private/" + networkId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "networkId=" + networkId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.network.NetworkImpl.class);
@@ -474,36 +529,37 @@ public class CloudImpl implements Cloud {
 
 	public void putServiceNamePcaPcaServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/serviceInfos";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.subnet.Subnet getProjectServiceNameNetworkPrivateNetworkIdSubnet(java.lang.String serviceName, java.lang.String networkId) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.subnet.Subnet[] getProjectServiceNameNetworkPrivateNetworkIdSubnet(java.lang.String serviceName, java.lang.String networkId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/network/private/" + networkId + "/subnet";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "networkId=" + networkId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.subnet.SubnetImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.subnet.SubnetImpl[].class);
 	}
 
-	public java.lang.String getServiceNamePcs(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePcs(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getProject() throws java.io.IOException {
+	public java.lang.String[] getProject() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.user.UserDetail postProjectServiceNameUser(java.lang.String serviceName, java.lang.String description) throws java.io.IOException {
@@ -528,6 +584,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.ip.FailoverIp getProjectServiceNameIpFailoverId(java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/ip/failover/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.ip.FailoverIpImpl.class);
@@ -547,6 +605,8 @@ public class CloudImpl implements Cloud {
 	public long getServiceNamePcaPcaServiceNameUsage(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/usage";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long.class);
@@ -631,30 +691,38 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.volume.Volume getProjectServiceNameVolumeVolumeId(java.lang.String serviceName, java.lang.String volumeId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/volume/" + volumeId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "volumeId=" + volumeId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.VolumeImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameSnapshot(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameSnapshot(java.lang.String serviceName, java.lang.String flavorType, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/snapshot";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "flavorType=" + flavorType;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.image.Image getProjectServiceNameSnapshot(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.image.Image[] getProjectServiceNameSnapshot(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/snapshot";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.image.ImageImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.region.RegionDetail getProjectServiceNameRegionRegionName(java.lang.String serviceName, java.lang.String regionName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/region/" + regionName + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "regionName=" + regionName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.region.RegionDetailImpl.class);
@@ -663,22 +731,28 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.pcs.Task getServiceNamePcsPcsServiceNameTasksId(java.lang.String serviceName, java.lang.String pcsServiceName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "/tasks/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcsServiceName=" + pcsServiceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pcs.TaskImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.storage.Container getProjectServiceNameStorage(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.storage.Container[] getProjectServiceNameStorage(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/storage";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.flavor.Flavor getProjectServiceNameFlavorFlavorId(java.lang.String serviceName, java.lang.String flavorId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/flavor/" + flavorId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "flavorId=" + flavorId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl.class);
@@ -696,6 +770,9 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.pca.Task getServiceNamePcaPcaServiceNameTasksTaskId(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String taskId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/tasks/" + taskId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "taskId=" + taskId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pca.TaskImpl.class);
@@ -733,6 +810,7 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.services.Service getProjectServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/serviceInfos";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
@@ -747,20 +825,23 @@ public class CloudImpl implements Cloud {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pcs.TaskImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.volume.Volume getProjectServiceNameVolume(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.volume.Volume[] getProjectServiceNameVolume(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/volume";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.VolumeImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.VolumeImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.volume.Volume getProjectServiceNameVolume(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.volume.Volume[] getProjectServiceNameVolume(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/volume";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.VolumeImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.VolumeImpl[].class);
 	}
 
 	public void deleteProjectServiceNameVolumeVolumeId(java.lang.String serviceName, java.lang.String volumeId) throws java.io.IOException {
@@ -775,78 +856,89 @@ public class CloudImpl implements Cloud {
 	public long[] getServiceNamePcsPcsServiceNameTasks(java.lang.String serviceName, java.lang.String pcsServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "/tasks";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcsServiceName=" + pcsServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.network.Network getProjectServiceNameNetworkPrivate(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.network.Network[] getProjectServiceNameNetworkPrivate(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/network/private";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.network.NetworkImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.network.NetworkImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.network.Network getProjectServiceNameNetworkPrivate(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.network.Network[] getProjectServiceNameNetworkPrivate(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/network/private";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.network.NetworkImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.network.NetworkImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.ip.FailoverIp getProjectServiceNameIpFailover(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.ip.FailoverIp[] getProjectServiceNameIpFailover(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/ip/failover";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.ip.FailoverIpImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.ip.FailoverIpImpl[].class);
 	}
 
-	public java.lang.String getProjectServiceNameRegion(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getProjectServiceNameRegion(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/region";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.user.User getProjectServiceNameUser(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.user.User[] getProjectServiceNameUser(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/user";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.user.UserImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.user.UserImpl[].class);
 	}
 
-	public java.lang.String getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String name) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String name) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/sessions";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "name=" + name;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePcaPcaServiceNameSessions(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/sessions";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public void putServiceNamePcaPcaServiceNameSessionsSessionId(net.zyuiop.ovhapi.api.objects.pca.Session param0, java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/sessions/" + sessionId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number, java.lang.String sshKeyId, boolean monthlyBilling, java.lang.String userData, java.lang.String privateNetworkId) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number, java.lang.String sshKeyId, boolean monthlyBilling, java.lang.String userData, java.lang.String privateNetworkId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/instance/bulk";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("flavorId", flavorId);
@@ -861,10 +953,10 @@ public class CloudImpl implements Cloud {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] postProjectServiceNameInstanceBulk(java.lang.String serviceName, java.lang.String flavorId, java.lang.String imageId, java.lang.String name, java.lang.String region, long number) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/instance/bulk";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("flavorId", flavorId);
@@ -875,12 +967,16 @@ public class CloudImpl implements Cloud {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.pca.File getServiceNamePcaPcaServiceNameSessionsSessionIdFilesFileId(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId, java.lang.String fileId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/sessions/" + sessionId + "/files/" + fileId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "sessionId=" + sessionId;
+		__data += "fileId=" + fileId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pca.FileImpl.class);
@@ -889,6 +985,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNamePcaPcaServiceNameServiceInfos(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/serviceInfos";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
@@ -896,9 +994,7 @@ public class CloudImpl implements Cloud {
 
 	public void putProjectServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/serviceInfos";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -928,41 +1024,57 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.user.Openrc getProjectServiceNameUserUserIdOpenrc(java.lang.String serviceName, long userId, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/user/" + userId + "/openrc";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "userId=" + userId;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.user.OpenrcImpl.class);
 	}
 
-	public java.lang.String getProjectServiceNameAlerting(java.lang.String serviceName) throws java.io.IOException {
+	public java.lang.String[] getProjectServiceNameAlerting(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/alerting";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetrics getProjectServiceNameInstanceInstanceIdMonitoring(java.lang.String serviceName, java.lang.String instanceId, java.lang.String period, java.lang.String type) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/instance/" + instanceId + "/monitoring";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "instanceId=" + instanceId;
+		__data += "period=" + period;
+		__data += "type=" + type;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceMetricsImpl.class);
 	}
 
-	public java.lang.String getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName, java.util.Date todoDateTo, java.lang.String function, java.lang.String status, java.util.Date todoDateFrom) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName, java.util.Date todoDateTo, java.lang.String function, java.lang.String status, java.util.Date todoDateFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/tasks";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "todoDate.to=" + todoDateTo;
+		__data += "function=" + function;
+		__data += "status=" + status;
+		__data += "todoDate.from=" + todoDateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePcaPcaServiceNameTasks(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/tasks";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.volume.Volume putProjectServiceNameVolumeVolumeId(java.lang.String serviceName, java.lang.String volumeId, boolean bootable, java.lang.String name, java.lang.String description) throws java.io.IOException {
@@ -998,9 +1110,7 @@ public class CloudImpl implements Cloud {
 
 	public void putServiceNamePcaPcaServiceName(net.zyuiop.ovhapi.api.objects.pca.Account param0, java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -1018,28 +1128,33 @@ public class CloudImpl implements Cloud {
 
 	public void putProjectServiceNameAlertingId(net.zyuiop.ovhapi.api.objects.cloud.Alerting param0, java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/alerting/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId, java.lang.String name) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId, java.lang.String name) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/sessions/" + sessionId + "/files";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "sessionId=" + sessionId;
+		__data += "name=" + name;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId) throws java.io.IOException {
+	public java.lang.String[] getServiceNamePcaPcaServiceNameSessionsSessionIdFiles(java.lang.String serviceName, java.lang.String pcaServiceName, java.lang.String sessionId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/sessions/" + sessionId + "/files";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "sessionId=" + sessionId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot postProjectServiceNameVolumeVolumeIdSnapshot(java.lang.String serviceName, java.lang.String volumeId, java.lang.String name, java.lang.String description) throws java.io.IOException {
@@ -1065,6 +1180,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceDetail getProjectServiceNameInstanceInstanceId(java.lang.String serviceName, java.lang.String instanceId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/instance/" + instanceId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "instanceId=" + instanceId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceDetailImpl.class);
@@ -1083,6 +1200,11 @@ public class CloudImpl implements Cloud {
 	public long[] getServiceNamePcaPcaServiceNameBilling(java.lang.String serviceName, java.lang.String pcaServiceName, java.util.Date dateTo, java.util.Date dateFrom, boolean billed) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/billing";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
+		__data += "billed=" + billed;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1091,6 +1213,8 @@ public class CloudImpl implements Cloud {
 	public long[] getServiceNamePcaPcaServiceNameBilling(java.lang.String serviceName, java.lang.String pcaServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pca/" + pcaServiceName + "/billing";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcaServiceName=" + pcaServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1098,9 +1222,7 @@ public class CloudImpl implements Cloud {
 
 	public void putProjectServiceName(net.zyuiop.ovhapi.api.objects.cloud.Project param0, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -1109,25 +1231,29 @@ public class CloudImpl implements Cloud {
 	public long[] getProjectServiceNameCredit(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/credit";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot getProjectServiceNameVolumeSnapshot(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot[] getProjectServiceNameVolumeSnapshot(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/volume/snapshot";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.SnapshotImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.SnapshotImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot getProjectServiceNameVolumeSnapshot(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.volume.Snapshot[] getProjectServiceNameVolumeSnapshot(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/volume/snapshot";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.SnapshotImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.volume.SnapshotImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.identity.Token postProjectServiceNameUserUserIdToken(java.lang.String serviceName, long userId, java.lang.String password) throws java.io.IOException {
@@ -1143,6 +1269,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.Price getPrice(java.lang.String flavorId, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/price";
 		String __data = "?";
+		__data += "flavorId=" + flavorId;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.PriceImpl.class);
@@ -1150,7 +1278,7 @@ public class CloudImpl implements Cloud {
 
 	public net.zyuiop.ovhapi.api.objects.cloud.Price getPrice() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/price";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.PriceImpl.class);
@@ -1159,17 +1287,20 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.Alerting getProjectServiceNameAlertingId(java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/alerting/" + id + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.AlertingImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.ip.CloudIp getProjectServiceNameIp(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.ip.CloudIp[] getProjectServiceNameIp(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/ip";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.ip.CloudIpImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.ip.CloudIpImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.Acl postProjectServiceNameAcl(java.lang.String accountId, java.lang.String type, java.lang.String serviceName) throws java.io.IOException {
@@ -1186,25 +1317,30 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerDetail getProjectServiceNameStorageContainerId(java.lang.String serviceName, java.lang.String containerId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/storage/" + containerId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "containerId=" + containerId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.storage.ContainerDetailImpl.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance getProjectServiceNameInstance(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] getProjectServiceNameInstance(java.lang.String serviceName, java.lang.String region) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/instance";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "region=" + region;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance getProjectServiceNameInstance(java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.cloud.instance.Instance[] getProjectServiceNameInstance(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/instance";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.instance.InstanceImpl[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cloud.volume.Volume postProjectServiceNameVolumeVolumeIdUpsize(java.lang.String serviceName, java.lang.String volumeId, long size) throws java.io.IOException {
@@ -1229,6 +1365,9 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.pcs.Billing getServiceNamePcsPcsServiceNameBillingBillingId(java.lang.String serviceName, java.lang.String pcsServiceName, long billingId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "/billing/" + billingId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcsServiceName=" + pcsServiceName;
+		__data += "billingId=" + billingId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.pcs.BillingImpl.class);
@@ -1236,9 +1375,7 @@ public class CloudImpl implements Cloud {
 
 	public void putServiceNamePcsPcsServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName, java.lang.String pcsServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "/serviceInfos";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("null", null);
-		String __data = new Gson().toJson(__dataMap);
+		String __data = new Gson().toJson(param0);
 		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
@@ -1283,6 +1420,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNamePcsPcsServiceNameServiceInfos(java.lang.String serviceName, java.lang.String pcsServiceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/" + serviceName + "/pcs/" + pcsServiceName + "/serviceInfos";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "pcsServiceName=" + pcsServiceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
@@ -1314,6 +1453,8 @@ public class CloudImpl implements Cloud {
 	public long[] getProjectServiceNameAlertingIdAlert(java.lang.String serviceName, java.lang.String id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/alerting/" + id + "/alert";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1322,6 +1463,8 @@ public class CloudImpl implements Cloud {
 	public net.zyuiop.ovhapi.api.objects.cloud.Acl getProjectServiceNameAclAccountId(java.lang.String serviceName, java.lang.String accountId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/cloud/project/" + serviceName + "/acl/" + accountId + "";
 		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "accountId=" + accountId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cloud.AclImpl.class);

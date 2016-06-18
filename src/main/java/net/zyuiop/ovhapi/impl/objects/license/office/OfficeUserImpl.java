@@ -9,7 +9,7 @@ public class OfficeUserImpl implements OfficeUser {
 
 	private java.lang.String firstName;
 	private java.lang.String status;
-	private java.lang.String licences;
+	private java.lang.String[] licences;
 	private java.lang.String lastName;
 	private java.lang.String activationEmail;
 	private long taskPendingId;
@@ -43,15 +43,15 @@ public class OfficeUserImpl implements OfficeUser {
 		return this;
 	} 
 
-	public java.lang.String getLicences() { 
+	public java.lang.String[] getLicences() { 
 		return this.licences;
 	} 
 
-	public void setLicences(java.lang.String licences) { 
+	public void setLicences(java.lang.String[] licences) { 
 		this.licences = licences;
 	} 
 
-	public OfficeUserImpl licences(java.lang.String licences) { 
+	public OfficeUserImpl licences(java.lang.String[] licences) { 
 		this.licences = licences;
 		return this;
 	} 

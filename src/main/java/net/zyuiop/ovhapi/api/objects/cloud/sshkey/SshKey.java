@@ -9,7 +9,7 @@ public interface SshKey {
 	/**
 	 * @return SSH key regions
 	 */
-	java.lang.String getRegions(); 
+	java.lang.String[] getRegions(); 
 
 	/**
 	 * @return SSH key name

@@ -14,6 +14,6 @@ public interface WorkLightOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableWorkLightCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderableWorkLightCompatibilityInfos[] getOrderableVersions(); 
 
 }

@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.dedicated.housing.HaRoutingOrderable;
 
 public class HaRoutingOrderableImpl implements HaRoutingOrderable { 
 
-	private java.lang.String offer;
+	private java.lang.String[] offer;
 	private boolean orderable;
 
 	public HaRoutingOrderableImpl() {
 	}
 
-	public java.lang.String getOffer() { 
+	public java.lang.String[] getOffer() { 
 		return this.offer;
 	} 
 
-	public void setOffer(java.lang.String offer) { 
+	public void setOffer(java.lang.String[] offer) { 
 		this.offer = offer;
 	} 
 
-	public HaRoutingOrderableImpl offer(java.lang.String offer) { 
+	public HaRoutingOrderableImpl offer(java.lang.String[] offer) { 
 		this.offer = offer;
 		return this;
 	} 

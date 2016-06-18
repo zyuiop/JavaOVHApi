@@ -30,7 +30,7 @@ public interface IpLoadbalancing {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getIpLoadbalancing() throws java.io.IOException;
+	java.lang.String[] getIpLoadbalancing() throws java.io.IOException;
 
 	/**
 	 * Backend/Servers links
@@ -113,7 +113,7 @@ public interface IpLoadbalancing {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	net.zyuiop.ovhapi.api.objects.ip.Ip getServiceNameAllowedServers(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.ip.Ip[] getServiceNameAllowedServers(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Ssl for this iplb
@@ -160,7 +160,7 @@ public interface IpLoadbalancing {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	java.lang.String getServiceNameNatIp(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameNatIp(java.lang.String serviceName) throws java.io.IOException;
 
 
 
@@ -187,7 +187,7 @@ public interface IpLoadbalancing {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	java.lang.String getServiceNameFailover(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameFailover(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Launch a contact change procedure
@@ -212,7 +212,7 @@ public interface IpLoadbalancing {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	java.lang.String getServiceNameProbeIp(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameProbeIp(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -236,13 +236,13 @@ public interface IpLoadbalancing {
 	 * List of zone available for an IP load balancing
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getAvailableZones() throws java.io.IOException;
+	java.lang.String[] getAvailableZones() throws java.io.IOException;
 
 	/**
 	 * List of available zones for your server to attach to your iplb
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your IP load balancing
 	*/
-	java.lang.String getServiceNameAvailableServerZones(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAvailableServerZones(java.lang.String serviceName) throws java.io.IOException;
 
 }

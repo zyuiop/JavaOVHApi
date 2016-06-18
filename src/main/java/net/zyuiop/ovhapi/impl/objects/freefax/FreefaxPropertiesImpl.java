@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.freefax.FreefaxProperties;
 public class FreefaxPropertiesImpl implements FreefaxProperties { 
 
 	private java.lang.String fromName;
-	private java.lang.String redirectionEmail;
+	private java.lang.String[] redirectionEmail;
 	private java.lang.String number;
 	private java.lang.String faxQuality;
 	private long faxMaxCall;
@@ -31,15 +31,15 @@ public class FreefaxPropertiesImpl implements FreefaxProperties {
 		return this;
 	} 
 
-	public java.lang.String getRedirectionEmail() { 
+	public java.lang.String[] getRedirectionEmail() { 
 		return this.redirectionEmail;
 	} 
 
-	public void setRedirectionEmail(java.lang.String redirectionEmail) { 
+	public void setRedirectionEmail(java.lang.String[] redirectionEmail) { 
 		this.redirectionEmail = redirectionEmail;
 	} 
 
-	public FreefaxPropertiesImpl redirectionEmail(java.lang.String redirectionEmail) { 
+	public FreefaxPropertiesImpl redirectionEmail(java.lang.String[] redirectionEmail) { 
 		this.redirectionEmail = redirectionEmail;
 		return this;
 	} 

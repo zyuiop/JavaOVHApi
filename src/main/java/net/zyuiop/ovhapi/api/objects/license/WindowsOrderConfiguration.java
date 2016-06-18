@@ -14,6 +14,6 @@ public interface WindowsOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableWindowsCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderableWindowsCompatibilityInfos[] getOrderableVersions(); 
 
 }

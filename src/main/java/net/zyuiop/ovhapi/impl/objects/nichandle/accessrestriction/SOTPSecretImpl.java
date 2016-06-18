@@ -7,20 +7,20 @@ import net.zyuiop.ovhapi.api.objects.nichandle.accessrestriction.SOTPSecret;
 
 public class SOTPSecretImpl implements SOTPSecret { 
 
-	private java.lang.String codes;
+	private java.lang.String[] codes;
 
 	public SOTPSecretImpl() {
 	}
 
-	public java.lang.String getCodes() { 
+	public java.lang.String[] getCodes() { 
 		return this.codes;
 	} 
 
-	public void setCodes(java.lang.String codes) { 
+	public void setCodes(java.lang.String[] codes) { 
 		this.codes = codes;
 	} 
 
-	public SOTPSecretImpl codes(java.lang.String codes) { 
+	public SOTPSecretImpl codes(java.lang.String[] codes) { 
 		this.codes = codes;
 		return this;
 	} 

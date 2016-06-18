@@ -12,14 +12,14 @@ public interface Domain {
 	 * @param domain Name of your domain name
 	 * @param subDomain Sub domain
 	*/
-	java.lang.String getDomainDnsMXRecords(java.lang.String domain, java.lang.String subDomain) throws java.io.IOException;
+	java.lang.String[] getDomainDnsMXRecords(java.lang.String domain, java.lang.String subDomain) throws java.io.IOException;
 
 	/**
 	 * Domain MX records
 	 * Facultative parameters ? false
 	 * @param domain Name of your domain name
 	*/
-	java.lang.String getDomainDnsMXRecords(java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getDomainDnsMXRecords(java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Update usage of account
@@ -61,7 +61,7 @@ public interface Domain {
 	 * @param email Email
 	 * @param name Filter name
 	*/
-	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter deleteDelegatedAccountEmailFilterName(java.lang.String email, java.lang.String name) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter[] deleteDelegatedAccountEmailFilterName(java.lang.String email, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * Get rules
@@ -191,14 +191,14 @@ public interface Domain {
 	 * @param domain Name of your domain name
 	 * @param accountName Account name
 	*/
-	java.lang.String getDomainAccount(java.lang.String domain, java.lang.String accountName) throws java.io.IOException;
+	java.lang.String[] getDomainAccount(java.lang.String domain, java.lang.String accountName) throws java.io.IOException;
 
 	/**
 	 * Get accounts
 	 * Facultative parameters ? false
 	 * @param domain Name of your domain name
 	*/
-	java.lang.String getDomainAccount(java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getDomainAccount(java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Change filter priority
@@ -230,7 +230,7 @@ public interface Domain {
 	 * Facultative parameters ? false
 	 * @param email Email
 	*/
-	java.lang.String getDelegatedAccountEmailFilter(java.lang.String email) throws java.io.IOException;
+	java.lang.String[] getDelegatedAccountEmailFilter(java.lang.String email) throws java.io.IOException;
 
 	/**
 	 * Get rules
@@ -280,13 +280,13 @@ public interface Domain {
 	 * @param domain Domain of email address
 	 * @param accountName Name of email address
 	*/
-	java.lang.String getDelegatedAccount(java.lang.String domain, java.lang.String accountName) throws java.io.IOException;
+	java.lang.String[] getDelegatedAccount(java.lang.String domain, java.lang.String accountName) throws java.io.IOException;
 
 	/**
 	 * Delegated emails
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDelegatedAccount() throws java.io.IOException;
+	java.lang.String[] getDelegatedAccount() throws java.io.IOException;
 
 	/**
 	 * Get mailing lists
@@ -294,14 +294,14 @@ public interface Domain {
 	 * @param domain Name of your domain name
 	 * @param name Mailing list name
 	*/
-	java.lang.String getDomainMailingList(java.lang.String domain, java.lang.String name) throws java.io.IOException;
+	java.lang.String[] getDomainMailingList(java.lang.String domain, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * Get mailing lists
 	 * Facultative parameters ? false
 	 * @param domain Name of your domain name
 	*/
-	java.lang.String getDomainMailingList(java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getDomainMailingList(java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -318,14 +318,14 @@ public interface Domain {
 	 * @param to Email of redirection target
 	 * @param from Name of redirection
 	*/
-	java.lang.String getDomainRedirection(java.lang.String domain, java.lang.String to, java.lang.String from) throws java.io.IOException;
+	java.lang.String[] getDomainRedirection(java.lang.String domain, java.lang.String to, java.lang.String from) throws java.io.IOException;
 
 	/**
 	 * Get redirections
 	 * Facultative parameters ? false
 	 * @param domain Name of your domain name
 	*/
-	java.lang.String getDomainRedirection(java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getDomainRedirection(java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * usage of account
@@ -352,14 +352,14 @@ public interface Domain {
 	 * @param domain Name of your domain name
 	 * @param account Responder name
 	*/
-	java.lang.String getDomainResponder(java.lang.String domain, java.lang.String account) throws java.io.IOException;
+	java.lang.String[] getDomainResponder(java.lang.String domain, java.lang.String account) throws java.io.IOException;
 
 	/**
 	 * Get responders
 	 * Facultative parameters ? false
 	 * @param domain Name of your domain name
 	*/
-	java.lang.String getDomainResponder(java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getDomainResponder(java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Summary for this domain
@@ -485,7 +485,7 @@ public interface Domain {
 	 * @param name Name of mailing list
 	 * @param email Moderator email
 	*/
-	java.lang.String getDomainMailingListNameModerator(java.lang.String domain, java.lang.String name, java.lang.String email) throws java.io.IOException;
+	java.lang.String[] getDomainMailingListNameModerator(java.lang.String domain, java.lang.String name, java.lang.String email) throws java.io.IOException;
 
 	/**
 	 * List of moderators
@@ -493,7 +493,7 @@ public interface Domain {
 	 * @param domain Name of your domain name
 	 * @param name Name of mailing list
 	*/
-	java.lang.String getDomainMailingListNameModerator(java.lang.String domain, java.lang.String name) throws java.io.IOException;
+	java.lang.String[] getDomainMailingListNameModerator(java.lang.String domain, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * Domain MX filter
@@ -530,7 +530,7 @@ public interface Domain {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getEmailDomain() throws java.io.IOException;
+	java.lang.String[] getEmailDomain() throws java.io.IOException;
 
 	/**
 	 * Create new mailingList
@@ -561,7 +561,7 @@ public interface Domain {
 	 * @param domain Name of your domain name
 	 * @param accountName Name of account
 	*/
-	java.lang.String getDomainAccountAccountNameFilter(java.lang.String domain, java.lang.String accountName) throws java.io.IOException;
+	java.lang.String[] getDomainAccountAccountNameFilter(java.lang.String domain, java.lang.String accountName) throws java.io.IOException;
 
 	/**
 	 * Create new ACL
@@ -578,7 +578,7 @@ public interface Domain {
 	 * @param name Filter name
 	 * @param id 
 	*/
-	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter deleteDelegatedAccountEmailFilterNameRuleId(java.lang.String email, java.lang.String name, long id) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter[] deleteDelegatedAccountEmailFilterNameRuleId(java.lang.String email, java.lang.String name, long id) throws java.io.IOException;
 
 	/**
 	 * Change mailbox password (length : [9;30], no space at begin and end, no accent)
@@ -619,7 +619,7 @@ public interface Domain {
 	 * @param name Name of mailing list
 	 * @param email Subscriber email
 	*/
-	java.lang.String getDomainMailingListNameSubscriber(java.lang.String domain, java.lang.String name, java.lang.String email) throws java.io.IOException;
+	java.lang.String[] getDomainMailingListNameSubscriber(java.lang.String domain, java.lang.String name, java.lang.String email) throws java.io.IOException;
 
 	/**
 	 * List of subscribers
@@ -627,7 +627,7 @@ public interface Domain {
 	 * @param domain Name of your domain name
 	 * @param name Name of mailing list
 	*/
-	java.lang.String getDomainMailingListNameSubscriber(java.lang.String domain, java.lang.String name) throws java.io.IOException;
+	java.lang.String[] getDomainMailingListNameSubscriber(java.lang.String domain, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * Delete an existing redirection in server
@@ -653,7 +653,7 @@ public interface Domain {
 	 * @param name Filter name
 	 * @param id 
 	*/
-	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter deleteDomainAccountAccountNameFilterNameRuleId(java.lang.String domain, java.lang.String accountName, java.lang.String name, long id) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter[] deleteDomainAccountAccountNameFilterNameRuleId(java.lang.String domain, java.lang.String accountName, java.lang.String name, long id) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -847,7 +847,7 @@ public interface Domain {
 	 * @param accountName Name of account
 	 * @param name Filter name
 	*/
-	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter deleteDomainAccountAccountNameFilterName(java.lang.String domain, java.lang.String accountName, java.lang.String name) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.email.domain.TaskFilter[] deleteDomainAccountAccountNameFilterName(java.lang.String domain, java.lang.String accountName, java.lang.String name) throws java.io.IOException;
 
 	/**
 	 * Create new mailbox in server

@@ -39,7 +39,7 @@ public interface SharedAccount {
 	/**
 	 * @return Enable or disable anti-virus and anti-spam
 	 */
-	java.lang.String getMailingFilter(); 
+	java.lang.String[] getMailingFilter(); 
 
 	/**
 	 * @return Shared account last name

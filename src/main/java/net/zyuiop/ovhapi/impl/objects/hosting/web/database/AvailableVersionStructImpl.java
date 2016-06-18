@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.hosting.web.database.AvailableVersionStruct
 public class AvailableVersionStructImpl implements AvailableVersionStruct { 
 
 	private java.lang.String _default;
-	private java.lang.String list;
+	private java.lang.String[] list;
 
 	public AvailableVersionStructImpl() {
 	}
@@ -26,15 +26,15 @@ public class AvailableVersionStructImpl implements AvailableVersionStruct {
 		return this;
 	} 
 
-	public java.lang.String getList() { 
+	public java.lang.String[] getList() { 
 		return this.list;
 	} 
 
-	public void setList(java.lang.String list) { 
+	public void setList(java.lang.String[] list) { 
 		this.list = list;
 	} 
 
-	public AvailableVersionStructImpl list(java.lang.String list) { 
+	public AvailableVersionStructImpl list(java.lang.String[] list) { 
 		this.list = list;
 		return this;
 	} 

@@ -10,7 +10,7 @@ public interface Mis {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getStackMis() throws java.io.IOException;
+	java.lang.String[] getStackMis() throws java.io.IOException;
 
 	/**
 	 * Alter this object properties

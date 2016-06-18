@@ -13,7 +13,7 @@ public interface Office {
 	 * @param from Period's start point.
 	 * @param serviceName The unique identifier of your Office service
 	*/
-	net.zyuiop.ovhapi.api.objects.license.office.Statistics getServiceNameUsageStatistics(java.util.Date to, java.util.Date from, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.license.office.Statistics[] getServiceNameUsageStatistics(java.util.Date to, java.util.Date from, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -42,7 +42,7 @@ public interface Office {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getLicenseOffice() throws java.io.IOException;
+	java.lang.String[] getLicenseOffice() throws java.io.IOException;
 
 	/**
 	 * Create new office user
@@ -71,7 +71,7 @@ public interface Office {
 	 * Facultative parameters ? false
 	 * @param serviceName The unique identifier of your Office service
 	*/
-	java.lang.String getServiceNameDomain(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameDomain(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Delete existing office user
@@ -86,7 +86,7 @@ public interface Office {
 	 * Facultative parameters ? false
 	 * @param serviceName The unique identifier of your Office service
 	*/
-	java.lang.String getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties

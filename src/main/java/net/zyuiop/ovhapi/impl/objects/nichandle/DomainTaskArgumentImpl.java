@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.nichandle.DomainTaskArgument;
 
 public class DomainTaskArgumentImpl implements DomainTaskArgument { 
 
-	private java.lang.String fields;
+	private java.lang.String[] fields;
 	private java.lang.String value;
 	private java.lang.String type;
 	private java.lang.String description;
@@ -17,15 +17,15 @@ public class DomainTaskArgumentImpl implements DomainTaskArgument {
 	public DomainTaskArgumentImpl() {
 	}
 
-	public java.lang.String getFields() { 
+	public java.lang.String[] getFields() { 
 		return this.fields;
 	} 
 
-	public void setFields(java.lang.String fields) { 
+	public void setFields(java.lang.String[] fields) { 
 		this.fields = fields;
 	} 
 
-	public DomainTaskArgumentImpl fields(java.lang.String fields) { 
+	public DomainTaskArgumentImpl fields(java.lang.String[] fields) { 
 		this.fields = fields;
 		return this;
 	} 

@@ -9,12 +9,12 @@ public interface OrderablePleskCompatibilityInfos {
 	/**
 	 * @return null
 	 */
-	java.lang.String getCompliantLanguagePack(); 
+	java.lang.String[] getCompliantLanguagePack(); 
 
 	/**
 	 * @return null
 	 */
-	java.lang.String getCompliantAntivirus(); 
+	java.lang.String[] getCompliantAntivirus(); 
 
 	/**
 	 * @return null
@@ -24,12 +24,12 @@ public interface OrderablePleskCompatibilityInfos {
 	/**
 	 * @return null
 	 */
-	java.lang.String getCompliantApplicationSets(); 
+	java.lang.String[] getCompliantApplicationSets(); 
 
 	/**
 	 * @return null
 	 */
-	java.lang.String getPotentialProblems(); 
+	java.lang.String[] getPotentialProblems(); 
 
 	/**
 	 * @return null
@@ -39,7 +39,7 @@ public interface OrderablePleskCompatibilityInfos {
 	/**
 	 * @return null
 	 */
-	java.lang.String getCompliantDomains(); 
+	java.lang.String[] getCompliantDomains(); 
 
 	/**
 	 * @return null

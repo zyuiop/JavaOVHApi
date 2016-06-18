@@ -7,39 +7,39 @@ import net.zyuiop.ovhapi.api.objects.cloud.identity.OpenstackToken;
 
 public class OpenstackTokenImpl implements OpenstackToken { 
 
-	private net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl roles;
-	private net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl catalog;
+	private net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl[] roles;
+	private net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl[] catalog;
 	private java.util.Date expires_at;
 	private net.zyuiop.ovhapi.impl.objects.cloud.identity.TokenProjectImpl project;
 	private java.util.Date issued_at;
-	private java.lang.String methods;
+	private java.lang.String[] methods;
 	private net.zyuiop.ovhapi.impl.objects.cloud.identity.UserTokenImpl user;
 
 	public OpenstackTokenImpl() {
 	}
 
-	public net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl getRoles() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl[] getRoles() { 
 		return this.roles;
 	} 
 
-	public void setRoles(net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl roles) { 
+	public void setRoles(net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl[] roles) { 
 		this.roles = roles;
 	} 
 
-	public OpenstackTokenImpl roles(net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl roles) { 
+	public OpenstackTokenImpl roles(net.zyuiop.ovhapi.impl.objects.cloud.identity.RoleImpl[] roles) { 
 		this.roles = roles;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl getCatalog() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl[] getCatalog() { 
 		return this.catalog;
 	} 
 
-	public void setCatalog(net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl catalog) { 
+	public void setCatalog(net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl[] catalog) { 
 		this.catalog = catalog;
 	} 
 
-	public OpenstackTokenImpl catalog(net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl catalog) { 
+	public OpenstackTokenImpl catalog(net.zyuiop.ovhapi.impl.objects.cloud.identity.CatalogImpl[] catalog) { 
 		this.catalog = catalog;
 		return this;
 	} 
@@ -83,15 +83,15 @@ public class OpenstackTokenImpl implements OpenstackToken {
 		return this;
 	} 
 
-	public java.lang.String getMethods() { 
+	public java.lang.String[] getMethods() { 
 		return this.methods;
 	} 
 
-	public void setMethods(java.lang.String methods) { 
+	public void setMethods(java.lang.String[] methods) { 
 		this.methods = methods;
 	} 
 
-	public OpenstackTokenImpl methods(java.lang.String methods) { 
+	public OpenstackTokenImpl methods(java.lang.String[] methods) { 
 		this.methods = methods;
 		return this;
 	} 

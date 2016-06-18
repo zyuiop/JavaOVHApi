@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.sshkey.SshKeyDetail;
 public class SshKeyDetailImpl implements SshKeyDetail { 
 
 	private java.lang.String fingerPrint;
-	private java.lang.String regions;
+	private java.lang.String[] regions;
 	private java.lang.String name;
 	private java.lang.String id;
 	private java.lang.String publicKey;
@@ -29,15 +29,15 @@ public class SshKeyDetailImpl implements SshKeyDetail {
 		return this;
 	} 
 
-	public java.lang.String getRegions() { 
+	public java.lang.String[] getRegions() { 
 		return this.regions;
 	} 
 
-	public void setRegions(java.lang.String regions) { 
+	public void setRegions(java.lang.String[] regions) { 
 		this.regions = regions;
 	} 
 
-	public SshKeyDetailImpl regions(java.lang.String regions) { 
+	public SshKeyDetailImpl regions(java.lang.String[] regions) { 
 		this.regions = regions;
 		return this;
 	} 

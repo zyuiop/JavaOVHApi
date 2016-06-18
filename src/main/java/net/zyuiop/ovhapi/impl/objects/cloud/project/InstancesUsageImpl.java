@@ -7,21 +7,21 @@ import net.zyuiop.ovhapi.api.objects.cloud.project.InstancesUsage;
 
 public class InstancesUsageImpl implements InstancesUsage { 
 
-	private net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl detail;
+	private net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl[] detail;
 	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl total;
 
 	public InstancesUsageImpl() {
 	}
 
-	public net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl getDetail() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl[] getDetail() { 
 		return this.detail;
 	} 
 
-	public void setDetail(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl detail) { 
+	public void setDetail(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl[] detail) { 
 		this.detail = detail;
 	} 
 
-	public InstancesUsageImpl detail(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl detail) { 
+	public InstancesUsageImpl detail(net.zyuiop.ovhapi.impl.objects.cloud.project.InstanceUsageDetailImpl[] detail) { 
 		this.detail = detail;
 		return this;
 	} 

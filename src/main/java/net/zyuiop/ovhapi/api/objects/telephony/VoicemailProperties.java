@@ -39,7 +39,7 @@ public interface VoicemailProperties {
 	/**
 	 * @return Email addresses to notify when a new voicemail is left
 	 */
-	net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications getRedirectionEmails(); 
+	net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications[] getRedirectionEmails(); 
 
 	/**
 	 * @return Force password request to access the voicemail panel

@@ -19,7 +19,7 @@ public interface FaxProperties {
 	/**
 	 * @return null
 	 */
-	java.lang.String getRedirectionEmail(); 
+	java.lang.String[] getRedirectionEmail(); 
 
 	/**
 	 * @return null

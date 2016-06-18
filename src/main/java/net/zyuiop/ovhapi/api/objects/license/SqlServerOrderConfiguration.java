@@ -14,6 +14,6 @@ public interface SqlServerOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableSqlServerCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderableSqlServerCompatibilityInfos[] getOrderableVersions(); 
 
 }

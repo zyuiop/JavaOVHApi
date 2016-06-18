@@ -9,7 +9,7 @@ public interface Volume {
 	/**
 	 * @return Volume attached to instances id
 	 */
-	java.lang.String getAttachedTo(); 
+	java.lang.String[] getAttachedTo(); 
 
 	/**
 	 * @return Volume status

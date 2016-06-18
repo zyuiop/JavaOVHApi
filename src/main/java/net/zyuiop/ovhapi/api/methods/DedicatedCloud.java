@@ -11,7 +11,7 @@ public interface DedicatedCloud {
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String getServiceNameCommercialRangeOrderable(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameCommercialRangeOrderable(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -87,7 +87,7 @@ public interface DedicatedCloud {
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String getServiceNameOrderableIpCountries(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOrderableIpCountries(java.lang.String serviceName) throws java.io.IOException;
 
 
 
@@ -100,7 +100,7 @@ public interface DedicatedCloud {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDedicatedCloud() throws java.io.IOException;
+	java.lang.String[] getDedicatedCloud() throws java.io.IOException;
 
 	/**
 	 * Tasks associated with this User
@@ -150,13 +150,13 @@ public interface DedicatedCloud {
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String getServiceNameCommercialRangeCompliance(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameCommercialRangeCompliance(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List of commercial Ranges available in a Dedicated Cloud
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getCommercialRange() throws java.io.IOException;
+	java.lang.String[] getCommercialRange() throws java.io.IOException;
 
 
 
@@ -233,7 +233,7 @@ public interface DedicatedCloud {
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String getServiceNameVrack(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameVrack(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Networks allowed to access to this Dedicated Cloud management interface

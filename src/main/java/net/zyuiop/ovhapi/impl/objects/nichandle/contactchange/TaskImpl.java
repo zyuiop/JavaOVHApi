@@ -9,7 +9,7 @@ public class TaskImpl implements Task {
 
 	private java.lang.String toAccount;
 	private java.lang.String askingAccount;
-	private java.lang.String contactTypes;
+	private java.lang.String[] contactTypes;
 	private java.lang.String state;
 	private java.lang.String fromAccount;
 	private java.util.Date dateDone;
@@ -46,15 +46,15 @@ public class TaskImpl implements Task {
 		return this;
 	} 
 
-	public java.lang.String getContactTypes() { 
+	public java.lang.String[] getContactTypes() { 
 		return this.contactTypes;
 	} 
 
-	public void setContactTypes(java.lang.String contactTypes) { 
+	public void setContactTypes(java.lang.String[] contactTypes) { 
 		this.contactTypes = contactTypes;
 	} 
 
-	public TaskImpl contactTypes(java.lang.String contactTypes) { 
+	public TaskImpl contactTypes(java.lang.String[] contactTypes) { 
 		this.contactTypes = contactTypes;
 		return this;
 	} 

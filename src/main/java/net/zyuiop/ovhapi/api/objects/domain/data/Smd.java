@@ -34,6 +34,6 @@ public interface Smd {
 	/**
 	 * @return List of the labels that are protected with that SMD file
 	 */
-	net.zyuiop.ovhapi.api.objects.domain.data.SmdLabel getProtectedLabels(); 
+	net.zyuiop.ovhapi.api.objects.domain.data.SmdLabel[] getProtectedLabels(); 
 
 }

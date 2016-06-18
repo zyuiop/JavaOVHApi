@@ -21,7 +21,7 @@ public interface Nasha {
 	 * @param serviceName The internal name of your storage
 	 * @param partitionName the given name of partition
 	*/
-	java.lang.String getServiceNamePartitionPartitionNameAccess(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartitionPartitionNameAccess(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -38,7 +38,7 @@ public interface Nasha {
 	 * @param serviceName The internal name of your storage
 	 * @param partitionName the given name of partition
 	*/
-	java.lang.String getServiceNamePartitionPartitionNameAuthorizableIps(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartitionPartitionNameAuthorizableIps(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
 
 	/**
 	 * View task list
@@ -77,13 +77,13 @@ public interface Nasha {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your storage
 	*/
-	java.lang.String getServiceNamePartition(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartition(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDedicatedNasha() throws java.io.IOException;
+	java.lang.String[] getDedicatedNasha() throws java.io.IOException;
 
 
 
@@ -111,7 +111,7 @@ public interface Nasha {
 	 * @param serviceName The internal name of your storage
 	 * @param partitionName the given name of partition
 	*/
-	java.lang.String getServiceNamePartitionPartitionNameAuthorizableBlocks(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartitionPartitionNameAuthorizableBlocks(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -147,7 +147,7 @@ public interface Nasha {
 	 * @param serviceName The internal name of your storage
 	 * @param partitionName the given name of partition
 	*/
-	java.lang.String getServiceNamePartitionPartitionNameSnapshot(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartitionPartitionNameSnapshot(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties

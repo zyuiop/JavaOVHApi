@@ -14,6 +14,6 @@ public interface DirectAdminOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableDirectAdminCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderableDirectAdminCompatibilityInfos[] getOrderableVersions(); 
 
 }

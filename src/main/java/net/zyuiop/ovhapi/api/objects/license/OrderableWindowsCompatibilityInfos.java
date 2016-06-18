@@ -9,7 +9,7 @@ public interface OrderableWindowsCompatibilityInfos {
 	/**
 	 * @return null
 	 */
-	java.lang.String getCompliantSql(); 
+	java.lang.String[] getCompliantSql(); 
 
 	/**
 	 * @return null

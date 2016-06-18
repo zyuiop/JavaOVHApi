@@ -10,15 +10,15 @@ public class MigrationOfferImpl implements MigrationOffer {
 	private long engageMonths;
 	private boolean needModem;
 	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl due;
-	private net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl options;
+	private net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl[] options;
 	private java.lang.String description;
 	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl currentOfferPrice;
 	private java.lang.String modemMacToReturn;
-	private net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl subServicesToDelete;
+	private net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl[] subServicesToDelete;
 	private java.lang.String offerName;
 	private java.lang.String url;
 	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl price;
-	private java.lang.String contractList;
+	private java.lang.String[] contractList;
 	private boolean needNewModem;
 
 	public MigrationOfferImpl() {
@@ -63,15 +63,15 @@ public class MigrationOfferImpl implements MigrationOffer {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl getOptions() { 
+	public net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl[] getOptions() { 
 		return this.options;
 	} 
 
-	public void setOptions(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl options) { 
+	public void setOptions(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl[] options) { 
 		this.options = options;
 	} 
 
-	public MigrationOfferImpl options(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl options) { 
+	public MigrationOfferImpl options(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.OfferAvailableOptionImpl[] options) { 
 		this.options = options;
 		return this;
 	} 
@@ -115,15 +115,15 @@ public class MigrationOfferImpl implements MigrationOffer {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl getSubServicesToDelete() { 
+	public net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl[] getSubServicesToDelete() { 
 		return this.subServicesToDelete;
 	} 
 
-	public void setSubServicesToDelete(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl subServicesToDelete) { 
+	public void setSubServicesToDelete(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl[] subServicesToDelete) { 
 		this.subServicesToDelete = subServicesToDelete;
 	} 
 
-	public MigrationOfferImpl subServicesToDelete(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl subServicesToDelete) { 
+	public MigrationOfferImpl subServicesToDelete(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.SubServiceToDeleteImpl[] subServicesToDelete) { 
 		this.subServicesToDelete = subServicesToDelete;
 		return this;
 	} 
@@ -167,15 +167,15 @@ public class MigrationOfferImpl implements MigrationOffer {
 		return this;
 	} 
 
-	public java.lang.String getContractList() { 
+	public java.lang.String[] getContractList() { 
 		return this.contractList;
 	} 
 
-	public void setContractList(java.lang.String contractList) { 
+	public void setContractList(java.lang.String[] contractList) { 
 		this.contractList = contractList;
 	} 
 
-	public MigrationOfferImpl contractList(java.lang.String contractList) { 
+	public MigrationOfferImpl contractList(java.lang.String[] contractList) { 
 		this.contractList = contractList;
 		return this;
 	} 

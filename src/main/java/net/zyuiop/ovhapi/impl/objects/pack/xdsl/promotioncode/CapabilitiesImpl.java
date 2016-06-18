@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.pack.xdsl.promotioncode.Capabilities;
 public class CapabilitiesImpl implements Capabilities { 
 
 	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl amount;
-	private java.lang.String reasonCodes;
+	private java.lang.String[] reasonCodes;
 	private boolean canGenerate;
 	private long engagement;
 
@@ -28,15 +28,15 @@ public class CapabilitiesImpl implements Capabilities {
 		return this;
 	} 
 
-	public java.lang.String getReasonCodes() { 
+	public java.lang.String[] getReasonCodes() { 
 		return this.reasonCodes;
 	} 
 
-	public void setReasonCodes(java.lang.String reasonCodes) { 
+	public void setReasonCodes(java.lang.String[] reasonCodes) { 
 		this.reasonCodes = reasonCodes;
 	} 
 
-	public CapabilitiesImpl reasonCodes(java.lang.String reasonCodes) { 
+	public CapabilitiesImpl reasonCodes(java.lang.String[] reasonCodes) { 
 		this.reasonCodes = reasonCodes;
 		return this;
 	} 

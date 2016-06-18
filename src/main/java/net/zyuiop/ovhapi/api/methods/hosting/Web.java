@@ -123,7 +123,7 @@ public interface Web {
 	 * Facultative parameters ? false
 	 * @param domain Domain you want to add or upgrade a hosting
 	*/
-	java.lang.String getAvailableOffer(java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getAvailableOffer(java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Tasks attached to your hosting
@@ -189,14 +189,14 @@ public interface Web {
 	 * @param serviceName The internal name of your hosting
 	 * @param date Filter the value of date property (like)
 	*/
-	java.util.Date getServiceNameBoostHistory(java.lang.String serviceName, java.util.Date date) throws java.io.IOException;
+	java.util.Date[] getServiceNameBoostHistory(java.lang.String serviceName, java.util.Date date) throws java.io.IOException;
 
 	/**
 	 * History of your hosting boost
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.util.Date getServiceNameBoostHistory(java.lang.String serviceName) throws java.io.IOException;
+	java.util.Date[] getServiceNameBoostHistory(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Request the restore from this dump
@@ -282,7 +282,7 @@ public interface Web {
 	 * @param limit Maximum bounces limit ( default : 20 / max : 100 )
 	 * @param serviceName The internal name of your hosting
 	*/
-	net.zyuiop.ovhapi.api.objects.hosting.web.mail.Bounce getServiceNameEmailBounces(long limit, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.hosting.web.mail.Bounce[] getServiceNameEmailBounces(long limit, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Databases linked to your hosting
@@ -294,14 +294,14 @@ public interface Web {
 	 * @param type Filter the value of type property (=)
 	 * @param server Filter the value of server property (like)
 	*/
-	java.lang.String getServiceNameDatabase(java.lang.String serviceName, java.lang.String mode, java.lang.String user, java.lang.String name, java.lang.String type, java.lang.String server) throws java.io.IOException;
+	java.lang.String[] getServiceNameDatabase(java.lang.String serviceName, java.lang.String mode, java.lang.String user, java.lang.String name, java.lang.String type, java.lang.String server) throws java.io.IOException;
 
 	/**
 	 * Databases linked to your hosting
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String getServiceNameDatabase(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameDatabase(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Configuration used on your hosting
@@ -358,14 +358,14 @@ public interface Web {
 	 * @param domain Filter the value of domain property (like)
 	 * @param path Filter the value of path property (like)
 	*/
-	java.lang.String getServiceNameAttachedDomain(java.lang.String serviceName, java.lang.String domain, java.lang.String path) throws java.io.IOException;
+	java.lang.String[] getServiceNameAttachedDomain(java.lang.String serviceName, java.lang.String domain, java.lang.String path) throws java.io.IOException;
 
 	/**
 	 * Domains or subdomains attached to your hosting
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String getServiceNameAttachedDomain(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAttachedDomain(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -600,14 +600,14 @@ public interface Web {
 	 * @param serviceName The internal name of your hosting
 	 * @param login Filter the value of login property (like)
 	*/
-	java.lang.String getServiceNameUserLogs(java.lang.String serviceName, java.lang.String login) throws java.io.IOException;
+	java.lang.String[] getServiceNameUserLogs(java.lang.String serviceName, java.lang.String login) throws java.io.IOException;
 
 	/**
 	 * User allowed to connect into your logs interface
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String getServiceNameUserLogs(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameUserLogs(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -657,14 +657,14 @@ public interface Web {
 	 * @param serviceName The internal name of your hosting
 	 * @param status Filter the value of status property (=)
 	*/
-	java.lang.String getServiceNameFreedom(java.lang.String serviceName, java.lang.String status) throws java.io.IOException;
+	java.lang.String[] getServiceNameFreedom(java.lang.String serviceName, java.lang.String status) throws java.io.IOException;
 
 	/**
 	 * Freedom linked to this hosting account
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String getServiceNameFreedom(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameFreedom(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * User of multidomain independent allowed on your hosting
@@ -672,14 +672,14 @@ public interface Web {
 	 * @param serviceName The internal name of your hosting
 	 * @param login Filter the value of login property (like)
 	*/
-	java.lang.String getServiceNameIndy(java.lang.String serviceName, java.lang.String login) throws java.io.IOException;
+	java.lang.String[] getServiceNameIndy(java.lang.String serviceName, java.lang.String login) throws java.io.IOException;
 
 	/**
 	 * User of multidomain independent allowed on your hosting
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String getServiceNameIndy(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameIndy(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -727,7 +727,7 @@ public interface Web {
 	 * Facultative parameters ? false
 	 * @param domain Domain used into web hosting attached Domains
 	*/
-	java.lang.String getAttachedDomain(java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getAttachedDomain(java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Terminate your service
@@ -797,7 +797,7 @@ public interface Web {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getHostingWeb() throws java.io.IOException;
+	java.lang.String[] getHostingWeb() throws java.io.IOException;
 
 	/**
 	 * Create new userLogs
@@ -815,7 +815,7 @@ public interface Web {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	net.zyuiop.ovhapi.api.objects.hosting.web.mail.VolumeHistory getServiceNameEmailVolumes(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.hosting.web.mail.VolumeHistory[] getServiceNameEmailVolumes(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Request a password change
@@ -856,7 +856,7 @@ public interface Web {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String getServiceNameCronAvailableLanguage(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameCronAvailableLanguage(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -883,14 +883,14 @@ public interface Web {
 	 * @param home Filter the value of home property (like)
 	 * @param login Filter the value of login property (like)
 	*/
-	java.lang.String getServiceNameUser(java.lang.String serviceName, java.lang.String home, java.lang.String login) throws java.io.IOException;
+	java.lang.String[] getServiceNameUser(java.lang.String serviceName, java.lang.String home, java.lang.String login) throws java.io.IOException;
 
 	/**
 	 * User allowed to connect into your hosting
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties

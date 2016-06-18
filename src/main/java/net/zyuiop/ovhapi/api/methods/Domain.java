@@ -75,7 +75,7 @@ public interface Domain {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getZone() throws java.io.IOException;
+	java.lang.String[] getZone() throws java.io.IOException;
 
 	/**
 	 * Retrieve all corporation trademark information according to Afnic
@@ -108,7 +108,7 @@ public interface Domain {
 	 * Facultative parameters ? false
 	 * @param country Country targeted
 	*/
-	java.lang.String getDataExtension(java.lang.String country) throws java.io.IOException;
+	java.lang.String[] getDataExtension(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Cancel the task
@@ -147,14 +147,14 @@ public interface Domain {
 	 * @param subDomain Filter the value of subDomain property (like)
 	 * @param login Filter the value of login property (like)
 	*/
-	java.lang.String getZoneZoneNameDynHostLogin(java.lang.String zoneName, java.lang.String subDomain, java.lang.String login) throws java.io.IOException;
+	java.lang.String[] getZoneZoneNameDynHostLogin(java.lang.String zoneName, java.lang.String subDomain, java.lang.String login) throws java.io.IOException;
 
 	/**
 	 * DynHost' logins
 	 * Facultative parameters ? false
 	 * @param zoneName The internal name of your zone
 	*/
-	java.lang.String getZoneZoneNameDynHostLogin(java.lang.String zoneName) throws java.io.IOException;
+	java.lang.String[] getZoneZoneNameDynHostLogin(java.lang.String zoneName) throws java.io.IOException;
 
 	/**
 	 * Update DS records
@@ -324,7 +324,7 @@ public interface Domain {
 	 * @param fields Fields to obfuscate
 	 * @param serviceName The internal name of your domain
 	*/
-	java.lang.String postServiceNameOwo(java.lang.String fields, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] postServiceNameOwo(java.lang.String fields, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Update the glue record
@@ -402,14 +402,14 @@ public interface Domain {
 	 * @param serviceName The internal name of your domain
 	 * @param field Filter the value of field property (=)
 	*/
-	java.lang.String getServiceNameOwo(java.lang.String serviceName, java.lang.String field) throws java.io.IOException;
+	java.lang.String[] getServiceNameOwo(java.lang.String serviceName, java.lang.String field) throws java.io.IOException;
 
 	/**
 	 * List of whois obfuscators
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your domain
 	*/
-	java.lang.String getServiceNameOwo(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOwo(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -589,14 +589,14 @@ public interface Domain {
 	 * @param serviceName The internal name of your domain
 	 * @param host Filter the value of host property (like)
 	*/
-	java.lang.String getServiceNameGlueRecord(java.lang.String serviceName, java.lang.String host) throws java.io.IOException;
+	java.lang.String[] getServiceNameGlueRecord(java.lang.String serviceName, java.lang.String host) throws java.io.IOException;
 
 	/**
 	 * List of glue record
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your domain
 	*/
-	java.lang.String getServiceNameGlueRecord(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameGlueRecord(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -634,13 +634,13 @@ public interface Domain {
 	 * Facultative parameters ? true
 	 * @param whoisOwner Filter the value of whoisOwner property (=)
 	*/
-	java.lang.String getDomain(java.lang.String whoisOwner) throws java.io.IOException;
+	java.lang.String[] getDomain(java.lang.String whoisOwner) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDomain() throws java.io.IOException;
+	java.lang.String[] getDomain() throws java.io.IOException;
 
 	/**
 	 * Terminate your service

@@ -14,7 +14,7 @@ public interface SmsSendingReport {
 	/**
 	 * @return null
 	 */
-	java.lang.String getInvalidReceivers(); 
+	java.lang.String[] getInvalidReceivers(); 
 
 	/**
 	 * @return null
@@ -24,6 +24,6 @@ public interface SmsSendingReport {
 	/**
 	 * @return null
 	 */
-	java.lang.String getValidReceivers(); 
+	java.lang.String[] getValidReceivers(); 
 
 }

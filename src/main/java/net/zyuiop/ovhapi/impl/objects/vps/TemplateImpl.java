@@ -11,7 +11,7 @@ public class TemplateImpl implements Template {
 	private java.lang.String name;
 	private long id;
 	private java.lang.String locale;
-	private java.lang.String availableLanguage;
+	private java.lang.String[] availableLanguage;
 	private java.lang.String distribution;
 
 	public TemplateImpl() {
@@ -69,15 +69,15 @@ public class TemplateImpl implements Template {
 		return this;
 	} 
 
-	public java.lang.String getAvailableLanguage() { 
+	public java.lang.String[] getAvailableLanguage() { 
 		return this.availableLanguage;
 	} 
 
-	public void setAvailableLanguage(java.lang.String availableLanguage) { 
+	public void setAvailableLanguage(java.lang.String[] availableLanguage) { 
 		this.availableLanguage = availableLanguage;
 	} 
 
-	public TemplateImpl availableLanguage(java.lang.String availableLanguage) { 
+	public TemplateImpl availableLanguage(java.lang.String[] availableLanguage) { 
 		this.availableLanguage = availableLanguage;
 		return this;
 	} 

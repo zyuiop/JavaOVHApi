@@ -29,7 +29,7 @@ public interface Step {
 	/**
 	 * @return null
 	 */
-	java.lang.String getComments(); 
+	java.lang.String[] getComments(); 
 
 	/**
 	 * @return null

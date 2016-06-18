@@ -14,7 +14,7 @@ public class InstanceDetailImpl implements InstanceDetail {
 	private java.util.Date created;
 	private net.zyuiop.ovhapi.impl.objects.cloud.sshkey.SshKeyDetailImpl sshKey;
 	private net.zyuiop.ovhapi.impl.objects.cloud.instance.MonthlyBillingImpl monthlyBilling;
-	private net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses;
+	private net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] ipAddresses;
 	private java.lang.String id;
 	private net.zyuiop.ovhapi.impl.objects.cloud.flavor.FlavorImpl flavor;
 
@@ -112,15 +112,15 @@ public class InstanceDetailImpl implements InstanceDetail {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl getIpAddresses() { 
+	public net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] getIpAddresses() { 
 		return this.ipAddresses;
 	} 
 
-	public void setIpAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
+	public void setIpAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 	} 
 
-	public InstanceDetailImpl ipAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl ipAddresses) { 
+	public InstanceDetailImpl ipAddresses(net.zyuiop.ovhapi.impl.objects.cloud.instance.IpAddressImpl[] ipAddresses) { 
 		this.ipAddresses = ipAddresses;
 		return this;
 	} 

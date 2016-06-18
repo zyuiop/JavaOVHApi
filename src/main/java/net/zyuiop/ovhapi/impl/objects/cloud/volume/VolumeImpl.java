@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.volume.Volume;
 
 public class VolumeImpl implements Volume { 
 
-	private java.lang.String attachedTo;
+	private java.lang.String[] attachedTo;
 	private java.lang.String status;
 	private java.lang.String name;
 	private java.lang.String region;
@@ -21,15 +21,15 @@ public class VolumeImpl implements Volume {
 	public VolumeImpl() {
 	}
 
-	public java.lang.String getAttachedTo() { 
+	public java.lang.String[] getAttachedTo() { 
 		return this.attachedTo;
 	} 
 
-	public void setAttachedTo(java.lang.String attachedTo) { 
+	public void setAttachedTo(java.lang.String[] attachedTo) { 
 		this.attachedTo = attachedTo;
 	} 
 
-	public VolumeImpl attachedTo(java.lang.String attachedTo) { 
+	public VolumeImpl attachedTo(java.lang.String[] attachedTo) { 
 		this.attachedTo = attachedTo;
 		return this;
 	} 

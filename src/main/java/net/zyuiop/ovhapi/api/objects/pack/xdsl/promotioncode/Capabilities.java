@@ -14,7 +14,7 @@ public interface Capabilities {
 	/**
 	 * @return Enum of the possible errors
 	 */
-	java.lang.String getReasonCodes(); 
+	java.lang.String[] getReasonCodes(); 
 
 	/**
 	 * @return True if the promotion code generation is available

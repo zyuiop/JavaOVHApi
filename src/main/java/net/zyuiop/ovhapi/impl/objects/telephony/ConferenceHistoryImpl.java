@@ -12,7 +12,7 @@ public class ConferenceHistoryImpl implements ConferenceHistory {
 	private long countConnections;
 	private java.lang.String recordUrl;
 	private java.util.Date dateBegin;
-	private net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl events;
+	private net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl[] events;
 	private long id;
 	private long countParticipants;
 
@@ -84,15 +84,15 @@ public class ConferenceHistoryImpl implements ConferenceHistory {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl getEvents() { 
+	public net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl[] getEvents() { 
 		return this.events;
 	} 
 
-	public void setEvents(net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl events) { 
+	public void setEvents(net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl[] events) { 
 		this.events = events;
 	} 
 
-	public ConferenceHistoryImpl events(net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl events) { 
+	public ConferenceHistoryImpl events(net.zyuiop.ovhapi.impl.objects.telephony.ConferenceHistoryEventImpl[] events) { 
 		this.events = events;
 		return this;
 	} 

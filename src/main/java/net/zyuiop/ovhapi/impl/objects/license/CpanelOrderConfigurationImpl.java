@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.CpanelOrderConfiguration;
 public class CpanelOrderConfigurationImpl implements CpanelOrderConfiguration { 
 
 	private java.lang.String serviceType;
-	private net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl orderableVersions;
+	private net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl[] orderableVersions;
 
 	public CpanelOrderConfigurationImpl() {
 	}
@@ -26,15 +26,15 @@ public class CpanelOrderConfigurationImpl implements CpanelOrderConfiguration {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl getOrderableVersions() { 
+	public net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl[] getOrderableVersions() { 
 		return this.orderableVersions;
 	} 
 
-	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl orderableVersions) { 
+	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl[] orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 	} 
 
-	public CpanelOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl orderableVersions) { 
+	public CpanelOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableCpanelCompatibilityInfosImpl[] orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 		return this;
 	} 

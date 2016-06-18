@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.license.SqlServerOrderConfiguration;
 public class SqlServerOrderConfigurationImpl implements SqlServerOrderConfiguration { 
 
 	private java.lang.String serviceType;
-	private net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl orderableVersions;
+	private net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl[] orderableVersions;
 
 	public SqlServerOrderConfigurationImpl() {
 	}
@@ -26,15 +26,15 @@ public class SqlServerOrderConfigurationImpl implements SqlServerOrderConfigurat
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl getOrderableVersions() { 
+	public net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl[] getOrderableVersions() { 
 		return this.orderableVersions;
 	} 
 
-	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl orderableVersions) { 
+	public void setOrderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl[] orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 	} 
 
-	public SqlServerOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl orderableVersions) { 
+	public SqlServerOrderConfigurationImpl orderableVersions(net.zyuiop.ovhapi.impl.objects.license.OrderableSqlServerCompatibilityInfosImpl[] orderableVersions) { 
 		this.orderableVersions = orderableVersions;
 		return this;
 	} 

@@ -7,20 +7,20 @@ import net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.MigrationOfferResponse;
 
 public class MigrationOfferResponseImpl implements MigrationOfferResponse { 
 
-	private net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl offers;
+	private net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl[] offers;
 
 	public MigrationOfferResponseImpl() {
 	}
 
-	public net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl getOffers() { 
+	public net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl[] getOffers() { 
 		return this.offers;
 	} 
 
-	public void setOffers(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl offers) { 
+	public void setOffers(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl[] offers) { 
 		this.offers = offers;
 	} 
 
-	public MigrationOfferResponseImpl offers(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl offers) { 
+	public MigrationOfferResponseImpl offers(net.zyuiop.ovhapi.impl.objects.pack.xdsl.migration.MigrationOfferImpl[] offers) { 
 		this.offers = offers;
 		return this;
 	} 

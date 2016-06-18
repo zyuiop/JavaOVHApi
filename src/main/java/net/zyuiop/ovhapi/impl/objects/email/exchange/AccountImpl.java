@@ -29,7 +29,7 @@ public class AccountImpl implements Account {
 	private java.util.Date lastLogonDate;
 	private java.lang.String lastName;
 	private java.lang.String guid;
-	private java.lang.String mailingFilter;
+	private java.lang.String[] mailingFilter;
 	private java.util.Date expirationOutlookDate;
 	private java.lang.String displayName;
 	private boolean spamDetected;
@@ -329,15 +329,15 @@ public class AccountImpl implements Account {
 		return this;
 	} 
 
-	public java.lang.String getMailingFilter() { 
+	public java.lang.String[] getMailingFilter() { 
 		return this.mailingFilter;
 	} 
 
-	public void setMailingFilter(java.lang.String mailingFilter) { 
+	public void setMailingFilter(java.lang.String[] mailingFilter) { 
 		this.mailingFilter = mailingFilter;
 	} 
 
-	public AccountImpl mailingFilter(java.lang.String mailingFilter) { 
+	public AccountImpl mailingFilter(java.lang.String[] mailingFilter) { 
 		this.mailingFilter = mailingFilter;
 		return this;
 	} 

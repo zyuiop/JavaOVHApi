@@ -7,40 +7,40 @@ import net.zyuiop.ovhapi.api.objects.license.OrderablePleskCompatibilityInfos;
 
 public class OrderablePleskCompatibilityInfosImpl implements OrderablePleskCompatibilityInfos { 
 
-	private java.lang.String compliantLanguagePack;
-	private java.lang.String compliantAntivirus;
+	private java.lang.String[] compliantLanguagePack;
+	private java.lang.String[] compliantAntivirus;
 	private java.lang.String version;
-	private java.lang.String compliantApplicationSets;
-	private java.lang.String potentialProblems;
+	private java.lang.String[] compliantApplicationSets;
+	private java.lang.String[] potentialProblems;
 	private boolean canHavePowerPack;
-	private java.lang.String compliantDomains;
+	private java.lang.String[] compliantDomains;
 	private boolean canHaveWordpressToolkit;
 
 	public OrderablePleskCompatibilityInfosImpl() {
 	}
 
-	public java.lang.String getCompliantLanguagePack() { 
+	public java.lang.String[] getCompliantLanguagePack() { 
 		return this.compliantLanguagePack;
 	} 
 
-	public void setCompliantLanguagePack(java.lang.String compliantLanguagePack) { 
+	public void setCompliantLanguagePack(java.lang.String[] compliantLanguagePack) { 
 		this.compliantLanguagePack = compliantLanguagePack;
 	} 
 
-	public OrderablePleskCompatibilityInfosImpl compliantLanguagePack(java.lang.String compliantLanguagePack) { 
+	public OrderablePleskCompatibilityInfosImpl compliantLanguagePack(java.lang.String[] compliantLanguagePack) { 
 		this.compliantLanguagePack = compliantLanguagePack;
 		return this;
 	} 
 
-	public java.lang.String getCompliantAntivirus() { 
+	public java.lang.String[] getCompliantAntivirus() { 
 		return this.compliantAntivirus;
 	} 
 
-	public void setCompliantAntivirus(java.lang.String compliantAntivirus) { 
+	public void setCompliantAntivirus(java.lang.String[] compliantAntivirus) { 
 		this.compliantAntivirus = compliantAntivirus;
 	} 
 
-	public OrderablePleskCompatibilityInfosImpl compliantAntivirus(java.lang.String compliantAntivirus) { 
+	public OrderablePleskCompatibilityInfosImpl compliantAntivirus(java.lang.String[] compliantAntivirus) { 
 		this.compliantAntivirus = compliantAntivirus;
 		return this;
 	} 
@@ -58,28 +58,28 @@ public class OrderablePleskCompatibilityInfosImpl implements OrderablePleskCompa
 		return this;
 	} 
 
-	public java.lang.String getCompliantApplicationSets() { 
+	public java.lang.String[] getCompliantApplicationSets() { 
 		return this.compliantApplicationSets;
 	} 
 
-	public void setCompliantApplicationSets(java.lang.String compliantApplicationSets) { 
+	public void setCompliantApplicationSets(java.lang.String[] compliantApplicationSets) { 
 		this.compliantApplicationSets = compliantApplicationSets;
 	} 
 
-	public OrderablePleskCompatibilityInfosImpl compliantApplicationSets(java.lang.String compliantApplicationSets) { 
+	public OrderablePleskCompatibilityInfosImpl compliantApplicationSets(java.lang.String[] compliantApplicationSets) { 
 		this.compliantApplicationSets = compliantApplicationSets;
 		return this;
 	} 
 
-	public java.lang.String getPotentialProblems() { 
+	public java.lang.String[] getPotentialProblems() { 
 		return this.potentialProblems;
 	} 
 
-	public void setPotentialProblems(java.lang.String potentialProblems) { 
+	public void setPotentialProblems(java.lang.String[] potentialProblems) { 
 		this.potentialProblems = potentialProblems;
 	} 
 
-	public OrderablePleskCompatibilityInfosImpl potentialProblems(java.lang.String potentialProblems) { 
+	public OrderablePleskCompatibilityInfosImpl potentialProblems(java.lang.String[] potentialProblems) { 
 		this.potentialProblems = potentialProblems;
 		return this;
 	} 
@@ -97,15 +97,15 @@ public class OrderablePleskCompatibilityInfosImpl implements OrderablePleskCompa
 		return this;
 	} 
 
-	public java.lang.String getCompliantDomains() { 
+	public java.lang.String[] getCompliantDomains() { 
 		return this.compliantDomains;
 	} 
 
-	public void setCompliantDomains(java.lang.String compliantDomains) { 
+	public void setCompliantDomains(java.lang.String[] compliantDomains) { 
 		this.compliantDomains = compliantDomains;
 	} 
 
-	public OrderablePleskCompatibilityInfosImpl compliantDomains(java.lang.String compliantDomains) { 
+	public OrderablePleskCompatibilityInfosImpl compliantDomains(java.lang.String[] compliantDomains) { 
 		this.compliantDomains = compliantDomains;
 		return this;
 	} 

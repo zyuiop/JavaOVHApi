@@ -9,7 +9,7 @@ public class TimeseriesProductImpl implements TimeseriesProduct {
 
 	private java.lang.String productName;
 	private java.lang.String planCode;
-	private net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl prices;
+	private net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl[] prices;
 
 	public TimeseriesProductImpl() {
 	}
@@ -40,15 +40,15 @@ public class TimeseriesProductImpl implements TimeseriesProduct {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl getPrices() { 
+	public net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl[] getPrices() { 
 		return this.prices;
 	} 
 
-	public void setPrices(net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl prices) { 
+	public void setPrices(net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl[] prices) { 
 		this.prices = prices;
 	} 
 
-	public TimeseriesProductImpl prices(net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl prices) { 
+	public TimeseriesProductImpl prices(net.zyuiop.ovhapi.impl.objects.order.cart.TimeseriesPricingImpl[] prices) { 
 		this.prices = prices;
 		return this;
 	} 

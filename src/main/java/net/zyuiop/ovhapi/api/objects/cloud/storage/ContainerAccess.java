@@ -14,6 +14,6 @@ public interface ContainerAccess {
 	/**
 	 * @return Storage access endpoints
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.storage.Endpoint getEndpoints(); 
+	net.zyuiop.ovhapi.api.objects.cloud.storage.Endpoint[] getEndpoints(); 
 
 }

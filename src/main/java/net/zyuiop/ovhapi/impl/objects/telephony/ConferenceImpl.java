@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.telephony.Conference;
 public class ConferenceImpl implements Conference { 
 
 	private java.lang.String serviceType;
-	private java.lang.String offers;
+	private java.lang.String[] offers;
 	private java.lang.String serviceName;
 	private java.lang.String description;
 
@@ -28,15 +28,15 @@ public class ConferenceImpl implements Conference {
 		return this;
 	} 
 
-	public java.lang.String getOffers() { 
+	public java.lang.String[] getOffers() { 
 		return this.offers;
 	} 
 
-	public void setOffers(java.lang.String offers) { 
+	public void setOffers(java.lang.String[] offers) { 
 		this.offers = offers;
 	} 
 
-	public ConferenceImpl offers(java.lang.String offers) { 
+	public ConferenceImpl offers(java.lang.String[] offers) { 
 		this.offers = offers;
 		return this;
 	} 

@@ -19,6 +19,6 @@ public interface IpInfo {
 	/**
 	 * @return Reserved addresses. You should not use them in your network
 	 */
-	java.lang.String getReservedAddresses(); 
+	java.lang.String[] getReservedAddresses(); 
 
 }

@@ -12,7 +12,7 @@ public class TemplatesImpl implements Templates {
 	private java.lang.String templateName;
 	private java.lang.String defaultLanguage;
 	private java.lang.String category;
-	private java.lang.String availableLanguages;
+	private java.lang.String[] availableLanguages;
 	private java.util.Date lastModification;
 	private boolean beta;
 	private net.zyuiop.ovhapi.impl.objects.dedicated.TemplateOsPropertiesImpl customization;
@@ -21,7 +21,7 @@ public class TemplatesImpl implements Templates {
 	private boolean supportsGptLabel;
 	private boolean deprecated;
 	private boolean supportsSqlServer;
-	private java.lang.String filesystems;
+	private java.lang.String[] filesystems;
 	private boolean lvmReady;
 	private java.lang.String family;
 
@@ -93,15 +93,15 @@ public class TemplatesImpl implements Templates {
 		return this;
 	} 
 
-	public java.lang.String getAvailableLanguages() { 
+	public java.lang.String[] getAvailableLanguages() { 
 		return this.availableLanguages;
 	} 
 
-	public void setAvailableLanguages(java.lang.String availableLanguages) { 
+	public void setAvailableLanguages(java.lang.String[] availableLanguages) { 
 		this.availableLanguages = availableLanguages;
 	} 
 
-	public TemplatesImpl availableLanguages(java.lang.String availableLanguages) { 
+	public TemplatesImpl availableLanguages(java.lang.String[] availableLanguages) { 
 		this.availableLanguages = availableLanguages;
 		return this;
 	} 
@@ -210,15 +210,15 @@ public class TemplatesImpl implements Templates {
 		return this;
 	} 
 
-	public java.lang.String getFilesystems() { 
+	public java.lang.String[] getFilesystems() { 
 		return this.filesystems;
 	} 
 
-	public void setFilesystems(java.lang.String filesystems) { 
+	public void setFilesystems(java.lang.String[] filesystems) { 
 		this.filesystems = filesystems;
 	} 
 
-	public TemplatesImpl filesystems(java.lang.String filesystems) { 
+	public TemplatesImpl filesystems(java.lang.String[] filesystems) { 
 		this.filesystems = filesystems;
 		return this;
 	} 

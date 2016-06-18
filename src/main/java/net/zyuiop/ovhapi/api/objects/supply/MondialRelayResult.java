@@ -14,6 +14,6 @@ public interface MondialRelayResult {
 	/**
 	 * @return Array of relay points
 	 */
-	net.zyuiop.ovhapi.api.objects.supply.MondialRelay getRelayPoints(); 
+	net.zyuiop.ovhapi.api.objects.supply.MondialRelay[] getRelayPoints(); 
 
 }

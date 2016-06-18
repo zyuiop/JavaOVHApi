@@ -14,7 +14,7 @@ public class AccessDiagnosticImpl implements AccessDiagnostic {
 	private net.zyuiop.ovhapi.impl.objects.xdsl.AccessDiagnosticCapabilitiesImpl capabilities;
 	private boolean isModemConnected;
 	private java.util.Date diagnosticTime;
-	private net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl lineDetails;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl[] lineDetails;
 
 	public AccessDiagnosticImpl() {
 	}
@@ -110,15 +110,15 @@ public class AccessDiagnosticImpl implements AccessDiagnostic {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl getLineDetails() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl[] getLineDetails() { 
 		return this.lineDetails;
 	} 
 
-	public void setLineDetails(net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl lineDetails) { 
+	public void setLineDetails(net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl[] lineDetails) { 
 		this.lineDetails = lineDetails;
 	} 
 
-	public AccessDiagnosticImpl lineDetails(net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl lineDetails) { 
+	public AccessDiagnosticImpl lineDetails(net.zyuiop.ovhapi.impl.objects.xdsl.LineDiagnosticImpl[] lineDetails) { 
 		this.lineDetails = lineDetails;
 		return this;
 	} 

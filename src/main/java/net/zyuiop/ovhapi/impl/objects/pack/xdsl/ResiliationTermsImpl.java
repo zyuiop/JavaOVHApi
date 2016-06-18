@@ -7,7 +7,7 @@ import net.zyuiop.ovhapi.api.objects.pack.xdsl.ResiliationTerms;
 
 public class ResiliationTermsImpl implements ResiliationTerms { 
 
-	private java.lang.String resiliationReasons;
+	private java.lang.String[] resiliationReasons;
 	private java.util.Date minResiliationDate;
 	private net.zyuiop.ovhapi.impl.objects.order.PriceImpl due;
 	private java.util.Date resiliationDate;
@@ -16,15 +16,15 @@ public class ResiliationTermsImpl implements ResiliationTerms {
 	public ResiliationTermsImpl() {
 	}
 
-	public java.lang.String getResiliationReasons() { 
+	public java.lang.String[] getResiliationReasons() { 
 		return this.resiliationReasons;
 	} 
 
-	public void setResiliationReasons(java.lang.String resiliationReasons) { 
+	public void setResiliationReasons(java.lang.String[] resiliationReasons) { 
 		this.resiliationReasons = resiliationReasons;
 	} 
 
-	public ResiliationTermsImpl resiliationReasons(java.lang.String resiliationReasons) { 
+	public ResiliationTermsImpl resiliationReasons(java.lang.String[] resiliationReasons) { 
 		this.resiliationReasons = resiliationReasons;
 		return this;
 	} 

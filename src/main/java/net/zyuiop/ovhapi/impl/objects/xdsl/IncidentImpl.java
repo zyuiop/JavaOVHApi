@@ -8,13 +8,13 @@ import net.zyuiop.ovhapi.api.objects.xdsl.Incident;
 public class IncidentImpl implements Incident { 
 
 	private long taskId;
-	private java.lang.String departments;
+	private java.lang.String[] departments;
 	private java.util.Date creationDate;
 	private java.lang.String comment;
 	private java.util.Date endDate;
 	private long id;
-	private java.lang.String nra;
-	private java.lang.String operators;
+	private java.lang.String[] nra;
+	private java.lang.String[] operators;
 
 	public IncidentImpl() {
 	}
@@ -32,15 +32,15 @@ public class IncidentImpl implements Incident {
 		return this;
 	} 
 
-	public java.lang.String getDepartments() { 
+	public java.lang.String[] getDepartments() { 
 		return this.departments;
 	} 
 
-	public void setDepartments(java.lang.String departments) { 
+	public void setDepartments(java.lang.String[] departments) { 
 		this.departments = departments;
 	} 
 
-	public IncidentImpl departments(java.lang.String departments) { 
+	public IncidentImpl departments(java.lang.String[] departments) { 
 		this.departments = departments;
 		return this;
 	} 
@@ -97,28 +97,28 @@ public class IncidentImpl implements Incident {
 		return this;
 	} 
 
-	public java.lang.String getNra() { 
+	public java.lang.String[] getNra() { 
 		return this.nra;
 	} 
 
-	public void setNra(java.lang.String nra) { 
+	public void setNra(java.lang.String[] nra) { 
 		this.nra = nra;
 	} 
 
-	public IncidentImpl nra(java.lang.String nra) { 
+	public IncidentImpl nra(java.lang.String[] nra) { 
 		this.nra = nra;
 		return this;
 	} 
 
-	public java.lang.String getOperators() { 
+	public java.lang.String[] getOperators() { 
 		return this.operators;
 	} 
 
-	public void setOperators(java.lang.String operators) { 
+	public void setOperators(java.lang.String[] operators) { 
 		this.operators = operators;
 	} 
 
-	public IncidentImpl operators(java.lang.String operators) { 
+	public IncidentImpl operators(java.lang.String[] operators) { 
 		this.operators = operators;
 		return this;
 	} 

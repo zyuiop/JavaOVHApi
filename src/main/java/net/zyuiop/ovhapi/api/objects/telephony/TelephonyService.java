@@ -34,7 +34,7 @@ public interface TelephonyService {
 	/**
 	 * @return null
 	 */
-	java.lang.String getProperties(); 
+	java.lang.String[] getProperties(); 
 
 	/**
 	 * @return null
@@ -49,6 +49,6 @@ public interface TelephonyService {
 	/**
 	 * @return null
 	 */
-	java.lang.String getOffers(); 
+	java.lang.String[] getOffers(); 
 
 }

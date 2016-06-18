@@ -11,7 +11,7 @@ public class StepImpl implements Step {
 	private java.lang.String status;
 	private java.lang.String durationUnit;
 	private java.lang.String name;
-	private java.lang.String comments;
+	private java.lang.String[] comments;
 	private java.util.Date doneDate;
 
 	public StepImpl() {
@@ -69,15 +69,15 @@ public class StepImpl implements Step {
 		return this;
 	} 
 
-	public java.lang.String getComments() { 
+	public java.lang.String[] getComments() { 
 		return this.comments;
 	} 
 
-	public void setComments(java.lang.String comments) { 
+	public void setComments(java.lang.String[] comments) { 
 		this.comments = comments;
 	} 
 
-	public StepImpl comments(java.lang.String comments) { 
+	public StepImpl comments(java.lang.String[] comments) { 
 		this.comments = comments;
 		return this;
 	} 

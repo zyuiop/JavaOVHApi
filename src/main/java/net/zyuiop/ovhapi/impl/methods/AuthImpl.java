@@ -17,7 +17,7 @@ public class AuthImpl implements Auth {
 
 	public net.zyuiop.ovhapi.api.objects.api.Credential getCurrentCredential() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/auth/currentCredential";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.api.CredentialImpl.class);
@@ -46,7 +46,7 @@ public class AuthImpl implements Auth {
 
 	public long getTime() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/auth/time";
-		String __data = "?";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), long.class);

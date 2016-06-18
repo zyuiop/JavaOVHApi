@@ -14,7 +14,7 @@ public interface HardwareRaid {
 	/**
 	 * @return Disk list
 	 */
-	java.lang.String getDisks(); 
+	java.lang.String[] getDisks(); 
 
 	/**
 	 * @return RAID mode

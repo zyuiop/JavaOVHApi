@@ -47,7 +47,7 @@ public interface Xdsl {
 	 * @param lanName Name of the LAN
 	 * @param dhcpName Name of the DHCP
 	*/
-	java.lang.String getServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddresses(java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName) throws java.io.IOException;
+	java.lang.String[] getServiceNameModemLanLanNameDhcpDhcpNameDHCPStaticAddresses(java.lang.String serviceName, java.lang.String lanName, java.lang.String dhcpName) throws java.io.IOException;
 
 	/**
 	 * Get resiliation terms
@@ -69,7 +69,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	java.lang.String getServiceNameModemLan(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameModemLan(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Refresh the list of connected devices on the modem
@@ -105,7 +105,7 @@ public interface Xdsl {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getSpare() throws java.io.IOException;
+	java.lang.String[] getSpare() throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -199,7 +199,7 @@ public interface Xdsl {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getXdsl() throws java.io.IOException;
+	java.lang.String[] getXdsl() throws java.io.IOException;
 
 	/**
 	 * List the notifications for this access
@@ -212,7 +212,7 @@ public interface Xdsl {
 	 * Get all available spare brands
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getSpareBrands() throws java.io.IOException;
+	java.lang.String[] getSpareBrands() throws java.io.IOException;
 
 
 	/**
@@ -228,7 +228,7 @@ public interface Xdsl {
 	 * @param serviceName The internal name of your XDSL offer
 	 * @param number The number of the line
 	*/
-	net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile getServiceNameLinesNumberDslamPortAvailableProfiles(java.lang.String serviceName, java.lang.String number) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.xdsl.DslamLineProfile[] getServiceNameLinesNumberDslamPortAvailableProfiles(java.lang.String serviceName, java.lang.String number) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -252,7 +252,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	net.zyuiop.ovhapi.api.objects.xdsl.Lns getServiceNameAvailableLns(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.xdsl.Lns[] getServiceNameAvailableLns(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Initiate the extra IP range migration
@@ -273,7 +273,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	java.lang.String getServiceNameModemPortMappings(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameModemPortMappings(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -287,7 +287,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	java.lang.String getServiceNameLines(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameLines(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -334,7 +334,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	java.lang.String getServiceNameModemWifi(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameModemWifi(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Tasks scheduled for this access
@@ -423,7 +423,7 @@ public interface Xdsl {
 	 * @param serviceName The internal name of your XDSL offer
 	 * @param number The number of the line
 	*/
-	net.zyuiop.ovhapi.api.objects.xdsl.DslamPortLog getServiceNameLinesNumberDslamPortLogs(long limit, java.lang.String serviceName, java.lang.String number) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.xdsl.DslamPortLog[] getServiceNameLinesNumberDslamPortLogs(long limit, java.lang.String serviceName, java.lang.String number) throws java.io.IOException;
 
 	/**
 	 * Run diagnostic on the access
@@ -437,7 +437,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	java.lang.String getServiceNameRma(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameRma(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List of DHCP on this modem
@@ -445,7 +445,7 @@ public interface Xdsl {
 	 * @param serviceName The internal name of your XDSL offer
 	 * @param lanName Name of the LAN
 	*/
-	java.lang.String getServiceNameModemLanLanNameDhcp(java.lang.String serviceName, java.lang.String lanName) throws java.io.IOException;
+	java.lang.String[] getServiceNameModemLanLanNameDhcp(java.lang.String serviceName, java.lang.String lanName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -490,7 +490,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param zipCode The zipCode of the city
 	*/
-	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City getEligibilityCities(java.lang.String zipCode) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.City[] getEligibilityCities(java.lang.String zipCode) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -524,7 +524,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param spare The internal name of your spare
 	*/
-	java.lang.String getSpareSpareCompatibleReplacement(java.lang.String spare) throws java.io.IOException;
+	java.lang.String[] getSpareSpareCompatibleReplacement(java.lang.String spare) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -578,7 +578,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	java.lang.String getServiceNameIps(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameIps(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -654,7 +654,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	net.zyuiop.ovhapi.api.objects.xdsl.RadiusConnectionLog getServiceNameRadiusConnectionLogs(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.xdsl.RadiusConnectionLog[] getServiceNameRadiusConnectionLogs(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -677,7 +677,7 @@ public interface Xdsl {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your XDSL offer
 	*/
-	java.lang.String getServiceNameModemConnectedDevices(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameModemConnectedDevices(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Cancel the ongoing resiliation
@@ -692,7 +692,7 @@ public interface Xdsl {
 	 * @param partialName The partial name to match against the name of the street
 	 * @param inseeCode The inseeCode of the city
 	*/
-	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street getEligibilityStreets(java.lang.String partialName, java.lang.String inseeCode) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Street[] getEligibilityStreets(java.lang.String partialName, java.lang.String inseeCode) throws java.io.IOException;
 
 	/**
 	 * Delete this port mapping

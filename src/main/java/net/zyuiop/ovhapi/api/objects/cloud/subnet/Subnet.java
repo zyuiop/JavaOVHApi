@@ -24,6 +24,6 @@ public interface Subnet {
 	/**
 	 * @return List of ip pools allocated in subnet
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.network.IPPool getIpPools(); 
+	net.zyuiop.ovhapi.api.objects.cloud.network.IPPool[] getIpPools(); 
 
 }

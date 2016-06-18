@@ -9,7 +9,7 @@ public interface Ip {
 	/**
 	 * @return Location where your service is
 	 */
-	java.lang.String getZone(); 
+	java.lang.String[] getZone(); 
 
 	/**
 	 * @return The internal name of your IP load balancing

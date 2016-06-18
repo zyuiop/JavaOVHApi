@@ -15,7 +15,7 @@ public class LineImpl implements Line {
 	private boolean directDistribution;
 	private boolean portability;
 	private double mitigation;
-	private net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength;
+	private net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] lineSectionsLength;
 	private double syncUp;
 	private double syncDown;
 	private java.lang.String originalNumber;
@@ -127,15 +127,15 @@ public class LineImpl implements Line {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl getLineSectionsLength() { 
+	public net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] getLineSectionsLength() { 
 		return this.lineSectionsLength;
 	} 
 
-	public void setLineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
+	public void setLineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 	} 
 
-	public LineImpl lineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl lineSectionsLength) { 
+	public LineImpl lineSectionsLength(net.zyuiop.ovhapi.impl.objects.xdsl.LineSectionLengthImpl[] lineSectionsLength) { 
 		this.lineSectionsLength = lineSectionsLength;
 		return this;
 	} 

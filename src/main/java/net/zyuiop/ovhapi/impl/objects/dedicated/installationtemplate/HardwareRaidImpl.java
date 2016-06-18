@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.dedicated.installationtemplate.HardwareRaid
 public class HardwareRaidImpl implements HardwareRaid { 
 
 	private long step;
-	private java.lang.String disks;
+	private java.lang.String[] disks;
 	private java.lang.String mode;
 	private java.lang.String name;
 
@@ -28,15 +28,15 @@ public class HardwareRaidImpl implements HardwareRaid {
 		return this;
 	} 
 
-	public java.lang.String getDisks() { 
+	public java.lang.String[] getDisks() { 
 		return this.disks;
 	} 
 
-	public void setDisks(java.lang.String disks) { 
+	public void setDisks(java.lang.String[] disks) { 
 		this.disks = disks;
 	} 
 
-	public HardwareRaidImpl disks(java.lang.String disks) { 
+	public HardwareRaidImpl disks(java.lang.String[] disks) { 
 		this.disks = disks;
 		return this;
 	} 

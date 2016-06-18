@@ -14,6 +14,6 @@ public interface InstanceMetrics {
 	/**
 	 * @return 
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetricsValue getValues(); 
+	net.zyuiop.ovhapi.api.objects.cloud.instance.InstanceMetricsValue[] getValues(); 
 
 }

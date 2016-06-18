@@ -29,6 +29,6 @@ public interface IP {
 	/**
 	 * @return null
 	 */
-	java.lang.String getDnsList(); 
+	java.lang.String[] getDnsList(); 
 
 }

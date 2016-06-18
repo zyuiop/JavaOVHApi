@@ -14,6 +14,6 @@ public interface CpanelOrderConfiguration {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableCpanelCompatibilityInfos getOrderableVersions(); 
+	net.zyuiop.ovhapi.api.objects.license.OrderableCpanelCompatibilityInfos[] getOrderableVersions(); 
 
 }

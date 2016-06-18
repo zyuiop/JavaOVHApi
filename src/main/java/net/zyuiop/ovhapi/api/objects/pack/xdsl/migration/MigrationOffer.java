@@ -24,7 +24,7 @@ public interface MigrationOffer {
 	/**
 	 * @return Available options for the migration
 	 */
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.OfferAvailableOption getOptions(); 
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.OfferAvailableOption[] getOptions(); 
 
 	/**
 	 * @return Description of the offer
@@ -44,7 +44,7 @@ public interface MigrationOffer {
 	/**
 	 * @return List of sub services to delete
 	 */
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete getSubServicesToDelete(); 
+	net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete[] getSubServicesToDelete(); 
 
 	/**
 	 * @return Name of the offer
@@ -64,7 +64,7 @@ public interface MigrationOffer {
 	/**
 	 * @return List of contracts
 	 */
-	java.lang.String getContractList(); 
+	java.lang.String[] getContractList(); 
 
 	/**
 	 * @return Tells if the customer will have to change its modem

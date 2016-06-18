@@ -12,7 +12,7 @@ public class SmdImpl implements Smd {
 	private java.lang.String data;
 	private java.util.Date notBefore;
 	private java.lang.String smdId;
-	private net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl protectedLabels;
+	private net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl[] protectedLabels;
 
 	public SmdImpl() {
 	}
@@ -82,15 +82,15 @@ public class SmdImpl implements Smd {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl getProtectedLabels() { 
+	public net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl[] getProtectedLabels() { 
 		return this.protectedLabels;
 	} 
 
-	public void setProtectedLabels(net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl protectedLabels) { 
+	public void setProtectedLabels(net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl[] protectedLabels) { 
 		this.protectedLabels = protectedLabels;
 	} 
 
-	public SmdImpl protectedLabels(net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl protectedLabels) { 
+	public SmdImpl protectedLabels(net.zyuiop.ovhapi.impl.objects.domain.data.SmdLabelImpl[] protectedLabels) { 
 		this.protectedLabels = protectedLabels;
 		return this;
 	} 

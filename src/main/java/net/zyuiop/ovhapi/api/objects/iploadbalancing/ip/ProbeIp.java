@@ -14,6 +14,6 @@ public interface ProbeIp {
 	/**
 	 * @return null
 	 */
-	java.lang.String getIp(); 
+	java.lang.String[] getIp(); 
 
 }

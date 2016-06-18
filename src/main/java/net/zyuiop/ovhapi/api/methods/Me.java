@@ -17,7 +17,7 @@ public interface Me {
 	 * Your customized operating system installation templates
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getInstallationTemplate() throws java.io.IOException;
+	java.lang.String[] getInstallationTemplate() throws java.io.IOException;
 
 
 	/**
@@ -230,7 +230,7 @@ public interface Me {
 	 * Facultative parameters ? false
 	 * @param orderId null
 	*/
-	net.zyuiop.ovhapi.api.objects.billing.order.RegisteredPaymentMean getOrderOrderIdAvailableRegisteredPaymentMean(long orderId) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.billing.order.RegisteredPaymentMean[] getOrderOrderIdAvailableRegisteredPaymentMean(long orderId) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -244,13 +244,13 @@ public interface Me {
 	 * @param date.to Filter the value of date property (<=)
 	 * @param date.from Filter the value of date property (>=)
 	*/
-	java.lang.String getBill(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException;
+	java.lang.String[] getBill(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException;
 
 	/**
 	 * List of all the bills the logged account has
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getBill() throws java.io.IOException;
+	java.lang.String[] getBill() throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -408,7 +408,7 @@ public interface Me {
 	 * List of your public SSH keys
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getSshKey() throws java.io.IOException;
+	java.lang.String[] getSshKey() throws java.io.IOException;
 
 	/**
 	 * remove this template
@@ -466,13 +466,13 @@ public interface Me {
 	 * @param date.to Filter the value of date property (<=)
 	 * @param date.from Filter the value of date property (>=)
 	*/
-	java.lang.String getRefund(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException;
+	java.lang.String[] getRefund(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException;
 
 	/**
 	 * List of all the refunds the logged account has
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getRefund() throws java.io.IOException;
+	java.lang.String[] getRefund() throws java.io.IOException;
 
 	/**
 	 * Disable this SMS account
@@ -520,7 +520,7 @@ public interface Me {
 	 * @param templateName This template name
 	 * @param schemeName name of this partitioning scheme
 	*/
-	java.lang.String getInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException;
+	java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -534,7 +534,7 @@ public interface Me {
 	 * Facultative parameters ? false
 	 * @param contactId Contact Identifier
 	*/
-	net.zyuiop.ovhapi.api.objects.contact.FieldInformation getContactContactIdFields(long contactId) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.contact.FieldInformation[] getContactContactIdFields(long contactId) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -557,7 +557,7 @@ public interface Me {
 	 * @param templateName This template name
 	 * @param schemeName name of this partitioning scheme
 	*/
-	java.lang.String getInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException;
+	java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -578,7 +578,7 @@ public interface Me {
 	 * Facultative parameters ? false
 	 * @param id Id of the object
 	*/
-	net.zyuiop.ovhapi.api.objects.nichandle.SlaService getSlaIdServices(long id) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.nichandle.SlaService[] getSlaIdServices(long id) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -794,14 +794,14 @@ public interface Me {
 	 * List of organisations
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getIpOrganisation() throws java.io.IOException;
+	java.lang.String[] getIpOrganisation() throws java.io.IOException;
 
 	/**
 	 * Give access to all entries of the refund
 	 * Facultative parameters ? false
 	 * @param refundId null
 	*/
-	java.lang.String getRefundRefundIdDetails(java.lang.String refundId) throws java.io.IOException;
+	java.lang.String[] getRefundRefundIdDetails(java.lang.String refundId) throws java.io.IOException;
 
 	/**
 	 * Refuse this change request
@@ -891,7 +891,7 @@ public interface Me {
 	 * List of all your IPXE scripts
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getIpxeScript() throws java.io.IOException;
+	java.lang.String[] getIpxeScript() throws java.io.IOException;
 
 	/**
 	 * List of service contact change tasks you are involved in
@@ -920,7 +920,7 @@ public interface Me {
 	 * Facultative parameters ? false
 	 * @param billId null
 	*/
-	java.lang.String getBillBillIdDetails(java.lang.String billId) throws java.io.IOException;
+	java.lang.String[] getBillBillIdDetails(java.lang.String billId) throws java.io.IOException;
 
 	/**
 	 * List of credit cards
@@ -964,7 +964,7 @@ public interface Me {
 	 * Facultative parameters ? false
 	 * @param templateName This template name
 	*/
-	java.lang.String getInstallationTemplateTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException;
+	java.lang.String[] getInstallationTemplateTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException;
 
 	/**
 	 * Remove this application. It will revoke all credential belonging to this application.
@@ -978,7 +978,7 @@ public interface Me {
 	 * Facultative parameters ? false
 	 * @param id Id of the task
 	*/
-	java.lang.String getTaskDomainIdArgument(long id) throws java.io.IOException;
+	java.lang.String[] getTaskDomainIdArgument(long id) throws java.io.IOException;
 
 	/**
 	 * Create a template
@@ -1030,7 +1030,7 @@ public interface Me {
 	 * List of all OVH things you can subscribe to
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getSubscription() throws java.io.IOException;
+	java.lang.String[] getSubscription() throws java.io.IOException;
 
 	/**
 	 * Create a new contact
@@ -1209,7 +1209,7 @@ public interface Me {
 	 * List of OVH accounts the logged account has
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getOvhAccount() throws java.io.IOException;
+	java.lang.String[] getOvhAccount() throws java.io.IOException;
 
 	/**
 	 * Add a partition in this partitioning scheme
@@ -1251,7 +1251,7 @@ public interface Me {
 	 * List of documents added in your account
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDocument() throws java.io.IOException;
+	java.lang.String[] getDocument() throws java.io.IOException;
 
 	/**
 	 * Get this object properties

@@ -19,7 +19,7 @@ public interface Response {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.sms.ResponseTrackingOptions getTrackingOptions(); 
+	net.zyuiop.ovhapi.api.objects.sms.ResponseTrackingOptions[] getTrackingOptions(); 
 
 	/**
 	 * @return null

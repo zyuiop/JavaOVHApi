@@ -9,8 +9,8 @@ public class OrderImpl implements Order {
 
 	private long orderId;
 	private java.lang.String url;
-	private net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl details;
-	private net.zyuiop.ovhapi.impl.objects.order.ContractImpl contracts;
+	private net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl[] details;
+	private net.zyuiop.ovhapi.impl.objects.order.ContractImpl[] contracts;
 	private net.zyuiop.ovhapi.impl.objects.order.OrderPricesImpl prices;
 
 	public OrderImpl() {
@@ -42,28 +42,28 @@ public class OrderImpl implements Order {
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl getDetails() { 
+	public net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl[] getDetails() { 
 		return this.details;
 	} 
 
-	public void setDetails(net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl details) { 
+	public void setDetails(net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl[] details) { 
 		this.details = details;
 	} 
 
-	public OrderImpl details(net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl details) { 
+	public OrderImpl details(net.zyuiop.ovhapi.impl.objects.order.OrderDetailImpl[] details) { 
 		this.details = details;
 		return this;
 	} 
 
-	public net.zyuiop.ovhapi.impl.objects.order.ContractImpl getContracts() { 
+	public net.zyuiop.ovhapi.impl.objects.order.ContractImpl[] getContracts() { 
 		return this.contracts;
 	} 
 
-	public void setContracts(net.zyuiop.ovhapi.impl.objects.order.ContractImpl contracts) { 
+	public void setContracts(net.zyuiop.ovhapi.impl.objects.order.ContractImpl[] contracts) { 
 		this.contracts = contracts;
 	} 
 
-	public OrderImpl contracts(net.zyuiop.ovhapi.impl.objects.order.ContractImpl contracts) { 
+	public OrderImpl contracts(net.zyuiop.ovhapi.impl.objects.order.ContractImpl[] contracts) { 
 		this.contracts = contracts;
 		return this;
 	} 

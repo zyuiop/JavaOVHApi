@@ -11,7 +11,7 @@ public interface Nas {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your storage
 	*/
-	java.lang.String getServiceNamePartition(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartition(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -20,7 +20,7 @@ public interface Nas {
 	 * @param serviceName The internal name of your storage
 	 * @param partitionName the given name of partition
 	*/
-	java.lang.String getServiceNamePartitionPartitionNameAuthorizableIps(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartitionPartitionNameAuthorizableIps(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -84,7 +84,7 @@ public interface Nas {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getDedicatedNas() throws java.io.IOException;
+	java.lang.String[] getDedicatedNas() throws java.io.IOException;
 
 
 
@@ -128,7 +128,7 @@ public interface Nas {
 	 * @param serviceName The internal name of your storage
 	 * @param partitionName the given name of partition
 	*/
-	java.lang.String getServiceNamePartitionPartitionNameAccess(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
+	java.lang.String[] getServiceNamePartitionPartitionNameAccess(java.lang.String serviceName, java.lang.String partitionName) throws java.io.IOException;
 
 
 }

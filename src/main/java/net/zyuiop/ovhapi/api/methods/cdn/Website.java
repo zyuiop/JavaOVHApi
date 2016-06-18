@@ -19,7 +19,7 @@ public interface Website {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your CDN Website offer
 	*/
-	java.lang.String getServiceNameZoneBackends(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameZoneBackends(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Remove a backend from the zone
@@ -42,7 +42,7 @@ public interface Website {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getCdnWebsite() throws java.io.IOException;
+	java.lang.String[] getCdnWebsite() throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -66,7 +66,7 @@ public interface Website {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your CDN Website offer
 	*/
-	java.lang.String getServiceNameZoneDomains(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameZoneDomains(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -122,7 +122,7 @@ public interface Website {
 	 * @param serviceName The internal name of your CDN Website offer
 	 * @param domain null
 	*/
-	net.zyuiop.ovhapi.api.objects.cdn.website.StatsDataType getServiceNameZoneDomainsDomainStatistics(java.lang.String period, java.lang.String value, java.lang.String type, java.lang.String serviceName, java.lang.String domain) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cdn.website.StatsDataType[] getServiceNameZoneDomainsDomainStatistics(java.lang.String period, java.lang.String value, java.lang.String type, java.lang.String serviceName, java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Task associated to this domain

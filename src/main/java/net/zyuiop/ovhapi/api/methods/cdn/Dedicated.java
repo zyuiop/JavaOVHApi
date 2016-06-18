@@ -98,7 +98,7 @@ public interface Dedicated {
 	 * @param serviceName The internal name of your CDN offer
 	 * @param domain Domain of this object
 	*/
-	net.zyuiop.ovhapi.api.objects.cdnanycast.StatsDataType getServiceNameDomainsDomainStatistics(java.lang.String period, java.lang.String value, java.lang.String type, java.lang.String serviceName, java.lang.String domain) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cdnanycast.StatsDataType[] getServiceNameDomainsDomainStatistics(java.lang.String period, java.lang.String value, java.lang.String type, java.lang.String serviceName, java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Task associated to the cache rule
@@ -249,26 +249,26 @@ public interface Dedicated {
 	 * @param period null
 	 * @param serviceName The internal name of your CDN offer
 	*/
-	net.zyuiop.ovhapi.api.objects.cdnanycast.StatsDataType getServiceNameQuota(java.lang.String period, java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cdnanycast.StatsDataType[] getServiceNameQuota(java.lang.String period, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Domains associated to this anycast
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your CDN offer
 	*/
-	java.lang.String getServiceNameDomains(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameDomains(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getCdnDedicated() throws java.io.IOException;
+	java.lang.String[] getCdnDedicated() throws java.io.IOException;
 
 	/**
 	 * List of CDN Pops
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getPops() throws java.io.IOException;
+	java.lang.String[] getPops() throws java.io.IOException;
 
 	/**
 	 * Backend associated to the domain
@@ -276,7 +276,7 @@ public interface Dedicated {
 	 * @param serviceName The internal name of your CDN offer
 	 * @param domain Domain of this object
 	*/
-	java.lang.String getServiceNameDomainsDomainBackends(java.lang.String serviceName, java.lang.String domain) throws java.io.IOException;
+	java.lang.String[] getServiceNameDomainsDomainBackends(java.lang.String serviceName, java.lang.String domain) throws java.io.IOException;
 
 	/**
 	 * Add a backend IP

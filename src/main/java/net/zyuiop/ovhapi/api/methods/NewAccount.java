@@ -11,7 +11,7 @@ public interface NewAccount {
 	 * Facultative parameters ? false
 	 * @param country null
 	*/
-	java.lang.String getLegalform(java.lang.String country) throws java.io.IOException;
+	java.lang.String[] getLegalform(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Give all the rules to follow in order to create an OVH identifier
@@ -29,14 +29,14 @@ public interface NewAccount {
 	 * @param ovhSubsidiary null
 	 * @param ovhCompany null
 	*/
-	java.lang.String getCountries(java.lang.String ovhSubsidiary, java.lang.String ovhCompany) throws java.io.IOException;
+	java.lang.String[] getCountries(java.lang.String ovhSubsidiary, java.lang.String ovhCompany) throws java.io.IOException;
 
 	/**
 	 * All available areas for a given country
 	 * Facultative parameters ? false
 	 * @param country null
 	*/
-	java.lang.String getArea(java.lang.String country) throws java.io.IOException;
+	java.lang.String[] getArea(java.lang.String country) throws java.io.IOException;
 
 	/**
 	 * Create a new OVH identifier
@@ -83,6 +83,6 @@ public interface NewAccount {
 	 * Facultative parameters ? false
 	 * @param country null
 	*/
-	java.lang.String getCorporationType(java.lang.String country) throws java.io.IOException;
+	java.lang.String[] getCorporationType(java.lang.String country) throws java.io.IOException;
 
 }

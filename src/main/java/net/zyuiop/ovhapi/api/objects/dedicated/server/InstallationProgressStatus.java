@@ -9,7 +9,7 @@ public interface InstallationProgressStatus {
 	/**
 	 * @return Installation steps
 	 */
-	net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps getProgress(); 
+	net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps[] getProgress(); 
 
 	/**
 	 * @return Elapsed time in seconds since installation beggining

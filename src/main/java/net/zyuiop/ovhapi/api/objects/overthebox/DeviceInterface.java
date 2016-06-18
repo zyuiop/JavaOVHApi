@@ -34,7 +34,7 @@ public interface DeviceInterface {
 	/**
 	 * @return The DNS servers of this interface
 	 */
-	java.lang.String getDnsServers(); 
+	java.lang.String[] getDnsServers(); 
 
 	/**
 	 * @return Netmask of the interface

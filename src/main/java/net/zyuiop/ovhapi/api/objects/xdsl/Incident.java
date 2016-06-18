@@ -14,7 +14,7 @@ public interface Incident {
 	/**
 	 * @return Department list
 	 */
-	java.lang.String getDepartments(); 
+	java.lang.String[] getDepartments(); 
 
 	/**
 	 * @return Estimated start date
@@ -39,11 +39,11 @@ public interface Incident {
 	/**
 	 * @return NRA list
 	 */
-	java.lang.String getNra(); 
+	java.lang.String[] getNra(); 
 
 	/**
 	 * @return Operator
 	 */
-	java.lang.String getOperators(); 
+	java.lang.String[] getOperators(); 
 
 }

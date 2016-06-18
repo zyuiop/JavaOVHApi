@@ -29,7 +29,7 @@ public interface Credential {
 	/**
 	 * @return null
 	 */
-	net.zyuiop.ovhapi.api.objects.auth.AccessRule getRules(); 
+	net.zyuiop.ovhapi.api.objects.auth.AccessRule[] getRules(); 
 
 	/**
 	 * @return null

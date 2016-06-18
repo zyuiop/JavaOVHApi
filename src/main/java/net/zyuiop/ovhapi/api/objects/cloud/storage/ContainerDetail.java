@@ -9,7 +9,7 @@ public interface ContainerDetail {
 	/**
 	 * @return Objects stored in container
 	 */
-	net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerObject getObjects(); 
+	net.zyuiop.ovhapi.api.objects.cloud.storage.ContainerObject[] getObjects(); 
 
 	/**
 	 * @return Total bytes stored

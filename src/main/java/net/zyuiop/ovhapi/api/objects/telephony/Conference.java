@@ -14,7 +14,7 @@ public interface Conference {
 	/**
 	 * @return null
 	 */
-	java.lang.String getOffers(); 
+	java.lang.String[] getOffers(); 
 
 	/**
 	 * @return null

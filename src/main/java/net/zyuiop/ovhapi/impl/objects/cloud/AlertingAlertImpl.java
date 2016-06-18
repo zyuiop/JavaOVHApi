@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.cloud.AlertingAlert;
 public class AlertingAlertImpl implements AlertingAlert { 
 
 	private java.util.Date alertDate;
-	private java.lang.String emails;
+	private java.lang.String[] emails;
 	private long alertId;
 
 	public AlertingAlertImpl() {
@@ -27,15 +27,15 @@ public class AlertingAlertImpl implements AlertingAlert {
 		return this;
 	} 
 
-	public java.lang.String getEmails() { 
+	public java.lang.String[] getEmails() { 
 		return this.emails;
 	} 
 
-	public void setEmails(java.lang.String emails) { 
+	public void setEmails(java.lang.String[] emails) { 
 		this.emails = emails;
 	} 
 
-	public AlertingAlertImpl emails(java.lang.String emails) { 
+	public AlertingAlertImpl emails(java.lang.String[] emails) { 
 		this.emails = emails;
 		return this;
 	} 

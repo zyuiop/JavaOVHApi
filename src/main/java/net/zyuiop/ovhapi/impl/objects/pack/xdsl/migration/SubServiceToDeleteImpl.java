@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete;
 public class SubServiceToDeleteImpl implements SubServiceToDelete { 
 
 	private long numberToDelete;
-	private java.lang.String services;
+	private java.lang.String[] services;
 	private java.lang.String type;
 
 	public SubServiceToDeleteImpl() {
@@ -27,15 +27,15 @@ public class SubServiceToDeleteImpl implements SubServiceToDelete {
 		return this;
 	} 
 
-	public java.lang.String getServices() { 
+	public java.lang.String[] getServices() { 
 		return this.services;
 	} 
 
-	public void setServices(java.lang.String services) { 
+	public void setServices(java.lang.String[] services) { 
 		this.services = services;
 	} 
 
-	public SubServiceToDeleteImpl services(java.lang.String services) { 
+	public SubServiceToDeleteImpl services(java.lang.String[] services) { 
 		this.services = services;
 		return this;
 	} 

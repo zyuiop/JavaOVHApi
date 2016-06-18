@@ -14,7 +14,7 @@ public class LineOptionsImpl implements LineOptions {
 	private boolean absentSubscriber;
 	private java.lang.String forwardBusyNumber;
 	private java.lang.String codecs;
-	private java.lang.String ipRestrictions;
+	private java.lang.String[] ipRestrictions;
 	private java.lang.String domain;
 	private java.lang.String lockOutCallPassword;
 	private boolean identificationRestriction;
@@ -127,15 +127,15 @@ public class LineOptionsImpl implements LineOptions {
 		return this;
 	} 
 
-	public java.lang.String getIpRestrictions() { 
+	public java.lang.String[] getIpRestrictions() { 
 		return this.ipRestrictions;
 	} 
 
-	public void setIpRestrictions(java.lang.String ipRestrictions) { 
+	public void setIpRestrictions(java.lang.String[] ipRestrictions) { 
 		this.ipRestrictions = ipRestrictions;
 	} 
 
-	public LineOptionsImpl ipRestrictions(java.lang.String ipRestrictions) { 
+	public LineOptionsImpl ipRestrictions(java.lang.String[] ipRestrictions) { 
 		this.ipRestrictions = ipRestrictions;
 		return this;
 	} 

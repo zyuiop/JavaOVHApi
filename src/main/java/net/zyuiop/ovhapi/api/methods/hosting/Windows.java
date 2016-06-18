@@ -10,7 +10,7 @@ public interface Windows {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getHostingWindows() throws java.io.IOException;
+	java.lang.String[] getHostingWindows() throws java.io.IOException;
 
 	/**
 	 * Get this object properties

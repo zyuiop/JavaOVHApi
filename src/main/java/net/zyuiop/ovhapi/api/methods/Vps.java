@@ -11,7 +11,7 @@ public interface Vps {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.lang.String getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Creates a VPS.Task that will restore the given restorePoint
@@ -100,7 +100,7 @@ public interface Vps {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.lang.String getServiceNameIps(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameIps(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Return the necessary informations to open a VNC connection to your VPS
@@ -122,7 +122,7 @@ public interface Vps {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.lang.String getServiceNameBackupftpAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameBackupftpAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Disks associated to this virtual server
@@ -136,7 +136,7 @@ public interface Vps {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.lang.String getServiceNameOption(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOption(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -188,14 +188,14 @@ public interface Vps {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	net.zyuiop.ovhapi.api.objects.vps.Model getServiceNameModels(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.vps.Model[] getServiceNameModels(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List of IP blocks (and protocols to allow on these blocks) authorized on your backup FTP
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.lang.String getServiceNameBackupftpAccess(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameBackupftpAccess(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Release a given Ip (Additional Ip)
@@ -218,7 +218,7 @@ public interface Vps {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.lang.String getServiceNameActiveOptions(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameActiveOptions(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Creates a VPS.Task that will unmount the backup
@@ -344,7 +344,7 @@ public interface Vps {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	net.zyuiop.ovhapi.api.objects.vps.Model getServiceNameAvailableUpgrade(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.vps.Model[] getServiceNameAvailableUpgrade(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Request the machine to stop
@@ -387,20 +387,20 @@ public interface Vps {
 	 * @param state The state of the restore point
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.util.Date getServiceNameAutomatedBackupRestorePoints(java.lang.String state, java.lang.String serviceName) throws java.io.IOException;
+	java.util.Date[] getServiceNameAutomatedBackupRestorePoints(java.lang.String state, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List of secondary dns domain name
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your VPS offer
 	*/
-	java.lang.String getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getVps() throws java.io.IOException;
+	java.lang.String[] getVps() throws java.io.IOException;
 
 	/**
 	 * Get this object properties

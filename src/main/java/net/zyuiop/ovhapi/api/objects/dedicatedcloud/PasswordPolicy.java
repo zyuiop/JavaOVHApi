@@ -19,7 +19,7 @@ public interface PasswordPolicy {
 	/**
 	 * @return List of denied characters in the password
 	 */
-	java.lang.String getDeniedChars(); 
+	java.lang.String[] getDeniedChars(); 
 
 	/**
 	 * @return Whether or not an uppercase letter (A-Z) is mandatory in the password

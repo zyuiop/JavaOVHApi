@@ -68,7 +68,7 @@ public interface Freefax {
 	 * List available services
 	 * Facultative parameters ? false
 	*/
-	java.lang.String getFreefax() throws java.io.IOException;
+	java.lang.String[] getFreefax() throws java.io.IOException;
 
 	/**
 	 * Alter this object properties

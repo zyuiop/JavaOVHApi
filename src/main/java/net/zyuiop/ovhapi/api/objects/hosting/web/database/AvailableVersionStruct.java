@@ -14,6 +14,6 @@ public interface AvailableVersionStruct {
 	/**
 	 * @return Database available version
 	 */
-	java.lang.String getList(); 
+	java.lang.String[] getList(); 
 
 }

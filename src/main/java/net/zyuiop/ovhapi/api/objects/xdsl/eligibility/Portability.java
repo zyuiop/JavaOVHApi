@@ -9,7 +9,7 @@ public interface Portability {
 	/**
 	 * @return The special condition(s) of the portability
 	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.CodeAndMessage getWarnings(); 
+	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.CodeAndMessage[] getWarnings(); 
 
 	/**
 	 * @return Whether or not the portability is possible under condition. If true, warningList contains the reason(s)
@@ -24,6 +24,6 @@ public interface Portability {
 	/**
 	 * @return The reason(s) of the negative portability eligibility
 	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.CodeAndMessage getComments(); 
+	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.CodeAndMessage[] getComments(); 
 
 }

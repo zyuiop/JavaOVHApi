@@ -8,7 +8,7 @@ import net.zyuiop.ovhapi.api.objects.iploadbalancing.ip.ProbeIp;
 public class ProbeIpImpl implements ProbeIp { 
 
 	private java.lang.String zone;
-	private java.lang.String ip;
+	private java.lang.String[] ip;
 
 	public ProbeIpImpl() {
 	}
@@ -26,15 +26,15 @@ public class ProbeIpImpl implements ProbeIp {
 		return this;
 	} 
 
-	public java.lang.String getIp() { 
+	public java.lang.String[] getIp() { 
 		return this.ip;
 	} 
 
-	public void setIp(java.lang.String ip) { 
+	public void setIp(java.lang.String[] ip) { 
 		this.ip = ip;
 	} 
 
-	public ProbeIpImpl ip(java.lang.String ip) { 
+	public ProbeIpImpl ip(java.lang.String[] ip) { 
 		this.ip = ip;
 		return this;
 	} 
