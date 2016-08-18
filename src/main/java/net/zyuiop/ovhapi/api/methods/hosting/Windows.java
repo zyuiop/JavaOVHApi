@@ -7,10 +7,26 @@ package net.zyuiop.ovhapi.api.methods.hosting;
 public interface Windows { 
 
 	/**
-	 * List available services
+	 * Alter this object properties
 	 * Facultative parameters ? false
+	 * @param null New object properties
+	 * @param serviceName The internal name of your hosting
 	*/
-	java.lang.String[] getHostingWindows() throws java.io.IOException;
+	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your hosting
+	*/
+	net.zyuiop.ovhapi.api.objects.hosting.windows.Service getServiceName(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your hosting
+	*/
+	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Launch a contact change procedure
@@ -30,25 +46,9 @@ public interface Windows {
 	long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
-	 * Get this object properties
+	 * List available services
 	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your hosting
 	*/
-	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your hosting
-	*/
-	net.zyuiop.ovhapi.api.objects.hosting.windows.Service getServiceName(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Alter this object properties
-	 * Facultative parameters ? false
-	 * @param null New object properties
-	 * @param serviceName The internal name of your hosting
-	*/
-	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getHostingWindows() throws java.io.IOException;
 
 }

@@ -51,15 +51,6 @@ public class SupportImpl implements Support {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.support.NewMessageInfo.class);
 	}
 
-	public void postTicketsTicketIdClose(long ticketId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/support/tickets/" + ticketId + "/close";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
 	public long[] getTickets(java.util.Date minCreationDate, java.lang.String subject, java.lang.String status, java.lang.String serviceName, java.util.Date maxCreationDate, java.lang.String category, java.lang.String product) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/support/tickets";
 		String __data = "?";
@@ -106,6 +97,15 @@ public class SupportImpl implements Support {
 		String __callUrl = "https://api.ovh.com/1.0/support/tickets/" + ticketId + "/reply";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("body", body);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postTicketsTicketIdClose(long ticketId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/support/tickets/" + ticketId + "/close";
+		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);

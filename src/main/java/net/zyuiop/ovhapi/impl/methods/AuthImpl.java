@@ -15,22 +15,6 @@ public class AuthImpl implements Auth {
 		this.client = client;
 	}
 
-	public net.zyuiop.ovhapi.api.objects.api.Credential getCurrentCredential() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/auth/currentCredential";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.api.Credential.class);
-	}
-
-	public long getTime() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/auth/time";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), long.class);
-	}
-
 	public net.zyuiop.ovhapi.api.objects.auth.Credential postCredential(net.zyuiop.ovhapi.api.objects.auth.AccessRule accessRules, java.lang.String redirection) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/auth/credential";
 		Map<Object, Object> __dataMap = new HashMap<>();
@@ -50,6 +34,22 @@ public class AuthImpl implements Auth {
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.api.objects.auth.Credential.class);
+	}
+
+	public long getTime() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/auth/time";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), long.class);
+	}
+
+	public net.zyuiop.ovhapi.api.objects.api.Credential getCurrentCredential() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/auth/currentCredential";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.api.Credential.class);
 	}
 
 	public void postLogout() throws java.io.IOException {

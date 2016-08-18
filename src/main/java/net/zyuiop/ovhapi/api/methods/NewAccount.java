@@ -47,27 +47,6 @@ public interface NewAccount {
 	net.zyuiop.ovhapi.api.objects.nichandle.NewAccountAndToken postNewAccount(java.lang.String ovhSubsidiary, java.lang.String ovhCompany, java.lang.String email, java.lang.String country, java.lang.String legalform) throws java.io.IOException;
 
 	/**
-	 * All available areas for a given country
-	 * Facultative parameters ? false
-	 * @param country null
-	*/
-	java.lang.String[] getArea(java.lang.String country) throws java.io.IOException;
-
-	/**
-	 * All available corporation types for a given country
-	 * Facultative parameters ? false
-	 * @param country null
-	*/
-	java.lang.String[] getCorporationType(java.lang.String country) throws java.io.IOException;
-
-	/**
-	 * All available legal forms for a given country
-	 * Facultative parameters ? false
-	 * @param country null
-	*/
-	java.lang.String[] getLegalform(java.lang.String country) throws java.io.IOException;
-
-	/**
 	 * Give all the rules to follow in order to create an OVH identifier
 	 * Facultative parameters ? false
 	 * @param country null
@@ -84,5 +63,26 @@ public interface NewAccount {
 	 * @param ovhCompany null
 	*/
 	java.lang.String[] getCountries(java.lang.String ovhSubsidiary, java.lang.String ovhCompany) throws java.io.IOException;
+
+	/**
+	 * All available corporation types for a given country
+	 * Facultative parameters ? false
+	 * @param country null
+	*/
+	java.lang.String[] getCorporationType(java.lang.String country) throws java.io.IOException;
+
+	/**
+	 * All available areas for a given country
+	 * Facultative parameters ? false
+	 * @param country null
+	*/
+	java.lang.String[] getArea(java.lang.String country) throws java.io.IOException;
+
+	/**
+	 * All available legal forms for a given country
+	 * Facultative parameters ? false
+	 * @param country null
+	*/
+	java.lang.String[] getLegalform(java.lang.String country) throws java.io.IOException;
 
 }

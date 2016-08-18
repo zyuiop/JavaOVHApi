@@ -14,21 +14,6 @@ public interface AllDom {
 	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
-	 * Alter this object properties
-	 * Facultative parameters ? false
-	 * @param null New object properties
-	 * @param serviceName The internal name of your allDom
-	*/
-	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
-
-
-	/**
-	 * List available services
-	 * Facultative parameters ? false
-	*/
-	java.lang.String[] getAllDom() throws java.io.IOException;
-
-	/**
 	 * Domains attached to this allDom
 	 * Facultative parameters ? true
 	 * @param serviceName The internal name of your allDom
@@ -43,5 +28,33 @@ public interface AllDom {
 	*/
 	java.lang.String[] getServiceNameDomain(java.lang.String serviceName) throws java.io.IOException;
 
+	/**
+	 * List available services
+	 * Facultative parameters ? false
+	*/
+	java.lang.String[] getAllDom() throws java.io.IOException;
+
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your allDom
+	 * @param domain Domain name
+	*/
+	net.zyuiop.ovhapi.api.objects.alldom.AllDomDomain getServiceNameDomainDomain(java.lang.String serviceName, java.lang.String domain) throws java.io.IOException;
+
+	/**
+	 * Alter this object properties
+	 * Facultative parameters ? false
+	 * @param null New object properties
+	 * @param serviceName The internal name of your allDom
+	*/
+	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your allDom
+	*/
+	net.zyuiop.ovhapi.api.objects.alldom.AllDom getServiceName(java.lang.String serviceName) throws java.io.IOException;
 
 }

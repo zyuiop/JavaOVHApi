@@ -7,18 +7,6 @@ package net.zyuiop.ovhapi.api.methods;
 public interface Auth { 
 
 	/**
-	 * Get the current credential details
-	 * Facultative parameters ? false
-	*/
-	net.zyuiop.ovhapi.api.objects.api.Credential getCurrentCredential() throws java.io.IOException;
-
-	/**
-	 * Get the current time of the OVH servers, since UNIX epoch
-	 * Facultative parameters ? false
-	*/
-	long getTime() throws java.io.IOException;
-
-	/**
 	 * Request a new credential for your application
 	 * Facultative parameters ? true
 	 * @param accessRules Access required for your application
@@ -32,6 +20,18 @@ public interface Auth {
 	 * @param accessRules Access required for your application
 	*/
 	net.zyuiop.ovhapi.api.objects.auth.Credential postCredential(net.zyuiop.ovhapi.api.objects.auth.AccessRule accessRules) throws java.io.IOException;
+
+	/**
+	 * Get the current time of the OVH servers, since UNIX epoch
+	 * Facultative parameters ? false
+	*/
+	long getTime() throws java.io.IOException;
+
+	/**
+	 * Get the current credential details
+	 * Facultative parameters ? false
+	*/
+	net.zyuiop.ovhapi.api.objects.api.Credential getCurrentCredential() throws java.io.IOException;
 
 	/**
 	 * Expire current credential

@@ -35,13 +35,6 @@ public interface Support {
 	net.zyuiop.ovhapi.api.objects.support.NewMessageInfo postTicketsCreate(java.lang.String body, java.lang.String subject, java.lang.String type) throws java.io.IOException;
 
 	/**
-	 * Close ticket
-	 * Facultative parameters ? false
-	 * @param ticketId internal ticket identifier
-	*/
-	void postTicketsTicketIdClose(long ticketId) throws java.io.IOException;
-
-	/**
 	 * List support tickets identifiers for this service
 	 * Facultative parameters ? true
 	 * @param minCreationDate Minimum creation date
@@ -82,5 +75,12 @@ public interface Support {
 	 * @param body text body of ticket response
 	*/
 	void postTicketsTicketIdReply(long ticketId, java.lang.String body) throws java.io.IOException;
+
+	/**
+	 * Close ticket
+	 * Facultative parameters ? false
+	 * @param ticketId internal ticket identifier
+	*/
+	void postTicketsTicketIdClose(long ticketId) throws java.io.IOException;
 
 }
