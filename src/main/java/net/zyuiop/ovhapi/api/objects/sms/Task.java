@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.sms;
  * Operation on a SMS service
  */
 
-public interface Task { 
+public class Task { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStep(); 
+	private java.lang.String step;
+	private long taskId;
+	private java.lang.String function;
+	private java.lang.String status;
 
-	/**
-	 * @return null
-	 */
-	long getTaskId(); 
+	public Task() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getFunction(); 
+	public java.lang.String getStep() { 
+		return this.step;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStatus(); 
+	public void setStep(java.lang.String step) { 
+		this.step = step;
+	} 
+
+	public Task step(java.lang.String step) { 
+		this.step = step;
+		return this;
+	} 
+
+	public long getTaskId() { 
+		return this.taskId;
+	} 
+
+	public void setTaskId(long taskId) { 
+		this.taskId = taskId;
+	} 
+
+	public Task taskId(long taskId) { 
+		this.taskId = taskId;
+		return this;
+	} 
+
+	public java.lang.String getFunction() { 
+		return this.function;
+	} 
+
+	public void setFunction(java.lang.String function) { 
+		this.function = function;
+	} 
+
+	public Task function(java.lang.String function) { 
+		this.function = function;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public Task status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
 }

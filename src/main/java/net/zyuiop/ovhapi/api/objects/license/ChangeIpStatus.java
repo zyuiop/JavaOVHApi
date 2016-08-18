@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.license;
  * License change ip status return
  */
 
-public interface ChangeIpStatus { 
+public class ChangeIpStatus { 
 
-	/**
-	 * @return null
-	 */
-	boolean getSuccess(); 
+	private boolean success;
+	private java.lang.String message;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getMessage(); 
+	public ChangeIpStatus() {
+	}
+
+	public boolean getSuccess() { 
+		return this.success;
+	} 
+
+	public void setSuccess(boolean success) { 
+		this.success = success;
+	} 
+
+	public ChangeIpStatus success(boolean success) { 
+		this.success = success;
+		return this;
+	} 
+
+	public java.lang.String getMessage() { 
+		return this.message;
+	} 
+
+	public void setMessage(java.lang.String message) { 
+		this.message = message;
+	} 
+
+	public ChangeIpStatus message(java.lang.String message) { 
+		this.message = message;
+		return this;
+	} 
 
 }

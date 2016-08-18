@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.domain;
  * Name server
  */
 
-public interface DomainNs { 
+public class DomainNs { 
 
-	/**
-	 * @return Ip
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private java.lang.String host;
 
-	/**
-	 * @return Host
-	 */
-	java.lang.String getHost(); 
+	public DomainNs() {
+	}
+
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public DomainNs ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getHost() { 
+		return this.host;
+	} 
+
+	public void setHost(java.lang.String host) { 
+		this.host = host;
+	} 
+
+	public DomainNs host(java.lang.String host) { 
+		this.host = host;
+		return this;
+	} 
 
 }

@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.nichandle.accessrestriction;
  * Describe SOTP validation status
  */
 
-public interface SOTPValidate { 
+public class SOTPValidate { 
 
-	/**
-	 * @return null
-	 */
-	long getRemainingCodes(); 
+	private long remainingCodes;
+
+	public SOTPValidate() {
+	}
+
+	public long getRemainingCodes() { 
+		return this.remainingCodes;
+	} 
+
+	public void setRemainingCodes(long remainingCodes) { 
+		this.remainingCodes = remainingCodes;
+	} 
+
+	public SOTPValidate remainingCodes(long remainingCodes) { 
+		this.remainingCodes = remainingCodes;
+		return this;
+	} 
 
 }

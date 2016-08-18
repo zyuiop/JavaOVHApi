@@ -4,41 +4,108 @@ package net.zyuiop.ovhapi.api.objects.sms;
  * Sms template for moderation (Needed to send in US country)
  */
 
-public interface TemplateControl { 
+public class TemplateControl { 
 
-	/**
-	 * @return Message sent by the moderator
-	 */
-	java.lang.String getComment(); 
+	private java.lang.String comment;
+	private java.lang.String status;
+	private java.lang.String name;
+	private java.lang.String description;
+	private java.lang.String activity;
+	private java.lang.String message;
+	private java.util.Date datetime;
 
-	/**
-	 * @return Template status
-	 */
-	java.lang.String getStatus(); 
+	public TemplateControl() {
+	}
 
-	/**
-	 * @return Name of the template
-	 */
-	java.lang.String getName(); 
+	public java.lang.String getComment() { 
+		return this.comment;
+	} 
 
-	/**
-	 * @return Template description
-	 */
-	java.lang.String getDescription(); 
+	public void setComment(java.lang.String comment) { 
+		this.comment = comment;
+	} 
 
-	/**
-	 * @return Specify the kind of template
-	 */
-	java.lang.String getActivity(); 
+	public TemplateControl comment(java.lang.String comment) { 
+		this.comment = comment;
+		return this;
+	} 
 
-	/**
-	 * @return Message pattern to be moderated. Use "#VALUE#" format for dynamic text area.
-	 */
-	java.lang.String getMessage(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return Template creation datetime
-	 */
-	java.util.Date getDatetime(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public TemplateControl status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public TemplateControl name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public TemplateControl description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
+
+	public java.lang.String getActivity() { 
+		return this.activity;
+	} 
+
+	public void setActivity(java.lang.String activity) { 
+		this.activity = activity;
+	} 
+
+	public TemplateControl activity(java.lang.String activity) { 
+		this.activity = activity;
+		return this;
+	} 
+
+	public java.lang.String getMessage() { 
+		return this.message;
+	} 
+
+	public void setMessage(java.lang.String message) { 
+		this.message = message;
+	} 
+
+	public TemplateControl message(java.lang.String message) { 
+		this.message = message;
+		return this;
+	} 
+
+	public java.util.Date getDatetime() { 
+		return this.datetime;
+	} 
+
+	public void setDatetime(java.util.Date datetime) { 
+		this.datetime = datetime;
+	} 
+
+	public TemplateControl datetime(java.util.Date datetime) { 
+		this.datetime = datetime;
+		return this;
+	} 
 
 }

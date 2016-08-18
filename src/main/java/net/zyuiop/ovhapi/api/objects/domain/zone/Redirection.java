@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.domain.zone;
  * Redirection
  */
 
-public interface Redirection { 
+public class Redirection { 
 
-	/**
-	 * @return Redirection zone
-	 */
-	java.lang.String getZone(); 
+	private java.lang.String zone;
+	private java.lang.String description;
+	private java.lang.String keywords;
+	private java.lang.String target;
+	private long id;
+	private java.lang.String subDomain;
+	private java.lang.String type;
+	private java.lang.String title;
 
-	/**
-	 * @return Desciption for invisible redirection
-	 */
-	java.lang.String getDescription(); 
+	public Redirection() {
+	}
 
-	/**
-	 * @return Keywords for invisible redirection
-	 */
-	java.lang.String getKeywords(); 
+	public java.lang.String getZone() { 
+		return this.zone;
+	} 
 
-	/**
-	 * @return Target of the redirection
-	 */
-	java.lang.String getTarget(); 
+	public void setZone(java.lang.String zone) { 
+		this.zone = zone;
+	} 
 
-	/**
-	 * @return Id of the redirection
-	 */
-	long getId(); 
+	public Redirection zone(java.lang.String zone) { 
+		this.zone = zone;
+		return this;
+	} 
 
-	/**
-	 * @return subdomain to redirect
-	 */
-	java.lang.String getSubDomain(); 
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
 
-	/**
-	 * @return Redirection type
-	 */
-	java.lang.String getType(); 
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
 
-	/**
-	 * @return Title for invisible redirection
-	 */
-	java.lang.String getTitle(); 
+	public Redirection description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
+
+	public java.lang.String getKeywords() { 
+		return this.keywords;
+	} 
+
+	public void setKeywords(java.lang.String keywords) { 
+		this.keywords = keywords;
+	} 
+
+	public Redirection keywords(java.lang.String keywords) { 
+		this.keywords = keywords;
+		return this;
+	} 
+
+	public java.lang.String getTarget() { 
+		return this.target;
+	} 
+
+	public void setTarget(java.lang.String target) { 
+		this.target = target;
+	} 
+
+	public Redirection target(java.lang.String target) { 
+		this.target = target;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Redirection id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getSubDomain() { 
+		return this.subDomain;
+	} 
+
+	public void setSubDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+	} 
+
+	public Redirection subDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Redirection type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public java.lang.String getTitle() { 
+		return this.title;
+	} 
+
+	public void setTitle(java.lang.String title) { 
+		this.title = title;
+	} 
+
+	public Redirection title(java.lang.String title) { 
+		this.title = title;
+		return this;
+	} 
 
 }

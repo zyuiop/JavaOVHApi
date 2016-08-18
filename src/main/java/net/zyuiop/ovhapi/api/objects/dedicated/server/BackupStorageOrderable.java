@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * A structure describing informations storage backup orderable for this dedicated server
  */
 
-public interface BackupStorageOrderable { 
+public class BackupStorageOrderable { 
 
-	/**
-	 * @return Backup storage orderable capacities in gigabytes
-	 */
-	long[] getCapacities(); 
+	private long[] capacities;
+	private boolean orderable;
 
-	/**
-	 * @return Is a backup storage is orderable for this server
-	 */
-	boolean getOrderable(); 
+	public BackupStorageOrderable() {
+	}
+
+	public long[] getCapacities() { 
+		return this.capacities;
+	} 
+
+	public void setCapacities(long[] capacities) { 
+		this.capacities = capacities;
+	} 
+
+	public BackupStorageOrderable capacities(long[] capacities) { 
+		this.capacities = capacities;
+		return this;
+	} 
+
+	public boolean getOrderable() { 
+		return this.orderable;
+	} 
+
+	public void setOrderable(boolean orderable) { 
+		this.orderable = orderable;
+	} 
+
+	public BackupStorageOrderable orderable(boolean orderable) { 
+		this.orderable = orderable;
+		return this;
+	} 
 
 }

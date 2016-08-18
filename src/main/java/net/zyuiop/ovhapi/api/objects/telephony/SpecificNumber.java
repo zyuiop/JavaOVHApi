@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Specific number available
  */
 
-public interface SpecificNumber { 
+public class SpecificNumber { 
 
-	/**
-	 * @return The number
-	 */
-	java.lang.String getNumber(); 
+	private java.lang.String number;
+	private boolean isPremium;
 
-	/**
-	 * @return Set if number is premium
-	 */
-	boolean getIsPremium(); 
+	public SpecificNumber() {
+	}
+
+	public java.lang.String getNumber() { 
+		return this.number;
+	} 
+
+	public void setNumber(java.lang.String number) { 
+		this.number = number;
+	} 
+
+	public SpecificNumber number(java.lang.String number) { 
+		this.number = number;
+		return this;
+	} 
+
+	public boolean getIsPremium() { 
+		return this.isPremium;
+	} 
+
+	public void setIsPremium(boolean isPremium) { 
+		this.isPremium = isPremium;
+	} 
+
+	public SpecificNumber isPremium(boolean isPremium) { 
+		this.isPremium = isPremium;
+		return this;
+	} 
 
 }

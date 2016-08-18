@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.xdsl;
  * 
  */
 
-public interface LineSectionLength { 
+public class LineSectionLength { 
 
-	/**
-	 * @return The length of this section in meters
-	 */
-	long getLength(); 
+	private long length;
+	private long diameter;
 
-	/**
-	 * @return The diameter of this section in millimeters
-	 */
-	long getDiameter(); 
+	public LineSectionLength() {
+	}
+
+	public long getLength() { 
+		return this.length;
+	} 
+
+	public void setLength(long length) { 
+		this.length = length;
+	} 
+
+	public LineSectionLength length(long length) { 
+		this.length = length;
+		return this;
+	} 
+
+	public long getDiameter() { 
+		return this.diameter;
+	} 
+
+	public void setDiameter(long diameter) { 
+		this.diameter = diameter;
+	} 
+
+	public LineSectionLength diameter(long diameter) { 
+		this.diameter = diameter;
+		return this;
+	} 
 
 }

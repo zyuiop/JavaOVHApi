@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.hosting.windows;
  * Windows web Hosting
  */
 
-public interface Service { 
+public class Service { 
 
-	/**
-	 * @return Hosting resource type
-	 */
-	java.lang.String getResourceType(); 
+	private java.lang.String resourceType;
+	private java.lang.String offer;
+	private java.lang.String serviceName;
+	private java.lang.String operatingSystem;
 
-	/**
-	 * @return Hosting offer
-	 */
-	java.lang.String getOffer(); 
+	public Service() {
+	}
 
-	/**
-	 * @return Service name
-	 */
-	java.lang.String getServiceName(); 
+	public java.lang.String getResourceType() { 
+		return this.resourceType;
+	} 
 
-	/**
-	 * @return Hosting's OS
-	 */
-	java.lang.String getOperatingSystem(); 
+	public void setResourceType(java.lang.String resourceType) { 
+		this.resourceType = resourceType;
+	} 
+
+	public Service resourceType(java.lang.String resourceType) { 
+		this.resourceType = resourceType;
+		return this;
+	} 
+
+	public java.lang.String getOffer() { 
+		return this.offer;
+	} 
+
+	public void setOffer(java.lang.String offer) { 
+		this.offer = offer;
+	} 
+
+	public Service offer(java.lang.String offer) { 
+		this.offer = offer;
+		return this;
+	} 
+
+	public java.lang.String getServiceName() { 
+		return this.serviceName;
+	} 
+
+	public void setServiceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+	} 
+
+	public Service serviceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+		return this;
+	} 
+
+	public java.lang.String getOperatingSystem() { 
+		return this.operatingSystem;
+	} 
+
+	public void setOperatingSystem(java.lang.String operatingSystem) { 
+		this.operatingSystem = operatingSystem;
+	} 
+
+	public Service operatingSystem(java.lang.String operatingSystem) { 
+		this.operatingSystem = operatingSystem;
+		return this;
+	} 
 
 }

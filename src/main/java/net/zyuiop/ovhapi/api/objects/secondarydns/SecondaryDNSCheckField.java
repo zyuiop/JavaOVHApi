@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.secondarydns;
  * A structure describing informations about secondary dns check field
  */
 
-public interface SecondaryDNSCheckField { 
+public class SecondaryDNSCheckField { 
 
-	/**
-	 * @return The field type to add on your DNS zone for this subDomain
-	 */
-	java.lang.String getFieldType(); 
+	private java.lang.String fieldType;
+	private java.lang.String subDomain;
+	private java.lang.String fieldValue;
 
-	/**
-	 * @return The subdomain to add on your DNS zone for the domain
-	 */
-	java.lang.String getSubDomain(); 
+	public SecondaryDNSCheckField() {
+	}
 
-	/**
-	 * @return The field value to add on your DNS zone for this subDomain
-	 */
-	java.lang.String getFieldValue(); 
+	public java.lang.String getFieldType() { 
+		return this.fieldType;
+	} 
+
+	public void setFieldType(java.lang.String fieldType) { 
+		this.fieldType = fieldType;
+	} 
+
+	public SecondaryDNSCheckField fieldType(java.lang.String fieldType) { 
+		this.fieldType = fieldType;
+		return this;
+	} 
+
+	public java.lang.String getSubDomain() { 
+		return this.subDomain;
+	} 
+
+	public void setSubDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+	} 
+
+	public SecondaryDNSCheckField subDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+		return this;
+	} 
+
+	public java.lang.String getFieldValue() { 
+		return this.fieldValue;
+	} 
+
+	public void setFieldValue(java.lang.String fieldValue) { 
+		this.fieldValue = fieldValue;
+	} 
+
+	public SecondaryDNSCheckField fieldValue(java.lang.String fieldValue) { 
+		this.fieldValue = fieldValue;
+		return this;
+	} 
 
 }

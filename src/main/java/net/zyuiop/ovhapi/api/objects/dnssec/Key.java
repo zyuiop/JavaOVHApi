@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.dnssec;
  * Key type
  */
 
-public interface Key { 
+public class Key { 
 
-	/**
-	 * @return Algorithm
-	 */
-	long getAlgorithm(); 
+	private long algorithm;
+	private long flags;
+	private long tag;
+	private java.lang.String publicKey;
 
-	/**
-	 * @return Flag of the dnssec key
-	 */
-	long getFlags(); 
+	public Key() {
+	}
 
-	/**
-	 * @return Key tag
-	 */
-	long getTag(); 
+	public long getAlgorithm() { 
+		return this.algorithm;
+	} 
 
-	/**
-	 * @return Public key
-	 */
-	java.lang.String getPublicKey(); 
+	public void setAlgorithm(long algorithm) { 
+		this.algorithm = algorithm;
+	} 
+
+	public Key algorithm(long algorithm) { 
+		this.algorithm = algorithm;
+		return this;
+	} 
+
+	public long getFlags() { 
+		return this.flags;
+	} 
+
+	public void setFlags(long flags) { 
+		this.flags = flags;
+	} 
+
+	public Key flags(long flags) { 
+		this.flags = flags;
+		return this;
+	} 
+
+	public long getTag() { 
+		return this.tag;
+	} 
+
+	public void setTag(long tag) { 
+		this.tag = tag;
+	} 
+
+	public Key tag(long tag) { 
+		this.tag = tag;
+		return this;
+	} 
+
+	public java.lang.String getPublicKey() { 
+		return this.publicKey;
+	} 
+
+	public void setPublicKey(java.lang.String publicKey) { 
+		this.publicKey = publicKey;
+	} 
+
+	public Key publicKey(java.lang.String publicKey) { 
+		this.publicKey = publicKey;
+		return this;
+	} 
 
 }

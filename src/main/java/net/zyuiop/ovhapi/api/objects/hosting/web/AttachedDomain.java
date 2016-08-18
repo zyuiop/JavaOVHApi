@@ -4,41 +4,108 @@ package net.zyuiop.ovhapi.api.objects.hosting.web;
  * Virtual service
  */
 
-public interface AttachedDomain { 
+public class AttachedDomain { 
 
-	/**
-	 * @return Domain linked (fqdn)
-	 */
-	java.lang.String getDomain(); 
+	private java.lang.String domain;
+	private java.lang.String cdn;
+	private java.lang.String ipLocation;
+	private java.lang.String ownLog;
+	private java.lang.String firewall;
+	private boolean ssl;
+	private java.lang.String path;
 
-	/**
-	 * @return Is linked to the hosting cdn
-	 */
-	java.lang.String getCdn(); 
+	public AttachedDomain() {
+	}
 
-	/**
-	 * @return IP location of the domain linked
-	 */
-	java.lang.String getIpLocation(); 
+	public java.lang.String getDomain() { 
+		return this.domain;
+	} 
 
-	/**
-	 * @return Put domain for separate the logs
-	 */
-	java.lang.String getOwnLog(); 
+	public void setDomain(java.lang.String domain) { 
+		this.domain = domain;
+	} 
 
-	/**
-	 * @return Firewall state for this path
-	 */
-	java.lang.String getFirewall(); 
+	public AttachedDomain domain(java.lang.String domain) { 
+		this.domain = domain;
+		return this;
+	} 
 
-	/**
-	 * @return Put domain in ssl certificate
-	 */
-	boolean getSsl(); 
+	public java.lang.String getCdn() { 
+		return this.cdn;
+	} 
 
-	/**
-	 * @return Domain path, relative to your home directory
-	 */
-	java.lang.String getPath(); 
+	public void setCdn(java.lang.String cdn) { 
+		this.cdn = cdn;
+	} 
+
+	public AttachedDomain cdn(java.lang.String cdn) { 
+		this.cdn = cdn;
+		return this;
+	} 
+
+	public java.lang.String getIpLocation() { 
+		return this.ipLocation;
+	} 
+
+	public void setIpLocation(java.lang.String ipLocation) { 
+		this.ipLocation = ipLocation;
+	} 
+
+	public AttachedDomain ipLocation(java.lang.String ipLocation) { 
+		this.ipLocation = ipLocation;
+		return this;
+	} 
+
+	public java.lang.String getOwnLog() { 
+		return this.ownLog;
+	} 
+
+	public void setOwnLog(java.lang.String ownLog) { 
+		this.ownLog = ownLog;
+	} 
+
+	public AttachedDomain ownLog(java.lang.String ownLog) { 
+		this.ownLog = ownLog;
+		return this;
+	} 
+
+	public java.lang.String getFirewall() { 
+		return this.firewall;
+	} 
+
+	public void setFirewall(java.lang.String firewall) { 
+		this.firewall = firewall;
+	} 
+
+	public AttachedDomain firewall(java.lang.String firewall) { 
+		this.firewall = firewall;
+		return this;
+	} 
+
+	public boolean getSsl() { 
+		return this.ssl;
+	} 
+
+	public void setSsl(boolean ssl) { 
+		this.ssl = ssl;
+	} 
+
+	public AttachedDomain ssl(boolean ssl) { 
+		this.ssl = ssl;
+		return this;
+	} 
+
+	public java.lang.String getPath() { 
+		return this.path;
+	} 
+
+	public void setPath(java.lang.String path) { 
+		this.path = path;
+	} 
+
+	public AttachedDomain path(java.lang.String path) { 
+		this.path = path;
+		return this;
+	} 
 
 }

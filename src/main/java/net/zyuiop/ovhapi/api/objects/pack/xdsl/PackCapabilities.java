@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.pack.xdsl;
  * Describe the capabilities of this pack
  */
 
-public interface PackCapabilities { 
+public class PackCapabilities { 
 
-	/**
-	 * @return Whether or not this pack can move address
-	 */
-	boolean getCanMoveAddress(); 
+	private boolean canMoveAddress;
+	private boolean isLegacyOffer;
 
-	/**
-	 * @return Whether or not this pack is from an old offer
-	 */
-	boolean getIsLegacyOffer(); 
+	public PackCapabilities() {
+	}
+
+	public boolean getCanMoveAddress() { 
+		return this.canMoveAddress;
+	} 
+
+	public void setCanMoveAddress(boolean canMoveAddress) { 
+		this.canMoveAddress = canMoveAddress;
+	} 
+
+	public PackCapabilities canMoveAddress(boolean canMoveAddress) { 
+		this.canMoveAddress = canMoveAddress;
+		return this;
+	} 
+
+	public boolean getIsLegacyOffer() { 
+		return this.isLegacyOffer;
+	} 
+
+	public void setIsLegacyOffer(boolean isLegacyOffer) { 
+		this.isLegacyOffer = isLegacyOffer;
+	} 
+
+	public PackCapabilities isLegacyOffer(boolean isLegacyOffer) { 
+		this.isLegacyOffer = isLegacyOffer;
+		return this;
+	} 
 
 }

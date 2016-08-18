@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.cdn.website;
  * Domain on CDN
  */
 
-public interface Domain { 
+public class Domain { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getDomain(); 
+	private java.lang.String domain;
+	private java.lang.String status;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStatus(); 
+	public Domain() {
+	}
+
+	public java.lang.String getDomain() { 
+		return this.domain;
+	} 
+
+	public void setDomain(java.lang.String domain) { 
+		this.domain = domain;
+	} 
+
+	public Domain domain(java.lang.String domain) { 
+		this.domain = domain;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public Domain status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
 }

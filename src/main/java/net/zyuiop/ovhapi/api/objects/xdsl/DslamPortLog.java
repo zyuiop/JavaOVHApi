@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.xdsl;
  * A message log from the DSLAM
  */
 
-public interface DslamPortLog { 
+public class DslamPortLog { 
 
-	/**
-	 * @return The number of times this message occured between date and lastOccurrenceDate
-	 */
-	long getNumberOfOccurrences(); 
+	private long numberOfOccurrences;
+	private java.util.Date lastOccurrenceDate;
+	private java.util.Date date;
+	private java.lang.String message;
 
-	/**
-	 * @return The last time this message occured
-	 */
-	java.util.Date getLastOccurrenceDate(); 
+	public DslamPortLog() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.util.Date getDate(); 
+	public long getNumberOfOccurrences() { 
+		return this.numberOfOccurrences;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getMessage(); 
+	public void setNumberOfOccurrences(long numberOfOccurrences) { 
+		this.numberOfOccurrences = numberOfOccurrences;
+	} 
+
+	public DslamPortLog numberOfOccurrences(long numberOfOccurrences) { 
+		this.numberOfOccurrences = numberOfOccurrences;
+		return this;
+	} 
+
+	public java.util.Date getLastOccurrenceDate() { 
+		return this.lastOccurrenceDate;
+	} 
+
+	public void setLastOccurrenceDate(java.util.Date lastOccurrenceDate) { 
+		this.lastOccurrenceDate = lastOccurrenceDate;
+	} 
+
+	public DslamPortLog lastOccurrenceDate(java.util.Date lastOccurrenceDate) { 
+		this.lastOccurrenceDate = lastOccurrenceDate;
+		return this;
+	} 
+
+	public java.util.Date getDate() { 
+		return this.date;
+	} 
+
+	public void setDate(java.util.Date date) { 
+		this.date = date;
+	} 
+
+	public DslamPortLog date(java.util.Date date) { 
+		this.date = date;
+		return this;
+	} 
+
+	public java.lang.String getMessage() { 
+		return this.message;
+	} 
+
+	public void setMessage(java.lang.String message) { 
+		this.message = message;
+	} 
+
+	public DslamPortLog message(java.lang.String message) { 
+		this.message = message;
+		return this;
+	} 
 
 }

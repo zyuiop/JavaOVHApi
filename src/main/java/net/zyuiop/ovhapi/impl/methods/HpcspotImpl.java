@@ -15,23 +15,21 @@ public class HpcspotImpl implements Hpcspot {
 		this.client = client;
 	}
 
-	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "/serviceInfos";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.hpcspot.Account getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.hpcspot.AccountImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /hpcspot/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hpcspot/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
 
 	public long[] getServiceNameConsumption(java.lang.String serviceName, long hpcspotItemId, java.util.Date hpcspotItemEndDateTo, long orderId, java.lang.String type, java.util.Date hpcspotItemEndDateFrom) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "/consumption";
@@ -56,13 +54,13 @@ public class HpcspotImpl implements Hpcspot {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hpcspot/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hpcspot/$serviceName/consumption/$id
+	* Message : Missing identifier.
+	*/
+
 
 	public java.lang.String[] getHpcspot() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/hpcspot/hpcspot";
@@ -75,7 +73,7 @@ public class HpcspotImpl implements Hpcspot {
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /hpcspot/$serviceName/consumption/$id
+	* Involved method : GET > /hpcspot/$serviceName
 	* Message : Missing identifier.
 	*/
 

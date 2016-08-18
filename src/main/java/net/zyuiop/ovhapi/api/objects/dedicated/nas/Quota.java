@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.dedicated.nas;
  * Partition Quota
  */
 
-public interface Quota { 
+public class Quota { 
 
-	/**
-	 * @return the uid to set quota on
-	 */
-	long getUid(); 
+	private long uid;
+	private long size;
 
-	/**
-	 * @return the size to set in MB
-	 */
-	long getSize(); 
+	public Quota() {
+	}
+
+	public long getUid() { 
+		return this.uid;
+	} 
+
+	public void setUid(long uid) { 
+		this.uid = uid;
+	} 
+
+	public Quota uid(long uid) { 
+		this.uid = uid;
+		return this;
+	} 
+
+	public long getSize() { 
+		return this.size;
+	} 
+
+	public void setSize(long size) { 
+		this.size = size;
+	} 
+
+	public Quota size(long size) { 
+		this.size = size;
+		return this;
+	} 
 
 }

@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.email.exchange;
  * Mailing list members
  */
 
-public interface ExchangeDistributionGroupMember { 
+public class ExchangeDistributionGroupMember { 
 
-	/**
-	 * @return Member account id
-	 */
-	long getMemberContactId(); 
+	private long memberContactId;
+	private java.util.Date creationDate;
+	private long memberAccountId;
+	private long taskPendingId;
+	private java.lang.String memberEmailAddress;
 
-	/**
-	 * @return Creation date
-	 */
-	java.util.Date getCreationDate(); 
+	public ExchangeDistributionGroupMember() {
+	}
 
-	/**
-	 * @return Member account id
-	 */
-	long getMemberAccountId(); 
+	public long getMemberContactId() { 
+		return this.memberContactId;
+	} 
 
-	/**
-	 * @return Pending task id
-	 */
-	long getTaskPendingId(); 
+	public void setMemberContactId(long memberContactId) { 
+		this.memberContactId = memberContactId;
+	} 
 
-	/**
-	 * @return Member account primaryEmailAddress
-	 */
-	java.lang.String getMemberEmailAddress(); 
+	public ExchangeDistributionGroupMember memberContactId(long memberContactId) { 
+		this.memberContactId = memberContactId;
+		return this;
+	} 
+
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
+
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
+
+	public ExchangeDistributionGroupMember creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public long getMemberAccountId() { 
+		return this.memberAccountId;
+	} 
+
+	public void setMemberAccountId(long memberAccountId) { 
+		this.memberAccountId = memberAccountId;
+	} 
+
+	public ExchangeDistributionGroupMember memberAccountId(long memberAccountId) { 
+		this.memberAccountId = memberAccountId;
+		return this;
+	} 
+
+	public long getTaskPendingId() { 
+		return this.taskPendingId;
+	} 
+
+	public void setTaskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+	} 
+
+	public ExchangeDistributionGroupMember taskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+		return this;
+	} 
+
+	public java.lang.String getMemberEmailAddress() { 
+		return this.memberEmailAddress;
+	} 
+
+	public void setMemberEmailAddress(java.lang.String memberEmailAddress) { 
+		this.memberEmailAddress = memberEmailAddress;
+	} 
+
+	public ExchangeDistributionGroupMember memberEmailAddress(java.lang.String memberEmailAddress) { 
+		this.memberEmailAddress = memberEmailAddress;
+		return this;
+	} 
 
 }

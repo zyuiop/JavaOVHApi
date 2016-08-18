@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.agreements;
  * Contract of service
  */
 
-public interface Contract { 
+public class Contract { 
 
-	/**
-	 * @return Date the contract was created on
-	 */
-	java.util.Date getDate(); 
+	private java.util.Date date;
+	private java.lang.String text;
+	private java.lang.String pdf;
+	private java.lang.String name;
+	private boolean active;
 
-	/**
-	 * @return Full text of the contract
-	 */
-	java.lang.String getText(); 
+	public Contract() {
+	}
 
-	/**
-	 * @return URL you can download the contract at
-	 */
-	java.lang.String getPdf(); 
+	public java.util.Date getDate() { 
+		return this.date;
+	} 
 
-	/**
-	 * @return Name of of the contract
-	 */
-	java.lang.String getName(); 
+	public void setDate(java.util.Date date) { 
+		this.date = date;
+	} 
 
-	/**
-	 * @return Is this contract currently active or not ?
-	 */
-	boolean getActive(); 
+	public Contract date(java.util.Date date) { 
+		this.date = date;
+		return this;
+	} 
+
+	public java.lang.String getText() { 
+		return this.text;
+	} 
+
+	public void setText(java.lang.String text) { 
+		this.text = text;
+	} 
+
+	public Contract text(java.lang.String text) { 
+		this.text = text;
+		return this;
+	} 
+
+	public java.lang.String getPdf() { 
+		return this.pdf;
+	} 
+
+	public void setPdf(java.lang.String pdf) { 
+		this.pdf = pdf;
+	} 
+
+	public Contract pdf(java.lang.String pdf) { 
+		this.pdf = pdf;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Contract name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public boolean getActive() { 
+		return this.active;
+	} 
+
+	public void setActive(boolean active) { 
+		this.active = active;
+	} 
+
+	public Contract active(boolean active) { 
+		this.active = active;
+		return this;
+	} 
 
 }

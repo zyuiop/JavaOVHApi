@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.ip;
  * Backends attached to your IP load balancing
  */
 
-public interface LoadBalancingBackendIp { 
+public class LoadBalancingBackendIp { 
 
-	/**
-	 * @return If the backend has been configured as backup, this field contains the ip of the main backend
-	 */
-	java.lang.String getMainBackendIp(); 
+	private java.lang.String mainBackendIp;
+	private java.lang.String zone;
+	private java.lang.String backend;
+	private long weight;
+	private java.lang.String probe;
 
-	/**
-	 * @return Location where your service is
-	 */
-	java.lang.String getZone(); 
+	public LoadBalancingBackendIp() {
+	}
 
-	/**
-	 * @return IP of your backend
-	 */
-	java.lang.String getBackend(); 
+	public java.lang.String getMainBackendIp() { 
+		return this.mainBackendIp;
+	} 
 
-	/**
-	 * @return Weight of the backend on its zone, must be between 1 and 100, default is 8
-	 */
-	long getWeight(); 
+	public void setMainBackendIp(java.lang.String mainBackendIp) { 
+		this.mainBackendIp = mainBackendIp;
+	} 
 
-	/**
-	 * @return Probe used for your backend
-	 */
-	java.lang.String getProbe(); 
+	public LoadBalancingBackendIp mainBackendIp(java.lang.String mainBackendIp) { 
+		this.mainBackendIp = mainBackendIp;
+		return this;
+	} 
+
+	public java.lang.String getZone() { 
+		return this.zone;
+	} 
+
+	public void setZone(java.lang.String zone) { 
+		this.zone = zone;
+	} 
+
+	public LoadBalancingBackendIp zone(java.lang.String zone) { 
+		this.zone = zone;
+		return this;
+	} 
+
+	public java.lang.String getBackend() { 
+		return this.backend;
+	} 
+
+	public void setBackend(java.lang.String backend) { 
+		this.backend = backend;
+	} 
+
+	public LoadBalancingBackendIp backend(java.lang.String backend) { 
+		this.backend = backend;
+		return this;
+	} 
+
+	public long getWeight() { 
+		return this.weight;
+	} 
+
+	public void setWeight(long weight) { 
+		this.weight = weight;
+	} 
+
+	public LoadBalancingBackendIp weight(long weight) { 
+		this.weight = weight;
+		return this;
+	} 
+
+	public java.lang.String getProbe() { 
+		return this.probe;
+	} 
+
+	public void setProbe(java.lang.String probe) { 
+		this.probe = probe;
+	} 
+
+	public LoadBalancingBackendIp probe(java.lang.String probe) { 
+		this.probe = probe;
+		return this;
+	} 
 
 }

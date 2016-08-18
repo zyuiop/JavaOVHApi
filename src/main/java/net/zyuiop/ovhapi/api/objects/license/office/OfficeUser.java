@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.license.office;
  * Office user
  */
 
-public interface OfficeUser { 
+public class OfficeUser { 
 
-	/**
-	 * @return User's first name
-	 */
-	java.lang.String getFirstName(); 
+	private java.lang.String firstName;
+	private java.lang.String status;
+	private java.lang.String[] licences;
+	private java.lang.String lastName;
+	private java.lang.String activationEmail;
+	private long taskPendingId;
 
-	/**
-	 * @return User state
-	 */
-	java.lang.String getStatus(); 
+	public OfficeUser() {
+	}
 
-	/**
-	 * @return Licenses attributed to the user
-	 */
-	java.lang.String[] getLicences(); 
+	public java.lang.String getFirstName() { 
+		return this.firstName;
+	} 
 
-	/**
-	 * @return User's last name
-	 */
-	java.lang.String getLastName(); 
+	public void setFirstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+	} 
 
-	/**
-	 * @return Email used to activate Microsoft Office
-	 */
-	java.lang.String getActivationEmail(); 
+	public OfficeUser firstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+		return this;
+	} 
 
-	/**
-	 * @return Pending task id
-	 */
-	long getTaskPendingId(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public OfficeUser status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.lang.String[] getLicences() { 
+		return this.licences;
+	} 
+
+	public void setLicences(java.lang.String[] licences) { 
+		this.licences = licences;
+	} 
+
+	public OfficeUser licences(java.lang.String[] licences) { 
+		this.licences = licences;
+		return this;
+	} 
+
+	public java.lang.String getLastName() { 
+		return this.lastName;
+	} 
+
+	public void setLastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+	} 
+
+	public OfficeUser lastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+		return this;
+	} 
+
+	public java.lang.String getActivationEmail() { 
+		return this.activationEmail;
+	} 
+
+	public void setActivationEmail(java.lang.String activationEmail) { 
+		this.activationEmail = activationEmail;
+	} 
+
+	public OfficeUser activationEmail(java.lang.String activationEmail) { 
+		this.activationEmail = activationEmail;
+		return this;
+	} 
+
+	public long getTaskPendingId() { 
+		return this.taskPendingId;
+	} 
+
+	public void setTaskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+	} 
+
+	public OfficeUser taskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+		return this;
+	} 
 
 }

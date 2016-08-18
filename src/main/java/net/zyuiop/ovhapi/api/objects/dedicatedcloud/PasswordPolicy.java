@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.dedicatedcloud;
  * A structure describing the current password policy for your Dedicated Cloud
  */
 
-public interface PasswordPolicy { 
+public class PasswordPolicy { 
 
-	/**
-	 * @return Minimum lenght of the password
-	 */
-	long getMinLength(); 
+	private long minLength;
+	private boolean lowercaseLetterMandatory;
+	private java.lang.String[] deniedChars;
+	private boolean uppercaseLetterMandatory;
+	private boolean digitMandatory;
+	private long maxLength;
+	private boolean specialMandatory;
+	private boolean letterMandatory;
 
-	/**
-	 * @return Whether or not a lowercase letter (a-z) is mandatory in the password
-	 */
-	boolean getLowercaseLetterMandatory(); 
+	public PasswordPolicy() {
+	}
 
-	/**
-	 * @return List of denied characters in the password
-	 */
-	java.lang.String[] getDeniedChars(); 
+	public long getMinLength() { 
+		return this.minLength;
+	} 
 
-	/**
-	 * @return Whether or not an uppercase letter (A-Z) is mandatory in the password
-	 */
-	boolean getUppercaseLetterMandatory(); 
+	public void setMinLength(long minLength) { 
+		this.minLength = minLength;
+	} 
 
-	/**
-	 * @return Whether or not a digit (0-9) is mandatory in the password
-	 */
-	boolean getDigitMandatory(); 
+	public PasswordPolicy minLength(long minLength) { 
+		this.minLength = minLength;
+		return this;
+	} 
 
-	/**
-	 * @return Maximum lenght of the password
-	 */
-	long getMaxLength(); 
+	public boolean getLowercaseLetterMandatory() { 
+		return this.lowercaseLetterMandatory;
+	} 
 
-	/**
-	 * @return Whether or not a special character (\W or _) is mandatory in the password
-	 */
-	boolean getSpecialMandatory(); 
+	public void setLowercaseLetterMandatory(boolean lowercaseLetterMandatory) { 
+		this.lowercaseLetterMandatory = lowercaseLetterMandatory;
+	} 
 
-	/**
-	 * @return Whether or not a letter (a-z or A-Z) is mandatory in the password
-	 */
-	boolean getLetterMandatory(); 
+	public PasswordPolicy lowercaseLetterMandatory(boolean lowercaseLetterMandatory) { 
+		this.lowercaseLetterMandatory = lowercaseLetterMandatory;
+		return this;
+	} 
+
+	public java.lang.String[] getDeniedChars() { 
+		return this.deniedChars;
+	} 
+
+	public void setDeniedChars(java.lang.String[] deniedChars) { 
+		this.deniedChars = deniedChars;
+	} 
+
+	public PasswordPolicy deniedChars(java.lang.String[] deniedChars) { 
+		this.deniedChars = deniedChars;
+		return this;
+	} 
+
+	public boolean getUppercaseLetterMandatory() { 
+		return this.uppercaseLetterMandatory;
+	} 
+
+	public void setUppercaseLetterMandatory(boolean uppercaseLetterMandatory) { 
+		this.uppercaseLetterMandatory = uppercaseLetterMandatory;
+	} 
+
+	public PasswordPolicy uppercaseLetterMandatory(boolean uppercaseLetterMandatory) { 
+		this.uppercaseLetterMandatory = uppercaseLetterMandatory;
+		return this;
+	} 
+
+	public boolean getDigitMandatory() { 
+		return this.digitMandatory;
+	} 
+
+	public void setDigitMandatory(boolean digitMandatory) { 
+		this.digitMandatory = digitMandatory;
+	} 
+
+	public PasswordPolicy digitMandatory(boolean digitMandatory) { 
+		this.digitMandatory = digitMandatory;
+		return this;
+	} 
+
+	public long getMaxLength() { 
+		return this.maxLength;
+	} 
+
+	public void setMaxLength(long maxLength) { 
+		this.maxLength = maxLength;
+	} 
+
+	public PasswordPolicy maxLength(long maxLength) { 
+		this.maxLength = maxLength;
+		return this;
+	} 
+
+	public boolean getSpecialMandatory() { 
+		return this.specialMandatory;
+	} 
+
+	public void setSpecialMandatory(boolean specialMandatory) { 
+		this.specialMandatory = specialMandatory;
+	} 
+
+	public PasswordPolicy specialMandatory(boolean specialMandatory) { 
+		this.specialMandatory = specialMandatory;
+		return this;
+	} 
+
+	public boolean getLetterMandatory() { 
+		return this.letterMandatory;
+	} 
+
+	public void setLetterMandatory(boolean letterMandatory) { 
+		this.letterMandatory = letterMandatory;
+	} 
+
+	public PasswordPolicy letterMandatory(boolean letterMandatory) { 
+		this.letterMandatory = letterMandatory;
+		return this;
+	} 
 
 }

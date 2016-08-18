@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.cloud.instance;
  * InstanceMetricsValue
  */
 
-public interface InstanceMetricsValue { 
+public class InstanceMetricsValue { 
 
-	/**
-	 * @return 
-	 */
-	long getTimestamp(); 
+	private long timestamp;
+	private double value;
 
-	/**
-	 * @return 
-	 */
-	double getValue(); 
+	public InstanceMetricsValue() {
+	}
+
+	public long getTimestamp() { 
+		return this.timestamp;
+	} 
+
+	public void setTimestamp(long timestamp) { 
+		this.timestamp = timestamp;
+	} 
+
+	public InstanceMetricsValue timestamp(long timestamp) { 
+		this.timestamp = timestamp;
+		return this;
+	} 
+
+	public double getValue() { 
+		return this.value;
+	} 
+
+	public void setValue(double value) { 
+		this.value = value;
+	} 
+
+	public InstanceMetricsValue value(double value) { 
+		this.value = value;
+		return this;
+	} 
 
 }

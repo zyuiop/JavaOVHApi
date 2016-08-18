@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Conference service
  */
 
-public interface ConferenceParticipants { 
+public class ConferenceParticipants { 
 
-	/**
-	 * @return The current level of the participant audio transmission
-	 */
-	long getEnergy(); 
+	private long energy;
+	private boolean talking;
+	private boolean speak;
+	private java.lang.String callerNumber;
+	private boolean floor;
+	private boolean hear;
+	private java.lang.String callerName;
+	private long id;
 
-	/**
-	 * @return Whether or not the participant is talking
-	 */
-	boolean getTalking(); 
+	public ConferenceParticipants() {
+	}
 
-	/**
-	 * @return Whether or not the participant can talk in the conference
-	 */
-	boolean getSpeak(); 
+	public long getEnergy() { 
+		return this.energy;
+	} 
 
-	/**
-	 * @return The caller number of the participant
-	 */
-	java.lang.String getCallerNumber(); 
+	public void setEnergy(long energy) { 
+		this.energy = energy;
+	} 
 
-	/**
-	 * @return Whether or not the participant is active in the room
-	 */
-	boolean getFloor(); 
+	public ConferenceParticipants energy(long energy) { 
+		this.energy = energy;
+		return this;
+	} 
 
-	/**
-	 * @return Whether or not the participant can hear the conference
-	 */
-	boolean getHear(); 
+	public boolean getTalking() { 
+		return this.talking;
+	} 
 
-	/**
-	 * @return The caller name of the participant
-	 */
-	java.lang.String getCallerName(); 
+	public void setTalking(boolean talking) { 
+		this.talking = talking;
+	} 
 
-	/**
-	 * @return The id of the participant
-	 */
-	long getId(); 
+	public ConferenceParticipants talking(boolean talking) { 
+		this.talking = talking;
+		return this;
+	} 
+
+	public boolean getSpeak() { 
+		return this.speak;
+	} 
+
+	public void setSpeak(boolean speak) { 
+		this.speak = speak;
+	} 
+
+	public ConferenceParticipants speak(boolean speak) { 
+		this.speak = speak;
+		return this;
+	} 
+
+	public java.lang.String getCallerNumber() { 
+		return this.callerNumber;
+	} 
+
+	public void setCallerNumber(java.lang.String callerNumber) { 
+		this.callerNumber = callerNumber;
+	} 
+
+	public ConferenceParticipants callerNumber(java.lang.String callerNumber) { 
+		this.callerNumber = callerNumber;
+		return this;
+	} 
+
+	public boolean getFloor() { 
+		return this.floor;
+	} 
+
+	public void setFloor(boolean floor) { 
+		this.floor = floor;
+	} 
+
+	public ConferenceParticipants floor(boolean floor) { 
+		this.floor = floor;
+		return this;
+	} 
+
+	public boolean getHear() { 
+		return this.hear;
+	} 
+
+	public void setHear(boolean hear) { 
+		this.hear = hear;
+	} 
+
+	public ConferenceParticipants hear(boolean hear) { 
+		this.hear = hear;
+		return this;
+	} 
+
+	public java.lang.String getCallerName() { 
+		return this.callerName;
+	} 
+
+	public void setCallerName(java.lang.String callerName) { 
+		this.callerName = callerName;
+	} 
+
+	public ConferenceParticipants callerName(java.lang.String callerName) { 
+		this.callerName = callerName;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public ConferenceParticipants id(long id) { 
+		this.id = id;
+		return this;
+	} 
 
 }

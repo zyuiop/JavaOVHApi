@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.xdsl.eligibility;
  * Represents a time slot for a meeting
  */
 
-public interface MeetingSlot { 
+public class MeetingSlot { 
 
-	/**
-	 * @return An opaque string that represents an intervention unit
-	 */
-	java.lang.String getUiCode(); 
+	private java.lang.String uiCode;
+	private java.util.Date endDate;
+	private java.util.Date startDate;
 
-	/**
-	 * @return The end of the time slot
-	 */
-	java.util.Date getEndDate(); 
+	public MeetingSlot() {
+	}
 
-	/**
-	 * @return The beginning of the time slot
-	 */
-	java.util.Date getStartDate(); 
+	public java.lang.String getUiCode() { 
+		return this.uiCode;
+	} 
+
+	public void setUiCode(java.lang.String uiCode) { 
+		this.uiCode = uiCode;
+	} 
+
+	public MeetingSlot uiCode(java.lang.String uiCode) { 
+		this.uiCode = uiCode;
+		return this;
+	} 
+
+	public java.util.Date getEndDate() { 
+		return this.endDate;
+	} 
+
+	public void setEndDate(java.util.Date endDate) { 
+		this.endDate = endDate;
+	} 
+
+	public MeetingSlot endDate(java.util.Date endDate) { 
+		this.endDate = endDate;
+		return this;
+	} 
+
+	public java.util.Date getStartDate() { 
+		return this.startDate;
+	} 
+
+	public void setStartDate(java.util.Date startDate) { 
+		this.startDate = startDate;
+	} 
+
+	public MeetingSlot startDate(java.util.Date startDate) { 
+		this.startDate = startDate;
+		return this;
+	} 
 
 }

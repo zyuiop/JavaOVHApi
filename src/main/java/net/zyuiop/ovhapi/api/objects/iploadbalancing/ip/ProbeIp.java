@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.iploadbalancing.ip;
  * ProbeIp mapping
  */
 
-public interface ProbeIp { 
+public class ProbeIp { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getZone(); 
+	private java.lang.String zone;
+	private java.lang.String[] ip;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String[] getIp(); 
+	public ProbeIp() {
+	}
+
+	public java.lang.String getZone() { 
+		return this.zone;
+	} 
+
+	public void setZone(java.lang.String zone) { 
+		this.zone = zone;
+	} 
+
+	public ProbeIp zone(java.lang.String zone) { 
+		this.zone = zone;
+		return this;
+	} 
+
+	public java.lang.String[] getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String[] ip) { 
+		this.ip = ip;
+	} 
+
+	public ProbeIp ip(java.lang.String[] ip) { 
+		this.ip = ip;
+		return this;
+	} 
 
 }

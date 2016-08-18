@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.spare.xdsl;
  * Spare properties
  */
 
-public interface XdslSpare { 
+public class XdslSpare { 
 
-	/**
-	 * @return Mac address
-	 */
-	java.lang.String getMacAddress(); 
+	private java.lang.String macAddress;
+	private java.lang.String brand;
 
-	/**
-	 * @return Modem brand model
-	 */
-	java.lang.String getBrand(); 
+	public XdslSpare() {
+	}
+
+	public java.lang.String getMacAddress() { 
+		return this.macAddress;
+	} 
+
+	public void setMacAddress(java.lang.String macAddress) { 
+		this.macAddress = macAddress;
+	} 
+
+	public XdslSpare macAddress(java.lang.String macAddress) { 
+		this.macAddress = macAddress;
+		return this;
+	} 
+
+	public java.lang.String getBrand() { 
+		return this.brand;
+	} 
+
+	public void setBrand(java.lang.String brand) { 
+		this.brand = brand;
+	} 
+
+	public XdslSpare brand(java.lang.String brand) { 
+		this.brand = brand;
+		return this;
+	} 
 
 }

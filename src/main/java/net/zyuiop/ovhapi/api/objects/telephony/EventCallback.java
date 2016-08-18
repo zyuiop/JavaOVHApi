@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Callback url for each event
  */
 
-public interface EventCallback { 
+public class EventCallback { 
 
-	/**
-	 * @return Url called for each event
-	 */
-	java.lang.String getUrl(); 
+	private java.lang.String url;
+	private java.lang.String emailError;
 
-	/**
-	 * @return Email notification address in case of url calling failure
-	 */
-	java.lang.String getEmailError(); 
+	public EventCallback() {
+	}
+
+	public java.lang.String getUrl() { 
+		return this.url;
+	} 
+
+	public void setUrl(java.lang.String url) { 
+		this.url = url;
+	} 
+
+	public EventCallback url(java.lang.String url) { 
+		this.url = url;
+		return this;
+	} 
+
+	public java.lang.String getEmailError() { 
+		return this.emailError;
+	} 
+
+	public void setEmailError(java.lang.String emailError) { 
+		this.emailError = emailError;
+	} 
+
+	public EventCallback emailError(java.lang.String emailError) { 
+		this.emailError = emailError;
+		return this;
+	} 
 
 }

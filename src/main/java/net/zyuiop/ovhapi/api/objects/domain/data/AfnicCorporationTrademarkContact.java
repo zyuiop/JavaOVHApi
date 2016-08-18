@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.domain.data;
  * Representation of an Inpi additional information for a corporation
  */
 
-public interface AfnicCorporationTrademarkContact { 
+public class AfnicCorporationTrademarkContact { 
 
-	/**
-	 * @return Contact ID related to the Inpi additional information
-	 */
-	long getContactId(); 
+	private long contactId;
+	private java.lang.String inpiTrademarkOwner;
+	private long id;
+	private java.lang.String inpiNumber;
 
-	/**
-	 * @return Owner of the trademark
-	 */
-	java.lang.String getInpiTrademarkOwner(); 
+	public AfnicCorporationTrademarkContact() {
+	}
 
-	/**
-	 * @return Corporation Inpi additional information ID
-	 */
-	long getId(); 
+	public long getContactId() { 
+		return this.contactId;
+	} 
 
-	/**
-	 * @return Number of the Inpi declaration
-	 */
-	java.lang.String getInpiNumber(); 
+	public void setContactId(long contactId) { 
+		this.contactId = contactId;
+	} 
+
+	public AfnicCorporationTrademarkContact contactId(long contactId) { 
+		this.contactId = contactId;
+		return this;
+	} 
+
+	public java.lang.String getInpiTrademarkOwner() { 
+		return this.inpiTrademarkOwner;
+	} 
+
+	public void setInpiTrademarkOwner(java.lang.String inpiTrademarkOwner) { 
+		this.inpiTrademarkOwner = inpiTrademarkOwner;
+	} 
+
+	public AfnicCorporationTrademarkContact inpiTrademarkOwner(java.lang.String inpiTrademarkOwner) { 
+		this.inpiTrademarkOwner = inpiTrademarkOwner;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public AfnicCorporationTrademarkContact id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getInpiNumber() { 
+		return this.inpiNumber;
+	} 
+
+	public void setInpiNumber(java.lang.String inpiNumber) { 
+		this.inpiNumber = inpiNumber;
+	} 
+
+	public AfnicCorporationTrademarkContact inpiNumber(java.lang.String inpiNumber) { 
+		this.inpiNumber = inpiNumber;
+		return this;
+	} 
 
 }

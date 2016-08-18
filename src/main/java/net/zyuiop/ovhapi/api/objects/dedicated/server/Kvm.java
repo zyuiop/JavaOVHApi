@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * Physical KVM
  */
 
-public interface Kvm { 
+public class Kvm { 
 
-	/**
-	 * @return KVM access ip
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private java.lang.String name;
+	private java.util.Date expiration;
 
-	/**
-	 * @return KVM hostname
-	 */
-	java.lang.String getName(); 
+	public Kvm() {
+	}
 
-	/**
-	 * @return KVM expiration date
-	 */
-	java.util.Date getExpiration(); 
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public Kvm ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Kvm name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.util.Date getExpiration() { 
+		return this.expiration;
+	} 
+
+	public void setExpiration(java.util.Date expiration) { 
+		this.expiration = expiration;
+	} 
+
+	public Kvm expiration(java.util.Date expiration) { 
+		this.expiration = expiration;
+		return this;
+	} 
 
 }

@@ -18,68 +18,18 @@ public class OverTheBoxImpl implements OverTheBox {
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /overTheBox/$serviceName/tasks/$taskId
+	* Involved method : GET > /overTheBox/$serviceName
 	* Message : Missing identifier.
 	*/
 
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /overTheBox/$serviceName/device
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String[] getServiceNameRemoteAccesses(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/remoteAccesses";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
+	public void deleteServiceName(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/serviceInfos";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /overTheBox/$serviceName
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String[] getAvailableOffers() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/availableOffers";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /overTheBox/$serviceName/remoteAccesses/$remoteAccessId
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String[] getServiceNameAvailableReleaseChannels(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/availableReleaseChannels";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public void postServiceNameRemoteAccessesRemoteAccessIdAuthorize(java.lang.String serviceName, java.lang.String remoteAccessId) throws java.io.IOException {
@@ -91,70 +41,10 @@ public class OverTheBoxImpl implements OverTheBox {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /overTheBox/$serviceName/device/availableActions
-	* Message : Missing identifier.
-	*/
-
-
-	public void deleteServiceNameRemoteAccessesRemoteAccessId(java.lang.String serviceName, java.lang.String remoteAccessId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/remoteAccesses/" + remoteAccessId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deleteServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postServiceNameLinkDevice(java.lang.String deviceId, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/linkDevice";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("deviceId", deviceId);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /overTheBox/$serviceName/device/actions
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /overTheBox/$serviceName/device/actions/$actionId
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /overTheBox/devices
+	* Involved method : GET > /overTheBox/$serviceName/remoteAccesses/$remoteAccessId
 	* Message : Missing identifier.
 	*/
 
@@ -162,6 +52,32 @@ public class OverTheBoxImpl implements OverTheBox {
 	public java.lang.String[] getOverTheBox() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/overTheBox/overTheBox";
 		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public java.lang.String[] getServiceNameRemoteAccesses(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/remoteAccesses";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /overTheBox/$serviceName/device
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameAvailableReleaseChannels(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/availableReleaseChannels";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
@@ -187,19 +103,50 @@ public class OverTheBoxImpl implements OverTheBox {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public void postServiceNameCancelResiliation(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/cancelResiliation";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /overTheBox/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /overTheBox/$serviceName/tasks/$taskId
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getAvailableOffers() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/availableOffers";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /overTheBox/$serviceName
+	* Involved method : POST > /overTheBox/$serviceName/remoteAccesses
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /overTheBox/$serviceName/remoteAccesses
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /overTheBox/$serviceName/device/actions/$actionId
 	* Message : Missing identifier.
 	*/
 
@@ -227,7 +174,25 @@ public class OverTheBoxImpl implements OverTheBox {
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /overTheBox/$serviceName/remoteAccesses
+	* Involved method : GET > /overTheBox/$serviceName/device/availableActions
+	* Message : Missing identifier.
+	*/
+
+
+	public void postServiceNameLinkDevice(java.lang.String deviceId, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/linkDevice";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("deviceId", deviceId);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /overTheBox/devices
 	* Message : Missing identifier.
 	*/
 
@@ -235,9 +200,43 @@ public class OverTheBoxImpl implements OverTheBox {
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /overTheBox/$serviceName/remoteAccesses
+	* Involved method : PUT > /overTheBox/$serviceName/serviceInfos
 	* Message : Missing identifier.
 	*/
 
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /overTheBox/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+	public void postServiceNameCancelResiliation(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/cancelResiliation";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /overTheBox/$serviceName/device/actions
+	* Message : Missing identifier.
+	*/
+
+
+	public void deleteServiceNameRemoteAccessesRemoteAccessId(java.lang.String serviceName, java.lang.String remoteAccessId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/overTheBox/" + serviceName + "/remoteAccesses/" + remoteAccessId + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
 
 }

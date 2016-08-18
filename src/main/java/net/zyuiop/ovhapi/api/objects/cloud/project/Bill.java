@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.cloud.project;
  * Project bill
  */
 
-public interface Bill { 
+public class Bill { 
 
-	/**
-	 * @return Bill type
-	 */
-	java.lang.String getType(); 
+	private java.lang.String type;
+	private java.lang.String billId;
 
-	/**
-	 * @return Bill id
-	 */
-	java.lang.String getBillId(); 
+	public Bill() {
+	}
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Bill type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public java.lang.String getBillId() { 
+		return this.billId;
+	} 
+
+	public void setBillId(java.lang.String billId) { 
+		this.billId = billId;
+	} 
+
+	public Bill billId(java.lang.String billId) { 
+		this.billId = billId;
+		return this;
+	} 
 
 }

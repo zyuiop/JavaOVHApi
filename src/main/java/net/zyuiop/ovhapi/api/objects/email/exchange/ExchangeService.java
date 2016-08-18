@@ -4,91 +4,248 @@ package net.zyuiop.ovhapi.api.objects.email.exchange;
  * Exchange service
  */
 
-public interface ExchangeService { 
+public class ExchangeService { 
 
-	/**
-	 * @return Update date
-	 */
-	java.util.Date getLastUpdateDate(); 
+	private java.util.Date lastUpdateDate;
+	private java.lang.String offer;
+	private java.lang.String hostname;
+	private java.lang.String state;
+	private long maxReceiveSize;
+	private java.lang.String domain;
+	private long minPasswordLength;
+	private boolean complexityEnabled;
+	private long lockoutDuration;
+	private java.lang.String displayName;
+	private long maxSendSize;
+	private long lockoutObservationWindow;
+	private long lockoutThreshold;
+	private long minPasswordAge;
+	private long maxPasswordAge;
+	private long taskPendingId;
+	private java.util.Date sslExpirationDate;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getOffer(); 
+	public ExchangeService() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getHostname(); 
+	public java.util.Date getLastUpdateDate() { 
+		return this.lastUpdateDate;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getState(); 
+	public void setLastUpdateDate(java.util.Date lastUpdateDate) { 
+		this.lastUpdateDate = lastUpdateDate;
+	} 
 
-	/**
-	 * @return Maximum message size that You can receive in MB
-	 */
-	long getMaxReceiveSize(); 
+	public ExchangeService lastUpdateDate(java.util.Date lastUpdateDate) { 
+		this.lastUpdateDate = lastUpdateDate;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getDomain(); 
+	public java.lang.String getOffer() { 
+		return this.offer;
+	} 
 
-	/**
-	 * @return minimum number of characters password must contain
-	 */
-	long getMinPasswordLength(); 
+	public void setOffer(java.lang.String offer) { 
+		this.offer = offer;
+	} 
 
-	/**
-	 * @return enable policy for strong and secure passwords
-	 */
-	boolean getComplexityEnabled(); 
+	public ExchangeService offer(java.lang.String offer) { 
+		this.offer = offer;
+		return this;
+	} 
 
-	/**
-	 * @return number of minutes account will remain locked if it occurs
-	 */
-	long getLockoutDuration(); 
+	public java.lang.String getHostname() { 
+		return this.hostname;
+	} 
 
-	/**
-	 * @return service displayName
-	 */
-	java.lang.String getDisplayName(); 
+	public void setHostname(java.lang.String hostname) { 
+		this.hostname = hostname;
+	} 
 
-	/**
-	 * @return Maximum message size that You can send in MB
-	 */
-	long getMaxSendSize(); 
+	public ExchangeService hostname(java.lang.String hostname) { 
+		this.hostname = hostname;
+		return this;
+	} 
 
-	/**
-	 * @return number of minutes that must elapse after a failed logon to reset lockout trigger
-	 */
-	long getLockoutObservationWindow(); 
+	public java.lang.String getState() { 
+		return this.state;
+	} 
 
-	/**
-	 * @return number of attempts before account to be locked
-	 */
-	long getLockoutThreshold(); 
+	public void setState(java.lang.String state) { 
+		this.state = state;
+	} 
 
-	/**
-	 * @return minimum number of days before able to change account's password
-	 */
-	long getMinPasswordAge(); 
+	public ExchangeService state(java.lang.String state) { 
+		this.state = state;
+		return this;
+	} 
 
-	/**
-	 * @return maximum number of days that account's password is valid before expiration
-	 */
-	long getMaxPasswordAge(); 
+	public long getMaxReceiveSize() { 
+		return this.maxReceiveSize;
+	} 
 
-	/**
-	 * @return Task pending id
-	 */
-	long getTaskPendingId(); 
+	public void setMaxReceiveSize(long maxReceiveSize) { 
+		this.maxReceiveSize = maxReceiveSize;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.util.Date getSslExpirationDate(); 
+	public ExchangeService maxReceiveSize(long maxReceiveSize) { 
+		this.maxReceiveSize = maxReceiveSize;
+		return this;
+	} 
+
+	public java.lang.String getDomain() { 
+		return this.domain;
+	} 
+
+	public void setDomain(java.lang.String domain) { 
+		this.domain = domain;
+	} 
+
+	public ExchangeService domain(java.lang.String domain) { 
+		this.domain = domain;
+		return this;
+	} 
+
+	public long getMinPasswordLength() { 
+		return this.minPasswordLength;
+	} 
+
+	public void setMinPasswordLength(long minPasswordLength) { 
+		this.minPasswordLength = minPasswordLength;
+	} 
+
+	public ExchangeService minPasswordLength(long minPasswordLength) { 
+		this.minPasswordLength = minPasswordLength;
+		return this;
+	} 
+
+	public boolean getComplexityEnabled() { 
+		return this.complexityEnabled;
+	} 
+
+	public void setComplexityEnabled(boolean complexityEnabled) { 
+		this.complexityEnabled = complexityEnabled;
+	} 
+
+	public ExchangeService complexityEnabled(boolean complexityEnabled) { 
+		this.complexityEnabled = complexityEnabled;
+		return this;
+	} 
+
+	public long getLockoutDuration() { 
+		return this.lockoutDuration;
+	} 
+
+	public void setLockoutDuration(long lockoutDuration) { 
+		this.lockoutDuration = lockoutDuration;
+	} 
+
+	public ExchangeService lockoutDuration(long lockoutDuration) { 
+		this.lockoutDuration = lockoutDuration;
+		return this;
+	} 
+
+	public java.lang.String getDisplayName() { 
+		return this.displayName;
+	} 
+
+	public void setDisplayName(java.lang.String displayName) { 
+		this.displayName = displayName;
+	} 
+
+	public ExchangeService displayName(java.lang.String displayName) { 
+		this.displayName = displayName;
+		return this;
+	} 
+
+	public long getMaxSendSize() { 
+		return this.maxSendSize;
+	} 
+
+	public void setMaxSendSize(long maxSendSize) { 
+		this.maxSendSize = maxSendSize;
+	} 
+
+	public ExchangeService maxSendSize(long maxSendSize) { 
+		this.maxSendSize = maxSendSize;
+		return this;
+	} 
+
+	public long getLockoutObservationWindow() { 
+		return this.lockoutObservationWindow;
+	} 
+
+	public void setLockoutObservationWindow(long lockoutObservationWindow) { 
+		this.lockoutObservationWindow = lockoutObservationWindow;
+	} 
+
+	public ExchangeService lockoutObservationWindow(long lockoutObservationWindow) { 
+		this.lockoutObservationWindow = lockoutObservationWindow;
+		return this;
+	} 
+
+	public long getLockoutThreshold() { 
+		return this.lockoutThreshold;
+	} 
+
+	public void setLockoutThreshold(long lockoutThreshold) { 
+		this.lockoutThreshold = lockoutThreshold;
+	} 
+
+	public ExchangeService lockoutThreshold(long lockoutThreshold) { 
+		this.lockoutThreshold = lockoutThreshold;
+		return this;
+	} 
+
+	public long getMinPasswordAge() { 
+		return this.minPasswordAge;
+	} 
+
+	public void setMinPasswordAge(long minPasswordAge) { 
+		this.minPasswordAge = minPasswordAge;
+	} 
+
+	public ExchangeService minPasswordAge(long minPasswordAge) { 
+		this.minPasswordAge = minPasswordAge;
+		return this;
+	} 
+
+	public long getMaxPasswordAge() { 
+		return this.maxPasswordAge;
+	} 
+
+	public void setMaxPasswordAge(long maxPasswordAge) { 
+		this.maxPasswordAge = maxPasswordAge;
+	} 
+
+	public ExchangeService maxPasswordAge(long maxPasswordAge) { 
+		this.maxPasswordAge = maxPasswordAge;
+		return this;
+	} 
+
+	public long getTaskPendingId() { 
+		return this.taskPendingId;
+	} 
+
+	public void setTaskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+	} 
+
+	public ExchangeService taskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+		return this;
+	} 
+
+	public java.util.Date getSslExpirationDate() { 
+		return this.sslExpirationDate;
+	} 
+
+	public void setSslExpirationDate(java.util.Date sslExpirationDate) { 
+		this.sslExpirationDate = sslExpirationDate;
+	} 
+
+	public ExchangeService sslExpirationDate(java.util.Date sslExpirationDate) { 
+		this.sslExpirationDate = sslExpirationDate;
+		return this;
+	} 
 
 }

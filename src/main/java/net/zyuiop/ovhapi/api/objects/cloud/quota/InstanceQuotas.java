@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.cloud.quota;
  * InstanceQuotas
  */
 
-public interface InstanceQuotas { 
+public class InstanceQuotas { 
 
-	/**
-	 * @return Maximum total cores allowed in your project
-	 */
-	long getMaxInstances(); 
+	private long maxInstances;
+	private long maxCores;
+	private long maxRam;
+	private long usedInstances;
+	private long usedRAM;
+	private long usedCores;
 
-	/**
-	 * @return Maximum total cores allowed in your project
-	 */
-	long getMaxCores(); 
+	public InstanceQuotas() {
+	}
 
-	/**
-	 * @return 
-	 */
-	long getMaxRam(); 
+	public long getMaxInstances() { 
+		return this.maxInstances;
+	} 
 
-	/**
-	 * @return Current used instances
-	 */
-	long getUsedInstances(); 
+	public void setMaxInstances(long maxInstances) { 
+		this.maxInstances = maxInstances;
+	} 
 
-	/**
-	 * @return Current used ram
-	 */
-	long getUsedRAM(); 
+	public InstanceQuotas maxInstances(long maxInstances) { 
+		this.maxInstances = maxInstances;
+		return this;
+	} 
 
-	/**
-	 * @return Current used cores number
-	 */
-	long getUsedCores(); 
+	public long getMaxCores() { 
+		return this.maxCores;
+	} 
+
+	public void setMaxCores(long maxCores) { 
+		this.maxCores = maxCores;
+	} 
+
+	public InstanceQuotas maxCores(long maxCores) { 
+		this.maxCores = maxCores;
+		return this;
+	} 
+
+	public long getMaxRam() { 
+		return this.maxRam;
+	} 
+
+	public void setMaxRam(long maxRam) { 
+		this.maxRam = maxRam;
+	} 
+
+	public InstanceQuotas maxRam(long maxRam) { 
+		this.maxRam = maxRam;
+		return this;
+	} 
+
+	public long getUsedInstances() { 
+		return this.usedInstances;
+	} 
+
+	public void setUsedInstances(long usedInstances) { 
+		this.usedInstances = usedInstances;
+	} 
+
+	public InstanceQuotas usedInstances(long usedInstances) { 
+		this.usedInstances = usedInstances;
+		return this;
+	} 
+
+	public long getUsedRAM() { 
+		return this.usedRAM;
+	} 
+
+	public void setUsedRAM(long usedRAM) { 
+		this.usedRAM = usedRAM;
+	} 
+
+	public InstanceQuotas usedRAM(long usedRAM) { 
+		this.usedRAM = usedRAM;
+		return this;
+	} 
+
+	public long getUsedCores() { 
+		return this.usedCores;
+	} 
+
+	public void setUsedCores(long usedCores) { 
+		this.usedCores = usedCores;
+	} 
+
+	public InstanceQuotas usedCores(long usedCores) { 
+		this.usedCores = usedCores;
+		return this;
+	} 
 
 }

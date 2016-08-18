@@ -6,21 +6,6 @@ package net.zyuiop.ovhapi.api.methods.hosting;
 
 public interface PrivateDatabase { 
 
-	/**
-	 * List available configurations for your private database
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your private database
-	*/
-	java.lang.String[] getServiceNameConfigurations(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Get the availables versions for this private database
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your private database
-	*/
-	java.lang.String[] getServiceNameAvailableVersions(java.lang.String serviceName) throws java.io.IOException;
-
-
 
 
 
@@ -43,25 +28,14 @@ public interface PrivateDatabase {
 	*/
 	long[] getServiceNameDatabaseDatabaseNameDump(java.lang.String serviceName, java.lang.String databaseName) throws java.io.IOException;
 
-
-
-
-
-
 	/**
-	 * User allowed to connect on your databases
+	 * Get the availables versions for this private database
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
 	*/
-	java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameAvailableVersions(java.lang.String serviceName) throws java.io.IOException;
 
-	/**
-	 * Alter this object properties
-	 * Facultative parameters ? false
-	 * @param null New object properties
-	 * @param serviceName The internal name of your private database
-	*/
-	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+
 
 	/**
 	 * Databases linked to your private database service
@@ -70,19 +44,22 @@ public interface PrivateDatabase {
 	*/
 	java.lang.String[] getServiceNameDatabase(java.lang.String serviceName) throws java.io.IOException;
 
+
 	/**
-	 * Delete cron
+	 * List available services
+	 * Facultative parameters ? false
+	*/
+	java.lang.String[] getHostingPrivateDatabase() throws java.io.IOException;
+
+
+
+
+	/**
+	 * The configuration for whitelist IP for access to the private database
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
-	 * @param id Cron's id
 	*/
-	java.lang.String deleteServiceNameCronId(java.lang.String serviceName, long id) throws java.io.IOException;
-
-
-
-
-
-
+	java.lang.String[] getServiceNameConfigurationWhitelist(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Dump available for your databases
@@ -106,8 +83,50 @@ public interface PrivateDatabase {
 
 
 
+	/**
+	 * Tasks attached to your private database service
+	 * Facultative parameters ? true
+	 * @param serviceName The internal name of your private database
+	 * @param function Filter the value of function property (=)
+	 * @param status Filter the value of status property (=)
+	*/
+	long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException;
+
+	/**
+	 * Tasks attached to your private database service
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your private database
+	*/
+	long[] getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/**
+	 * Terminate your service
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your private database
+	*/
+	java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException;
+
+
+	/**
+	 * User allowed to connect on your databases
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your private database
+	*/
+	java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -117,6 +136,28 @@ public interface PrivateDatabase {
 	 * @param userName User name used to connect on your databases
 	*/
 	java.lang.String[] getServiceNameUserUserNameGrant(java.lang.String serviceName, java.lang.String userName) throws java.io.IOException;
+
+
+
+	/**
+	 * List available configurations for your private database
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your private database
+	*/
+	java.lang.String[] getServiceNameConfigurations(java.lang.String serviceName) throws java.io.IOException;
+
+
+
+
+
+	/**
+	 * Crons linked to your private database service
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your private database
+	*/
+	long[] getServiceNameCron(java.lang.String serviceName) throws java.io.IOException;
+
+
 
 	/**
 	 * Launch a contact change procedure
@@ -134,65 +175,6 @@ public interface PrivateDatabase {
 	 * @param serviceName The internal name of your private database
 	*/
 	long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * List available services
-	 * Facultative parameters ? false
-	*/
-	java.lang.String[] getHostingPrivateDatabase() throws java.io.IOException;
-
-
-
-
-
-
-
-
-
-
-
-	/**
-	 * Tasks attached to your private database service
-	 * Facultative parameters ? true
-	 * @param serviceName The internal name of your private database
-	 * @param function Filter the value of function property (=)
-	 * @param status Filter the value of status property (=)
-	*/
-	long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException;
-
-	/**
-	 * Tasks attached to your private database service
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your private database
-	*/
-	long[] getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your private database
-	*/
-	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
-
-
-	/**
-	 * Crons linked to your private database service
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your private database
-	*/
-	long[] getServiceNameCron(java.lang.String serviceName) throws java.io.IOException;
-
-
-
-	/**
-	 * The configuration for whitelist IP for access to the private database
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your private database
-	*/
-	java.lang.String[] getServiceNameConfigurationWhitelist(java.lang.String serviceName) throws java.io.IOException;
-
-
-
 
 	/**
 	 * Create new cron
@@ -216,12 +198,17 @@ public interface PrivateDatabase {
 	*/
 	java.lang.String postServiceNameCron(java.lang.String frequency, java.lang.String command, java.lang.String serviceName) throws java.io.IOException;
 
+
+
+
 	/**
-	 * Terminate your service
+	 * Delete cron
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your private database
+	 * @param id Cron's id
 	*/
-	java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String deleteServiceNameCronId(java.lang.String serviceName, long id) throws java.io.IOException;
+
 
 
 }

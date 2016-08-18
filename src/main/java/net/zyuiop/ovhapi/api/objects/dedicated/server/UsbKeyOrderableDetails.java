@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * A structure describing informations about orderable USB keys
  */
 
-public interface UsbKeyOrderableDetails { 
+public class UsbKeyOrderableDetails { 
 
-	/**
-	 * @return Which option is required to order an USB key
-	 */
-	java.lang.String getOptionRequired(); 
+	private java.lang.String optionRequired;
+	private long number;
+	private boolean orderable;
+	private long[] capacity;
 
-	/**
-	 * @return Number of USB keys that can be ordered for this server
-	 */
-	long getNumber(); 
+	public UsbKeyOrderableDetails() {
+	}
 
-	/**
-	 * @return Is USB keys orderable for this server
-	 */
-	boolean getOrderable(); 
+	public java.lang.String getOptionRequired() { 
+		return this.optionRequired;
+	} 
 
-	/**
-	 * @return Orderable USB keys capacity in gigabytes
-	 */
-	long[] getCapacity(); 
+	public void setOptionRequired(java.lang.String optionRequired) { 
+		this.optionRequired = optionRequired;
+	} 
+
+	public UsbKeyOrderableDetails optionRequired(java.lang.String optionRequired) { 
+		this.optionRequired = optionRequired;
+		return this;
+	} 
+
+	public long getNumber() { 
+		return this.number;
+	} 
+
+	public void setNumber(long number) { 
+		this.number = number;
+	} 
+
+	public UsbKeyOrderableDetails number(long number) { 
+		this.number = number;
+		return this;
+	} 
+
+	public boolean getOrderable() { 
+		return this.orderable;
+	} 
+
+	public void setOrderable(boolean orderable) { 
+		this.orderable = orderable;
+	} 
+
+	public UsbKeyOrderableDetails orderable(boolean orderable) { 
+		this.orderable = orderable;
+		return this;
+	} 
+
+	public long[] getCapacity() { 
+		return this.capacity;
+	} 
+
+	public void setCapacity(long[] capacity) { 
+		this.capacity = capacity;
+	} 
+
+	public UsbKeyOrderableDetails capacity(long[] capacity) { 
+		this.capacity = capacity;
+		return this;
+	} 
 
 }

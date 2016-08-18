@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.sms;
  * A structure describing all information about quota informations
  */
 
-public interface Quota { 
+public class Quota { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getQuotaStatus(); 
+	private java.lang.String quotaStatus;
+	private double quotaLeft;
 
-	/**
-	 * @return null
-	 */
-	double getQuotaLeft(); 
+	public Quota() {
+	}
+
+	public java.lang.String getQuotaStatus() { 
+		return this.quotaStatus;
+	} 
+
+	public void setQuotaStatus(java.lang.String quotaStatus) { 
+		this.quotaStatus = quotaStatus;
+	} 
+
+	public Quota quotaStatus(java.lang.String quotaStatus) { 
+		this.quotaStatus = quotaStatus;
+		return this;
+	} 
+
+	public double getQuotaLeft() { 
+		return this.quotaLeft;
+	} 
+
+	public void setQuotaLeft(double quotaLeft) { 
+		this.quotaLeft = quotaLeft;
+	} 
+
+	public Quota quotaLeft(double quotaLeft) { 
+		this.quotaLeft = quotaLeft;
+		return this;
+	} 
 
 }

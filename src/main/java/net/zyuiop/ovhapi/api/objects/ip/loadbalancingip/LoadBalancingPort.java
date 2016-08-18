@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.ip.loadbalancingip;
  * LoadBalancingPort mapping
  */
 
-public interface LoadBalancingPort { 
+public class LoadBalancingPort { 
 
-	/**
-	 * @return null
-	 */
-	long getSrcPort(); 
+	private long srcPort;
+	private long dstPort;
 
-	/**
-	 * @return null
-	 */
-	long getDstPort(); 
+	public LoadBalancingPort() {
+	}
+
+	public long getSrcPort() { 
+		return this.srcPort;
+	} 
+
+	public void setSrcPort(long srcPort) { 
+		this.srcPort = srcPort;
+	} 
+
+	public LoadBalancingPort srcPort(long srcPort) { 
+		this.srcPort = srcPort;
+		return this;
+	} 
+
+	public long getDstPort() { 
+		return this.dstPort;
+	} 
+
+	public void setDstPort(long dstPort) { 
+		this.dstPort = dstPort;
+	} 
+
+	public LoadBalancingPort dstPort(long dstPort) { 
+		this.dstPort = dstPort;
+		return this;
+	} 
 
 }

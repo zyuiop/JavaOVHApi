@@ -4,71 +4,192 @@ package net.zyuiop.ovhapi.api.objects.xdsl;
  * All components of an address
  */
 
-public interface AddressDetail { 
+public class AddressDetail { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getFirstName(); 
+	private java.lang.String firstName;
+	private java.lang.String zipCode;
+	private java.lang.String street;
+	private java.lang.String floor;
+	private java.lang.String residence;
+	private java.lang.String numberStreet;
+	private java.lang.String city;
+	private java.lang.String door;
+	private java.lang.String building;
+	private java.lang.String inseeCode;
+	private java.lang.String lastName;
+	private java.lang.String stairs;
+	private java.lang.String rivoliCode;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getZipCode(); 
+	public AddressDetail() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStreet(); 
+	public java.lang.String getFirstName() { 
+		return this.firstName;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getFloor(); 
+	public void setFirstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getResidence(); 
+	public AddressDetail firstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getNumberStreet(); 
+	public java.lang.String getZipCode() { 
+		return this.zipCode;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getCity(); 
+	public void setZipCode(java.lang.String zipCode) { 
+		this.zipCode = zipCode;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getDoor(); 
+	public AddressDetail zipCode(java.lang.String zipCode) { 
+		this.zipCode = zipCode;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getBuilding(); 
+	public java.lang.String getStreet() { 
+		return this.street;
+	} 
 
-	/**
-	 * @return Identifier of the city
-	 */
-	java.lang.String getInseeCode(); 
+	public void setStreet(java.lang.String street) { 
+		this.street = street;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getLastName(); 
+	public AddressDetail street(java.lang.String street) { 
+		this.street = street;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStairs(); 
+	public java.lang.String getFloor() { 
+		return this.floor;
+	} 
 
-	/**
-	 * @return Identifier of the street
-	 */
-	java.lang.String getRivoliCode(); 
+	public void setFloor(java.lang.String floor) { 
+		this.floor = floor;
+	} 
+
+	public AddressDetail floor(java.lang.String floor) { 
+		this.floor = floor;
+		return this;
+	} 
+
+	public java.lang.String getResidence() { 
+		return this.residence;
+	} 
+
+	public void setResidence(java.lang.String residence) { 
+		this.residence = residence;
+	} 
+
+	public AddressDetail residence(java.lang.String residence) { 
+		this.residence = residence;
+		return this;
+	} 
+
+	public java.lang.String getNumberStreet() { 
+		return this.numberStreet;
+	} 
+
+	public void setNumberStreet(java.lang.String numberStreet) { 
+		this.numberStreet = numberStreet;
+	} 
+
+	public AddressDetail numberStreet(java.lang.String numberStreet) { 
+		this.numberStreet = numberStreet;
+		return this;
+	} 
+
+	public java.lang.String getCity() { 
+		return this.city;
+	} 
+
+	public void setCity(java.lang.String city) { 
+		this.city = city;
+	} 
+
+	public AddressDetail city(java.lang.String city) { 
+		this.city = city;
+		return this;
+	} 
+
+	public java.lang.String getDoor() { 
+		return this.door;
+	} 
+
+	public void setDoor(java.lang.String door) { 
+		this.door = door;
+	} 
+
+	public AddressDetail door(java.lang.String door) { 
+		this.door = door;
+		return this;
+	} 
+
+	public java.lang.String getBuilding() { 
+		return this.building;
+	} 
+
+	public void setBuilding(java.lang.String building) { 
+		this.building = building;
+	} 
+
+	public AddressDetail building(java.lang.String building) { 
+		this.building = building;
+		return this;
+	} 
+
+	public java.lang.String getInseeCode() { 
+		return this.inseeCode;
+	} 
+
+	public void setInseeCode(java.lang.String inseeCode) { 
+		this.inseeCode = inseeCode;
+	} 
+
+	public AddressDetail inseeCode(java.lang.String inseeCode) { 
+		this.inseeCode = inseeCode;
+		return this;
+	} 
+
+	public java.lang.String getLastName() { 
+		return this.lastName;
+	} 
+
+	public void setLastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+	} 
+
+	public AddressDetail lastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+		return this;
+	} 
+
+	public java.lang.String getStairs() { 
+		return this.stairs;
+	} 
+
+	public void setStairs(java.lang.String stairs) { 
+		this.stairs = stairs;
+	} 
+
+	public AddressDetail stairs(java.lang.String stairs) { 
+		this.stairs = stairs;
+		return this;
+	} 
+
+	public java.lang.String getRivoliCode() { 
+		return this.rivoliCode;
+	} 
+
+	public void setRivoliCode(java.lang.String rivoliCode) { 
+		this.rivoliCode = rivoliCode;
+	} 
+
+	public AddressDetail rivoliCode(java.lang.String rivoliCode) { 
+		this.rivoliCode = rivoliCode;
+		return this;
+	} 
 
 }

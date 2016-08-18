@@ -15,61 +15,21 @@ public class RouterImpl implements Router {
 		this.client = client;
 	}
 
-	public net.zyuiop.ovhapi.api.objects.router.PrivateLink getServiceNamePrivateLinkPeerServiceName(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "peerServiceName=" + peerServiceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.PrivateLinkImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.router.Task deleteServiceNamePrivateLinkPeerServiceName(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName/vpn/$id
+	* Message : Missing identifier.
+	*/
 
-	public net.zyuiop.ovhapi.api.objects.router.Vpn getServiceNameVpnId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn/" + id + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.VpnImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.router.Network getServiceNameNetworkIpNet(java.lang.String serviceName, java.lang.String ipNet) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network/" + ipNet + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "ipNet=" + ipNet;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.NetworkImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.router.Task deleteServiceNamePrivateLinkPeerServiceNameRouteNetwork(java.lang.String serviceName, java.lang.String peerServiceName, java.lang.String network) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/route/" + network + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /router/$serviceName/privateLink/$peerServiceName/route/$network
+	* Message : Missing identifier.
+	*/
 
-	public void putServiceNameVpnId(net.zyuiop.ovhapi.api.objects.router.Vpn param0, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
 	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/task";
@@ -91,15 +51,13 @@ public class RouterImpl implements Router {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String[] getServiceNamePrivateLinkPeerServiceNameRoute(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/route";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "peerServiceName=" + peerServiceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /router/$serviceName/privateLink/$peerServiceName
+	* Message : Missing identifier.
+	*/
+
 
 	public long[] getServiceNameVpn(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn";
@@ -110,6 +68,80 @@ public class RouterImpl implements Router {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName/task/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName/privateLink/$peerServiceName/request
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /router/$serviceName/privateLink/$peerServiceName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /router/$serviceName/vpn/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /router/$serviceName/network/$ipNet
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNamePrivateLinkPeerServiceNameRoute(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/route";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "peerServiceName=" + peerServiceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName/privateLink/$peerServiceName/route/$network
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /router/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /router/$serviceName/privateLink/$peerServiceName/route
+	* Message : Missing identifier.
+	*/
+
+
 	public java.lang.String[] getServiceNamePrivateLink(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink";
 		String __data = "?";
@@ -118,6 +150,113 @@ public class RouterImpl implements Router {
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String postServiceNamePrivateLinkPeerServiceNameRequestManage(java.lang.String action, java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/request/manage";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("action", action);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName/privateLink/$peerServiceName
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getRouter() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/router/router";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName/network/$ipNet
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /router/$serviceName/vpn/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /router/$serviceName/vpn/$id/setPsk
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /router/$serviceName/network
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /router/$serviceName/network
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /router/$serviceName/network/$ipNet
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameNetwork(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /router/$serviceName/vpn
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /router/$serviceName/vpn
+	* Message : Missing identifier.
+	*/
+
 
 	public java.lang.String postServiceNamePrivateLink(java.lang.String peerServiceName, java.lang.String name, java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink";
@@ -130,190 +269,12 @@ public class RouterImpl implements Router {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.router.PrivateLinkRequest getServiceNamePrivateLinkPeerServiceNameRequest(java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/request";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "peerServiceName=" + peerServiceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.PrivateLinkRequestImpl.class);
-	}
 
-	public java.lang.String postServiceNamePrivateLinkPeerServiceNameRequestManage(java.lang.String action, java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/request/manage";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("action", action);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /router/$serviceName
+	* Message : Missing identifier.
+	*/
 
-	public void putServiceNameNetworkIpNet(net.zyuiop.ovhapi.api.objects.router.Network param0, java.lang.String serviceName, java.lang.String ipNet) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network/" + ipNet + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Task postServiceNameNetwork(java.lang.String ipNet, java.lang.String description, java.lang.String serviceName, long vlanTag) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ipNet", ipNet);
-		__dataMap.put("description", description);
-		__dataMap.put("vlanTag", vlanTag);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Task postServiceNameNetwork(java.lang.String ipNet, java.lang.String description, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ipNet", ipNet);
-		__dataMap.put("description", description);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Vpn postServiceNameVpn(java.lang.String psk, java.lang.String serverPrivNet, java.lang.String clientPrivNet, java.lang.String serviceName, java.lang.String clientIp) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("psk", psk);
-		__dataMap.put("serverPrivNet", serverPrivNet);
-		__dataMap.put("clientPrivNet", clientPrivNet);
-		__dataMap.put("clientIp", clientIp);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.VpnImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Vpn postServiceNameVpn(java.lang.String psk, java.lang.String serverPrivNet, java.lang.String clientPrivNet, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("psk", psk);
-		__dataMap.put("serverPrivNet", serverPrivNet);
-		__dataMap.put("clientPrivNet", clientPrivNet);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.VpnImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Task postServiceNamePrivateLinkPeerServiceNameRoute(java.lang.String network, java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/route";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("network", network);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.PrivateLinkRoute getServiceNamePrivateLinkPeerServiceNameRouteNetwork(java.lang.String serviceName, java.lang.String peerServiceName, java.lang.String network) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "/route/" + network + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "peerServiceName=" + peerServiceName;
-		__data += "network=" + network;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.PrivateLinkRouteImpl.class);
-	}
-
-	public java.lang.String[] getRouter() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/router";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Router getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.RouterImpl.class);
-	}
-
-	public java.lang.String[] getServiceNameNetwork(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Task deleteServiceNameNetworkIpNet(java.lang.String serviceName, java.lang.String ipNet) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/network/" + ipNet + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Task deleteServiceNameVpnId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Task getServiceNameTaskId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/task/" + id + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/serviceInfos";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
-	}
-
-	public void putServiceNamePrivateLinkPeerServiceName(net.zyuiop.ovhapi.api.objects.router.PrivateLink param0, java.lang.String serviceName, java.lang.String peerServiceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/privateLink/" + peerServiceName + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.router.Task postServiceNameVpnIdSetPsk(java.lang.String psk, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/router/" + serviceName + "/vpn/" + id + "/setPsk";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("psk", psk);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.router.TaskImpl.class);
-	}
 
 }

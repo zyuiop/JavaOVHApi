@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.domain;
  * Glue record
  */
 
-public interface GlueRecord { 
+public class GlueRecord { 
 
-	/**
-	 * @return Ips of the glue record
-	 */
-	java.lang.String[] getIps(); 
+	private java.lang.String[] ips;
+	private java.lang.String host;
 
-	/**
-	 * @return Host of the glue record
-	 */
-	java.lang.String getHost(); 
+	public GlueRecord() {
+	}
+
+	public java.lang.String[] getIps() { 
+		return this.ips;
+	} 
+
+	public void setIps(java.lang.String[] ips) { 
+		this.ips = ips;
+	} 
+
+	public GlueRecord ips(java.lang.String[] ips) { 
+		this.ips = ips;
+		return this;
+	} 
+
+	public java.lang.String getHost() { 
+		return this.host;
+	} 
+
+	public void setHost(java.lang.String host) { 
+		this.host = host;
+	} 
+
+	public GlueRecord host(java.lang.String host) { 
+		this.host = host;
+		return this;
+	} 
 
 }

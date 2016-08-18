@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.sms;
  * Sms reach list
  */
 
-public interface Exception { 
+public class Exception { 
 
-	/**
-	 * @return The abreviated country code.
-	 */
-	java.lang.String getCountrySuffixe(); 
+	private java.lang.String countrySuffixe;
+	private java.lang.String[] messages;
+	private java.lang.String restrictionCode;
+	private java.lang.String operators;
+	private java.lang.String substitution;
 
-	/**
-	 * @return The exception message
-	 */
-	java.lang.String[] getMessages(); 
+	public Exception() {
+	}
 
-	/**
-	 * @return The type of routing restriction imposed by the operator
-	 */
-	java.lang.String getRestrictionCode(); 
+	public java.lang.String getCountrySuffixe() { 
+		return this.countrySuffixe;
+	} 
 
-	/**
-	 * @return The list of operators impacted.
-	 */
-	java.lang.String getOperators(); 
+	public void setCountrySuffixe(java.lang.String countrySuffixe) { 
+		this.countrySuffixe = countrySuffixe;
+	} 
 
-	/**
-	 * @return The substitution sender used to bypass operator filter
-	 */
-	java.lang.String getSubstitution(); 
+	public Exception countrySuffixe(java.lang.String countrySuffixe) { 
+		this.countrySuffixe = countrySuffixe;
+		return this;
+	} 
+
+	public java.lang.String[] getMessages() { 
+		return this.messages;
+	} 
+
+	public void setMessages(java.lang.String[] messages) { 
+		this.messages = messages;
+	} 
+
+	public Exception messages(java.lang.String[] messages) { 
+		this.messages = messages;
+		return this;
+	} 
+
+	public java.lang.String getRestrictionCode() { 
+		return this.restrictionCode;
+	} 
+
+	public void setRestrictionCode(java.lang.String restrictionCode) { 
+		this.restrictionCode = restrictionCode;
+	} 
+
+	public Exception restrictionCode(java.lang.String restrictionCode) { 
+		this.restrictionCode = restrictionCode;
+		return this;
+	} 
+
+	public java.lang.String getOperators() { 
+		return this.operators;
+	} 
+
+	public void setOperators(java.lang.String operators) { 
+		this.operators = operators;
+	} 
+
+	public Exception operators(java.lang.String operators) { 
+		this.operators = operators;
+		return this;
+	} 
+
+	public java.lang.String getSubstitution() { 
+		return this.substitution;
+	} 
+
+	public void setSubstitution(java.lang.String substitution) { 
+		this.substitution = substitution;
+	} 
+
+	public Exception substitution(java.lang.String substitution) { 
+		this.substitution = substitution;
+		return this;
+	} 
 
 }

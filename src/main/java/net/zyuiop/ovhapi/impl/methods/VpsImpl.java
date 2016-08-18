@@ -15,8 +15,42 @@ public class VpsImpl implements Vps {
 		this.client = client;
 	}
 
-	public java.lang.String[] getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/ipCountryAvailable";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/availableUpgrade
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/veeam/restorePoints/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public java.util.Date[] getServiceNameAutomatedBackupRestorePoints(java.lang.String state, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/automatedBackup/restorePoints";
+		String __data = "?";
+		__data += "state=" + state;
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.util.Date[].class);
+	}
+
+	public java.lang.String[] getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/secondaryDnsDomains";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
@@ -24,118 +58,29 @@ public class VpsImpl implements Vps {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameVeeamRestorePointsIdRestore(boolean full, java.lang.String serviceName, long id, boolean changePassword, java.lang.String export) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restorePoints/" + id + "/restore";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("full", full);
-		__dataMap.put("changePassword", changePassword);
-		__dataMap.put("export", export);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameVeeamRestorePointsIdRestore(boolean full, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restorePoints/" + id + "/restore";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("full", full);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/distribution
+	* Message : Missing identifier.
+	*/
 
-	public long[] getServiceNameDistributionSoftware(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/distribution/software";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
+
+	public java.lang.String[] getVps() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/vps";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task deleteServiceNameBackupftpAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/access/" + ipBlock + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
-	}
-
-	public long[] getServiceNameTemplates(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/templates";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /vps/$serviceName/secondaryDnsNameServerAvailable
+	* Involved method : POST > /vps/$serviceName/automatedBackup/detachBackup
 	* Message : Missing identifier.
 	*/
 
-
-	public long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String type, java.lang.String state) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/tasks";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "type=" + type;
-		__data += "state=" + state;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/tasks";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl getServiceNameBackupftpAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/access/" + ipBlock + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "ipBlock=" + ipBlock;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.BackupFtpAclImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameSetPassword(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/setPassword";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /vps/$serviceName/use
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String postServiceNameGetConsoleUrl(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/getConsoleUrl";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
-	}
 
 	public java.lang.String[] getServiceNameIps(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/ips";
@@ -146,36 +91,50 @@ public class VpsImpl implements Vps {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Vnc postServiceNameOpenConsoleAccess(java.lang.String serviceName, java.lang.String protocol) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/openConsoleAccess";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("protocol", protocol);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.VncImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Vnc postServiceNameOpenConsoleAccess(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/openConsoleAccess";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.VncImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
 
-	public java.lang.String[] getServiceNameBackupftpAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/authorizableBlocks";
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/secondaryDnsDomains/$domain
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/disks/$id/monitoring
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/backupftp/access/$ipBlock
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getServiceNameVeeamRestorePoints(java.lang.String serviceName, java.util.Date creationTime) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restorePoints";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
+		__data += "creationTime=" + creationTime;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public long[] getServiceNameDisks(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/disks";
+	public long[] getServiceNameVeeamRestorePoints(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restorePoints";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
@@ -183,143 +142,21 @@ public class VpsImpl implements Vps {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String[] getServiceNameOption(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/option";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Template getServiceNameDistribution(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/distribution";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TemplateImpl.class);
-	}
-
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /vps/$serviceName/secondaryDnsDomains/$domain/dnsServer
+	* Involved method : GET > /vps/$serviceName/use
 	* Message : Missing identifier.
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameBackupftpAccess(java.lang.String ipBlock, boolean nfs, boolean cifs, java.lang.String serviceName, boolean ftp) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/access";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ipBlock", ipBlock);
-		__dataMap.put("nfs", nfs);
-		__dataMap.put("cifs", cifs);
-		__dataMap.put("ftp", ftp);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameBackupftpAccess(java.lang.String ipBlock, boolean nfs, boolean cifs, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/access";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ipBlock", ipBlock);
-		__dataMap.put("nfs", nfs);
-		__dataMap.put("cifs", cifs);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.VPS getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.VPSImpl.class);
-	}
-
 
 	/*
 	* Method creation failed.
-	* Involved method : PUT > /vps/$serviceName/secondaryDnsDomains/$domain
+	* Involved method : GET > /vps/$serviceName/templates/$id
 	* Message : Missing identifier.
 	*/
 
-
-	public net.zyuiop.ovhapi.api.objects.vps.Model[] getServiceNameModels(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/models";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.ModelImpl[].class);
-	}
-
-	public java.lang.String[] getServiceNameBackupftpAccess(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/access";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public void deleteServiceNameIpsIpAddress(java.lang.String serviceName, java.lang.String ipAddress) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/ips/" + ipAddress + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deleteServiceNameOptionOption(java.lang.String serviceName, java.lang.String option) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/option/" + option + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public java.lang.String[] getServiceNameActiveOptions(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/activeOptions";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Task deleteServiceNameVeeamRestoredBackup(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restoredBackup";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-	public void putServiceNameBackupftpAccessIpBlock(net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl param0, java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/access/" + ipBlock + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/changeContact";
@@ -342,52 +179,95 @@ public class VpsImpl implements Vps {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public void putServiceName(net.zyuiop.ovhapi.api.objects.vps.VPS param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.ip.ServiceStatus getServiceNameStatus(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/status";
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /vps/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /vps/$serviceName/secondaryDnsDomains/$domain
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /vps/$serviceName/backupftp/access/$ipBlock
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /vps/$serviceName/disks/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameActiveOptions(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/activeOptions";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.ip.ServiceStatusImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Option getServiceNameOptionOption(java.lang.String serviceName, java.lang.String option) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/option/" + option + "";
+	public java.lang.String[] getServiceNameBackupftpAccess(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/access";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
-		__data += "option=" + option;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.OptionImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public long[] getServiceNameTemplatesIdSoftware(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/templates/" + id + "/software";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Ip getServiceNameIpsIpAddress(java.lang.String serviceName, java.lang.String ipAddress) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/ips/" + ipAddress + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "ipAddress=" + ipAddress;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.IpImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/automatedBackup
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/stop
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/automatedBackup/restore
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/automatedBackup/restore
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /vps/$serviceName/snapshot
+	* Message : Missing identifier.
+	*/
+
 
 	public void postServiceNameSecondaryDnsDomains(java.lang.String domain, java.lang.String serviceName, java.lang.String ip) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/secondaryDnsDomains";
@@ -410,76 +290,30 @@ public class VpsImpl implements Vps {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task deleteServiceNameSnapshot(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/snapshot";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.veeam.RestoredBackup getServiceNameVeeamRestoredBackup(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restoredBackup";
+	public java.lang.String[] getServiceNameOption(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/option";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.veeam.RestoredBackupImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /vps/$serviceName/disks/$id/use
+	* Involved method : POST > /vps/$serviceName/reboot
 	* Message : Missing identifier.
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task getServiceNameTasksId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/tasks/" + id + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Veeam getServiceNameVeeam(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.VeeamImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Model[] getServiceNameAvailableUpgrade(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/availableUpgrade";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.ModelImpl[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameStop(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/stop";
+	public void deleteServiceNameSecondaryDnsDomainsDomain(java.lang.String serviceName, java.lang.String domain) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/secondaryDnsDomains/" + domain + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Datacenter getServiceNameDatacenter(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/datacenter";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.DatacenterImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 
@@ -493,46 +327,112 @@ public class VpsImpl implements Vps {
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /vps/$serviceName/disks/$id/monitoring
+	* Involved method : PUT > /vps/$serviceName/snapshot
 	* Message : Missing identifier.
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameAutomatedBackupRestore(java.lang.String type, java.util.Date restorePoint, java.lang.String serviceName, boolean changePassword) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/automatedBackup/restore";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("type", type);
-		__dataMap.put("restorePoint", restorePoint);
-		__dataMap.put("changePassword", changePassword);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameAutomatedBackupRestore(java.lang.String type, java.util.Date restorePoint, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/automatedBackup/restore";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("type", type);
-		__dataMap.put("restorePoint", restorePoint);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/option/$option
+	* Message : Missing identifier.
+	*/
 
-	public java.util.Date[] getServiceNameAutomatedBackupRestorePoints(java.lang.String state, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/automatedBackup/restorePoints";
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /vps/$serviceName/veeam/restoredBackup
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getServiceNameTemplatesIdSoftware(java.lang.String serviceName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/templates/" + id + "/software";
 		String __data = "?";
-		__data += "state=" + state;
 		__data += "serviceName=" + serviceName;
+		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.util.Date[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String[] getServiceNameSecondaryDnsDomains(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/secondaryDnsDomains";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/disks/$id/use
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String postServiceNameGetConsoleUrl(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/getConsoleUrl";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/veeam/restorePoints/$id/restore
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/veeam/restorePoints/$id/restore
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/status
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/openConsoleAccess
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/openConsoleAccess
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/reinstall
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/reinstall
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameIpCountryAvailable(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/ipCountryAvailable";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
@@ -540,72 +440,11 @@ public class VpsImpl implements Vps {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String[] getVps() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/vps";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Snapshot getServiceNameSnapshot(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/snapshot";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.SnapshotImpl.class);
-	}
-
-	public void putServiceNameSnapshot(net.zyuiop.ovhapi.api.objects.vps.Snapshot param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/snapshot";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameStart(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/start";
+	public void deleteServiceNameIpsIpAddress(java.lang.String serviceName, java.lang.String ipAddress) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/ips/" + ipAddress + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameBackupftpPassword(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/password";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.dedicated.server.TaskImpl.class);
-	}
-
-	public long[] getServiceNameVeeamRestorePoints(java.lang.String serviceName, java.util.Date creationTime) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restorePoints";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "creationTime=" + creationTime;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getServiceNameVeeamRestorePoints(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restorePoints";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public void putServiceNameDisksId(net.zyuiop.ovhapi.api.objects.vps.Disk param0, java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/disks/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
@@ -613,87 +452,27 @@ public class VpsImpl implements Vps {
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /vps/$serviceName/secondaryDnsDomains/$domain
+	* Involved method : GET > /vps/$serviceName/templates/$id/software/$softwareId
 	* Message : Missing identifier.
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.vps.Software getServiceNameDistributionSoftwareSoftwareId(java.lang.String serviceName, long softwareId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/distribution/software/" + softwareId + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "softwareId=" + softwareId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.SoftwareImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Template getServiceNameTemplatesId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/templates/" + id + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TemplateImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.veeam.RestorePoint getServiceNameVeeamRestorePointsId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/veeam/restorePoints/" + id + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.veeam.RestorePointImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameAutomatedBackupDetachBackup(java.util.Date restorePoint, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/automatedBackup/detachBackup";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("restorePoint", restorePoint);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/serviceInfos";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameCreateSnapshot(java.lang.String serviceName, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/createSnapshot";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("description", description);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameCreateSnapshot(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/createSnapshot";
+	public void deleteServiceNameOptionOption(java.lang.String serviceName, java.lang.String option) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/option/" + option + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameSnapshotRevert(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/snapshot/revert";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/veeam/restoredBackup
+	* Message : Missing identifier.
+	*/
+
 
 
 	/*
@@ -703,60 +482,132 @@ public class VpsImpl implements Vps {
 	*/
 
 
-	public void putServiceNameIpsIpAddress(net.zyuiop.ovhapi.api.objects.vps.Ip param0, java.lang.String serviceName, java.lang.String ipAddress) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/ips/" + ipAddress + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameReinstall(long templateId, java.lang.String serviceName, java.lang.String sshKey, java.lang.String language, boolean doNotSendPassword, long[] softwareId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/reinstall";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("templateId", templateId);
-		__dataMap.put("sshKey", sshKey);
-		__dataMap.put("language", language);
-		__dataMap.put("doNotSendPassword", doNotSendPassword);
-		__dataMap.put("softwareId", softwareId);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/distribution/software/$softwareId
+	* Message : Missing identifier.
+	*/
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameReinstall(long templateId, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/reinstall";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("templateId", templateId);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
-	}
 
-	public void deleteServiceNameSecondaryDnsDomainsDomain(java.lang.String serviceName, java.lang.String domain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/secondaryDnsDomains/" + domain + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Task postServiceNameReboot(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/reboot";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/backupftp/access
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/backupftp/access
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getServiceNameTemplates(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/templates";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.TaskImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /vps/$serviceName/automatedBackup
+	* Involved method : POST > /vps/$serviceName/snapshot/revert
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/models
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/tasks/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/snapshot
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /vps/$serviceName/backupftp/access/$ipBlock
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/secondaryDnsDomains/$domain/dnsServer
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/disks/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/setPassword
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameBackupftpAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/backupftp/authorizableBlocks";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/secondaryDnsNameServerAvailable
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/datacenter
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/backupftp/password
 	* Message : Missing identifier.
 	*/
 
@@ -769,25 +620,98 @@ public class VpsImpl implements Vps {
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.vps.Software getServiceNameTemplatesIdSoftwareSoftwareId(java.lang.String serviceName, long id, long softwareId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/templates/" + id + "/software/" + softwareId + "";
+	public long[] getServiceNameDisks(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/disks";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		__data += "softwareId=" + softwareId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.SoftwareImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.vps.Disk getServiceNameDisksId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/disks/" + id + "";
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/start
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/createSnapshot
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /vps/$serviceName/createSnapshot
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /vps/$serviceName/ips/$ipAddress
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getServiceNameDistributionSoftware(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/distribution/software";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.vps.DiskImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
+
+	public long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String type, java.lang.String state) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/tasks";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "type=" + type;
+		__data += "state=" + state;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public long[] getServiceNameTasks(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/vps/" + serviceName + "/tasks";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/veeam
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /vps/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /vps/$serviceName/ips/$ipAddress
+	* Message : Missing identifier.
+	*/
+
 
 }

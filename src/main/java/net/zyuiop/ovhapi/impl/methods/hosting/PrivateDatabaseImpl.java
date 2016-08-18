@@ -15,28 +15,10 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 		this.client = client;
 	}
 
-	public java.lang.String[] getServiceNameConfigurations(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/configurations";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public java.lang.String[] getServiceNameAvailableVersions(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/availableVersions";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/user/$userName/grant/$databaseName/update
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/configuration/whitelist/$ip
 	* Message : Missing identifier.
 	*/
 
@@ -44,7 +26,7 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/database
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/refresh
 	* Message : Missing identifier.
 	*/
 
@@ -52,7 +34,7 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/changeRootPassword
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/configuration/whitelist/$ip/update
 	* Message : Missing identifier.
 	*/
 
@@ -60,15 +42,7 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/configuration/whitelist/$ip
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /hosting/privateDatabase/$serviceName
+	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/database/$databaseName/dump/$id
 	* Message : Missing identifier.
 	*/
 
@@ -95,26 +69,19 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/database/$databaseName
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/cron/$id
-	* Message : Missing identifier.
-	*/
-
+	public java.lang.String[] getServiceNameAvailableVersions(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/availableVersions";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/user/$userName/grant/$databaseName
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/restart
 	* Message : Missing identifier.
 	*/
 
@@ -127,31 +94,6 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 	*/
 
 
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/changeVersion
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/user";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
 	public java.lang.String[] getServiceNameDatabase(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/database";
 		String __data = "?";
@@ -161,43 +103,26 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public java.lang.String deleteServiceNameCronId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/cron/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/database/$databaseName/dumps/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getHostingPrivateDatabase() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/hosting/privateDatabase";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/configuration/whitelist/$ip/update
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/database/$databaseName/dump/$id
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/configuration/whitelist
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/configuration/whitelist
+	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/configuration/whitelist/$ip
 	* Message : Missing identifier.
 	*/
 
@@ -217,6 +142,15 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 	* Message : Missing identifier.
 	*/
 
+
+	public java.lang.String[] getServiceNameConfigurationWhitelist(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/configuration/whitelist";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
 
 	public long[] getServiceNameDatabaseDatabaseNameDumps(java.lang.String serviceName, java.lang.String databaseName, java.util.Date creationDate, java.util.Date deletionDate) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/database/" + databaseName + "/dumps";
@@ -243,7 +177,7 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/configuration/whitelist/$ip
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/import
 	* Message : Missing identifier.
 	*/
 
@@ -251,7 +185,7 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/database/$databaseName/dumps/$id
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/import
 	* Message : Missing identifier.
 	*/
 
@@ -259,126 +193,7 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/databaseWizard
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/dumps/$id/restore
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/configuration/mysql
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/stop
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/user/$userName
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/dump/$id/restore
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String[] getServiceNameUserUserNameGrant(java.lang.String serviceName, java.lang.String userName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/user/" + userName + "/grant";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "userName=" + userName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/changeContact";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("contactAdmin", contactAdmin);
-		__dataMap.put("contactTech", contactTech);
-		__dataMap.put("contactBilling", contactBilling);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/changeContact";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public java.lang.String[] getHostingPrivateDatabase() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/hosting/privateDatabase";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/changeFtpPassword
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/database/$databaseName/dumps/$id
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/database/$databaseName
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/user
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/refresh
+	* Involved method : PUT > /hosting/privateDatabase/$serviceName/cron/$id
 	* Message : Missing identifier.
 	*/
 
@@ -387,38 +202,6 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 	/*
 	* Method creation failed.
 	* Involved method : POST > /hosting/privateDatabase/$serviceName/start
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/restart
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/import
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/import
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/database/$databaseName/dump/$id
 	* Message : Missing identifier.
 	*/
 
@@ -443,19 +226,215 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/serviceInfos";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /hosting/privateDatabase/$serviceName/configuration/mysql
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/user
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/database
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /hosting/privateDatabase/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/tasks/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/changeVersion
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/database/$databaseName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/stop
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/user/$userName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/changeRootPassword
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/databaseWizard
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/configuration/mysql
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/cron/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/terminate";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
 
 	/*
 	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/dumps/$id/restore
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameUser(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/user";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/database/$databaseName
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameUserUserNameGrant(java.lang.String serviceName, java.lang.String userName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/user/" + userName + "/grant";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "userName=" + userName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/user/$userName/grant/$databaseName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
 	* Involved method : DELETE > /hosting/privateDatabase/$serviceName/user/$userName/grant/$databaseName
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getServiceNameConfigurations(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/configurations";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/user/$userName/changePassword
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/user/$userName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/user/$userName/grant/$databaseName/update
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/changeFtpPassword
 	* Message : Missing identifier.
 	*/
 
@@ -472,7 +451,7 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /hosting/privateDatabase/$serviceName/user/$userName/changePassword
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/serviceInfos
 	* Message : Missing identifier.
 	*/
 
@@ -480,43 +459,31 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : PUT > /hosting/privateDatabase/$serviceName/cron/$id
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/database/$databaseName/dump/$id/restore
 	* Message : Missing identifier.
 	*/
 
 
-	public java.lang.String[] getServiceNameConfigurationWhitelist(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/configuration/whitelist";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
+	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/changeContact";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("contactAdmin", contactAdmin);
+		__dataMap.put("contactTech", contactTech);
+		__dataMap.put("contactBilling", contactBilling);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/user/$userName
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/privateDatabase/$serviceName/tasks/$id
-	* Message : Missing identifier.
-	*/
-
+	public long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/changeContact";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
 
 	public java.lang.String postServiceNameCron(java.lang.String frequency, java.lang.String command, java.lang.String serviceName, java.lang.String email, java.lang.String databaseName, java.lang.String status, java.lang.String description) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/cron";
@@ -544,11 +511,35 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
-	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/terminate";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/database/$databaseName/dumps/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /hosting/privateDatabase/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /hosting/privateDatabase/$serviceName/database/$databaseName/dump/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String deleteServiceNameCronId(java.lang.String serviceName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/privateDatabase/" + serviceName + "/cron/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
@@ -556,7 +547,15 @@ public class PrivateDatabaseImpl implements PrivateDatabase {
 
 	/*
 	* Method creation failed.
-	* Involved method : PUT > /hosting/privateDatabase/$serviceName/configuration/mysql
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/configuration/whitelist
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /hosting/privateDatabase/$serviceName/configuration/whitelist
 	* Message : Missing identifier.
 	*/
 

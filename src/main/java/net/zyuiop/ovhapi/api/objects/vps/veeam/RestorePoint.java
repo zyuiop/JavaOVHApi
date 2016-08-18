@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.vps.veeam;
  * Informations about a VPS Veeam restore points
  */
 
-public interface RestorePoint { 
+public class RestorePoint { 
 
-	/**
-	 * @return The restore point's creation time
-	 */
-	java.util.Date getCreationTime(); 
+	private java.util.Date creationTime;
+	private long id;
 
-	/**
-	 * @return The restore point's id
-	 */
-	long getId(); 
+	public RestorePoint() {
+	}
+
+	public java.util.Date getCreationTime() { 
+		return this.creationTime;
+	} 
+
+	public void setCreationTime(java.util.Date creationTime) { 
+		this.creationTime = creationTime;
+	} 
+
+	public RestorePoint creationTime(java.util.Date creationTime) { 
+		this.creationTime = creationTime;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public RestorePoint id(long id) { 
+		this.id = id;
+		return this;
+	} 
 
 }

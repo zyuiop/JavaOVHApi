@@ -4,51 +4,136 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * MiniPabx Hunting
  */
 
-public interface MiniPabxHunting { 
+public class MiniPabxHunting { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStrategy(); 
+	private java.lang.String strategy;
+	private boolean toneOnHold;
+	private java.lang.String name;
+	private long numberOfCalls;
+	private java.lang.String pattern;
+	private boolean anonymousCallRejection;
+	private long onHoldTimer;
+	private boolean toneOnClosure;
+	private boolean toneRingback;
 
-	/**
-	 * @return True if the tone on hold is enabled
-	 */
-	boolean getToneOnHold(); 
+	public MiniPabxHunting() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getName(); 
+	public java.lang.String getStrategy() { 
+		return this.strategy;
+	} 
 
-	/**
-	 * @return Number of simultaneous calls
-	 */
-	long getNumberOfCalls(); 
+	public void setStrategy(java.lang.String strategy) { 
+		this.strategy = strategy;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getPattern(); 
+	public MiniPabxHunting strategy(java.lang.String strategy) { 
+		this.strategy = strategy;
+		return this;
+	} 
 
-	/**
-	 * @return Reject anonymous calls
-	 */
-	boolean getAnonymousCallRejection(); 
+	public boolean getToneOnHold() { 
+		return this.toneOnHold;
+	} 
 
-	/**
-	 * @return The maximum waiting time in the calls queue
-	 */
-	long getOnHoldTimer(); 
+	public void setToneOnHold(boolean toneOnHold) { 
+		this.toneOnHold = toneOnHold;
+	} 
 
-	/**
-	 * @return True if the tone on closure is enabled
-	 */
-	boolean getToneOnClosure(); 
+	public MiniPabxHunting toneOnHold(boolean toneOnHold) { 
+		this.toneOnHold = toneOnHold;
+		return this;
+	} 
 
-	/**
-	 * @return True if the ring back tone is enabled
-	 */
-	boolean getToneRingback(); 
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public MiniPabxHunting name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public long getNumberOfCalls() { 
+		return this.numberOfCalls;
+	} 
+
+	public void setNumberOfCalls(long numberOfCalls) { 
+		this.numberOfCalls = numberOfCalls;
+	} 
+
+	public MiniPabxHunting numberOfCalls(long numberOfCalls) { 
+		this.numberOfCalls = numberOfCalls;
+		return this;
+	} 
+
+	public java.lang.String getPattern() { 
+		return this.pattern;
+	} 
+
+	public void setPattern(java.lang.String pattern) { 
+		this.pattern = pattern;
+	} 
+
+	public MiniPabxHunting pattern(java.lang.String pattern) { 
+		this.pattern = pattern;
+		return this;
+	} 
+
+	public boolean getAnonymousCallRejection() { 
+		return this.anonymousCallRejection;
+	} 
+
+	public void setAnonymousCallRejection(boolean anonymousCallRejection) { 
+		this.anonymousCallRejection = anonymousCallRejection;
+	} 
+
+	public MiniPabxHunting anonymousCallRejection(boolean anonymousCallRejection) { 
+		this.anonymousCallRejection = anonymousCallRejection;
+		return this;
+	} 
+
+	public long getOnHoldTimer() { 
+		return this.onHoldTimer;
+	} 
+
+	public void setOnHoldTimer(long onHoldTimer) { 
+		this.onHoldTimer = onHoldTimer;
+	} 
+
+	public MiniPabxHunting onHoldTimer(long onHoldTimer) { 
+		this.onHoldTimer = onHoldTimer;
+		return this;
+	} 
+
+	public boolean getToneOnClosure() { 
+		return this.toneOnClosure;
+	} 
+
+	public void setToneOnClosure(boolean toneOnClosure) { 
+		this.toneOnClosure = toneOnClosure;
+	} 
+
+	public MiniPabxHunting toneOnClosure(boolean toneOnClosure) { 
+		this.toneOnClosure = toneOnClosure;
+		return this;
+	} 
+
+	public boolean getToneRingback() { 
+		return this.toneRingback;
+	} 
+
+	public void setToneRingback(boolean toneRingback) { 
+		this.toneRingback = toneRingback;
+	} 
+
+	public MiniPabxHunting toneRingback(boolean toneRingback) { 
+		this.toneRingback = toneRingback;
+		return this;
+	} 
 
 }

@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.sms;
  * A structure describing ptt details
  */
 
-public interface PttDetails { 
+public class PttDetails { 
 
-	/**
-	 * @return Ptt informations
-	 */
-	java.lang.String getComment(); 
+	private java.lang.String comment;
+	private java.lang.String duration;
+	private java.lang.String description;
 
-	/**
-	 * @return Ptt volatility type
-	 */
-	java.lang.String getDuration(); 
+	public PttDetails() {
+	}
 
-	/**
-	 * @return Ptt short description
-	 */
-	java.lang.String getDescription(); 
+	public java.lang.String getComment() { 
+		return this.comment;
+	} 
+
+	public void setComment(java.lang.String comment) { 
+		this.comment = comment;
+	} 
+
+	public PttDetails comment(java.lang.String comment) { 
+		this.comment = comment;
+		return this;
+	} 
+
+	public java.lang.String getDuration() { 
+		return this.duration;
+	} 
+
+	public void setDuration(java.lang.String duration) { 
+		this.duration = duration;
+	} 
+
+	public PttDetails duration(java.lang.String duration) { 
+		this.duration = duration;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public PttDetails description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
 
 }

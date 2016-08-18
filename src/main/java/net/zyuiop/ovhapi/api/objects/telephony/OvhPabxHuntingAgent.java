@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Calls agent
  */
 
-public interface OvhPabxHuntingAgent { 
+public class OvhPabxHuntingAgent { 
 
-	/**
-	 * @return null
-	 */
-	long getAgentId(); 
+	private long agentId;
+	private long wrapUpTime;
+	private java.lang.String number;
+	private long timeout;
+	private java.lang.String status;
+	private long simultaneousLines;
 
-	/**
-	 * @return The wrap up time (in seconds) after the calls
-	 */
-	long getWrapUpTime(); 
+	public OvhPabxHuntingAgent() {
+	}
 
-	/**
-	 * @return The number of the agent
-	 */
-	java.lang.String getNumber(); 
+	public long getAgentId() { 
+		return this.agentId;
+	} 
 
-	/**
-	 * @return The waiting timeout (in seconds) before hangup an assigned called
-	 */
-	long getTimeout(); 
+	public void setAgentId(long agentId) { 
+		this.agentId = agentId;
+	} 
 
-	/**
-	 * @return The current status of the agent
-	 */
-	java.lang.String getStatus(); 
+	public OvhPabxHuntingAgent agentId(long agentId) { 
+		this.agentId = agentId;
+		return this;
+	} 
 
-	/**
-	 * @return The maximum of simultaneous calls that the agent will receive from the hunting
-	 */
-	long getSimultaneousLines(); 
+	public long getWrapUpTime() { 
+		return this.wrapUpTime;
+	} 
+
+	public void setWrapUpTime(long wrapUpTime) { 
+		this.wrapUpTime = wrapUpTime;
+	} 
+
+	public OvhPabxHuntingAgent wrapUpTime(long wrapUpTime) { 
+		this.wrapUpTime = wrapUpTime;
+		return this;
+	} 
+
+	public java.lang.String getNumber() { 
+		return this.number;
+	} 
+
+	public void setNumber(java.lang.String number) { 
+		this.number = number;
+	} 
+
+	public OvhPabxHuntingAgent number(java.lang.String number) { 
+		this.number = number;
+		return this;
+	} 
+
+	public long getTimeout() { 
+		return this.timeout;
+	} 
+
+	public void setTimeout(long timeout) { 
+		this.timeout = timeout;
+	} 
+
+	public OvhPabxHuntingAgent timeout(long timeout) { 
+		this.timeout = timeout;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public OvhPabxHuntingAgent status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public long getSimultaneousLines() { 
+		return this.simultaneousLines;
+	} 
+
+	public void setSimultaneousLines(long simultaneousLines) { 
+		this.simultaneousLines = simultaneousLines;
+	} 
+
+	public OvhPabxHuntingAgent simultaneousLines(long simultaneousLines) { 
+		this.simultaneousLines = simultaneousLines;
+		return this;
+	} 
 
 }

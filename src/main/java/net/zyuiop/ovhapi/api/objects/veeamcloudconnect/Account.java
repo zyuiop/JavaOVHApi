@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.veeamcloudconnect;
  * Veeam Cloud Connect account
  */
 
-public interface Account { 
+public class Account { 
 
-	/**
-	 * @return The commercial offer linked to your veeam cloud connect
-	 */
-	java.lang.String getProductOffer(); 
+	private java.lang.String productOffer;
+	private java.lang.String location;
+	private java.lang.String serviceName;
+	private long vmCount;
 
-	/**
-	 * @return Datacenter where your Cloud is physically located
-	 */
-	java.lang.String getLocation(); 
+	public Account() {
+	}
 
-	/**
-	 * @return Your login in the Veeam Cloud Connect interface
-	 */
-	java.lang.String getServiceName(); 
+	public java.lang.String getProductOffer() { 
+		return this.productOffer;
+	} 
 
-	/**
-	 * @return Backuped VMs quantity on your account
-	 */
-	long getVmCount(); 
+	public void setProductOffer(java.lang.String productOffer) { 
+		this.productOffer = productOffer;
+	} 
+
+	public Account productOffer(java.lang.String productOffer) { 
+		this.productOffer = productOffer;
+		return this;
+	} 
+
+	public java.lang.String getLocation() { 
+		return this.location;
+	} 
+
+	public void setLocation(java.lang.String location) { 
+		this.location = location;
+	} 
+
+	public Account location(java.lang.String location) { 
+		this.location = location;
+		return this;
+	} 
+
+	public java.lang.String getServiceName() { 
+		return this.serviceName;
+	} 
+
+	public void setServiceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+	} 
+
+	public Account serviceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+		return this;
+	} 
+
+	public long getVmCount() { 
+		return this.vmCount;
+	} 
+
+	public void setVmCount(long vmCount) { 
+		this.vmCount = vmCount;
+	} 
+
+	public Account vmCount(long vmCount) { 
+		this.vmCount = vmCount;
+		return this;
+	} 
 
 }

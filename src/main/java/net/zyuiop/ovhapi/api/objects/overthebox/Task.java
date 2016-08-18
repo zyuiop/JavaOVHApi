@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.overthebox;
  * Task
  */
 
-public interface Task { 
+public class Task { 
 
-	/**
-	 * @return The id of the task
-	 */
-	java.lang.String getTaskId(); 
+	private java.lang.String taskId;
+	private java.lang.String status;
+	private java.lang.String name;
 
-	/**
-	 * @return The status of the task
-	 */
-	java.lang.String getStatus(); 
+	public Task() {
+	}
 
-	/**
-	 * @return The name of the task
-	 */
-	java.lang.String getName(); 
+	public java.lang.String getTaskId() { 
+		return this.taskId;
+	} 
+
+	public void setTaskId(java.lang.String taskId) { 
+		this.taskId = taskId;
+	} 
+
+	public Task taskId(java.lang.String taskId) { 
+		this.taskId = taskId;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public Task status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Task name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
 
 }

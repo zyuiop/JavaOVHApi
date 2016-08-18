@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.cloud.instance;
  * IpAddress
  */
 
-public interface IpAddress { 
+public class IpAddress { 
 
-	/**
-	 * @return Instance IP address
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private java.lang.String type;
 
-	/**
-	 * @return Instance IP address type
-	 */
-	java.lang.String getType(); 
+	public IpAddress() {
+	}
+
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public IpAddress ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public IpAddress type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
 
 }

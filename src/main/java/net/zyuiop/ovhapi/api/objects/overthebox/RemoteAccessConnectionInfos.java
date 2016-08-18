@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.overthebox;
  * All the infos needed to connect yourself to your OTB
  */
 
-public interface RemoteAccessConnectionInfos { 
+public class RemoteAccessConnectionInfos { 
 
-	/**
-	 * @return IP to connect to when accessing the device remotely
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private long port;
 
-	/**
-	 * @return Port to connect to when accessing the device remotely
-	 */
-	long getPort(); 
+	public RemoteAccessConnectionInfos() {
+	}
+
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public RemoteAccessConnectionInfos ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public long getPort() { 
+		return this.port;
+	} 
+
+	public void setPort(long port) { 
+		this.port = port;
+	} 
+
+	public RemoteAccessConnectionInfos port(long port) { 
+		this.port = port;
+		return this;
+	} 
 
 }

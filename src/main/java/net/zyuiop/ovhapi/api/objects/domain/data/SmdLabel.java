@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.domain.data;
  * Representation of a protected label
  */
 
-public interface SmdLabel { 
+public class SmdLabel { 
 
-	/**
-	 * @return Label that is protected
-	 */
-	java.lang.String getLabel(); 
+	private java.lang.String label;
+	private java.lang.String trademark;
 
-	/**
-	 * @return Trademark associated to the protected label
-	 */
-	java.lang.String getTrademark(); 
+	public SmdLabel() {
+	}
+
+	public java.lang.String getLabel() { 
+		return this.label;
+	} 
+
+	public void setLabel(java.lang.String label) { 
+		this.label = label;
+	} 
+
+	public SmdLabel label(java.lang.String label) { 
+		this.label = label;
+		return this;
+	} 
+
+	public java.lang.String getTrademark() { 
+		return this.trademark;
+	} 
+
+	public void setTrademark(java.lang.String trademark) { 
+		this.trademark = trademark;
+	} 
+
+	public SmdLabel trademark(java.lang.String trademark) { 
+		this.trademark = trademark;
+		return this;
+	} 
 
 }

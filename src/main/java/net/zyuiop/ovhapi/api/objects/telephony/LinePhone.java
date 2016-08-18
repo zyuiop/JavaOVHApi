@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Informations related to phone capabilities
  */
 
-public interface LinePhone { 
+public class LinePhone { 
 
-	/**
-	 * @return Phone protocol
-	 */
-	java.lang.String getProtocol(); 
+	private java.lang.String protocol;
+	private long maxline;
+	private java.lang.String brand;
 
-	/**
-	 * @return Maximum number of lines managed by a phone
-	 */
-	long getMaxline(); 
+	public LinePhone() {
+	}
 
-	/**
-	 * @return Brand name of the phone
-	 */
-	java.lang.String getBrand(); 
+	public java.lang.String getProtocol() { 
+		return this.protocol;
+	} 
+
+	public void setProtocol(java.lang.String protocol) { 
+		this.protocol = protocol;
+	} 
+
+	public LinePhone protocol(java.lang.String protocol) { 
+		this.protocol = protocol;
+		return this;
+	} 
+
+	public long getMaxline() { 
+		return this.maxline;
+	} 
+
+	public void setMaxline(long maxline) { 
+		this.maxline = maxline;
+	} 
+
+	public LinePhone maxline(long maxline) { 
+		this.maxline = maxline;
+		return this;
+	} 
+
+	public java.lang.String getBrand() { 
+		return this.brand;
+	} 
+
+	public void setBrand(java.lang.String brand) { 
+		this.brand = brand;
+	} 
+
+	public LinePhone brand(java.lang.String brand) { 
+		this.brand = brand;
+		return this;
+	} 
 
 }

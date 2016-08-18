@@ -6,19 +6,7 @@ package net.zyuiop.ovhapi.api.methods;
 
 public interface Hpcspot { 
 
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your HPC Spot account
-	*/
-	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
 
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your HPC Spot account
-	*/
-	net.zyuiop.ovhapi.api.objects.hpcspot.Account getServiceName(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Details of the consumption of your account
@@ -39,13 +27,6 @@ public interface Hpcspot {
 	*/
 	long[] getServiceNameConsumption(java.lang.String serviceName) throws java.io.IOException;
 
-	/**
-	 * Alter this object properties
-	 * Facultative parameters ? false
-	 * @param null New object properties
-	 * @param serviceName The internal name of your HPC Spot account
-	*/
-	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services

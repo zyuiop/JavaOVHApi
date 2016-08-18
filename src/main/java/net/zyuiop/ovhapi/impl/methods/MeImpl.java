@@ -15,98 +15,8 @@ public class MeImpl implements Me {
 		this.client = client;
 	}
 
-	public net.zyuiop.ovhapi.api.objects.nichandle.SshKey getSshKeyKeyName(java.lang.String keyName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sshKey/" + keyName + "";
-		String __data = "?";
-		__data += "keyName=" + keyName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SshKeyImpl.class);
-	}
-
-	public java.lang.String[] getInstallationTemplate() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /me/installationTemplate/$templateName
-	* Message : Missing identifier.
-	*/
-
-
-	public net.zyuiop.ovhapi.api.objects.billing.FidelityMovement getFidelityAccountMovementsMovementId(long movementId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements/" + movementId + "";
-		String __data = "?";
-		__data += "movementId=" + movementId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.FidelityMovementImpl.class);
-	}
-
-	public java.lang.String getOrderOrderIdStatus(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/status";
-		String __data = "?";
-		__data += "orderId=" + orderId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/document/$id
-	* Message : Missing identifier.
-	*/
-
-
-	public void postInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String disks, long step, java.lang.String mode, java.lang.String name, java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("disks", disks);
-		__dataMap.put("step", step);
-		__dataMap.put("mode", mode);
-		__dataMap.put("name", name);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deleteInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaidName(java.lang.String templateName, java.lang.String schemeName, java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid/" + name + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putAccessRestrictionIpId(net.zyuiop.ovhapi.api.objects.nichandle.IpRestriction param0, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postTaskContactChangeIdResendEmail(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange/" + id + "/resendEmail";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postAccessRestrictionSmsIdValidate(java.lang.String code, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "/validate";
+	public void postAccessRestrictionTotpIdValidate(java.lang.String code, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "/validate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("code", code);
 		String __data = new Gson().toJson(__dataMap);
@@ -115,112 +25,13 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public void postAccessRestrictionIp(java.lang.String ip, boolean warning, java.lang.String rule) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ip", ip);
-		__dataMap.put("warning", warning);
-		__dataMap.put("rule", rule);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putMe(net.zyuiop.ovhapi.api.objects.nichandle.Nichandle param0) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/me";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /me/installationTemplate/$templateName/partitionScheme/$schemeName/hardwareRaid/$name
+	* Involved method : PUT > /me/paymentMean/paypal/$id
 	* Message : Missing identifier.
 	*/
 
-
-	public net.zyuiop.ovhapi.api.objects.api.Application getApiApplicationApplicationId(long applicationId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/api/application/" + applicationId + "";
-		String __data = "?";
-		__data += "applicationId=" + applicationId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.api.ApplicationImpl.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/installationTemplate/$templateName/partitionScheme/$schemeName
-	* Message : Missing identifier.
-	*/
-
-
-	public void postTaskDomainIdRelaunch(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/relaunch";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/task/emailChange/$id
-	* Message : Missing identifier.
-	*/
-
-
-	public net.zyuiop.ovhapi.api.objects.billing.FidelityAccount getFidelityAccount() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.FidelityAccountImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.VipStatus getVipStatus() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/vipStatus";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.VipStatusImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Movement getOvhAccountOvhAccountIdMovementsMovementId(java.lang.String ovhAccountId, long movementId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements/" + movementId + "";
-		String __data = "?";
-		__data += "ovhAccountId=" + ovhAccountId;
-		__data += "movementId=" + movementId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.MovementImpl.class);
-	}
-
-	public void postPaymentMeanCreditCardIdChooseAsDefaultPaymentMean(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "/chooseAsDefaultPaymentMean";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.VoucherStatus postVoucherCheckValidity(java.lang.String voucher) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/voucher/checkValidity";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("voucher", voucher);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.VoucherStatusImpl.class);
-	}
 
 	public void postChangePassword() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/changePassword";
@@ -231,48 +42,125 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/task/contactChange/$id
-	* Message : Missing identifier.
-	*/
-
-
-	public long[] getOrder(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order";
+	public java.lang.String[] getRefund(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/refund";
 		String __data = "?";
 		__data += "date.to=" + dateTo;
 		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public long[] getOrder() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order";
+	public java.lang.String[] getRefund() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/refund";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public long[] getContact() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/contact";
 		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.Payment getOrderOrderIdPayment(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/payment";
-		String __data = "?";
-		__data += "orderId=" + orderId;
+	public java.lang.String[] getInstallationTemplate() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public void deletePaymentMeanPaypalId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "";
+	public long[] getAccessRestrictionTotp() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/paymentMean/bankAccount/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/autorenew
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/accessRestriction/sms
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getPaymentMeanCreditCard() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public void postTaskContactChangeIdRefuse(java.lang.String token, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange/" + id + "/refuse";
 		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("token", token);
 		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
+		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public java.lang.String[] getIpxeScript() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public void postInstallationTemplateTemplateNamePartitionScheme(long priority, java.lang.String name, java.lang.String templateName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("priority", priority);
+		__dataMap.put("name", name);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public long[] getAgreements(java.lang.String agreed, long contractId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/agreements";
+		String __data = "?";
+		__data += "agreed=" + agreed;
+		__data += "contractId=" + contractId;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public long[] getAgreements() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/agreements";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public void deleteAccessRestrictionBackupCode() throws java.io.IOException {
@@ -287,34 +175,15 @@ public class MeImpl implements Me {
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /me/changeEmail
+	* Involved method : POST > /me/ipxeScript
 	* Message : Missing identifier.
 	*/
 
 
-	public void postAccessRestrictionBackupCodeDisable(java.lang.String code) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/backupCode/disable";
+	public void postAccessRestrictionBackupCodeEnable(java.lang.String code) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/backupCode/enable";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("code", code);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postPaymentMeanBankAccountIdChooseAsDefaultPaymentMean(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "/chooseAsDefaultPaymentMean";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postTaskContactChangeIdAccept(java.lang.String token, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange/" + id + "/accept";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("token", token);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
@@ -324,81 +193,79 @@ public class MeImpl implements Me {
 
 	/*
 	* Method creation failed.
-	* Involved method : PUT > /me/installationTemplate/$templateName/partitionScheme/$schemeName
+	* Involved method : GET > /me/contact/$contactId
 	* Message : Missing identifier.
 	*/
 
 
-	public void postDocumentCors(java.lang.String origin) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/document/cors";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("origin", origin);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.IpRestriction getAccessRestrictionIpId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip/" + id + "";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpRestrictionImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.order.RegisteredPaymentMean[] getOrderOrderIdAvailableRegisteredPaymentMean(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/availableRegisteredPaymentMean";
+	public long[] getOrderOrderIdDetails(long orderId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/details";
 		String __data = "?";
 		__data += "orderId=" + orderId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.order.RegisteredPaymentMeanImpl[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.nichandle.IpRestrictionDefaultRule getAccessRestrictionIpDefaultRule() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ipDefaultRule";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpRestrictionDefaultRuleImpl.class);
-	}
 
-	public java.lang.String[] getBill(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/bill";
-		String __data = "?";
-		__data += "date.to=" + dateTo;
-		__data += "date.from=" + dateFrom;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/accessRestriction/ip/$id
+	* Message : Missing identifier.
+	*/
 
-	public java.lang.String[] getBill() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/bill";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
 
-	public void putIpOrganisationOrganisationId(net.zyuiop.ovhapi.api.objects.nichandle.Ipv4Org param0, java.lang.String organisationId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation/" + organisationId + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deleteAccessRestrictionSmsId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "";
+	public void deleteApiCredentialCredentialId(long credentialId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/api/credential/" + credentialId + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
+
+	public void postTaskDomainIdRelaunch(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/relaunch";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postOrderOrderIdPayWithRegisteredPaymentMean(java.lang.String paymentMean, long orderId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/payWithRegisteredPaymentMean";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("paymentMean", paymentMean);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/agreements/$id/contract
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/accessRestriction/sms/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId/details/$orderDetailId
+	* Message : Missing identifier.
+	*/
+
 
 	public void postIpOrganisation(java.lang.String country, java.lang.String firstname, java.lang.String registry, java.lang.String lastname, java.lang.String phone, java.lang.String abuse_mailbox, java.lang.String city, java.lang.String address, java.lang.String zip) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation";
@@ -435,219 +302,6 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public void putAutorenew(net.zyuiop.ovhapi.api.objects.nichandle.NicAutorenewInfos param0) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/autorenew";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.contact.Contact getContactContactId(long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/contact/" + contactId + "";
-		String __data = "?";
-		__data += "contactId=" + contactId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.ContactImpl.class);
-	}
-
-	public long[] getAccessRestrictionTotp() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.api.Application getApiCredentialCredentialIdApplication(long credentialId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/api/credential/" + credentialId + "/application";
-		String __data = "?";
-		__data += "credentialId=" + credentialId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.api.ApplicationImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Payment getRefundRefundIdPayment(java.lang.String refundId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "/payment";
-		String __data = "?";
-		__data += "refundId=" + refundId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentImpl.class);
-	}
-
-	public void postAccessRestrictionTotpIdValidate(java.lang.String code, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "/validate";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("code", code);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postAccessRestrictionBackupCodeEnable(java.lang.String code) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/backupCode/enable";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("code", code);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deleteAccessRestrictionTotpId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Payment getBillBillIdPayment(java.lang.String billId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "/payment";
-		String __data = "?";
-		__data += "billId=" + billId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentImpl.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/accessRestriction/sms/$id
-	* Message : Missing identifier.
-	*/
-
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.EmailNotification getNotificationEmailHistoryId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/notification/email/history/" + id + "";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.EmailNotificationImpl.class);
-	}
-
-	public void deleteAccessRestrictionIpId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.order.AssociatedObject getOrderOrderIdAssociatedObject(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/associatedObject";
-		String __data = "?";
-		__data += "orderId=" + orderId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.order.AssociatedObjectImpl.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /me/installationTemplate/$templateName/partitionScheme/$schemeName/partition/$mountpoint
-	* Message : Missing identifier.
-	*/
-
-
-	public net.zyuiop.ovhapi.api.objects.billing.Order postOvhAccountOvhAccountIdCreditOrder(long amount, java.lang.String ovhAccountId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/creditOrder";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("amount", amount);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderImpl.class);
-	}
-
-	public long[] getAgreements(java.lang.String agreed, long contractId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/agreements";
-		String __data = "?";
-		__data += "agreed=" + agreed;
-		__data += "contractId=" + contractId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getAgreements() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/agreements";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public java.lang.String[] getSshKey() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sshKey";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public void deleteInstallationTemplateTemplateName(java.lang.String templateName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/installationTemplate/$templateName/partitionScheme/$schemeName/partition/$mountpoint
-	* Message : Missing identifier.
-	*/
-
-
-	public void postAccessRestrictionTotpIdDisable(java.lang.String code, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "/disable";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("code", code);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Refund getOrderOrderIdRefund(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/refund";
-		String __data = "?";
-		__data += "orderId=" + orderId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.RefundImpl.class);
-	}
-
-	public void deleteDocumentId(java.lang.String id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/document/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putFidelityAccount(net.zyuiop.ovhapi.api.objects.billing.FidelityAccount param0) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
 	public long[] getApiApplication() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/application";
 		String __data = "";
@@ -656,284 +310,91 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String postAgreementsIdAccept(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/agreements/" + id + "/accept";
+	public void postPaymentMeanBankAccountIdChooseAsDefaultPaymentMean(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "/chooseAsDefaultPaymentMean";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public java.lang.String getOrderOrderIdStatus(long orderId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/status";
+		String __data = "?";
+		__data += "orderId=" + orderId;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
-	public java.lang.String[] getRefund(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/refund";
+	public long[] getPaymentMeanPaypal() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId/associatedObject
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/accessRestriction/ipDefaultRule
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/autorenew
+	* Message : Missing identifier.
+	*/
+
+
+	public void postTaskDomainIdAccelerate(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/accelerate";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postAutorenew(long renewDay) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/autorenew";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("renewDay", renewDay);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public long[] getFidelityAccountMovements(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements";
 		String __data = "?";
 		__data += "date.to=" + dateTo;
 		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String[] getRefund() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/refund";
+	public long[] getFidelityAccountMovements() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements";
 		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public void postAccessRestrictionSmsIdDisable(java.lang.String code, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "/disable";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("code", code);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putPaymentMeanCreditCardId(net.zyuiop.ovhapi.api.objects.billing.CreditCard param0, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/installationTemplate/$templateName
-	* Message : Missing identifier.
-	*/
-
-
-	public void postTaskContactChangeIdRefuse(java.lang.String token, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange/" + id + "/refuse";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("token", token);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postOrderOrderIdPayWithRegisteredPaymentMean(java.lang.String paymentMean, long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/payWithRegisteredPaymentMean";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("paymentMean", paymentMean);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.Ipxe getIpxeScriptName(java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript/" + name + "";
-		String __data = "?";
-		__data += "name=" + name;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpxeImpl.class);
-	}
-
-	public java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
-		String __data = "?";
-		__data += "templateName=" + templateName;
-		__data += "schemeName=" + schemeName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.SlaApply getSlaId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SlaApplyImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.contact.FieldInformation[] getContactContactIdFields(long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/contact/" + contactId + "/fields";
-		String __data = "?";
-		__data += "contactId=" + contactId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.FieldInformationImpl[].class);
-	}
-
-	public void putSshKeyKeyName(net.zyuiop.ovhapi.api.objects.nichandle.SshKey param0, java.lang.String keyName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sshKey/" + keyName + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.Subscription getSubscriptionSubscriptionType(java.lang.String subscriptionType) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/subscription/" + subscriptionType + "";
-		String __data = "?";
-		__data += "subscriptionType=" + subscriptionType;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SubscriptionImpl.class);
-	}
-
-	public java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/partition";
-		String __data = "?";
-		__data += "templateName=" + templateName;
-		__data += "schemeName=" + schemeName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.Ipv4Org getIpOrganisationOrganisationId(java.lang.String organisationId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation/" + organisationId + "";
-		String __data = "?";
-		__data += "organisationId=" + organisationId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.Ipv4OrgImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Order postFidelityAccountCreditOrder(long amount) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/creditOrder";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("amount", amount);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.SlaService[] getSlaIdServices(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "/services";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.SlaServiceImpl[].class);
-	}
-
-	public void putPaymentMeanPaypalId(net.zyuiop.ovhapi.api.objects.billing.Paypal param0, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putTaskDomainIdArgumentKey(net.zyuiop.ovhapi.api.objects.nichandle.DomainTaskArgument param0, long id, java.lang.String key) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/argument/" + key + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Bill getOrderOrderIdBill(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/bill";
-		String __data = "?";
-		__data += "orderId=" + orderId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BillImpl.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /me/document
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /me/document
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /me/accessRestriction/totp
-	* Message : Missing identifier.
-	*/
-
-
-	public void putPaymentMeanBankAccountId(net.zyuiop.ovhapi.api.objects.billing.BankAccount param0, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.contact.Contact putContactContactId(long contactId, net.zyuiop.ovhapi.api.objects.contact.Address address, java.lang.String cellPhone, java.lang.String phone, java.lang.String fax, java.util.Date birthDay, java.lang.String birthCity, java.lang.String birthZip, java.lang.String birthCountry, java.lang.String vat, java.lang.String companyNationalIdentificationNumber, java.lang.String nationalIdentificationNumber, java.lang.String organisationType, java.lang.String organisationName, java.lang.String email, java.lang.String firstName, java.lang.String gender, java.lang.String language, java.lang.String nationality, java.lang.String lastName, java.lang.String legalForm) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/contact/" + contactId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("address", address);
-		__dataMap.put("cellPhone", cellPhone);
-		__dataMap.put("phone", phone);
-		__dataMap.put("fax", fax);
-		__dataMap.put("birthDay", birthDay);
-		__dataMap.put("birthCity", birthCity);
-		__dataMap.put("birthZip", birthZip);
-		__dataMap.put("birthCountry", birthCountry);
-		__dataMap.put("vat", vat);
-		__dataMap.put("companyNationalIdentificationNumber", companyNationalIdentificationNumber);
-		__dataMap.put("nationalIdentificationNumber", nationalIdentificationNumber);
-		__dataMap.put("organisationType", organisationType);
-		__dataMap.put("organisationName", organisationName);
-		__dataMap.put("email", email);
-		__dataMap.put("firstName", firstName);
-		__dataMap.put("gender", gender);
-		__dataMap.put("language", language);
-		__dataMap.put("nationality", nationality);
-		__dataMap.put("lastName", lastName);
-		__dataMap.put("legalForm", legalForm);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.ContactImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.contact.Contact putContactContactId(long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/contact/" + contactId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.ContactImpl.class);
-	}
-
-	public void postSshKey(java.lang.String key, java.lang.String keyName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sshKey";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("key", key);
-		__dataMap.put("keyName", keyName);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postTaskDomainIdCancel(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/cancel";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
 	public long[] getTaskEmailChange(java.lang.String state) throws java.io.IOException {
@@ -953,198 +414,10 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.BillDetail getBillBillIdDetailsBillDetailId(java.lang.String billId, java.lang.String billDetailId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "/details/" + billDetailId + "";
-		String __data = "?";
-		__data += "billId=" + billId;
-		__data += "billDetailId=" + billDetailId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BillDetailImpl.class);
-	}
-
-	public void postPasswordRecover(java.lang.String ovhId, java.lang.String ovhCompany) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/passwordRecover";
+	public void postAccessRestrictionTotpIdDisable(java.lang.String code, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "/disable";
 		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ovhId", ovhId);
-		__dataMap.put("ovhCompany", ovhCompany);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, false);
-	}
-
-	public void deleteApiCredentialCredentialId(long credentialId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/api/credential/" + credentialId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deletePaymentMeanBankAccountId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deletePaymentMeanCreditCardId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putAccessRestrictionIpDefaultRule(net.zyuiop.ovhapi.api.objects.nichandle.IpRestrictionDefaultRule param0) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ipDefaultRule";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Order postOvhAccountOvhAccountIdRetrieveMoney(long amount, long bankAccountId, java.lang.String ovhAccountId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/retrieveMoney";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("amount", amount);
-		__dataMap.put("bankAccountId", bankAccountId);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderImpl.class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /me/accessRestriction/totp/$id
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /me/installationTemplate/$templateName/partitionScheme/$schemeName/hardwareRaid/$name
-	* Message : Missing identifier.
-	*/
-
-
-	public net.zyuiop.ovhapi.api.objects.billing.Paypal getPaymentMeanPaypalId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaypalImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.PaymentMeanValidation postPaymentMeanBankAccount(java.lang.String iban, java.lang.String ownerAddress, java.lang.String ownerName, java.lang.String bic, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("iban", iban);
-		__dataMap.put("ownerAddress", ownerAddress);
-		__dataMap.put("ownerName", ownerName);
-		__dataMap.put("bic", bic);
-		__dataMap.put("description", description);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentMeanValidationImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.PaymentMeanValidation postPaymentMeanBankAccount(java.lang.String iban, java.lang.String ownerAddress, java.lang.String ownerName, java.lang.String bic) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("iban", iban);
-		__dataMap.put("ownerAddress", ownerAddress);
-		__dataMap.put("ownerName", ownerName);
-		__dataMap.put("bic", bic);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentMeanValidationImpl.class);
-	}
-
-	public long[] getNotificationEmailHistory() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/notification/email/history";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /me/accessRestriction/backupCode
-	* Message : Missing identifier.
-	*/
-
-
-	public long[] getOvhAccountOvhAccountIdMovements(java.lang.String ovhAccountId, java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements";
-		String __data = "?";
-		__data += "ovhAccountId=" + ovhAccountId;
-		__data += "date.to=" + dateTo;
-		__data += "date.from=" + dateFrom;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getOvhAccountOvhAccountIdMovements(java.lang.String ovhAccountId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements";
-		String __data = "?";
-		__data += "ovhAccountId=" + ovhAccountId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /me/accessRestriction/sms/$id/sendCode
-	* Message : Missing identifier.
-	*/
-
-
-	public long[] getPaymentMeanPaypal() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public java.lang.String[] getIpOrganisation() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public java.lang.String[] getRefundRefundIdDetails(java.lang.String refundId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "/details";
-		String __data = "?";
-		__data += "refundId=" + refundId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public void postTaskEmailChangeIdRefuse(java.lang.String token, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/emailChange/" + id + "/refuse";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("token", token);
+		__dataMap.put("code", code);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
@@ -1170,52 +443,69 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.Refund getRefundRefundId(java.lang.String refundId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "";
-		String __data = "?";
-		__data += "refundId=" + refundId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.RefundImpl.class);
-	}
-
-	public void postTaskDomainIdAccelerate(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/accelerate";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postSlaIdApply(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "/apply";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.AutomaticPaymentMean getAvailableAutomaticPaymentMeans() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/availableAutomaticPaymentMeans";
+	public java.lang.String[] getSshKey() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/sshKey";
 		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.AutomaticPaymentMeanImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public void deleteInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartitionMountpoint(java.lang.String templateName, java.lang.String schemeName, java.lang.String mountpoint) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/partition/" + mountpoint + "";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/bill/$billId
+	* Message : Missing identifier.
+	*/
+
+
+	public void postInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String disks, long step, java.lang.String mode, java.lang.String name, java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
 		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("disks", disks);
+		__dataMap.put("step", step);
+		__dataMap.put("mode", mode);
+		__dataMap.put("name", name);
 		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
+		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public void postAccessRestrictionTotpIdEnable(java.lang.String code, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "/enable";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/api/credential/$credentialId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/fidelityAccount
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId/paymentMeans
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/task/domain/$id/argument/$key
+	* Message : Missing identifier.
+	*/
+
+
+	public void postAccessRestrictionSmsIdEnable(java.lang.String code, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "/enable";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		__dataMap.put("code", code);
 		String __data = new Gson().toJson(__dataMap);
@@ -1224,70 +514,29 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.OvhAccount getOvhAccountOvhAccountId(java.lang.String ovhAccountId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "";
-		String __data = "?";
-		__data += "ovhAccountId=" + ovhAccountId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OvhAccountImpl.class);
-	}
-
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /me/accessRestriction/backupCode/validate
+	* Involved method : POST > /me/accessRestriction/backupCode
 	* Message : Missing identifier.
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.nichandle.Ipxe postIpxeScript(java.lang.String script, java.lang.String name, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("script", script);
-		__dataMap.put("name", name);
-		__dataMap.put("description", description);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.IpxeImpl.class);
-	}
 
-	public java.lang.String[] getIpxeScript() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/sla/$id
+	* Message : Missing identifier.
+	*/
 
-	public long[] getTaskContactChange(java.lang.String toAccount, java.lang.String askingAccount, java.lang.String state) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange";
-		String __data = "?";
-		__data += "toAccount=" + toAccount;
-		__data += "askingAccount=" + askingAccount;
-		__data += "state=" + state;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public long[] getTaskContactChange() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public void postPaymentMeanPaypalIdChooseAsDefaultPaymentMean(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "/chooseAsDefaultPaymentMean";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/availableAutomaticPaymentMeans
+	* Message : Missing identifier.
+	*/
+
 
 	public java.lang.String[] getBillBillIdDetails(java.lang.String billId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "/details";
@@ -1298,31 +547,13 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public long[] getPaymentMeanCreditCard() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.agreements.Contract getAgreementsIdContract(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/agreements/" + id + "/contract";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.agreements.ContractImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/task/emailChange/$id
+	* Message : Missing identifier.
+	*/
 
-	public void deleteIpxeScriptName(java.lang.String name) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript/" + name + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
 	public void postTaskEmailChangeIdAccept(java.lang.String token, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/task/emailChange/" + id + "/accept";
@@ -1334,25 +565,90 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public void postInstallationTemplateTemplateNamePartitionScheme(long priority, java.lang.String name, java.lang.String templateName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme";
+	public void deleteInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaidName(java.lang.String templateName, java.lang.String schemeName, java.lang.String name) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid/" + name + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("priority", priority);
-		__dataMap.put("name", name);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/contact/$contactId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/contact/$contactId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/installationTemplate/$templateName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/installationTemplate/$templateName/partitionScheme/$schemeName/hardwareRaid/$name
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/paymentMean/creditCard/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public void postPasswordRecover(java.lang.String ovhId, java.lang.String ovhCompany) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/passwordRecover";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("ovhId", ovhId);
+		__dataMap.put("ovhCompany", ovhCompany);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, false);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId/payment
+	* Message : Missing identifier.
+	*/
+
+
+	public void postSlaIdApply(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "/apply";
+		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String[] getInstallationTemplateTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme";
-		String __data = "?";
-		__data += "templateName=" + templateName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/installationTemplate/$templateName/partitionScheme/$schemeName/partition/$mountpoint
+	* Message : Missing identifier.
+	*/
+
 
 	public void deleteApiApplicationApplicationId(long applicationId) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/api/application/" + applicationId + "";
@@ -1363,14 +659,88 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String[] getTaskDomainIdArgument(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/argument";
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/ovhAccount/$ovhAccountId/retrieveMoney
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/voucher/checkValidity
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/installationTemplate/$templateName
+	* Message : Missing identifier.
+	*/
+
+
+	public void deletePaymentMeanPaypalId(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/agreements/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/accessRestriction/sms/$id/sendCode
+	* Message : Missing identifier.
+	*/
+
+
+	public void deleteAccessRestrictionTotpId(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public long[] getPaymentMeanBankAccount(java.lang.String state) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
 		String __data = "?";
-		__data += "id=" + id;
+		__data += "state=" + state;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
+
+	public long[] getPaymentMeanBankAccount() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/ipOrganisation/$organisationId
+	* Message : Missing identifier.
+	*/
+
 
 	public void postInstallationTemplate(java.lang.String defaultLanguage, java.lang.String name, java.lang.String baseTemplateName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate";
@@ -1384,6 +754,47 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/refund/$refundId/details/$refundDetailId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/api/application/$applicationId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/installationTemplate/$templateName/partitionScheme/$schemeName
+	* Message : Missing identifier.
+	*/
+
+
+	public void postTaskDomainIdCancel(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/cancel";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/ipOrganisation/$organisationId
+	* Message : Missing identifier.
+	*/
+
+
 	public boolean getSlaIdCanBeApplied(long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/sla/" + id + "/canBeApplied";
 		String __data = "?";
@@ -1393,135 +804,65 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), boolean.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.OrderDetail getOrderOrderIdDetailsOrderDetailId(long orderId, long orderDetailId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/details/" + orderDetailId + "";
+	public java.lang.String[] getRefundRefundIdDetails(java.lang.String refundId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "/details";
 		String __data = "?";
-		__data += "orderId=" + orderId;
-		__data += "orderDetailId=" + orderDetailId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderDetailImpl.class);
-	}
-
-	public void putSubscriptionSubscriptionType(net.zyuiop.ovhapi.api.objects.nichandle.Subscription param0, java.lang.String subscriptionType) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/subscription/" + subscriptionType + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postInstallationTemplateTemplateNameCheckIntegrity(java.lang.String templateName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/checkIntegrity";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.api.Credential getApiCredentialCredentialId(long credentialId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/api/credential/" + credentialId + "";
-		String __data = "?";
-		__data += "credentialId=" + credentialId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.api.CredentialImpl.class);
-	}
-
-	public java.lang.String[] getSubscription() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/subscription";
-		String __data = "";
+		__data += "refundId=" + refundId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.contact.Contact postContact(net.zyuiop.ovhapi.api.objects.contact.Address address, java.lang.String phone, java.lang.String email, java.lang.String firstName, java.lang.String language, java.lang.String lastName, java.lang.String legalForm, java.lang.String cellPhone, java.lang.String fax, java.util.Date birthDay, java.lang.String birthCity, java.lang.String birthZip, java.lang.String birthCountry, java.lang.String vat, java.lang.String companyNationalIdentificationNumber, java.lang.String nationalIdentificationNumber, java.lang.String organisationType, java.lang.String organisationName, java.lang.String gender, java.lang.String nationality) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/contact";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("address", address);
-		__dataMap.put("phone", phone);
-		__dataMap.put("email", email);
-		__dataMap.put("firstName", firstName);
-		__dataMap.put("language", language);
-		__dataMap.put("lastName", lastName);
-		__dataMap.put("legalForm", legalForm);
-		__dataMap.put("cellPhone", cellPhone);
-		__dataMap.put("fax", fax);
-		__dataMap.put("birthDay", birthDay);
-		__dataMap.put("birthCity", birthCity);
-		__dataMap.put("birthZip", birthZip);
-		__dataMap.put("birthCountry", birthCountry);
-		__dataMap.put("vat", vat);
-		__dataMap.put("companyNationalIdentificationNumber", companyNationalIdentificationNumber);
-		__dataMap.put("nationalIdentificationNumber", nationalIdentificationNumber);
-		__dataMap.put("organisationType", organisationType);
-		__dataMap.put("organisationName", organisationName);
-		__dataMap.put("gender", gender);
-		__dataMap.put("nationality", nationality);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.ContactImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.contact.Contact postContact(net.zyuiop.ovhapi.api.objects.contact.Address address, java.lang.String phone, java.lang.String email, java.lang.String firstName, java.lang.String language, java.lang.String lastName, java.lang.String legalForm) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/contact";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("address", address);
-		__dataMap.put("phone", phone);
-		__dataMap.put("email", email);
-		__dataMap.put("firstName", firstName);
-		__dataMap.put("language", language);
-		__dataMap.put("lastName", lastName);
-		__dataMap.put("legalForm", legalForm);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.contact.ContactImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/task/domain/$id
+	* Message : Missing identifier.
+	*/
 
-	public net.zyuiop.ovhapi.api.objects.billing.BankAccount getPaymentMeanBankAccountId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "";
-		String __data = "?";
-		__data += "id=" + id;
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/paymentMean/bankAccount/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/paymentMean/bankAccount
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/paymentMean/bankAccount
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/task/domain/$id/argument/$key
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getSla() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/sla";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BankAccountImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public void postAutorenew(long renewDay) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/autorenew";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("renewDay", renewDay);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deleteSshKeyKeyName(java.lang.String keyName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sshKey/" + keyName + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postAccessRestrictionSmsIdEnable(java.lang.String code, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "/enable";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("code", code);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public long[] getFidelityAccountMovements(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements";
+	public long[] getOrder(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/order";
 		String __data = "?";
 		__data += "date.to=" + dateTo;
 		__data += "date.from=" + dateFrom;
@@ -1530,13 +871,49 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public long[] getFidelityAccountMovements() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/fidelityAccount/movements";
+	public long[] getOrder() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/order";
 		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
+
+	public java.lang.String[] getBill(java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/bill";
+		String __data = "?";
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public java.lang.String[] getBill() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/bill";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public void postAccessRestrictionBackupCodeDisable(java.lang.String code) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/backupCode/disable";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("code", code);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/accessRestriction/backupCode/validate
+	* Message : Missing identifier.
+	*/
+
 
 	public long[] getAccessRestrictionSms() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms";
@@ -1546,64 +923,87 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.CreditCard getPaymentMeanCreditCardId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.CreditCardImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.PaymentMeanValidation postPaymentMeanCreditCard(java.lang.String returnUrl, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("returnUrl", returnUrl);
-		__dataMap.put("description", description);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentMeanValidationImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.PaymentMeanValidation postPaymentMeanCreditCard() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard";
+	public void postTaskContactChangeIdResendEmail(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange/" + id + "/resendEmail";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentMeanValidationImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.Nichandle getMe() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/me";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.NichandleImpl.class);
-	}
-
-	public long[] getOrderOrderIdDetails(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "/details";
-		String __data = "?";
-		__data += "orderId=" + orderId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getContact() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/contact";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /me/accessRestriction/backupCode
+	* Involved method : PUT > /me/fidelityAccount
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getOvhAccount() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public void deleteAccessRestrictionSmsId(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/changeEmail
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/task/contactChange/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public void postPaymentMeanCreditCardIdChooseAsDefaultPaymentMean(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "/chooseAsDefaultPaymentMean";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postTaskContactChangeIdAccept(java.lang.String token, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange/" + id + "/accept";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("token", token);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/document/$id
 	* Message : Missing identifier.
 	*/
 
@@ -1616,18 +1016,19 @@ public class MeImpl implements Me {
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.nichandle.NicAutorenewInfos getAutorenew() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/autorenew";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
+	public void postPaymentMeanPaypalIdChooseAsDefaultPaymentMean(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal/" + id + "/chooseAsDefaultPaymentMean";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.NicAutorenewInfosImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 
 	/*
 	* Method creation failed.
-	* Involved method : POST > /me/accessRestriction/sms
+	* Involved method : POST > /me/contact
 	* Message : Missing identifier.
 	*/
 
@@ -1635,59 +1036,23 @@ public class MeImpl implements Me {
 
 	/*
 	* Method creation failed.
-	* Involved method : GET > /me/order/$orderId/paymentMeans
+	* Involved method : POST > /me/contact
 	* Message : Missing identifier.
 	*/
 
 
-	public net.zyuiop.ovhapi.api.objects.nichandle.DomainTask getTaskDomainId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/contact/$contactId/fields
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getInstallationTemplateTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme";
 		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.DomainTaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.agreements.ContractAgreement getAgreementsId(long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/agreements/" + id + "";
-		String __data = "?";
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.agreements.ContractAgreementImpl.class);
-	}
-
-	public long[] getApiCredential(java.lang.String status, long applicationId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/api/credential";
-		String __data = "?";
-		__data += "status=" + status;
-		__data += "applicationId=" + applicationId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getApiCredential() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/api/credential";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.Bill getBillBillId(java.lang.String billId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/bill/" + billId + "";
-		String __data = "?";
-		__data += "billId=" + billId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.BillImpl.class);
-	}
-
-	public java.lang.String[] getOvhAccount() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount";
-		String __data = "";
+		__data += "templateName=" + templateName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
@@ -1723,31 +1088,124 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.RefundDetail getRefundRefundIdDetailsRefundDetailId(java.lang.String refundId, java.lang.String refundDetailId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/refund/" + refundId + "/details/" + refundDetailId + "";
-		String __data = "?";
-		__data += "refundId=" + refundId;
-		__data += "refundDetailId=" + refundDetailId;
-		OVHApiMethod __method = OVHApiMethod.GET;
+	public void deleteInstallationTemplateTemplateName(java.lang.String templateName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.RefundDetailImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String[] getDocument() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/document";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/refund/$refundId/payment
+	* Message : Missing identifier.
+	*/
+
+
+	public void postAccessRestrictionSmsIdValidate(java.lang.String code, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "/validate";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("code", code);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postAccessRestrictionTotpIdEnable(java.lang.String code, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/totp/" + id + "/enable";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("code", code);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/notification/email/history/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getTaskContactChange(java.lang.String toAccount, java.lang.String askingAccount, java.lang.String state) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange";
+		String __data = "?";
+		__data += "toAccount=" + toAccount;
+		__data += "askingAccount=" + askingAccount;
+		__data += "state=" + state;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public long[] getTaskContactChange() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/contactChange";
 		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/sshKey/$keyName
+	* Message : Missing identifier.
+	*/
+
+
+	public void postSshKey(java.lang.String key, java.lang.String keyName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/sshKey";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("key", key);
+		__dataMap.put("keyName", keyName);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postTaskEmailChangeIdRefuse(java.lang.String token, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/emailChange/" + id + "/refuse";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("token", token);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/installationTemplate/$templateName/partitionScheme/$schemeName
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/hardwareRaid";
+		String __data = "?";
+		__data += "templateName=" + templateName;
+		__data += "schemeName=" + schemeName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.Order getOrderOrderId(long orderId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/order/" + orderId + "";
-		String __data = "?";
-		__data += "orderId=" + orderId;
-		OVHApiMethod __method = OVHApiMethod.GET;
+	public void deletePaymentMeanCreditCardId(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/creditCard/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.OrderImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public void deleteInstallationTemplateTemplateNamePartitionSchemeSchemeName(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
@@ -1759,35 +1217,379 @@ public class MeImpl implements Me {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.billing.PaymentMeanValidation postPaymentMeanPaypal(java.lang.String returnUrl, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("returnUrl", returnUrl);
-		__dataMap.put("description", description);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentMeanValidationImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.billing.PaymentMeanValidation postPaymentMeanPaypal() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/paypal";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.billing.PaymentMeanValidationImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.nichandle.DomainTaskArgument getTaskDomainIdArgumentKey(long id, java.lang.String key) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/argument/" + key + "";
+	public long[] getOvhAccountOvhAccountIdMovements(java.lang.String ovhAccountId, java.util.Date dateTo, java.util.Date dateFrom) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements";
 		String __data = "?";
-		__data += "id=" + id;
-		__data += "key=" + key;
+		__data += "ovhAccountId=" + ovhAccountId;
+		__data += "date.to=" + dateTo;
+		__data += "date.from=" + dateFrom;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.nichandle.DomainTaskArgumentImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
+
+	public long[] getOvhAccountOvhAccountIdMovements(java.lang.String ovhAccountId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/ovhAccount/" + ovhAccountId + "/movements";
+		String __data = "?";
+		__data += "ovhAccountId=" + ovhAccountId;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/paymentMean/creditCard
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/paymentMean/creditCard
+	* Message : Missing identifier.
+	*/
+
+
+	public void deleteSshKeyKeyName(java.lang.String keyName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/sshKey/" + keyName + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId/refund
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId/availableRegisteredPaymentMean
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/partition";
+		String __data = "?";
+		__data += "templateName=" + templateName;
+		__data += "schemeName=" + schemeName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/paymentMean/paypal/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/accessRestriction/totp
+	* Message : Missing identifier.
+	*/
+
+
+	public void deletePaymentMeanBankAccountId(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/bill/$billId/payment
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me/subscription/$subscriptionType
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/installationTemplate/$templateName/partitionScheme/$schemeName/hardwareRaid/$name
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getDocument() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/document";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/paymentMean/creditCard/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public void postInstallationTemplateTemplateNameCheckIntegrity(java.lang.String templateName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/checkIntegrity";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/refund/$refundId
+	* Message : Missing identifier.
+	*/
+
+
+	public void postAccessRestrictionIp(java.lang.String ip, boolean warning, java.lang.String rule) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("ip", ip);
+		__dataMap.put("warning", warning);
+		__dataMap.put("rule", rule);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/bill/$billId/details/$billDetailId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/accessRestriction/totp/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public void postAccessRestrictionSmsIdDisable(java.lang.String code, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/sms/" + id + "/disable";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("code", code);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void deleteIpxeScriptName(java.lang.String name) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/ipxeScript/" + name + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postDocumentCors(java.lang.String origin) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/document/cors";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("origin", origin);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/accessRestriction/backupCode
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /me
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/sshKey/$keyName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/accessRestriction/ipDefaultRule
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getIpOrganisation() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/ipOrganisation";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public java.lang.String[] getSubscription() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/subscription";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public java.lang.String[] getTaskDomainIdArgument(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/task/domain/" + id + "/argument";
+		String __data = "?";
+		__data += "id=" + id;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/ipxeScript/$name
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/ovhAccount/$ovhAccountId/movements/$movementId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/subscription/$subscriptionType
+	* Message : Missing identifier.
+	*/
+
+
+	public void deleteDocumentId(java.lang.String id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/document/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/paymentMean/paypal
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/paymentMean/paypal
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getNotificationEmailHistory() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/notification/email/history";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public java.lang.String postAgreementsIdAccept(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/agreements/" + id + "/accept";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+	}
+
+	public void deleteInstallationTemplateTemplateNamePartitionSchemeSchemeNamePartitionMountpoint(java.lang.String templateName, java.lang.String schemeName, java.lang.String mountpoint) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/installationTemplate/" + templateName + "/partitionScheme/" + schemeName + "/partition/" + mountpoint + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/sla/$id/services
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/vipStatus
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/api/credential/$credentialId/application
+	* Message : Missing identifier.
+	*/
+
 
 	public long[] getAccessRestrictionIp() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip";
@@ -1797,29 +1599,103 @@ public class MeImpl implements Me {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public long[] getSla() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/sla";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public long[] getPaymentMeanBankAccount(java.lang.String state) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/fidelityAccount/movements/$movementId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/document
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/document
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/order/$orderId/bill
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/ovhAccount/$ovhAccountId
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getApiCredential(java.lang.String status, long applicationId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/api/credential";
 		String __data = "?";
-		__data += "state=" + state;
+		__data += "status=" + status;
+		__data += "applicationId=" + applicationId;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public long[] getPaymentMeanBankAccount() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/me/paymentMean/bankAccount";
+	public long[] getApiCredential() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/api/credential";
 		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/accessRestriction/ip/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/ovhAccount/$ovhAccountId/creditOrder
+	* Message : Missing identifier.
+	*/
+
+
+	public void deleteAccessRestrictionIpId(long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/me/accessRestriction/ip/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /me/installationTemplate/$templateName/partitionScheme/$schemeName/partition/$mountpoint
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /me/fidelityAccount/creditOrder
+	* Message : Missing identifier.
+	*/
+
 
 }

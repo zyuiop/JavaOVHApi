@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.iploadbalancing;
  * Backend
  */
 
-public interface Backend { 
+public class Backend { 
 
-	/**
-	 * @return Zone of you backend.
-	 */
-	java.lang.String getZone(); 
+	private java.lang.String zone;
+	private java.lang.String name;
+	private long port;
+	private java.lang.String stickiness;
+	private java.lang.String balance;
+	private long id;
+	private java.lang.String type;
+	private java.lang.String probe;
 
-	/**
-	 * @return Backend name
-	 */
-	java.lang.String getName(); 
+	public Backend() {
+	}
 
-	/**
-	 * @return Port attached to your backend. Inherited from frontend if null
-	 */
-	long getPort(); 
+	public java.lang.String getZone() { 
+		return this.zone;
+	} 
 
-	/**
-	 * @return Stickiness type. No stickyness if null
-	 */
-	java.lang.String getStickiness(); 
+	public void setZone(java.lang.String zone) { 
+		this.zone = zone;
+	} 
 
-	/**
-	 * @return Load balancing algorithm. 'roundrobin' if null
-	 */
-	java.lang.String getBalance(); 
+	public Backend zone(java.lang.String zone) { 
+		this.zone = zone;
+		return this;
+	} 
 
-	/**
-	 * @return Id of your backend
-	 */
-	long getId(); 
+	public java.lang.String getName() { 
+		return this.name;
+	} 
 
-	/**
-	 * @return Type of your backend
-	 */
-	java.lang.String getType(); 
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
 
-	/**
-	 * @return Probe type. 'tcp' if null
-	 */
-	java.lang.String getProbe(); 
+	public Backend name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public long getPort() { 
+		return this.port;
+	} 
+
+	public void setPort(long port) { 
+		this.port = port;
+	} 
+
+	public Backend port(long port) { 
+		this.port = port;
+		return this;
+	} 
+
+	public java.lang.String getStickiness() { 
+		return this.stickiness;
+	} 
+
+	public void setStickiness(java.lang.String stickiness) { 
+		this.stickiness = stickiness;
+	} 
+
+	public Backend stickiness(java.lang.String stickiness) { 
+		this.stickiness = stickiness;
+		return this;
+	} 
+
+	public java.lang.String getBalance() { 
+		return this.balance;
+	} 
+
+	public void setBalance(java.lang.String balance) { 
+		this.balance = balance;
+	} 
+
+	public Backend balance(java.lang.String balance) { 
+		this.balance = balance;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Backend id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Backend type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public java.lang.String getProbe() { 
+		return this.probe;
+	} 
+
+	public void setProbe(java.lang.String probe) { 
+		this.probe = probe;
+	} 
+
+	public Backend probe(java.lang.String probe) { 
+		this.probe = probe;
+		return this;
+	} 
 
 }

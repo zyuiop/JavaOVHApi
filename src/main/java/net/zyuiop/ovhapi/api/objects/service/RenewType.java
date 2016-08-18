@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.service;
  * Map a possible renew for a specific service
  */
 
-public interface RenewType { 
+public class RenewType { 
 
-	/**
-	 * @return period of renew in month
-	 */
-	long getPeriod(); 
+	private long period;
+	private boolean forced;
+	private boolean automatic;
+	private boolean deleteAtExpiration;
 
-	/**
-	 * @return The service forced to be renewed
-	 */
-	boolean getForced(); 
+	public RenewType() {
+	}
 
-	/**
-	 * @return The service is automatically renewed
-	 */
-	boolean getAutomatic(); 
+	public long getPeriod() { 
+		return this.period;
+	} 
 
-	/**
-	 * @return The service will be deleted at expiration
-	 */
-	boolean getDeleteAtExpiration(); 
+	public void setPeriod(long period) { 
+		this.period = period;
+	} 
+
+	public RenewType period(long period) { 
+		this.period = period;
+		return this;
+	} 
+
+	public boolean getForced() { 
+		return this.forced;
+	} 
+
+	public void setForced(boolean forced) { 
+		this.forced = forced;
+	} 
+
+	public RenewType forced(boolean forced) { 
+		this.forced = forced;
+		return this;
+	} 
+
+	public boolean getAutomatic() { 
+		return this.automatic;
+	} 
+
+	public void setAutomatic(boolean automatic) { 
+		this.automatic = automatic;
+	} 
+
+	public RenewType automatic(boolean automatic) { 
+		this.automatic = automatic;
+		return this;
+	} 
+
+	public boolean getDeleteAtExpiration() { 
+		return this.deleteAtExpiration;
+	} 
+
+	public void setDeleteAtExpiration(boolean deleteAtExpiration) { 
+		this.deleteAtExpiration = deleteAtExpiration;
+	} 
+
+	public RenewType deleteAtExpiration(boolean deleteAtExpiration) { 
+		this.deleteAtExpiration = deleteAtExpiration;
+		return this;
+	} 
 
 }

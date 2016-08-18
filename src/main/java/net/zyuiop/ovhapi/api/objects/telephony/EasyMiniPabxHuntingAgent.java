@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Easy/Mini PABX agent
  */
 
-public interface EasyMiniPabxHuntingAgent { 
+public class EasyMiniPabxHuntingAgent { 
 
-	/**
-	 * @return The phone number of the agent
-	 */
-	java.lang.String getAgentNumber(); 
+	private java.lang.String agentNumber;
+	private long noReplyTimer;
+	private boolean logged;
+	private long position;
 
-	/**
-	 * @return The maxium ringing time
-	 */
-	long getNoReplyTimer(); 
+	public EasyMiniPabxHuntingAgent() {
+	}
 
-	/**
-	 * @return True if the agent is logged
-	 */
-	boolean getLogged(); 
+	public java.lang.String getAgentNumber() { 
+		return this.agentNumber;
+	} 
 
-	/**
-	 * @return The position in the hunting
-	 */
-	long getPosition(); 
+	public void setAgentNumber(java.lang.String agentNumber) { 
+		this.agentNumber = agentNumber;
+	} 
+
+	public EasyMiniPabxHuntingAgent agentNumber(java.lang.String agentNumber) { 
+		this.agentNumber = agentNumber;
+		return this;
+	} 
+
+	public long getNoReplyTimer() { 
+		return this.noReplyTimer;
+	} 
+
+	public void setNoReplyTimer(long noReplyTimer) { 
+		this.noReplyTimer = noReplyTimer;
+	} 
+
+	public EasyMiniPabxHuntingAgent noReplyTimer(long noReplyTimer) { 
+		this.noReplyTimer = noReplyTimer;
+		return this;
+	} 
+
+	public boolean getLogged() { 
+		return this.logged;
+	} 
+
+	public void setLogged(boolean logged) { 
+		this.logged = logged;
+	} 
+
+	public EasyMiniPabxHuntingAgent logged(boolean logged) { 
+		this.logged = logged;
+		return this;
+	} 
+
+	public long getPosition() { 
+		return this.position;
+	} 
+
+	public void setPosition(long position) { 
+		this.position = position;
+	} 
+
+	public EasyMiniPabxHuntingAgent position(long position) { 
+		this.position = position;
+		return this;
+	} 
 
 }

@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.cloud.instance;
  * MonthlyBilling
  */
 
-public interface MonthlyBilling { 
+public class MonthlyBilling { 
 
-	/**
-	 * @return Monthly billing activated since
-	 */
-	java.util.Date getSince(); 
+	private java.util.Date since;
+	private java.lang.String status;
 
-	/**
-	 * @return Monthly billing status
-	 */
-	java.lang.String getStatus(); 
+	public MonthlyBilling() {
+	}
+
+	public java.util.Date getSince() { 
+		return this.since;
+	} 
+
+	public void setSince(java.util.Date since) { 
+		this.since = since;
+	} 
+
+	public MonthlyBilling since(java.util.Date since) { 
+		this.since = since;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public MonthlyBilling status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
 }

@@ -4,56 +4,150 @@ package net.zyuiop.ovhapi.api.objects.cloud.volume;
  * Volume
  */
 
-public interface Volume { 
+public class Volume { 
 
-	/**
-	 * @return Volume attached to instances id
-	 */
-	java.lang.String[] getAttachedTo(); 
+	private java.lang.String[] attachedTo;
+	private java.lang.String status;
+	private java.lang.String name;
+	private java.lang.String region;
+	private java.lang.String description;
+	private long size;
+	private java.util.Date creationDate;
+	private java.lang.String id;
+	private java.lang.String type;
+	private boolean bootable;
 
-	/**
-	 * @return Volume status
-	 */
-	java.lang.String getStatus(); 
+	public Volume() {
+	}
 
-	/**
-	 * @return Volume name
-	 */
-	java.lang.String getName(); 
+	public java.lang.String[] getAttachedTo() { 
+		return this.attachedTo;
+	} 
 
-	/**
-	 * @return Volume region
-	 */
-	java.lang.String getRegion(); 
+	public void setAttachedTo(java.lang.String[] attachedTo) { 
+		this.attachedTo = attachedTo;
+	} 
 
-	/**
-	 * @return Volume description
-	 */
-	java.lang.String getDescription(); 
+	public Volume attachedTo(java.lang.String[] attachedTo) { 
+		this.attachedTo = attachedTo;
+		return this;
+	} 
 
-	/**
-	 * @return Volume size (in GB)
-	 */
-	long getSize(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return Volume creation date
-	 */
-	java.util.Date getCreationDate(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
 
-	/**
-	 * @return Volume id
-	 */
-	java.lang.String getId(); 
+	public Volume status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
-	/**
-	 * @return Volume type
-	 */
-	java.lang.String getType(); 
+	public java.lang.String getName() { 
+		return this.name;
+	} 
 
-	/**
-	 * @return Volume bootable
-	 */
-	boolean getBootable(); 
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Volume name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getRegion() { 
+		return this.region;
+	} 
+
+	public void setRegion(java.lang.String region) { 
+		this.region = region;
+	} 
+
+	public Volume region(java.lang.String region) { 
+		this.region = region;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public Volume description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
+
+	public long getSize() { 
+		return this.size;
+	} 
+
+	public void setSize(long size) { 
+		this.size = size;
+	} 
+
+	public Volume size(long size) { 
+		this.size = size;
+		return this;
+	} 
+
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
+
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
+
+	public Volume creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getId() { 
+		return this.id;
+	} 
+
+	public void setId(java.lang.String id) { 
+		this.id = id;
+	} 
+
+	public Volume id(java.lang.String id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Volume type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public boolean getBootable() { 
+		return this.bootable;
+	} 
+
+	public void setBootable(boolean bootable) { 
+		this.bootable = bootable;
+	} 
+
+	public Volume bootable(boolean bootable) { 
+		this.bootable = bootable;
+		return this;
+	} 
 
 }

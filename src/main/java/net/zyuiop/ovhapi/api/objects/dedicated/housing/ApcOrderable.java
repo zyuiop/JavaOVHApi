@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.dedicated.housing;
  * A structure describing informations for APC orderable for this housing bay
  */
 
-public interface ApcOrderable { 
+public class ApcOrderable { 
 
-	/**
-	 * @return Is this APC free
-	 */
-	boolean getFree(); 
+	private boolean free;
+	private boolean orderable;
 
-	/**
-	 * @return Is an APC is orderable for this housing bay
-	 */
-	boolean getOrderable(); 
+	public ApcOrderable() {
+	}
+
+	public boolean getFree() { 
+		return this.free;
+	} 
+
+	public void setFree(boolean free) { 
+		this.free = free;
+	} 
+
+	public ApcOrderable free(boolean free) { 
+		this.free = free;
+		return this;
+	} 
+
+	public boolean getOrderable() { 
+		return this.orderable;
+	} 
+
+	public void setOrderable(boolean orderable) { 
+		this.orderable = orderable;
+	} 
+
+	public ApcOrderable orderable(boolean orderable) { 
+		this.orderable = orderable;
+		return this;
+	} 
 
 }

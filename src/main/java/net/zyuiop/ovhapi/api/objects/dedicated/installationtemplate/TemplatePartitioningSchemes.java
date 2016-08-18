@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.dedicated.installationtemplate;
  * Partitioning schemes available on this template
  */
 
-public interface TemplatePartitioningSchemes { 
+public class TemplatePartitioningSchemes { 
 
-	/**
-	 * @return on a reinstall, if a partitioning scheme is not specified, the one with the higher priority will be used by default, among all the compatible partitioning schemes (given the underlying hardware specifications)
-	 */
-	long getPriority(); 
+	private long priority;
+	private java.lang.String name;
 
-	/**
-	 * @return name of this partitioning scheme
-	 */
-	java.lang.String getName(); 
+	public TemplatePartitioningSchemes() {
+	}
+
+	public long getPriority() { 
+		return this.priority;
+	} 
+
+	public void setPriority(long priority) { 
+		this.priority = priority;
+	} 
+
+	public TemplatePartitioningSchemes priority(long priority) { 
+		this.priority = priority;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public TemplatePartitioningSchemes name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
 
 }

@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * A structure describing informations bandwidth orderable for this dedicated server
  */
 
-public interface BandwidthOrderable { 
+public class BandwidthOrderable { 
 
-	/**
-	 * @return Bandwidth "ultimate" orderable in mbps
-	 */
-	long[] getUltimate(); 
+	private long[] ultimate;
+	private long[] premium;
+	private boolean orderable;
+	private long[] platinum;
 
-	/**
-	 * @return Bandwidth "premium" orderable in mbps
-	 */
-	long[] getPremium(); 
+	public BandwidthOrderable() {
+	}
 
-	/**
-	 * @return Is bandwidth orderable for this server
-	 */
-	boolean getOrderable(); 
+	public long[] getUltimate() { 
+		return this.ultimate;
+	} 
 
-	/**
-	 * @return Bandwidth "platinum" orderable in mbps
-	 */
-	long[] getPlatinum(); 
+	public void setUltimate(long[] ultimate) { 
+		this.ultimate = ultimate;
+	} 
+
+	public BandwidthOrderable ultimate(long[] ultimate) { 
+		this.ultimate = ultimate;
+		return this;
+	} 
+
+	public long[] getPremium() { 
+		return this.premium;
+	} 
+
+	public void setPremium(long[] premium) { 
+		this.premium = premium;
+	} 
+
+	public BandwidthOrderable premium(long[] premium) { 
+		this.premium = premium;
+		return this;
+	} 
+
+	public boolean getOrderable() { 
+		return this.orderable;
+	} 
+
+	public void setOrderable(boolean orderable) { 
+		this.orderable = orderable;
+	} 
+
+	public BandwidthOrderable orderable(boolean orderable) { 
+		this.orderable = orderable;
+		return this;
+	} 
+
+	public long[] getPlatinum() { 
+		return this.platinum;
+	} 
+
+	public void setPlatinum(long[] platinum) { 
+		this.platinum = platinum;
+	} 
+
+	public BandwidthOrderable platinum(long[] platinum) { 
+		this.platinum = platinum;
+		return this;
+	} 
 
 }

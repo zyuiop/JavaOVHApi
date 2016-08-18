@@ -7,14 +7,11 @@ package net.zyuiop.ovhapi.api.methods.dedicated;
 public interface InstallationTemplate { 
 
 
-
 	/**
-	 * Partitions defined in this partitioning scheme
+	 * OVH operating system installation templates
 	 * Facultative parameters ? false
-	 * @param templateName This template name
-	 * @param schemeName name of this partitioning scheme
 	*/
-	java.lang.String[] getTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException;
+	java.lang.String[] getDedicatedInstallationTemplate() throws java.io.IOException;
 
 	/**
 	 * Hardware RAIDs defined in this partitioning scheme
@@ -24,6 +21,15 @@ public interface InstallationTemplate {
 	*/
 	java.lang.String[] getTemplateNamePartitionSchemeSchemeNameHardwareRaid(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException;
 
+	/**
+	 * Partitions defined in this partitioning scheme
+	 * Facultative parameters ? false
+	 * @param templateName This template name
+	 * @param schemeName name of this partitioning scheme
+	*/
+	java.lang.String[] getTemplateNamePartitionSchemeSchemeNamePartition(java.lang.String templateName, java.lang.String schemeName) throws java.io.IOException;
+
+
 
 
 	/**
@@ -32,11 +38,5 @@ public interface InstallationTemplate {
 	 * @param templateName This template name
 	*/
 	java.lang.String[] getTemplateNamePartitionScheme(java.lang.String templateName) throws java.io.IOException;
-
-	/**
-	 * OVH operating system installation templates
-	 * Facultative parameters ? false
-	*/
-	java.lang.String[] getDedicatedInstallationTemplate() throws java.io.IOException;
 
 }

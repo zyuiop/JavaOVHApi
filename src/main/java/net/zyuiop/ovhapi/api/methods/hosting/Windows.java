@@ -7,34 +7,6 @@ package net.zyuiop.ovhapi.api.methods.hosting;
 public interface Windows { 
 
 	/**
-	 * List available services
-	 * Facultative parameters ? false
-	*/
-	java.lang.String[] getHostingWindows() throws java.io.IOException;
-
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your hosting
-	*/
-	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Alter this object properties
-	 * Facultative parameters ? false
-	 * @param null New object properties
-	 * @param serviceName The internal name of your hosting
-	*/
-	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your hosting
-	*/
-	net.zyuiop.ovhapi.api.objects.hosting.windows.Service getServiceName(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
 	 * Launch a contact change procedure
 	 * Facultative parameters ? true
 	 * @param serviceName The internal name of your hosting
@@ -50,5 +22,14 @@ public interface Windows {
 	 * @param serviceName The internal name of your hosting
 	*/
 	long[] postServiceNameChangeContact(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * List available services
+	 * Facultative parameters ? false
+	*/
+	java.lang.String[] getHostingWindows() throws java.io.IOException;
+
+
+
 
 }

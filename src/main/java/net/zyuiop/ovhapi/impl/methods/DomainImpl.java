@@ -15,208 +15,13 @@ public class DomainImpl implements Domain {
 		this.client = client;
 	}
 
-	public long[] getServiceNameNameServer(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public void postZoneZoneNameTaskIdRelaunch(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/relaunch";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/zone/$zoneName/redirection/$id
+	* Message : Missing identifier.
+	*/
 
-	public void postZoneZoneNameDynHostLoginLoginChangePassword(java.lang.String password, java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "/changePassword";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("password", password);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Record postZoneZoneNameRecord(java.lang.String target, java.lang.String fieldType, java.lang.String zoneName, long ttl, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("target", target);
-		__dataMap.put("fieldType", fieldType);
-		__dataMap.put("ttl", ttl);
-		__dataMap.put("subDomain", subDomain);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RecordImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Record postZoneZoneNameRecord(java.lang.String target, java.lang.String fieldType, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("target", target);
-		__dataMap.put("fieldType", fieldType);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RecordImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Redirection getZoneZoneNameRedirectionId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection/" + id + "";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RedirectionImpl.class);
-	}
-
-	public long[] getDataAfnicAssociationInformation() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicAssociationInformation";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public java.lang.String getServiceNameAuthInfo(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/authInfo";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
-	}
-
-	public java.lang.String[] getZone() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public long[] getDataAfnicCorporationTrademarkInformation() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicCorporationTrademarkInformation";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public void putZoneZoneNameDynHostLoginLogin(net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin param0, java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.data.AssociationContact postDataAfnicAssociationInformation(java.util.Date declarationDate, java.util.Date publicationDate, java.lang.String publicationNumber, java.lang.String publicationPageNumber, long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicAssociationInformation";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("declarationDate", declarationDate);
-		__dataMap.put("publicationDate", publicationDate);
-		__dataMap.put("publicationNumber", publicationNumber);
-		__dataMap.put("publicationPageNumber", publicationPageNumber);
-		__dataMap.put("contactId", contactId);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AssociationContactImpl.class);
-	}
-
-	public java.lang.String[] getDataExtension(java.lang.String country) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/extension";
-		String __data = "?";
-		__data += "country=" + country;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), java.lang.String[].class);
-	}
-
-	public void postServiceNameTaskIdCancel(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/cancel";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postZoneZoneNameReset(java.lang.String zoneName, boolean minimized) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/reset";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("minimized", minimized);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postZoneZoneNameReset(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/reset";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Zone getZoneZoneName(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.ZoneImpl.class);
-	}
-
-	public java.lang.String[] getZoneZoneNameDynHostLogin(java.lang.String zoneName, java.lang.String subDomain, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "subDomain=" + subDomain;
-		__data += "login=" + login;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public java.lang.String[] getZoneZoneNameDynHostLogin(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameDsRecord(net.zyuiop.ovhapi.api.objects.dnssec.Key keys, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("keys", keys);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.data.Smd putDataSmdSmdId(long smdId, java.lang.String data) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd/" + smdId + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("data", data);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.SmdImpl.class);
-	}
 
 	public void deleteZoneZoneNameRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record/" + id + "";
@@ -227,27 +32,8 @@ public class DomainImpl implements Domain {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/serviceInfos";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
-	}
-
-	public void postServiceNameActivateZone(java.lang.String serviceName, boolean minimized) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/activateZone";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("minimized", minimized);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void postServiceNameActivateZone(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/activateZone";
+	public void postZoneZoneNameTaskIdAccelerate(java.lang.String zoneName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/accelerate";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -255,19 +41,61 @@ public class DomainImpl implements Domain {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Dnssec getZoneZoneNameDnssec(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dnssec";
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/dnssec
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/record
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/record
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] postServiceNameOwo(java.lang.String fields, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("fields", fields);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public void postZoneZoneNameRefresh(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/refresh";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/data/smd
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getZoneZoneNameTask(java.lang.String zoneName, java.lang.String function, java.lang.String status) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task";
 		String __data = "?";
 		__data += "zoneName=" + zoneName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DnssecImpl.class);
-	}
-
-	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
 		__data += "function=" + function;
 		__data += "status=" + status;
 		OVHApiMethod __method = OVHApiMethod.GET;
@@ -275,40 +103,39 @@ public class DomainImpl implements Domain {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task";
+	public long[] getZoneZoneNameTask(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task";
 		String __data = "?";
-		__data += "serviceName=" + serviceName;
+		__data += "zoneName=" + zoneName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Redirection postZoneZoneNameRedirection(java.lang.String target, java.lang.String type, java.lang.String zoneName, java.lang.String keywords, java.lang.String title, java.lang.String subDomain, java.lang.String description) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("target", target);
-		__dataMap.put("type", type);
-		__dataMap.put("keywords", keywords);
-		__dataMap.put("title", title);
-		__dataMap.put("subDomain", subDomain);
-		__dataMap.put("description", description);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/dynHost/record/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String getServiceNameAuthInfo(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/authInfo";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RedirectionImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Redirection postZoneZoneNameRedirection(java.lang.String target, java.lang.String type, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("target", target);
-		__dataMap.put("type", type);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RedirectionImpl.class);
-	}
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/import
+	* Message : Missing identifier.
+	*/
+
 
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/changeContact";
@@ -331,63 +158,6 @@ public class DomainImpl implements Domain {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public void postServiceNameTaskIdRelaunch(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/relaunch";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void deleteZoneZoneNameRedirectionId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord getZoneZoneNameDynHostRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record/" + id + "";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostRecordImpl.class);
-	}
-
-	public long[] getDataSmd(java.lang.String protectedLabelsLabel) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
-		String __data = "?";
-		__data += "protectedLabels.label=" + protectedLabelsLabel;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getDataSmd() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin postZoneZoneNameDynHostLogin(java.lang.String password, java.lang.String loginSuffix, java.lang.String subDomain, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("password", password);
-		__dataMap.put("loginSuffix", loginSuffix);
-		__dataMap.put("subDomain", subDomain);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostLoginImpl.class);
-	}
-
 	public void deleteZoneZoneNameDnssec(java.lang.String zoneName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dnssec";
 		Map<Object, Object> __dataMap = new HashMap<>();
@@ -397,95 +167,79 @@ public class DomainImpl implements Domain {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public java.lang.String[] postServiceNameOwo(java.lang.String fields, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("fields", fields);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameGlueRecordHostUpdate(java.lang.String ips, java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord/" + host + "/update";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ips", ips);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/$serviceName/owo/$field
+	* Message : Missing identifier.
+	*/
 
-	public net.zyuiop.ovhapi.api.objects.domain.data.ProContact postDataProContact(java.lang.String jobDescription, java.lang.String authority, java.lang.String authorityWebsite, java.lang.String licenseNumber, long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("jobDescription", jobDescription);
-		__dataMap.put("authority", authority);
-		__dataMap.put("authorityWebsite", authorityWebsite);
-		__dataMap.put("licenseNumber", licenseNumber);
-		__dataMap.put("contactId", contactId);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.ProContactImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.data.ProContact postDataProContact(java.lang.String jobDescription, java.lang.String authority, java.lang.String authorityWebsite, java.lang.String licenseNumber) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("jobDescription", jobDescription);
-		__dataMap.put("authority", authority);
-		__dataMap.put("authorityWebsite", authorityWebsite);
-		__dataMap.put("licenseNumber", licenseNumber);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.ProContactImpl.class);
-	}
 
-	public long[] getServiceNameDsRecord(java.lang.String serviceName, long flags, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/$serviceName/nameServer/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/data/afnicAssociationInformation/$associationInformationId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/data/smd/$smdId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/redirection
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/redirection
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getZoneZoneNameRecord(java.lang.String zoneName, java.lang.String fieldType, java.lang.String subDomain) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
 		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "flags=" + flags;
-		__data += "status=" + status;
+		__data += "zoneName=" + zoneName;
+		__data += "fieldType=" + fieldType;
+		__data += "subDomain=" + subDomain;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public long[] getServiceNameDsRecord(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Soa getZoneZoneNameSoa(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/soa";
+	public long[] getZoneZoneNameRecord(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
 		String __data = "?";
 		__data += "zoneName=" + zoneName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.SoaImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public void deleteZoneZoneNameDynHostLoginLogin(java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "";
+	public void postZoneZoneNameTaskIdCancel(java.lang.String zoneName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/cancel";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putZoneZoneNameRedirectionId(net.zyuiop.ovhapi.api.objects.domain.zone.Redirection param0, java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
+		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
@@ -509,57 +263,35 @@ public class DomainImpl implements Domain {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.services.Service getZoneZoneNameServiceInfos(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/serviceInfos";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
-	}
 
-	public long[] getZoneZoneNameRedirection(java.lang.String zoneName, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "subDomain=" + subDomain;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/data/proContact
+	* Message : Missing identifier.
+	*/
 
-	public long[] getZoneZoneNameRedirection(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.data.AssociationContact getDataAfnicAssociationInformationAssociationInformationId(long associationInformationId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicAssociationInformation/" + associationInformationId + "";
-		String __data = "?";
-		__data += "associationInformationId=" + associationInformationId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AssociationContactImpl.class);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Record getZoneZoneNameRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record/" + id + "";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.RecordImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/data/proContact
+	* Message : Missing identifier.
+	*/
 
-	public void putZoneZoneNameSoa(net.zyuiop.ovhapi.api.objects.domain.zone.Soa param0, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/soa";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/task/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public void postZoneZoneNameTaskIdRelaunch(java.lang.String zoneName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/relaunch";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
@@ -573,153 +305,49 @@ public class DomainImpl implements Domain {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.Owo getServiceNameOwoField(java.lang.String serviceName, java.lang.String field) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo/" + field + "";
+	public java.lang.String[] getDomain(java.lang.String whoisOwner) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/domain";
 		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "field=" + field;
+		__data += "whoisOwner=" + whoisOwner;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.OwoImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameNameServersUpdate(net.zyuiop.ovhapi.api.objects.domain.DomainNs nameServers, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServers/update";
+	public java.lang.String[] getDomain() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/domain";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public void postServiceNameActivateZone(java.lang.String serviceName, boolean minimized) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/activateZone";
 		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("nameServers", nameServers);
+		__dataMap.put("minimized", minimized);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.CurrentNameServer getServiceNameNameServerId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer/" + id + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.CurrentNameServerImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.data.AfnicCorporationTrademarkContact postDataAfnicCorporationTrademarkInformation(java.lang.String inpiNumber, java.lang.String inpiTrademarkOwner, long contactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicCorporationTrademarkInformation";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("inpiNumber", inpiNumber);
-		__dataMap.put("inpiTrademarkOwner", inpiTrademarkOwner);
-		__dataMap.put("contactId", contactId);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AfnicCorporationTrademarkContactImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostLogin getZoneZoneNameDynHostLoginLogin(java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "login=" + login;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostLoginImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameNameServer(net.zyuiop.ovhapi.api.objects.domain.DomainNs nameServer, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("nameServer", nameServer);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Task getZoneZoneNameTaskId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "id=" + id;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.GlueRecord getServiceNameGlueRecordHost(java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord/" + host + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "host=" + host;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.GlueRecordImpl.class);
-	}
-
-	public void putServiceName(net.zyuiop.ovhapi.api.objects.domain.Domain param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.data.Smd postDataSmd(java.lang.String data) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
+	public void postServiceNameActivateZone(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/activateZone";
 		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("data", data);
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.SmdImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public long[] getZoneZoneNameRecord(java.lang.String zoneName, java.lang.String fieldType, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "fieldType=" + fieldType;
-		__data += "subDomain=" + subDomain;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public long[] getZoneZoneNameRecord(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.Task deleteServiceNameGlueRecordHost(java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord/" + host + "";
+	public void deleteZoneZoneNameRedirectionId(java.lang.String zoneName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection/" + id + "";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameGlueRecord(java.lang.String ips, java.lang.String host, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/glueRecord";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ips", ips);
-		__dataMap.put("host", host);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.data.ProContact getDataProContactProContactId(long proContactId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact/" + proContactId + "";
-		String __data = "?";
-		__data += "proContactId=" + proContactId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.ProContactImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public java.lang.String[] getServiceNameGlueRecord(java.lang.String serviceName, java.lang.String host) throws java.io.IOException {
@@ -741,57 +369,215 @@ public class DomainImpl implements Domain {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public void putZoneZoneNameRecordId(net.zyuiop.ovhapi.api.objects.domain.zone.Record param0, java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/record/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/dynHost/login
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getDataAfnicCorporationTrademarkInformation() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicCorporationTrademarkInformation";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/$serviceName/ukOutgoingTransfer
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /domain/$serviceName/glueRecord/$host
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getServiceNameDsRecord(java.lang.String serviceName, long flags, java.lang.String status) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "flags=" + flags;
+		__data += "status=" + status;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public long[] getServiceNameDsRecord(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/$serviceName/nameServers/update
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/$serviceName/dsRecord
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/data/afnicCorporationTrademarkInformation
+	* Message : Missing identifier.
+	*/
+
+
+	public void deleteZoneZoneNameDynHostLoginLogin(java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.DnssecKey getServiceNameDsRecordId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/dsRecord/" + id + "";
+	public void postServiceNameTaskIdCancel(java.lang.String serviceName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/cancel";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/zone/$zoneName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/zone/$zoneName/soa
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/$serviceName/glueRecord/$host
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/data/afnicAssociationInformation
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/dynHost/record
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/zone/$zoneName/dynHost/record
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/zone/$zoneName/dynHost/record/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getServiceNameTask(java.lang.String serviceName, java.lang.String function, java.lang.String status) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task";
 		String __data = "?";
 		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
+		__data += "function=" + function;
+		__data += "status=" + status;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.DnssecKeyImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String getZoneZoneNameExport(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/export";
+	public long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task";
 		String __data = "?";
-		__data += "zoneName=" + zoneName;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.zone.Status getZoneZoneNameStatus(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/status";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.zone.StatusImpl.class);
-	}
 
-	public java.lang.String[] getDomain(java.lang.String whoisOwner) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/domain";
-		String __data = "?";
-		__data += "whoisOwner=" + whoisOwner;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/$serviceName/glueRecord/$host/update
+	* Message : Missing identifier.
+	*/
 
-	public java.lang.String[] getDomain() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/domain";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
+
+	public void deleteServiceNameOwoField(java.lang.String serviceName, java.lang.String field) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo/" + field + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public java.lang.String postZoneZoneNameTerminate(java.lang.String zoneName) throws java.io.IOException {
@@ -803,140 +589,92 @@ public class DomainImpl implements Domain {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.Task getServiceNameTaskId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		__data += "id=" + id;
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/record/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public java.lang.String[] getZone() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone";
+		String __data = "";
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public void putZoneZoneNameDynHostRecordId(net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord param0, java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record/" + id + "";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.zone.Task postZoneZoneNameImport(java.lang.String zoneFile, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/import";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("zoneFile", zoneFile);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.TaskImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/$serviceName/task/$id
+	* Message : Missing identifier.
+	*/
 
-	public void postZoneZoneNameRefresh(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/refresh";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
-	public void postZoneZoneNameDnssec(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dnssec";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord postZoneZoneNameDynHostRecord(java.lang.String ip, java.lang.String zoneName, java.lang.String subDomain) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ip", ip);
-		__dataMap.put("subDomain", subDomain);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostRecordImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.zone.DynHostRecord postZoneZoneNameDynHostRecord(java.lang.String ip, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("ip", ip);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.zone.DynHostRecordImpl.class);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.Task postServiceNameUkOutgoingTransfer(java.lang.String tag, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/ukOutgoingTransfer";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		__dataMap.put("tag", tag);
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
-
-	public void deleteServiceNameOwoField(java.lang.String serviceName, java.lang.String field) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/owo/" + field + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.Task deleteServiceNameNameServerId(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.TaskImpl.class);
-	}
-
-	public void postZoneZoneNameTaskIdAccelerate(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/accelerate";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public net.zyuiop.ovhapi.api.objects.domain.Domain getServiceName(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "";
+	public java.lang.String[] getDataExtension(java.lang.String country) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/extension";
 		String __data = "?";
-		__data += "serviceName=" + serviceName;
+		__data += "country=" + country;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.DomainImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), java.lang.String[].class);
 	}
 
-	public void postServiceNameTaskIdAccelerate(java.lang.String serviceName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/accelerate";
+	public long[] getDataAfnicAssociationInformation() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicAssociationInformation";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/$serviceName/dsRecord/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/$serviceName/glueRecord
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/dynHost/login/$login
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/status
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getDataProContact() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public void postServiceNameTaskIdRelaunch(java.lang.String serviceName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/relaunch";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putZoneZoneNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
-
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
 		this.client.callRaw(__url, __method, __data, true);
 	}
@@ -960,16 +698,8 @@ public class DomainImpl implements Domain {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public long[] getDataProContact() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/proContact";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
-
-	public void postZoneZoneNameTaskIdCancel(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task/" + id + "/cancel";
+	public void postZoneZoneNameDnssec(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dnssec";
 		Map<Object, Object> __dataMap = new HashMap<>();
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
@@ -977,39 +707,18 @@ public class DomainImpl implements Domain {
 		this.client.callRaw(__url, __method, __data, true);
 	}
 
-	public void deleteZoneZoneNameDynHostRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record/" + id + "";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.DELETE;
-		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
-	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.data.AfnicCorporationTrademarkContact getDataAfnicCorporationTrademarkInformationAfnicCorporationTrademarkId(long afnicCorporationTrademarkId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/afnicCorporationTrademarkInformation/" + afnicCorporationTrademarkId + "";
-		String __data = "?";
-		__data += "afnicCorporationTrademarkId=" + afnicCorporationTrademarkId;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.AfnicCorporationTrademarkContactImpl.class);
-	}
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/data/afnicCorporationTrademarkInformation/$afnicCorporationTrademarkId
+	* Message : Missing identifier.
+	*/
 
-	public long[] getZoneZoneNameTask(java.lang.String zoneName, java.lang.String function, java.lang.String status) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task";
-		String __data = "?";
-		__data += "zoneName=" + zoneName;
-		__data += "function=" + function;
-		__data += "status=" + status;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
-	}
 
-	public long[] getZoneZoneNameTask(java.lang.String zoneName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/task";
+	public long[] getServiceNameNameServer(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/nameServer";
 		String __data = "?";
-		__data += "zoneName=" + zoneName;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
@@ -1036,13 +745,204 @@ public class DomainImpl implements Domain {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.domain.data.Smd getDataSmdSmdId(long smdId) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd/" + smdId + "";
+	public void postZoneZoneNameReset(java.lang.String zoneName, boolean minimized) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/reset";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("minimized", minimized);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+	public void postZoneZoneNameReset(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/reset";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : DELETE > /domain/$serviceName/nameServer/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/soa
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/data/smd/$smdId
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/zone/$zoneName/record/$id
+	* Message : Missing identifier.
+	*/
+
+
+	public long[] getZoneZoneNameRedirection(java.lang.String zoneName, java.lang.String subDomain) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
 		String __data = "?";
-		__data += "smdId=" + smdId;
+		__data += "zoneName=" + zoneName;
+		__data += "subDomain=" + subDomain;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.domain.data.SmdImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public long[] getZoneZoneNameRedirection(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/redirection";
+		String __data = "?";
+		__data += "zoneName=" + zoneName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public java.lang.String[] getZoneZoneNameDynHostLogin(java.lang.String zoneName, java.lang.String subDomain, java.lang.String login) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
+		String __data = "?";
+		__data += "zoneName=" + zoneName;
+		__data += "subDomain=" + subDomain;
+		__data += "login=" + login;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public java.lang.String[] getZoneZoneNameDynHostLogin(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login";
+		String __data = "?";
+		__data += "zoneName=" + zoneName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public java.lang.String getZoneZoneNameExport(java.lang.String zoneName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/export";
+		String __data = "?";
+		__data += "zoneName=" + zoneName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+	}
+
+	public long[] getDataSmd(java.lang.String protectedLabelsLabel) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
+		String __data = "?";
+		__data += "protectedLabels.label=" + protectedLabelsLabel;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public long[] getDataSmd() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/data/smd";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
+	}
+
+	public void deleteZoneZoneNameDynHostRecordId(java.lang.String zoneName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/record/" + id + "";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.DELETE;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/zone/$zoneName/redirection/$id
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/data/proContact/$proContactId
+	* Message : Missing identifier.
+	*/
+
+
+	public void postServiceNameTaskIdAccelerate(java.lang.String serviceName, long id) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/" + serviceName + "/task/" + id + "/accelerate";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
+
+
+	/*
+	* Method creation failed.
+	* Involved method : POST > /domain/$serviceName/nameServer
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /domain/$serviceName/serviceInfos
+	* Message : Missing identifier.
+	*/
+
+
+
+	/*
+	* Method creation failed.
+	* Involved method : PUT > /domain/zone/$zoneName/dynHost/login/$login
+	* Message : Missing identifier.
+	*/
+
+
+	public void postZoneZoneNameDynHostLoginLoginChangePassword(java.lang.String password, java.lang.String zoneName, java.lang.String login) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/domain/zone/" + zoneName + "/dynHost/login/" + login + "/changePassword";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("password", password);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 }

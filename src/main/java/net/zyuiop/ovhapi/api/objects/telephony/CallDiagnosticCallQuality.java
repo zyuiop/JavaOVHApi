@@ -4,71 +4,192 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Call diagnostic analyze structure on metric performance values
  */
 
-public interface CallDiagnosticCallQuality { 
+public class CallDiagnosticCallQuality { 
 
-	/**
-	 * @return Codec used in this direction flow
-	 */
-	java.lang.String getCodec(); 
+	private java.lang.String codec;
+	private long portDst;
+	private java.lang.String callId;
+	private double maxJitter;
+	private java.lang.String ipDst;
+	private long packets;
+	private double maxDelay;
+	private long portSrc;
+	private long rtpLost;
+	private long flowId;
+	private java.util.Date timestamp;
+	private java.lang.String ipSrc;
+	private long mos;
 
-	/**
-	 * @return Destination port
-	 */
-	long getPortDst(); 
+	public CallDiagnosticCallQuality() {
+	}
 
-	/**
-	 * @return Call identifier of the sip signal leg
-	 */
-	java.lang.String getCallId(); 
+	public java.lang.String getCodec() { 
+		return this.codec;
+	} 
 
-	/**
-	 * @return Variation in the delay of received packets. Smaller is better and less is more
-	 */
-	double getMaxJitter(); 
+	public void setCodec(java.lang.String codec) { 
+		this.codec = codec;
+	} 
 
-	/**
-	 * @return The ip address destination
-	 */
-	java.lang.String getIpDst(); 
+	public CallDiagnosticCallQuality codec(java.lang.String codec) { 
+		this.codec = codec;
+		return this;
+	} 
 
-	/**
-	 * @return The number of packet sent in the given direction flow
-	 */
-	long getPackets(); 
+	public long getPortDst() { 
+		return this.portDst;
+	} 
 
-	/**
-	 * @return The max delay between two packet in the given direction flow
-	 */
-	double getMaxDelay(); 
+	public void setPortDst(long portDst) { 
+		this.portDst = portDst;
+	} 
 
-	/**
-	 * @return The port source
-	 */
-	long getPortSrc(); 
+	public CallDiagnosticCallQuality portDst(long portDst) { 
+		this.portDst = portDst;
+		return this;
+	} 
 
-	/**
-	 * @return Number of packet RTP lost in the direction flow
-	 */
-	long getRtpLost(); 
+	public java.lang.String getCallId() { 
+		return this.callId;
+	} 
 
-	/**
-	 * @return Identifier of the metric performance value
-	 */
-	long getFlowId(); 
+	public void setCallId(java.lang.String callId) { 
+		this.callId = callId;
+	} 
 
-	/**
-	 * @return The creation timestamp of the given direction flow
-	 */
-	java.util.Date getTimestamp(); 
+	public CallDiagnosticCallQuality callId(java.lang.String callId) { 
+		this.callId = callId;
+		return this;
+	} 
 
-	/**
-	 * @return The ip address source
-	 */
-	java.lang.String getIpSrc(); 
+	public double getMaxJitter() { 
+		return this.maxJitter;
+	} 
 
-	/**
-	 * @return Mean Opinion Score expressed in one number, from 1 to 5, 1 being the worst and 5 the best.
-	 */
-	long getMos(); 
+	public void setMaxJitter(double maxJitter) { 
+		this.maxJitter = maxJitter;
+	} 
+
+	public CallDiagnosticCallQuality maxJitter(double maxJitter) { 
+		this.maxJitter = maxJitter;
+		return this;
+	} 
+
+	public java.lang.String getIpDst() { 
+		return this.ipDst;
+	} 
+
+	public void setIpDst(java.lang.String ipDst) { 
+		this.ipDst = ipDst;
+	} 
+
+	public CallDiagnosticCallQuality ipDst(java.lang.String ipDst) { 
+		this.ipDst = ipDst;
+		return this;
+	} 
+
+	public long getPackets() { 
+		return this.packets;
+	} 
+
+	public void setPackets(long packets) { 
+		this.packets = packets;
+	} 
+
+	public CallDiagnosticCallQuality packets(long packets) { 
+		this.packets = packets;
+		return this;
+	} 
+
+	public double getMaxDelay() { 
+		return this.maxDelay;
+	} 
+
+	public void setMaxDelay(double maxDelay) { 
+		this.maxDelay = maxDelay;
+	} 
+
+	public CallDiagnosticCallQuality maxDelay(double maxDelay) { 
+		this.maxDelay = maxDelay;
+		return this;
+	} 
+
+	public long getPortSrc() { 
+		return this.portSrc;
+	} 
+
+	public void setPortSrc(long portSrc) { 
+		this.portSrc = portSrc;
+	} 
+
+	public CallDiagnosticCallQuality portSrc(long portSrc) { 
+		this.portSrc = portSrc;
+		return this;
+	} 
+
+	public long getRtpLost() { 
+		return this.rtpLost;
+	} 
+
+	public void setRtpLost(long rtpLost) { 
+		this.rtpLost = rtpLost;
+	} 
+
+	public CallDiagnosticCallQuality rtpLost(long rtpLost) { 
+		this.rtpLost = rtpLost;
+		return this;
+	} 
+
+	public long getFlowId() { 
+		return this.flowId;
+	} 
+
+	public void setFlowId(long flowId) { 
+		this.flowId = flowId;
+	} 
+
+	public CallDiagnosticCallQuality flowId(long flowId) { 
+		this.flowId = flowId;
+		return this;
+	} 
+
+	public java.util.Date getTimestamp() { 
+		return this.timestamp;
+	} 
+
+	public void setTimestamp(java.util.Date timestamp) { 
+		this.timestamp = timestamp;
+	} 
+
+	public CallDiagnosticCallQuality timestamp(java.util.Date timestamp) { 
+		this.timestamp = timestamp;
+		return this;
+	} 
+
+	public java.lang.String getIpSrc() { 
+		return this.ipSrc;
+	} 
+
+	public void setIpSrc(java.lang.String ipSrc) { 
+		this.ipSrc = ipSrc;
+	} 
+
+	public CallDiagnosticCallQuality ipSrc(java.lang.String ipSrc) { 
+		this.ipSrc = ipSrc;
+		return this;
+	} 
+
+	public long getMos() { 
+		return this.mos;
+	} 
+
+	public void setMos(long mos) { 
+		this.mos = mos;
+	} 
+
+	public CallDiagnosticCallQuality mos(long mos) { 
+		this.mos = mos;
+		return this;
+	} 
 
 }

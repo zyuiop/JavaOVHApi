@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.iploadbalancing;
  * Task of your iplb
  */
 
-public interface Task { 
+public class Task { 
 
-	/**
-	 * @return Creation date of your task
-	 */
-	java.util.Date getCreationDate(); 
+	private java.util.Date creationDate;
+	private java.lang.String status;
+	private long progress;
+	private java.lang.String action;
+	private long id;
 
-	/**
-	 * @return Current status of your task
-	 */
-	java.lang.String getStatus(); 
+	public Task() {
+	}
 
-	/**
-	 * @return Task progress percentage
-	 */
-	long getProgress(); 
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
 
-	/**
-	 * @return The action made
-	 */
-	java.lang.String getAction(); 
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
 
-	/**
-	 * @return Id of the task
-	 */
-	long getId(); 
+	public Task creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public Task status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public long getProgress() { 
+		return this.progress;
+	} 
+
+	public void setProgress(long progress) { 
+		this.progress = progress;
+	} 
+
+	public Task progress(long progress) { 
+		this.progress = progress;
+		return this;
+	} 
+
+	public java.lang.String getAction() { 
+		return this.action;
+	} 
+
+	public void setAction(java.lang.String action) { 
+		this.action = action;
+	} 
+
+	public Task action(java.lang.String action) { 
+		this.action = action;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Task id(long id) { 
+		this.id = id;
+		return this;
+	} 
 
 }

@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.dedicatedcloud;
  * Backup configured on a given Datacenter
  */
 
-public interface Backup { 
+public class Backup { 
 
-	/**
-	 * @return The alert level on which we will send an alert on the email address configured
-	 */
-	java.lang.String getMailOnLevel(); 
+	private java.lang.String mailOnLevel;
+	private java.lang.String mailAddress;
+	private java.lang.String state;
 
-	/**
-	 * @return The email address on which alert will be sent if the level you configured is reached. If not set mail is sent to dedicatedCloud administrator contact
-	 */
-	java.lang.String getMailAddress(); 
+	public Backup() {
+	}
 
-	/**
-	 * @return This Backup current state
-	 */
-	java.lang.String getState(); 
+	public java.lang.String getMailOnLevel() { 
+		return this.mailOnLevel;
+	} 
+
+	public void setMailOnLevel(java.lang.String mailOnLevel) { 
+		this.mailOnLevel = mailOnLevel;
+	} 
+
+	public Backup mailOnLevel(java.lang.String mailOnLevel) { 
+		this.mailOnLevel = mailOnLevel;
+		return this;
+	} 
+
+	public java.lang.String getMailAddress() { 
+		return this.mailAddress;
+	} 
+
+	public void setMailAddress(java.lang.String mailAddress) { 
+		this.mailAddress = mailAddress;
+	} 
+
+	public Backup mailAddress(java.lang.String mailAddress) { 
+		this.mailAddress = mailAddress;
+		return this;
+	} 
+
+	public java.lang.String getState() { 
+		return this.state;
+	} 
+
+	public void setState(java.lang.String state) { 
+		this.state = state;
+	} 
+
+	public Backup state(java.lang.String state) { 
+		this.state = state;
+		return this;
+	} 
 
 }

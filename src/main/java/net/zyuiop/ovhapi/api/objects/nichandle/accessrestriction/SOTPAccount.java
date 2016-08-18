@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.nichandle.accessrestriction;
  * SOTP Two-Factor Authentication
  */
 
-public interface SOTPAccount { 
+public class SOTPAccount { 
 
-	/**
-	 * @return Number of remaining codes
-	 */
-	long getRemaining(); 
+	private long remaining;
+	private java.lang.String status;
 
-	/**
-	 * @return Status of this account
-	 */
-	java.lang.String getStatus(); 
+	public SOTPAccount() {
+	}
+
+	public long getRemaining() { 
+		return this.remaining;
+	} 
+
+	public void setRemaining(long remaining) { 
+		this.remaining = remaining;
+	} 
+
+	public SOTPAccount remaining(long remaining) { 
+		this.remaining = remaining;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public SOTPAccount status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
 }

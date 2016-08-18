@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.cloud.user;
  * User
  */
 
-public interface User { 
+public class User { 
 
-	/**
-	 * @return User creation date
-	 */
-	java.util.Date getCreationDate(); 
+	private java.util.Date creationDate;
+	private java.lang.String status;
+	private long id;
+	private java.lang.String description;
+	private java.lang.String username;
 
-	/**
-	 * @return User status
-	 */
-	java.lang.String getStatus(); 
+	public User() {
+	}
 
-	/**
-	 * @return User id
-	 */
-	long getId(); 
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
 
-	/**
-	 * @return User description
-	 */
-	java.lang.String getDescription(); 
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
 
-	/**
-	 * @return Username
-	 */
-	java.lang.String getUsername(); 
+	public User creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public User status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public User id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public User description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
+
+	public java.lang.String getUsername() { 
+		return this.username;
+	} 
+
+	public void setUsername(java.lang.String username) { 
+		this.username = username;
+	} 
+
+	public User username(java.lang.String username) { 
+		this.username = username;
+		return this;
+	} 
 
 }
