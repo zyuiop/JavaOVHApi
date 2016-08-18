@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.cloud;
  * Details about snapshot pricing
  */
 
-public interface SnapshotPrice { 
+public class SnapshotPrice { 
 
-	/**
-	 * @return Monthly flavor price (for 1GB per month)
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getMonthlyPrice(); 
+	private net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice;
+	private java.lang.String region;
+	private net.zyuiop.ovhapi.api.objects.order.Price price;
 
-	/**
-	 * @return Snapshot region
-	 */
-	java.lang.String getRegion(); 
+	public SnapshotPrice() {
+	}
 
-	/**
-	 * @return Hourly snapshot price (for 1GB per hour)
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getPrice(); 
+	public net.zyuiop.ovhapi.api.objects.order.Price getMonthlyPrice() { 
+		return this.monthlyPrice;
+	} 
+
+	public void setMonthlyPrice(net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice) { 
+		this.monthlyPrice = monthlyPrice;
+	} 
+
+	public SnapshotPrice monthlyPrice(net.zyuiop.ovhapi.api.objects.order.Price monthlyPrice) { 
+		this.monthlyPrice = monthlyPrice;
+		return this;
+	} 
+
+	public java.lang.String getRegion() { 
+		return this.region;
+	} 
+
+	public void setRegion(java.lang.String region) { 
+		this.region = region;
+	} 
+
+	public SnapshotPrice region(java.lang.String region) { 
+		this.region = region;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+		return this.price;
+	} 
+
+	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+		this.price = price;
+	} 
+
+	public SnapshotPrice price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+		this.price = price;
+		return this;
+	} 
 
 }

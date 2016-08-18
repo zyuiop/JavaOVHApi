@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.cloud.instance;
  * RescueAdminPassword
  */
 
-public interface RescueAdminPassword { 
+public class RescueAdminPassword { 
 
-	/**
-	 * @return Admin password to connect to your rescue server with
-	 */
-	java.lang.String getAdminPassword(); 
+	private java.lang.String adminPassword;
+
+	public RescueAdminPassword() {
+	}
+
+	public java.lang.String getAdminPassword() { 
+		return this.adminPassword;
+	} 
+
+	public void setAdminPassword(java.lang.String adminPassword) { 
+		this.adminPassword = adminPassword;
+	} 
+
+	public RescueAdminPassword adminPassword(java.lang.String adminPassword) { 
+		this.adminPassword = adminPassword;
+		return this;
+	} 
 
 }

@@ -15,15 +15,13 @@ public class WebstorageImpl implements Webstorage {
 		this.client = client;
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cdn.webstorage.StatsDataType[] getServiceNameStatistics(java.lang.String period, java.lang.String type, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/cdn/webstorage/" + serviceName + "/statistics";
+	public net.zyuiop.ovhapi.api.objects.cdn.webstorage.AccountCredentials getServiceNameCredentials(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/cdn/webstorage/" + serviceName + "/credentials";
 		String __data = "?";
-		__data += "period=" + period;
-		__data += "type=" + type;
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cdn.webstorage.StatsDataTypeImpl[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.cdn.webstorage.AccountCredentials.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
@@ -32,15 +30,18 @@ public class WebstorageImpl implements Webstorage {
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
 	}
 
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/cdn/webstorage/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
+	public net.zyuiop.ovhapi.api.objects.cdn.webstorage.StatsDataType[] getServiceNameStatistics(java.lang.String period, java.lang.String type, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/cdn/webstorage/" + serviceName + "/statistics";
+		String __data = "?";
+		__data += "period=" + period;
+		__data += "type=" + type;
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.cdn.webstorage.StatsDataType[].class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.cdn.webstorage.Account getServiceName(java.lang.String serviceName) throws java.io.IOException {
@@ -49,16 +50,15 @@ public class WebstorageImpl implements Webstorage {
 		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cdn.webstorage.AccountImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.cdn.webstorage.Account.class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.cdn.webstorage.AccountCredentials getServiceNameCredentials(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/cdn/webstorage/" + serviceName + "/credentials";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
+	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/cdn/webstorage/" + serviceName + "/serviceInfos";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.cdn.webstorage.AccountCredentialsImpl.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
 	public java.lang.String[] getCdnWebstorage() throws java.io.IOException {

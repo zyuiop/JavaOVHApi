@@ -4,116 +4,318 @@ package net.zyuiop.ovhapi.api.objects.contact;
  * Representation of a Contact
  */
 
-public interface Contact { 
+public class Contact { 
 
-	/**
-	 * @return Organisation name
-	 */
-	java.lang.String getOrganisationName(); 
+	private java.lang.String organisationName;
+	private java.lang.String vat;
+	private java.util.Date birthDay;
+	private java.lang.String nationalIdentificationNumber;
+	private java.lang.String spareEmail;
+	private java.lang.String email;
+	private java.lang.String fax;
+	private java.lang.String cellPhone;
+	private java.lang.String birthCountry;
+	private net.zyuiop.ovhapi.api.objects.contact.Address address;
+	private long id;
+	private java.lang.String lastName;
+	private java.lang.String companyNationalIdentificationNumber;
+	private java.lang.String gender;
+	private java.lang.String birthCity;
+	private java.lang.String firstName;
+	private java.lang.String language;
+	private java.lang.String organisationType;
+	private java.lang.String legalForm;
+	private java.lang.String phone;
+	private java.lang.String birthZip;
+	private java.lang.String nationality;
 
-	/**
-	 * @return VAT number
-	 */
-	java.lang.String getVat(); 
+	public Contact() {
+	}
 
-	/**
-	 * @return Birth date
-	 */
-	java.util.Date getBirthDay(); 
+	public java.lang.String getOrganisationName() { 
+		return this.organisationName;
+	} 
 
-	/**
-	 * @return National identification number of the contact
-	 */
-	java.lang.String getNationalIdentificationNumber(); 
+	public void setOrganisationName(java.lang.String organisationName) { 
+		this.organisationName = organisationName;
+	} 
 
-	/**
-	 * @return Spare email address
-	 */
-	java.lang.String getSpareEmail(); 
+	public Contact organisationName(java.lang.String organisationName) { 
+		this.organisationName = organisationName;
+		return this;
+	} 
 
-	/**
-	 * @return Email address
-	 */
-	java.lang.String getEmail(); 
+	public java.lang.String getVat() { 
+		return this.vat;
+	} 
 
-	/**
-	 * @return Fax number
-	 */
-	java.lang.String getFax(); 
+	public void setVat(java.lang.String vat) { 
+		this.vat = vat;
+	} 
 
-	/**
-	 * @return Cellphone number
-	 */
-	java.lang.String getCellPhone(); 
+	public Contact vat(java.lang.String vat) { 
+		this.vat = vat;
+		return this;
+	} 
 
-	/**
-	 * @return Birth Country
-	 */
-	java.lang.String getBirthCountry(); 
+	public java.util.Date getBirthDay() { 
+		return this.birthDay;
+	} 
 
-	/**
-	 * @return Address for this contact
-	 */
-	net.zyuiop.ovhapi.api.objects.contact.Address getAddress(); 
+	public void setBirthDay(java.util.Date birthDay) { 
+		this.birthDay = birthDay;
+	} 
 
-	/**
-	 * @return Contact Identifier
-	 */
-	long getId(); 
+	public Contact birthDay(java.util.Date birthDay) { 
+		this.birthDay = birthDay;
+		return this;
+	} 
 
-	/**
-	 * @return Last name
-	 */
-	java.lang.String getLastName(); 
+	public java.lang.String getNationalIdentificationNumber() { 
+		return this.nationalIdentificationNumber;
+	} 
 
-	/**
-	 * @return National identification number of your company
-	 */
-	java.lang.String getCompanyNationalIdentificationNumber(); 
+	public void setNationalIdentificationNumber(java.lang.String nationalIdentificationNumber) { 
+		this.nationalIdentificationNumber = nationalIdentificationNumber;
+	} 
 
-	/**
-	 * @return Gender
-	 */
-	java.lang.String getGender(); 
+	public Contact nationalIdentificationNumber(java.lang.String nationalIdentificationNumber) { 
+		this.nationalIdentificationNumber = nationalIdentificationNumber;
+		return this;
+	} 
 
-	/**
-	 * @return Birth city
-	 */
-	java.lang.String getBirthCity(); 
+	public java.lang.String getSpareEmail() { 
+		return this.spareEmail;
+	} 
 
-	/**
-	 * @return First name
-	 */
-	java.lang.String getFirstName(); 
+	public void setSpareEmail(java.lang.String spareEmail) { 
+		this.spareEmail = spareEmail;
+	} 
 
-	/**
-	 * @return Language
-	 */
-	java.lang.String getLanguage(); 
+	public Contact spareEmail(java.lang.String spareEmail) { 
+		this.spareEmail = spareEmail;
+		return this;
+	} 
 
-	/**
-	 * @return Organisation type
-	 */
-	java.lang.String getOrganisationType(); 
+	public java.lang.String getEmail() { 
+		return this.email;
+	} 
 
-	/**
-	 * @return Legal form of the contact
-	 */
-	java.lang.String getLegalForm(); 
+	public void setEmail(java.lang.String email) { 
+		this.email = email;
+	} 
 
-	/**
-	 * @return Telephone number
-	 */
-	java.lang.String getPhone(); 
+	public Contact email(java.lang.String email) { 
+		this.email = email;
+		return this;
+	} 
 
-	/**
-	 * @return Birth Zipcode
-	 */
-	java.lang.String getBirthZip(); 
+	public java.lang.String getFax() { 
+		return this.fax;
+	} 
 
-	/**
-	 * @return Nationality
-	 */
-	java.lang.String getNationality(); 
+	public void setFax(java.lang.String fax) { 
+		this.fax = fax;
+	} 
+
+	public Contact fax(java.lang.String fax) { 
+		this.fax = fax;
+		return this;
+	} 
+
+	public java.lang.String getCellPhone() { 
+		return this.cellPhone;
+	} 
+
+	public void setCellPhone(java.lang.String cellPhone) { 
+		this.cellPhone = cellPhone;
+	} 
+
+	public Contact cellPhone(java.lang.String cellPhone) { 
+		this.cellPhone = cellPhone;
+		return this;
+	} 
+
+	public java.lang.String getBirthCountry() { 
+		return this.birthCountry;
+	} 
+
+	public void setBirthCountry(java.lang.String birthCountry) { 
+		this.birthCountry = birthCountry;
+	} 
+
+	public Contact birthCountry(java.lang.String birthCountry) { 
+		this.birthCountry = birthCountry;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.contact.Address getAddress() { 
+		return this.address;
+	} 
+
+	public void setAddress(net.zyuiop.ovhapi.api.objects.contact.Address address) { 
+		this.address = address;
+	} 
+
+	public Contact address(net.zyuiop.ovhapi.api.objects.contact.Address address) { 
+		this.address = address;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Contact id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getLastName() { 
+		return this.lastName;
+	} 
+
+	public void setLastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+	} 
+
+	public Contact lastName(java.lang.String lastName) { 
+		this.lastName = lastName;
+		return this;
+	} 
+
+	public java.lang.String getCompanyNationalIdentificationNumber() { 
+		return this.companyNationalIdentificationNumber;
+	} 
+
+	public void setCompanyNationalIdentificationNumber(java.lang.String companyNationalIdentificationNumber) { 
+		this.companyNationalIdentificationNumber = companyNationalIdentificationNumber;
+	} 
+
+	public Contact companyNationalIdentificationNumber(java.lang.String companyNationalIdentificationNumber) { 
+		this.companyNationalIdentificationNumber = companyNationalIdentificationNumber;
+		return this;
+	} 
+
+	public java.lang.String getGender() { 
+		return this.gender;
+	} 
+
+	public void setGender(java.lang.String gender) { 
+		this.gender = gender;
+	} 
+
+	public Contact gender(java.lang.String gender) { 
+		this.gender = gender;
+		return this;
+	} 
+
+	public java.lang.String getBirthCity() { 
+		return this.birthCity;
+	} 
+
+	public void setBirthCity(java.lang.String birthCity) { 
+		this.birthCity = birthCity;
+	} 
+
+	public Contact birthCity(java.lang.String birthCity) { 
+		this.birthCity = birthCity;
+		return this;
+	} 
+
+	public java.lang.String getFirstName() { 
+		return this.firstName;
+	} 
+
+	public void setFirstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+	} 
+
+	public Contact firstName(java.lang.String firstName) { 
+		this.firstName = firstName;
+		return this;
+	} 
+
+	public java.lang.String getLanguage() { 
+		return this.language;
+	} 
+
+	public void setLanguage(java.lang.String language) { 
+		this.language = language;
+	} 
+
+	public Contact language(java.lang.String language) { 
+		this.language = language;
+		return this;
+	} 
+
+	public java.lang.String getOrganisationType() { 
+		return this.organisationType;
+	} 
+
+	public void setOrganisationType(java.lang.String organisationType) { 
+		this.organisationType = organisationType;
+	} 
+
+	public Contact organisationType(java.lang.String organisationType) { 
+		this.organisationType = organisationType;
+		return this;
+	} 
+
+	public java.lang.String getLegalForm() { 
+		return this.legalForm;
+	} 
+
+	public void setLegalForm(java.lang.String legalForm) { 
+		this.legalForm = legalForm;
+	} 
+
+	public Contact legalForm(java.lang.String legalForm) { 
+		this.legalForm = legalForm;
+		return this;
+	} 
+
+	public java.lang.String getPhone() { 
+		return this.phone;
+	} 
+
+	public void setPhone(java.lang.String phone) { 
+		this.phone = phone;
+	} 
+
+	public Contact phone(java.lang.String phone) { 
+		this.phone = phone;
+		return this;
+	} 
+
+	public java.lang.String getBirthZip() { 
+		return this.birthZip;
+	} 
+
+	public void setBirthZip(java.lang.String birthZip) { 
+		this.birthZip = birthZip;
+	} 
+
+	public Contact birthZip(java.lang.String birthZip) { 
+		this.birthZip = birthZip;
+		return this;
+	} 
+
+	public java.lang.String getNationality() { 
+		return this.nationality;
+	} 
+
+	public void setNationality(java.lang.String nationality) { 
+		this.nationality = nationality;
+	} 
+
+	public Contact nationality(java.lang.String nationality) { 
+		this.nationality = nationality;
+		return this;
+	} 
 
 }

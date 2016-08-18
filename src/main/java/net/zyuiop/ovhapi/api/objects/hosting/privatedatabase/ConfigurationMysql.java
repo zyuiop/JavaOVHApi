@@ -4,41 +4,108 @@ package net.zyuiop.ovhapi.api.objects.hosting.privatedatabase;
  * Mysql configuration
  */
 
-public interface ConfigurationMysql { 
+public class ConfigurationMysql { 
 
-	/**
-	 * @return Where was stored temporary files
-	 */
-	java.lang.String getTmpdir(); 
+	private java.lang.String tmpdir;
+	private java.util.Date lastUpdate;
+	private boolean autoCommit;
+	private long innodbBufferPoolSize;
+	private long maxAllowedPacket;
+	private long maxConnections;
+	private boolean skipInnodb;
 
-	/**
-	 * @return Last update date
-	 */
-	java.util.Date getLastUpdate(); 
+	public ConfigurationMysql() {
+	}
 
-	/**
-	 * @return If set to True, all changes to a table take effect immediately. If set to 0, you must use COMMIT to accept a transaction or ROLLBACK to cancel it
-	 */
-	boolean getAutoCommit(); 
+	public java.lang.String getTmpdir() { 
+		return this.tmpdir;
+	} 
 
-	/**
-	 * @return The size of the buffer pool, the memory area where InnoDB caches table and index data. ( size in MB )
-	 */
-	long getInnodbBufferPoolSize(); 
+	public void setTmpdir(java.lang.String tmpdir) { 
+		this.tmpdir = tmpdir;
+	} 
 
-	/**
-	 * @return The maximum size of one packet or any generated/intermediate string. ( size in MB )
-	 */
-	long getMaxAllowedPacket(); 
+	public ConfigurationMysql tmpdir(java.lang.String tmpdir) { 
+		this.tmpdir = tmpdir;
+		return this;
+	} 
 
-	/**
-	 * @return The maximum permitted number of  simultaneous client connections
-	 */
-	long getMaxConnections(); 
+	public java.util.Date getLastUpdate() { 
+		return this.lastUpdate;
+	} 
 
-	/**
-	 * @return If set to False, InnoDB storage engine is available. If you do not use it, you can disable it to save memory
-	 */
-	boolean getSkipInnodb(); 
+	public void setLastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+	} 
+
+	public ConfigurationMysql lastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+		return this;
+	} 
+
+	public boolean getAutoCommit() { 
+		return this.autoCommit;
+	} 
+
+	public void setAutoCommit(boolean autoCommit) { 
+		this.autoCommit = autoCommit;
+	} 
+
+	public ConfigurationMysql autoCommit(boolean autoCommit) { 
+		this.autoCommit = autoCommit;
+		return this;
+	} 
+
+	public long getInnodbBufferPoolSize() { 
+		return this.innodbBufferPoolSize;
+	} 
+
+	public void setInnodbBufferPoolSize(long innodbBufferPoolSize) { 
+		this.innodbBufferPoolSize = innodbBufferPoolSize;
+	} 
+
+	public ConfigurationMysql innodbBufferPoolSize(long innodbBufferPoolSize) { 
+		this.innodbBufferPoolSize = innodbBufferPoolSize;
+		return this;
+	} 
+
+	public long getMaxAllowedPacket() { 
+		return this.maxAllowedPacket;
+	} 
+
+	public void setMaxAllowedPacket(long maxAllowedPacket) { 
+		this.maxAllowedPacket = maxAllowedPacket;
+	} 
+
+	public ConfigurationMysql maxAllowedPacket(long maxAllowedPacket) { 
+		this.maxAllowedPacket = maxAllowedPacket;
+		return this;
+	} 
+
+	public long getMaxConnections() { 
+		return this.maxConnections;
+	} 
+
+	public void setMaxConnections(long maxConnections) { 
+		this.maxConnections = maxConnections;
+	} 
+
+	public ConfigurationMysql maxConnections(long maxConnections) { 
+		this.maxConnections = maxConnections;
+		return this;
+	} 
+
+	public boolean getSkipInnodb() { 
+		return this.skipInnodb;
+	} 
+
+	public void setSkipInnodb(boolean skipInnodb) { 
+		this.skipInnodb = skipInnodb;
+	} 
+
+	public ConfigurationMysql skipInnodb(boolean skipInnodb) { 
+		this.skipInnodb = skipInnodb;
+		return this;
+	} 
 
 }

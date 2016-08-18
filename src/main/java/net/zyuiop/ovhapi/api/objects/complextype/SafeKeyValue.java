@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.complextype;
  * Key and value, with proper key strings
  */
 
-public interface SafeKeyValue<T> { 
+public class SafeKeyValue<T> { 
 
-	/**
-	 * @return null
-	 */
-	T getValue(); 
+	private T value;
+	private java.lang.String key;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getKey(); 
+	public SafeKeyValue() {
+	}
+
+	public T getValue() { 
+		return this.value;
+	} 
+
+	public void setValue(T value) { 
+		this.value = value;
+	} 
+
+	public SafeKeyValue value(T value) { 
+		this.value = value;
+		return this;
+	} 
+
+	public java.lang.String getKey() { 
+		return this.key;
+	} 
+
+	public void setKey(java.lang.String key) { 
+		this.key = key;
+	} 
+
+	public SafeKeyValue key(java.lang.String key) { 
+		this.key = key;
+		return this;
+	} 
 
 }

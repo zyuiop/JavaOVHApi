@@ -4,51 +4,136 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Fax campaigns
  */
 
-public interface FaxCampaign { 
+public class FaxCampaign { 
 
-	/**
-	 * @return The count of failed faxes in the campaign
-	 */
-	long getCountFailed(); 
+	private long countFailed;
+	private java.lang.String status;
+	private java.lang.String name;
+	private java.util.Date dateEnd;
+	private long countTotal;
+	private long countSuccess;
+	private java.lang.String reference;
+	private java.util.Date dateStart;
+	private long id;
 
-	/**
-	 * @return The status of the fax campaign
-	 */
-	java.lang.String getStatus(); 
+	public FaxCampaign() {
+	}
 
-	/**
-	 * @return The name of the fax campaign
-	 */
-	java.lang.String getName(); 
+	public long getCountFailed() { 
+		return this.countFailed;
+	} 
 
-	/**
-	 * @return The end date of the fax campaign
-	 */
-	java.util.Date getDateEnd(); 
+	public void setCountFailed(long countFailed) { 
+		this.countFailed = countFailed;
+	} 
 
-	/**
-	 * @return The total count of faxes in the campaign
-	 */
-	long getCountTotal(); 
+	public FaxCampaign countFailed(long countFailed) { 
+		this.countFailed = countFailed;
+		return this;
+	} 
 
-	/**
-	 * @return The count of success faxes in the campaign
-	 */
-	long getCountSuccess(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return The reference of the fax campaign
-	 */
-	java.lang.String getReference(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
 
-	/**
-	 * @return The start date of the fax campaign
-	 */
-	java.util.Date getDateStart(); 
+	public FaxCampaign status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
-	/**
-	 * @return The id of the fax campaign
-	 */
-	long getId(); 
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public FaxCampaign name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.util.Date getDateEnd() { 
+		return this.dateEnd;
+	} 
+
+	public void setDateEnd(java.util.Date dateEnd) { 
+		this.dateEnd = dateEnd;
+	} 
+
+	public FaxCampaign dateEnd(java.util.Date dateEnd) { 
+		this.dateEnd = dateEnd;
+		return this;
+	} 
+
+	public long getCountTotal() { 
+		return this.countTotal;
+	} 
+
+	public void setCountTotal(long countTotal) { 
+		this.countTotal = countTotal;
+	} 
+
+	public FaxCampaign countTotal(long countTotal) { 
+		this.countTotal = countTotal;
+		return this;
+	} 
+
+	public long getCountSuccess() { 
+		return this.countSuccess;
+	} 
+
+	public void setCountSuccess(long countSuccess) { 
+		this.countSuccess = countSuccess;
+	} 
+
+	public FaxCampaign countSuccess(long countSuccess) { 
+		this.countSuccess = countSuccess;
+		return this;
+	} 
+
+	public java.lang.String getReference() { 
+		return this.reference;
+	} 
+
+	public void setReference(java.lang.String reference) { 
+		this.reference = reference;
+	} 
+
+	public FaxCampaign reference(java.lang.String reference) { 
+		this.reference = reference;
+		return this;
+	} 
+
+	public java.util.Date getDateStart() { 
+		return this.dateStart;
+	} 
+
+	public void setDateStart(java.util.Date dateStart) { 
+		this.dateStart = dateStart;
+	} 
+
+	public FaxCampaign dateStart(java.util.Date dateStart) { 
+		this.dateStart = dateStart;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public FaxCampaign id(long id) { 
+		this.id = id;
+		return this;
+	} 
 
 }

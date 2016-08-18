@@ -7,12 +7,20 @@ package net.zyuiop.ovhapi.api.methods.dedicated;
 public interface Housing { 
 
 	/**
-	 * Revoke this ACL
+	 * Get this object properties
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Housing bay
-	 * @param ipBlock The IP Block specific to this ACL
+	 * @param taskId the id of the task
 	*/
-	net.zyuiop.ovhapi.api.objects.dedicated.server.Task deleteServiceNameFeaturesBackupFTPAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.dedicated.housing.Task getServiceNameTaskTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException;
+
+	/**
+	 * this action stop the task progression if it's possible
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your Housing bay
+	 * @param taskId the id of the task
+	*/
+	void postServiceNameTaskTaskIdCancel(java.lang.String serviceName, long taskId) throws java.io.IOException;
 
 	/**
 	 * Get this object properties
@@ -29,55 +37,18 @@ public interface Housing {
 	net.zyuiop.ovhapi.api.objects.dedicated.server.Task deleteServiceNameFeaturesBackupFTP(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
-	 * Change your Backup FTP password
+	 * Revoke this ACL
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Housing bay
+	 * @param ipBlock The IP Block specific to this ACL
 	*/
-	net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTPPassword(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.dedicated.server.Task deleteServiceNameFeaturesBackupFTPAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException;
 
 	/**
 	 * List available services
 	 * Facultative parameters ? false
 	*/
 	java.lang.String[] getDedicatedHousing() throws java.io.IOException;
-
-	/**
-	 * Get all IP blocks that can be used in the ACL
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your Housing bay
-	*/
-	java.lang.String[] getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * this action stop the task progression if it's possible
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your Housing bay
-	 * @param taskId the id of the task
-	*/
-	void postServiceNameTaskTaskIdCancel(java.lang.String serviceName, long taskId) throws java.io.IOException;
-
-	/**
-	 * Create a new Backup FTP space
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your Housing bay
-	*/
-	net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTP(java.lang.String serviceName) throws java.io.IOException;
-
-
-	/**
-	 * List of IP blocks (and protocols to allow on these blocks) authorized on your backup FTP
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your Housing bay
-	*/
-	java.lang.String[] getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your Housing bay
-	 * @param ipBlock The IP Block specific to this ACL
-	*/
-	net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl getServiceNameFeaturesBackupFTPAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException;
 
 	/**
 	 * Create a new Backup FTP ACL
@@ -121,25 +92,60 @@ public interface Housing {
 	 * Facultative parameters ? false
 	 * @param null New object properties
 	 * @param serviceName The internal name of your Housing bay
+	*/
+	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * List of IP blocks (and protocols to allow on these blocks) authorized on your backup FTP
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your Housing bay
+	*/
+	java.lang.String[] getServiceNameFeaturesBackupFTPAccess(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your Housing bay
 	 * @param ipBlock The IP Block specific to this ACL
 	*/
-	void putServiceNameFeaturesBackupFTPAccessIpBlock(net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl param0, java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl getServiceNameFeaturesBackupFTPAccessIpBlock(java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException;
+
+	/**
+	 * Create a new Backup FTP space
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your Housing bay
+	*/
+	net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTP(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your Housing bay
+	*/
+	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Get all IP blocks that can be used in the ACL
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your Housing bay
+	*/
+	java.lang.String[] getServiceNameFeaturesBackupFTPAuthorizableBlocks(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
 	 * Facultative parameters ? false
 	 * @param null New object properties
 	 * @param serviceName The internal name of your Housing bay
+	 * @param ipBlock The IP Block specific to this ACL
 	*/
-	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+	void putServiceNameFeaturesBackupFTPAccessIpBlock(net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtpAcl param0, java.lang.String serviceName, java.lang.String ipBlock) throws java.io.IOException;
 
 	/**
-	 * Get this object properties
+	 * Change your Backup FTP password
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Housing bay
-	 * @param taskId the id of the task
 	*/
-	net.zyuiop.ovhapi.api.objects.dedicated.housing.Task getServiceNameTaskTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.dedicated.server.Task postServiceNameFeaturesBackupFTPPassword(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Is an APC orderable for this housing bay
@@ -153,6 +159,6 @@ public interface Housing {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your Housing bay
 	*/
-	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.dedicated.server.BackupFtp getServiceNameFeaturesBackupFTP(java.lang.String serviceName) throws java.io.IOException;
 
 }

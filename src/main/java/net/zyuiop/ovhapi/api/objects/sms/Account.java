@@ -4,66 +4,178 @@ package net.zyuiop.ovhapi.api.objects.sms;
  * SMS details
  */
 
-public interface Account { 
+public class Account { 
 
-	/**
-	 * @return null
-	 */
-	net.zyuiop.ovhapi.api.objects.sms.Response getSmsResponse(); 
+	private net.zyuiop.ovhapi.api.objects.sms.Response smsResponse;
+	private java.lang.String status;
+	private double creditsLeft;
+	private java.lang.String name;
+	private long userQuantityWithQuota;
+	private java.lang.String description;
+	private java.lang.String callBack;
+	private double creditThresholdForAutomaticRecredit;
+	private java.lang.String stopCallBack;
+	private double creditsHoldByQuota;
+	private long automaticRecreditAmount;
+	private net.zyuiop.ovhapi.api.objects.sms.Templates templates;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStatus(); 
+	public Account() {
+	}
 
-	/**
-	 * @return null
-	 */
-	double getCreditsLeft(); 
+	public net.zyuiop.ovhapi.api.objects.sms.Response getSmsResponse() { 
+		return this.smsResponse;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getName(); 
+	public void setSmsResponse(net.zyuiop.ovhapi.api.objects.sms.Response smsResponse) { 
+		this.smsResponse = smsResponse;
+	} 
 
-	/**
-	 * @return null
-	 */
-	long getUserQuantityWithQuota(); 
+	public Account smsResponse(net.zyuiop.ovhapi.api.objects.sms.Response smsResponse) { 
+		this.smsResponse = smsResponse;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getDescription(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return URL called when state of a sent SMS changes
-	 */
-	java.lang.String getCallBack(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
 
-	/**
-	 * @return Credit threshold after which an automatic recredit is launched
-	 */
-	double getCreditThresholdForAutomaticRecredit(); 
+	public Account status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
-	/**
-	 * @return URL called when a STOP is received after a receiver replied stop to a SMS
-	 */
-	java.lang.String getStopCallBack(); 
+	public double getCreditsLeft() { 
+		return this.creditsLeft;
+	} 
 
-	/**
-	 * @return null
-	 */
-	double getCreditsHoldByQuota(); 
+	public void setCreditsLeft(double creditsLeft) { 
+		this.creditsLeft = creditsLeft;
+	} 
 
-	/**
-	 * @return null
-	 */
-	long getAutomaticRecreditAmount(); 
+	public Account creditsLeft(double creditsLeft) { 
+		this.creditsLeft = creditsLeft;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	net.zyuiop.ovhapi.api.objects.sms.Templates getTemplates(); 
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Account name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public long getUserQuantityWithQuota() { 
+		return this.userQuantityWithQuota;
+	} 
+
+	public void setUserQuantityWithQuota(long userQuantityWithQuota) { 
+		this.userQuantityWithQuota = userQuantityWithQuota;
+	} 
+
+	public Account userQuantityWithQuota(long userQuantityWithQuota) { 
+		this.userQuantityWithQuota = userQuantityWithQuota;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public Account description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
+
+	public java.lang.String getCallBack() { 
+		return this.callBack;
+	} 
+
+	public void setCallBack(java.lang.String callBack) { 
+		this.callBack = callBack;
+	} 
+
+	public Account callBack(java.lang.String callBack) { 
+		this.callBack = callBack;
+		return this;
+	} 
+
+	public double getCreditThresholdForAutomaticRecredit() { 
+		return this.creditThresholdForAutomaticRecredit;
+	} 
+
+	public void setCreditThresholdForAutomaticRecredit(double creditThresholdForAutomaticRecredit) { 
+		this.creditThresholdForAutomaticRecredit = creditThresholdForAutomaticRecredit;
+	} 
+
+	public Account creditThresholdForAutomaticRecredit(double creditThresholdForAutomaticRecredit) { 
+		this.creditThresholdForAutomaticRecredit = creditThresholdForAutomaticRecredit;
+		return this;
+	} 
+
+	public java.lang.String getStopCallBack() { 
+		return this.stopCallBack;
+	} 
+
+	public void setStopCallBack(java.lang.String stopCallBack) { 
+		this.stopCallBack = stopCallBack;
+	} 
+
+	public Account stopCallBack(java.lang.String stopCallBack) { 
+		this.stopCallBack = stopCallBack;
+		return this;
+	} 
+
+	public double getCreditsHoldByQuota() { 
+		return this.creditsHoldByQuota;
+	} 
+
+	public void setCreditsHoldByQuota(double creditsHoldByQuota) { 
+		this.creditsHoldByQuota = creditsHoldByQuota;
+	} 
+
+	public Account creditsHoldByQuota(double creditsHoldByQuota) { 
+		this.creditsHoldByQuota = creditsHoldByQuota;
+		return this;
+	} 
+
+	public long getAutomaticRecreditAmount() { 
+		return this.automaticRecreditAmount;
+	} 
+
+	public void setAutomaticRecreditAmount(long automaticRecreditAmount) { 
+		this.automaticRecreditAmount = automaticRecreditAmount;
+	} 
+
+	public Account automaticRecreditAmount(long automaticRecreditAmount) { 
+		this.automaticRecreditAmount = automaticRecreditAmount;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.sms.Templates getTemplates() { 
+		return this.templates;
+	} 
+
+	public void setTemplates(net.zyuiop.ovhapi.api.objects.sms.Templates templates) { 
+		this.templates = templates;
+	} 
+
+	public Account templates(net.zyuiop.ovhapi.api.objects.sms.Templates templates) { 
+		this.templates = templates;
+		return this;
+	} 
 
 }

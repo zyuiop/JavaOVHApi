@@ -7,6 +7,20 @@ package net.zyuiop.ovhapi.api.methods.cdn;
 public interface Webstorage { 
 
 	/**
+	 * Gives for customer credentials to accesss swift account
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your CDN Static offer
+	*/
+	net.zyuiop.ovhapi.api.objects.cdn.webstorage.AccountCredentials getServiceNameCredentials(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your CDN Static offer
+	*/
+	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
 	 * Return stats about bandwidth consumption
 	 * Facultative parameters ? false
 	 * @param period null
@@ -20,7 +34,7 @@ public interface Webstorage {
 	 * Facultative parameters ? false
 	 * @param serviceName The internal name of your CDN Static offer
 	*/
-	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
+	net.zyuiop.ovhapi.api.objects.cdn.webstorage.Account getServiceName(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * Alter this object properties
@@ -29,20 +43,6 @@ public interface Webstorage {
 	 * @param serviceName The internal name of your CDN Static offer
 	*/
 	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Get this object properties
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your CDN Static offer
-	*/
-	net.zyuiop.ovhapi.api.objects.cdn.webstorage.Account getServiceName(java.lang.String serviceName) throws java.io.IOException;
-
-	/**
-	 * Gives for customer credentials to accesss swift account
-	 * Facultative parameters ? false
-	 * @param serviceName The internal name of your CDN Static offer
-	*/
-	net.zyuiop.ovhapi.api.objects.cdn.webstorage.AccountCredentials getServiceNameCredentials(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services

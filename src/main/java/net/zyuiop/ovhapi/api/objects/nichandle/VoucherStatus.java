@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.nichandle;
  * Voucher Status and Information
  */
 
-public interface VoucherStatus { 
+public class VoucherStatus { 
 
-	/**
-	 * @return Is voucher valid
-	 */
-	boolean getValidity(); 
+	private boolean validity;
+
+	public VoucherStatus() {
+	}
+
+	public boolean getValidity() { 
+		return this.validity;
+	} 
+
+	public void setValidity(boolean validity) { 
+		this.validity = validity;
+	} 
+
+	public VoucherStatus validity(boolean validity) { 
+		this.validity = validity;
+		return this;
+	} 
 
 }

@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.iploadbalancing;
  * Your IP load balancing
  */
 
-public interface Ip { 
+public class Ip { 
 
-	/**
-	 * @return Location where your service is
-	 */
-	java.lang.String[] getZone(); 
+	private java.lang.String[] zone;
+	private java.lang.String serviceName;
+	private java.lang.String ipLoadbalancing;
+	private java.lang.String state;
 
-	/**
-	 * @return The internal name of your IP load balancing
-	 */
-	java.lang.String getServiceName(); 
+	public Ip() {
+	}
 
-	/**
-	 * @return Your IP load balancing
-	 */
-	java.lang.String getIpLoadbalancing(); 
+	public java.lang.String[] getZone() { 
+		return this.zone;
+	} 
 
-	/**
-	 * @return Current state of your IP
-	 */
-	java.lang.String getState(); 
+	public void setZone(java.lang.String[] zone) { 
+		this.zone = zone;
+	} 
+
+	public Ip zone(java.lang.String[] zone) { 
+		this.zone = zone;
+		return this;
+	} 
+
+	public java.lang.String getServiceName() { 
+		return this.serviceName;
+	} 
+
+	public void setServiceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+	} 
+
+	public Ip serviceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+		return this;
+	} 
+
+	public java.lang.String getIpLoadbalancing() { 
+		return this.ipLoadbalancing;
+	} 
+
+	public void setIpLoadbalancing(java.lang.String ipLoadbalancing) { 
+		this.ipLoadbalancing = ipLoadbalancing;
+	} 
+
+	public Ip ipLoadbalancing(java.lang.String ipLoadbalancing) { 
+		this.ipLoadbalancing = ipLoadbalancing;
+		return this;
+	} 
+
+	public java.lang.String getState() { 
+		return this.state;
+	} 
+
+	public void setState(java.lang.String state) { 
+		this.state = state;
+	} 
+
+	public Ip state(java.lang.String state) { 
+		this.state = state;
+		return this;
+	} 
 
 }

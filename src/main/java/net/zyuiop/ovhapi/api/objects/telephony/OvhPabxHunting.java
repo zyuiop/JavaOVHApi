@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * PABX Hunting
  */
 
-public interface OvhPabxHunting { 
+public class OvhPabxHunting { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getName(); 
+	private java.lang.String name;
+
+	public OvhPabxHunting() {
+	}
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public OvhPabxHunting name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
 
 }

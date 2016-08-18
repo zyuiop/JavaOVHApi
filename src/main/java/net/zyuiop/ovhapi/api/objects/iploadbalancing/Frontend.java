@@ -4,51 +4,136 @@ package net.zyuiop.ovhapi.api.objects.iploadbalancing;
  * Frontend
  */
 
-public interface Frontend { 
+public class Frontend { 
 
-	/**
-	 * @return Zone of you frontend
-	 */
-	java.lang.String getZone(); 
+	private java.lang.String zone;
+	private boolean ssl;
+	private java.lang.String name;
+	private java.lang.String port;
+	private boolean hsts;
+	private java.lang.String redirectLocation;
+	private long defaultBackendId;
+	private java.lang.String type;
+	private long id;
 
-	/**
-	 * @return SSL deciphering
-	 */
-	boolean getSsl(); 
+	public Frontend() {
+	}
 
-	/**
-	 * @return Frontend name
-	 */
-	java.lang.String getName(); 
+	public java.lang.String getZone() { 
+		return this.zone;
+	} 
 
-	/**
-	 * @return Port(s) attached to your frontend
-	 */
-	java.lang.String getPort(); 
+	public void setZone(java.lang.String zone) { 
+		this.zone = zone;
+	} 
 
-	/**
-	 * @return HTTP Strict Transport Security
-	 */
-	boolean getHsts(); 
+	public Frontend zone(java.lang.String zone) { 
+		this.zone = zone;
+		return this;
+	} 
 
-	/**
-	 * @return HTTP redirection (Ex : http://www.ovh.com)
-	 */
-	java.lang.String getRedirectLocation(); 
+	public boolean getSsl() { 
+		return this.ssl;
+	} 
 
-	/**
-	 * @return Default Backend of your frontend
-	 */
-	long getDefaultBackendId(); 
+	public void setSsl(boolean ssl) { 
+		this.ssl = ssl;
+	} 
 
-	/**
-	 * @return Type of your frontend
-	 */
-	java.lang.String getType(); 
+	public Frontend ssl(boolean ssl) { 
+		this.ssl = ssl;
+		return this;
+	} 
 
-	/**
-	 * @return Id of your frontend
-	 */
-	long getId(); 
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Frontend name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getPort() { 
+		return this.port;
+	} 
+
+	public void setPort(java.lang.String port) { 
+		this.port = port;
+	} 
+
+	public Frontend port(java.lang.String port) { 
+		this.port = port;
+		return this;
+	} 
+
+	public boolean getHsts() { 
+		return this.hsts;
+	} 
+
+	public void setHsts(boolean hsts) { 
+		this.hsts = hsts;
+	} 
+
+	public Frontend hsts(boolean hsts) { 
+		this.hsts = hsts;
+		return this;
+	} 
+
+	public java.lang.String getRedirectLocation() { 
+		return this.redirectLocation;
+	} 
+
+	public void setRedirectLocation(java.lang.String redirectLocation) { 
+		this.redirectLocation = redirectLocation;
+	} 
+
+	public Frontend redirectLocation(java.lang.String redirectLocation) { 
+		this.redirectLocation = redirectLocation;
+		return this;
+	} 
+
+	public long getDefaultBackendId() { 
+		return this.defaultBackendId;
+	} 
+
+	public void setDefaultBackendId(long defaultBackendId) { 
+		this.defaultBackendId = defaultBackendId;
+	} 
+
+	public Frontend defaultBackendId(long defaultBackendId) { 
+		this.defaultBackendId = defaultBackendId;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Frontend type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Frontend id(long id) { 
+		this.id = id;
+		return this;
+	} 
 
 }

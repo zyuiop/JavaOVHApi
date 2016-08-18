@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.license;
  * Your License options
  */
 
-public interface Option { 
+public class Option { 
 
-	/**
-	 * @return Quantity or corresponding label of the designated option enabled on your license
-	 */
-	java.lang.String getAmount(); 
+	private java.lang.String amount;
+	private java.lang.String version;
+	private java.lang.String label;
+	private boolean canBeDeleted;
+	private java.util.Date expirationDate;
 
-	/**
-	 * @return This option related version
-	 */
-	java.lang.String getVersion(); 
+	public Option() {
+	}
 
-	/**
-	 * @return This option designation
-	 */
-	java.lang.String getLabel(); 
+	public java.lang.String getAmount() { 
+		return this.amount;
+	} 
 
-	/**
-	 * @return Specifies whether this option can be released or not
-	 */
-	boolean getCanBeDeleted(); 
+	public void setAmount(java.lang.String amount) { 
+		this.amount = amount;
+	} 
 
-	/**
-	 * @return This option expiration date
-	 */
-	java.util.Date getExpirationDate(); 
+	public Option amount(java.lang.String amount) { 
+		this.amount = amount;
+		return this;
+	} 
+
+	public java.lang.String getVersion() { 
+		return this.version;
+	} 
+
+	public void setVersion(java.lang.String version) { 
+		this.version = version;
+	} 
+
+	public Option version(java.lang.String version) { 
+		this.version = version;
+		return this;
+	} 
+
+	public java.lang.String getLabel() { 
+		return this.label;
+	} 
+
+	public void setLabel(java.lang.String label) { 
+		this.label = label;
+	} 
+
+	public Option label(java.lang.String label) { 
+		this.label = label;
+		return this;
+	} 
+
+	public boolean getCanBeDeleted() { 
+		return this.canBeDeleted;
+	} 
+
+	public void setCanBeDeleted(boolean canBeDeleted) { 
+		this.canBeDeleted = canBeDeleted;
+	} 
+
+	public Option canBeDeleted(boolean canBeDeleted) { 
+		this.canBeDeleted = canBeDeleted;
+		return this;
+	} 
+
+	public java.util.Date getExpirationDate() { 
+		return this.expirationDate;
+	} 
+
+	public void setExpirationDate(java.util.Date expirationDate) { 
+		this.expirationDate = expirationDate;
+	} 
+
+	public Option expirationDate(java.util.Date expirationDate) { 
+		this.expirationDate = expirationDate;
+		return this;
+	} 
 
 }

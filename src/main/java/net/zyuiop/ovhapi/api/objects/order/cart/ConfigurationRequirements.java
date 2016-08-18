@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.order.cart;
  * Information about a configuration
  */
 
-public interface ConfigurationRequirements { 
+public class ConfigurationRequirements { 
 
-	/**
-	 * @return Indicates if the configuration item is required
-	 */
-	boolean getRequired(); 
+	private boolean required;
+	private java.lang.String[] fields;
+	private java.lang.String label;
+	private java.lang.String type;
 
-	/**
-	 * @return Indicates if some particular fields have to be inputed during the creation of `type` resource
-	 */
-	java.lang.String[] getFields(); 
+	public ConfigurationRequirements() {
+	}
 
-	/**
-	 * @return Label for your configuration item
-	 */
-	java.lang.String getLabel(); 
+	public boolean getRequired() { 
+		return this.required;
+	} 
 
-	/**
-	 * @return Type of the configuration item
-	 */
-	java.lang.String getType(); 
+	public void setRequired(boolean required) { 
+		this.required = required;
+	} 
+
+	public ConfigurationRequirements required(boolean required) { 
+		this.required = required;
+		return this;
+	} 
+
+	public java.lang.String[] getFields() { 
+		return this.fields;
+	} 
+
+	public void setFields(java.lang.String[] fields) { 
+		this.fields = fields;
+	} 
+
+	public ConfigurationRequirements fields(java.lang.String[] fields) { 
+		this.fields = fields;
+		return this;
+	} 
+
+	public java.lang.String getLabel() { 
+		return this.label;
+	} 
+
+	public void setLabel(java.lang.String label) { 
+		this.label = label;
+	} 
+
+	public ConfigurationRequirements label(java.lang.String label) { 
+		this.label = label;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public ConfigurationRequirements type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
 
 }

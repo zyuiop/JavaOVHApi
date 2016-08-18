@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.xdsl.eligibility;
  * Represents a street
  */
 
-public interface Street { 
+public class Street { 
 
-	/**
-	 * @return The name of the street
-	 */
-	java.lang.String getName(); 
+	private java.lang.String name;
+	private java.lang.String rivoliCode;
 
-	/**
-	 * @return The identifier of the street
-	 */
-	java.lang.String getRivoliCode(); 
+	public Street() {
+	}
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Street name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getRivoliCode() { 
+		return this.rivoliCode;
+	} 
+
+	public void setRivoliCode(java.lang.String rivoliCode) { 
+		this.rivoliCode = rivoliCode;
+	} 
+
+	public Street rivoliCode(java.lang.String rivoliCode) { 
+		this.rivoliCode = rivoliCode;
+		return this;
+	} 
 
 }

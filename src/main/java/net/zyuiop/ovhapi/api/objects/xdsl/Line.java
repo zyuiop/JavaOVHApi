@@ -4,66 +4,178 @@ package net.zyuiop.ovhapi.api.objects.xdsl;
  * Information about the physical copper line
  */
 
-public interface Line { 
+public class Line { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getDeconsolidation(); 
+	private java.lang.String deconsolidation;
+	private net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint concentrationPoint;
+	private java.lang.String number;
+	private long distance;
+	private java.lang.String faultRepairTime;
+	private boolean directDistribution;
+	private boolean portability;
+	private double mitigation;
+	private net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength[] lineSectionsLength;
+	private double syncUp;
+	private double syncDown;
+	private java.lang.String originalNumber;
 
-	/**
-	 * @return Data to identify the line at the concentration point
-	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint getConcentrationPoint(); 
+	public Line() {
+	}
 
-	/**
-	 * @return The number of the line
-	 */
-	java.lang.String getNumber(); 
+	public java.lang.String getDeconsolidation() { 
+		return this.deconsolidation;
+	} 
 
-	/**
-	 * @return Distance in meters from the DSLAM
-	 */
-	long getDistance(); 
+	public void setDeconsolidation(java.lang.String deconsolidation) { 
+		this.deconsolidation = deconsolidation;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getFaultRepairTime(); 
+	public Line deconsolidation(java.lang.String deconsolidation) { 
+		this.deconsolidation = deconsolidation;
+		return this;
+	} 
 
-	/**
-	 * @return True if the line is directly wired on the DSLAM
-	 */
-	boolean getDirectDistribution(); 
+	public net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint getConcentrationPoint() { 
+		return this.concentrationPoint;
+	} 
 
-	/**
-	 * @return Whether the line number has been ported to OVH, to be used with VoIP service
-	 */
-	boolean getPortability(); 
+	public void setConcentrationPoint(net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint concentrationPoint) { 
+		this.concentrationPoint = concentrationPoint;
+	} 
 
-	/**
-	 * @return Mitigation of the line in dB
-	 */
-	double getMitigation(); 
+	public Line concentrationPoint(net.zyuiop.ovhapi.api.objects.xdsl.LandlineConcentrationPoint concentrationPoint) { 
+		this.concentrationPoint = concentrationPoint;
+		return this;
+	} 
 
-	/**
-	 * @return Detailed information about the sections between the DSLAM and the telephone jack
-	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength[] getLineSectionsLength(); 
+	public java.lang.String getNumber() { 
+		return this.number;
+	} 
 
-	/**
-	 * @return The upload synchronisation on the DSLAM in Kbps
-	 */
-	double getSyncUp(); 
+	public void setNumber(java.lang.String number) { 
+		this.number = number;
+	} 
 
-	/**
-	 * @return The download synchronisation on the DSLAM in Kbps
-	 */
-	double getSyncDown(); 
+	public Line number(java.lang.String number) { 
+		this.number = number;
+		return this;
+	} 
 
-	/**
-	 * @return The number used to place the order. Null if the same as the current number.
-	 */
-	java.lang.String getOriginalNumber(); 
+	public long getDistance() { 
+		return this.distance;
+	} 
+
+	public void setDistance(long distance) { 
+		this.distance = distance;
+	} 
+
+	public Line distance(long distance) { 
+		this.distance = distance;
+		return this;
+	} 
+
+	public java.lang.String getFaultRepairTime() { 
+		return this.faultRepairTime;
+	} 
+
+	public void setFaultRepairTime(java.lang.String faultRepairTime) { 
+		this.faultRepairTime = faultRepairTime;
+	} 
+
+	public Line faultRepairTime(java.lang.String faultRepairTime) { 
+		this.faultRepairTime = faultRepairTime;
+		return this;
+	} 
+
+	public boolean getDirectDistribution() { 
+		return this.directDistribution;
+	} 
+
+	public void setDirectDistribution(boolean directDistribution) { 
+		this.directDistribution = directDistribution;
+	} 
+
+	public Line directDistribution(boolean directDistribution) { 
+		this.directDistribution = directDistribution;
+		return this;
+	} 
+
+	public boolean getPortability() { 
+		return this.portability;
+	} 
+
+	public void setPortability(boolean portability) { 
+		this.portability = portability;
+	} 
+
+	public Line portability(boolean portability) { 
+		this.portability = portability;
+		return this;
+	} 
+
+	public double getMitigation() { 
+		return this.mitigation;
+	} 
+
+	public void setMitigation(double mitigation) { 
+		this.mitigation = mitigation;
+	} 
+
+	public Line mitigation(double mitigation) { 
+		this.mitigation = mitigation;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength[] getLineSectionsLength() { 
+		return this.lineSectionsLength;
+	} 
+
+	public void setLineSectionsLength(net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength[] lineSectionsLength) { 
+		this.lineSectionsLength = lineSectionsLength;
+	} 
+
+	public Line lineSectionsLength(net.zyuiop.ovhapi.api.objects.xdsl.LineSectionLength[] lineSectionsLength) { 
+		this.lineSectionsLength = lineSectionsLength;
+		return this;
+	} 
+
+	public double getSyncUp() { 
+		return this.syncUp;
+	} 
+
+	public void setSyncUp(double syncUp) { 
+		this.syncUp = syncUp;
+	} 
+
+	public Line syncUp(double syncUp) { 
+		this.syncUp = syncUp;
+		return this;
+	} 
+
+	public double getSyncDown() { 
+		return this.syncDown;
+	} 
+
+	public void setSyncDown(double syncDown) { 
+		this.syncDown = syncDown;
+	} 
+
+	public Line syncDown(double syncDown) { 
+		this.syncDown = syncDown;
+		return this;
+	} 
+
+	public java.lang.String getOriginalNumber() { 
+		return this.originalNumber;
+	} 
+
+	public void setOriginalNumber(java.lang.String originalNumber) { 
+		this.originalNumber = originalNumber;
+	} 
+
+	public Line originalNumber(java.lang.String originalNumber) { 
+		this.originalNumber = originalNumber;
+		return this;
+	} 
 
 }

@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.email.domain;
  * Mailing List
  */
 
-public interface MailingList { 
+public class MailingList { 
 
-	/**
-	 * @return Language of mailing list
-	 */
-	java.lang.String getLanguage(); 
+	private java.lang.String language;
+	private net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct options;
+	private java.lang.String name;
+	private java.lang.String ownerEmail;
+	private java.lang.String replyTo;
+	private long id;
+	private java.util.Date nbSubscribersUpdateDate;
+	private long nbSubscribers;
 
-	/**
-	 * @return Options of mailing list
-	 */
-	net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct getOptions(); 
+	public MailingList() {
+	}
 
-	/**
-	 * @return Name of mailing list
-	 */
-	java.lang.String getName(); 
+	public java.lang.String getLanguage() { 
+		return this.language;
+	} 
 
-	/**
-	 * @return Owner email of mailing list
-	 */
-	java.lang.String getOwnerEmail(); 
+	public void setLanguage(java.lang.String language) { 
+		this.language = language;
+	} 
 
-	/**
-	 * @return Email to reply of mailing list
-	 */
-	java.lang.String getReplyTo(); 
+	public MailingList language(java.lang.String language) { 
+		this.language = language;
+		return this;
+	} 
 
-	/**
-	 * @return Id of mailing list
-	 */
-	long getId(); 
+	public net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct getOptions() { 
+		return this.options;
+	} 
 
-	/**
-	 * @return Last update subscribers
-	 */
-	java.util.Date getNbSubscribersUpdateDate(); 
+	public void setOptions(net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct options) { 
+		this.options = options;
+	} 
 
-	/**
-	 * @return Subscribers number of mailing list
-	 */
-	long getNbSubscribers(); 
+	public MailingList options(net.zyuiop.ovhapi.api.objects.domain.DomainMlOptionsStruct options) { 
+		this.options = options;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public MailingList name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getOwnerEmail() { 
+		return this.ownerEmail;
+	} 
+
+	public void setOwnerEmail(java.lang.String ownerEmail) { 
+		this.ownerEmail = ownerEmail;
+	} 
+
+	public MailingList ownerEmail(java.lang.String ownerEmail) { 
+		this.ownerEmail = ownerEmail;
+		return this;
+	} 
+
+	public java.lang.String getReplyTo() { 
+		return this.replyTo;
+	} 
+
+	public void setReplyTo(java.lang.String replyTo) { 
+		this.replyTo = replyTo;
+	} 
+
+	public MailingList replyTo(java.lang.String replyTo) { 
+		this.replyTo = replyTo;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public MailingList id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.util.Date getNbSubscribersUpdateDate() { 
+		return this.nbSubscribersUpdateDate;
+	} 
+
+	public void setNbSubscribersUpdateDate(java.util.Date nbSubscribersUpdateDate) { 
+		this.nbSubscribersUpdateDate = nbSubscribersUpdateDate;
+	} 
+
+	public MailingList nbSubscribersUpdateDate(java.util.Date nbSubscribersUpdateDate) { 
+		this.nbSubscribersUpdateDate = nbSubscribersUpdateDate;
+		return this;
+	} 
+
+	public long getNbSubscribers() { 
+		return this.nbSubscribers;
+	} 
+
+	public void setNbSubscribers(long nbSubscribers) { 
+		this.nbSubscribers = nbSubscribers;
+	} 
+
+	public MailingList nbSubscribers(long nbSubscribers) { 
+		this.nbSubscribers = nbSubscribers;
+		return this;
+	} 
 
 }

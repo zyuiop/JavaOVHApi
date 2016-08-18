@@ -4,41 +4,108 @@ package net.zyuiop.ovhapi.api.objects.cloud.identity;
  * OpenstackToken
  */
 
-public interface OpenstackToken { 
+public class OpenstackToken { 
 
-	/**
-	 * @return 
-	 */
-	net.zyuiop.ovhapi.api.objects.cloud.identity.Role[] getRoles(); 
+	private net.zyuiop.ovhapi.api.objects.cloud.identity.Role[] roles;
+	private net.zyuiop.ovhapi.api.objects.cloud.identity.Catalog[] catalog;
+	private java.util.Date expires_at;
+	private net.zyuiop.ovhapi.api.objects.cloud.identity.TokenProject project;
+	private java.util.Date issued_at;
+	private java.lang.String[] methods;
+	private net.zyuiop.ovhapi.api.objects.cloud.identity.UserToken user;
 
-	/**
-	 * @return 
-	 */
-	net.zyuiop.ovhapi.api.objects.cloud.identity.Catalog[] getCatalog(); 
+	public OpenstackToken() {
+	}
 
-	/**
-	 * @return 
-	 */
-	java.util.Date getExpires_at(); 
+	public net.zyuiop.ovhapi.api.objects.cloud.identity.Role[] getRoles() { 
+		return this.roles;
+	} 
 
-	/**
-	 * @return 
-	 */
-	net.zyuiop.ovhapi.api.objects.cloud.identity.TokenProject getProject(); 
+	public void setRoles(net.zyuiop.ovhapi.api.objects.cloud.identity.Role[] roles) { 
+		this.roles = roles;
+	} 
 
-	/**
-	 * @return 
-	 */
-	java.util.Date getIssued_at(); 
+	public OpenstackToken roles(net.zyuiop.ovhapi.api.objects.cloud.identity.Role[] roles) { 
+		this.roles = roles;
+		return this;
+	} 
 
-	/**
-	 * @return 
-	 */
-	java.lang.String[] getMethods(); 
+	public net.zyuiop.ovhapi.api.objects.cloud.identity.Catalog[] getCatalog() { 
+		return this.catalog;
+	} 
 
-	/**
-	 * @return 
-	 */
-	net.zyuiop.ovhapi.api.objects.cloud.identity.UserToken getUser(); 
+	public void setCatalog(net.zyuiop.ovhapi.api.objects.cloud.identity.Catalog[] catalog) { 
+		this.catalog = catalog;
+	} 
+
+	public OpenstackToken catalog(net.zyuiop.ovhapi.api.objects.cloud.identity.Catalog[] catalog) { 
+		this.catalog = catalog;
+		return this;
+	} 
+
+	public java.util.Date getExpires_at() { 
+		return this.expires_at;
+	} 
+
+	public void setExpires_at(java.util.Date expires_at) { 
+		this.expires_at = expires_at;
+	} 
+
+	public OpenstackToken expires_at(java.util.Date expires_at) { 
+		this.expires_at = expires_at;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.cloud.identity.TokenProject getProject() { 
+		return this.project;
+	} 
+
+	public void setProject(net.zyuiop.ovhapi.api.objects.cloud.identity.TokenProject project) { 
+		this.project = project;
+	} 
+
+	public OpenstackToken project(net.zyuiop.ovhapi.api.objects.cloud.identity.TokenProject project) { 
+		this.project = project;
+		return this;
+	} 
+
+	public java.util.Date getIssued_at() { 
+		return this.issued_at;
+	} 
+
+	public void setIssued_at(java.util.Date issued_at) { 
+		this.issued_at = issued_at;
+	} 
+
+	public OpenstackToken issued_at(java.util.Date issued_at) { 
+		this.issued_at = issued_at;
+		return this;
+	} 
+
+	public java.lang.String[] getMethods() { 
+		return this.methods;
+	} 
+
+	public void setMethods(java.lang.String[] methods) { 
+		this.methods = methods;
+	} 
+
+	public OpenstackToken methods(java.lang.String[] methods) { 
+		this.methods = methods;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.cloud.identity.UserToken getUser() { 
+		return this.user;
+	} 
+
+	public void setUser(net.zyuiop.ovhapi.api.objects.cloud.identity.UserToken user) { 
+		this.user = user;
+	} 
+
+	public OpenstackToken user(net.zyuiop.ovhapi.api.objects.cloud.identity.UserToken user) { 
+		this.user = user;
+		return this;
+	} 
 
 }

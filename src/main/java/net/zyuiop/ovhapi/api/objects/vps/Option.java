@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.vps;
  * Information about the options of a VPS Virtual Machine
  */
 
-public interface Option { 
+public class Option { 
 
-	/**
-	 * @return The option name
-	 */
-	java.lang.String getOption(); 
+	private java.lang.String option;
+	private java.lang.String state;
 
-	/**
-	 * @return The state of the option
-	 */
-	java.lang.String getState(); 
+	public Option() {
+	}
+
+	public java.lang.String getOption() { 
+		return this.option;
+	} 
+
+	public void setOption(java.lang.String option) { 
+		this.option = option;
+	} 
+
+	public Option option(java.lang.String option) { 
+		this.option = option;
+		return this;
+	} 
+
+	public java.lang.String getState() { 
+		return this.state;
+	} 
+
+	public void setState(java.lang.String state) { 
+		this.state = state;
+	} 
+
+	public Option state(java.lang.String state) { 
+		this.state = state;
+		return this;
+	} 
 
 }

@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.hosting.web;
  * State of available php versions for this account
  */
 
-public interface PhpVersion { 
+public class PhpVersion { 
 
-	/**
-	 * @return Current support of this php version
-	 */
-	java.lang.String getSupport(); 
+	private java.lang.String support;
+	private java.lang.String version;
 
-	/**
-	 * @return PHP version
-	 */
-	java.lang.String getVersion(); 
+	public PhpVersion() {
+	}
+
+	public java.lang.String getSupport() { 
+		return this.support;
+	} 
+
+	public void setSupport(java.lang.String support) { 
+		this.support = support;
+	} 
+
+	public PhpVersion support(java.lang.String support) { 
+		this.support = support;
+		return this;
+	} 
+
+	public java.lang.String getVersion() { 
+		return this.version;
+	} 
+
+	public void setVersion(java.lang.String version) { 
+		this.version = version;
+	} 
+
+	public PhpVersion version(java.lang.String version) { 
+		this.version = version;
+		return this;
+	} 
 
 }

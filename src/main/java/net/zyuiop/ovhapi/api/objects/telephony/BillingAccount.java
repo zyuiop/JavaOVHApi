@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Billing Account
  */
 
-public interface BillingAccount { 
+public class BillingAccount { 
 
-	/**
-	 * @return Allowed outplan
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getAllowedOutplan(); 
+	private net.zyuiop.ovhapi.api.objects.order.Price allowedOutplan;
+	private net.zyuiop.ovhapi.api.objects.order.Price securityDeposit;
+	private java.lang.String status;
+	private net.zyuiop.ovhapi.api.objects.order.Price creditThreshold;
+	private net.zyuiop.ovhapi.api.objects.order.Price currentOutplan;
+	private java.lang.String description;
 
-	/**
-	 * @return Security deposit amount
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getSecurityDeposit(); 
+	public BillingAccount() {
+	}
 
-	/**
-	 * @return Current status of billing account
-	 */
-	java.lang.String getStatus(); 
+	public net.zyuiop.ovhapi.api.objects.order.Price getAllowedOutplan() { 
+		return this.allowedOutplan;
+	} 
 
-	/**
-	 * @return Allowed threshold credit
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getCreditThreshold(); 
+	public void setAllowedOutplan(net.zyuiop.ovhapi.api.objects.order.Price allowedOutplan) { 
+		this.allowedOutplan = allowedOutplan;
+	} 
 
-	/**
-	 * @return Current outplan
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getCurrentOutplan(); 
+	public BillingAccount allowedOutplan(net.zyuiop.ovhapi.api.objects.order.Price allowedOutplan) { 
+		this.allowedOutplan = allowedOutplan;
+		return this;
+	} 
 
-	/**
-	 * @return Description of the billing account
-	 */
-	java.lang.String getDescription(); 
+	public net.zyuiop.ovhapi.api.objects.order.Price getSecurityDeposit() { 
+		return this.securityDeposit;
+	} 
+
+	public void setSecurityDeposit(net.zyuiop.ovhapi.api.objects.order.Price securityDeposit) { 
+		this.securityDeposit = securityDeposit;
+	} 
+
+	public BillingAccount securityDeposit(net.zyuiop.ovhapi.api.objects.order.Price securityDeposit) { 
+		this.securityDeposit = securityDeposit;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public BillingAccount status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getCreditThreshold() { 
+		return this.creditThreshold;
+	} 
+
+	public void setCreditThreshold(net.zyuiop.ovhapi.api.objects.order.Price creditThreshold) { 
+		this.creditThreshold = creditThreshold;
+	} 
+
+	public BillingAccount creditThreshold(net.zyuiop.ovhapi.api.objects.order.Price creditThreshold) { 
+		this.creditThreshold = creditThreshold;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getCurrentOutplan() { 
+		return this.currentOutplan;
+	} 
+
+	public void setCurrentOutplan(net.zyuiop.ovhapi.api.objects.order.Price currentOutplan) { 
+		this.currentOutplan = currentOutplan;
+	} 
+
+	public BillingAccount currentOutplan(net.zyuiop.ovhapi.api.objects.order.Price currentOutplan) { 
+		this.currentOutplan = currentOutplan;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public BillingAccount description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
 
 }

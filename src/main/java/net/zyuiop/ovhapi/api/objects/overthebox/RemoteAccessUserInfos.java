@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.overthebox;
  * Infos about the remote user
  */
 
-public interface RemoteAccessUserInfos { 
+public class RemoteAccessUserInfos { 
 
-	/**
-	 * @return IP from which the remote access will be allowed
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private java.lang.String user;
+	private java.lang.String publicKey;
 
-	/**
-	 * @return The user that will access the device remotely
-	 */
-	java.lang.String getUser(); 
+	public RemoteAccessUserInfos() {
+	}
 
-	/**
-	 * @return The public key authorized on the device (for SSH purpose)
-	 */
-	java.lang.String getPublicKey(); 
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public RemoteAccessUserInfos ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getUser() { 
+		return this.user;
+	} 
+
+	public void setUser(java.lang.String user) { 
+		this.user = user;
+	} 
+
+	public RemoteAccessUserInfos user(java.lang.String user) { 
+		this.user = user;
+		return this;
+	} 
+
+	public java.lang.String getPublicKey() { 
+		return this.publicKey;
+	} 
+
+	public void setPublicKey(java.lang.String publicKey) { 
+		this.publicKey = publicKey;
+	} 
+
+	public RemoteAccessUserInfos publicKey(java.lang.String publicKey) { 
+		this.publicKey = publicKey;
+		return this;
+	} 
 
 }

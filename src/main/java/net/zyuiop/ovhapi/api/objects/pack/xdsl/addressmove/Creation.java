@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.pack.xdsl.addressmove;
  * The parameters needed to create a new landline
  */
 
-public interface Creation { 
+public class Creation { 
 
-	/**
-	 * @return Data to book a meeting slot
-	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot getMeeting(); 
+	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot meeting;
+	private net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address;
 
-	/**
-	 * @return The address
-	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address getAddress(); 
+	public Creation() {
+	}
+
+	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot getMeeting() { 
+		return this.meeting;
+	} 
+
+	public void setMeeting(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot meeting) { 
+		this.meeting = meeting;
+	} 
+
+	public Creation meeting(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.BookMeetingSlot meeting) { 
+		this.meeting = meeting;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address getAddress() { 
+		return this.address;
+	} 
+
+	public void setAddress(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address) { 
+		this.address = address;
+	} 
+
+	public Creation address(net.zyuiop.ovhapi.api.objects.xdsl.eligibility.Address address) { 
+		this.address = address;
+		return this;
+	} 
 
 }

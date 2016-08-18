@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.ip;
  * Mitigation attack on your ip
  */
 
-public interface MitigationAttack { 
+public class MitigationAttack { 
 
-	/**
-	 * @return End of the attack
-	 */
-	java.util.Date getEndDate(); 
+	private java.util.Date endDate;
+	private long idAttack;
+	private java.lang.String ipAttack;
+	private java.util.Date startDate;
 
-	/**
-	 * @return Internal id of your attack
-	 */
-	long getIdAttack(); 
+	public MitigationAttack() {
+	}
 
-	/**
-	 * @return Your ip
-	 */
-	java.lang.String getIpAttack(); 
+	public java.util.Date getEndDate() { 
+		return this.endDate;
+	} 
 
-	/**
-	 * @return Start of the attack
-	 */
-	java.util.Date getStartDate(); 
+	public void setEndDate(java.util.Date endDate) { 
+		this.endDate = endDate;
+	} 
+
+	public MitigationAttack endDate(java.util.Date endDate) { 
+		this.endDate = endDate;
+		return this;
+	} 
+
+	public long getIdAttack() { 
+		return this.idAttack;
+	} 
+
+	public void setIdAttack(long idAttack) { 
+		this.idAttack = idAttack;
+	} 
+
+	public MitigationAttack idAttack(long idAttack) { 
+		this.idAttack = idAttack;
+		return this;
+	} 
+
+	public java.lang.String getIpAttack() { 
+		return this.ipAttack;
+	} 
+
+	public void setIpAttack(java.lang.String ipAttack) { 
+		this.ipAttack = ipAttack;
+	} 
+
+	public MitigationAttack ipAttack(java.lang.String ipAttack) { 
+		this.ipAttack = ipAttack;
+		return this;
+	} 
+
+	public java.util.Date getStartDate() { 
+		return this.startDate;
+	} 
+
+	public void setStartDate(java.util.Date startDate) { 
+		this.startDate = startDate;
+	} 
+
+	public MitigationAttack startDate(java.util.Date startDate) { 
+		this.startDate = startDate;
+		return this;
+	} 
 
 }

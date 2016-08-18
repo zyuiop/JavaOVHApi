@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.pack.xdsl;
  * Terms to unpack services
  */
 
-public interface UnpackTerms { 
+public class UnpackTerms { 
 
-	/**
-	 * @return Tells whether or not the service can be unpacked
-	 */
-	boolean getIsAllowed(); 
+	private boolean isAllowed;
+	private double renewPeriod;
+	private net.zyuiop.ovhapi.api.objects.order.Price renewPrice;
+	private net.zyuiop.ovhapi.api.objects.order.Price price;
 
-	/**
-	 * @return Renew period in month of the service
-	 */
-	double getRenewPeriod(); 
+	public UnpackTerms() {
+	}
 
-	/**
-	 * @return The price it will cost when it will be renew
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getRenewPrice(); 
+	public boolean getIsAllowed() { 
+		return this.isAllowed;
+	} 
 
-	/**
-	 * @return Price bill on the unpack action
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getPrice(); 
+	public void setIsAllowed(boolean isAllowed) { 
+		this.isAllowed = isAllowed;
+	} 
+
+	public UnpackTerms isAllowed(boolean isAllowed) { 
+		this.isAllowed = isAllowed;
+		return this;
+	} 
+
+	public double getRenewPeriod() { 
+		return this.renewPeriod;
+	} 
+
+	public void setRenewPeriod(double renewPeriod) { 
+		this.renewPeriod = renewPeriod;
+	} 
+
+	public UnpackTerms renewPeriod(double renewPeriod) { 
+		this.renewPeriod = renewPeriod;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getRenewPrice() { 
+		return this.renewPrice;
+	} 
+
+	public void setRenewPrice(net.zyuiop.ovhapi.api.objects.order.Price renewPrice) { 
+		this.renewPrice = renewPrice;
+	} 
+
+	public UnpackTerms renewPrice(net.zyuiop.ovhapi.api.objects.order.Price renewPrice) { 
+		this.renewPrice = renewPrice;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+		return this.price;
+	} 
+
+	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+		this.price = price;
+	} 
+
+	public UnpackTerms price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+		this.price = price;
+		return this;
+	} 
 
 }

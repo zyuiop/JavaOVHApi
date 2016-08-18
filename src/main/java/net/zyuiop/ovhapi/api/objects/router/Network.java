@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.router;
  * Network
  */
 
-public interface Network { 
+public class Network { 
 
-	/**
-	 * @return null
-	 */
-	long getVlanTag(); 
+	private long vlanTag;
+	private java.util.Date creationDate;
+	private java.lang.String status;
+	private long id;
+	private java.lang.String ipNet;
+	private java.lang.String description;
 
-	/**
-	 * @return null
-	 */
-	java.util.Date getCreationDate(); 
+	public Network() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getStatus(); 
+	public long getVlanTag() { 
+		return this.vlanTag;
+	} 
 
-	/**
-	 * @return null
-	 */
-	long getId(); 
+	public void setVlanTag(long vlanTag) { 
+		this.vlanTag = vlanTag;
+	} 
 
-	/**
-	 * @return Gateway IP / CIDR Netmask
-	 */
-	java.lang.String getIpNet(); 
+	public Network vlanTag(long vlanTag) { 
+		this.vlanTag = vlanTag;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getDescription(); 
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
+
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
+
+	public Network creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public Network status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Network id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getIpNet() { 
+		return this.ipNet;
+	} 
+
+	public void setIpNet(java.lang.String ipNet) { 
+		this.ipNet = ipNet;
+	} 
+
+	public Network ipNet(java.lang.String ipNet) { 
+		this.ipNet = ipNet;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public Network description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
 
 }

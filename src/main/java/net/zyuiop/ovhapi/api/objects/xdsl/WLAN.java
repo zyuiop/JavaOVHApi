@@ -4,51 +4,136 @@ package net.zyuiop.ovhapi.api.objects.xdsl;
  * WLAN Configuration of the Modem
  */
 
-public interface WLAN { 
+public class WLAN { 
 
-	/**
-	 * @return How the channel is chosen (Auto / Manual)
-	 */
-	java.lang.String getChannelMode(); 
+	private java.lang.String channelMode;
+	private long taskId;
+	private boolean SSIDAdvertisementEnabled;
+	private java.lang.String SSID;
+	private long channel;
+	private java.lang.String securityType;
+	private java.lang.String securityKey;
+	private boolean enabled;
+	private java.lang.String wifiName;
 
-	/**
-	 * @return ID of the ongoing todo (NULL if none)
-	 */
-	long getTaskId(); 
+	public WLAN() {
+	}
 
-	/**
-	 * @return Hide or show the Wifi
-	 */
-	boolean getSSIDAdvertisementEnabled(); 
+	public java.lang.String getChannelMode() { 
+		return this.channelMode;
+	} 
 
-	/**
-	 * @return Service Set Identifier of the WLAN interface
-	 */
-	java.lang.String getSSID(); 
+	public void setChannelMode(java.lang.String channelMode) { 
+		this.channelMode = channelMode;
+	} 
 
-	/**
-	 * @return Choice of a channel (When chosen, channelMode is set to Manual)
-	 */
-	long getChannel(); 
+	public WLAN channelMode(java.lang.String channelMode) { 
+		this.channelMode = channelMode;
+		return this;
+	} 
 
-	/**
-	 * @return Security (None | WEP | WPA | WPA2 | WPAandWPA2)
-	 */
-	java.lang.String getSecurityType(); 
+	public long getTaskId() { 
+		return this.taskId;
+	} 
 
-	/**
-	 * @return WPA or WEP key
-	 */
-	java.lang.String getSecurityKey(); 
+	public void setTaskId(long taskId) { 
+		this.taskId = taskId;
+	} 
 
-	/**
-	 * @return Wifi state
-	 */
-	boolean getEnabled(); 
+	public WLAN taskId(long taskId) { 
+		this.taskId = taskId;
+		return this;
+	} 
 
-	/**
-	 * @return Name of the Wifi
-	 */
-	java.lang.String getWifiName(); 
+	public boolean getSSIDAdvertisementEnabled() { 
+		return this.SSIDAdvertisementEnabled;
+	} 
+
+	public void setSSIDAdvertisementEnabled(boolean SSIDAdvertisementEnabled) { 
+		this.SSIDAdvertisementEnabled = SSIDAdvertisementEnabled;
+	} 
+
+	public WLAN SSIDAdvertisementEnabled(boolean SSIDAdvertisementEnabled) { 
+		this.SSIDAdvertisementEnabled = SSIDAdvertisementEnabled;
+		return this;
+	} 
+
+	public java.lang.String getSSID() { 
+		return this.SSID;
+	} 
+
+	public void setSSID(java.lang.String SSID) { 
+		this.SSID = SSID;
+	} 
+
+	public WLAN SSID(java.lang.String SSID) { 
+		this.SSID = SSID;
+		return this;
+	} 
+
+	public long getChannel() { 
+		return this.channel;
+	} 
+
+	public void setChannel(long channel) { 
+		this.channel = channel;
+	} 
+
+	public WLAN channel(long channel) { 
+		this.channel = channel;
+		return this;
+	} 
+
+	public java.lang.String getSecurityType() { 
+		return this.securityType;
+	} 
+
+	public void setSecurityType(java.lang.String securityType) { 
+		this.securityType = securityType;
+	} 
+
+	public WLAN securityType(java.lang.String securityType) { 
+		this.securityType = securityType;
+		return this;
+	} 
+
+	public java.lang.String getSecurityKey() { 
+		return this.securityKey;
+	} 
+
+	public void setSecurityKey(java.lang.String securityKey) { 
+		this.securityKey = securityKey;
+	} 
+
+	public WLAN securityKey(java.lang.String securityKey) { 
+		this.securityKey = securityKey;
+		return this;
+	} 
+
+	public boolean getEnabled() { 
+		return this.enabled;
+	} 
+
+	public void setEnabled(boolean enabled) { 
+		this.enabled = enabled;
+	} 
+
+	public WLAN enabled(boolean enabled) { 
+		this.enabled = enabled;
+		return this;
+	} 
+
+	public java.lang.String getWifiName() { 
+		return this.wifiName;
+	} 
+
+	public void setWifiName(java.lang.String wifiName) { 
+		this.wifiName = wifiName;
+	} 
+
+	public WLAN wifiName(java.lang.String wifiName) { 
+		this.wifiName = wifiName;
+		return this;
+	} 
 
 }

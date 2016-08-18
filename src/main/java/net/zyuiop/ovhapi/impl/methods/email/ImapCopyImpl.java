@@ -22,7 +22,7 @@ public class ImapCopyImpl implements ImapCopy {
 		__data += "secretKey=" + secretKey;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.impl.objects.imapcopy.TaskImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.api.objects.imapcopy.Task.class);
 	}
 
 	public net.zyuiop.ovhapi.api.objects.imapcopy.TaskIds postEmailImapCopy(net.zyuiop.ovhapi.api.objects.imapcopy.StructImapCopy to, net.zyuiop.ovhapi.api.objects.imapcopy.StructImapCopy from) throws java.io.IOException {
@@ -33,7 +33,7 @@ public class ImapCopyImpl implements ImapCopy {
 		String __data = new Gson().toJson(__dataMap);
 		OVHApiMethod __method = OVHApiMethod.POST;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.impl.objects.imapcopy.TaskIdsImpl.class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, false), net.zyuiop.ovhapi.api.objects.imapcopy.TaskIds.class);
 	}
 
 }

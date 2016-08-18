@@ -4,61 +4,164 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Current Return Merchandise Authorisation
  */
 
-public interface Rma { 
+public class Rma { 
 
-	/**
-	 * @return Termination datetime of the return merchandise authorisation ticket
-	 */
-	java.util.Date getTerminationDatetime(); 
+	private java.util.Date terminationDatetime;
+	private java.lang.String status;
+	private java.lang.String newMerchandise;
+	private net.zyuiop.ovhapi.api.objects.telephony.Contact shippingContact;
+	private java.lang.String offerTypeNew;
+	private java.lang.String equipmentReference;
+	private java.util.Date creationDatetime;
+	private java.lang.String type;
+	private java.lang.String id;
+	private java.lang.String offerTypeOld;
+	private java.util.Date receptionDatetime;
 
-	/**
-	 * @return Return merchandise authorisation step
-	 */
-	java.lang.String getStatus(); 
+	public Rma() {
+	}
 
-	/**
-	 * @return New merchandise brand in case of exchange
-	 */
-	java.lang.String getNewMerchandise(); 
+	public java.util.Date getTerminationDatetime() { 
+		return this.terminationDatetime;
+	} 
 
-	/**
-	 * @return Contact information related to the delivery shipping in case of exchange
-	 */
-	net.zyuiop.ovhapi.api.objects.telephony.Contact getShippingContact(); 
+	public void setTerminationDatetime(java.util.Date terminationDatetime) { 
+		this.terminationDatetime = terminationDatetime;
+	} 
 
-	/**
-	 * @return Offer type of the new merchandise in case of exchange
-	 */
-	java.lang.String getOfferTypeNew(); 
+	public Rma terminationDatetime(java.util.Date terminationDatetime) { 
+		this.terminationDatetime = terminationDatetime;
+		return this;
+	} 
 
-	/**
-	 * @return Merchandise reference
-	 */
-	java.lang.String getEquipmentReference(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return Creation datetime of the return merchandise authorisation ticket
-	 */
-	java.util.Date getCreationDatetime(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
 
-	/**
-	 * @return Typology process of merchandise return
-	 */
-	java.lang.String getType(); 
+	public Rma status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
-	/**
-	 * @return Return merchandise authorisation identifier
-	 */
-	java.lang.String getId(); 
+	public java.lang.String getNewMerchandise() { 
+		return this.newMerchandise;
+	} 
 
-	/**
-	 * @return Offer type of the return merchandise
-	 */
-	java.lang.String getOfferTypeOld(); 
+	public void setNewMerchandise(java.lang.String newMerchandise) { 
+		this.newMerchandise = newMerchandise;
+	} 
 
-	/**
-	 * @return Reception datetime of the return merchandise authorisation ticket
-	 */
-	java.util.Date getReceptionDatetime(); 
+	public Rma newMerchandise(java.lang.String newMerchandise) { 
+		this.newMerchandise = newMerchandise;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.telephony.Contact getShippingContact() { 
+		return this.shippingContact;
+	} 
+
+	public void setShippingContact(net.zyuiop.ovhapi.api.objects.telephony.Contact shippingContact) { 
+		this.shippingContact = shippingContact;
+	} 
+
+	public Rma shippingContact(net.zyuiop.ovhapi.api.objects.telephony.Contact shippingContact) { 
+		this.shippingContact = shippingContact;
+		return this;
+	} 
+
+	public java.lang.String getOfferTypeNew() { 
+		return this.offerTypeNew;
+	} 
+
+	public void setOfferTypeNew(java.lang.String offerTypeNew) { 
+		this.offerTypeNew = offerTypeNew;
+	} 
+
+	public Rma offerTypeNew(java.lang.String offerTypeNew) { 
+		this.offerTypeNew = offerTypeNew;
+		return this;
+	} 
+
+	public java.lang.String getEquipmentReference() { 
+		return this.equipmentReference;
+	} 
+
+	public void setEquipmentReference(java.lang.String equipmentReference) { 
+		this.equipmentReference = equipmentReference;
+	} 
+
+	public Rma equipmentReference(java.lang.String equipmentReference) { 
+		this.equipmentReference = equipmentReference;
+		return this;
+	} 
+
+	public java.util.Date getCreationDatetime() { 
+		return this.creationDatetime;
+	} 
+
+	public void setCreationDatetime(java.util.Date creationDatetime) { 
+		this.creationDatetime = creationDatetime;
+	} 
+
+	public Rma creationDatetime(java.util.Date creationDatetime) { 
+		this.creationDatetime = creationDatetime;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Rma type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public java.lang.String getId() { 
+		return this.id;
+	} 
+
+	public void setId(java.lang.String id) { 
+		this.id = id;
+	} 
+
+	public Rma id(java.lang.String id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getOfferTypeOld() { 
+		return this.offerTypeOld;
+	} 
+
+	public void setOfferTypeOld(java.lang.String offerTypeOld) { 
+		this.offerTypeOld = offerTypeOld;
+	} 
+
+	public Rma offerTypeOld(java.lang.String offerTypeOld) { 
+		this.offerTypeOld = offerTypeOld;
+		return this;
+	} 
+
+	public java.util.Date getReceptionDatetime() { 
+		return this.receptionDatetime;
+	} 
+
+	public void setReceptionDatetime(java.util.Date receptionDatetime) { 
+		this.receptionDatetime = receptionDatetime;
+	} 
+
+	public Rma receptionDatetime(java.util.Date receptionDatetime) { 
+		this.receptionDatetime = receptionDatetime;
+		return this;
+	} 
 
 }

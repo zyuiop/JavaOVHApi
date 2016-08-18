@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.imapcopy;
  * Ids of ImapCopy Task
  */
 
-public interface TaskIds { 
+public class TaskIds { 
 
-	/**
-	 * @return Id of task
-	 */
-	long getId(); 
+	private long id;
+	private java.lang.String secretKey;
 
-	/**
-	 * @return Secret key of task
-	 */
-	java.lang.String getSecretKey(); 
+	public TaskIds() {
+	}
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public TaskIds id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getSecretKey() { 
+		return this.secretKey;
+	} 
+
+	public void setSecretKey(java.lang.String secretKey) { 
+		this.secretKey = secretKey;
+	} 
+
+	public TaskIds secretKey(java.lang.String secretKey) { 
+		this.secretKey = secretKey;
+		return this;
+	} 
 
 }

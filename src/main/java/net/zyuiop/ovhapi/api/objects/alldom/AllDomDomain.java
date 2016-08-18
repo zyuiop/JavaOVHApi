@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.alldom;
  * Domain name of a allDom
  */
 
-public interface AllDomDomain { 
+public class AllDomDomain { 
 
-	/**
-	 * @return Domain name
-	 */
-	java.lang.String getDomain(); 
+	private java.lang.String domain;
+
+	public AllDomDomain() {
+	}
+
+	public java.lang.String getDomain() { 
+		return this.domain;
+	} 
+
+	public void setDomain(java.lang.String domain) { 
+		this.domain = domain;
+	} 
+
+	public AllDomDomain domain(java.lang.String domain) { 
+		this.domain = domain;
+		return this;
+	} 
 
 }

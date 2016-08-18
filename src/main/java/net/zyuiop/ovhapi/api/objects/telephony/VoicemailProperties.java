@@ -4,56 +4,150 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Voicemail Properties
  */
 
-public interface VoicemailProperties { 
+public class VoicemailProperties { 
 
-	/**
-	 * @return Name from which emails will be sent
-	 */
-	java.lang.String getFromName(); 
+	private java.lang.String fromName;
+	private boolean doNotRecord;
+	private java.lang.String fromEmail;
+	private long unreadMessages;
+	private boolean keepMessage;
+	private java.lang.String audioFormat;
+	private net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications[] redirectionEmails;
+	private boolean forcePassword;
+	private java.lang.String annouceMessage;
+	private boolean isNewVersion;
 
-	/**
-	 * @return Don't allow callers to leave voicemails
-	 */
-	boolean getDoNotRecord(); 
+	public VoicemailProperties() {
+	}
 
-	/**
-	 * @return Email address from which emails will be sent
-	 */
-	java.lang.String getFromEmail(); 
+	public java.lang.String getFromName() { 
+		return this.fromName;
+	} 
 
-	/**
-	 * @return Quantity of unread voicemails
-	 */
-	long getUnreadMessages(); 
+	public void setFromName(java.lang.String fromName) { 
+		this.fromName = fromName;
+	} 
 
-	/**
-	 * @return Don't delete voicemails after they've been sent by email
-	 */
-	boolean getKeepMessage(); 
+	public VoicemailProperties fromName(java.lang.String fromName) { 
+		this.fromName = fromName;
+		return this;
+	} 
 
-	/**
-	 * @return Format of the voicemail audio file attached to emails
-	 */
-	java.lang.String getAudioFormat(); 
+	public boolean getDoNotRecord() { 
+		return this.doNotRecord;
+	} 
 
-	/**
-	 * @return Email addresses to notify when a new voicemail is left
-	 */
-	net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications[] getRedirectionEmails(); 
+	public void setDoNotRecord(boolean doNotRecord) { 
+		this.doNotRecord = doNotRecord;
+	} 
 
-	/**
-	 * @return Force password request to access the voicemail panel
-	 */
-	boolean getForcePassword(); 
+	public VoicemailProperties doNotRecord(boolean doNotRecord) { 
+		this.doNotRecord = doNotRecord;
+		return this;
+	} 
 
-	/**
-	 * @return Name of the voicemail panel announce file
-	 */
-	java.lang.String getAnnouceMessage(); 
+	public java.lang.String getFromEmail() { 
+		return this.fromEmail;
+	} 
 
-	/**
-	 * @return Current voicemail version
-	 */
-	boolean getIsNewVersion(); 
+	public void setFromEmail(java.lang.String fromEmail) { 
+		this.fromEmail = fromEmail;
+	} 
+
+	public VoicemailProperties fromEmail(java.lang.String fromEmail) { 
+		this.fromEmail = fromEmail;
+		return this;
+	} 
+
+	public long getUnreadMessages() { 
+		return this.unreadMessages;
+	} 
+
+	public void setUnreadMessages(long unreadMessages) { 
+		this.unreadMessages = unreadMessages;
+	} 
+
+	public VoicemailProperties unreadMessages(long unreadMessages) { 
+		this.unreadMessages = unreadMessages;
+		return this;
+	} 
+
+	public boolean getKeepMessage() { 
+		return this.keepMessage;
+	} 
+
+	public void setKeepMessage(boolean keepMessage) { 
+		this.keepMessage = keepMessage;
+	} 
+
+	public VoicemailProperties keepMessage(boolean keepMessage) { 
+		this.keepMessage = keepMessage;
+		return this;
+	} 
+
+	public java.lang.String getAudioFormat() { 
+		return this.audioFormat;
+	} 
+
+	public void setAudioFormat(java.lang.String audioFormat) { 
+		this.audioFormat = audioFormat;
+	} 
+
+	public VoicemailProperties audioFormat(java.lang.String audioFormat) { 
+		this.audioFormat = audioFormat;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications[] getRedirectionEmails() { 
+		return this.redirectionEmails;
+	} 
+
+	public void setRedirectionEmails(net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications[] redirectionEmails) { 
+		this.redirectionEmails = redirectionEmails;
+	} 
+
+	public VoicemailProperties redirectionEmails(net.zyuiop.ovhapi.api.objects.telephony.ServiceVoicemailNotifications[] redirectionEmails) { 
+		this.redirectionEmails = redirectionEmails;
+		return this;
+	} 
+
+	public boolean getForcePassword() { 
+		return this.forcePassword;
+	} 
+
+	public void setForcePassword(boolean forcePassword) { 
+		this.forcePassword = forcePassword;
+	} 
+
+	public VoicemailProperties forcePassword(boolean forcePassword) { 
+		this.forcePassword = forcePassword;
+		return this;
+	} 
+
+	public java.lang.String getAnnouceMessage() { 
+		return this.annouceMessage;
+	} 
+
+	public void setAnnouceMessage(java.lang.String annouceMessage) { 
+		this.annouceMessage = annouceMessage;
+	} 
+
+	public VoicemailProperties annouceMessage(java.lang.String annouceMessage) { 
+		this.annouceMessage = annouceMessage;
+		return this;
+	} 
+
+	public boolean getIsNewVersion() { 
+		return this.isNewVersion;
+	} 
+
+	public void setIsNewVersion(boolean isNewVersion) { 
+		this.isNewVersion = isNewVersion;
+	} 
+
+	public VoicemailProperties isNewVersion(boolean isNewVersion) { 
+		this.isNewVersion = isNewVersion;
+		return this;
+	} 
 
 }

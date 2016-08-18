@@ -4,71 +4,192 @@ package net.zyuiop.ovhapi.api.objects.pack.xdsl.migration;
  * Migration offer
  */
 
-public interface MigrationOffer { 
+public class MigrationOffer { 
 
-	/**
-	 * @return Number of months of engagement
-	 */
-	long getEngageMonths(); 
+	private long engageMonths;
+	private boolean needModem;
+	private net.zyuiop.ovhapi.api.objects.order.Price due;
+	private net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.OfferAvailableOption[] options;
+	private java.lang.String description;
+	private net.zyuiop.ovhapi.api.objects.order.Price currentOfferPrice;
+	private java.lang.String modemMacToReturn;
+	private net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete[] subServicesToDelete;
+	private java.lang.String offerName;
+	private java.lang.String url;
+	private net.zyuiop.ovhapi.api.objects.order.Price price;
+	private java.lang.String[] contractList;
+	private boolean needNewModem;
 
-	/**
-	 * @return Tells if the offer needs a modem
-	 */
-	boolean getNeedModem(); 
+	public MigrationOffer() {
+	}
 
-	/**
-	 * @return Price to make the migration
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getDue(); 
+	public long getEngageMonths() { 
+		return this.engageMonths;
+	} 
 
-	/**
-	 * @return Available options for the migration
-	 */
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.OfferAvailableOption[] getOptions(); 
+	public void setEngageMonths(long engageMonths) { 
+		this.engageMonths = engageMonths;
+	} 
 
-	/**
-	 * @return Description of the offer
-	 */
-	java.lang.String getDescription(); 
+	public MigrationOffer engageMonths(long engageMonths) { 
+		this.engageMonths = engageMonths;
+		return this;
+	} 
 
-	/**
-	 * @return Price of the current offer
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getCurrentOfferPrice(); 
+	public boolean getNeedModem() { 
+		return this.needModem;
+	} 
 
-	/**
-	 * @return Mac address of the modem to be returned
-	 */
-	java.lang.String getModemMacToReturn(); 
+	public void setNeedModem(boolean needModem) { 
+		this.needModem = needModem;
+	} 
 
-	/**
-	 * @return List of sub services to delete
-	 */
-	net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete[] getSubServicesToDelete(); 
+	public MigrationOffer needModem(boolean needModem) { 
+		this.needModem = needModem;
+		return this;
+	} 
 
-	/**
-	 * @return Name of the offer
-	 */
-	java.lang.String getOfferName(); 
+	public net.zyuiop.ovhapi.api.objects.order.Price getDue() { 
+		return this.due;
+	} 
 
-	/**
-	 * @return URL of the offer
-	 */
-	java.lang.String getUrl(); 
+	public void setDue(net.zyuiop.ovhapi.api.objects.order.Price due) { 
+		this.due = due;
+	} 
 
-	/**
-	 * @return Price of the offer
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getPrice(); 
+	public MigrationOffer due(net.zyuiop.ovhapi.api.objects.order.Price due) { 
+		this.due = due;
+		return this;
+	} 
 
-	/**
-	 * @return List of contracts
-	 */
-	java.lang.String[] getContractList(); 
+	public net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.OfferAvailableOption[] getOptions() { 
+		return this.options;
+	} 
 
-	/**
-	 * @return Tells if the customer will have to change its modem
-	 */
-	boolean getNeedNewModem(); 
+	public void setOptions(net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.OfferAvailableOption[] options) { 
+		this.options = options;
+	} 
+
+	public MigrationOffer options(net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.OfferAvailableOption[] options) { 
+		this.options = options;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public MigrationOffer description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getCurrentOfferPrice() { 
+		return this.currentOfferPrice;
+	} 
+
+	public void setCurrentOfferPrice(net.zyuiop.ovhapi.api.objects.order.Price currentOfferPrice) { 
+		this.currentOfferPrice = currentOfferPrice;
+	} 
+
+	public MigrationOffer currentOfferPrice(net.zyuiop.ovhapi.api.objects.order.Price currentOfferPrice) { 
+		this.currentOfferPrice = currentOfferPrice;
+		return this;
+	} 
+
+	public java.lang.String getModemMacToReturn() { 
+		return this.modemMacToReturn;
+	} 
+
+	public void setModemMacToReturn(java.lang.String modemMacToReturn) { 
+		this.modemMacToReturn = modemMacToReturn;
+	} 
+
+	public MigrationOffer modemMacToReturn(java.lang.String modemMacToReturn) { 
+		this.modemMacToReturn = modemMacToReturn;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete[] getSubServicesToDelete() { 
+		return this.subServicesToDelete;
+	} 
+
+	public void setSubServicesToDelete(net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete[] subServicesToDelete) { 
+		this.subServicesToDelete = subServicesToDelete;
+	} 
+
+	public MigrationOffer subServicesToDelete(net.zyuiop.ovhapi.api.objects.pack.xdsl.migration.SubServiceToDelete[] subServicesToDelete) { 
+		this.subServicesToDelete = subServicesToDelete;
+		return this;
+	} 
+
+	public java.lang.String getOfferName() { 
+		return this.offerName;
+	} 
+
+	public void setOfferName(java.lang.String offerName) { 
+		this.offerName = offerName;
+	} 
+
+	public MigrationOffer offerName(java.lang.String offerName) { 
+		this.offerName = offerName;
+		return this;
+	} 
+
+	public java.lang.String getUrl() { 
+		return this.url;
+	} 
+
+	public void setUrl(java.lang.String url) { 
+		this.url = url;
+	} 
+
+	public MigrationOffer url(java.lang.String url) { 
+		this.url = url;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getPrice() { 
+		return this.price;
+	} 
+
+	public void setPrice(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+		this.price = price;
+	} 
+
+	public MigrationOffer price(net.zyuiop.ovhapi.api.objects.order.Price price) { 
+		this.price = price;
+		return this;
+	} 
+
+	public java.lang.String[] getContractList() { 
+		return this.contractList;
+	} 
+
+	public void setContractList(java.lang.String[] contractList) { 
+		this.contractList = contractList;
+	} 
+
+	public MigrationOffer contractList(java.lang.String[] contractList) { 
+		this.contractList = contractList;
+		return this;
+	} 
+
+	public boolean getNeedNewModem() { 
+		return this.needNewModem;
+	} 
+
+	public void setNeedNewModem(boolean needNewModem) { 
+		this.needNewModem = needNewModem;
+	} 
+
+	public MigrationOffer needNewModem(boolean needNewModem) { 
+		this.needNewModem = needNewModem;
+		return this;
+	} 
 
 }

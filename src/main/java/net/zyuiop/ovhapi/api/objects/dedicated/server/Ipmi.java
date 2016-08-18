@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * Server IPMI interface
  */
 
-public interface Ipmi { 
+public class Ipmi { 
 
-	/**
-	 * @return true, if IPMI is ivailable on this server
-	 */
-	boolean getActivated(); 
+	private boolean activated;
+
+	public Ipmi() {
+	}
+
+	public boolean getActivated() { 
+		return this.activated;
+	} 
+
+	public void setActivated(boolean activated) { 
+		this.activated = activated;
+	} 
+
+	public Ipmi activated(boolean activated) { 
+		this.activated = activated;
+		return this;
+	} 
 
 }

@@ -4,61 +4,164 @@ package net.zyuiop.ovhapi.api.objects.license.plesk;
  * Your Plesk license
  */
 
-public interface Plesk { 
+public class Plesk { 
 
-	/**
-	 * @return The ip on which this license is attached
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private java.lang.String version;
+	private java.lang.String status;
+	private java.lang.String key;
+	private java.lang.String domain;
+	private java.lang.String informationKey;
+	private java.lang.String productKey;
+	private java.lang.String licenseId;
+	private java.util.Date creation;
+	private boolean deleteAtExpiration;
+	private java.lang.String domainNumber;
 
-	/**
-	 * @return This license version
-	 */
-	java.lang.String getVersion(); 
+	public Plesk() {
+	}
 
-	/**
-	 * @return This license state
-	 */
-	java.lang.String getStatus(); 
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
 
-	/**
-	 * @return This license key
-	 */
-	java.lang.String getKey(); 
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
 
-	/**
-	 * @return The internal name of your license
-	 */
-	java.lang.String getDomain(); 
+	public Plesk ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
 
-	/**
-	 * @return This license Information key
-	 */
-	java.lang.String getInformationKey(); 
+	public java.lang.String getVersion() { 
+		return this.version;
+	} 
 
-	/**
-	 * @return This license product key
-	 */
-	java.lang.String getProductKey(); 
+	public void setVersion(java.lang.String version) { 
+		this.version = version;
+	} 
 
-	/**
-	 * @return The license id on license provider side
-	 */
-	java.lang.String getLicenseId(); 
+	public Plesk version(java.lang.String version) { 
+		this.version = version;
+		return this;
+	} 
 
-	/**
-	 * @return This license creation date
-	 */
-	java.util.Date getCreation(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return Shall we delete this on expiration ?
-	 */
-	boolean getDeleteAtExpiration(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
 
-	/**
-	 * @return The amount of domain this license can manage
-	 */
-	java.lang.String getDomainNumber(); 
+	public Plesk status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.lang.String getKey() { 
+		return this.key;
+	} 
+
+	public void setKey(java.lang.String key) { 
+		this.key = key;
+	} 
+
+	public Plesk key(java.lang.String key) { 
+		this.key = key;
+		return this;
+	} 
+
+	public java.lang.String getDomain() { 
+		return this.domain;
+	} 
+
+	public void setDomain(java.lang.String domain) { 
+		this.domain = domain;
+	} 
+
+	public Plesk domain(java.lang.String domain) { 
+		this.domain = domain;
+		return this;
+	} 
+
+	public java.lang.String getInformationKey() { 
+		return this.informationKey;
+	} 
+
+	public void setInformationKey(java.lang.String informationKey) { 
+		this.informationKey = informationKey;
+	} 
+
+	public Plesk informationKey(java.lang.String informationKey) { 
+		this.informationKey = informationKey;
+		return this;
+	} 
+
+	public java.lang.String getProductKey() { 
+		return this.productKey;
+	} 
+
+	public void setProductKey(java.lang.String productKey) { 
+		this.productKey = productKey;
+	} 
+
+	public Plesk productKey(java.lang.String productKey) { 
+		this.productKey = productKey;
+		return this;
+	} 
+
+	public java.lang.String getLicenseId() { 
+		return this.licenseId;
+	} 
+
+	public void setLicenseId(java.lang.String licenseId) { 
+		this.licenseId = licenseId;
+	} 
+
+	public Plesk licenseId(java.lang.String licenseId) { 
+		this.licenseId = licenseId;
+		return this;
+	} 
+
+	public java.util.Date getCreation() { 
+		return this.creation;
+	} 
+
+	public void setCreation(java.util.Date creation) { 
+		this.creation = creation;
+	} 
+
+	public Plesk creation(java.util.Date creation) { 
+		this.creation = creation;
+		return this;
+	} 
+
+	public boolean getDeleteAtExpiration() { 
+		return this.deleteAtExpiration;
+	} 
+
+	public void setDeleteAtExpiration(boolean deleteAtExpiration) { 
+		this.deleteAtExpiration = deleteAtExpiration;
+	} 
+
+	public Plesk deleteAtExpiration(boolean deleteAtExpiration) { 
+		this.deleteAtExpiration = deleteAtExpiration;
+		return this;
+	} 
+
+	public java.lang.String getDomainNumber() { 
+		return this.domainNumber;
+	} 
+
+	public void setDomainNumber(java.lang.String domainNumber) { 
+		this.domainNumber = domainNumber;
+	} 
+
+	public Plesk domainNumber(java.lang.String domainNumber) { 
+		this.domainNumber = domainNumber;
+		return this;
+	} 
 
 }

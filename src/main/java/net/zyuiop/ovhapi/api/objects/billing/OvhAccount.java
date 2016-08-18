@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.billing;
  * Details about an OVH account
  */
 
-public interface OvhAccount { 
+public class OvhAccount { 
 
-	/**
-	 * @return null
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getBalance(); 
+	private net.zyuiop.ovhapi.api.objects.order.Price balance;
+	private java.util.Date lastUpdate;
+	private boolean canBeCredited;
+	private java.lang.String ovhAccountId;
+	private java.util.Date openDate;
 
-	/**
-	 * @return null
-	 */
-	java.util.Date getLastUpdate(); 
+	public OvhAccount() {
+	}
 
-	/**
-	 * @return null
-	 */
-	boolean getCanBeCredited(); 
+	public net.zyuiop.ovhapi.api.objects.order.Price getBalance() { 
+		return this.balance;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getOvhAccountId(); 
+	public void setBalance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+		this.balance = balance;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.util.Date getOpenDate(); 
+	public OvhAccount balance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+		this.balance = balance;
+		return this;
+	} 
+
+	public java.util.Date getLastUpdate() { 
+		return this.lastUpdate;
+	} 
+
+	public void setLastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+	} 
+
+	public OvhAccount lastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+		return this;
+	} 
+
+	public boolean getCanBeCredited() { 
+		return this.canBeCredited;
+	} 
+
+	public void setCanBeCredited(boolean canBeCredited) { 
+		this.canBeCredited = canBeCredited;
+	} 
+
+	public OvhAccount canBeCredited(boolean canBeCredited) { 
+		this.canBeCredited = canBeCredited;
+		return this;
+	} 
+
+	public java.lang.String getOvhAccountId() { 
+		return this.ovhAccountId;
+	} 
+
+	public void setOvhAccountId(java.lang.String ovhAccountId) { 
+		this.ovhAccountId = ovhAccountId;
+	} 
+
+	public OvhAccount ovhAccountId(java.lang.String ovhAccountId) { 
+		this.ovhAccountId = ovhAccountId;
+		return this;
+	} 
+
+	public java.util.Date getOpenDate() { 
+		return this.openDate;
+	} 
+
+	public void setOpenDate(java.util.Date openDate) { 
+		this.openDate = openDate;
+	} 
+
+	public OvhAccount openDate(java.util.Date openDate) { 
+		this.openDate = openDate;
+		return this;
+	} 
 
 }

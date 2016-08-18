@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.cloud.quota;
  * KeypairQuotas
  */
 
-public interface KeypairQuotas { 
+public class KeypairQuotas { 
 
-	/**
-	 * @return Maximum keypairs count allowed in your project
-	 */
-	long getMaxCount(); 
+	private long maxCount;
+
+	public KeypairQuotas() {
+	}
+
+	public long getMaxCount() { 
+		return this.maxCount;
+	} 
+
+	public void setMaxCount(long maxCount) { 
+		this.maxCount = maxCount;
+	} 
+
+	public KeypairQuotas maxCount(long maxCount) { 
+		this.maxCount = maxCount;
+		return this;
+	} 
 
 }

@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Phone book
  */
 
-public interface Phonebook { 
+public class Phonebook { 
 
-	/**
-	 * @return Set if phonebook is readonly
-	 */
-	boolean getIsReadonly(); 
+	private boolean isReadonly;
+	private java.lang.String phoneKey;
+	private java.lang.String name;
+	private java.lang.String bookKey;
 
-	/**
-	 * @return Phone key identifier between the phone and phonebooks
-	 */
-	java.lang.String getPhoneKey(); 
+	public Phonebook() {
+	}
 
-	/**
-	 * @return Phonebook name
-	 */
-	java.lang.String getName(); 
+	public boolean getIsReadonly() { 
+		return this.isReadonly;
+	} 
 
-	/**
-	 * @return Identifier of the phonebook
-	 */
-	java.lang.String getBookKey(); 
+	public void setIsReadonly(boolean isReadonly) { 
+		this.isReadonly = isReadonly;
+	} 
+
+	public Phonebook isReadonly(boolean isReadonly) { 
+		this.isReadonly = isReadonly;
+		return this;
+	} 
+
+	public java.lang.String getPhoneKey() { 
+		return this.phoneKey;
+	} 
+
+	public void setPhoneKey(java.lang.String phoneKey) { 
+		this.phoneKey = phoneKey;
+	} 
+
+	public Phonebook phoneKey(java.lang.String phoneKey) { 
+		this.phoneKey = phoneKey;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Phonebook name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getBookKey() { 
+		return this.bookKey;
+	} 
+
+	public void setBookKey(java.lang.String bookKey) { 
+		this.bookKey = bookKey;
+	} 
+
+	public Phonebook bookKey(java.lang.String bookKey) { 
+		this.bookKey = bookKey;
+		return this;
+	} 
 
 }

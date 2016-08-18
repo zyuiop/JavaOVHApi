@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.ip;
  * ARP blocked IP information
  */
 
-public interface ArpBlockedIp { 
+public class ArpBlockedIp { 
 
-	/**
-	 * @return your IP
-	 */
-	java.lang.String getIpBlocked(); 
+	private java.lang.String ipBlocked;
+	private java.util.Date blockedSince;
+	private long time;
+	private java.lang.String logs;
+	private java.lang.String state;
 
-	/**
-	 * @return The last blocking date
-	 */
-	java.util.Date getBlockedSince(); 
+	public ArpBlockedIp() {
+	}
 
-	/**
-	 * @return Time (in seconds) remaining before you can request your IP to be unblocked
-	 */
-	long getTime(); 
+	public java.lang.String getIpBlocked() { 
+		return this.ipBlocked;
+	} 
 
-	/**
-	 * @return ARP logs
-	 */
-	java.lang.String getLogs(); 
+	public void setIpBlocked(java.lang.String ipBlocked) { 
+		this.ipBlocked = ipBlocked;
+	} 
 
-	/**
-	 * @return this IP address state
-	 */
-	java.lang.String getState(); 
+	public ArpBlockedIp ipBlocked(java.lang.String ipBlocked) { 
+		this.ipBlocked = ipBlocked;
+		return this;
+	} 
+
+	public java.util.Date getBlockedSince() { 
+		return this.blockedSince;
+	} 
+
+	public void setBlockedSince(java.util.Date blockedSince) { 
+		this.blockedSince = blockedSince;
+	} 
+
+	public ArpBlockedIp blockedSince(java.util.Date blockedSince) { 
+		this.blockedSince = blockedSince;
+		return this;
+	} 
+
+	public long getTime() { 
+		return this.time;
+	} 
+
+	public void setTime(long time) { 
+		this.time = time;
+	} 
+
+	public ArpBlockedIp time(long time) { 
+		this.time = time;
+		return this;
+	} 
+
+	public java.lang.String getLogs() { 
+		return this.logs;
+	} 
+
+	public void setLogs(java.lang.String logs) { 
+		this.logs = logs;
+	} 
+
+	public ArpBlockedIp logs(java.lang.String logs) { 
+		this.logs = logs;
+		return this;
+	} 
+
+	public java.lang.String getState() { 
+		return this.state;
+	} 
+
+	public void setState(java.lang.String state) { 
+		this.state = state;
+	} 
+
+	public ArpBlockedIp state(java.lang.String state) { 
+		this.state = state;
+		return this;
+	} 
 
 }

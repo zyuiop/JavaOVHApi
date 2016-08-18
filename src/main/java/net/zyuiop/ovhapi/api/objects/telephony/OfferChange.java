@@ -4,11 +4,24 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Offer change
  */
 
-public interface OfferChange { 
+public class OfferChange { 
 
-	/**
-	 * @return The current offer will be replace by this one on the next renew.
-	 */
-	java.lang.String getOffer(); 
+	private java.lang.String offer;
+
+	public OfferChange() {
+	}
+
+	public java.lang.String getOffer() { 
+		return this.offer;
+	} 
+
+	public void setOffer(java.lang.String offer) { 
+		this.offer = offer;
+	} 
+
+	public OfferChange offer(java.lang.String offer) { 
+		this.offer = offer;
+		return this;
+	} 
 
 }

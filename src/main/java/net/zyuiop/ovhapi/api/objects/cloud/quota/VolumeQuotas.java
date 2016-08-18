@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.cloud.quota;
  * VolumeQuotas
  */
 
-public interface VolumeQuotas { 
+public class VolumeQuotas { 
 
-	/**
-	 * @return Maximum total volume capacity allowed in your project
-	 */
-	long getMaxGigabytes(); 
+	private long maxGigabytes;
+	private long volumeCount;
+	private long usedGigabytes;
 
-	/**
-	 * @return Current volumes count
-	 */
-	long getVolumeCount(); 
+	public VolumeQuotas() {
+	}
 
-	/**
-	 * @return Current used volume gigabytes
-	 */
-	long getUsedGigabytes(); 
+	public long getMaxGigabytes() { 
+		return this.maxGigabytes;
+	} 
+
+	public void setMaxGigabytes(long maxGigabytes) { 
+		this.maxGigabytes = maxGigabytes;
+	} 
+
+	public VolumeQuotas maxGigabytes(long maxGigabytes) { 
+		this.maxGigabytes = maxGigabytes;
+		return this;
+	} 
+
+	public long getVolumeCount() { 
+		return this.volumeCount;
+	} 
+
+	public void setVolumeCount(long volumeCount) { 
+		this.volumeCount = volumeCount;
+	} 
+
+	public VolumeQuotas volumeCount(long volumeCount) { 
+		this.volumeCount = volumeCount;
+		return this;
+	} 
+
+	public long getUsedGigabytes() { 
+		return this.usedGigabytes;
+	} 
+
+	public void setUsedGigabytes(long usedGigabytes) { 
+		this.usedGigabytes = usedGigabytes;
+	} 
+
+	public VolumeQuotas usedGigabytes(long usedGigabytes) { 
+		this.usedGigabytes = usedGigabytes;
+		return this;
+	} 
 
 }

@@ -4,41 +4,108 @@ package net.zyuiop.ovhapi.api.objects.dedicated.nas;
  * Storage nas
  */
 
-public interface Nas { 
+public class Nas { 
 
-	/**
-	 * @return area of nas
-	 */
-	java.lang.String getDatacenter(); 
+	private java.lang.String datacenter;
+	private boolean canCreatePartition;
+	private java.lang.String mountPath;
+	private java.lang.String customName;
+	private java.lang.String ip;
+	private java.lang.String serviceName;
+	private long zpoolSize;
 
-	/**
-	 * @return True, if partition creation is allowed on this nas
-	 */
-	boolean getCanCreatePartition(); 
+	public Nas() {
+	}
 
-	/**
-	 * @return The storage mount path
-	 */
-	java.lang.String getMountPath(); 
+	public java.lang.String getDatacenter() { 
+		return this.datacenter;
+	} 
 
-	/**
-	 * @return The name you give to the nas
-	 */
-	java.lang.String getCustomName(); 
+	public void setDatacenter(java.lang.String datacenter) { 
+		this.datacenter = datacenter;
+	} 
 
-	/**
-	 * @return Access ip of nas
-	 */
-	java.lang.String getIp(); 
+	public Nas datacenter(java.lang.String datacenter) { 
+		this.datacenter = datacenter;
+		return this;
+	} 
 
-	/**
-	 * @return The storage service name
-	 */
-	java.lang.String getServiceName(); 
+	public boolean getCanCreatePartition() { 
+		return this.canCreatePartition;
+	} 
 
-	/**
-	 * @return the size of the nas
-	 */
-	long getZpoolSize(); 
+	public void setCanCreatePartition(boolean canCreatePartition) { 
+		this.canCreatePartition = canCreatePartition;
+	} 
+
+	public Nas canCreatePartition(boolean canCreatePartition) { 
+		this.canCreatePartition = canCreatePartition;
+		return this;
+	} 
+
+	public java.lang.String getMountPath() { 
+		return this.mountPath;
+	} 
+
+	public void setMountPath(java.lang.String mountPath) { 
+		this.mountPath = mountPath;
+	} 
+
+	public Nas mountPath(java.lang.String mountPath) { 
+		this.mountPath = mountPath;
+		return this;
+	} 
+
+	public java.lang.String getCustomName() { 
+		return this.customName;
+	} 
+
+	public void setCustomName(java.lang.String customName) { 
+		this.customName = customName;
+	} 
+
+	public Nas customName(java.lang.String customName) { 
+		this.customName = customName;
+		return this;
+	} 
+
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public Nas ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getServiceName() { 
+		return this.serviceName;
+	} 
+
+	public void setServiceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+	} 
+
+	public Nas serviceName(java.lang.String serviceName) { 
+		this.serviceName = serviceName;
+		return this;
+	} 
+
+	public long getZpoolSize() { 
+		return this.zpoolSize;
+	} 
+
+	public void setZpoolSize(long zpoolSize) { 
+		this.zpoolSize = zpoolSize;
+	} 
+
+	public Nas zpoolSize(long zpoolSize) { 
+		this.zpoolSize = zpoolSize;
+		return this;
+	} 
 
 }

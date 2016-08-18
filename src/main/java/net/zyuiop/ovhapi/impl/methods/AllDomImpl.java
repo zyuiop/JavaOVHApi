@@ -15,12 +15,13 @@ public class AllDomImpl implements AllDom {
 		this.client = client;
 	}
 
-	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
+	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/allDom/" + serviceName + "/serviceInfos";
-		String __data = new Gson().toJson(param0);
-		OVHApiMethod __method = OVHApiMethod.PUT;
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		this.client.callRaw(__url, __method, __data, true);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
 	}
 
 	public java.lang.String[] getServiceNameDomain(java.lang.String serviceName, java.lang.String domain) throws java.io.IOException {
@@ -42,15 +43,6 @@ public class AllDomImpl implements AllDom {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/allDom/" + serviceName + "/serviceInfos";
-		String __data = "?";
-		__data += "serviceName=" + serviceName;
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.impl.objects.services.ServiceImpl.class);
-	}
-
 	public java.lang.String[] getAllDom() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/allDom/allDom";
 		String __data = "";
@@ -59,20 +51,31 @@ public class AllDomImpl implements AllDom {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
+	public net.zyuiop.ovhapi.api.objects.alldom.AllDomDomain getServiceNameDomainDomain(java.lang.String serviceName, java.lang.String domain) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/allDom/" + serviceName + "/domain/" + domain + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "domain=" + domain;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.alldom.AllDomDomain.class);
+	}
 
-	/*
-	* Method creation failed.
-	* Involved method : GET > /allDom/$serviceName
-	* Message : Missing identifier.
-	*/
+	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/allDom/" + serviceName + "/serviceInfos";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
 
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /allDom/$serviceName/domain/$domain
-	* Message : Missing identifier.
-	*/
-
+	public net.zyuiop.ovhapi.api.objects.alldom.AllDom getServiceName(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/allDom/" + serviceName + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.alldom.AllDom.class);
+	}
 
 }

@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.supply;
  * Opening range for mondial relay point
  */
 
-public interface MondialRelayDayPeriod { 
+public class MondialRelayDayPeriod { 
 
-	/**
-	 * @return Starting time (00:00 format)
-	 */
-	java.lang.String getStart(); 
+	private java.lang.String start;
+	private java.lang.String end;
 
-	/**
-	 * @return Ending time (00:00 format)
-	 */
-	java.lang.String getEnd(); 
+	public MondialRelayDayPeriod() {
+	}
+
+	public java.lang.String getStart() { 
+		return this.start;
+	} 
+
+	public void setStart(java.lang.String start) { 
+		this.start = start;
+	} 
+
+	public MondialRelayDayPeriod start(java.lang.String start) { 
+		this.start = start;
+		return this;
+	} 
+
+	public java.lang.String getEnd() { 
+		return this.end;
+	} 
+
+	public void setEnd(java.lang.String end) { 
+		this.end = end;
+	} 
+
+	public MondialRelayDayPeriod end(java.lang.String end) { 
+		this.end = end;
+		return this;
+	} 
 
 }

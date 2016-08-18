@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * Intervention made on this server
  */
 
-public interface Intervention { 
+public class Intervention { 
 
-	/**
-	 * @return the intervention start date
-	 */
-	java.util.Date getDate(); 
+	private java.util.Date date;
+	private java.lang.String type;
+	private long interventionId;
 
-	/**
-	 * @return the intervention type
-	 */
-	java.lang.String getType(); 
+	public Intervention() {
+	}
 
-	/**
-	 * @return The intervention id
-	 */
-	long getInterventionId(); 
+	public java.util.Date getDate() { 
+		return this.date;
+	} 
+
+	public void setDate(java.util.Date date) { 
+		this.date = date;
+	} 
+
+	public Intervention date(java.util.Date date) { 
+		this.date = date;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Intervention type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public long getInterventionId() { 
+		return this.interventionId;
+	} 
+
+	public void setInterventionId(long interventionId) { 
+		this.interventionId = interventionId;
+	} 
+
+	public Intervention interventionId(long interventionId) { 
+		this.interventionId = interventionId;
+		return this;
+	} 
 
 }

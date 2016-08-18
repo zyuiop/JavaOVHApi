@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.email.exchange;
  * Aliases on this mailbox
  */
 
-public interface ExchangeAccountAlias { 
+public class ExchangeAccountAlias { 
 
-	/**
-	 * @return Creation date
-	 */
-	java.util.Date getCreationDate(); 
+	private java.util.Date creationDate;
+	private java.lang.String alias;
+	private long taskPendingId;
 
-	/**
-	 * @return Alias
-	 */
-	java.lang.String getAlias(); 
+	public ExchangeAccountAlias() {
+	}
 
-	/**
-	 * @return Pending task id
-	 */
-	long getTaskPendingId(); 
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
+
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
+
+	public ExchangeAccountAlias creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getAlias() { 
+		return this.alias;
+	} 
+
+	public void setAlias(java.lang.String alias) { 
+		this.alias = alias;
+	} 
+
+	public ExchangeAccountAlias alias(java.lang.String alias) { 
+		this.alias = alias;
+		return this;
+	} 
+
+	public long getTaskPendingId() { 
+		return this.taskPendingId;
+	} 
+
+	public void setTaskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+	} 
+
+	public ExchangeAccountAlias taskPendingId(long taskPendingId) { 
+		this.taskPendingId = taskPendingId;
+		return this;
+	} 
 
 }

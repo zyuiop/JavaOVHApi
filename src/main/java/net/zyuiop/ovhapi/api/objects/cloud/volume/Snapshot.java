@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.cloud.volume;
  * Snapshot
  */
 
-public interface Snapshot { 
+public class Snapshot { 
 
-	/**
-	 * @return Volume source id
-	 */
-	java.lang.String getVolumeId(); 
+	private java.lang.String volumeId;
+	private java.lang.String status;
+	private java.lang.String name;
+	private java.lang.String region;
+	private java.lang.String description;
+	private long size;
+	private java.util.Date creationDate;
+	private java.lang.String id;
 
-	/**
-	 * @return Snapshot status
-	 */
-	java.lang.String getStatus(); 
+	public Snapshot() {
+	}
 
-	/**
-	 * @return Snapshot name
-	 */
-	java.lang.String getName(); 
+	public java.lang.String getVolumeId() { 
+		return this.volumeId;
+	} 
 
-	/**
-	 * @return Snapshot region
-	 */
-	java.lang.String getRegion(); 
+	public void setVolumeId(java.lang.String volumeId) { 
+		this.volumeId = volumeId;
+	} 
 
-	/**
-	 * @return Snapshot description
-	 */
-	java.lang.String getDescription(); 
+	public Snapshot volumeId(java.lang.String volumeId) { 
+		this.volumeId = volumeId;
+		return this;
+	} 
 
-	/**
-	 * @return Snapshot size
-	 */
-	long getSize(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return Snapshot creation date
-	 */
-	java.util.Date getCreationDate(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
 
-	/**
-	 * @return Snapshot id
-	 */
-	java.lang.String getId(); 
+	public Snapshot status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Snapshot name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getRegion() { 
+		return this.region;
+	} 
+
+	public void setRegion(java.lang.String region) { 
+		this.region = region;
+	} 
+
+	public Snapshot region(java.lang.String region) { 
+		this.region = region;
+		return this;
+	} 
+
+	public java.lang.String getDescription() { 
+		return this.description;
+	} 
+
+	public void setDescription(java.lang.String description) { 
+		this.description = description;
+	} 
+
+	public Snapshot description(java.lang.String description) { 
+		this.description = description;
+		return this;
+	} 
+
+	public long getSize() { 
+		return this.size;
+	} 
+
+	public void setSize(long size) { 
+		this.size = size;
+	} 
+
+	public Snapshot size(long size) { 
+		this.size = size;
+		return this;
+	} 
+
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
+
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
+
+	public Snapshot creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getId() { 
+		return this.id;
+	} 
+
+	public void setId(java.lang.String id) { 
+		this.id = id;
+	} 
+
+	public Snapshot id(java.lang.String id) { 
+		this.id = id;
+		return this;
+	} 
 
 }

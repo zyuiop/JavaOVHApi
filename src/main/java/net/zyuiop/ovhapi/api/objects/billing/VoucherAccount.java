@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.billing;
  * Details about a Voucher account
  */
 
-public interface VoucherAccount { 
+public class VoucherAccount { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getVoucherAccountId(); 
+	private java.lang.String voucherAccountId;
+	private net.zyuiop.ovhapi.api.objects.order.Price balance;
+	private java.util.Date lastUpdate;
+	private java.util.Date openDate;
 
-	/**
-	 * @return null
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getBalance(); 
+	public VoucherAccount() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.util.Date getLastUpdate(); 
+	public java.lang.String getVoucherAccountId() { 
+		return this.voucherAccountId;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.util.Date getOpenDate(); 
+	public void setVoucherAccountId(java.lang.String voucherAccountId) { 
+		this.voucherAccountId = voucherAccountId;
+	} 
+
+	public VoucherAccount voucherAccountId(java.lang.String voucherAccountId) { 
+		this.voucherAccountId = voucherAccountId;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getBalance() { 
+		return this.balance;
+	} 
+
+	public void setBalance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+		this.balance = balance;
+	} 
+
+	public VoucherAccount balance(net.zyuiop.ovhapi.api.objects.order.Price balance) { 
+		this.balance = balance;
+		return this;
+	} 
+
+	public java.util.Date getLastUpdate() { 
+		return this.lastUpdate;
+	} 
+
+	public void setLastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+	} 
+
+	public VoucherAccount lastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+		return this;
+	} 
+
+	public java.util.Date getOpenDate() { 
+		return this.openDate;
+	} 
+
+	public void setOpenDate(java.util.Date openDate) { 
+		this.openDate = openDate;
+	} 
+
+	public VoucherAccount openDate(java.util.Date openDate) { 
+		this.openDate = openDate;
+		return this;
+	} 
 
 }

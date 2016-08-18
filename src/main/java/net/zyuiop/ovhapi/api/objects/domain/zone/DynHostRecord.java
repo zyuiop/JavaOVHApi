@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.domain.zone;
  * DynHost record
  */
 
-public interface DynHostRecord { 
+public class DynHostRecord { 
 
-	/**
-	 * @return Ip address of the DynHost record
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private java.lang.String zone;
+	private long id;
+	private java.lang.String subDomain;
 
-	/**
-	 * @return Zone of the DynHost record
-	 */
-	java.lang.String getZone(); 
+	public DynHostRecord() {
+	}
 
-	/**
-	 * @return Id of the DynHost record
-	 */
-	long getId(); 
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
 
-	/**
-	 * @return Subdomain of the DynHost record
-	 */
-	java.lang.String getSubDomain(); 
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public DynHostRecord ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getZone() { 
+		return this.zone;
+	} 
+
+	public void setZone(java.lang.String zone) { 
+		this.zone = zone;
+	} 
+
+	public DynHostRecord zone(java.lang.String zone) { 
+		this.zone = zone;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public DynHostRecord id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getSubDomain() { 
+		return this.subDomain;
+	} 
+
+	public void setSubDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+	} 
+
+	public DynHostRecord subDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+		return this;
+	} 
 
 }

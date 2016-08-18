@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.xdsl;
  * Diagnostic of the access
  */
 
-public interface AccessDiagnostic { 
+public class AccessDiagnostic { 
 
-	/**
-	 * @return Is the access active on its primary or secondary LNS
-	 */
-	boolean getIsActiveOnLns(); 
+	private boolean isActiveOnLns;
+	private boolean incident;
+	private long remaining;
+	private boolean ping;
+	private net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities capabilities;
+	private boolean isModemConnected;
+	private java.util.Date diagnosticTime;
+	private net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic[] lineDetails;
 
-	/**
-	 * @return Is there an ongoing genericIncident on the access ?
-	 */
-	boolean getIncident(); 
+	public AccessDiagnostic() {
+	}
 
-	/**
-	 * @return Remaining number of diagnostic for this access
-	 */
-	long getRemaining(); 
+	public boolean getIsActiveOnLns() { 
+		return this.isActiveOnLns;
+	} 
 
-	/**
-	 * @return Does the access ping ?
-	 */
-	boolean getPing(); 
+	public void setIsActiveOnLns(boolean isActiveOnLns) { 
+		this.isActiveOnLns = isActiveOnLns;
+	} 
 
-	/**
-	 * @return Available tests for this access
-	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities getCapabilities(); 
+	public AccessDiagnostic isActiveOnLns(boolean isActiveOnLns) { 
+		this.isActiveOnLns = isActiveOnLns;
+		return this;
+	} 
 
-	/**
-	 * @return Is the modem connected ?
-	 */
-	boolean getIsModemConnected(); 
+	public boolean getIncident() { 
+		return this.incident;
+	} 
 
-	/**
-	 * @return Datime of the diagnostic
-	 */
-	java.util.Date getDiagnosticTime(); 
+	public void setIncident(boolean incident) { 
+		this.incident = incident;
+	} 
 
-	/**
-	 * @return Test details by line
-	 */
-	net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic[] getLineDetails(); 
+	public AccessDiagnostic incident(boolean incident) { 
+		this.incident = incident;
+		return this;
+	} 
+
+	public long getRemaining() { 
+		return this.remaining;
+	} 
+
+	public void setRemaining(long remaining) { 
+		this.remaining = remaining;
+	} 
+
+	public AccessDiagnostic remaining(long remaining) { 
+		this.remaining = remaining;
+		return this;
+	} 
+
+	public boolean getPing() { 
+		return this.ping;
+	} 
+
+	public void setPing(boolean ping) { 
+		this.ping = ping;
+	} 
+
+	public AccessDiagnostic ping(boolean ping) { 
+		this.ping = ping;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities getCapabilities() { 
+		return this.capabilities;
+	} 
+
+	public void setCapabilities(net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities capabilities) { 
+		this.capabilities = capabilities;
+	} 
+
+	public AccessDiagnostic capabilities(net.zyuiop.ovhapi.api.objects.xdsl.AccessDiagnosticCapabilities capabilities) { 
+		this.capabilities = capabilities;
+		return this;
+	} 
+
+	public boolean getIsModemConnected() { 
+		return this.isModemConnected;
+	} 
+
+	public void setIsModemConnected(boolean isModemConnected) { 
+		this.isModemConnected = isModemConnected;
+	} 
+
+	public AccessDiagnostic isModemConnected(boolean isModemConnected) { 
+		this.isModemConnected = isModemConnected;
+		return this;
+	} 
+
+	public java.util.Date getDiagnosticTime() { 
+		return this.diagnosticTime;
+	} 
+
+	public void setDiagnosticTime(java.util.Date diagnosticTime) { 
+		this.diagnosticTime = diagnosticTime;
+	} 
+
+	public AccessDiagnostic diagnosticTime(java.util.Date diagnosticTime) { 
+		this.diagnosticTime = diagnosticTime;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic[] getLineDetails() { 
+		return this.lineDetails;
+	} 
+
+	public void setLineDetails(net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic[] lineDetails) { 
+		this.lineDetails = lineDetails;
+	} 
+
+	public AccessDiagnostic lineDetails(net.zyuiop.ovhapi.api.objects.xdsl.LineDiagnostic[] lineDetails) { 
+		this.lineDetails = lineDetails;
+		return this;
+	} 
 
 }

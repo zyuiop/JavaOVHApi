@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.pack.xdsl;
  * SiteBuilder template infos
  */
 
-public interface SiteBuilderTemplate { 
+public class SiteBuilderTemplate { 
 
-	/**
-	 * @return null
-	 */
-	long getBkId(); 
+	private long bkId;
+	private java.lang.String reference;
+	private java.lang.String previewImg;
+	private java.lang.String name;
+	private long id;
+	private java.lang.String thumbImage;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getReference(); 
+	public SiteBuilderTemplate() {
+	}
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getPreviewImg(); 
+	public long getBkId() { 
+		return this.bkId;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getName(); 
+	public void setBkId(long bkId) { 
+		this.bkId = bkId;
+	} 
 
-	/**
-	 * @return null
-	 */
-	long getId(); 
+	public SiteBuilderTemplate bkId(long bkId) { 
+		this.bkId = bkId;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getThumbImage(); 
+	public java.lang.String getReference() { 
+		return this.reference;
+	} 
+
+	public void setReference(java.lang.String reference) { 
+		this.reference = reference;
+	} 
+
+	public SiteBuilderTemplate reference(java.lang.String reference) { 
+		this.reference = reference;
+		return this;
+	} 
+
+	public java.lang.String getPreviewImg() { 
+		return this.previewImg;
+	} 
+
+	public void setPreviewImg(java.lang.String previewImg) { 
+		this.previewImg = previewImg;
+	} 
+
+	public SiteBuilderTemplate previewImg(java.lang.String previewImg) { 
+		this.previewImg = previewImg;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public SiteBuilderTemplate name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public SiteBuilderTemplate id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getThumbImage() { 
+		return this.thumbImage;
+	} 
+
+	public void setThumbImage(java.lang.String thumbImage) { 
+		this.thumbImage = thumbImage;
+	} 
+
+	public SiteBuilderTemplate thumbImage(java.lang.String thumbImage) { 
+		this.thumbImage = thumbImage;
+		return this;
+	} 
 
 }

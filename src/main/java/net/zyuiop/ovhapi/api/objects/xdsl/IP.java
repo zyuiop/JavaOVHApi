@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.xdsl;
  * Informations about an IP address
  */
 
-public interface IP { 
+public class IP { 
 
-	/**
-	 * @return The IP address
-	 */
-	java.lang.String getIp(); 
+	private java.lang.String ip;
+	private java.lang.String version;
+	private java.lang.String status;
+	private long range;
+	private java.lang.String[] dnsList;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getVersion(); 
+	public IP() {
+	}
 
-	/**
-	 * @return status of the IP
-	 */
-	java.lang.String getStatus(); 
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
 
-	/**
-	 * @return null
-	 */
-	long getRange(); 
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String[] getDnsList(); 
+	public IP ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getVersion() { 
+		return this.version;
+	} 
+
+	public void setVersion(java.lang.String version) { 
+		this.version = version;
+	} 
+
+	public IP version(java.lang.String version) { 
+		this.version = version;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public IP status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public long getRange() { 
+		return this.range;
+	} 
+
+	public void setRange(long range) { 
+		this.range = range;
+	} 
+
+	public IP range(long range) { 
+		this.range = range;
+		return this;
+	} 
+
+	public java.lang.String[] getDnsList() { 
+		return this.dnsList;
+	} 
+
+	public void setDnsList(java.lang.String[] dnsList) { 
+		this.dnsList = dnsList;
+	} 
+
+	public IP dnsList(java.lang.String[] dnsList) { 
+		this.dnsList = dnsList;
+		return this;
+	} 
 
 }

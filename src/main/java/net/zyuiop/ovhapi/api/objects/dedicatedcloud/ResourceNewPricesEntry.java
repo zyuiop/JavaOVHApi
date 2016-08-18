@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.dedicatedcloud;
  * A structure describing the Resource's new price
  */
 
-public interface ResourceNewPricesEntry { 
+public class ResourceNewPricesEntry { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getResourceType(); 
+	private java.lang.String resourceType;
+	private java.lang.String billingType;
+	private boolean changed;
+	private net.zyuiop.ovhapi.api.objects.order.Price oldPrice;
+	private java.lang.String name;
+	private net.zyuiop.ovhapi.api.objects.order.Price newPrice;
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getBillingType(); 
+	public ResourceNewPricesEntry() {
+	}
 
-	/**
-	 * @return null
-	 */
-	boolean getChanged(); 
+	public java.lang.String getResourceType() { 
+		return this.resourceType;
+	} 
 
-	/**
-	 * @return null
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getOldPrice(); 
+	public void setResourceType(java.lang.String resourceType) { 
+		this.resourceType = resourceType;
+	} 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getName(); 
+	public ResourceNewPricesEntry resourceType(java.lang.String resourceType) { 
+		this.resourceType = resourceType;
+		return this;
+	} 
 
-	/**
-	 * @return null
-	 */
-	net.zyuiop.ovhapi.api.objects.order.Price getNewPrice(); 
+	public java.lang.String getBillingType() { 
+		return this.billingType;
+	} 
+
+	public void setBillingType(java.lang.String billingType) { 
+		this.billingType = billingType;
+	} 
+
+	public ResourceNewPricesEntry billingType(java.lang.String billingType) { 
+		this.billingType = billingType;
+		return this;
+	} 
+
+	public boolean getChanged() { 
+		return this.changed;
+	} 
+
+	public void setChanged(boolean changed) { 
+		this.changed = changed;
+	} 
+
+	public ResourceNewPricesEntry changed(boolean changed) { 
+		this.changed = changed;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getOldPrice() { 
+		return this.oldPrice;
+	} 
+
+	public void setOldPrice(net.zyuiop.ovhapi.api.objects.order.Price oldPrice) { 
+		this.oldPrice = oldPrice;
+	} 
+
+	public ResourceNewPricesEntry oldPrice(net.zyuiop.ovhapi.api.objects.order.Price oldPrice) { 
+		this.oldPrice = oldPrice;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public ResourceNewPricesEntry name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.order.Price getNewPrice() { 
+		return this.newPrice;
+	} 
+
+	public void setNewPrice(net.zyuiop.ovhapi.api.objects.order.Price newPrice) { 
+		this.newPrice = newPrice;
+	} 
+
+	public ResourceNewPricesEntry newPrice(net.zyuiop.ovhapi.api.objects.order.Price newPrice) { 
+		this.newPrice = newPrice;
+		return this;
+	} 
 
 }

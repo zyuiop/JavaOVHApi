@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.hosting.web;
  * Dump
  */
 
-public interface Dump { 
+public class Dump { 
 
-	/**
-	 * @return Creation date of the dump
-	 */
-	java.util.Date getCreationDate(); 
+	private java.util.Date creationDate;
+	private java.lang.String url;
+	private long id;
+	private java.lang.String type;
+	private java.util.Date deletionDate;
 
-	/**
-	 * @return Dump url access
-	 */
-	java.lang.String getUrl(); 
+	public Dump() {
+	}
 
-	/**
-	 * @return Dump id
-	 */
-	long getId(); 
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
 
-	/**
-	 * @return Dump type
-	 */
-	java.lang.String getType(); 
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
 
-	/**
-	 * @return Automatic deletion date of the dump
-	 */
-	java.util.Date getDeletionDate(); 
+	public Dump creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getUrl() { 
+		return this.url;
+	} 
+
+	public void setUrl(java.lang.String url) { 
+		this.url = url;
+	} 
+
+	public Dump url(java.lang.String url) { 
+		this.url = url;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Dump id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public Dump type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
+
+	public java.util.Date getDeletionDate() { 
+		return this.deletionDate;
+	} 
+
+	public void setDeletionDate(java.util.Date deletionDate) { 
+		this.deletionDate = deletionDate;
+	} 
+
+	public Dump deletionDate(java.util.Date deletionDate) { 
+		this.deletionDate = deletionDate;
+		return this;
+	} 
 
 }

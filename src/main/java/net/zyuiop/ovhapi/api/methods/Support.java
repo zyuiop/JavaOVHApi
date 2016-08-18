@@ -7,6 +7,13 @@ package net.zyuiop.ovhapi.api.methods;
 public interface Support { 
 
 	/**
+	 * Get ticket
+	 * Facultative parameters ? false
+	 * @param ticketId internal identifier ticket
+	*/
+	net.zyuiop.ovhapi.api.objects.support.Ticket getTicketsTicketId(long ticketId) throws java.io.IOException;
+
+	/**
 	 * Create a new ticket
 	 * Facultative parameters ? true
 	 * @param body Ticket message body
@@ -28,36 +35,6 @@ public interface Support {
 	net.zyuiop.ovhapi.api.objects.support.NewMessageInfo postTicketsCreate(java.lang.String body, java.lang.String subject, java.lang.String type) throws java.io.IOException;
 
 	/**
-	 * Close ticket
-	 * Facultative parameters ? false
-	 * @param ticketId internal ticket identifier
-	*/
-	void postTicketsTicketIdClose(long ticketId) throws java.io.IOException;
-
-	/**
-	 * Reopen a ticket
-	 * Facultative parameters ? false
-	 * @param ticketId internal ticket identifier
-	 * @param body ticket reopen reason
-	*/
-	void postTicketsTicketIdReopen(long ticketId, java.lang.String body) throws java.io.IOException;
-
-	/**
-	 * Reply to ticket
-	 * Facultative parameters ? false
-	 * @param ticketId internal ticket identifier
-	 * @param body text body of ticket response
-	*/
-	void postTicketsTicketIdReply(long ticketId, java.lang.String body) throws java.io.IOException;
-
-	/**
-	 * Get ticket
-	 * Facultative parameters ? false
-	 * @param ticketId internal identifier ticket
-	*/
-	net.zyuiop.ovhapi.api.objects.support.Ticket getTicketsTicketId(long ticketId) throws java.io.IOException;
-
-	/**
 	 * List support tickets identifiers for this service
 	 * Facultative parameters ? true
 	 * @param minCreationDate Minimum creation date
@@ -77,10 +54,33 @@ public interface Support {
 	long[] getTickets() throws java.io.IOException;
 
 	/**
+	 * Reopen a ticket
+	 * Facultative parameters ? false
+	 * @param ticketId internal ticket identifier
+	 * @param body ticket reopen reason
+	*/
+	void postTicketsTicketIdReopen(long ticketId, java.lang.String body) throws java.io.IOException;
+
+	/**
 	 * Get ticket messages
 	 * Facultative parameters ? false
 	 * @param ticketId internal ticket identifier
 	*/
 	net.zyuiop.ovhapi.api.objects.support.Message[] getTicketsTicketIdMessages(long ticketId) throws java.io.IOException;
+
+	/**
+	 * Reply to ticket
+	 * Facultative parameters ? false
+	 * @param ticketId internal ticket identifier
+	 * @param body text body of ticket response
+	*/
+	void postTicketsTicketIdReply(long ticketId, java.lang.String body) throws java.io.IOException;
+
+	/**
+	 * Close ticket
+	 * Facultative parameters ? false
+	 * @param ticketId internal ticket identifier
+	*/
+	void postTicketsTicketIdClose(long ticketId) throws java.io.IOException;
 
 }

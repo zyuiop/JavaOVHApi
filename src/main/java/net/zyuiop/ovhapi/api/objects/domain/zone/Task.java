@@ -4,61 +4,164 @@ package net.zyuiop.ovhapi.api.objects.domain.zone;
  * Tasks associated to a zone
  */
 
-public interface Task { 
+public class Task { 
 
-	/**
-	 * @return Function of the task
-	 */
-	java.lang.String getFunction(); 
+	private java.lang.String function;
+	private java.lang.String status;
+	private boolean canAccelerate;
+	private java.util.Date lastUpdate;
+	private java.util.Date creationDate;
+	private java.lang.String comment;
+	private java.util.Date todoDate;
+	private long id;
+	private boolean canCancel;
+	private java.util.Date doneDate;
+	private boolean canRelaunch;
 
-	/**
-	 * @return Status of the task
-	 */
-	java.lang.String getStatus(); 
+	public Task() {
+	}
 
-	/**
-	 * @return Can accelerate the task
-	 */
-	boolean getCanAccelerate(); 
+	public java.lang.String getFunction() { 
+		return this.function;
+	} 
 
-	/**
-	 * @return Last update date of the task
-	 */
-	java.util.Date getLastUpdate(); 
+	public void setFunction(java.lang.String function) { 
+		this.function = function;
+	} 
 
-	/**
-	 * @return Creation date of the task
-	 */
-	java.util.Date getCreationDate(); 
+	public Task function(java.lang.String function) { 
+		this.function = function;
+		return this;
+	} 
 
-	/**
-	 * @return Comment about the task
-	 */
-	java.lang.String getComment(); 
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
 
-	/**
-	 * @return Todo date of the task
-	 */
-	java.util.Date getTodoDate(); 
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
 
-	/**
-	 * @return Id of the task
-	 */
-	long getId(); 
+	public Task status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
 
-	/**
-	 * @return Can cancel the task
-	 */
-	boolean getCanCancel(); 
+	public boolean getCanAccelerate() { 
+		return this.canAccelerate;
+	} 
 
-	/**
-	 * @return Done date of the task
-	 */
-	java.util.Date getDoneDate(); 
+	public void setCanAccelerate(boolean canAccelerate) { 
+		this.canAccelerate = canAccelerate;
+	} 
 
-	/**
-	 * @return Can relaunch the task
-	 */
-	boolean getCanRelaunch(); 
+	public Task canAccelerate(boolean canAccelerate) { 
+		this.canAccelerate = canAccelerate;
+		return this;
+	} 
+
+	public java.util.Date getLastUpdate() { 
+		return this.lastUpdate;
+	} 
+
+	public void setLastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+	} 
+
+	public Task lastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+		return this;
+	} 
+
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
+
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
+
+	public Task creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getComment() { 
+		return this.comment;
+	} 
+
+	public void setComment(java.lang.String comment) { 
+		this.comment = comment;
+	} 
+
+	public Task comment(java.lang.String comment) { 
+		this.comment = comment;
+		return this;
+	} 
+
+	public java.util.Date getTodoDate() { 
+		return this.todoDate;
+	} 
+
+	public void setTodoDate(java.util.Date todoDate) { 
+		this.todoDate = todoDate;
+	} 
+
+	public Task todoDate(java.util.Date todoDate) { 
+		this.todoDate = todoDate;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Task id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public boolean getCanCancel() { 
+		return this.canCancel;
+	} 
+
+	public void setCanCancel(boolean canCancel) { 
+		this.canCancel = canCancel;
+	} 
+
+	public Task canCancel(boolean canCancel) { 
+		this.canCancel = canCancel;
+		return this;
+	} 
+
+	public java.util.Date getDoneDate() { 
+		return this.doneDate;
+	} 
+
+	public void setDoneDate(java.util.Date doneDate) { 
+		this.doneDate = doneDate;
+	} 
+
+	public Task doneDate(java.util.Date doneDate) { 
+		this.doneDate = doneDate;
+		return this;
+	} 
+
+	public boolean getCanRelaunch() { 
+		return this.canRelaunch;
+	} 
+
+	public void setCanRelaunch(boolean canRelaunch) { 
+		this.canRelaunch = canRelaunch;
+	} 
+
+	public Task canRelaunch(boolean canRelaunch) { 
+		this.canRelaunch = canRelaunch;
+		return this;
+	} 
 
 }

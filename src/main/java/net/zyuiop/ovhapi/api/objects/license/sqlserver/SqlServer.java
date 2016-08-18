@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.license.sqlserver;
  * Your SQL Server license
  */
 
-public interface SqlServer { 
+public class SqlServer { 
 
-	/**
-	 * @return The internal name of your license
-	 */
-	java.lang.String getDomain(); 
+	private java.lang.String domain;
+	private java.lang.String licenseId;
+	private java.lang.String ip;
+	private java.lang.String version;
+	private java.lang.String status;
+	private java.util.Date creation;
 
-	/**
-	 * @return The license id on license provider side
-	 */
-	java.lang.String getLicenseId(); 
+	public SqlServer() {
+	}
 
-	/**
-	 * @return The ip on which this license is attached
-	 */
-	java.lang.String getIp(); 
+	public java.lang.String getDomain() { 
+		return this.domain;
+	} 
 
-	/**
-	 * @return This license version
-	 */
-	java.lang.String getVersion(); 
+	public void setDomain(java.lang.String domain) { 
+		this.domain = domain;
+	} 
 
-	/**
-	 * @return This license state
-	 */
-	java.lang.String getStatus(); 
+	public SqlServer domain(java.lang.String domain) { 
+		this.domain = domain;
+		return this;
+	} 
 
-	/**
-	 * @return This license creation date
-	 */
-	java.util.Date getCreation(); 
+	public java.lang.String getLicenseId() { 
+		return this.licenseId;
+	} 
+
+	public void setLicenseId(java.lang.String licenseId) { 
+		this.licenseId = licenseId;
+	} 
+
+	public SqlServer licenseId(java.lang.String licenseId) { 
+		this.licenseId = licenseId;
+		return this;
+	} 
+
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public SqlServer ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getVersion() { 
+		return this.version;
+	} 
+
+	public void setVersion(java.lang.String version) { 
+		this.version = version;
+	} 
+
+	public SqlServer version(java.lang.String version) { 
+		this.version = version;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public SqlServer status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.util.Date getCreation() { 
+		return this.creation;
+	} 
+
+	public void setCreation(java.util.Date creation) { 
+		this.creation = creation;
+	} 
+
+	public SqlServer creation(java.util.Date creation) { 
+		this.creation = creation;
+		return this;
+	} 
 
 }

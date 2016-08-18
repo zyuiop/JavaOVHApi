@@ -4,36 +4,94 @@ package net.zyuiop.ovhapi.api.objects.domain.zone;
  * Zone resource records
  */
 
-public interface Record { 
+public class Record { 
 
-	/**
-	 * @return Resource record target
-	 */
-	java.lang.String getTarget(); 
+	private java.lang.String target;
+	private long ttl;
+	private java.lang.String zone;
+	private java.lang.String fieldType;
+	private long id;
+	private java.lang.String subDomain;
 
-	/**
-	 * @return Resource record ttl
-	 */
-	long getTtl(); 
+	public Record() {
+	}
 
-	/**
-	 * @return Resource record zone
-	 */
-	java.lang.String getZone(); 
+	public java.lang.String getTarget() { 
+		return this.target;
+	} 
 
-	/**
-	 * @return Resource record Name
-	 */
-	java.lang.String getFieldType(); 
+	public void setTarget(java.lang.String target) { 
+		this.target = target;
+	} 
 
-	/**
-	 * @return Id of the zone resource record
-	 */
-	long getId(); 
+	public Record target(java.lang.String target) { 
+		this.target = target;
+		return this;
+	} 
 
-	/**
-	 * @return Resource record subdomain
-	 */
-	java.lang.String getSubDomain(); 
+	public long getTtl() { 
+		return this.ttl;
+	} 
+
+	public void setTtl(long ttl) { 
+		this.ttl = ttl;
+	} 
+
+	public Record ttl(long ttl) { 
+		this.ttl = ttl;
+		return this;
+	} 
+
+	public java.lang.String getZone() { 
+		return this.zone;
+	} 
+
+	public void setZone(java.lang.String zone) { 
+		this.zone = zone;
+	} 
+
+	public Record zone(java.lang.String zone) { 
+		this.zone = zone;
+		return this;
+	} 
+
+	public java.lang.String getFieldType() { 
+		return this.fieldType;
+	} 
+
+	public void setFieldType(java.lang.String fieldType) { 
+		this.fieldType = fieldType;
+	} 
+
+	public Record fieldType(java.lang.String fieldType) { 
+		this.fieldType = fieldType;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public Record id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getSubDomain() { 
+		return this.subDomain;
+	} 
+
+	public void setSubDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+	} 
+
+	public Record subDomain(java.lang.String subDomain) { 
+		this.subDomain = subDomain;
+		return this;
+	} 
 
 }

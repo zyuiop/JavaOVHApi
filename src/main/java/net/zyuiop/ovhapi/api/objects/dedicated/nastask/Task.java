@@ -4,46 +4,122 @@ package net.zyuiop.ovhapi.api.objects.dedicated.nastask;
  * Storage task
  */
 
-public interface Task { 
+public class Task { 
 
-	/**
-	 * @return id of the task
-	 */
-	long getTaskId(); 
+	private long taskId;
+	private java.lang.String storageName;
+	private java.lang.String status;
+	private java.lang.String details;
+	private java.util.Date lastUpdate;
+	private java.util.Date todoDate;
+	private java.lang.String operation;
+	private java.util.Date doneDate;
 
-	/**
-	 * @return the name of your service
-	 */
-	java.lang.String getStorageName(); 
+	public Task() {
+	}
 
-	/**
-	 * @return The actual state of the task
-	 */
-	java.lang.String getStatus(); 
+	public long getTaskId() { 
+		return this.taskId;
+	} 
 
-	/**
-	 * @return information about operation
-	 */
-	java.lang.String getDetails(); 
+	public void setTaskId(long taskId) { 
+		this.taskId = taskId;
+	} 
 
-	/**
-	 * @return last modification of task
-	 */
-	java.util.Date getLastUpdate(); 
+	public Task taskId(long taskId) { 
+		this.taskId = taskId;
+		return this;
+	} 
 
-	/**
-	 * @return Insertion of task in the todo
-	 */
-	java.util.Date getTodoDate(); 
+	public java.lang.String getStorageName() { 
+		return this.storageName;
+	} 
 
-	/**
-	 * @return Task type of operation
-	 */
-	java.lang.String getOperation(); 
+	public void setStorageName(java.lang.String storageName) { 
+		this.storageName = storageName;
+	} 
 
-	/**
-	 * @return the date when the task finished
-	 */
-	java.util.Date getDoneDate(); 
+	public Task storageName(java.lang.String storageName) { 
+		this.storageName = storageName;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public Task status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public java.lang.String getDetails() { 
+		return this.details;
+	} 
+
+	public void setDetails(java.lang.String details) { 
+		this.details = details;
+	} 
+
+	public Task details(java.lang.String details) { 
+		this.details = details;
+		return this;
+	} 
+
+	public java.util.Date getLastUpdate() { 
+		return this.lastUpdate;
+	} 
+
+	public void setLastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+	} 
+
+	public Task lastUpdate(java.util.Date lastUpdate) { 
+		this.lastUpdate = lastUpdate;
+		return this;
+	} 
+
+	public java.util.Date getTodoDate() { 
+		return this.todoDate;
+	} 
+
+	public void setTodoDate(java.util.Date todoDate) { 
+		this.todoDate = todoDate;
+	} 
+
+	public Task todoDate(java.util.Date todoDate) { 
+		this.todoDate = todoDate;
+		return this;
+	} 
+
+	public java.lang.String getOperation() { 
+		return this.operation;
+	} 
+
+	public void setOperation(java.lang.String operation) { 
+		this.operation = operation;
+	} 
+
+	public Task operation(java.lang.String operation) { 
+		this.operation = operation;
+		return this;
+	} 
+
+	public java.util.Date getDoneDate() { 
+		return this.doneDate;
+	} 
+
+	public void setDoneDate(java.util.Date doneDate) { 
+		this.doneDate = doneDate;
+	} 
+
+	public Task doneDate(java.util.Date doneDate) { 
+		this.doneDate = doneDate;
+		return this;
+	} 
 
 }

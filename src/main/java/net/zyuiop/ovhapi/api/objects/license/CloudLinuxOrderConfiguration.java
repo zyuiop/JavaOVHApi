@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.license;
  * Allowed CloudLinux versions per matching serviceTypes
  */
 
-public interface CloudLinuxOrderConfiguration { 
+public class CloudLinuxOrderConfiguration { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getServiceType(); 
+	private java.lang.String serviceType;
+	private net.zyuiop.ovhapi.api.objects.license.OrderableCloudLinuxCompatibilityInfos[] orderableVersions;
 
-	/**
-	 * @return null
-	 */
-	net.zyuiop.ovhapi.api.objects.license.OrderableCloudLinuxCompatibilityInfos[] getOrderableVersions(); 
+	public CloudLinuxOrderConfiguration() {
+	}
+
+	public java.lang.String getServiceType() { 
+		return this.serviceType;
+	} 
+
+	public void setServiceType(java.lang.String serviceType) { 
+		this.serviceType = serviceType;
+	} 
+
+	public CloudLinuxOrderConfiguration serviceType(java.lang.String serviceType) { 
+		this.serviceType = serviceType;
+		return this;
+	} 
+
+	public net.zyuiop.ovhapi.api.objects.license.OrderableCloudLinuxCompatibilityInfos[] getOrderableVersions() { 
+		return this.orderableVersions;
+	} 
+
+	public void setOrderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableCloudLinuxCompatibilityInfos[] orderableVersions) { 
+		this.orderableVersions = orderableVersions;
+	} 
+
+	public CloudLinuxOrderConfiguration orderableVersions(net.zyuiop.ovhapi.api.objects.license.OrderableCloudLinuxCompatibilityInfos[] orderableVersions) { 
+		this.orderableVersions = orderableVersions;
+		return this;
+	} 
 
 }

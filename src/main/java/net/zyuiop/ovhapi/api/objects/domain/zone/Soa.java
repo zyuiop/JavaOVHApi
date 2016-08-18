@@ -4,41 +4,108 @@ package net.zyuiop.ovhapi.api.objects.domain.zone;
  * Zone Start Of Authority
  */
 
-public interface Soa { 
+public class Soa { 
 
-	/**
-	 * @return Email address of the DNS Administrator
-	 */
-	java.lang.String getEmail(); 
+	private java.lang.String email;
+	private long nxDomainTtl;
+	private long refresh;
+	private long ttl;
+	private long serial;
+	private java.lang.String server;
+	private long expire;
 
-	/**
-	 * @return Non-Existent Domain TTL, if the name server returns a negative response, the remote server should wait the number of seconds set in the nxDomainTtl field before trying again
-	 */
-	long getNxDomainTtl(); 
+	public Soa() {
+	}
 
-	/**
-	 * @return The refresh value determines the interval in seconds between successful zone transfers of the entire zone file from a nameserver to another.
-	 */
-	long getRefresh(); 
+	public java.lang.String getEmail() { 
+		return this.email;
+	} 
 
-	/**
-	 * @return Time To Live in seconds
-	 */
-	long getTtl(); 
+	public void setEmail(java.lang.String email) { 
+		this.email = email;
+	} 
 
-	/**
-	 * @return The serial number is used to indicate which copy of the zone file is the most current. When editing zone files, you must increment the serial number
-	 */
-	long getSerial(); 
+	public Soa email(java.lang.String email) { 
+		this.email = email;
+		return this;
+	} 
 
-	/**
-	 * @return Primary authoritative server
-	 */
-	java.lang.String getServer(); 
+	public long getNxDomainTtl() { 
+		return this.nxDomainTtl;
+	} 
 
-	/**
-	 * @return When a zone transfer fails, a countdown clock begins. When the number of seconds set in the expire field elapses, the nameserver stops answering for that zone file
-	 */
-	long getExpire(); 
+	public void setNxDomainTtl(long nxDomainTtl) { 
+		this.nxDomainTtl = nxDomainTtl;
+	} 
+
+	public Soa nxDomainTtl(long nxDomainTtl) { 
+		this.nxDomainTtl = nxDomainTtl;
+		return this;
+	} 
+
+	public long getRefresh() { 
+		return this.refresh;
+	} 
+
+	public void setRefresh(long refresh) { 
+		this.refresh = refresh;
+	} 
+
+	public Soa refresh(long refresh) { 
+		this.refresh = refresh;
+		return this;
+	} 
+
+	public long getTtl() { 
+		return this.ttl;
+	} 
+
+	public void setTtl(long ttl) { 
+		this.ttl = ttl;
+	} 
+
+	public Soa ttl(long ttl) { 
+		this.ttl = ttl;
+		return this;
+	} 
+
+	public long getSerial() { 
+		return this.serial;
+	} 
+
+	public void setSerial(long serial) { 
+		this.serial = serial;
+	} 
+
+	public Soa serial(long serial) { 
+		this.serial = serial;
+		return this;
+	} 
+
+	public java.lang.String getServer() { 
+		return this.server;
+	} 
+
+	public void setServer(java.lang.String server) { 
+		this.server = server;
+	} 
+
+	public Soa server(java.lang.String server) { 
+		this.server = server;
+		return this;
+	} 
+
+	public long getExpire() { 
+		return this.expire;
+	} 
+
+	public void setExpire(long expire) { 
+		this.expire = expire;
+	} 
+
+	public Soa expire(long expire) { 
+		this.expire = expire;
+		return this;
+	} 
 
 }

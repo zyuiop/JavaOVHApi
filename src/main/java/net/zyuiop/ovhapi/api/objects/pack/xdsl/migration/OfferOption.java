@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.pack.xdsl.migration;
  * Option of Offer
  */
 
-public interface OfferOption { 
+public class OfferOption { 
 
-	/**
-	 * @return Name of the option
-	 */
-	java.lang.String getName(); 
+	private java.lang.String name;
+	private long quantity;
 
-	/**
-	 * @return Number of slots, couting included slots
-	 */
-	long getQuantity(); 
+	public OfferOption() {
+	}
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public OfferOption name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public long getQuantity() { 
+		return this.quantity;
+	} 
+
+	public void setQuantity(long quantity) { 
+		this.quantity = quantity;
+	} 
+
+	public OfferOption quantity(long quantity) { 
+		this.quantity = quantity;
+		return this;
+	} 
 
 }

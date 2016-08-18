@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * Firewall attached to this server
  */
 
-public interface Firewall { 
+public class Firewall { 
 
-	/**
-	 * @return null
-	 */
-	java.lang.String getFirewall(); 
+	private java.lang.String firewall;
+	private java.lang.String mode;
+	private java.lang.String ip;
+	private java.lang.String model;
+	private boolean enabled;
 
-	/**
-	 * @return transparent mode : device is invisible on the network; routed mode : the security appliance is considered to be a router hop in the network
-	 */
-	java.lang.String getMode(); 
+	public Firewall() {
+	}
 
-	/**
-	 * @return Firewall management IP
-	 */
-	java.lang.String getIp(); 
+	public java.lang.String getFirewall() { 
+		return this.firewall;
+	} 
 
-	/**
-	 * @return Firewall model
-	 */
-	java.lang.String getModel(); 
+	public void setFirewall(java.lang.String firewall) { 
+		this.firewall = firewall;
+	} 
 
-	/**
-	 * @return null
-	 */
-	boolean getEnabled(); 
+	public Firewall firewall(java.lang.String firewall) { 
+		this.firewall = firewall;
+		return this;
+	} 
+
+	public java.lang.String getMode() { 
+		return this.mode;
+	} 
+
+	public void setMode(java.lang.String mode) { 
+		this.mode = mode;
+	} 
+
+	public Firewall mode(java.lang.String mode) { 
+		this.mode = mode;
+		return this;
+	} 
+
+	public java.lang.String getIp() { 
+		return this.ip;
+	} 
+
+	public void setIp(java.lang.String ip) { 
+		this.ip = ip;
+	} 
+
+	public Firewall ip(java.lang.String ip) { 
+		this.ip = ip;
+		return this;
+	} 
+
+	public java.lang.String getModel() { 
+		return this.model;
+	} 
+
+	public void setModel(java.lang.String model) { 
+		this.model = model;
+	} 
+
+	public Firewall model(java.lang.String model) { 
+		this.model = model;
+		return this;
+	} 
+
+	public boolean getEnabled() { 
+		return this.enabled;
+	} 
+
+	public void setEnabled(boolean enabled) { 
+		this.enabled = enabled;
+	} 
+
+	public Firewall enabled(boolean enabled) { 
+		this.enabled = enabled;
+		return this;
+	} 
 
 }

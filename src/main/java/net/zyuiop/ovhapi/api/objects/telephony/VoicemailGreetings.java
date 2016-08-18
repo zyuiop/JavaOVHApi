@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Voicemail greeting
  */
 
-public interface VoicemailGreetings { 
+public class VoicemailGreetings { 
 
-	/**
-	 * @return Callee number in international format
-	 */
-	java.lang.String getCallee(); 
+	private java.lang.String callee;
+	private long id;
+	private java.lang.String dir;
 
-	/**
-	 * @return Uniq customized greeting identifier
-	 */
-	long getId(); 
+	public VoicemailGreetings() {
+	}
 
-	/**
-	 * @return Customized greeting voicemail directory
-	 */
-	java.lang.String getDir(); 
+	public java.lang.String getCallee() { 
+		return this.callee;
+	} 
+
+	public void setCallee(java.lang.String callee) { 
+		this.callee = callee;
+	} 
+
+	public VoicemailGreetings callee(java.lang.String callee) { 
+		this.callee = callee;
+		return this;
+	} 
+
+	public long getId() { 
+		return this.id;
+	} 
+
+	public void setId(long id) { 
+		this.id = id;
+	} 
+
+	public VoicemailGreetings id(long id) { 
+		this.id = id;
+		return this;
+	} 
+
+	public java.lang.String getDir() { 
+		return this.dir;
+	} 
+
+	public void setDir(java.lang.String dir) { 
+		this.dir = dir;
+	} 
+
+	public VoicemailGreetings dir(java.lang.String dir) { 
+		this.dir = dir;
+		return this;
+	} 
 
 }

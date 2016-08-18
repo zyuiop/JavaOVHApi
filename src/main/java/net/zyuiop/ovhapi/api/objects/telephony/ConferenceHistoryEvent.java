@@ -4,21 +4,52 @@ package net.zyuiop.ovhapi.api.objects.telephony;
  * Event of a conference (participant left/join)
  */
 
-public interface ConferenceHistoryEvent { 
+public class ConferenceHistoryEvent { 
 
-	/**
-	 * @return The caller id of the participant
-	 */
-	java.lang.String getCallerid(); 
+	private java.lang.String callerid;
+	private java.util.Date date;
+	private java.lang.String type;
 
-	/**
-	 * @return The date of the conference event
-	 */
-	java.util.Date getDate(); 
+	public ConferenceHistoryEvent() {
+	}
 
-	/**
-	 * @return The nature of the event : left/join
-	 */
-	java.lang.String getType(); 
+	public java.lang.String getCallerid() { 
+		return this.callerid;
+	} 
+
+	public void setCallerid(java.lang.String callerid) { 
+		this.callerid = callerid;
+	} 
+
+	public ConferenceHistoryEvent callerid(java.lang.String callerid) { 
+		this.callerid = callerid;
+		return this;
+	} 
+
+	public java.util.Date getDate() { 
+		return this.date;
+	} 
+
+	public void setDate(java.util.Date date) { 
+		this.date = date;
+	} 
+
+	public ConferenceHistoryEvent date(java.util.Date date) { 
+		this.date = date;
+		return this;
+	} 
+
+	public java.lang.String getType() { 
+		return this.type;
+	} 
+
+	public void setType(java.lang.String type) { 
+		this.type = type;
+	} 
+
+	public ConferenceHistoryEvent type(java.lang.String type) { 
+		this.type = type;
+		return this;
+	} 
 
 }

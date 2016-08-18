@@ -4,31 +4,80 @@ package net.zyuiop.ovhapi.api.objects.nichandle;
  * SMS notifications
  */
 
-public interface NichandleSmsNotification { 
+public class NichandleSmsNotification { 
 
-	/**
-	 * @return Last update date
-	 */
-	java.util.Date getUpdateDate(); 
+	private java.util.Date updateDate;
+	private java.util.Date creationDate;
+	private java.lang.String status;
+	private boolean abuse;
+	private java.lang.String phoneNumber;
 
-	/**
-	 * @return Creation date
-	 */
-	java.util.Date getCreationDate(); 
+	public NichandleSmsNotification() {
+	}
 
-	/**
-	 * @return Status of your notification
-	 */
-	java.lang.String getStatus(); 
+	public java.util.Date getUpdateDate() { 
+		return this.updateDate;
+	} 
 
-	/**
-	 * @return Receive notification for abuse reports
-	 */
-	boolean getAbuse(); 
+	public void setUpdateDate(java.util.Date updateDate) { 
+		this.updateDate = updateDate;
+	} 
 
-	/**
-	 * @return The phone number you want to receive notification on
-	 */
-	java.lang.String getPhoneNumber(); 
+	public NichandleSmsNotification updateDate(java.util.Date updateDate) { 
+		this.updateDate = updateDate;
+		return this;
+	} 
+
+	public java.util.Date getCreationDate() { 
+		return this.creationDate;
+	} 
+
+	public void setCreationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+	} 
+
+	public NichandleSmsNotification creationDate(java.util.Date creationDate) { 
+		this.creationDate = creationDate;
+		return this;
+	} 
+
+	public java.lang.String getStatus() { 
+		return this.status;
+	} 
+
+	public void setStatus(java.lang.String status) { 
+		this.status = status;
+	} 
+
+	public NichandleSmsNotification status(java.lang.String status) { 
+		this.status = status;
+		return this;
+	} 
+
+	public boolean getAbuse() { 
+		return this.abuse;
+	} 
+
+	public void setAbuse(boolean abuse) { 
+		this.abuse = abuse;
+	} 
+
+	public NichandleSmsNotification abuse(boolean abuse) { 
+		this.abuse = abuse;
+		return this;
+	} 
+
+	public java.lang.String getPhoneNumber() { 
+		return this.phoneNumber;
+	} 
+
+	public void setPhoneNumber(java.lang.String phoneNumber) { 
+		this.phoneNumber = phoneNumber;
+	} 
+
+	public NichandleSmsNotification phoneNumber(java.lang.String phoneNumber) { 
+		this.phoneNumber = phoneNumber;
+		return this;
+	} 
 
 }

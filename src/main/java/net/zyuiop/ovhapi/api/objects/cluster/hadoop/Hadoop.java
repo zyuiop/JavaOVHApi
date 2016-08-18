@@ -4,26 +4,66 @@ package net.zyuiop.ovhapi.api.objects.cluster.hadoop;
  * Managed Hadoop Cluster
  */
 
-public interface Hadoop { 
+public class Hadoop { 
 
-	/**
-	 * @return CDH and Cloudera Manager version
-	 */
-	java.lang.String getClouderaVersion(); 
+	private java.lang.String clouderaVersion;
+	private long maxOrderableNodes;
+	private java.lang.String name;
+	private java.lang.String state;
 
-	/**
-	 * @return Maximum quantity of nodes allowed to be ordered in the cluster
-	 */
-	long getMaxOrderableNodes(); 
+	public Hadoop() {
+	}
 
-	/**
-	 * @return Service name of your Cluster
-	 */
-	java.lang.String getName(); 
+	public java.lang.String getClouderaVersion() { 
+		return this.clouderaVersion;
+	} 
 
-	/**
-	 * @return State of the Hadoop Cluster
-	 */
-	java.lang.String getState(); 
+	public void setClouderaVersion(java.lang.String clouderaVersion) { 
+		this.clouderaVersion = clouderaVersion;
+	} 
+
+	public Hadoop clouderaVersion(java.lang.String clouderaVersion) { 
+		this.clouderaVersion = clouderaVersion;
+		return this;
+	} 
+
+	public long getMaxOrderableNodes() { 
+		return this.maxOrderableNodes;
+	} 
+
+	public void setMaxOrderableNodes(long maxOrderableNodes) { 
+		this.maxOrderableNodes = maxOrderableNodes;
+	} 
+
+	public Hadoop maxOrderableNodes(long maxOrderableNodes) { 
+		this.maxOrderableNodes = maxOrderableNodes;
+		return this;
+	} 
+
+	public java.lang.String getName() { 
+		return this.name;
+	} 
+
+	public void setName(java.lang.String name) { 
+		this.name = name;
+	} 
+
+	public Hadoop name(java.lang.String name) { 
+		this.name = name;
+		return this;
+	} 
+
+	public java.lang.String getState() { 
+		return this.state;
+	} 
+
+	public void setState(java.lang.String state) { 
+		this.state = state;
+	} 
+
+	public Hadoop state(java.lang.String state) { 
+		this.state = state;
+		return this;
+	} 
 
 }

@@ -4,16 +4,38 @@ package net.zyuiop.ovhapi.api.objects.dedicated.server;
  * A structure describing informations about this dedicated server installation status
  */
 
-public interface InstallationProgressStatus { 
+public class InstallationProgressStatus { 
 
-	/**
-	 * @return Installation steps
-	 */
-	net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps[] getProgress(); 
+	private net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps[] progress;
+	private long elapsedTime;
 
-	/**
-	 * @return Elapsed time in seconds since installation beggining
-	 */
-	long getElapsedTime(); 
+	public InstallationProgressStatus() {
+	}
+
+	public net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps[] getProgress() { 
+		return this.progress;
+	} 
+
+	public void setProgress(net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps[] progress) { 
+		this.progress = progress;
+	} 
+
+	public InstallationProgressStatus progress(net.zyuiop.ovhapi.api.objects.dedicated.server.InstallationProgressSteps[] progress) { 
+		this.progress = progress;
+		return this;
+	} 
+
+	public long getElapsedTime() { 
+		return this.elapsedTime;
+	} 
+
+	public void setElapsedTime(long elapsedTime) { 
+		this.elapsedTime = elapsedTime;
+	} 
+
+	public InstallationProgressStatus elapsedTime(long elapsedTime) { 
+		this.elapsedTime = elapsedTime;
+		return this;
+	} 
 
 }
