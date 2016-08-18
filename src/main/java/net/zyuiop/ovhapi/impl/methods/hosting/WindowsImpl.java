@@ -15,6 +15,14 @@ public class WindowsImpl implements Windows {
 		this.client = client;
 	}
 
+	public java.lang.String[] getHostingWindows() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/windows/hosting/windows";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
 	public long[] postServiceNameChangeContact(java.lang.String serviceName, java.lang.String contactAdmin, java.lang.String contactTech, java.lang.String contactBilling) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/hosting/windows/" + serviceName + "/changeContact";
 		Map<Object, Object> __dataMap = new HashMap<>();
@@ -36,36 +44,30 @@ public class WindowsImpl implements Windows {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-	public java.lang.String[] getHostingWindows() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/hosting/windows/hosting/windows";
-		String __data = "";
+	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/windows/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
 	}
 
+	public net.zyuiop.ovhapi.api.objects.hosting.windows.Service getServiceName(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/windows/" + serviceName + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.hosting.windows.Service.class);
+	}
 
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/windows/$serviceName
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /hosting/windows/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /hosting/windows/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
+	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/hosting/windows/" + serviceName + "/serviceInfos";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
 
 }

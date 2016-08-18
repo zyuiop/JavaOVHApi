@@ -15,6 +15,23 @@ public class CloudLinuxImpl implements CloudLinux {
 		this.client = client;
 	}
 
+
+	/*
+	* Method creation failed.
+	* Involved method : GET > /license/cloudLinux/$serviceName
+	* Message : Missing identifier.
+	*/
+
+
+	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/cloudLinux/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+	}
+
 	public java.lang.String[] getLicenseCloudLinux() throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/license/cloudLinux/license/cloudLinux";
 		String __data = "";
@@ -23,21 +40,13 @@ public class CloudLinuxImpl implements CloudLinux {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /license/cloudLinux/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/cloudLinux/orderableVersions
-	* Message : Missing identifier.
-	*/
-
+	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/cloudLinux/" + serviceName + "/serviceInfos";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
 
 	public long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String status, java.lang.String action) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/license/cloudLinux/" + serviceName + "/tasks";
@@ -59,13 +68,15 @@ public class CloudLinuxImpl implements CloudLinux {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/cloudLinux/$serviceName/tasks/$taskId
-	* Message : Missing identifier.
-	*/
-
+	public net.zyuiop.ovhapi.api.objects.license.Task getServiceNameTasksTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/cloudLinux/" + serviceName + "/tasks/" + taskId + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "taskId=" + taskId;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.Task.class);
+	}
 
 	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/license/cloudLinux/" + serviceName + "/terminate";
@@ -76,20 +87,13 @@ public class CloudLinuxImpl implements CloudLinux {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/cloudLinux/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/cloudLinux/$serviceName
-	* Message : Missing identifier.
-	*/
-
+	public net.zyuiop.ovhapi.api.objects.license.CloudLinuxOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/cloudLinux/orderableVersions";
+		String __data = "?";
+		__data += "ip=" + ip;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.CloudLinuxOrderConfiguration[].class);
+	}
 
 }

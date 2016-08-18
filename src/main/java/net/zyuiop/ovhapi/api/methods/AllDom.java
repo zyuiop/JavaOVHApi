@@ -6,6 +6,21 @@ package net.zyuiop.ovhapi.api.methods;
 
 public interface AllDom { 
 
+	/**
+	 * Get this object properties
+	 * Facultative parameters ? false
+	 * @param serviceName The internal name of your allDom
+	*/
+	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Alter this object properties
+	 * Facultative parameters ? false
+	 * @param null New object properties
+	 * @param serviceName The internal name of your allDom
+	*/
+	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+
 
 	/**
 	 * List available services
@@ -27,8 +42,6 @@ public interface AllDom {
 	 * @param serviceName The internal name of your allDom
 	*/
 	java.lang.String[] getServiceNameDomain(java.lang.String serviceName) throws java.io.IOException;
-
-
 
 
 }

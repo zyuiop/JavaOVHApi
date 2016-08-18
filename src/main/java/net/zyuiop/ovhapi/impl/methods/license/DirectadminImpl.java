@@ -15,62 +15,6 @@ public class DirectadminImpl implements Directadmin {
 		this.client = client;
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /license/directadmin/$serviceName
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String[] getLicenseDirectadmin() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/license/directadmin";
-		String __data = "";
-		OVHApiMethod __method = OVHApiMethod.GET;
-		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
-	}
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/directadmin/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/directadmin/$serviceName/canLicenseBeMovedTo
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /license/directadmin/$serviceName/changeIp
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /license/directadmin/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/directadmin/$serviceName/tasks/$taskId
-	* Message : Missing identifier.
-	*/
-
-
 	public java.lang.String[] getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/allowedDestinationIp";
 		String __data = "?";
@@ -78,6 +22,16 @@ public class DirectadminImpl implements Directadmin {
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
+
+	public net.zyuiop.ovhapi.api.objects.license.Task postServiceNameChangeOs(java.lang.String os, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/changeOs";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("os", os);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.Task.class);
 	}
 
 	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
@@ -89,13 +43,39 @@ public class DirectadminImpl implements Directadmin {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
 	}
 
+	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+	}
 
-	/*
-	* Method creation failed.
-	* Involved method : POST > /license/directadmin/$serviceName/changeOs
-	* Message : Missing identifier.
-	*/
+	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/serviceInfos";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
 
+	public net.zyuiop.ovhapi.api.objects.license.directadmin.DirectAdmin getServiceName(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.directadmin.DirectAdmin.class);
+	}
+
+	public void putServiceName(net.zyuiop.ovhapi.api.objects.license.directadmin.DirectAdmin param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
 
 	public long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String status, java.lang.String action) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/tasks";
@@ -117,20 +97,51 @@ public class DirectadminImpl implements Directadmin {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
+	public net.zyuiop.ovhapi.api.objects.license.Task getServiceNameTasksTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/tasks/" + taskId + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "taskId=" + taskId;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.Task.class);
+	}
 
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/directadmin/orderableVersions
-	* Message : Missing identifier.
-	*/
+	public java.lang.String[] getLicenseDirectadmin() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/license/directadmin";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
 
+	public net.zyuiop.ovhapi.api.objects.license.ChangeIpStatus getServiceNameCanLicenseBeMovedTo(java.lang.String destinationIp, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/canLicenseBeMovedTo";
+		String __data = "?";
+		__data += "destinationIp=" + destinationIp;
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.ChangeIpStatus.class);
+	}
 
+	public net.zyuiop.ovhapi.api.objects.license.DirectAdminOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/orderableVersions";
+		String __data = "?";
+		__data += "ip=" + ip;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.DirectAdminOrderConfiguration[].class);
+	}
 
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/directadmin/$serviceName
-	* Message : Missing identifier.
-	*/
-
+	public net.zyuiop.ovhapi.api.objects.license.Task postServiceNameChangeIp(java.lang.String destinationIp, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/directadmin/" + serviceName + "/changeIp";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("destinationIp", destinationIp);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.Task.class);
+	}
 
 }

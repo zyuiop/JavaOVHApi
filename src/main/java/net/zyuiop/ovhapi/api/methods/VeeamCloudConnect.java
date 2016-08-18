@@ -7,8 +7,12 @@ package net.zyuiop.ovhapi.api.methods;
 public interface VeeamCloudConnect { 
 
 
-
-
+	/**
+	 * Veeam Backup Repository linked to this Veeam Cloud Connect account
+	 * Facultative parameters ? false
+	 * @param serviceName Domain of the service
+	*/
+	java.lang.String[] getServiceNameBackupRepository(java.lang.String serviceName) throws java.io.IOException;
 
 
 	/**
@@ -28,13 +32,11 @@ public interface VeeamCloudConnect {
 	long[] getServiceNameTask(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
-	 * List the possible upgrades on your Veeam Cloud Connect account
+	 * Get this object properties
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String[] getServiceNameOrderableUpgrade(java.lang.String serviceName) throws java.io.IOException;
-
-
+	net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException;
 
 	/**
 	 * List available services
@@ -44,10 +46,21 @@ public interface VeeamCloudConnect {
 
 
 	/**
-	 * Veeam Backup Repository linked to this Veeam Cloud Connect account
+	 * List the possible upgrades on your Veeam Cloud Connect account
 	 * Facultative parameters ? false
 	 * @param serviceName Domain of the service
 	*/
-	java.lang.String[] getServiceNameBackupRepository(java.lang.String serviceName) throws java.io.IOException;
+	java.lang.String[] getServiceNameOrderableUpgrade(java.lang.String serviceName) throws java.io.IOException;
+
+	/**
+	 * Alter this object properties
+	 * Facultative parameters ? false
+	 * @param null New object properties
+	 * @param serviceName Domain of the service
+	*/
+	void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException;
+
+
+
 
 }

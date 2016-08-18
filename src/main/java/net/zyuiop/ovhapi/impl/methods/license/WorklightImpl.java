@@ -15,21 +15,40 @@ public class WorklightImpl implements Worklight {
 		this.client = client;
 	}
 
+	public net.zyuiop.ovhapi.api.objects.services.Service getServiceNameServiceInfos(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/serviceInfos";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.services.Service.class);
+	}
 
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/worklight/orderableVersions
-	* Message : Missing identifier.
-	*/
+	public java.lang.String[] getLicenseWorklight() throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/license/worklight";
+		String __data = "";
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+	}
 
+	public net.zyuiop.ovhapi.api.objects.license.Task postServiceNameChangeIp(java.lang.String destinationIp, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/changeIp";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		__dataMap.put("destinationIp", destinationIp);
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.Task.class);
+	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /license/worklight/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
+	public void putServiceName(net.zyuiop.ovhapi.api.objects.license.worklight.WorkLight param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
+		URL __url = new URL(__callUrl);
+		this.client.callRaw(__url, __method, __data, true);
+	}
 
 	public long[] getServiceNameTasks(java.lang.String serviceName, java.lang.String status, java.lang.String action) throws java.io.IOException {
 		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/tasks";
@@ -51,61 +70,50 @@ public class WorklightImpl implements Worklight {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), long[].class);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/worklight/$serviceName/serviceInfos
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : POST > /license/worklight/$serviceName/changeIp
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/worklight/$serviceName/tasks/$taskId
-	* Message : Missing identifier.
-	*/
-
-
-
-	/*
-	* Method creation failed.
-	* Involved method : PUT > /license/worklight/$serviceName
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/terminate";
-		Map<Object, Object> __dataMap = new HashMap<>();
-		String __data = new Gson().toJson(__dataMap);
-		OVHApiMethod __method = OVHApiMethod.POST;
+	public void putServiceNameServiceInfos(net.zyuiop.ovhapi.api.objects.services.Service param0, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/serviceInfos";
+		String __data = new Gson().toJson(param0);
+		OVHApiMethod __method = OVHApiMethod.PUT;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+		this.client.callRaw(__url, __method, __data, true);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/worklight/$serviceName/canLicenseBeMovedTo
-	* Message : Missing identifier.
-	*/
-
-
-	public java.lang.String[] getLicenseWorklight() throws java.io.IOException {
-		String __callUrl = "https://api.ovh.com/1.0/license/worklight/license/worklight";
-		String __data = "";
+	public net.zyuiop.ovhapi.api.objects.license.ChangeIpStatus getServiceNameCanLicenseBeMovedTo(java.lang.String destinationIp, java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/canLicenseBeMovedTo";
+		String __data = "?";
+		__data += "destinationIp=" + destinationIp;
+		__data += "serviceName=" + serviceName;
 		OVHApiMethod __method = OVHApiMethod.GET;
 		URL __url = new URL(__callUrl);
-		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.ChangeIpStatus.class);
+	}
+
+	public net.zyuiop.ovhapi.api.objects.license.worklight.WorkLight getServiceName(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.worklight.WorkLight.class);
+	}
+
+	public net.zyuiop.ovhapi.api.objects.license.Task getServiceNameTasksTaskId(java.lang.String serviceName, long taskId) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/tasks/" + taskId + "";
+		String __data = "?";
+		__data += "serviceName=" + serviceName;
+		__data += "taskId=" + taskId;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.Task.class);
+	}
+
+	public net.zyuiop.ovhapi.api.objects.license.WorkLightOrderConfiguration[] getOrderableVersions(java.lang.String ip) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/orderableVersions";
+		String __data = "?";
+		__data += "ip=" + ip;
+		OVHApiMethod __method = OVHApiMethod.GET;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), net.zyuiop.ovhapi.api.objects.license.WorkLightOrderConfiguration[].class);
 	}
 
 	public java.lang.String[] getServiceNameAllowedDestinationIp(java.lang.String serviceName) throws java.io.IOException {
@@ -117,12 +125,13 @@ public class WorklightImpl implements Worklight {
 		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String[].class);
 	}
 
-
-	/*
-	* Method creation failed.
-	* Involved method : GET > /license/worklight/$serviceName
-	* Message : Missing identifier.
-	*/
-
+	public java.lang.String postServiceNameTerminate(java.lang.String serviceName) throws java.io.IOException {
+		String __callUrl = "https://api.ovh.com/1.0/license/worklight/" + serviceName + "/terminate";
+		Map<Object, Object> __dataMap = new HashMap<>();
+		String __data = new Gson().toJson(__dataMap);
+		OVHApiMethod __method = OVHApiMethod.POST;
+		URL __url = new URL(__callUrl);
+		return new Gson().fromJson(this.client.callRaw(__url, __method, __data, true), java.lang.String.class);
+	}
 
 }
