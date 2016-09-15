@@ -7,6 +7,8 @@ This repository contains an automatically generated (excepted for 3 source files
 
 Just run `mvn install javadoc:javadoc` and start working ! Please pay attention to the project dependencies, listed in the pom.xml file. They are NOT included in the jar, so you have to insure they are included in the classpath when you run a program using this API.
 
+You can find the javadoc here : https://files.zyuiop.net/ovhapi/
+
 ## How to use ?
 
 You just have to create a client using `OVHClientManager`'s `createClient` and `getClient` methods. Here is the source file : https://github.com/zyuiop/JavaOVHApi/blob/master/src/main/java/net/zyuiop/ovhapi/OVHClientManager.java
